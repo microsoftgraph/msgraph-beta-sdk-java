@@ -39,7 +39,7 @@ public class ReportRootGetSharePointActivityFileCountsCollectionRequest extends 
     }
 
 
-    public void get(final ICallback<IReportRootGetSharePointActivityFileCountsCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetSharePointActivityFileCountsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetSharePointActivityFileCountsCollectionRequest extends 
      */
     public IReportRootGetSharePointActivityFileCountsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetSharePointActivityFileCountsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetSharePointActivityFileCountsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetSharePointActivityFileCountsCollectionRequest)this;
     }
 

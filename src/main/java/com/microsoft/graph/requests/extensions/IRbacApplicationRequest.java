@@ -21,7 +21,7 @@ public interface IRbacApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RbacApplication> callback);
+    void get(final ICallback<? super RbacApplication> callback);
 
     /**
      * Gets the RbacApplication from the service
@@ -36,7 +36,7 @@ public interface IRbacApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RbacApplication> callback);
+    void delete(final ICallback<? super RbacApplication> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRbacApplicationRequest extends IHttpRequest {
      * @param sourceRbacApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RbacApplication sourceRbacApplication, final ICallback<RbacApplication> callback);
+    void patch(final RbacApplication sourceRbacApplication, final ICallback<? super RbacApplication> callback);
 
     /**
      * Patches this RbacApplication with a source
@@ -68,7 +68,7 @@ public interface IRbacApplicationRequest extends IHttpRequest {
      * @param newRbacApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RbacApplication newRbacApplication, final ICallback<RbacApplication> callback);
+    void post(final RbacApplication newRbacApplication, final ICallback<? super RbacApplication> callback);
 
     /**
      * Posts a RbacApplication with a new object
@@ -85,7 +85,7 @@ public interface IRbacApplicationRequest extends IHttpRequest {
      * @param newRbacApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RbacApplication newRbacApplication, final ICallback<RbacApplication> callback);
+    void put(final RbacApplication newRbacApplication, final ICallback<? super RbacApplication> callback);
 
     /**
      * Posts a RbacApplication with a new object

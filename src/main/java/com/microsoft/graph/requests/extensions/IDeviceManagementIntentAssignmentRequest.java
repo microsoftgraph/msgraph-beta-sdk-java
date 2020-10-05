@@ -21,7 +21,7 @@ public interface IDeviceManagementIntentAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntentAssignment> callback);
+    void get(final ICallback<? super DeviceManagementIntentAssignment> callback);
 
     /**
      * Gets the DeviceManagementIntentAssignment from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntentAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntentAssignment> callback);
+    void delete(final ICallback<? super DeviceManagementIntentAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntentAssignmentRequest extends IHttpRequest {
      * @param sourceDeviceManagementIntentAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntentAssignment sourceDeviceManagementIntentAssignment, final ICallback<DeviceManagementIntentAssignment> callback);
+    void patch(final DeviceManagementIntentAssignment sourceDeviceManagementIntentAssignment, final ICallback<? super DeviceManagementIntentAssignment> callback);
 
     /**
      * Patches this DeviceManagementIntentAssignment with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntentAssignmentRequest extends IHttpRequest {
      * @param newDeviceManagementIntentAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<DeviceManagementIntentAssignment> callback);
+    void post(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<? super DeviceManagementIntentAssignment> callback);
 
     /**
      * Posts a DeviceManagementIntentAssignment with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntentAssignmentRequest extends IHttpRequest {
      * @param newDeviceManagementIntentAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<DeviceManagementIntentAssignment> callback);
+    void put(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<? super DeviceManagementIntentAssignment> callback);
 
     /**
      * Posts a DeviceManagementIntentAssignment with a new object

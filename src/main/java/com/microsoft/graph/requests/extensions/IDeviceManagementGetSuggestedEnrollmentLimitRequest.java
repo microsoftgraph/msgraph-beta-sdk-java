@@ -26,7 +26,7 @@ public interface IDeviceManagementGetSuggestedEnrollmentLimitRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SuggestedEnrollmentLimit> callback);
+    void get(final ICallback<? super SuggestedEnrollmentLimit> callback);
 
     /**
      * Gets the SuggestedEnrollmentLimit

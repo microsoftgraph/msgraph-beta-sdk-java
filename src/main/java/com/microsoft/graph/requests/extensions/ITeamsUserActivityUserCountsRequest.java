@@ -21,7 +21,7 @@ public interface ITeamsUserActivityUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsUserActivityUserCounts> callback);
+    void get(final ICallback<? super TeamsUserActivityUserCounts> callback);
 
     /**
      * Gets the TeamsUserActivityUserCounts from the service
@@ -36,7 +36,7 @@ public interface ITeamsUserActivityUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsUserActivityUserCounts> callback);
+    void delete(final ICallback<? super TeamsUserActivityUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsUserActivityUserCountsRequest extends IHttpRequest {
      * @param sourceTeamsUserActivityUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsUserActivityUserCounts sourceTeamsUserActivityUserCounts, final ICallback<TeamsUserActivityUserCounts> callback);
+    void patch(final TeamsUserActivityUserCounts sourceTeamsUserActivityUserCounts, final ICallback<? super TeamsUserActivityUserCounts> callback);
 
     /**
      * Patches this TeamsUserActivityUserCounts with a source
@@ -68,7 +68,7 @@ public interface ITeamsUserActivityUserCountsRequest extends IHttpRequest {
      * @param newTeamsUserActivityUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsUserActivityUserCounts newTeamsUserActivityUserCounts, final ICallback<TeamsUserActivityUserCounts> callback);
+    void post(final TeamsUserActivityUserCounts newTeamsUserActivityUserCounts, final ICallback<? super TeamsUserActivityUserCounts> callback);
 
     /**
      * Posts a TeamsUserActivityUserCounts with a new object
@@ -85,7 +85,7 @@ public interface ITeamsUserActivityUserCountsRequest extends IHttpRequest {
      * @param newTeamsUserActivityUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsUserActivityUserCounts newTeamsUserActivityUserCounts, final ICallback<TeamsUserActivityUserCounts> callback);
+    void put(final TeamsUserActivityUserCounts newTeamsUserActivityUserCounts, final ICallback<? super TeamsUserActivityUserCounts> callback);
 
     /**
      * Posts a TeamsUserActivityUserCounts with a new object

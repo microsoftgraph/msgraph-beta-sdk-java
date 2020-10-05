@@ -21,7 +21,7 @@ public interface IMacOSScepCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSScepCertificateProfile> callback);
+    void get(final ICallback<? super MacOSScepCertificateProfile> callback);
 
     /**
      * Gets the MacOSScepCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IMacOSScepCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSScepCertificateProfile> callback);
+    void delete(final ICallback<? super MacOSScepCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSScepCertificateProfileRequest extends IHttpRequest {
      * @param sourceMacOSScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback);
+    void patch(final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback);
 
     /**
      * Patches this MacOSScepCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IMacOSScepCertificateProfileRequest extends IHttpRequest {
      * @param newMacOSScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback);
+    void post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback);
 
     /**
      * Posts a MacOSScepCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IMacOSScepCertificateProfileRequest extends IHttpRequest {
      * @param newMacOSScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback);
+    void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback);
 
     /**
      * Posts a MacOSScepCertificateProfile with a new object

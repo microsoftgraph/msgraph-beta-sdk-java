@@ -117,7 +117,7 @@ public class ReportRootCollectionRequest extends BaseCollectionRequest<ReportRoo
         super(requestUrl, client, requestOptions, ReportRootCollectionResponse.class, IReportRootCollectionPage.class);
     }
 
-    public void get(final ICallback<IReportRootCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -136,7 +136,7 @@ public class ReportRootCollectionRequest extends BaseCollectionRequest<ReportRoo
         return buildFromResponse(response);
     }
 
-    public void post(final ReportRoot newReportRoot, final ICallback<ReportRoot> callback) {
+    public void post(final ReportRoot newReportRoot, final ICallback<? super ReportRoot> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ReportRootRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -169,6 +169,17 @@ public class ReportRootCollectionRequest extends BaseCollectionRequest<ReportRoo
      */
     public IReportRootCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootCollectionRequest)this;
     }
 

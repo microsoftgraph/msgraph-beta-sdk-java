@@ -21,7 +21,7 @@ public interface ILookupResultRowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LookupResultRow> callback);
+    void get(final ICallback<? super LookupResultRow> callback);
 
     /**
      * Gets the LookupResultRow from the service
@@ -36,7 +36,7 @@ public interface ILookupResultRowRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LookupResultRow> callback);
+    void delete(final ICallback<? super LookupResultRow> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILookupResultRowRequest extends IHttpRequest {
      * @param sourceLookupResultRow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LookupResultRow sourceLookupResultRow, final ICallback<LookupResultRow> callback);
+    void patch(final LookupResultRow sourceLookupResultRow, final ICallback<? super LookupResultRow> callback);
 
     /**
      * Patches this LookupResultRow with a source
@@ -68,7 +68,7 @@ public interface ILookupResultRowRequest extends IHttpRequest {
      * @param newLookupResultRow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback);
+    void post(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback);
 
     /**
      * Posts a LookupResultRow with a new object
@@ -85,7 +85,7 @@ public interface ILookupResultRowRequest extends IHttpRequest {
      * @param newLookupResultRow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback);
+    void put(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback);
 
     /**
      * Posts a LookupResultRow with a new object

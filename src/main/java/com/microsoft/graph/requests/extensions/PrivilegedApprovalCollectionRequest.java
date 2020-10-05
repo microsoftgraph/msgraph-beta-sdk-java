@@ -39,7 +39,7 @@ public class PrivilegedApprovalCollectionRequest extends BaseCollectionRequest<P
         super(requestUrl, client, requestOptions, PrivilegedApprovalCollectionResponse.class, IPrivilegedApprovalCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedApprovalCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedApprovalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class PrivilegedApprovalCollectionRequest extends BaseCollectionRequest<P
         return buildFromResponse(response);
     }
 
-    public void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback) {
+    public void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<? super PrivilegedApproval> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedApprovalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class PrivilegedApprovalCollectionRequest extends BaseCollectionRequest<P
      */
     public IPrivilegedApprovalCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedApprovalCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedApprovalCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedApprovalCollectionRequest)this;
     }
 

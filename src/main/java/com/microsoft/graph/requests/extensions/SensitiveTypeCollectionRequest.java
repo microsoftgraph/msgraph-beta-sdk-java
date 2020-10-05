@@ -40,7 +40,7 @@ public class SensitiveTypeCollectionRequest extends BaseCollectionRequest<Sensit
         super(requestUrl, client, requestOptions, SensitiveTypeCollectionResponse.class, ISensitiveTypeCollectionPage.class);
     }
 
-    public void get(final ICallback<ISensitiveTypeCollectionPage> callback) {
+    public void get(final ICallback<? super ISensitiveTypeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SensitiveTypeCollectionRequest extends BaseCollectionRequest<Sensit
         return buildFromResponse(response);
     }
 
-    public void post(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback) {
+    public void post(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SensitiveTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SensitiveTypeCollectionRequest extends BaseCollectionRequest<Sensit
      */
     public ISensitiveTypeCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SensitiveTypeCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISensitiveTypeCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SensitiveTypeCollectionRequest)this;
     }
 

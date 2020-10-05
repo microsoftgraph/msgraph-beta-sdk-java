@@ -21,7 +21,7 @@ public interface IEvaluateLabelJobResponseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EvaluateLabelJobResponse> callback);
+    void get(final ICallback<? super EvaluateLabelJobResponse> callback);
 
     /**
      * Gets the EvaluateLabelJobResponse from the service
@@ -36,7 +36,7 @@ public interface IEvaluateLabelJobResponseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EvaluateLabelJobResponse> callback);
+    void delete(final ICallback<? super EvaluateLabelJobResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEvaluateLabelJobResponseRequest extends IHttpRequest {
      * @param sourceEvaluateLabelJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EvaluateLabelJobResponse sourceEvaluateLabelJobResponse, final ICallback<EvaluateLabelJobResponse> callback);
+    void patch(final EvaluateLabelJobResponse sourceEvaluateLabelJobResponse, final ICallback<? super EvaluateLabelJobResponse> callback);
 
     /**
      * Patches this EvaluateLabelJobResponse with a source
@@ -68,7 +68,7 @@ public interface IEvaluateLabelJobResponseRequest extends IHttpRequest {
      * @param newEvaluateLabelJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<EvaluateLabelJobResponse> callback);
+    void post(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<? super EvaluateLabelJobResponse> callback);
 
     /**
      * Posts a EvaluateLabelJobResponse with a new object
@@ -85,7 +85,7 @@ public interface IEvaluateLabelJobResponseRequest extends IHttpRequest {
      * @param newEvaluateLabelJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<EvaluateLabelJobResponse> callback);
+    void put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<? super EvaluateLabelJobResponse> callback);
 
     /**
      * Posts a EvaluateLabelJobResponse with a new object

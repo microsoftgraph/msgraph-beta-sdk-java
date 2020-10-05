@@ -40,7 +40,7 @@ public class SetCollectionRequest extends BaseCollectionRequest<SetCollectionRes
         super(requestUrl, client, requestOptions, SetCollectionResponse.class, ISetCollectionPage.class);
     }
 
-    public void get(final ICallback<ISetCollectionPage> callback) {
+    public void get(final ICallback<? super ISetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SetCollectionRequest extends BaseCollectionRequest<SetCollectionRes
         return buildFromResponse(response);
     }
 
-    public void post(final Set newSet, final ICallback<Set> callback) {
+    public void post(final Set newSet, final ICallback<? super Set> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SetCollectionRequest extends BaseCollectionRequest<SetCollectionRes
      */
     public ISetCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SetCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISetCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SetCollectionRequest)this;
     }
 

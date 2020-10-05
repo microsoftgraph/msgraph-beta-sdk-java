@@ -21,7 +21,7 @@ public interface IOnPremisesPublishingProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnPremisesPublishingProfile> callback);
+    void get(final ICallback<? super OnPremisesPublishingProfile> callback);
 
     /**
      * Gets the OnPremisesPublishingProfile from the service
@@ -36,7 +36,7 @@ public interface IOnPremisesPublishingProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnPremisesPublishingProfile> callback);
+    void delete(final ICallback<? super OnPremisesPublishingProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnPremisesPublishingProfileRequest extends IHttpRequest {
      * @param sourceOnPremisesPublishingProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback);
+    void patch(final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback);
 
     /**
      * Patches this OnPremisesPublishingProfile with a source
@@ -68,7 +68,7 @@ public interface IOnPremisesPublishingProfileRequest extends IHttpRequest {
      * @param newOnPremisesPublishingProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback);
+    void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback);
 
     /**
      * Posts a OnPremisesPublishingProfile with a new object
@@ -85,7 +85,7 @@ public interface IOnPremisesPublishingProfileRequest extends IHttpRequest {
      * @param newOnPremisesPublishingProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback);
+    void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback);
 
     /**
      * Posts a OnPremisesPublishingProfile with a new object

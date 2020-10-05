@@ -35,7 +35,7 @@ public class WindowsInformationProtectionDeviceRegistrationWithReferenceRequest 
         super(requestUrl, client, requestOptions, WindowsInformationProtectionDeviceRegistration.class);
     }
 
-    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final IJsonBackedObject payload, final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
+    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final IJsonBackedObject payload, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class WindowsInformationProtectionDeviceRegistrationWithReferenceRequest 
         return null;
     }
 
-    public void get(final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
+    public void get(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class WindowsInformationProtectionDeviceRegistrationWithReferenceRequest 
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
+	public void delete(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class WindowsInformationProtectionDeviceRegistrationWithReferenceRequest 
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
+	public void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionDeviceRegistration);
 	}
 
@@ -91,16 +91,6 @@ public class WindowsInformationProtectionDeviceRegistrationWithReferenceRequest 
      */
     public IWindowsInformationProtectionDeviceRegistrationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsInformationProtectionDeviceRegistrationWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsInformationProtectionDeviceRegistrationWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsInformationProtectionDeviceRegistrationWithReferenceRequest)this;
     }
 }

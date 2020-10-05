@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoleAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRoleAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IRoleAssignmentCollectionPage> callback);
 
     IRoleAssignmentCollectionPage get() throws ClientException;
 
-    void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback);
+    void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback);
 
     RoleAssignment post(final RoleAssignment newRoleAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IRoleAssignmentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRoleAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRoleAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IRoleAssignmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

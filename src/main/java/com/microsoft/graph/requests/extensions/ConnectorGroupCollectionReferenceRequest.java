@@ -36,7 +36,7 @@ public class ConnectorGroupCollectionReferenceRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, ConnectorGroupCollectionResponse.class, IConnectorGroupCollectionPage.class);
     }
 
-    public void post(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback) {
+    public void post(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/connectorGroups/" + newConnectorGroup.id);
         new ConnectorGroupWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class ConnectorGroupCollectionReferenceRequest extends BaseCollectionRequ
      */
     public IConnectorGroupCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectorGroupCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IConnectorGroupCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConnectorGroupCollectionReferenceRequest)this;
     }
 

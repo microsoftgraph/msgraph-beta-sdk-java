@@ -21,7 +21,7 @@ public interface IDeviceManagementScriptRunSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementScriptRunSummary> callback);
+    void get(final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     /**
      * Gets the DeviceManagementScriptRunSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementScriptRunSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementScriptRunSummary> callback);
+    void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementScriptRunSummaryRequest extends IHttpRequest {
      * @param sourceDeviceManagementScriptRunSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback);
+    void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     /**
      * Patches this DeviceManagementScriptRunSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementScriptRunSummaryRequest extends IHttpRequest {
      * @param newDeviceManagementScriptRunSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback);
+    void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     /**
      * Posts a DeviceManagementScriptRunSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementScriptRunSummaryRequest extends IHttpRequest {
      * @param newDeviceManagementScriptRunSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback);
+    void put(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     /**
      * Posts a DeviceManagementScriptRunSummary with a new object

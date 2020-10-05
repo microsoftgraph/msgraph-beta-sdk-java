@@ -37,7 +37,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CredentialUserRegistrationCount> callback) {
+    public void get(final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CredentialUserRegistrationCount> callback) {
+    public void delete(final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param sourceCredentialUserRegistrationCount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback) {
+    public void patch(final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.PATCH, callback, sourceCredentialUserRegistrationCount);
     }
 
@@ -96,7 +96,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param newCredentialUserRegistrationCount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback) {
+    public void post(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.POST, callback, newCredentialUserRegistrationCount);
     }
 
@@ -117,7 +117,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param newCredentialUserRegistrationCount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback) {
+    public void put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.PUT, callback, newCredentialUserRegistrationCount);
     }
 
@@ -151,17 +151,6 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      */
      public ICredentialUserRegistrationCountRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CredentialUserRegistrationCountRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICredentialUserRegistrationCountRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CredentialUserRegistrationCountRequest)this;
      }
 

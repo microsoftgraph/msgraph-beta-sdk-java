@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.CompanyPortalBlockedAction;
 import com.microsoft.graph.models.generated.EnrollmentAvailabilityOptions;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.RgbColor;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfileAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentCollectionPage;
 
 
@@ -327,19 +325,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final IntuneBrandingProfileAssignmentCollectionResponse response = new IntuneBrandingProfileAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final IntuneBrandingProfileAssignment[] array = new IntuneBrandingProfileAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IntuneBrandingProfileAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new IntuneBrandingProfileAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), IntuneBrandingProfileAssignmentCollectionPage.class);
         }
     }
 }

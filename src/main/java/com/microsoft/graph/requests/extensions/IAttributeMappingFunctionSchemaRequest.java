@@ -21,7 +21,7 @@ public interface IAttributeMappingFunctionSchemaRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AttributeMappingFunctionSchema> callback);
+    void get(final ICallback<? super AttributeMappingFunctionSchema> callback);
 
     /**
      * Gets the AttributeMappingFunctionSchema from the service
@@ -36,7 +36,7 @@ public interface IAttributeMappingFunctionSchemaRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AttributeMappingFunctionSchema> callback);
+    void delete(final ICallback<? super AttributeMappingFunctionSchema> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAttributeMappingFunctionSchemaRequest extends IHttpRequest {
      * @param sourceAttributeMappingFunctionSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback);
+    void patch(final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback);
 
     /**
      * Patches this AttributeMappingFunctionSchema with a source
@@ -68,7 +68,7 @@ public interface IAttributeMappingFunctionSchemaRequest extends IHttpRequest {
      * @param newAttributeMappingFunctionSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback);
+    void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback);
 
     /**
      * Posts a AttributeMappingFunctionSchema with a new object
@@ -85,7 +85,7 @@ public interface IAttributeMappingFunctionSchemaRequest extends IHttpRequest {
      * @param newAttributeMappingFunctionSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback);
+    void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback);
 
     /**
      * Posts a AttributeMappingFunctionSchema with a new object

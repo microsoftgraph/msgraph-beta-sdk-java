@@ -23,6 +23,6 @@ public class WorkPositionCollectionPage extends BaseCollectionPage<WorkPosition,
      * @param builder  the request builder for the next collection page
      */
     public WorkPositionCollectionPage(final WorkPositionCollectionResponse response, final IWorkPositionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

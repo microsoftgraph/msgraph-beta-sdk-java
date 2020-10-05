@@ -34,6 +34,6 @@ public class ReportRootGetSharePointActivityFileCountsCollectionPage extends Bas
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSharePointActivityFileCountsCollectionPage(final ReportRootGetSharePointActivityFileCountsCollectionResponse response, final IReportRootGetSharePointActivityFileCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

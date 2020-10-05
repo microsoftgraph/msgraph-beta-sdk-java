@@ -21,7 +21,7 @@ public interface IWindowsDomainJoinConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsDomainJoinConfiguration> callback);
+    void get(final ICallback<? super WindowsDomainJoinConfiguration> callback);
 
     /**
      * Gets the WindowsDomainJoinConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsDomainJoinConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsDomainJoinConfiguration> callback);
+    void delete(final ICallback<? super WindowsDomainJoinConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsDomainJoinConfigurationRequest extends IHttpRequest {
      * @param sourceWindowsDomainJoinConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsDomainJoinConfiguration sourceWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback);
+    void patch(final WindowsDomainJoinConfiguration sourceWindowsDomainJoinConfiguration, final ICallback<? super WindowsDomainJoinConfiguration> callback);
 
     /**
      * Patches this WindowsDomainJoinConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsDomainJoinConfigurationRequest extends IHttpRequest {
      * @param newWindowsDomainJoinConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback);
+    void post(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<? super WindowsDomainJoinConfiguration> callback);
 
     /**
      * Posts a WindowsDomainJoinConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsDomainJoinConfigurationRequest extends IHttpRequest {
      * @param newWindowsDomainJoinConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback);
+    void put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<? super WindowsDomainJoinConfiguration> callback);
 
     /**
      * Posts a WindowsDomainJoinConfiguration with a new object

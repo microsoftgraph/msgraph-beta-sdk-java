@@ -21,7 +21,7 @@ public interface IAndroidVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidVpnConfiguration> callback);
+    void get(final ICallback<? super AndroidVpnConfiguration> callback);
 
     /**
      * Gets the AndroidVpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidVpnConfiguration> callback);
+    void delete(final ICallback<? super AndroidVpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidVpnConfigurationRequest extends IHttpRequest {
      * @param sourceAndroidVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidVpnConfiguration sourceAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback);
+    void patch(final AndroidVpnConfiguration sourceAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback);
 
     /**
      * Patches this AndroidVpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidVpnConfigurationRequest extends IHttpRequest {
      * @param newAndroidVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback);
+    void post(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback);
 
     /**
      * Posts a AndroidVpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidVpnConfigurationRequest extends IHttpRequest {
      * @param newAndroidVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback);
+    void put(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback);
 
     /**
      * Posts a AndroidVpnConfiguration with a new object

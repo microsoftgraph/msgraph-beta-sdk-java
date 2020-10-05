@@ -43,7 +43,7 @@ public class DeviceManagementIntentCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, DeviceManagementIntentCollectionResponse.class, IDeviceManagementIntentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementIntentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementIntentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class DeviceManagementIntentCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback) {
+    public void post(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -95,6 +95,17 @@ public class DeviceManagementIntentCollectionRequest extends BaseCollectionReque
      */
     public IDeviceManagementIntentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementIntentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementIntentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementIntentCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IMicrosoftTunnelConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MicrosoftTunnelConfiguration> callback);
+    void get(final ICallback<? super MicrosoftTunnelConfiguration> callback);
 
     /**
      * Gets the MicrosoftTunnelConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMicrosoftTunnelConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MicrosoftTunnelConfiguration> callback);
+    void delete(final ICallback<? super MicrosoftTunnelConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMicrosoftTunnelConfigurationRequest extends IHttpRequest {
      * @param sourceMicrosoftTunnelConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MicrosoftTunnelConfiguration sourceMicrosoftTunnelConfiguration, final ICallback<MicrosoftTunnelConfiguration> callback);
+    void patch(final MicrosoftTunnelConfiguration sourceMicrosoftTunnelConfiguration, final ICallback<? super MicrosoftTunnelConfiguration> callback);
 
     /**
      * Patches this MicrosoftTunnelConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMicrosoftTunnelConfigurationRequest extends IHttpRequest {
      * @param newMicrosoftTunnelConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MicrosoftTunnelConfiguration newMicrosoftTunnelConfiguration, final ICallback<MicrosoftTunnelConfiguration> callback);
+    void post(final MicrosoftTunnelConfiguration newMicrosoftTunnelConfiguration, final ICallback<? super MicrosoftTunnelConfiguration> callback);
 
     /**
      * Posts a MicrosoftTunnelConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMicrosoftTunnelConfigurationRequest extends IHttpRequest {
      * @param newMicrosoftTunnelConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MicrosoftTunnelConfiguration newMicrosoftTunnelConfiguration, final ICallback<MicrosoftTunnelConfiguration> callback);
+    void put(final MicrosoftTunnelConfiguration newMicrosoftTunnelConfiguration, final ICallback<? super MicrosoftTunnelConfiguration> callback);
 
     /**
      * Posts a MicrosoftTunnelConfiguration with a new object

@@ -21,7 +21,7 @@ public interface IAuthenticationMethodTargetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AuthenticationMethodTarget> callback);
+    void get(final ICallback<? super AuthenticationMethodTarget> callback);
 
     /**
      * Gets the AuthenticationMethodTarget from the service
@@ -36,7 +36,7 @@ public interface IAuthenticationMethodTargetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AuthenticationMethodTarget> callback);
+    void delete(final ICallback<? super AuthenticationMethodTarget> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAuthenticationMethodTargetRequest extends IHttpRequest {
      * @param sourceAuthenticationMethodTarget the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AuthenticationMethodTarget sourceAuthenticationMethodTarget, final ICallback<AuthenticationMethodTarget> callback);
+    void patch(final AuthenticationMethodTarget sourceAuthenticationMethodTarget, final ICallback<? super AuthenticationMethodTarget> callback);
 
     /**
      * Patches this AuthenticationMethodTarget with a source
@@ -68,7 +68,7 @@ public interface IAuthenticationMethodTargetRequest extends IHttpRequest {
      * @param newAuthenticationMethodTarget the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<AuthenticationMethodTarget> callback);
+    void post(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<? super AuthenticationMethodTarget> callback);
 
     /**
      * Posts a AuthenticationMethodTarget with a new object
@@ -85,7 +85,7 @@ public interface IAuthenticationMethodTargetRequest extends IHttpRequest {
      * @param newAuthenticationMethodTarget the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<AuthenticationMethodTarget> callback);
+    void put(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<? super AuthenticationMethodTarget> callback);
 
     /**
      * Posts a AuthenticationMethodTarget with a new object

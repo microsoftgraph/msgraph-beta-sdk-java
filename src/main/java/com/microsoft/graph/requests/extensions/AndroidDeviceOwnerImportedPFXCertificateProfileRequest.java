@@ -41,7 +41,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param sourceAndroidDeviceOwnerImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void patch(final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -100,7 +100,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -121,7 +121,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -155,17 +155,6 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      */
      public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerImportedPFXCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceOwnerImportedPFXCertificateProfileRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IManagementConditionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagementCondition> callback);
+    void get(final ICallback<? super ManagementCondition> callback);
 
     /**
      * Gets the ManagementCondition from the service
@@ -36,7 +36,7 @@ public interface IManagementConditionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagementCondition> callback);
+    void delete(final ICallback<? super ManagementCondition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagementConditionRequest extends IHttpRequest {
      * @param sourceManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagementCondition sourceManagementCondition, final ICallback<ManagementCondition> callback);
+    void patch(final ManagementCondition sourceManagementCondition, final ICallback<? super ManagementCondition> callback);
 
     /**
      * Patches this ManagementCondition with a source
@@ -68,7 +68,7 @@ public interface IManagementConditionRequest extends IHttpRequest {
      * @param newManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback);
+    void post(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback);
 
     /**
      * Posts a ManagementCondition with a new object
@@ -85,7 +85,7 @@ public interface IManagementConditionRequest extends IHttpRequest {
      * @param newManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback);
+    void put(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback);
 
     /**
      * Posts a ManagementCondition with a new object

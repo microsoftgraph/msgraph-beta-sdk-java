@@ -23,6 +23,6 @@ public class RiskDetectionCollectionPage extends BaseCollectionPage<RiskDetectio
      * @param builder  the request builder for the next collection page
      */
     public RiskDetectionCollectionPage(final RiskDetectionCollectionResponse response, final IRiskDetectionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

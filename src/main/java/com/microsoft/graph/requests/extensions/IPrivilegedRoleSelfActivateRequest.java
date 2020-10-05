@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedRoleSelfActivateRequest extends IHttpRequest {
 
-    void post(final ICallback<PrivilegedRoleAssignment> callback);
+    void post(final ICallback<? super PrivilegedRoleAssignment> callback);
 
     PrivilegedRoleAssignment post() throws ClientException;
 

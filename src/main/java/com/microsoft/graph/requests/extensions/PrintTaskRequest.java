@@ -41,7 +41,7 @@ public class PrintTaskRequest extends BaseRequest implements IPrintTaskRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintTask> callback) {
+    public void get(final ICallback<? super PrintTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PrintTaskRequest extends BaseRequest implements IPrintTaskRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintTask> callback) {
+    public void delete(final ICallback<? super PrintTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PrintTaskRequest extends BaseRequest implements IPrintTaskRequest {
      * @param sourcePrintTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintTask sourcePrintTask, final ICallback<PrintTask> callback) {
+    public void patch(final PrintTask sourcePrintTask, final ICallback<? super PrintTask> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintTask);
     }
 
@@ -100,7 +100,7 @@ public class PrintTaskRequest extends BaseRequest implements IPrintTaskRequest {
      * @param newPrintTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintTask newPrintTask, final ICallback<PrintTask> callback) {
+    public void post(final PrintTask newPrintTask, final ICallback<? super PrintTask> callback) {
         send(HttpMethod.POST, callback, newPrintTask);
     }
 
@@ -121,7 +121,7 @@ public class PrintTaskRequest extends BaseRequest implements IPrintTaskRequest {
      * @param newPrintTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintTask newPrintTask, final ICallback<PrintTask> callback) {
+    public void put(final PrintTask newPrintTask, final ICallback<? super PrintTask> callback) {
         send(HttpMethod.PUT, callback, newPrintTask);
     }
 
@@ -155,17 +155,6 @@ public class PrintTaskRequest extends BaseRequest implements IPrintTaskRequest {
      */
      public IPrintTaskRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintTaskRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintTaskRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintTaskRequest)this;
      }
 

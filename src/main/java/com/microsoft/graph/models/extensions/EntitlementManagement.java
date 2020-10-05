@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
@@ -20,25 +19,15 @@ import com.microsoft.graph.models.extensions.AccessPackage;
 import com.microsoft.graph.models.extensions.ConnectedOrganization;
 import com.microsoft.graph.models.extensions.EntitlementManagementSettings;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageCollectionPage;
-import com.microsoft.graph.requests.extensions.ConnectedOrganizationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationCollectionPage;
 
 
@@ -183,163 +172,43 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageAssignmentPolicies")) {
-            final AccessPackageAssignmentPolicyCollectionResponse response = new AccessPackageAssignmentPolicyCollectionResponse();
-            if (json.has("accessPackageAssignmentPolicies@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageAssignmentPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageAssignmentPolicies").toString(), JsonObject[].class);
-            final AccessPackageAssignmentPolicy[] array = new AccessPackageAssignmentPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageAssignmentPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageAssignmentPolicies = new AccessPackageAssignmentPolicyCollectionPage(response, null);
+            accessPackageAssignmentPolicies = serializer.deserializeObject(json.get("accessPackageAssignmentPolicies").toString(), AccessPackageAssignmentPolicyCollectionPage.class);
         }
 
         if (json.has("accessPackageAssignmentRequests")) {
-            final AccessPackageAssignmentRequestCollectionResponse response = new AccessPackageAssignmentRequestCollectionResponse();
-            if (json.has("accessPackageAssignmentRequests@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageAssignmentRequests@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageAssignmentRequests").toString(), JsonObject[].class);
-            final AccessPackageAssignmentRequest[] array = new AccessPackageAssignmentRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageAssignmentRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageAssignmentRequests = new AccessPackageAssignmentRequestCollectionPage(response, null);
+            accessPackageAssignmentRequests = serializer.deserializeObject(json.get("accessPackageAssignmentRequests").toString(), AccessPackageAssignmentRequestCollectionPage.class);
         }
 
         if (json.has("accessPackageAssignmentResourceRoles")) {
-            final AccessPackageAssignmentResourceRoleCollectionResponse response = new AccessPackageAssignmentResourceRoleCollectionResponse();
-            if (json.has("accessPackageAssignmentResourceRoles@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageAssignmentResourceRoles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageAssignmentResourceRoles").toString(), JsonObject[].class);
-            final AccessPackageAssignmentResourceRole[] array = new AccessPackageAssignmentResourceRole[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageAssignmentResourceRole.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageAssignmentResourceRoles = new AccessPackageAssignmentResourceRoleCollectionPage(response, null);
+            accessPackageAssignmentResourceRoles = serializer.deserializeObject(json.get("accessPackageAssignmentResourceRoles").toString(), AccessPackageAssignmentResourceRoleCollectionPage.class);
         }
 
         if (json.has("accessPackageAssignments")) {
-            final AccessPackageAssignmentCollectionResponse response = new AccessPackageAssignmentCollectionResponse();
-            if (json.has("accessPackageAssignments@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageAssignments").toString(), JsonObject[].class);
-            final AccessPackageAssignment[] array = new AccessPackageAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageAssignments = new AccessPackageAssignmentCollectionPage(response, null);
+            accessPackageAssignments = serializer.deserializeObject(json.get("accessPackageAssignments").toString(), AccessPackageAssignmentCollectionPage.class);
         }
 
         if (json.has("accessPackageCatalogs")) {
-            final AccessPackageCatalogCollectionResponse response = new AccessPackageCatalogCollectionResponse();
-            if (json.has("accessPackageCatalogs@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageCatalogs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageCatalogs").toString(), JsonObject[].class);
-            final AccessPackageCatalog[] array = new AccessPackageCatalog[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageCatalog.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageCatalogs = new AccessPackageCatalogCollectionPage(response, null);
+            accessPackageCatalogs = serializer.deserializeObject(json.get("accessPackageCatalogs").toString(), AccessPackageCatalogCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceRequests")) {
-            final AccessPackageResourceRequestCollectionResponse response = new AccessPackageResourceRequestCollectionResponse();
-            if (json.has("accessPackageResourceRequests@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceRequests@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceRequests").toString(), JsonObject[].class);
-            final AccessPackageResourceRequest[] array = new AccessPackageResourceRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceRequests = new AccessPackageResourceRequestCollectionPage(response, null);
+            accessPackageResourceRequests = serializer.deserializeObject(json.get("accessPackageResourceRequests").toString(), AccessPackageResourceRequestCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceRoleScopes")) {
-            final AccessPackageResourceRoleScopeCollectionResponse response = new AccessPackageResourceRoleScopeCollectionResponse();
-            if (json.has("accessPackageResourceRoleScopes@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceRoleScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes").toString(), JsonObject[].class);
-            final AccessPackageResourceRoleScope[] array = new AccessPackageResourceRoleScope[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceRoleScope.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceRoleScopes = new AccessPackageResourceRoleScopeCollectionPage(response, null);
+            accessPackageResourceRoleScopes = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes").toString(), AccessPackageResourceRoleScopeCollectionPage.class);
         }
 
         if (json.has("accessPackageResources")) {
-            final AccessPackageResourceCollectionResponse response = new AccessPackageResourceCollectionResponse();
-            if (json.has("accessPackageResources@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResources@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResources").toString(), JsonObject[].class);
-            final AccessPackageResource[] array = new AccessPackageResource[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResource.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResources = new AccessPackageResourceCollectionPage(response, null);
+            accessPackageResources = serializer.deserializeObject(json.get("accessPackageResources").toString(), AccessPackageResourceCollectionPage.class);
         }
 
         if (json.has("accessPackages")) {
-            final AccessPackageCollectionResponse response = new AccessPackageCollectionResponse();
-            if (json.has("accessPackages@odata.nextLink")) {
-                response.nextLink = json.get("accessPackages@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackages").toString(), JsonObject[].class);
-            final AccessPackage[] array = new AccessPackage[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackage.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackages = new AccessPackageCollectionPage(response, null);
+            accessPackages = serializer.deserializeObject(json.get("accessPackages").toString(), AccessPackageCollectionPage.class);
         }
 
         if (json.has("connectedOrganizations")) {
-            final ConnectedOrganizationCollectionResponse response = new ConnectedOrganizationCollectionResponse();
-            if (json.has("connectedOrganizations@odata.nextLink")) {
-                response.nextLink = json.get("connectedOrganizations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectedOrganizations").toString(), JsonObject[].class);
-            final ConnectedOrganization[] array = new ConnectedOrganization[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConnectedOrganization.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            connectedOrganizations = new ConnectedOrganizationCollectionPage(response, null);
+            connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations").toString(), ConnectedOrganizationCollectionPage.class);
         }
     }
 }

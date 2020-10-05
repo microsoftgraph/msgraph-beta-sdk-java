@@ -23,6 +23,6 @@ public class VendorCollectionPage extends BaseCollectionPage<Vendor, IVendorColl
      * @param builder  the request builder for the next collection page
      */
     public VendorCollectionPage(final VendorCollectionResponse response, final IVendorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

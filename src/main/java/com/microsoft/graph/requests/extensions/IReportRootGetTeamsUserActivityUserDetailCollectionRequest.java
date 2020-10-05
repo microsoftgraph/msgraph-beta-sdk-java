@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetTeamsUserActivityUserDetailCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetTeamsUserActivityUserDetailCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetTeamsUserActivityUserDetailCollectionPage> callback);
 
     IReportRootGetTeamsUserActivityUserDetailCollectionPage get() throws ClientException;
 

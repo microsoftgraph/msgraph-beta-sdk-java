@@ -41,7 +41,7 @@ public class EducationSynchronizationProfileCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, EducationSynchronizationProfileCollectionResponse.class, IEducationSynchronizationProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationSynchronizationProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IEducationSynchronizationProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class EducationSynchronizationProfileCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback) {
+    public void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSynchronizationProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class EducationSynchronizationProfileCollectionRequest extends BaseCollec
      */
     public IEducationSynchronizationProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationSynchronizationProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEducationSynchronizationProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationSynchronizationProfileCollectionRequest)this;
     }
 

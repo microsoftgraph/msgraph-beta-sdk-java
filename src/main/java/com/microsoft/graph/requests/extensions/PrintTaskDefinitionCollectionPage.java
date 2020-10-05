@@ -23,6 +23,6 @@ public class PrintTaskDefinitionCollectionPage extends BaseCollectionPage<PrintT
      * @param builder  the request builder for the next collection page
      */
     public PrintTaskDefinitionCollectionPage(final PrintTaskDefinitionCollectionResponse response, final IPrintTaskDefinitionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage;
 
 
@@ -159,35 +156,11 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
 
         if (json.has("assignments")) {
-            final WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse response = new WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final WindowsDefenderApplicationControlSupplementalPolicyAssignment[] array = new WindowsDefenderApplicationControlSupplementalPolicyAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsDefenderApplicationControlSupplementalPolicyAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse response = new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse();
-            if (json.has("deviceStatuses@odata.nextLink")) {
-                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
-            final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus[] array = new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStatuses = new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage(response, null);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage.class);
         }
     }
 }

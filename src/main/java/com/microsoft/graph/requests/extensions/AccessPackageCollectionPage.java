@@ -23,6 +23,6 @@ public class AccessPackageCollectionPage extends BaseCollectionPage<AccessPackag
      * @param builder  the request builder for the next collection page
      */
     public AccessPackageCollectionPage(final AccessPackageCollectionResponse response, final IAccessPackageCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

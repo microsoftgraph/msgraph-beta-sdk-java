@@ -34,7 +34,7 @@ public class PrivilegedRoleSettingsReferenceRequest extends BaseRequest implemen
         super(requestUrl, client, requestOptions, PrivilegedRoleSettings.class);
     }
 
-    public void delete(final ICallback<PrivilegedRoleSettings> callback) {
+    public void delete(final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class PrivilegedRoleSettingsReferenceRequest extends BaseRequest implemen
         return (PrivilegedRoleSettingsReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleSettingsReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrivilegedRoleSettingsReferenceRequest)this;
-    }
-    /**
      * Puts the PrivilegedRoleSettings
      *
      * @param srcPrivilegedRoleSettings the PrivilegedRoleSettings reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PrivilegedRoleSettings srcPrivilegedRoleSettings, final ICallback<PrivilegedRoleSettings> callback) {
+    public void put(PrivilegedRoleSettings srcPrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.PUT, callback, srcPrivilegedRoleSettings);
     }
 

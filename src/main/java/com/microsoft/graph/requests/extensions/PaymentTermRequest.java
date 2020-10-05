@@ -37,7 +37,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PaymentTerm> callback) {
+    public void get(final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PaymentTerm> callback) {
+    public void delete(final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param sourcePaymentTerm the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PaymentTerm sourcePaymentTerm, final ICallback<PaymentTerm> callback) {
+    public void patch(final PaymentTerm sourcePaymentTerm, final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.PATCH, callback, sourcePaymentTerm);
     }
 
@@ -96,7 +96,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param newPaymentTerm the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback) {
+    public void post(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.POST, callback, newPaymentTerm);
     }
 
@@ -117,7 +117,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param newPaymentTerm the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback) {
+    public void put(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.PUT, callback, newPaymentTerm);
     }
 
@@ -151,17 +151,6 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      */
      public IPaymentTermRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PaymentTermRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPaymentTermRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PaymentTermRequest)this;
      }
 

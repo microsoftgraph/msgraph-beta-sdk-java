@@ -26,7 +26,7 @@ public interface IReportRootGetUserPrintUsageSummaryRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserPrintUsageSummary> callback);
+    void get(final ICallback<? super UserPrintUsageSummary> callback);
 
     /**
      * Gets the UserPrintUsageSummary

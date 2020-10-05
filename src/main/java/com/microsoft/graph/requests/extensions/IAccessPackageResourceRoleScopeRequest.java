@@ -21,7 +21,7 @@ public interface IAccessPackageResourceRoleScopeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageResourceRoleScope> callback);
+    void get(final ICallback<? super AccessPackageResourceRoleScope> callback);
 
     /**
      * Gets the AccessPackageResourceRoleScope from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageResourceRoleScopeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageResourceRoleScope> callback);
+    void delete(final ICallback<? super AccessPackageResourceRoleScope> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageResourceRoleScopeRequest extends IHttpRequest {
      * @param sourceAccessPackageResourceRoleScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback);
+    void patch(final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback);
 
     /**
      * Patches this AccessPackageResourceRoleScope with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageResourceRoleScopeRequest extends IHttpRequest {
      * @param newAccessPackageResourceRoleScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback);
+    void post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback);
 
     /**
      * Posts a AccessPackageResourceRoleScope with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageResourceRoleScopeRequest extends IHttpRequest {
      * @param newAccessPackageResourceRoleScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback);
+    void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback);
 
     /**
      * Posts a AccessPackageResourceRoleScope with a new object

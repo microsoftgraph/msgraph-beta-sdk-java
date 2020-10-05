@@ -23,6 +23,6 @@ public class OnPremisesPublishingProfileCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public OnPremisesPublishingProfileCollectionPage(final OnPremisesPublishingProfileCollectionResponse response, final IOnPremisesPublishingProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

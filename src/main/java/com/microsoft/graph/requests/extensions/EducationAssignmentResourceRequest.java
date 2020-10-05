@@ -37,7 +37,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationAssignmentResource> callback) {
+    public void get(final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationAssignmentResource> callback) {
+    public void delete(final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param sourceEducationAssignmentResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationAssignmentResource sourceEducationAssignmentResource, final ICallback<EducationAssignmentResource> callback) {
+    public void patch(final EducationAssignmentResource sourceEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationAssignmentResource);
     }
 
@@ -96,7 +96,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param newEducationAssignmentResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<EducationAssignmentResource> callback) {
+    public void post(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.POST, callback, newEducationAssignmentResource);
     }
 
@@ -117,7 +117,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param newEducationAssignmentResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<EducationAssignmentResource> callback) {
+    public void put(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.PUT, callback, newEducationAssignmentResource);
     }
 
@@ -151,17 +151,6 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      */
      public IEducationAssignmentResourceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationAssignmentResourceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationAssignmentResourceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationAssignmentResourceRequest)this;
      }
 

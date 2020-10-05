@@ -21,7 +21,7 @@ public interface IAzureADFeatureUsageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AzureADFeatureUsage> callback);
+    void get(final ICallback<? super AzureADFeatureUsage> callback);
 
     /**
      * Gets the AzureADFeatureUsage from the service
@@ -36,7 +36,7 @@ public interface IAzureADFeatureUsageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AzureADFeatureUsage> callback);
+    void delete(final ICallback<? super AzureADFeatureUsage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAzureADFeatureUsageRequest extends IHttpRequest {
      * @param sourceAzureADFeatureUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AzureADFeatureUsage sourceAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback);
+    void patch(final AzureADFeatureUsage sourceAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback);
 
     /**
      * Patches this AzureADFeatureUsage with a source
@@ -68,7 +68,7 @@ public interface IAzureADFeatureUsageRequest extends IHttpRequest {
      * @param newAzureADFeatureUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback);
+    void post(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback);
 
     /**
      * Posts a AzureADFeatureUsage with a new object
@@ -85,7 +85,7 @@ public interface IAzureADFeatureUsageRequest extends IHttpRequest {
      * @param newAzureADFeatureUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback);
+    void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback);
 
     /**
      * Posts a AzureADFeatureUsage with a new object

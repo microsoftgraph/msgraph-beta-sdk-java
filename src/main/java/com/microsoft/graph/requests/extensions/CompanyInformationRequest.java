@@ -37,7 +37,7 @@ public class CompanyInformationRequest extends BaseRequest implements ICompanyIn
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CompanyInformation> callback) {
+    public void get(final ICallback<? super CompanyInformation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CompanyInformationRequest extends BaseRequest implements ICompanyIn
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CompanyInformation> callback) {
+    public void delete(final ICallback<? super CompanyInformation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CompanyInformationRequest extends BaseRequest implements ICompanyIn
      * @param sourceCompanyInformation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CompanyInformation sourceCompanyInformation, final ICallback<CompanyInformation> callback) {
+    public void patch(final CompanyInformation sourceCompanyInformation, final ICallback<? super CompanyInformation> callback) {
         send(HttpMethod.PATCH, callback, sourceCompanyInformation);
     }
 
@@ -96,7 +96,7 @@ public class CompanyInformationRequest extends BaseRequest implements ICompanyIn
      * @param newCompanyInformation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CompanyInformation newCompanyInformation, final ICallback<CompanyInformation> callback) {
+    public void post(final CompanyInformation newCompanyInformation, final ICallback<? super CompanyInformation> callback) {
         send(HttpMethod.POST, callback, newCompanyInformation);
     }
 
@@ -117,7 +117,7 @@ public class CompanyInformationRequest extends BaseRequest implements ICompanyIn
      * @param newCompanyInformation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CompanyInformation newCompanyInformation, final ICallback<CompanyInformation> callback) {
+    public void put(final CompanyInformation newCompanyInformation, final ICallback<? super CompanyInformation> callback) {
         send(HttpMethod.PUT, callback, newCompanyInformation);
     }
 
@@ -151,17 +151,6 @@ public class CompanyInformationRequest extends BaseRequest implements ICompanyIn
      */
      public ICompanyInformationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CompanyInformationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICompanyInformationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CompanyInformationRequest)this;
      }
 

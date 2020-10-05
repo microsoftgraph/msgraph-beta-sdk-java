@@ -21,7 +21,7 @@ public interface IUserPFXCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserPFXCertificate> callback);
+    void get(final ICallback<? super UserPFXCertificate> callback);
 
     /**
      * Gets the UserPFXCertificate from the service
@@ -36,7 +36,7 @@ public interface IUserPFXCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserPFXCertificate> callback);
+    void delete(final ICallback<? super UserPFXCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserPFXCertificateRequest extends IHttpRequest {
      * @param sourceUserPFXCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserPFXCertificate sourceUserPFXCertificate, final ICallback<UserPFXCertificate> callback);
+    void patch(final UserPFXCertificate sourceUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback);
 
     /**
      * Patches this UserPFXCertificate with a source
@@ -68,7 +68,7 @@ public interface IUserPFXCertificateRequest extends IHttpRequest {
      * @param newUserPFXCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<UserPFXCertificate> callback);
+    void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback);
 
     /**
      * Posts a UserPFXCertificate with a new object
@@ -85,7 +85,7 @@ public interface IUserPFXCertificateRequest extends IHttpRequest {
      * @param newUserPFXCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserPFXCertificate newUserPFXCertificate, final ICallback<UserPFXCertificate> callback);
+    void put(final UserPFXCertificate newUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback);
 
     /**
      * Posts a UserPFXCertificate with a new object

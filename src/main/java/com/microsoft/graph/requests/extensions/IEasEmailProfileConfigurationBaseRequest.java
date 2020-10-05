@@ -21,7 +21,7 @@ public interface IEasEmailProfileConfigurationBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EasEmailProfileConfigurationBase> callback);
+    void get(final ICallback<? super EasEmailProfileConfigurationBase> callback);
 
     /**
      * Gets the EasEmailProfileConfigurationBase from the service
@@ -36,7 +36,7 @@ public interface IEasEmailProfileConfigurationBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EasEmailProfileConfigurationBase> callback);
+    void delete(final ICallback<? super EasEmailProfileConfigurationBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEasEmailProfileConfigurationBaseRequest extends IHttpRequest {
      * @param sourceEasEmailProfileConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback);
+    void patch(final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback);
 
     /**
      * Patches this EasEmailProfileConfigurationBase with a source
@@ -68,7 +68,7 @@ public interface IEasEmailProfileConfigurationBaseRequest extends IHttpRequest {
      * @param newEasEmailProfileConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback);
+    void post(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback);
 
     /**
      * Posts a EasEmailProfileConfigurationBase with a new object
@@ -85,7 +85,7 @@ public interface IEasEmailProfileConfigurationBaseRequest extends IHttpRequest {
      * @param newEasEmailProfileConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback);
+    void put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback);
 
     /**
      * Posts a EasEmailProfileConfigurationBase with a new object

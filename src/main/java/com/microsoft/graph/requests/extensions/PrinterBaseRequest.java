@@ -56,7 +56,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrinterBase> callback) {
+    public void get(final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrinterBase> callback) {
+    public void delete(final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param sourcePrinterBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrinterBase sourcePrinterBase, final ICallback<PrinterBase> callback) {
+    public void patch(final PrinterBase sourcePrinterBase, final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.PATCH, callback, sourcePrinterBase);
     }
 
@@ -115,7 +115,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param newPrinterBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrinterBase newPrinterBase, final ICallback<PrinterBase> callback) {
+    public void post(final PrinterBase newPrinterBase, final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.POST, callback, newPrinterBase);
     }
 
@@ -136,7 +136,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param newPrinterBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrinterBase newPrinterBase, final ICallback<PrinterBase> callback) {
+    public void put(final PrinterBase newPrinterBase, final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.PUT, callback, newPrinterBase);
     }
 
@@ -170,17 +170,6 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      */
      public IPrinterBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrinterBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrinterBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrinterBaseRequest)this;
      }
 

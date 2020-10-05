@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptParameter;
 import com.microsoft.graph.models.generated.RunAsAccountType;
@@ -14,9 +13,7 @@ import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptDeviceState;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRunSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateCollectionPage;
 
 
@@ -225,35 +222,11 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final DeviceHealthScriptAssignmentCollectionResponse response = new DeviceHealthScriptAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final DeviceHealthScriptAssignment[] array = new DeviceHealthScriptAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceHealthScriptAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new DeviceHealthScriptAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceHealthScriptAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceRunStates")) {
-            final DeviceHealthScriptDeviceStateCollectionResponse response = new DeviceHealthScriptDeviceStateCollectionResponse();
-            if (json.has("deviceRunStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceRunStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceRunStates").toString(), JsonObject[].class);
-            final DeviceHealthScriptDeviceState[] array = new DeviceHealthScriptDeviceState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceHealthScriptDeviceState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceRunStates = new DeviceHealthScriptDeviceStateCollectionPage(response, null);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates").toString(), DeviceHealthScriptDeviceStateCollectionPage.class);
         }
     }
 }

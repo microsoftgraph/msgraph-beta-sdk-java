@@ -21,7 +21,7 @@ public interface IOfficeConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OfficeConfiguration> callback);
+    void get(final ICallback<? super OfficeConfiguration> callback);
 
     /**
      * Gets the OfficeConfiguration from the service
@@ -36,7 +36,7 @@ public interface IOfficeConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OfficeConfiguration> callback);
+    void delete(final ICallback<? super OfficeConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOfficeConfigurationRequest extends IHttpRequest {
      * @param sourceOfficeConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OfficeConfiguration sourceOfficeConfiguration, final ICallback<OfficeConfiguration> callback);
+    void patch(final OfficeConfiguration sourceOfficeConfiguration, final ICallback<? super OfficeConfiguration> callback);
 
     /**
      * Patches this OfficeConfiguration with a source
@@ -68,7 +68,7 @@ public interface IOfficeConfigurationRequest extends IHttpRequest {
      * @param newOfficeConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OfficeConfiguration newOfficeConfiguration, final ICallback<OfficeConfiguration> callback);
+    void post(final OfficeConfiguration newOfficeConfiguration, final ICallback<? super OfficeConfiguration> callback);
 
     /**
      * Posts a OfficeConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IOfficeConfigurationRequest extends IHttpRequest {
      * @param newOfficeConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OfficeConfiguration newOfficeConfiguration, final ICallback<OfficeConfiguration> callback);
+    void put(final OfficeConfiguration newOfficeConfiguration, final ICallback<? super OfficeConfiguration> callback);
 
     /**
      * Posts a OfficeConfiguration with a new object

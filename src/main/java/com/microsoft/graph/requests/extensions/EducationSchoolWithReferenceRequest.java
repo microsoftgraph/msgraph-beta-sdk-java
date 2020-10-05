@@ -45,7 +45,7 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, EducationSchool.class);
     }
 
-    public void post(final EducationSchool newEducationSchool, final IJsonBackedObject payload, final ICallback<EducationSchool> callback) {
+    public void post(final EducationSchool newEducationSchool, final IJsonBackedObject payload, final ICallback<? super EducationSchool> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -57,7 +57,7 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
         return null;
     }
 
-    public void get(final ICallback<EducationSchool> callback) {
+    public void get(final ICallback<? super EducationSchool> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<EducationSchool> callback) {
+	public void delete(final ICallback<? super EducationSchool> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -73,7 +73,7 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final EducationSchool sourceEducationSchool, final ICallback<EducationSchool> callback) {
+	public void patch(final EducationSchool sourceEducationSchool, final ICallback<? super EducationSchool> callback) {
 		send(HttpMethod.PATCH, callback, sourceEducationSchool);
 	}
 
@@ -101,16 +101,6 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
      */
     public IEducationSchoolWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationSchoolWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEducationSchoolWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EducationSchoolWithReferenceRequest)this;
     }
 }

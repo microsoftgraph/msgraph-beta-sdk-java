@@ -23,6 +23,6 @@ public class FilterOperatorSchemaCollectionPage extends BaseCollectionPage<Filte
      * @param builder  the request builder for the next collection page
      */
     public FilterOperatorSchemaCollectionPage(final FilterOperatorSchemaCollectionResponse response, final IFilterOperatorSchemaCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

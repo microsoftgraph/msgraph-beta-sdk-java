@@ -36,7 +36,7 @@ public class DetectedAppCollectionReferenceRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, IDetectedAppCollectionPage.class);
     }
 
-    public void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback) {
+    public void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/detectedApps/" + newDetectedApp.id);
         new DetectedAppWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class DetectedAppCollectionReferenceRequest extends BaseCollectionRequest
      */
     public IDetectedAppCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DetectedAppCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IDetectedAppCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DetectedAppCollectionReferenceRequest)this;
     }
 

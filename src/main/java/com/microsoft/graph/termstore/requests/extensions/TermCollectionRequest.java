@@ -39,7 +39,7 @@ public class TermCollectionRequest extends BaseCollectionRequest<TermCollectionR
         super(requestUrl, client, requestOptions, TermCollectionResponse.class, ITermCollectionPage.class);
     }
 
-    public void get(final ICallback<ITermCollectionPage> callback) {
+    public void get(final ICallback<? super ITermCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class TermCollectionRequest extends BaseCollectionRequest<TermCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Term newTerm, final ICallback<Term> callback) {
+    public void post(final Term newTerm, final ICallback<? super Term> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class TermCollectionRequest extends BaseCollectionRequest<TermCollectionR
      */
     public ITermCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TermCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITermCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TermCollectionRequest)this;
     }
 

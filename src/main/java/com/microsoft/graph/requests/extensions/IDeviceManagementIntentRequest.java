@@ -21,7 +21,7 @@ public interface IDeviceManagementIntentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntent> callback);
+    void get(final ICallback<? super DeviceManagementIntent> callback);
 
     /**
      * Gets the DeviceManagementIntent from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntent> callback);
+    void delete(final ICallback<? super DeviceManagementIntent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntentRequest extends IHttpRequest {
      * @param sourceDeviceManagementIntent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntent sourceDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback);
+    void patch(final DeviceManagementIntent sourceDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback);
 
     /**
      * Patches this DeviceManagementIntent with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntentRequest extends IHttpRequest {
      * @param newDeviceManagementIntent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback);
+    void post(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback);
 
     /**
      * Posts a DeviceManagementIntent with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntentRequest extends IHttpRequest {
      * @param newDeviceManagementIntent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback);
+    void put(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback);
 
     /**
      * Posts a DeviceManagementIntent with a new object

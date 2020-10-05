@@ -21,7 +21,7 @@ public interface IExactMatchUploadAgentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExactMatchUploadAgent> callback);
+    void get(final ICallback<? super ExactMatchUploadAgent> callback);
 
     /**
      * Gets the ExactMatchUploadAgent from the service
@@ -36,7 +36,7 @@ public interface IExactMatchUploadAgentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExactMatchUploadAgent> callback);
+    void delete(final ICallback<? super ExactMatchUploadAgent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExactMatchUploadAgentRequest extends IHttpRequest {
      * @param sourceExactMatchUploadAgent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExactMatchUploadAgent sourceExactMatchUploadAgent, final ICallback<ExactMatchUploadAgent> callback);
+    void patch(final ExactMatchUploadAgent sourceExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback);
 
     /**
      * Patches this ExactMatchUploadAgent with a source
@@ -68,7 +68,7 @@ public interface IExactMatchUploadAgentRequest extends IHttpRequest {
      * @param newExactMatchUploadAgent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<ExactMatchUploadAgent> callback);
+    void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback);
 
     /**
      * Posts a ExactMatchUploadAgent with a new object
@@ -85,7 +85,7 @@ public interface IExactMatchUploadAgentRequest extends IHttpRequest {
      * @param newExactMatchUploadAgent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<ExactMatchUploadAgent> callback);
+    void put(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback);
 
     /**
      * Posts a ExactMatchUploadAgent with a new object

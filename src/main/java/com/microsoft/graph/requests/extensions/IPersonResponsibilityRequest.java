@@ -21,7 +21,7 @@ public interface IPersonResponsibilityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonResponsibility> callback);
+    void get(final ICallback<? super PersonResponsibility> callback);
 
     /**
      * Gets the PersonResponsibility from the service
@@ -36,7 +36,7 @@ public interface IPersonResponsibilityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonResponsibility> callback);
+    void delete(final ICallback<? super PersonResponsibility> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonResponsibilityRequest extends IHttpRequest {
      * @param sourcePersonResponsibility the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonResponsibility sourcePersonResponsibility, final ICallback<PersonResponsibility> callback);
+    void patch(final PersonResponsibility sourcePersonResponsibility, final ICallback<? super PersonResponsibility> callback);
 
     /**
      * Patches this PersonResponsibility with a source
@@ -68,7 +68,7 @@ public interface IPersonResponsibilityRequest extends IHttpRequest {
      * @param newPersonResponsibility the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonResponsibility newPersonResponsibility, final ICallback<PersonResponsibility> callback);
+    void post(final PersonResponsibility newPersonResponsibility, final ICallback<? super PersonResponsibility> callback);
 
     /**
      * Posts a PersonResponsibility with a new object
@@ -85,7 +85,7 @@ public interface IPersonResponsibilityRequest extends IHttpRequest {
      * @param newPersonResponsibility the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonResponsibility newPersonResponsibility, final ICallback<PersonResponsibility> callback);
+    void put(final PersonResponsibility newPersonResponsibility, final ICallback<? super PersonResponsibility> callback);
 
     /**
      * Posts a PersonResponsibility with a new object

@@ -21,7 +21,7 @@ public interface IAgedAccountsReceivableRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AgedAccountsReceivable> callback);
+    void get(final ICallback<? super AgedAccountsReceivable> callback);
 
     /**
      * Gets the AgedAccountsReceivable from the service
@@ -36,7 +36,7 @@ public interface IAgedAccountsReceivableRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AgedAccountsReceivable> callback);
+    void delete(final ICallback<? super AgedAccountsReceivable> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgedAccountsReceivableRequest extends IHttpRequest {
      * @param sourceAgedAccountsReceivable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AgedAccountsReceivable sourceAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback);
+    void patch(final AgedAccountsReceivable sourceAgedAccountsReceivable, final ICallback<? super AgedAccountsReceivable> callback);
 
     /**
      * Patches this AgedAccountsReceivable with a source
@@ -68,7 +68,7 @@ public interface IAgedAccountsReceivableRequest extends IHttpRequest {
      * @param newAgedAccountsReceivable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback);
+    void post(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<? super AgedAccountsReceivable> callback);
 
     /**
      * Posts a AgedAccountsReceivable with a new object
@@ -85,7 +85,7 @@ public interface IAgedAccountsReceivableRequest extends IHttpRequest {
      * @param newAgedAccountsReceivable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback);
+    void put(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<? super AgedAccountsReceivable> callback);
 
     /**
      * Posts a AgedAccountsReceivable with a new object

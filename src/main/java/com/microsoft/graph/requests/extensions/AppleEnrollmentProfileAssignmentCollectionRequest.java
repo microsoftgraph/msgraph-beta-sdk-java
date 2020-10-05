@@ -40,7 +40,7 @@ public class AppleEnrollmentProfileAssignmentCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, AppleEnrollmentProfileAssignmentCollectionResponse.class, IAppleEnrollmentProfileAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IAppleEnrollmentProfileAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IAppleEnrollmentProfileAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AppleEnrollmentProfileAssignmentCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback) {
+    public void post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<? super AppleEnrollmentProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppleEnrollmentProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AppleEnrollmentProfileAssignmentCollectionRequest extends BaseColle
      */
     public IAppleEnrollmentProfileAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AppleEnrollmentProfileAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAppleEnrollmentProfileAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppleEnrollmentProfileAssignmentCollectionRequest)this;
     }
 

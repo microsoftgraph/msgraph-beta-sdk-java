@@ -58,7 +58,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementScript> callback) {
+    public void get(final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementScript> callback) {
+    public void delete(final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param sourceDeviceManagementScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScript sourceDeviceManagementScript, final ICallback<DeviceManagementScript> callback) {
+    public void patch(final DeviceManagementScript sourceDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScript);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceManagementScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScript newDeviceManagementScript, final ICallback<DeviceManagementScript> callback) {
+    public void post(final DeviceManagementScript newDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScript);
     }
 
@@ -138,7 +138,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceManagementScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScript newDeviceManagementScript, final ICallback<DeviceManagementScript> callback) {
+    public void put(final DeviceManagementScript newDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScript);
     }
 
@@ -172,17 +172,6 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      */
      public IDeviceManagementScriptRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementScriptRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementScriptRequest)this;
      }
 

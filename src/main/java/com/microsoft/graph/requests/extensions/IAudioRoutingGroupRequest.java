@@ -21,7 +21,7 @@ public interface IAudioRoutingGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AudioRoutingGroup> callback);
+    void get(final ICallback<? super AudioRoutingGroup> callback);
 
     /**
      * Gets the AudioRoutingGroup from the service
@@ -36,7 +36,7 @@ public interface IAudioRoutingGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AudioRoutingGroup> callback);
+    void delete(final ICallback<? super AudioRoutingGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAudioRoutingGroupRequest extends IHttpRequest {
      * @param sourceAudioRoutingGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AudioRoutingGroup sourceAudioRoutingGroup, final ICallback<AudioRoutingGroup> callback);
+    void patch(final AudioRoutingGroup sourceAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback);
 
     /**
      * Patches this AudioRoutingGroup with a source
@@ -68,7 +68,7 @@ public interface IAudioRoutingGroupRequest extends IHttpRequest {
      * @param newAudioRoutingGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<AudioRoutingGroup> callback);
+    void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback);
 
     /**
      * Posts a AudioRoutingGroup with a new object
@@ -85,7 +85,7 @@ public interface IAudioRoutingGroupRequest extends IHttpRequest {
      * @param newAudioRoutingGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<AudioRoutingGroup> callback);
+    void put(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback);
 
     /**
      * Posts a AudioRoutingGroup with a new object

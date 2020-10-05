@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISynchronizationSchemaParseExpressionRequest extends IHttpRequest {
 
-    void post(final ICallback<ParseExpressionResponse> callback);
+    void post(final ICallback<? super ParseExpressionResponse> callback);
 
     ParseExpressionResponse post() throws ClientException;
 

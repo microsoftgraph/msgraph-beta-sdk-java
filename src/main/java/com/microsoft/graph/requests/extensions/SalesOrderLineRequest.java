@@ -41,7 +41,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SalesOrderLine> callback) {
+    public void get(final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SalesOrderLine> callback) {
+    public void delete(final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param sourceSalesOrderLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesOrderLine sourceSalesOrderLine, final ICallback<SalesOrderLine> callback) {
+    public void patch(final SalesOrderLine sourceSalesOrderLine, final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesOrderLine);
     }
 
@@ -100,7 +100,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param newSalesOrderLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesOrderLine newSalesOrderLine, final ICallback<SalesOrderLine> callback) {
+    public void post(final SalesOrderLine newSalesOrderLine, final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.POST, callback, newSalesOrderLine);
     }
 
@@ -121,7 +121,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param newSalesOrderLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesOrderLine newSalesOrderLine, final ICallback<SalesOrderLine> callback) {
+    public void put(final SalesOrderLine newSalesOrderLine, final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.PUT, callback, newSalesOrderLine);
     }
 
@@ -155,17 +155,6 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      */
      public ISalesOrderLineRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesOrderLineRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISalesOrderLineRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SalesOrderLineRequest)this;
      }
 

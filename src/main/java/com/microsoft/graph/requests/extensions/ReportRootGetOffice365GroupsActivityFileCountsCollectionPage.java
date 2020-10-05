@@ -34,6 +34,6 @@ public class ReportRootGetOffice365GroupsActivityFileCountsCollectionPage extend
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOffice365GroupsActivityFileCountsCollectionPage(final ReportRootGetOffice365GroupsActivityFileCountsCollectionResponse response, final IReportRootGetOffice365GroupsActivityFileCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -34,19 +34,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IChatWithReferenceRequest extends IHttpRequest {
 
-    void post(final Chat newChat, final IJsonBackedObject payload, final ICallback<Chat> callback);
+    void post(final Chat newChat, final IJsonBackedObject payload, final ICallback<? super Chat> callback);
 
     Chat post(final Chat newChat, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Chat> callback);
+    void get(final ICallback<? super Chat> callback);
 
     Chat get() throws ClientException;
 
-	void delete(final ICallback<Chat> callback);
+	void delete(final ICallback<? super Chat> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Chat sourceChat, final ICallback<Chat> callback);
+	void patch(final Chat sourceChat, final ICallback<? super Chat> callback);
 
 	Chat patch(final Chat sourceChat) throws ClientException;
 

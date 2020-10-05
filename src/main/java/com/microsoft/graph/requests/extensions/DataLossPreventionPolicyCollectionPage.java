@@ -23,6 +23,6 @@ public class DataLossPreventionPolicyCollectionPage extends BaseCollectionPage<D
      * @param builder  the request builder for the next collection page
      */
     public DataLossPreventionPolicyCollectionPage(final DataLossPreventionPolicyCollectionResponse response, final IDataLossPreventionPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

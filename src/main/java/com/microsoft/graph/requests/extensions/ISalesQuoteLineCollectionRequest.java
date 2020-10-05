@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISalesQuoteLineCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISalesQuoteLineCollectionPage> callback);
+    void get(final ICallback<? super ISalesQuoteLineCollectionPage> callback);
 
     ISalesQuoteLineCollectionPage get() throws ClientException;
 
-    void post(final SalesQuoteLine newSalesQuoteLine, final ICallback<SalesQuoteLine> callback);
+    void post(final SalesQuoteLine newSalesQuoteLine, final ICallback<? super SalesQuoteLine> callback);
 
     SalesQuoteLine post(final SalesQuoteLine newSalesQuoteLine) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISalesQuoteLineCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISalesQuoteLineCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISalesQuoteLineCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISalesQuoteLineCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISalesQuoteLineCollectionRequest skipToken(String skipToken);
+	ISalesQuoteLineCollectionRequest skipToken(final String skipToken);
 }

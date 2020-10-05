@@ -34,7 +34,7 @@ public class DeviceManagementDerivedCredentialSettingsReferenceRequest extends B
         super(requestUrl, client, requestOptions, DeviceManagementDerivedCredentialSettings.class);
     }
 
-    public void delete(final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+    public void delete(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class DeviceManagementDerivedCredentialSettingsReferenceRequest extends B
         return (DeviceManagementDerivedCredentialSettingsReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementDerivedCredentialSettingsReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementDerivedCredentialSettingsReferenceRequest)this;
-    }
-    /**
      * Puts the DeviceManagementDerivedCredentialSettings
      *
      * @param srcDeviceManagementDerivedCredentialSettings the DeviceManagementDerivedCredentialSettings reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DeviceManagementDerivedCredentialSettings srcDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+    public void put(DeviceManagementDerivedCredentialSettings srcDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.PUT, callback, srcDeviceManagementDerivedCredentialSettings);
     }
 

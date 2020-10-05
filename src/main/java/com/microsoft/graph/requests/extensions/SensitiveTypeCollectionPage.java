@@ -23,6 +23,6 @@ public class SensitiveTypeCollectionPage extends BaseCollectionPage<SensitiveTyp
      * @param builder  the request builder for the next collection page
      */
     public SensitiveTypeCollectionPage(final SensitiveTypeCollectionResponse response, final ISensitiveTypeCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

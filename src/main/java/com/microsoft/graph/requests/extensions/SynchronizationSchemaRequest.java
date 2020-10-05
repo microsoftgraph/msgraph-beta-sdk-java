@@ -46,7 +46,7 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SynchronizationSchema> callback) {
+    public void get(final ICallback<? super SynchronizationSchema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SynchronizationSchema> callback) {
+    public void delete(final ICallback<? super SynchronizationSchema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      * @param sourceSynchronizationSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SynchronizationSchema sourceSynchronizationSchema, final ICallback<SynchronizationSchema> callback) {
+    public void patch(final SynchronizationSchema sourceSynchronizationSchema, final ICallback<? super SynchronizationSchema> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronizationSchema);
     }
 
@@ -105,7 +105,7 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      * @param newSynchronizationSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SynchronizationSchema newSynchronizationSchema, final ICallback<SynchronizationSchema> callback) {
+    public void post(final SynchronizationSchema newSynchronizationSchema, final ICallback<? super SynchronizationSchema> callback) {
         send(HttpMethod.POST, callback, newSynchronizationSchema);
     }
 
@@ -126,7 +126,7 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      * @param newSynchronizationSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SynchronizationSchema newSynchronizationSchema, final ICallback<SynchronizationSchema> callback) {
+    public void put(final SynchronizationSchema newSynchronizationSchema, final ICallback<? super SynchronizationSchema> callback) {
         send(HttpMethod.PUT, callback, newSynchronizationSchema);
     }
 
@@ -160,17 +160,6 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      */
      public ISynchronizationSchemaRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationSchemaRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISynchronizationSchemaRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SynchronizationSchemaRequest)this;
      }
 

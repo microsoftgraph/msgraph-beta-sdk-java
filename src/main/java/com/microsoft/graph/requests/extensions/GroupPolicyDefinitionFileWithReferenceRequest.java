@@ -39,7 +39,7 @@ public class GroupPolicyDefinitionFileWithReferenceRequest extends BaseRequest i
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionFile.class);
     }
 
-    public void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final IJsonBackedObject payload, final ICallback<GroupPolicyDefinitionFile> callback) {
+    public void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final IJsonBackedObject payload, final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class GroupPolicyDefinitionFileWithReferenceRequest extends BaseRequest i
         return null;
     }
 
-    public void get(final ICallback<GroupPolicyDefinitionFile> callback) {
+    public void get(final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class GroupPolicyDefinitionFileWithReferenceRequest extends BaseRequest i
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<GroupPolicyDefinitionFile> callback) {
+	public void delete(final ICallback<? super GroupPolicyDefinitionFile> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class GroupPolicyDefinitionFileWithReferenceRequest extends BaseRequest i
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback) {
+	public void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback) {
 		send(HttpMethod.PATCH, callback, sourceGroupPolicyDefinitionFile);
 	}
 
@@ -95,16 +95,6 @@ public class GroupPolicyDefinitionFileWithReferenceRequest extends BaseRequest i
      */
     public IGroupPolicyDefinitionFileWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupPolicyDefinitionFileWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupPolicyDefinitionFileWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupPolicyDefinitionFileWithReferenceRequest)this;
     }
 }

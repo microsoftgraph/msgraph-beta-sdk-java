@@ -34,7 +34,7 @@ public class GroupPolicyCategoryCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, GroupPolicyCategoryCollectionResponse.class, IGroupPolicyCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupPolicyCategoryCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IGroupPolicyCategoryCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -55,22 +55,27 @@ public class GroupPolicyCategoryCollectionWithReferencesRequest extends BaseColl
 
     public IGroupPolicyCategoryCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupPolicyCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IGroupPolicyCategoryCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupPolicyCategoryCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IGroupPolicyCategoryCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IGroupPolicyCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupPolicyCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IGroupPolicyCategoryCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (GroupPolicyCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IGroupPolicyCategoryCollectionWithReferencesPage buildFromResponse(final GroupPolicyCategoryCollectionResponse response) {

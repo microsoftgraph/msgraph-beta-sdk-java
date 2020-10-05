@@ -34,6 +34,6 @@ public class ReportRootGetOffice365GroupsActivityStorageCollectionPage extends B
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOffice365GroupsActivityStorageCollectionPage(final ReportRootGetOffice365GroupsActivityStorageCollectionResponse response, final IReportRootGetOffice365GroupsActivityStorageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

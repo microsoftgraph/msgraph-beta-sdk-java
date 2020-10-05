@@ -35,6 +35,6 @@ public class SearchEntityQueryCollectionPage extends BaseCollectionPage<SearchRe
      * @param builder The request builder for the next collection page
      */
     public SearchEntityQueryCollectionPage(final SearchEntityQueryCollectionResponse response, final ISearchEntityQueryCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

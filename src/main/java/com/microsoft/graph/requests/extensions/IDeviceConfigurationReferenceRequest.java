@@ -41,7 +41,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceConfigurationReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<DeviceConfiguration> callback);
+    void delete(final ICallback<? super DeviceConfiguration> callback);
 
     DeviceConfiguration delete() throws ClientException;
 
@@ -67,7 +67,7 @@ public interface IDeviceConfigurationReferenceRequest extends IHttpRequest {
      * @param srcDeviceConfiguration the DeviceConfiguration to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DeviceConfiguration srcDeviceConfiguration, final ICallback<DeviceConfiguration> callback);
+    void put(DeviceConfiguration srcDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback);
 
     /**
      * Puts the DeviceConfiguration

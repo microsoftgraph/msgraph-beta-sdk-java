@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceD
     }
 
 
-    public void get(final ICallback<IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage> callback) {
+    public void get(final ICallback<? super IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -113,6 +113,17 @@ public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceD
      */
     public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest)this;
     }
 

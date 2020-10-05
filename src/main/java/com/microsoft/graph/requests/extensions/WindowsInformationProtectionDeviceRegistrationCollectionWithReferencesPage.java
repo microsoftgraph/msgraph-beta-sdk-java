@@ -35,6 +35,6 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferen
      * @param builder  the request builder for the next collection page
      */
     public WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage(final WindowsInformationProtectionDeviceRegistrationCollectionResponse response, final IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

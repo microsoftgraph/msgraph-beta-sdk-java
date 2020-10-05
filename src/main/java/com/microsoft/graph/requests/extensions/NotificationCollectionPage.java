@@ -23,6 +23,6 @@ public class NotificationCollectionPage extends BaseCollectionPage<Notification,
      * @param builder  the request builder for the next collection page
      */
     public NotificationCollectionPage(final NotificationCollectionResponse response, final INotificationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

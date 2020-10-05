@@ -39,7 +39,7 @@ public class MobileAppGetRelatedAppStatesCollectionRequest extends BaseCollectio
     }
 
 
-    public void get(final ICallback<IMobileAppGetRelatedAppStatesCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppGetRelatedAppStatesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class MobileAppGetRelatedAppStatesCollectionRequest extends BaseCollectio
      */
     public IMobileAppGetRelatedAppStatesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IMobileAppGetRelatedAppStatesCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppGetRelatedAppStatesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IMobileAppGetRelatedAppStatesCollectionRequest)this;
     }
 

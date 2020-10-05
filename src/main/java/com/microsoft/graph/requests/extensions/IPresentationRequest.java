@@ -21,7 +21,7 @@ public interface IPresentationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Presentation> callback);
+    void get(final ICallback<? super Presentation> callback);
 
     /**
      * Gets the Presentation from the service
@@ -36,7 +36,7 @@ public interface IPresentationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Presentation> callback);
+    void delete(final ICallback<? super Presentation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPresentationRequest extends IHttpRequest {
      * @param sourcePresentation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Presentation sourcePresentation, final ICallback<Presentation> callback);
+    void patch(final Presentation sourcePresentation, final ICallback<? super Presentation> callback);
 
     /**
      * Patches this Presentation with a source
@@ -68,7 +68,7 @@ public interface IPresentationRequest extends IHttpRequest {
      * @param newPresentation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Presentation newPresentation, final ICallback<Presentation> callback);
+    void post(final Presentation newPresentation, final ICallback<? super Presentation> callback);
 
     /**
      * Posts a Presentation with a new object
@@ -85,7 +85,7 @@ public interface IPresentationRequest extends IHttpRequest {
      * @param newPresentation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Presentation newPresentation, final ICallback<Presentation> callback);
+    void put(final Presentation newPresentation, final ICallback<? super Presentation> callback);
 
     /**
      * Posts a Presentation with a new object

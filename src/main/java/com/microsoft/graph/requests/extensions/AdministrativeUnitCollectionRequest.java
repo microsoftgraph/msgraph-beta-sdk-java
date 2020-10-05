@@ -39,7 +39,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
         super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class, IAdministrativeUnitCollectionPage.class);
     }
 
-    public void get(final ICallback<IAdministrativeUnitCollectionPage> callback) {
+    public void get(final ICallback<? super IAdministrativeUnitCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
         return buildFromResponse(response);
     }
 
-    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      */
     public IAdministrativeUnitCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AdministrativeUnitCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAdministrativeUnitCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
 

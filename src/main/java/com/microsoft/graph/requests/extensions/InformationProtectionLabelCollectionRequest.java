@@ -46,7 +46,7 @@ public class InformationProtectionLabelCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, InformationProtectionLabelCollectionResponse.class, IInformationProtectionLabelCollectionPage.class);
     }
 
-    public void get(final ICallback<IInformationProtectionLabelCollectionPage> callback) {
+    public void get(final ICallback<? super IInformationProtectionLabelCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -65,7 +65,7 @@ public class InformationProtectionLabelCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback) {
+    public void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InformationProtectionLabelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -98,6 +98,17 @@ public class InformationProtectionLabelCollectionRequest extends BaseCollectionR
      */
     public IInformationProtectionLabelCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (InformationProtectionLabelCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IInformationProtectionLabelCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (InformationProtectionLabelCollectionRequest)this;
     }
 

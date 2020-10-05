@@ -37,7 +37,7 @@ public class RoleScopeTagCollectionReferenceRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, RoleScopeTagCollectionResponse.class, IRoleScopeTagCollectionPage.class);
     }
 
-    public void post(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+    public void post(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/roleScopeTags/" + newRoleScopeTag.id);
         new RoleScopeTagWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -71,6 +71,17 @@ public class RoleScopeTagCollectionReferenceRequest extends BaseCollectionReques
      */
     public IRoleScopeTagCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleScopeTagCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IRoleScopeTagCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RoleScopeTagCollectionReferenceRequest)this;
     }
 

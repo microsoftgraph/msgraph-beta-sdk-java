@@ -39,7 +39,7 @@ public class OnPremisesPublishingProfileCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, OnPremisesPublishingProfileCollectionResponse.class, IOnPremisesPublishingProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IOnPremisesPublishingProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IOnPremisesPublishingProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class OnPremisesPublishingProfileCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback) {
+    public void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnPremisesPublishingProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class OnPremisesPublishingProfileCollectionRequest extends BaseCollection
      */
     public IOnPremisesPublishingProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OnPremisesPublishingProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOnPremisesPublishingProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OnPremisesPublishingProfileCollectionRequest)this;
     }
 

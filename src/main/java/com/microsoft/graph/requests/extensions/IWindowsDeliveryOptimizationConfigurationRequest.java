@@ -21,7 +21,7 @@ public interface IWindowsDeliveryOptimizationConfigurationRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsDeliveryOptimizationConfiguration> callback);
+    void get(final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback);
 
     /**
      * Gets the WindowsDeliveryOptimizationConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsDeliveryOptimizationConfigurationRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsDeliveryOptimizationConfiguration> callback);
+    void delete(final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsDeliveryOptimizationConfigurationRequest extends IHttpR
      * @param sourceWindowsDeliveryOptimizationConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsDeliveryOptimizationConfiguration sourceWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback);
+    void patch(final WindowsDeliveryOptimizationConfiguration sourceWindowsDeliveryOptimizationConfiguration, final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback);
 
     /**
      * Patches this WindowsDeliveryOptimizationConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsDeliveryOptimizationConfigurationRequest extends IHttpR
      * @param newWindowsDeliveryOptimizationConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback);
+    void post(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback);
 
     /**
      * Posts a WindowsDeliveryOptimizationConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsDeliveryOptimizationConfigurationRequest extends IHttpR
      * @param newWindowsDeliveryOptimizationConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback);
+    void put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback);
 
     /**
      * Posts a WindowsDeliveryOptimizationConfiguration with a new object

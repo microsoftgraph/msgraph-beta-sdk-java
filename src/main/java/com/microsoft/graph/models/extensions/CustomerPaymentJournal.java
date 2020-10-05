@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Account;
 import com.microsoft.graph.models.extensions.CustomerPayment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionResponse;
 import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionPage;
 
 
@@ -124,19 +122,7 @@ public class CustomerPaymentJournal extends Entity implements IJsonBackedObject 
 
 
         if (json.has("customerPayments")) {
-            final CustomerPaymentCollectionResponse response = new CustomerPaymentCollectionResponse();
-            if (json.has("customerPayments@odata.nextLink")) {
-                response.nextLink = json.get("customerPayments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("customerPayments").toString(), JsonObject[].class);
-            final CustomerPayment[] array = new CustomerPayment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CustomerPayment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            customerPayments = new CustomerPaymentCollectionPage(response, null);
+            customerPayments = serializer.deserializeObject(json.get("customerPayments").toString(), CustomerPaymentCollectionPage.class);
         }
     }
 }

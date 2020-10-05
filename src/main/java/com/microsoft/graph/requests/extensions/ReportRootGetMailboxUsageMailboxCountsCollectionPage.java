@@ -34,6 +34,6 @@ public class ReportRootGetMailboxUsageMailboxCountsCollectionPage extends BaseCo
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetMailboxUsageMailboxCountsCollectionPage(final ReportRootGetMailboxUsageMailboxCountsCollectionResponse response, final IReportRootGetMailboxUsageMailboxCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

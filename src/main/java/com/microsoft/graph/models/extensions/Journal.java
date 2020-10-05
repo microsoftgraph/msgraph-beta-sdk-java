@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Account;
 import com.microsoft.graph.models.extensions.JournalLine;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.JournalLineCollectionResponse;
 import com.microsoft.graph.requests.extensions.JournalLineCollectionPage;
 
 
@@ -124,19 +122,7 @@ public class Journal extends Entity implements IJsonBackedObject {
 
 
         if (json.has("journalLines")) {
-            final JournalLineCollectionResponse response = new JournalLineCollectionResponse();
-            if (json.has("journalLines@odata.nextLink")) {
-                response.nextLink = json.get("journalLines@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("journalLines").toString(), JsonObject[].class);
-            final JournalLine[] array = new JournalLine[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JournalLine.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            journalLines = new JournalLineCollectionPage(response, null);
+            journalLines = serializer.deserializeObject(json.get("journalLines").toString(), JournalLineCollectionPage.class);
         }
     }
 }

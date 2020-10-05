@@ -34,6 +34,6 @@ public class ReportRootGetOneDriveUsageStorageCollectionPage extends BaseCollect
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOneDriveUsageStorageCollectionPage(final ReportRootGetOneDriveUsageStorageCollectionResponse response, final IReportRootGetOneDriveUsageStorageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

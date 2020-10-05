@@ -21,7 +21,7 @@ public interface IRemoteActionAuditRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RemoteActionAudit> callback);
+    void get(final ICallback<? super RemoteActionAudit> callback);
 
     /**
      * Gets the RemoteActionAudit from the service
@@ -36,7 +36,7 @@ public interface IRemoteActionAuditRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RemoteActionAudit> callback);
+    void delete(final ICallback<? super RemoteActionAudit> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRemoteActionAuditRequest extends IHttpRequest {
      * @param sourceRemoteActionAudit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RemoteActionAudit sourceRemoteActionAudit, final ICallback<RemoteActionAudit> callback);
+    void patch(final RemoteActionAudit sourceRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback);
 
     /**
      * Patches this RemoteActionAudit with a source
@@ -68,7 +68,7 @@ public interface IRemoteActionAuditRequest extends IHttpRequest {
      * @param newRemoteActionAudit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback);
+    void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback);
 
     /**
      * Posts a RemoteActionAudit with a new object
@@ -85,7 +85,7 @@ public interface IRemoteActionAuditRequest extends IHttpRequest {
      * @param newRemoteActionAudit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback);
+    void put(final RemoteActionAudit newRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback);
 
     /**
      * Posts a RemoteActionAudit with a new object

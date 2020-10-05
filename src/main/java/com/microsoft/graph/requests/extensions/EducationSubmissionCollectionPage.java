@@ -23,6 +23,6 @@ public class EducationSubmissionCollectionPage extends BaseCollectionPage<Educat
      * @param builder  the request builder for the next collection page
      */
     public EducationSubmissionCollectionPage(final EducationSubmissionCollectionResponse response, final IEducationSubmissionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

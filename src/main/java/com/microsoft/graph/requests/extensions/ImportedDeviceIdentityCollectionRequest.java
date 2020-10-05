@@ -41,7 +41,7 @@ public class ImportedDeviceIdentityCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ImportedDeviceIdentityCollectionResponse.class, IImportedDeviceIdentityCollectionPage.class);
     }
 
-    public void get(final ICallback<IImportedDeviceIdentityCollectionPage> callback) {
+    public void get(final ICallback<? super IImportedDeviceIdentityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ImportedDeviceIdentityCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback) {
+    public void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ImportedDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class ImportedDeviceIdentityCollectionRequest extends BaseCollectionReque
      */
     public IImportedDeviceIdentityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ImportedDeviceIdentityCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IImportedDeviceIdentityCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ImportedDeviceIdentityCollectionRequest)this;
     }
 

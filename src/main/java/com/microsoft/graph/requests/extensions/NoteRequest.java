@@ -53,7 +53,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Note> callback) {
+    public void get(final ICallback<? super Note> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Note> callback) {
+    public void delete(final ICallback<? super Note> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param sourceNote the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Note sourceNote, final ICallback<Note> callback) {
+    public void patch(final Note sourceNote, final ICallback<? super Note> callback) {
         send(HttpMethod.PATCH, callback, sourceNote);
     }
 
@@ -112,7 +112,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param newNote the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Note newNote, final ICallback<Note> callback) {
+    public void post(final Note newNote, final ICallback<? super Note> callback) {
         send(HttpMethod.POST, callback, newNote);
     }
 
@@ -133,7 +133,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param newNote the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Note newNote, final ICallback<Note> callback) {
+    public void put(final Note newNote, final ICallback<? super Note> callback) {
         send(HttpMethod.PUT, callback, newNote);
     }
 
@@ -167,17 +167,6 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      */
      public INoteRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NoteRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public INoteRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (NoteRequest)this;
      }
 

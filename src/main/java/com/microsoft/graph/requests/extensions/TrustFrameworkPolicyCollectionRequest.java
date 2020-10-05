@@ -40,7 +40,7 @@ public class TrustFrameworkPolicyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, TrustFrameworkPolicyCollectionResponse.class, ITrustFrameworkPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<ITrustFrameworkPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super ITrustFrameworkPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TrustFrameworkPolicyCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<TrustFrameworkPolicy> callback) {
+    public void post(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrustFrameworkPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class TrustFrameworkPolicyCollectionRequest extends BaseCollectionRequest
      */
     public ITrustFrameworkPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TrustFrameworkPolicyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITrustFrameworkPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TrustFrameworkPolicyCollectionRequest)this;
     }
 

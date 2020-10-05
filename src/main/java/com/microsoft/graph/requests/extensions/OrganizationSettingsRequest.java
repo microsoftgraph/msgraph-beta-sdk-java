@@ -43,7 +43,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OrganizationSettings> callback) {
+    public void get(final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OrganizationSettings> callback) {
+    public void delete(final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param sourceOrganizationSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrganizationSettings sourceOrganizationSettings, final ICallback<OrganizationSettings> callback) {
+    public void patch(final OrganizationSettings sourceOrganizationSettings, final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganizationSettings);
     }
 
@@ -102,7 +102,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param newOrganizationSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrganizationSettings newOrganizationSettings, final ICallback<OrganizationSettings> callback) {
+    public void post(final OrganizationSettings newOrganizationSettings, final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.POST, callback, newOrganizationSettings);
     }
 
@@ -123,7 +123,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param newOrganizationSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrganizationSettings newOrganizationSettings, final ICallback<OrganizationSettings> callback) {
+    public void put(final OrganizationSettings newOrganizationSettings, final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.PUT, callback, newOrganizationSettings);
     }
 
@@ -157,17 +157,6 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      */
      public IOrganizationSettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationSettingsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOrganizationSettingsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OrganizationSettingsRequest)this;
      }
 

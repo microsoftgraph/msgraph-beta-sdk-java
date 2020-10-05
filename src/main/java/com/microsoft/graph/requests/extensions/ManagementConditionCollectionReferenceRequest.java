@@ -37,7 +37,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, ManagementConditionCollectionResponse.class, IManagementConditionCollectionPage.class);
     }
 
-    public void post(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback) {
+    public void post(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managementConditions/" + newManagementCondition.id);
         new ManagementConditionWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -71,6 +71,17 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
      */
     public IManagementConditionCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagementConditionCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IManagementConditionCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagementConditionCollectionReferenceRequest)this;
     }
 

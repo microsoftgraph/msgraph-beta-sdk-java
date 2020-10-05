@@ -52,7 +52,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsCertificateProfileBase> callback) {
+    public void get(final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param sourceWindowsCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback) {
+    public void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsCertificateProfileBase);
     }
 
@@ -111,7 +111,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param newWindowsCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback) {
+    public void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newWindowsCertificateProfileBase);
     }
 
@@ -132,7 +132,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param newWindowsCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback) {
+    public void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newWindowsCertificateProfileBase);
     }
 
@@ -166,17 +166,6 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      */
      public IWindowsCertificateProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsCertificateProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsCertificateProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsCertificateProfileBaseRequest)this;
      }
 

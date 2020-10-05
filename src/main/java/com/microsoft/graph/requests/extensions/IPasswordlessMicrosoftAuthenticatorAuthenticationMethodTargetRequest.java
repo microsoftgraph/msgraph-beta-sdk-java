@@ -21,7 +21,7 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodTargetRe
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void get(final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Gets the PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget from the service
@@ -36,7 +36,7 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodTargetRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void delete(final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodTargetRe
      * @param sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void patch(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Patches this PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget with a source
@@ -68,7 +68,7 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodTargetRe
      * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget newPasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget newPasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Posts a PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget with a new object
@@ -85,7 +85,7 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodTargetRe
      * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget newPasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget newPasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Posts a PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget with a new object

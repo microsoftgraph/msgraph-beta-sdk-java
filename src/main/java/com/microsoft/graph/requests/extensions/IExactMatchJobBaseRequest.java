@@ -21,7 +21,7 @@ public interface IExactMatchJobBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExactMatchJobBase> callback);
+    void get(final ICallback<? super ExactMatchJobBase> callback);
 
     /**
      * Gets the ExactMatchJobBase from the service
@@ -36,7 +36,7 @@ public interface IExactMatchJobBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExactMatchJobBase> callback);
+    void delete(final ICallback<? super ExactMatchJobBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExactMatchJobBaseRequest extends IHttpRequest {
      * @param sourceExactMatchJobBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExactMatchJobBase sourceExactMatchJobBase, final ICallback<ExactMatchJobBase> callback);
+    void patch(final ExactMatchJobBase sourceExactMatchJobBase, final ICallback<? super ExactMatchJobBase> callback);
 
     /**
      * Patches this ExactMatchJobBase with a source
@@ -68,7 +68,7 @@ public interface IExactMatchJobBaseRequest extends IHttpRequest {
      * @param newExactMatchJobBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExactMatchJobBase newExactMatchJobBase, final ICallback<ExactMatchJobBase> callback);
+    void post(final ExactMatchJobBase newExactMatchJobBase, final ICallback<? super ExactMatchJobBase> callback);
 
     /**
      * Posts a ExactMatchJobBase with a new object
@@ -85,7 +85,7 @@ public interface IExactMatchJobBaseRequest extends IHttpRequest {
      * @param newExactMatchJobBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExactMatchJobBase newExactMatchJobBase, final ICallback<ExactMatchJobBase> callback);
+    void put(final ExactMatchJobBase newExactMatchJobBase, final ICallback<? super ExactMatchJobBase> callback);
 
     /**
      * Posts a ExactMatchJobBase with a new object

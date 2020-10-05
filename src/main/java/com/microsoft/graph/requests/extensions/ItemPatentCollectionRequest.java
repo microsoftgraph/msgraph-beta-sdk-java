@@ -40,7 +40,7 @@ public class ItemPatentCollectionRequest extends BaseCollectionRequest<ItemPaten
         super(requestUrl, client, requestOptions, ItemPatentCollectionResponse.class, IItemPatentCollectionPage.class);
     }
 
-    public void get(final ICallback<IItemPatentCollectionPage> callback) {
+    public void get(final ICallback<? super IItemPatentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ItemPatentCollectionRequest extends BaseCollectionRequest<ItemPaten
         return buildFromResponse(response);
     }
 
-    public void post(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback) {
+    public void post(final ItemPatent newItemPatent, final ICallback<? super ItemPatent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemPatentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ItemPatentCollectionRequest extends BaseCollectionRequest<ItemPaten
      */
     public IItemPatentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ItemPatentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IItemPatentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemPatentCollectionRequest)this;
     }
 

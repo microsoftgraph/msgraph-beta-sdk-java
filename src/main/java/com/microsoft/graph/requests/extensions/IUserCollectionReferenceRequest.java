@@ -41,7 +41,7 @@ import com.microsoft.graph.models.extensions.User;
  */
 public interface IUserCollectionReferenceRequest {
 
-    void post(final User newUser, final ICallback<User> callback);
+    void post(final User newUser, final ICallback<? super User> callback);
 
     User post(final User newUser) throws ClientException;
 

@@ -37,7 +37,7 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Office365ActiveUserCounts> callback) {
+    public void get(final ICallback<? super Office365ActiveUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Office365ActiveUserCounts> callback) {
+    public void delete(final ICallback<? super Office365ActiveUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
      * @param sourceOffice365ActiveUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365ActiveUserCounts sourceOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback) {
+    public void patch(final Office365ActiveUserCounts sourceOffice365ActiveUserCounts, final ICallback<? super Office365ActiveUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365ActiveUserCounts);
     }
 
@@ -96,7 +96,7 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
      * @param newOffice365ActiveUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback) {
+    public void post(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<? super Office365ActiveUserCounts> callback) {
         send(HttpMethod.POST, callback, newOffice365ActiveUserCounts);
     }
 
@@ -117,7 +117,7 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
      * @param newOffice365ActiveUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback) {
+    public void put(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<? super Office365ActiveUserCounts> callback) {
         send(HttpMethod.PUT, callback, newOffice365ActiveUserCounts);
     }
 
@@ -151,17 +151,6 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
      */
      public IOffice365ActiveUserCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365ActiveUserCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOffice365ActiveUserCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Office365ActiveUserCountsRequest)this;
      }
 

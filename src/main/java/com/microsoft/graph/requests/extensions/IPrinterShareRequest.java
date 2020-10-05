@@ -21,7 +21,7 @@ public interface IPrinterShareRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrinterShare> callback);
+    void get(final ICallback<? super PrinterShare> callback);
 
     /**
      * Gets the PrinterShare from the service
@@ -36,7 +36,7 @@ public interface IPrinterShareRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrinterShare> callback);
+    void delete(final ICallback<? super PrinterShare> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrinterShareRequest extends IHttpRequest {
      * @param sourcePrinterShare the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrinterShare sourcePrinterShare, final ICallback<PrinterShare> callback);
+    void patch(final PrinterShare sourcePrinterShare, final ICallback<? super PrinterShare> callback);
 
     /**
      * Patches this PrinterShare with a source
@@ -68,7 +68,7 @@ public interface IPrinterShareRequest extends IHttpRequest {
      * @param newPrinterShare the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback);
+    void post(final PrinterShare newPrinterShare, final ICallback<? super PrinterShare> callback);
 
     /**
      * Posts a PrinterShare with a new object
@@ -85,7 +85,7 @@ public interface IPrinterShareRequest extends IHttpRequest {
      * @param newPrinterShare the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback);
+    void put(final PrinterShare newPrinterShare, final ICallback<? super PrinterShare> callback);
 
     /**
      * Posts a PrinterShare with a new object

@@ -21,7 +21,7 @@ public interface IDeviceManagementReportsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementReports> callback);
+    void get(final ICallback<? super DeviceManagementReports> callback);
 
     /**
      * Gets the DeviceManagementReports from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementReportsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementReports> callback);
+    void delete(final ICallback<? super DeviceManagementReports> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementReportsRequest extends IHttpRequest {
      * @param sourceDeviceManagementReports the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementReports sourceDeviceManagementReports, final ICallback<DeviceManagementReports> callback);
+    void patch(final DeviceManagementReports sourceDeviceManagementReports, final ICallback<? super DeviceManagementReports> callback);
 
     /**
      * Patches this DeviceManagementReports with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementReportsRequest extends IHttpRequest {
      * @param newDeviceManagementReports the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementReports newDeviceManagementReports, final ICallback<DeviceManagementReports> callback);
+    void post(final DeviceManagementReports newDeviceManagementReports, final ICallback<? super DeviceManagementReports> callback);
 
     /**
      * Posts a DeviceManagementReports with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementReportsRequest extends IHttpRequest {
      * @param newDeviceManagementReports the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementReports newDeviceManagementReports, final ICallback<DeviceManagementReports> callback);
+    void put(final DeviceManagementReports newDeviceManagementReports, final ICallback<? super DeviceManagementReports> callback);
 
     /**
      * Posts a DeviceManagementReports with a new object

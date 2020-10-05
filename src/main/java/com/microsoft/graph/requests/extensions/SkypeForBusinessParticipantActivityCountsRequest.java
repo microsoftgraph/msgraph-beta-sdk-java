@@ -37,7 +37,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SkypeForBusinessParticipantActivityCounts> callback) {
+    public void get(final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SkypeForBusinessParticipantActivityCounts> callback) {
+    public void delete(final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param sourceSkypeForBusinessParticipantActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessParticipantActivityCounts sourceSkypeForBusinessParticipantActivityCounts, final ICallback<SkypeForBusinessParticipantActivityCounts> callback) {
+    public void patch(final SkypeForBusinessParticipantActivityCounts sourceSkypeForBusinessParticipantActivityCounts, final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -96,7 +96,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param newSkypeForBusinessParticipantActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, final ICallback<SkypeForBusinessParticipantActivityCounts> callback) {
+    public void post(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -117,7 +117,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param newSkypeForBusinessParticipantActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, final ICallback<SkypeForBusinessParticipantActivityCounts> callback) {
+    public void put(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -151,17 +151,6 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      */
      public ISkypeForBusinessParticipantActivityCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessParticipantActivityCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISkypeForBusinessParticipantActivityCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SkypeForBusinessParticipantActivityCountsRequest)this;
      }
 

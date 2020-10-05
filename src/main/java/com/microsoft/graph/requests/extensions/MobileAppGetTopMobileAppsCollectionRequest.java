@@ -39,7 +39,7 @@ public class MobileAppGetTopMobileAppsCollectionRequest extends BaseCollectionRe
     }
 
 
-    public void get(final ICallback<IMobileAppGetTopMobileAppsCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppGetTopMobileAppsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class MobileAppGetTopMobileAppsCollectionRequest extends BaseCollectionRe
      */
     public IMobileAppGetTopMobileAppsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IMobileAppGetTopMobileAppsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppGetTopMobileAppsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IMobileAppGetTopMobileAppsCollectionRequest)this;
     }
 

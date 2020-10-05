@@ -34,6 +34,6 @@ public class DeviceManagementTemplateCompareCollectionPage extends BaseCollectio
      * @param builder The request builder for the next collection page
      */
     public DeviceManagementTemplateCompareCollectionPage(final DeviceManagementTemplateCompareCollectionResponse response, final IDeviceManagementTemplateCompareCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

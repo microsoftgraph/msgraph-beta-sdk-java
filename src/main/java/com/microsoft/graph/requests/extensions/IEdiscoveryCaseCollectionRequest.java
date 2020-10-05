@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEdiscoveryCaseCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEdiscoveryCaseCollectionPage> callback);
+    void get(final ICallback<? super IEdiscoveryCaseCollectionPage> callback);
 
     IEdiscoveryCaseCollectionPage get() throws ClientException;
 
-    void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback);
+    void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback);
 
     EdiscoveryCase post(final EdiscoveryCase newEdiscoveryCase) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEdiscoveryCaseCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IEdiscoveryCaseCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEdiscoveryCaseCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEdiscoveryCaseCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IEdiscoveryCaseCollectionRequest skipToken(String skipToken);
+	IEdiscoveryCaseCollectionRequest skipToken(final String skipToken);
 }

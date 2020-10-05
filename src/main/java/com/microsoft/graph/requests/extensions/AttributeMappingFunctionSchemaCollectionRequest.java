@@ -39,7 +39,7 @@ public class AttributeMappingFunctionSchemaCollectionRequest extends BaseCollect
         super(requestUrl, client, requestOptions, AttributeMappingFunctionSchemaCollectionResponse.class, IAttributeMappingFunctionSchemaCollectionPage.class);
     }
 
-    public void get(final ICallback<IAttributeMappingFunctionSchemaCollectionPage> callback) {
+    public void get(final ICallback<? super IAttributeMappingFunctionSchemaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AttributeMappingFunctionSchemaCollectionRequest extends BaseCollect
         return buildFromResponse(response);
     }
 
-    public void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback) {
+    public void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttributeMappingFunctionSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AttributeMappingFunctionSchemaCollectionRequest extends BaseCollect
      */
     public IAttributeMappingFunctionSchemaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AttributeMappingFunctionSchemaCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAttributeMappingFunctionSchemaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AttributeMappingFunctionSchemaCollectionRequest)this;
     }
 

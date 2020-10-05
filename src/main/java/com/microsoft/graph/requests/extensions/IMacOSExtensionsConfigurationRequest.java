@@ -21,7 +21,7 @@ public interface IMacOSExtensionsConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSExtensionsConfiguration> callback);
+    void get(final ICallback<? super MacOSExtensionsConfiguration> callback);
 
     /**
      * Gets the MacOSExtensionsConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSExtensionsConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSExtensionsConfiguration> callback);
+    void delete(final ICallback<? super MacOSExtensionsConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSExtensionsConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSExtensionsConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback);
+    void patch(final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback);
 
     /**
      * Patches this MacOSExtensionsConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSExtensionsConfigurationRequest extends IHttpRequest {
      * @param newMacOSExtensionsConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback);
+    void post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback);
 
     /**
      * Posts a MacOSExtensionsConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSExtensionsConfigurationRequest extends IHttpRequest {
      * @param newMacOSExtensionsConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback);
+    void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback);
 
     /**
      * Posts a MacOSExtensionsConfiguration with a new object

@@ -40,7 +40,7 @@ public class DeviceAndAppManagementAssignmentFilterCollectionRequest extends Bas
         super(requestUrl, client, requestOptions, DeviceAndAppManagementAssignmentFilterCollectionResponse.class, IDeviceAndAppManagementAssignmentFilterCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceAndAppManagementAssignmentFilterCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceAndAppManagementAssignmentFilterCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceAndAppManagementAssignmentFilterCollectionRequest extends Bas
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback) {
+    public void post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementAssignmentFilterRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceAndAppManagementAssignmentFilterCollectionRequest extends Bas
      */
     public IDeviceAndAppManagementAssignmentFilterCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceAndAppManagementAssignmentFilterCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceAndAppManagementAssignmentFilterCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceAndAppManagementAssignmentFilterCollectionRequest)this;
     }
 

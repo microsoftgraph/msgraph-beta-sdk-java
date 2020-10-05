@@ -34,7 +34,7 @@ public class WindowsPhone81TrustedRootCertificateReferenceRequest extends BaseRe
         super(requestUrl, client, requestOptions, WindowsPhone81TrustedRootCertificate.class);
     }
 
-    public void delete(final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class WindowsPhone81TrustedRootCertificateReferenceRequest extends BaseRe
         return (WindowsPhone81TrustedRootCertificateReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsPhone81TrustedRootCertificateReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsPhone81TrustedRootCertificateReferenceRequest)this;
-    }
-    /**
      * Puts the WindowsPhone81TrustedRootCertificate
      *
      * @param srcWindowsPhone81TrustedRootCertificate the WindowsPhone81TrustedRootCertificate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WindowsPhone81TrustedRootCertificate srcWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void put(WindowsPhone81TrustedRootCertificate srcWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, srcWindowsPhone81TrustedRootCertificate);
     }
 

@@ -21,7 +21,7 @@ public interface IWindows10PFXImportCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10PFXImportCertificateProfile> callback);
+    void get(final ICallback<? super Windows10PFXImportCertificateProfile> callback);
 
     /**
      * Gets the Windows10PFXImportCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IWindows10PFXImportCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10PFXImportCertificateProfile> callback);
+    void delete(final ICallback<? super Windows10PFXImportCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10PFXImportCertificateProfileRequest extends IHttpReque
      * @param sourceWindows10PFXImportCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10PFXImportCertificateProfile sourceWindows10PFXImportCertificateProfile, final ICallback<Windows10PFXImportCertificateProfile> callback);
+    void patch(final Windows10PFXImportCertificateProfile sourceWindows10PFXImportCertificateProfile, final ICallback<? super Windows10PFXImportCertificateProfile> callback);
 
     /**
      * Patches this Windows10PFXImportCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IWindows10PFXImportCertificateProfileRequest extends IHttpReque
      * @param newWindows10PFXImportCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<Windows10PFXImportCertificateProfile> callback);
+    void post(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<? super Windows10PFXImportCertificateProfile> callback);
 
     /**
      * Posts a Windows10PFXImportCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindows10PFXImportCertificateProfileRequest extends IHttpReque
      * @param newWindows10PFXImportCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<Windows10PFXImportCertificateProfile> callback);
+    void put(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<? super Windows10PFXImportCertificateProfile> callback);
 
     /**
      * Posts a Windows10PFXImportCertificateProfile with a new object

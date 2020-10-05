@@ -39,7 +39,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SynchronizationTemplate> callback) {
+    public void get(final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SynchronizationTemplate> callback) {
+    public void delete(final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param sourceSynchronizationTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SynchronizationTemplate sourceSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback) {
+    public void patch(final SynchronizationTemplate sourceSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronizationTemplate);
     }
 
@@ -98,7 +98,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param newSynchronizationTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback) {
+    public void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.POST, callback, newSynchronizationTemplate);
     }
 
@@ -119,7 +119,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param newSynchronizationTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback) {
+    public void put(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.PUT, callback, newSynchronizationTemplate);
     }
 
@@ -153,17 +153,6 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      */
      public ISynchronizationTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationTemplateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISynchronizationTemplateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SynchronizationTemplateRequest)this;
      }
 

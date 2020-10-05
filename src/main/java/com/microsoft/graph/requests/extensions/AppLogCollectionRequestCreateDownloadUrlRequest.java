@@ -37,7 +37,7 @@ public class AppLogCollectionRequestCreateDownloadUrlRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<AppLogCollectionDownloadDetails> callback) {
+    public void post(final ICallback<? super AppLogCollectionDownloadDetails> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class AppLogCollectionRequestCreateDownloadUrlRequest extends BaseRequest
      */
     public IAppLogCollectionRequestCreateDownloadUrlRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AppLogCollectionRequestCreateDownloadUrlRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAppLogCollectionRequestCreateDownloadUrlRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AppLogCollectionRequestCreateDownloadUrlRequest)this;
     }
 

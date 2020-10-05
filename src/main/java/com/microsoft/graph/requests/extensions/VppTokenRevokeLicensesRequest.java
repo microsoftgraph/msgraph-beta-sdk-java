@@ -36,7 +36,7 @@ public class VppTokenRevokeLicensesRequest extends BaseRequest implements IVppTo
         body = new VppTokenRevokeLicensesBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class VppTokenRevokeLicensesRequest extends BaseRequest implements IVppTo
      */
     public IVppTokenRevokeLicensesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (VppTokenRevokeLicensesRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IVppTokenRevokeLicensesRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (VppTokenRevokeLicensesRequest)this;
     }
 

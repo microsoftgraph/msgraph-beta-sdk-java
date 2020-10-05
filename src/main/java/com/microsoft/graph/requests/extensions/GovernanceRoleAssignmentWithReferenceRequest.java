@@ -43,7 +43,7 @@ public class GovernanceRoleAssignmentWithReferenceRequest extends BaseRequest im
         super(requestUrl, client, requestOptions, GovernanceRoleAssignment.class);
     }
 
-    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final IJsonBackedObject payload, final ICallback<GovernanceRoleAssignment> callback) {
+    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final IJsonBackedObject payload, final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -55,7 +55,7 @@ public class GovernanceRoleAssignmentWithReferenceRequest extends BaseRequest im
         return null;
     }
 
-    public void get(final ICallback<GovernanceRoleAssignment> callback) {
+    public void get(final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class GovernanceRoleAssignmentWithReferenceRequest extends BaseRequest im
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<GovernanceRoleAssignment> callback) {
+	public void delete(final ICallback<? super GovernanceRoleAssignment> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -71,7 +71,7 @@ public class GovernanceRoleAssignmentWithReferenceRequest extends BaseRequest im
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+	public void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
 		send(HttpMethod.PATCH, callback, sourceGovernanceRoleAssignment);
 	}
 
@@ -99,16 +99,6 @@ public class GovernanceRoleAssignmentWithReferenceRequest extends BaseRequest im
      */
     public IGovernanceRoleAssignmentWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GovernanceRoleAssignmentWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGovernanceRoleAssignmentWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GovernanceRoleAssignmentWithReferenceRequest)this;
     }
 }

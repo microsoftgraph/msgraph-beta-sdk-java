@@ -39,7 +39,7 @@ public class ReportRootGetMailboxUsageDetailCollectionRequest extends BaseCollec
     }
 
 
-    public void get(final ICallback<IReportRootGetMailboxUsageDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetMailboxUsageDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetMailboxUsageDetailCollectionRequest extends BaseCollec
      */
     public IReportRootGetMailboxUsageDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetMailboxUsageDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetMailboxUsageDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetMailboxUsageDetailCollectionRequest)this;
     }
 

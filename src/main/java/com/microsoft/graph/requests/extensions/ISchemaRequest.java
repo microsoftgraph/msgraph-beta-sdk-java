@@ -21,7 +21,7 @@ public interface ISchemaRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Schema> callback);
+    void get(final ICallback<? super Schema> callback);
 
     /**
      * Gets the Schema from the service
@@ -36,7 +36,7 @@ public interface ISchemaRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Schema> callback);
+    void delete(final ICallback<? super Schema> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISchemaRequest extends IHttpRequest {
      * @param sourceSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Schema sourceSchema, final ICallback<Schema> callback);
+    void patch(final Schema sourceSchema, final ICallback<? super Schema> callback);
 
     /**
      * Patches this Schema with a source
@@ -68,7 +68,7 @@ public interface ISchemaRequest extends IHttpRequest {
      * @param newSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Schema newSchema, final ICallback<Schema> callback);
+    void post(final Schema newSchema, final ICallback<? super Schema> callback);
 
     /**
      * Posts a Schema with a new object
@@ -85,7 +85,7 @@ public interface ISchemaRequest extends IHttpRequest {
      * @param newSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Schema newSchema, final ICallback<Schema> callback);
+    void put(final Schema newSchema, final ICallback<? super Schema> callback);
 
     /**
      * Posts a Schema with a new object

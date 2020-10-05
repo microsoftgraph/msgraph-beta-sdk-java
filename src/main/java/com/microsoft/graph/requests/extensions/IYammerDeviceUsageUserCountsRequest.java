@@ -21,7 +21,7 @@ public interface IYammerDeviceUsageUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<YammerDeviceUsageUserCounts> callback);
+    void get(final ICallback<? super YammerDeviceUsageUserCounts> callback);
 
     /**
      * Gets the YammerDeviceUsageUserCounts from the service
@@ -36,7 +36,7 @@ public interface IYammerDeviceUsageUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<YammerDeviceUsageUserCounts> callback);
+    void delete(final ICallback<? super YammerDeviceUsageUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IYammerDeviceUsageUserCountsRequest extends IHttpRequest {
      * @param sourceYammerDeviceUsageUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final YammerDeviceUsageUserCounts sourceYammerDeviceUsageUserCounts, final ICallback<YammerDeviceUsageUserCounts> callback);
+    void patch(final YammerDeviceUsageUserCounts sourceYammerDeviceUsageUserCounts, final ICallback<? super YammerDeviceUsageUserCounts> callback);
 
     /**
      * Patches this YammerDeviceUsageUserCounts with a source
@@ -68,7 +68,7 @@ public interface IYammerDeviceUsageUserCountsRequest extends IHttpRequest {
      * @param newYammerDeviceUsageUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<YammerDeviceUsageUserCounts> callback);
+    void post(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<? super YammerDeviceUsageUserCounts> callback);
 
     /**
      * Posts a YammerDeviceUsageUserCounts with a new object
@@ -85,7 +85,7 @@ public interface IYammerDeviceUsageUserCountsRequest extends IHttpRequest {
      * @param newYammerDeviceUsageUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<YammerDeviceUsageUserCounts> callback);
+    void put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<? super YammerDeviceUsageUserCounts> callback);
 
     /**
      * Posts a YammerDeviceUsageUserCounts with a new object

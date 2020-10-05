@@ -42,7 +42,7 @@ public interface IDeviceAndAppManagementDataContentStreamRequest extends IHttpSt
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents, final ICallback<DeviceAndAppManagementData> callback);
+    void put(final byte[] fileContents, final ICallback<? super DeviceAndAppManagementData> callback);
 
     /**
      * Uploads to the stream

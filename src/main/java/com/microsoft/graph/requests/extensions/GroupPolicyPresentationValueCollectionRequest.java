@@ -40,7 +40,7 @@ public class GroupPolicyPresentationValueCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, GroupPolicyPresentationValueCollectionResponse.class, IGroupPolicyPresentationValueCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupPolicyPresentationValueCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupPolicyPresentationValueCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GroupPolicyPresentationValueCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final GroupPolicyPresentationValue newGroupPolicyPresentationValue, final ICallback<GroupPolicyPresentationValue> callback) {
+    public void post(final GroupPolicyPresentationValue newGroupPolicyPresentationValue, final ICallback<? super GroupPolicyPresentationValue> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyPresentationValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class GroupPolicyPresentationValueCollectionRequest extends BaseCollectio
      */
     public IGroupPolicyPresentationValueCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyPresentationValueCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupPolicyPresentationValueCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicyPresentationValueCollectionRequest)this;
     }
 

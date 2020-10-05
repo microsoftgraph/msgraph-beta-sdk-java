@@ -23,6 +23,6 @@ public class DeviceManagementIntentCollectionPage extends BaseCollectionPage<Dev
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementIntentCollectionPage(final DeviceManagementIntentCollectionResponse response, final IDeviceManagementIntentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

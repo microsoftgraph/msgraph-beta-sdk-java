@@ -40,7 +40,7 @@ public class UserSecurityProfileCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, UserSecurityProfileCollectionResponse.class, IUserSecurityProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserSecurityProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IUserSecurityProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserSecurityProfileCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<UserSecurityProfile> callback) {
+    public void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<? super UserSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserSecurityProfileCollectionRequest extends BaseCollectionRequest<
      */
     public IUserSecurityProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserSecurityProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserSecurityProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserSecurityProfileCollectionRequest)this;
     }
 

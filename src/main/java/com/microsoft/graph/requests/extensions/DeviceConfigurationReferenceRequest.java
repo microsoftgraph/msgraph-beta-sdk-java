@@ -65,7 +65,7 @@ public class DeviceConfigurationReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, DeviceConfiguration.class);
     }
 
-    public void delete(final ICallback<DeviceConfiguration> callback) {
+    public void delete(final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,22 +95,12 @@ public class DeviceConfigurationReferenceRequest extends BaseRequest implements 
         return (DeviceConfigurationReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceConfigurationReferenceRequest)this;
-    }
-    /**
      * Puts the DeviceConfiguration
      *
      * @param srcDeviceConfiguration the DeviceConfiguration reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DeviceConfiguration srcDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+    public void put(DeviceConfiguration srcDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, srcDeviceConfiguration);
     }
 

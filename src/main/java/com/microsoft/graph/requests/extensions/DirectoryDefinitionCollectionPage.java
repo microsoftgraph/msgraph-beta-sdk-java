@@ -23,6 +23,6 @@ public class DirectoryDefinitionCollectionPage extends BaseCollectionPage<Direct
      * @param builder  the request builder for the next collection page
      */
     public DirectoryDefinitionCollectionPage(final DirectoryDefinitionCollectionResponse response, final IDirectoryDefinitionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

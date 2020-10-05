@@ -57,7 +57,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrivilegedAccess> callback) {
+    public void get(final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrivilegedAccess> callback) {
+    public void delete(final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param sourcePrivilegedAccess the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedAccess sourcePrivilegedAccess, final ICallback<PrivilegedAccess> callback) {
+    public void patch(final PrivilegedAccess sourcePrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedAccess);
     }
 
@@ -116,7 +116,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param newPrivilegedAccess the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback) {
+    public void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.POST, callback, newPrivilegedAccess);
     }
 
@@ -137,7 +137,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param newPrivilegedAccess the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback) {
+    public void put(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedAccess);
     }
 
@@ -171,17 +171,6 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      */
      public IPrivilegedAccessRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedAccessRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrivilegedAccessRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrivilegedAccessRequest)this;
      }
 

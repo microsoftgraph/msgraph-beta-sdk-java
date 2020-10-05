@@ -23,6 +23,6 @@ public class LongRunningOperationCollectionPage extends BaseCollectionPage<LongR
      * @param builder  the request builder for the next collection page
      */
     public LongRunningOperationCollectionPage(final LongRunningOperationCollectionResponse response, final ILongRunningOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback);
+    void get(final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback);
 
     /**
      * Gets the DeviceManagementIntentDeviceSettingStateSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback);
+    void delete(final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryRequest extends
      * @param sourceDeviceManagementIntentDeviceSettingStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback);
+    void patch(final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback);
 
     /**
      * Patches this DeviceManagementIntentDeviceSettingStateSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryRequest extends
      * @param newDeviceManagementIntentDeviceSettingStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback);
+    void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback);
 
     /**
      * Posts a DeviceManagementIntentDeviceSettingStateSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryRequest extends
      * @param newDeviceManagementIntentDeviceSettingStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback);
+    void put(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback);
 
     /**
      * Posts a DeviceManagementIntentDeviceSettingStateSummary with a new object

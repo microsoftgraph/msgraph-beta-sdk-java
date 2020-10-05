@@ -45,7 +45,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ApprovalWorkflowProvider> callback) {
+    public void get(final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ApprovalWorkflowProvider> callback) {
+    public void delete(final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param sourceApprovalWorkflowProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApprovalWorkflowProvider sourceApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback) {
+    public void patch(final ApprovalWorkflowProvider sourceApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.PATCH, callback, sourceApprovalWorkflowProvider);
     }
 
@@ -104,7 +104,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param newApprovalWorkflowProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback) {
+    public void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.POST, callback, newApprovalWorkflowProvider);
     }
 
@@ -125,7 +125,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param newApprovalWorkflowProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback) {
+    public void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.PUT, callback, newApprovalWorkflowProvider);
     }
 
@@ -159,17 +159,6 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      */
      public IApprovalWorkflowProviderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApprovalWorkflowProviderRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IApprovalWorkflowProviderRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ApprovalWorkflowProviderRequest)this;
      }
 

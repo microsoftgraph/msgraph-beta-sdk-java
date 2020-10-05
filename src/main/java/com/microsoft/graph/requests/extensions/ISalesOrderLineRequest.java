@@ -21,7 +21,7 @@ public interface ISalesOrderLineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SalesOrderLine> callback);
+    void get(final ICallback<? super SalesOrderLine> callback);
 
     /**
      * Gets the SalesOrderLine from the service
@@ -36,7 +36,7 @@ public interface ISalesOrderLineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SalesOrderLine> callback);
+    void delete(final ICallback<? super SalesOrderLine> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISalesOrderLineRequest extends IHttpRequest {
      * @param sourceSalesOrderLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SalesOrderLine sourceSalesOrderLine, final ICallback<SalesOrderLine> callback);
+    void patch(final SalesOrderLine sourceSalesOrderLine, final ICallback<? super SalesOrderLine> callback);
 
     /**
      * Patches this SalesOrderLine with a source
@@ -68,7 +68,7 @@ public interface ISalesOrderLineRequest extends IHttpRequest {
      * @param newSalesOrderLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SalesOrderLine newSalesOrderLine, final ICallback<SalesOrderLine> callback);
+    void post(final SalesOrderLine newSalesOrderLine, final ICallback<? super SalesOrderLine> callback);
 
     /**
      * Posts a SalesOrderLine with a new object
@@ -85,7 +85,7 @@ public interface ISalesOrderLineRequest extends IHttpRequest {
      * @param newSalesOrderLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SalesOrderLine newSalesOrderLine, final ICallback<SalesOrderLine> callback);
+    void put(final SalesOrderLine newSalesOrderLine, final ICallback<? super SalesOrderLine> callback);
 
     /**
      * Posts a SalesOrderLine with a new object

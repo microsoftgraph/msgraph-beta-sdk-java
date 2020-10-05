@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceCertificateStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedDeviceCertificateStateCollectionPage> callback);
+    void get(final ICallback<? super IManagedDeviceCertificateStateCollectionPage> callback);
 
     IManagedDeviceCertificateStateCollectionPage get() throws ClientException;
 
-    void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback);
+    void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<? super ManagedDeviceCertificateState> callback);
 
     ManagedDeviceCertificateState post(final ManagedDeviceCertificateState newManagedDeviceCertificateState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IManagedDeviceCertificateStateCollectionRequest extends IHttpRe
      * @return the updated request
      */
     IManagedDeviceCertificateStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagedDeviceCertificateStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IManagedDeviceCertificateStateCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceCertificateStateCollectionRequest skipToken(String skipToken);
+	IManagedDeviceCertificateStateCollectionRequest skipToken(final String skipToken);
 }

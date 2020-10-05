@@ -40,7 +40,7 @@ public class UnifiedRoleAssignmentMultipleCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, UnifiedRoleAssignmentMultipleCollectionResponse.class, IUnifiedRoleAssignmentMultipleCollectionPage.class);
     }
 
-    public void get(final ICallback<IUnifiedRoleAssignmentMultipleCollectionPage> callback) {
+    public void get(final ICallback<? super IUnifiedRoleAssignmentMultipleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UnifiedRoleAssignmentMultipleCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback) {
+    public void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnifiedRoleAssignmentMultipleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UnifiedRoleAssignmentMultipleCollectionRequest extends BaseCollecti
      */
     public IUnifiedRoleAssignmentMultipleCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UnifiedRoleAssignmentMultipleCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUnifiedRoleAssignmentMultipleCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UnifiedRoleAssignmentMultipleCollectionRequest)this;
     }
 

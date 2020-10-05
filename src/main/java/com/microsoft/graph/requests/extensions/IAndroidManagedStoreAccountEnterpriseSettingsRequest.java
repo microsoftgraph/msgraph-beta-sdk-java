@@ -21,7 +21,7 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback);
+    void get(final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback);
 
     /**
      * Gets the AndroidManagedStoreAccountEnterpriseSettings from the service
@@ -36,7 +36,7 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequest extends IH
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback);
+    void delete(final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequest extends IH
      * @param sourceAndroidManagedStoreAccountEnterpriseSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback);
+    void patch(final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback);
 
     /**
      * Patches this AndroidManagedStoreAccountEnterpriseSettings with a source
@@ -68,7 +68,7 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequest extends IH
      * @param newAndroidManagedStoreAccountEnterpriseSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback);
+    void post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback);
 
     /**
      * Posts a AndroidManagedStoreAccountEnterpriseSettings with a new object
@@ -85,7 +85,7 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequest extends IH
      * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback);
+    void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback);
 
     /**
      * Posts a AndroidManagedStoreAccountEnterpriseSettings with a new object

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupLifecyclePolicyCollectionPage> callback);
+    void get(final ICallback<? super IGroupLifecyclePolicyCollectionPage> callback);
 
     IGroupLifecyclePolicyCollectionPage get() throws ClientException;
 
-    void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback);
+    void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback);
 
     GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IGroupLifecyclePolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGroupLifecyclePolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGroupLifecyclePolicyCollectionRequest skipToken(String skipToken);
+	IGroupLifecyclePolicyCollectionRequest skipToken(final String skipToken);
 }

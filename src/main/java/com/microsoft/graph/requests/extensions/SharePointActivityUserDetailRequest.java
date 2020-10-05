@@ -37,7 +37,7 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SharePointActivityUserDetail> callback) {
+    public void get(final ICallback<? super SharePointActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SharePointActivityUserDetail> callback) {
+    public void delete(final ICallback<? super SharePointActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
      * @param sourceSharePointActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointActivityUserDetail sourceSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback) {
+    public void patch(final SharePointActivityUserDetail sourceSharePointActivityUserDetail, final ICallback<? super SharePointActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointActivityUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
      * @param newSharePointActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback) {
+    public void post(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<? super SharePointActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newSharePointActivityUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
      * @param newSharePointActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback) {
+    public void put(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<? super SharePointActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newSharePointActivityUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
      */
      public ISharePointActivityUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointActivityUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISharePointActivityUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SharePointActivityUserDetailRequest)this;
      }
 

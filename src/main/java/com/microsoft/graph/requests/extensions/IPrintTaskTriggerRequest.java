@@ -21,7 +21,7 @@ public interface IPrintTaskTriggerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintTaskTrigger> callback);
+    void get(final ICallback<? super PrintTaskTrigger> callback);
 
     /**
      * Gets the PrintTaskTrigger from the service
@@ -36,7 +36,7 @@ public interface IPrintTaskTriggerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintTaskTrigger> callback);
+    void delete(final ICallback<? super PrintTaskTrigger> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintTaskTriggerRequest extends IHttpRequest {
      * @param sourcePrintTaskTrigger the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintTaskTrigger sourcePrintTaskTrigger, final ICallback<PrintTaskTrigger> callback);
+    void patch(final PrintTaskTrigger sourcePrintTaskTrigger, final ICallback<? super PrintTaskTrigger> callback);
 
     /**
      * Patches this PrintTaskTrigger with a source
@@ -68,7 +68,7 @@ public interface IPrintTaskTriggerRequest extends IHttpRequest {
      * @param newPrintTaskTrigger the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintTaskTrigger newPrintTaskTrigger, final ICallback<PrintTaskTrigger> callback);
+    void post(final PrintTaskTrigger newPrintTaskTrigger, final ICallback<? super PrintTaskTrigger> callback);
 
     /**
      * Posts a PrintTaskTrigger with a new object
@@ -85,7 +85,7 @@ public interface IPrintTaskTriggerRequest extends IHttpRequest {
      * @param newPrintTaskTrigger the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintTaskTrigger newPrintTaskTrigger, final ICallback<PrintTaskTrigger> callback);
+    void put(final PrintTaskTrigger newPrintTaskTrigger, final ICallback<? super PrintTaskTrigger> callback);
 
     /**
      * Posts a PrintTaskTrigger with a new object

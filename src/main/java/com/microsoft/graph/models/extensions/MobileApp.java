@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.generated.MobileAppPublishingState;
@@ -17,15 +16,10 @@ import com.microsoft.graph.models.extensions.MobileAppInstallSummary;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.UserAppInstallStatus;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionPage;
-import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionPage;
 
 
@@ -280,83 +274,23 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final MobileAppAssignmentCollectionResponse response = new MobileAppAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final MobileAppAssignment[] array = new MobileAppAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new MobileAppAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), MobileAppAssignmentCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            final MobileAppCategoryCollectionResponse response = new MobileAppCategoryCollectionResponse();
-            if (json.has("categories@odata.nextLink")) {
-                response.nextLink = json.get("categories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
-            final MobileAppCategory[] array = new MobileAppCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categories = new MobileAppCategoryCollectionPage(response, null);
+            categories = serializer.deserializeObject(json.get("categories").toString(), MobileAppCategoryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            final MobileAppInstallStatusCollectionResponse response = new MobileAppInstallStatusCollectionResponse();
-            if (json.has("deviceStatuses@odata.nextLink")) {
-                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
-            final MobileAppInstallStatus[] array = new MobileAppInstallStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppInstallStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStatuses = new MobileAppInstallStatusCollectionPage(response, null);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), MobileAppInstallStatusCollectionPage.class);
         }
 
         if (json.has("relationships")) {
-            final MobileAppRelationshipCollectionResponse response = new MobileAppRelationshipCollectionResponse();
-            if (json.has("relationships@odata.nextLink")) {
-                response.nextLink = json.get("relationships@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("relationships").toString(), JsonObject[].class);
-            final MobileAppRelationship[] array = new MobileAppRelationship[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppRelationship.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            relationships = new MobileAppRelationshipCollectionPage(response, null);
+            relationships = serializer.deserializeObject(json.get("relationships").toString(), MobileAppRelationshipCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            final UserAppInstallStatusCollectionResponse response = new UserAppInstallStatusCollectionResponse();
-            if (json.has("userStatuses@odata.nextLink")) {
-                response.nextLink = json.get("userStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userStatuses").toString(), JsonObject[].class);
-            final UserAppInstallStatus[] array = new UserAppInstallStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserAppInstallStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userStatuses = new UserAppInstallStatusCollectionPage(response, null);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), UserAppInstallStatusCollectionPage.class);
         }
     }
 }

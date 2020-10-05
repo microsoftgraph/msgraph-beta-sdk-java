@@ -37,7 +37,7 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ApprovalStep> callback) {
+    public void get(final ICallback<? super ApprovalStep> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ApprovalStep> callback) {
+    public void delete(final ICallback<? super ApprovalStep> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
      * @param sourceApprovalStep the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApprovalStep sourceApprovalStep, final ICallback<ApprovalStep> callback) {
+    public void patch(final ApprovalStep sourceApprovalStep, final ICallback<? super ApprovalStep> callback) {
         send(HttpMethod.PATCH, callback, sourceApprovalStep);
     }
 
@@ -96,7 +96,7 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
      * @param newApprovalStep the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApprovalStep newApprovalStep, final ICallback<ApprovalStep> callback) {
+    public void post(final ApprovalStep newApprovalStep, final ICallback<? super ApprovalStep> callback) {
         send(HttpMethod.POST, callback, newApprovalStep);
     }
 
@@ -117,7 +117,7 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
      * @param newApprovalStep the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApprovalStep newApprovalStep, final ICallback<ApprovalStep> callback) {
+    public void put(final ApprovalStep newApprovalStep, final ICallback<? super ApprovalStep> callback) {
         send(HttpMethod.PUT, callback, newApprovalStep);
     }
 
@@ -151,17 +151,6 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
      */
      public IApprovalStepRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApprovalStepRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IApprovalStepRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ApprovalStepRequest)this;
      }
 

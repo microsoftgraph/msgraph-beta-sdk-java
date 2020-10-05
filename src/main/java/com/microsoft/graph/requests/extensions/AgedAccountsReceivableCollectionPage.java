@@ -23,6 +23,6 @@ public class AgedAccountsReceivableCollectionPage extends BaseCollectionPage<Age
      * @param builder  the request builder for the next collection page
      */
     public AgedAccountsReceivableCollectionPage(final AgedAccountsReceivableCollectionResponse response, final IAgedAccountsReceivableCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

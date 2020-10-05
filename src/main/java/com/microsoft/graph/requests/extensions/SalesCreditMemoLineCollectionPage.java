@@ -23,6 +23,6 @@ public class SalesCreditMemoLineCollectionPage extends BaseCollectionPage<SalesC
      * @param builder  the request builder for the next collection page
      */
     public SalesCreditMemoLineCollectionPage(final SalesCreditMemoLineCollectionResponse response, final ISalesCreditMemoLineCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

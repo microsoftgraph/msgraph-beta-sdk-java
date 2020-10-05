@@ -21,7 +21,7 @@ public interface IEducationalActivityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationalActivity> callback);
+    void get(final ICallback<? super EducationalActivity> callback);
 
     /**
      * Gets the EducationalActivity from the service
@@ -36,7 +36,7 @@ public interface IEducationalActivityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationalActivity> callback);
+    void delete(final ICallback<? super EducationalActivity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationalActivityRequest extends IHttpRequest {
      * @param sourceEducationalActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationalActivity sourceEducationalActivity, final ICallback<EducationalActivity> callback);
+    void patch(final EducationalActivity sourceEducationalActivity, final ICallback<? super EducationalActivity> callback);
 
     /**
      * Patches this EducationalActivity with a source
@@ -68,7 +68,7 @@ public interface IEducationalActivityRequest extends IHttpRequest {
      * @param newEducationalActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback);
+    void post(final EducationalActivity newEducationalActivity, final ICallback<? super EducationalActivity> callback);
 
     /**
      * Posts a EducationalActivity with a new object
@@ -85,7 +85,7 @@ public interface IEducationalActivityRequest extends IHttpRequest {
      * @param newEducationalActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback);
+    void put(final EducationalActivity newEducationalActivity, final ICallback<? super EducationalActivity> callback);
 
     /**
      * Posts a EducationalActivity with a new object

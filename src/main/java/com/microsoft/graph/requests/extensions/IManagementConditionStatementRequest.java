@@ -21,7 +21,7 @@ public interface IManagementConditionStatementRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagementConditionStatement> callback);
+    void get(final ICallback<? super ManagementConditionStatement> callback);
 
     /**
      * Gets the ManagementConditionStatement from the service
@@ -36,7 +36,7 @@ public interface IManagementConditionStatementRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagementConditionStatement> callback);
+    void delete(final ICallback<? super ManagementConditionStatement> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagementConditionStatementRequest extends IHttpRequest {
      * @param sourceManagementConditionStatement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagementConditionStatement sourceManagementConditionStatement, final ICallback<ManagementConditionStatement> callback);
+    void patch(final ManagementConditionStatement sourceManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback);
 
     /**
      * Patches this ManagementConditionStatement with a source
@@ -68,7 +68,7 @@ public interface IManagementConditionStatementRequest extends IHttpRequest {
      * @param newManagementConditionStatement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback);
+    void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback);
 
     /**
      * Posts a ManagementConditionStatement with a new object
@@ -85,7 +85,7 @@ public interface IManagementConditionStatementRequest extends IHttpRequest {
      * @param newManagementConditionStatement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback);
+    void put(final ManagementConditionStatement newManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback);
 
     /**
      * Posts a ManagementConditionStatement with a new object

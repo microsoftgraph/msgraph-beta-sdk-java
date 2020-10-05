@@ -40,7 +40,7 @@ public class MobileAppTroubleshootingEventCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, MobileAppTroubleshootingEventCollectionResponse.class, IMobileAppTroubleshootingEventCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppTroubleshootingEventCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppTroubleshootingEventCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppTroubleshootingEventCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback) {
+    public void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MobileAppTroubleshootingEventCollectionRequest extends BaseCollecti
      */
     public IMobileAppTroubleshootingEventCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppTroubleshootingEventCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppTroubleshootingEventCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppTroubleshootingEventCollectionRequest)this;
     }
 

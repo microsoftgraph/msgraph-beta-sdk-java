@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrinterShareWithReferenceRequest extends IHttpRequest {
 
-    void post(final PrinterShare newPrinterShare, final IJsonBackedObject payload, final ICallback<PrinterShare> callback);
+    void post(final PrinterShare newPrinterShare, final IJsonBackedObject payload, final ICallback<? super PrinterShare> callback);
 
     PrinterShare post(final PrinterShare newPrinterShare, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<PrinterShare> callback);
+    void get(final ICallback<? super PrinterShare> callback);
 
     PrinterShare get() throws ClientException;
 
-	void delete(final ICallback<PrinterShare> callback);
+	void delete(final ICallback<? super PrinterShare> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final PrinterShare sourcePrinterShare, final ICallback<PrinterShare> callback);
+	void patch(final PrinterShare sourcePrinterShare, final ICallback<? super PrinterShare> callback);
 
 	PrinterShare patch(final PrinterShare sourcePrinterShare) throws ClientException;
 

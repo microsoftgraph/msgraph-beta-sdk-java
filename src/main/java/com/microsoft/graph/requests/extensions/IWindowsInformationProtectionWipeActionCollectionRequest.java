@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionWipeActionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsInformationProtectionWipeActionCollectionPage> callback);
+    void get(final ICallback<? super IWindowsInformationProtectionWipeActionCollectionPage> callback);
 
     IWindowsInformationProtectionWipeActionCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback);
+    void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback);
 
     WindowsInformationProtectionWipeAction post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsInformationProtectionWipeActionCollectionRequest extend
      * @return the updated request
      */
     IWindowsInformationProtectionWipeActionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsInformationProtectionWipeActionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsInformationProtectionWipeActionCollectionRequest extend
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionWipeActionCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionWipeActionCollectionRequest skipToken(final String skipToken);
 }

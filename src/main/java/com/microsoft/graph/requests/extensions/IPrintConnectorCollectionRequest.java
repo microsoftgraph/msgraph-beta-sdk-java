@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintConnectorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrintConnectorCollectionPage> callback);
+    void get(final ICallback<? super IPrintConnectorCollectionPage> callback);
 
     IPrintConnectorCollectionPage get() throws ClientException;
 
-    void post(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback);
+    void post(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback);
 
     PrintConnector post(final PrintConnector newPrintConnector) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPrintConnectorCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrintConnectorCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrintConnectorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPrintConnectorCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrintConnectorCollectionRequest skipToken(String skipToken);
+	IPrintConnectorCollectionRequest skipToken(final String skipToken);
 }

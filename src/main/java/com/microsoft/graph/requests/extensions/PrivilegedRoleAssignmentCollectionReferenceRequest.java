@@ -36,7 +36,7 @@ public class PrivilegedRoleAssignmentCollectionReferenceRequest extends BaseColl
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignmentCollectionResponse.class, IPrivilegedRoleAssignmentCollectionPage.class);
     }
 
-    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
+    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/privilegedRoleAssignments/" + newPrivilegedRoleAssignment.id);
         new PrivilegedRoleAssignmentWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class PrivilegedRoleAssignmentCollectionReferenceRequest extends BaseColl
      */
     public IPrivilegedRoleAssignmentCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedRoleAssignmentCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedRoleAssignmentCollectionReferenceRequest)this;
     }
 

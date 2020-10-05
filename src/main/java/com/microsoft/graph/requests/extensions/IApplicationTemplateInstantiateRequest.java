@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApplicationTemplateInstantiateRequest extends IHttpRequest {
 
-    void post(final ICallback<ApplicationServicePrincipal> callback);
+    void post(final ICallback<? super ApplicationServicePrincipal> callback);
 
     ApplicationServicePrincipal post() throws ClientException;
 

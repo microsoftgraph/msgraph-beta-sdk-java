@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRiskDetectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRiskDetectionCollectionPage> callback);
+    void get(final ICallback<? super IRiskDetectionCollectionPage> callback);
 
     IRiskDetectionCollectionPage get() throws ClientException;
 
-    void post(final RiskDetection newRiskDetection, final ICallback<RiskDetection> callback);
+    void post(final RiskDetection newRiskDetection, final ICallback<? super RiskDetection> callback);
 
     RiskDetection post(final RiskDetection newRiskDetection) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IRiskDetectionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRiskDetectionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRiskDetectionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IRiskDetectionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRiskDetectionCollectionRequest skipToken(String skipToken);
+	IRiskDetectionCollectionRequest skipToken(final String skipToken);
 }

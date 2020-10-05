@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISoftwareOathAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISoftwareOathAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super ISoftwareOathAuthenticationMethodCollectionPage> callback);
 
     ISoftwareOathAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback);
+    void post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<? super SoftwareOathAuthenticationMethod> callback);
 
     SoftwareOathAuthenticationMethod post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISoftwareOathAuthenticationMethodCollectionRequest extends IHtt
      * @return the updated request
      */
     ISoftwareOathAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISoftwareOathAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISoftwareOathAuthenticationMethodCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	ISoftwareOathAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	ISoftwareOathAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

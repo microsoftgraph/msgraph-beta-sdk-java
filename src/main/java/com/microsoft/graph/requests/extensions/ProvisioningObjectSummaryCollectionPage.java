@@ -23,6 +23,6 @@ public class ProvisioningObjectSummaryCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public ProvisioningObjectSummaryCollectionPage(final ProvisioningObjectSummaryCollectionResponse response, final IProvisioningObjectSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

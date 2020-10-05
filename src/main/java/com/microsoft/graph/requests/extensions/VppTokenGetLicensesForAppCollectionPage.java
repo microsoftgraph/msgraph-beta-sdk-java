@@ -34,6 +34,6 @@ public class VppTokenGetLicensesForAppCollectionPage extends BaseCollectionPage<
      * @param builder The request builder for the next collection page
      */
     public VppTokenGetLicensesForAppCollectionPage(final VppTokenGetLicensesForAppCollectionResponse response, final IVppTokenGetLicensesForAppCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ITeamsUserActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsUserActivityUserDetail> callback);
+    void get(final ICallback<? super TeamsUserActivityUserDetail> callback);
 
     /**
      * Gets the TeamsUserActivityUserDetail from the service
@@ -36,7 +36,7 @@ public interface ITeamsUserActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsUserActivityUserDetail> callback);
+    void delete(final ICallback<? super TeamsUserActivityUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsUserActivityUserDetailRequest extends IHttpRequest {
      * @param sourceTeamsUserActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback);
+    void patch(final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback);
 
     /**
      * Patches this TeamsUserActivityUserDetail with a source
@@ -68,7 +68,7 @@ public interface ITeamsUserActivityUserDetailRequest extends IHttpRequest {
      * @param newTeamsUserActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback);
+    void post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback);
 
     /**
      * Posts a TeamsUserActivityUserDetail with a new object
@@ -85,7 +85,7 @@ public interface ITeamsUserActivityUserDetailRequest extends IHttpRequest {
      * @param newTeamsUserActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback);
+    void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback);
 
     /**
      * Posts a TeamsUserActivityUserDetail with a new object

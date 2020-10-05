@@ -40,7 +40,7 @@ public class CountryRegionCollectionRequest extends BaseCollectionRequest<Countr
         super(requestUrl, client, requestOptions, CountryRegionCollectionResponse.class, ICountryRegionCollectionPage.class);
     }
 
-    public void get(final ICallback<ICountryRegionCollectionPage> callback) {
+    public void get(final ICallback<? super ICountryRegionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CountryRegionCollectionRequest extends BaseCollectionRequest<Countr
         return buildFromResponse(response);
     }
 
-    public void post(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback) {
+    public void post(final CountryRegion newCountryRegion, final ICallback<? super CountryRegion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CountryRegionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class CountryRegionCollectionRequest extends BaseCollectionRequest<Countr
      */
     public ICountryRegionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CountryRegionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICountryRegionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CountryRegionCollectionRequest)this;
     }
 

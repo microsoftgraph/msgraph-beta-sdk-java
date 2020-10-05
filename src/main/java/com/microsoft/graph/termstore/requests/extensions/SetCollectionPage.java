@@ -23,6 +23,6 @@ public class SetCollectionPage extends BaseCollectionPage<Set, ISetCollectionReq
      * @param builder  the request builder for the next collection page
      */
     public SetCollectionPage(final SetCollectionResponse response, final ISetCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

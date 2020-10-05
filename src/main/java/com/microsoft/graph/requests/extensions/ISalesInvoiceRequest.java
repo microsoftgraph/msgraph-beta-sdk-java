@@ -21,7 +21,7 @@ public interface ISalesInvoiceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SalesInvoice> callback);
+    void get(final ICallback<? super SalesInvoice> callback);
 
     /**
      * Gets the SalesInvoice from the service
@@ -36,7 +36,7 @@ public interface ISalesInvoiceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SalesInvoice> callback);
+    void delete(final ICallback<? super SalesInvoice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISalesInvoiceRequest extends IHttpRequest {
      * @param sourceSalesInvoice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SalesInvoice sourceSalesInvoice, final ICallback<SalesInvoice> callback);
+    void patch(final SalesInvoice sourceSalesInvoice, final ICallback<? super SalesInvoice> callback);
 
     /**
      * Patches this SalesInvoice with a source
@@ -68,7 +68,7 @@ public interface ISalesInvoiceRequest extends IHttpRequest {
      * @param newSalesInvoice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SalesInvoice newSalesInvoice, final ICallback<SalesInvoice> callback);
+    void post(final SalesInvoice newSalesInvoice, final ICallback<? super SalesInvoice> callback);
 
     /**
      * Posts a SalesInvoice with a new object
@@ -85,7 +85,7 @@ public interface ISalesInvoiceRequest extends IHttpRequest {
      * @param newSalesInvoice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SalesInvoice newSalesInvoice, final ICallback<SalesInvoice> callback);
+    void put(final SalesInvoice newSalesInvoice, final ICallback<? super SalesInvoice> callback);
 
     /**
      * Posts a SalesInvoice with a new object

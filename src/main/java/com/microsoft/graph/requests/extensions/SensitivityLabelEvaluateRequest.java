@@ -37,7 +37,7 @@ public class SensitivityLabelEvaluateRequest extends BaseRequest implements ISen
         body = new SensitivityLabelEvaluateBody();
     }
 
-    public void post(final ICallback<EvaluateLabelJobResponse> callback) {
+    public void post(final ICallback<? super EvaluateLabelJobResponse> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class SensitivityLabelEvaluateRequest extends BaseRequest implements ISen
      */
     public ISensitivityLabelEvaluateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SensitivityLabelEvaluateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISensitivityLabelEvaluateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SensitivityLabelEvaluateRequest)this;
     }
 

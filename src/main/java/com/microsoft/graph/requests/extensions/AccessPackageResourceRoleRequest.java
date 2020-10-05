@@ -39,7 +39,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessPackageResourceRole> callback) {
+    public void get(final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessPackageResourceRole> callback) {
+    public void delete(final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param sourceAccessPackageResourceRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResourceRole sourceAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback) {
+    public void patch(final AccessPackageResourceRole sourceAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResourceRole);
     }
 
@@ -98,7 +98,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param newAccessPackageResourceRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback) {
+    public void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResourceRole);
     }
 
@@ -119,7 +119,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param newAccessPackageResourceRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback) {
+    public void put(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResourceRole);
     }
 
@@ -153,17 +153,6 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      */
      public IAccessPackageResourceRoleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceRoleRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessPackageResourceRoleRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessPackageResourceRoleRequest)this;
      }
 

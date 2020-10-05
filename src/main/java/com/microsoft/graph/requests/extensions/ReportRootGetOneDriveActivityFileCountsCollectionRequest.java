@@ -39,7 +39,7 @@ public class ReportRootGetOneDriveActivityFileCountsCollectionRequest extends Ba
     }
 
 
-    public void get(final ICallback<IReportRootGetOneDriveActivityFileCountsCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOneDriveActivityFileCountsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOneDriveActivityFileCountsCollectionRequest extends Ba
      */
     public IReportRootGetOneDriveActivityFileCountsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOneDriveActivityFileCountsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOneDriveActivityFileCountsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOneDriveActivityFileCountsCollectionRequest)this;
     }
 

@@ -39,7 +39,7 @@ public class UserGetManagedAppBlockedUsersCollectionRequest extends BaseCollecti
     }
 
 
-    public void get(final ICallback<IUserGetManagedAppBlockedUsersCollectionPage> callback) {
+    public void get(final ICallback<? super IUserGetManagedAppBlockedUsersCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class UserGetManagedAppBlockedUsersCollectionRequest extends BaseCollecti
      */
     public IUserGetManagedAppBlockedUsersCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IUserGetManagedAppBlockedUsersCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserGetManagedAppBlockedUsersCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserGetManagedAppBlockedUsersCollectionRequest)this;
     }
 

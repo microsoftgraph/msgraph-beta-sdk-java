@@ -41,7 +41,7 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, IntuneBrandingProfileCollectionResponse.class, IIntuneBrandingProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IIntuneBrandingProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IIntuneBrandingProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback) {
+    public void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IntuneBrandingProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
      */
     public IIntuneBrandingProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IntuneBrandingProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIntuneBrandingProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IntuneBrandingProfileCollectionRequest)this;
     }
 

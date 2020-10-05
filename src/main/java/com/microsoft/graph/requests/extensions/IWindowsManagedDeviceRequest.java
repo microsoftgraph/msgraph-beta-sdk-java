@@ -21,7 +21,7 @@ public interface IWindowsManagedDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsManagedDevice> callback);
+    void get(final ICallback<? super WindowsManagedDevice> callback);
 
     /**
      * Gets the WindowsManagedDevice from the service
@@ -36,7 +36,7 @@ public interface IWindowsManagedDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsManagedDevice> callback);
+    void delete(final ICallback<? super WindowsManagedDevice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsManagedDeviceRequest extends IHttpRequest {
      * @param sourceWindowsManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsManagedDevice sourceWindowsManagedDevice, final ICallback<WindowsManagedDevice> callback);
+    void patch(final WindowsManagedDevice sourceWindowsManagedDevice, final ICallback<? super WindowsManagedDevice> callback);
 
     /**
      * Patches this WindowsManagedDevice with a source
@@ -68,7 +68,7 @@ public interface IWindowsManagedDeviceRequest extends IHttpRequest {
      * @param newWindowsManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<WindowsManagedDevice> callback);
+    void post(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<? super WindowsManagedDevice> callback);
 
     /**
      * Posts a WindowsManagedDevice with a new object
@@ -85,7 +85,7 @@ public interface IWindowsManagedDeviceRequest extends IHttpRequest {
      * @param newWindowsManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<WindowsManagedDevice> callback);
+    void put(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<? super WindowsManagedDevice> callback);
 
     /**
      * Posts a WindowsManagedDevice with a new object

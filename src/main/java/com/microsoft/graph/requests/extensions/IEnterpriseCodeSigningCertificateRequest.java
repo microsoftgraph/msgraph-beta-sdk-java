@@ -21,7 +21,7 @@ public interface IEnterpriseCodeSigningCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EnterpriseCodeSigningCertificate> callback);
+    void get(final ICallback<? super EnterpriseCodeSigningCertificate> callback);
 
     /**
      * Gets the EnterpriseCodeSigningCertificate from the service
@@ -36,7 +36,7 @@ public interface IEnterpriseCodeSigningCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EnterpriseCodeSigningCertificate> callback);
+    void delete(final ICallback<? super EnterpriseCodeSigningCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEnterpriseCodeSigningCertificateRequest extends IHttpRequest {
      * @param sourceEnterpriseCodeSigningCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EnterpriseCodeSigningCertificate sourceEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback);
+    void patch(final EnterpriseCodeSigningCertificate sourceEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback);
 
     /**
      * Patches this EnterpriseCodeSigningCertificate with a source
@@ -68,7 +68,7 @@ public interface IEnterpriseCodeSigningCertificateRequest extends IHttpRequest {
      * @param newEnterpriseCodeSigningCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback);
+    void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback);
 
     /**
      * Posts a EnterpriseCodeSigningCertificate with a new object
@@ -85,7 +85,7 @@ public interface IEnterpriseCodeSigningCertificateRequest extends IHttpRequest {
      * @param newEnterpriseCodeSigningCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback);
+    void put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback);
 
     /**
      * Posts a EnterpriseCodeSigningCertificate with a new object

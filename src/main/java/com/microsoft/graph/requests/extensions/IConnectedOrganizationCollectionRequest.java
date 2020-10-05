@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IConnectedOrganizationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IConnectedOrganizationCollectionPage> callback);
+    void get(final ICallback<? super IConnectedOrganizationCollectionPage> callback);
 
     IConnectedOrganizationCollectionPage get() throws ClientException;
 
-    void post(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback);
+    void post(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback);
 
     ConnectedOrganization post(final ConnectedOrganization newConnectedOrganization) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IConnectedOrganizationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IConnectedOrganizationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IConnectedOrganizationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IConnectedOrganizationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IConnectedOrganizationCollectionRequest skipToken(String skipToken);
+	IConnectedOrganizationCollectionRequest skipToken(final String skipToken);
 }

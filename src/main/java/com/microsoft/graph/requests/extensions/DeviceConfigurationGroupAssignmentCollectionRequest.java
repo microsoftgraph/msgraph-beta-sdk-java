@@ -40,7 +40,7 @@ public class DeviceConfigurationGroupAssignmentCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, DeviceConfigurationGroupAssignmentCollectionResponse.class, IDeviceConfigurationGroupAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceConfigurationGroupAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceConfigurationGroupAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceConfigurationGroupAssignmentCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback) {
+    public void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceConfigurationGroupAssignmentCollectionRequest extends BaseCol
      */
     public IDeviceConfigurationGroupAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceConfigurationGroupAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceConfigurationGroupAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceConfigurationGroupAssignmentCollectionRequest)this;
     }
 

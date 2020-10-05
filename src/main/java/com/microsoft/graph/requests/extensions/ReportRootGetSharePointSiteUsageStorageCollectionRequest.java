@@ -39,7 +39,7 @@ public class ReportRootGetSharePointSiteUsageStorageCollectionRequest extends Ba
     }
 
 
-    public void get(final ICallback<IReportRootGetSharePointSiteUsageStorageCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetSharePointSiteUsageStorageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetSharePointSiteUsageStorageCollectionRequest extends Ba
      */
     public IReportRootGetSharePointSiteUsageStorageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetSharePointSiteUsageStorageCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetSharePointSiteUsageStorageCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetSharePointSiteUsageStorageCollectionRequest)this;
     }
 

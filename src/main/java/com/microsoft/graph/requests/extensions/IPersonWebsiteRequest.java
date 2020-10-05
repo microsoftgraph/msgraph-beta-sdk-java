@@ -21,7 +21,7 @@ public interface IPersonWebsiteRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonWebsite> callback);
+    void get(final ICallback<? super PersonWebsite> callback);
 
     /**
      * Gets the PersonWebsite from the service
@@ -36,7 +36,7 @@ public interface IPersonWebsiteRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonWebsite> callback);
+    void delete(final ICallback<? super PersonWebsite> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonWebsiteRequest extends IHttpRequest {
      * @param sourcePersonWebsite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonWebsite sourcePersonWebsite, final ICallback<PersonWebsite> callback);
+    void patch(final PersonWebsite sourcePersonWebsite, final ICallback<? super PersonWebsite> callback);
 
     /**
      * Patches this PersonWebsite with a source
@@ -68,7 +68,7 @@ public interface IPersonWebsiteRequest extends IHttpRequest {
      * @param newPersonWebsite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback);
+    void post(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback);
 
     /**
      * Posts a PersonWebsite with a new object
@@ -85,7 +85,7 @@ public interface IPersonWebsiteRequest extends IHttpRequest {
      * @param newPersonWebsite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback);
+    void put(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback);
 
     /**
      * Posts a PersonWebsite with a new object

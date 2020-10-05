@@ -37,7 +37,7 @@ public class PrivilegedRoleAssignmentRequestCancelRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<PrivilegedRoleAssignmentRequest> callback) {
+    public void post(final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class PrivilegedRoleAssignmentRequestCancelRequest extends BaseRequest im
      */
     public IPrivilegedRoleAssignmentRequestCancelRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleAssignmentRequestCancelRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleAssignmentRequestCancelRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrivilegedRoleAssignmentRequestCancelRequest)this;
     }
 

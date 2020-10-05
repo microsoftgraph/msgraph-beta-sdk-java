@@ -21,7 +21,7 @@ public interface ICredentialUserRegistrationDetailsRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CredentialUserRegistrationDetails> callback);
+    void get(final ICallback<? super CredentialUserRegistrationDetails> callback);
 
     /**
      * Gets the CredentialUserRegistrationDetails from the service
@@ -36,7 +36,7 @@ public interface ICredentialUserRegistrationDetailsRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CredentialUserRegistrationDetails> callback);
+    void delete(final ICallback<? super CredentialUserRegistrationDetails> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICredentialUserRegistrationDetailsRequest extends IHttpRequest 
      * @param sourceCredentialUserRegistrationDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CredentialUserRegistrationDetails sourceCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback);
+    void patch(final CredentialUserRegistrationDetails sourceCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback);
 
     /**
      * Patches this CredentialUserRegistrationDetails with a source
@@ -68,7 +68,7 @@ public interface ICredentialUserRegistrationDetailsRequest extends IHttpRequest 
      * @param newCredentialUserRegistrationDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback);
+    void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback);
 
     /**
      * Posts a CredentialUserRegistrationDetails with a new object
@@ -85,7 +85,7 @@ public interface ICredentialUserRegistrationDetailsRequest extends IHttpRequest 
      * @param newCredentialUserRegistrationDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback);
+    void put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback);
 
     /**
      * Posts a CredentialUserRegistrationDetails with a new object

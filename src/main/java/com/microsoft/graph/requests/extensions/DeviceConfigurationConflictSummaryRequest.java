@@ -37,7 +37,7 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfigurationConflictSummary> callback) {
+    public void get(final ICallback<? super DeviceConfigurationConflictSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfigurationConflictSummary> callback) {
+    public void delete(final ICallback<? super DeviceConfigurationConflictSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
      * @param sourceDeviceConfigurationConflictSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationConflictSummary sourceDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback) {
+    public void patch(final DeviceConfigurationConflictSummary sourceDeviceConfigurationConflictSummary, final ICallback<? super DeviceConfigurationConflictSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationConflictSummary);
     }
 
@@ -96,7 +96,7 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
      * @param newDeviceConfigurationConflictSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback) {
+    public void post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<? super DeviceConfigurationConflictSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationConflictSummary);
     }
 
@@ -117,7 +117,7 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
      * @param newDeviceConfigurationConflictSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback) {
+    public void put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<? super DeviceConfigurationConflictSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationConflictSummary);
     }
 
@@ -151,17 +151,6 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
      */
      public IDeviceConfigurationConflictSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationConflictSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceConfigurationConflictSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceConfigurationConflictSummaryRequest)this;
      }
 

@@ -34,6 +34,6 @@ public class ReportRootGetAzureADApplicationSignInSummaryCollectionPage extends 
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetAzureADApplicationSignInSummaryCollectionPage(final ReportRootGetAzureADApplicationSignInSummaryCollectionResponse response, final IReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ITermsOfUseContainerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TermsOfUseContainer> callback);
+    void get(final ICallback<? super TermsOfUseContainer> callback);
 
     /**
      * Gets the TermsOfUseContainer from the service
@@ -36,7 +36,7 @@ public interface ITermsOfUseContainerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TermsOfUseContainer> callback);
+    void delete(final ICallback<? super TermsOfUseContainer> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITermsOfUseContainerRequest extends IHttpRequest {
      * @param sourceTermsOfUseContainer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TermsOfUseContainer sourceTermsOfUseContainer, final ICallback<TermsOfUseContainer> callback);
+    void patch(final TermsOfUseContainer sourceTermsOfUseContainer, final ICallback<? super TermsOfUseContainer> callback);
 
     /**
      * Patches this TermsOfUseContainer with a source
@@ -68,7 +68,7 @@ public interface ITermsOfUseContainerRequest extends IHttpRequest {
      * @param newTermsOfUseContainer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<TermsOfUseContainer> callback);
+    void post(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<? super TermsOfUseContainer> callback);
 
     /**
      * Posts a TermsOfUseContainer with a new object
@@ -85,7 +85,7 @@ public interface ITermsOfUseContainerRequest extends IHttpRequest {
      * @param newTermsOfUseContainer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<TermsOfUseContainer> callback);
+    void put(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<? super TermsOfUseContainer> callback);
 
     /**
      * Posts a TermsOfUseContainer with a new object

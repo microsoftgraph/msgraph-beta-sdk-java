@@ -21,7 +21,7 @@ public interface IDeviceManagementCollectionSettingDefinitionRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementCollectionSettingDefinition> callback);
+    void get(final ICallback<? super DeviceManagementCollectionSettingDefinition> callback);
 
     /**
      * Gets the DeviceManagementCollectionSettingDefinition from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementCollectionSettingDefinitionRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementCollectionSettingDefinition> callback);
+    void delete(final ICallback<? super DeviceManagementCollectionSettingDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementCollectionSettingDefinitionRequest extends IHt
      * @param sourceDeviceManagementCollectionSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementCollectionSettingDefinition sourceDeviceManagementCollectionSettingDefinition, final ICallback<DeviceManagementCollectionSettingDefinition> callback);
+    void patch(final DeviceManagementCollectionSettingDefinition sourceDeviceManagementCollectionSettingDefinition, final ICallback<? super DeviceManagementCollectionSettingDefinition> callback);
 
     /**
      * Patches this DeviceManagementCollectionSettingDefinition with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementCollectionSettingDefinitionRequest extends IHt
      * @param newDeviceManagementCollectionSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition, final ICallback<DeviceManagementCollectionSettingDefinition> callback);
+    void post(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition, final ICallback<? super DeviceManagementCollectionSettingDefinition> callback);
 
     /**
      * Posts a DeviceManagementCollectionSettingDefinition with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementCollectionSettingDefinitionRequest extends IHt
      * @param newDeviceManagementCollectionSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition, final ICallback<DeviceManagementCollectionSettingDefinition> callback);
+    void put(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition, final ICallback<? super DeviceManagementCollectionSettingDefinition> callback);
 
     /**
      * Posts a DeviceManagementCollectionSettingDefinition with a new object

@@ -37,7 +37,7 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<BitlockerRecoveryKey> callback) {
+    public void get(final ICallback<? super BitlockerRecoveryKey> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<BitlockerRecoveryKey> callback) {
+    public void delete(final ICallback<? super BitlockerRecoveryKey> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
      * @param sourceBitlockerRecoveryKey the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BitlockerRecoveryKey sourceBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback) {
+    public void patch(final BitlockerRecoveryKey sourceBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback) {
         send(HttpMethod.PATCH, callback, sourceBitlockerRecoveryKey);
     }
 
@@ -96,7 +96,7 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
      * @param newBitlockerRecoveryKey the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback) {
+    public void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback) {
         send(HttpMethod.POST, callback, newBitlockerRecoveryKey);
     }
 
@@ -117,7 +117,7 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
      * @param newBitlockerRecoveryKey the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback) {
+    public void put(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback) {
         send(HttpMethod.PUT, callback, newBitlockerRecoveryKey);
     }
 
@@ -151,17 +151,6 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
      */
      public IBitlockerRecoveryKeyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BitlockerRecoveryKeyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IBitlockerRecoveryKeyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BitlockerRecoveryKeyRequest)this;
      }
 

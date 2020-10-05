@@ -53,7 +53,7 @@ public class ImportedAppleDeviceIdentityRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ImportedAppleDeviceIdentity> callback) {
+    public void get(final ICallback<? super ImportedAppleDeviceIdentity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class ImportedAppleDeviceIdentityRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ImportedAppleDeviceIdentity> callback) {
+    public void delete(final ICallback<? super ImportedAppleDeviceIdentity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class ImportedAppleDeviceIdentityRequest extends BaseRequest implements I
      * @param sourceImportedAppleDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ImportedAppleDeviceIdentity sourceImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback) {
+    public void patch(final ImportedAppleDeviceIdentity sourceImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback) {
         send(HttpMethod.PATCH, callback, sourceImportedAppleDeviceIdentity);
     }
 
@@ -112,7 +112,7 @@ public class ImportedAppleDeviceIdentityRequest extends BaseRequest implements I
      * @param newImportedAppleDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback) {
+    public void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback) {
         send(HttpMethod.POST, callback, newImportedAppleDeviceIdentity);
     }
 
@@ -133,7 +133,7 @@ public class ImportedAppleDeviceIdentityRequest extends BaseRequest implements I
      * @param newImportedAppleDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback) {
+    public void put(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback) {
         send(HttpMethod.PUT, callback, newImportedAppleDeviceIdentity);
     }
 
@@ -167,17 +167,6 @@ public class ImportedAppleDeviceIdentityRequest extends BaseRequest implements I
      */
      public IImportedAppleDeviceIdentityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ImportedAppleDeviceIdentityRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IImportedAppleDeviceIdentityRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ImportedAppleDeviceIdentityRequest)this;
      }
 

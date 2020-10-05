@@ -35,6 +35,6 @@ public class AgreementAcceptanceCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public AgreementAcceptanceCollectionWithReferencesPage(final AgreementAcceptanceCollectionResponse response, final IAgreementAcceptanceCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementExportJobCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementExportJobCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementExportJobCollectionPage> callback);
 
     IDeviceManagementExportJobCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback);
+    void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback);
 
     DeviceManagementExportJob post(final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementExportJobCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IDeviceManagementExportJobCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementExportJobCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementExportJobCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementExportJobCollectionRequest skipToken(String skipToken);
+	IDeviceManagementExportJobCollectionRequest skipToken(final String skipToken);
 }

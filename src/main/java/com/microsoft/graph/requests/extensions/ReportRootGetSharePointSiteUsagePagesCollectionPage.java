@@ -34,6 +34,6 @@ public class ReportRootGetSharePointSiteUsagePagesCollectionPage extends BaseCol
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSharePointSiteUsagePagesCollectionPage(final ReportRootGetSharePointSiteUsagePagesCollectionResponse response, final IReportRootGetSharePointSiteUsagePagesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ISoftwareOathAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SoftwareOathAuthenticationMethod> callback);
+    void get(final ICallback<? super SoftwareOathAuthenticationMethod> callback);
 
     /**
      * Gets the SoftwareOathAuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface ISoftwareOathAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SoftwareOathAuthenticationMethod> callback);
+    void delete(final ICallback<? super SoftwareOathAuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISoftwareOathAuthenticationMethodRequest extends IHttpRequest {
      * @param sourceSoftwareOathAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SoftwareOathAuthenticationMethod sourceSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback);
+    void patch(final SoftwareOathAuthenticationMethod sourceSoftwareOathAuthenticationMethod, final ICallback<? super SoftwareOathAuthenticationMethod> callback);
 
     /**
      * Patches this SoftwareOathAuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface ISoftwareOathAuthenticationMethodRequest extends IHttpRequest {
      * @param newSoftwareOathAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback);
+    void post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<? super SoftwareOathAuthenticationMethod> callback);
 
     /**
      * Posts a SoftwareOathAuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface ISoftwareOathAuthenticationMethodRequest extends IHttpRequest {
      * @param newSoftwareOathAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback);
+    void put(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<? super SoftwareOathAuthenticationMethod> callback);
 
     /**
      * Posts a SoftwareOathAuthenticationMethod with a new object

@@ -21,7 +21,7 @@ public interface IOrganizationSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OrganizationSettings> callback);
+    void get(final ICallback<? super OrganizationSettings> callback);
 
     /**
      * Gets the OrganizationSettings from the service
@@ -36,7 +36,7 @@ public interface IOrganizationSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OrganizationSettings> callback);
+    void delete(final ICallback<? super OrganizationSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOrganizationSettingsRequest extends IHttpRequest {
      * @param sourceOrganizationSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OrganizationSettings sourceOrganizationSettings, final ICallback<OrganizationSettings> callback);
+    void patch(final OrganizationSettings sourceOrganizationSettings, final ICallback<? super OrganizationSettings> callback);
 
     /**
      * Patches this OrganizationSettings with a source
@@ -68,7 +68,7 @@ public interface IOrganizationSettingsRequest extends IHttpRequest {
      * @param newOrganizationSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OrganizationSettings newOrganizationSettings, final ICallback<OrganizationSettings> callback);
+    void post(final OrganizationSettings newOrganizationSettings, final ICallback<? super OrganizationSettings> callback);
 
     /**
      * Posts a OrganizationSettings with a new object
@@ -85,7 +85,7 @@ public interface IOrganizationSettingsRequest extends IHttpRequest {
      * @param newOrganizationSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OrganizationSettings newOrganizationSettings, final ICallback<OrganizationSettings> callback);
+    void put(final OrganizationSettings newOrganizationSettings, final ICallback<? super OrganizationSettings> callback);
 
     /**
      * Posts a OrganizationSettings with a new object

@@ -34,6 +34,6 @@ public class ManagedDeviceGetNonCompliantSettingsCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public ManagedDeviceGetNonCompliantSettingsCollectionPage(final ManagedDeviceGetNonCompliantSettingsCollectionResponse response, final IManagedDeviceGetNonCompliantSettingsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

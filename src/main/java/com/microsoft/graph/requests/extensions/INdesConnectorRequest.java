@@ -21,7 +21,7 @@ public interface INdesConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<NdesConnector> callback);
+    void get(final ICallback<? super NdesConnector> callback);
 
     /**
      * Gets the NdesConnector from the service
@@ -36,7 +36,7 @@ public interface INdesConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<NdesConnector> callback);
+    void delete(final ICallback<? super NdesConnector> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INdesConnectorRequest extends IHttpRequest {
      * @param sourceNdesConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final NdesConnector sourceNdesConnector, final ICallback<NdesConnector> callback);
+    void patch(final NdesConnector sourceNdesConnector, final ICallback<? super NdesConnector> callback);
 
     /**
      * Patches this NdesConnector with a source
@@ -68,7 +68,7 @@ public interface INdesConnectorRequest extends IHttpRequest {
      * @param newNdesConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback);
+    void post(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback);
 
     /**
      * Posts a NdesConnector with a new object
@@ -85,7 +85,7 @@ public interface INdesConnectorRequest extends IHttpRequest {
      * @param newNdesConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback);
+    void put(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback);
 
     /**
      * Posts a NdesConnector with a new object

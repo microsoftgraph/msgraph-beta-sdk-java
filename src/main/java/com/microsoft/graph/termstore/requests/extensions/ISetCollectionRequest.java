@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISetCollectionPage> callback);
+    void get(final ICallback<? super ISetCollectionPage> callback);
 
     ISetCollectionPage get() throws ClientException;
 
-    void post(final Set newSet, final ICallback<Set> callback);
+    void post(final Set newSet, final ICallback<? super Set> callback);
 
     Set post(final Set newSet) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISetCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISetCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISetCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISetCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISetCollectionRequest skipToken(String skipToken);
+	ISetCollectionRequest skipToken(final String skipToken);
 }

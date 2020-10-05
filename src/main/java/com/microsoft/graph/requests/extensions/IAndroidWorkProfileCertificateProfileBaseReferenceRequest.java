@@ -23,7 +23,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidWorkProfileCertificateProfileBaseReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void delete(final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     AndroidWorkProfileCertificateProfileBase delete() throws ClientException;
 
@@ -49,7 +49,7 @@ public interface IAndroidWorkProfileCertificateProfileBaseReferenceRequest exten
      * @param srcAndroidWorkProfileCertificateProfileBase the AndroidWorkProfileCertificateProfileBase to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AndroidWorkProfileCertificateProfileBase srcAndroidWorkProfileCertificateProfileBase, final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void put(AndroidWorkProfileCertificateProfileBase srcAndroidWorkProfileCertificateProfileBase, final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     /**
      * Puts the AndroidWorkProfileCertificateProfileBase

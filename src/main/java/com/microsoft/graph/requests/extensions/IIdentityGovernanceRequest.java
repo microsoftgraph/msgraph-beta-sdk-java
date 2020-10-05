@@ -21,7 +21,7 @@ public interface IIdentityGovernanceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IdentityGovernance> callback);
+    void get(final ICallback<? super IdentityGovernance> callback);
 
     /**
      * Gets the IdentityGovernance from the service
@@ -36,7 +36,7 @@ public interface IIdentityGovernanceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IdentityGovernance> callback);
+    void delete(final ICallback<? super IdentityGovernance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIdentityGovernanceRequest extends IHttpRequest {
      * @param sourceIdentityGovernance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IdentityGovernance sourceIdentityGovernance, final ICallback<IdentityGovernance> callback);
+    void patch(final IdentityGovernance sourceIdentityGovernance, final ICallback<? super IdentityGovernance> callback);
 
     /**
      * Patches this IdentityGovernance with a source
@@ -68,7 +68,7 @@ public interface IIdentityGovernanceRequest extends IHttpRequest {
      * @param newIdentityGovernance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IdentityGovernance newIdentityGovernance, final ICallback<IdentityGovernance> callback);
+    void post(final IdentityGovernance newIdentityGovernance, final ICallback<? super IdentityGovernance> callback);
 
     /**
      * Posts a IdentityGovernance with a new object
@@ -85,7 +85,7 @@ public interface IIdentityGovernanceRequest extends IHttpRequest {
      * @param newIdentityGovernance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IdentityGovernance newIdentityGovernance, final ICallback<IdentityGovernance> callback);
+    void put(final IdentityGovernance newIdentityGovernance, final ICallback<? super IdentityGovernance> callback);
 
     /**
      * Posts a IdentityGovernance with a new object

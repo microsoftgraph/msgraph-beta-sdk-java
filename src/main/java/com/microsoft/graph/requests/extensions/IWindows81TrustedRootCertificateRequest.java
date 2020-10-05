@@ -21,7 +21,7 @@ public interface IWindows81TrustedRootCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81TrustedRootCertificate> callback);
+    void get(final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     /**
      * Gets the Windows81TrustedRootCertificate from the service
@@ -36,7 +36,7 @@ public interface IWindows81TrustedRootCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81TrustedRootCertificate> callback);
+    void delete(final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81TrustedRootCertificateRequest extends IHttpRequest {
      * @param sourceWindows81TrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+    void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     /**
      * Patches this Windows81TrustedRootCertificate with a source
@@ -68,7 +68,7 @@ public interface IWindows81TrustedRootCertificateRequest extends IHttpRequest {
      * @param newWindows81TrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+    void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     /**
      * Posts a Windows81TrustedRootCertificate with a new object
@@ -85,7 +85,7 @@ public interface IWindows81TrustedRootCertificateRequest extends IHttpRequest {
      * @param newWindows81TrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+    void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     /**
      * Posts a Windows81TrustedRootCertificate with a new object

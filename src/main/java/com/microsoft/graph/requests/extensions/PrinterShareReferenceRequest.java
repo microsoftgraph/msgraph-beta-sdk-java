@@ -44,7 +44,7 @@ public class PrinterShareReferenceRequest extends BaseRequest implements IPrinte
         super(requestUrl, client, requestOptions, PrinterShare.class);
     }
 
-    public void delete(final ICallback<PrinterShare> callback) {
+    public void delete(final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -74,22 +74,12 @@ public class PrinterShareReferenceRequest extends BaseRequest implements IPrinte
         return (PrinterShareReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrinterShareReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrinterShareReferenceRequest)this;
-    }
-    /**
      * Puts the PrinterShare
      *
      * @param srcPrinterShare the PrinterShare reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PrinterShare srcPrinterShare, final ICallback<PrinterShare> callback) {
+    public void put(PrinterShare srcPrinterShare, final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.PUT, callback, srcPrinterShare);
     }
 

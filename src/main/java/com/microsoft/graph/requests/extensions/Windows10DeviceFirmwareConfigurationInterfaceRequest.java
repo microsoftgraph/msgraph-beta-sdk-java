@@ -37,7 +37,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void get(final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void delete(final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param sourceWindows10DeviceFirmwareConfigurationInterface the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10DeviceFirmwareConfigurationInterface sourceWindows10DeviceFirmwareConfigurationInterface, final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void patch(final Windows10DeviceFirmwareConfigurationInterface sourceWindows10DeviceFirmwareConfigurationInterface, final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -96,7 +96,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param newWindows10DeviceFirmwareConfigurationInterface the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void post(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.POST, callback, newWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -117,7 +117,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param newWindows10DeviceFirmwareConfigurationInterface the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.PUT, callback, newWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -151,17 +151,6 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      */
      public IWindows10DeviceFirmwareConfigurationInterfaceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10DeviceFirmwareConfigurationInterfaceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindows10DeviceFirmwareConfigurationInterfaceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows10DeviceFirmwareConfigurationInterfaceRequest)this;
      }
 

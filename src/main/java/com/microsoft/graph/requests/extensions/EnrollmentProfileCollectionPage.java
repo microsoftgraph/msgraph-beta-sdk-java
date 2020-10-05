@@ -23,6 +23,6 @@ public class EnrollmentProfileCollectionPage extends BaseCollectionPage<Enrollme
      * @param builder  the request builder for the next collection page
      */
     public EnrollmentProfileCollectionPage(final EnrollmentProfileCollectionResponse response, final IEnrollmentProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

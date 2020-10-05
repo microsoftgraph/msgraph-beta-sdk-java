@@ -21,7 +21,7 @@ public interface IEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EnrollmentProfile> callback);
+    void get(final ICallback<? super EnrollmentProfile> callback);
 
     /**
      * Gets the EnrollmentProfile from the service
@@ -36,7 +36,7 @@ public interface IEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EnrollmentProfile> callback);
+    void delete(final ICallback<? super EnrollmentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEnrollmentProfileRequest extends IHttpRequest {
      * @param sourceEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EnrollmentProfile sourceEnrollmentProfile, final ICallback<EnrollmentProfile> callback);
+    void patch(final EnrollmentProfile sourceEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback);
 
     /**
      * Patches this EnrollmentProfile with a source
@@ -68,7 +68,7 @@ public interface IEnrollmentProfileRequest extends IHttpRequest {
      * @param newEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<EnrollmentProfile> callback);
+    void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback);
 
     /**
      * Posts a EnrollmentProfile with a new object
@@ -85,7 +85,7 @@ public interface IEnrollmentProfileRequest extends IHttpRequest {
      * @param newEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EnrollmentProfile newEnrollmentProfile, final ICallback<EnrollmentProfile> callback);
+    void put(final EnrollmentProfile newEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback);
 
     /**
      * Posts a EnrollmentProfile with a new object

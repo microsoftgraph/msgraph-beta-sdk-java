@@ -44,7 +44,7 @@ public class IosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequest 
     }
 
 
-    public void post(final ICallback<IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionPage> callback) {
+    public void post(final ICallback<? super IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class IosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequest 
      */
     public IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequest)this;
     }
 

@@ -23,6 +23,6 @@ public class PrivilegedOperationEventCollectionPage extends BaseCollectionPage<P
      * @param builder  the request builder for the next collection page
      */
     public PrivilegedOperationEventCollectionPage(final PrivilegedOperationEventCollectionResponse response, final IPrivilegedOperationEventCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

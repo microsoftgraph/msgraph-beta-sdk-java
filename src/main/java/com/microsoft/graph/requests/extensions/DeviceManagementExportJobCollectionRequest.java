@@ -40,7 +40,7 @@ public class DeviceManagementExportJobCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, DeviceManagementExportJobCollectionResponse.class, IDeviceManagementExportJobCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementExportJobCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementExportJobCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementExportJobCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback) {
+    public void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExportJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementExportJobCollectionRequest extends BaseCollectionRe
      */
     public IDeviceManagementExportJobCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementExportJobCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementExportJobCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementExportJobCollectionRequest)this;
     }
 

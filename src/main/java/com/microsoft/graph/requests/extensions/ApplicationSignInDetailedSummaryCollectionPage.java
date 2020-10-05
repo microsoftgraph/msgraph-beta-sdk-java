@@ -23,6 +23,6 @@ public class ApplicationSignInDetailedSummaryCollectionPage extends BaseCollecti
      * @param builder  the request builder for the next collection page
      */
     public ApplicationSignInDetailedSummaryCollectionPage(final ApplicationSignInDetailedSummaryCollectionResponse response, final IApplicationSignInDetailedSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

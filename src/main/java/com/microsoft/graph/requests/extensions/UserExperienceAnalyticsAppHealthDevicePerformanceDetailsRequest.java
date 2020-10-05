@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest ext
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest ext
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest ext
      * @param sourceUserExperienceAnalyticsAppHealthDevicePerformanceDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails sourceUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
+    public void patch(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails sourceUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsAppHealthDevicePerformanceDetails);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest ext
      * @param newUserExperienceAnalyticsAppHealthDevicePerformanceDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
+    public void post(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsAppHealthDevicePerformanceDetails);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest ext
      * @param newUserExperienceAnalyticsAppHealthDevicePerformanceDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
+    public void put(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsAppHealthDevicePerformanceDetails);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest ext
      */
      public IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequest)this;
      }
 

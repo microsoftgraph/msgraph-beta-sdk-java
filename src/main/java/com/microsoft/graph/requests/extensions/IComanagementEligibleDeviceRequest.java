@@ -21,7 +21,7 @@ public interface IComanagementEligibleDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ComanagementEligibleDevice> callback);
+    void get(final ICallback<? super ComanagementEligibleDevice> callback);
 
     /**
      * Gets the ComanagementEligibleDevice from the service
@@ -36,7 +36,7 @@ public interface IComanagementEligibleDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ComanagementEligibleDevice> callback);
+    void delete(final ICallback<? super ComanagementEligibleDevice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IComanagementEligibleDeviceRequest extends IHttpRequest {
      * @param sourceComanagementEligibleDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ComanagementEligibleDevice sourceComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback);
+    void patch(final ComanagementEligibleDevice sourceComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback);
 
     /**
      * Patches this ComanagementEligibleDevice with a source
@@ -68,7 +68,7 @@ public interface IComanagementEligibleDeviceRequest extends IHttpRequest {
      * @param newComanagementEligibleDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback);
+    void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback);
 
     /**
      * Posts a ComanagementEligibleDevice with a new object
@@ -85,7 +85,7 @@ public interface IComanagementEligibleDeviceRequest extends IHttpRequest {
      * @param newComanagementEligibleDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback);
+    void put(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback);
 
     /**
      * Posts a ComanagementEligibleDevice with a new object

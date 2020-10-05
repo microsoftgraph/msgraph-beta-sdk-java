@@ -21,7 +21,7 @@ public interface IMobileAppRelationshipRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppRelationship> callback);
+    void get(final ICallback<? super MobileAppRelationship> callback);
 
     /**
      * Gets the MobileAppRelationship from the service
@@ -36,7 +36,7 @@ public interface IMobileAppRelationshipRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppRelationship> callback);
+    void delete(final ICallback<? super MobileAppRelationship> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppRelationshipRequest extends IHttpRequest {
      * @param sourceMobileAppRelationship the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppRelationship sourceMobileAppRelationship, final ICallback<MobileAppRelationship> callback);
+    void patch(final MobileAppRelationship sourceMobileAppRelationship, final ICallback<? super MobileAppRelationship> callback);
 
     /**
      * Patches this MobileAppRelationship with a source
@@ -68,7 +68,7 @@ public interface IMobileAppRelationshipRequest extends IHttpRequest {
      * @param newMobileAppRelationship the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppRelationship newMobileAppRelationship, final ICallback<MobileAppRelationship> callback);
+    void post(final MobileAppRelationship newMobileAppRelationship, final ICallback<? super MobileAppRelationship> callback);
 
     /**
      * Posts a MobileAppRelationship with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppRelationshipRequest extends IHttpRequest {
      * @param newMobileAppRelationship the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppRelationship newMobileAppRelationship, final ICallback<MobileAppRelationship> callback);
+    void put(final MobileAppRelationship newMobileAppRelationship, final ICallback<? super MobileAppRelationship> callback);
 
     /**
      * Posts a MobileAppRelationship with a new object

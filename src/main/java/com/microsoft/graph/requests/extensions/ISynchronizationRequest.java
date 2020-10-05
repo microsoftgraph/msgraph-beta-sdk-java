@@ -21,7 +21,7 @@ public interface ISynchronizationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Synchronization> callback);
+    void get(final ICallback<? super Synchronization> callback);
 
     /**
      * Gets the Synchronization from the service
@@ -36,7 +36,7 @@ public interface ISynchronizationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Synchronization> callback);
+    void delete(final ICallback<? super Synchronization> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISynchronizationRequest extends IHttpRequest {
      * @param sourceSynchronization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Synchronization sourceSynchronization, final ICallback<Synchronization> callback);
+    void patch(final Synchronization sourceSynchronization, final ICallback<? super Synchronization> callback);
 
     /**
      * Patches this Synchronization with a source
@@ -68,7 +68,7 @@ public interface ISynchronizationRequest extends IHttpRequest {
      * @param newSynchronization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Synchronization newSynchronization, final ICallback<Synchronization> callback);
+    void post(final Synchronization newSynchronization, final ICallback<? super Synchronization> callback);
 
     /**
      * Posts a Synchronization with a new object
@@ -85,7 +85,7 @@ public interface ISynchronizationRequest extends IHttpRequest {
      * @param newSynchronization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Synchronization newSynchronization, final ICallback<Synchronization> callback);
+    void put(final Synchronization newSynchronization, final ICallback<? super Synchronization> callback);
 
     /**
      * Posts a Synchronization with a new object

@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsCategory> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     /**
      * Gets the UserExperienceAnalyticsCategory from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsCategory> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsCategoryRequest extends IHttpRequest {
      * @param sourceUserExperienceAnalyticsCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+    void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     /**
      * Patches this UserExperienceAnalyticsCategory with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsCategoryRequest extends IHttpRequest {
      * @param newUserExperienceAnalyticsCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+    void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     /**
      * Posts a UserExperienceAnalyticsCategory with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsCategoryRequest extends IHttpRequest {
      * @param newUserExperienceAnalyticsCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+    void put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     /**
      * Posts a UserExperienceAnalyticsCategory with a new object

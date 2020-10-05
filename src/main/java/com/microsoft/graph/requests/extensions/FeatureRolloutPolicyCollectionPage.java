@@ -23,6 +23,6 @@ public class FeatureRolloutPolicyCollectionPage extends BaseCollectionPage<Featu
      * @param builder  the request builder for the next collection page
      */
     public FeatureRolloutPolicyCollectionPage(final FeatureRolloutPolicyCollectionResponse response, final IFeatureRolloutPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

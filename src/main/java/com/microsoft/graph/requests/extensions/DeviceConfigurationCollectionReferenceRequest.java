@@ -43,7 +43,7 @@ public class DeviceConfigurationCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, DeviceConfigurationCollectionResponse.class, IDeviceConfigurationCollectionPage.class);
     }
 
-    public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+    public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/networkAccessConfigurations/" + newDeviceConfiguration.id);
         new DeviceConfigurationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -77,6 +77,17 @@ public class DeviceConfigurationCollectionReferenceRequest extends BaseCollectio
      */
     public IDeviceConfigurationCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceConfigurationCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IDeviceConfigurationCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceConfigurationCollectionReferenceRequest)this;
     }
 

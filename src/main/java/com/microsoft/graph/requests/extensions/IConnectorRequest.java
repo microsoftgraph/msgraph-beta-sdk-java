@@ -21,7 +21,7 @@ public interface IConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Connector> callback);
+    void get(final ICallback<? super Connector> callback);
 
     /**
      * Gets the Connector from the service
@@ -36,7 +36,7 @@ public interface IConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Connector> callback);
+    void delete(final ICallback<? super Connector> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConnectorRequest extends IHttpRequest {
      * @param sourceConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Connector sourceConnector, final ICallback<Connector> callback);
+    void patch(final Connector sourceConnector, final ICallback<? super Connector> callback);
 
     /**
      * Patches this Connector with a source
@@ -68,7 +68,7 @@ public interface IConnectorRequest extends IHttpRequest {
      * @param newConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Connector newConnector, final ICallback<Connector> callback);
+    void post(final Connector newConnector, final ICallback<? super Connector> callback);
 
     /**
      * Posts a Connector with a new object
@@ -85,7 +85,7 @@ public interface IConnectorRequest extends IHttpRequest {
      * @param newConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Connector newConnector, final ICallback<Connector> callback);
+    void put(final Connector newConnector, final ICallback<? super Connector> callback);
 
     /**
      * Posts a Connector with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISecurityQuestionAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISecurityQuestionAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super ISecurityQuestionAuthenticationMethodCollectionPage> callback);
 
     ISecurityQuestionAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback);
+    void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback);
 
     SecurityQuestionAuthenticationMethod post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISecurityQuestionAuthenticationMethodCollectionRequest extends 
      * @return the updated request
      */
     ISecurityQuestionAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISecurityQuestionAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISecurityQuestionAuthenticationMethodCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	ISecurityQuestionAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	ISecurityQuestionAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

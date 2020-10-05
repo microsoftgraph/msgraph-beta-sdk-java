@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ContentTypeInfo;
 import com.microsoft.graph.models.extensions.SharepointIds;
@@ -16,9 +15,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.FieldValueSet;
 import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionResponse;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionPage;
-import com.microsoft.graph.requests.extensions.ListItemVersionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionPage;
 
 
@@ -131,35 +128,11 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            final ItemActivityOLDCollectionResponse response = new ItemActivityOLDCollectionResponse();
-            if (json.has("activities@odata.nextLink")) {
-                response.nextLink = json.get("activities@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("activities").toString(), JsonObject[].class);
-            final ItemActivityOLD[] array = new ItemActivityOLD[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ItemActivityOLD.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            activities = new ItemActivityOLDCollectionPage(response, null);
+            activities = serializer.deserializeObject(json.get("activities").toString(), ItemActivityOLDCollectionPage.class);
         }
 
         if (json.has("versions")) {
-            final ListItemVersionCollectionResponse response = new ListItemVersionCollectionResponse();
-            if (json.has("versions@odata.nextLink")) {
-                response.nextLink = json.get("versions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("versions").toString(), JsonObject[].class);
-            final ListItemVersion[] array = new ListItemVersion[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ListItemVersion.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            versions = new ListItemVersionCollectionPage(response, null);
+            versions = serializer.deserializeObject(json.get("versions").toString(), ListItemVersionCollectionPage.class);
         }
     }
 }

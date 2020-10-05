@@ -21,7 +21,7 @@ public interface IMicrosoftTunnelServerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MicrosoftTunnelServer> callback);
+    void get(final ICallback<? super MicrosoftTunnelServer> callback);
 
     /**
      * Gets the MicrosoftTunnelServer from the service
@@ -36,7 +36,7 @@ public interface IMicrosoftTunnelServerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MicrosoftTunnelServer> callback);
+    void delete(final ICallback<? super MicrosoftTunnelServer> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMicrosoftTunnelServerRequest extends IHttpRequest {
      * @param sourceMicrosoftTunnelServer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MicrosoftTunnelServer sourceMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback);
+    void patch(final MicrosoftTunnelServer sourceMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback);
 
     /**
      * Patches this MicrosoftTunnelServer with a source
@@ -68,7 +68,7 @@ public interface IMicrosoftTunnelServerRequest extends IHttpRequest {
      * @param newMicrosoftTunnelServer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback);
+    void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback);
 
     /**
      * Posts a MicrosoftTunnelServer with a new object
@@ -85,7 +85,7 @@ public interface IMicrosoftTunnelServerRequest extends IHttpRequest {
      * @param newMicrosoftTunnelServer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback);
+    void put(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback);
 
     /**
      * Posts a MicrosoftTunnelServer with a new object

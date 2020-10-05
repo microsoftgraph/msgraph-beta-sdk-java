@@ -34,7 +34,7 @@ public class PayloadResponseReferenceRequest extends BaseRequest implements IPay
         super(requestUrl, client, requestOptions, PayloadResponse.class);
     }
 
-    public void delete(final ICallback<PayloadResponse> callback) {
+    public void delete(final ICallback<? super PayloadResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class PayloadResponseReferenceRequest extends BaseRequest implements IPay
         return (PayloadResponseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPayloadResponseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PayloadResponseReferenceRequest)this;
-    }
-    /**
      * Puts the PayloadResponse
      *
      * @param srcPayloadResponse the PayloadResponse reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PayloadResponse srcPayloadResponse, final ICallback<PayloadResponse> callback) {
+    public void put(PayloadResponse srcPayloadResponse, final ICallback<? super PayloadResponse> callback) {
         send(HttpMethod.PUT, callback, srcPayloadResponse);
     }
 

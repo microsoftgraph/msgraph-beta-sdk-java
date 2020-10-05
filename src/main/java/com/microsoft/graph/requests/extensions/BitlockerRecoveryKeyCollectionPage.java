@@ -23,6 +23,6 @@ public class BitlockerRecoveryKeyCollectionPage extends BaseCollectionPage<Bitlo
      * @param builder  the request builder for the next collection page
      */
     public BitlockerRecoveryKeyCollectionPage(final BitlockerRecoveryKeyCollectionResponse response, final IBitlockerRecoveryKeyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

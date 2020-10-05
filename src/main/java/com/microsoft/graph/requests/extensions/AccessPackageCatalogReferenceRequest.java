@@ -50,7 +50,7 @@ public class AccessPackageCatalogReferenceRequest extends BaseRequest implements
         super(requestUrl, client, requestOptions, AccessPackageCatalog.class);
     }
 
-    public void delete(final ICallback<AccessPackageCatalog> callback) {
+    public void delete(final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,22 +80,12 @@ public class AccessPackageCatalogReferenceRequest extends BaseRequest implements
         return (AccessPackageCatalogReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAccessPackageCatalogReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AccessPackageCatalogReferenceRequest)this;
-    }
-    /**
      * Puts the AccessPackageCatalog
      *
      * @param srcAccessPackageCatalog the AccessPackageCatalog reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AccessPackageCatalog srcAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback) {
+    public void put(AccessPackageCatalog srcAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.PUT, callback, srcAccessPackageCatalog);
     }
 

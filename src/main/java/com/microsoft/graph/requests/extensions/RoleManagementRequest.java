@@ -41,7 +41,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RoleManagement> callback) {
+    public void get(final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RoleManagement> callback) {
+    public void delete(final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param sourceRoleManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleManagement sourceRoleManagement, final ICallback<RoleManagement> callback) {
+    public void patch(final RoleManagement sourceRoleManagement, final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleManagement);
     }
 
@@ -100,7 +100,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param newRoleManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleManagement newRoleManagement, final ICallback<RoleManagement> callback) {
+    public void post(final RoleManagement newRoleManagement, final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.POST, callback, newRoleManagement);
     }
 
@@ -121,7 +121,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param newRoleManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleManagement newRoleManagement, final ICallback<RoleManagement> callback) {
+    public void put(final RoleManagement newRoleManagement, final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.PUT, callback, newRoleManagement);
     }
 
@@ -155,17 +155,6 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      */
      public IRoleManagementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleManagementRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IRoleManagementRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RoleManagementRequest)this;
      }
 

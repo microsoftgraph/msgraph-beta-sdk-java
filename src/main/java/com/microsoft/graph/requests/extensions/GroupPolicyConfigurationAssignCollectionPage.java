@@ -34,6 +34,6 @@ public class GroupPolicyConfigurationAssignCollectionPage extends BaseCollection
      * @param builder The request builder for the next collection page
      */
     public GroupPolicyConfigurationAssignCollectionPage(final GroupPolicyConfigurationAssignCollectionResponse response, final IGroupPolicyConfigurationAssignCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

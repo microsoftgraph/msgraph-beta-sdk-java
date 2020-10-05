@@ -43,7 +43,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSScepCertificateProfile> callback) {
+    public void get(final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSScepCertificateProfile> callback) {
+    public void delete(final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param sourceMacOSScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback) {
+    public void patch(final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSScepCertificateProfile);
     }
 
@@ -102,7 +102,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param newMacOSScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback) {
+    public void post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newMacOSScepCertificateProfile);
     }
 
@@ -123,7 +123,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param newMacOSScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback) {
+    public void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newMacOSScepCertificateProfile);
     }
 
@@ -157,17 +157,6 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      */
      public IMacOSScepCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSScepCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSScepCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSScepCertificateProfileRequest)this;
      }
 

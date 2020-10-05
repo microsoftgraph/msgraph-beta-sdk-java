@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOAuth2PermissionGrantCollectionPage> callback);
+    void get(final ICallback<? super IOAuth2PermissionGrantCollectionPage> callback);
 
     IOAuth2PermissionGrantCollectionPage get() throws ClientException;
 
-    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOAuth2PermissionGrantCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOAuth2PermissionGrantCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOAuth2PermissionGrantCollectionRequest skipToken(String skipToken);
+	IOAuth2PermissionGrantCollectionRequest skipToken(final String skipToken);
 }

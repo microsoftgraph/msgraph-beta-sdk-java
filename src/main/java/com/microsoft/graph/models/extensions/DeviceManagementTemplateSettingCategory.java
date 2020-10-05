@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingCategory;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
 
 
         if (json.has("recommendedSettings")) {
-            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
-            if (json.has("recommendedSettings@odata.nextLink")) {
-                response.nextLink = json.get("recommendedSettings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("recommendedSettings").toString(), JsonObject[].class);
-            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            recommendedSettings = new DeviceManagementSettingInstanceCollectionPage(response, null);
+            recommendedSettings = serializer.deserializeObject(json.get("recommendedSettings").toString(), DeviceManagementSettingInstanceCollectionPage.class);
         }
     }
 }

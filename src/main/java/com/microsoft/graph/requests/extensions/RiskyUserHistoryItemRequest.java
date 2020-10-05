@@ -37,7 +37,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RiskyUserHistoryItem> callback) {
+    public void get(final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RiskyUserHistoryItem> callback) {
+    public void delete(final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param sourceRiskyUserHistoryItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RiskyUserHistoryItem sourceRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback) {
+    public void patch(final RiskyUserHistoryItem sourceRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.PATCH, callback, sourceRiskyUserHistoryItem);
     }
 
@@ -96,7 +96,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param newRiskyUserHistoryItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback) {
+    public void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.POST, callback, newRiskyUserHistoryItem);
     }
 
@@ -117,7 +117,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param newRiskyUserHistoryItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback) {
+    public void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.PUT, callback, newRiskyUserHistoryItem);
     }
 
@@ -151,17 +151,6 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      */
      public IRiskyUserHistoryItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RiskyUserHistoryItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IRiskyUserHistoryItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RiskyUserHistoryItemRequest)this;
      }
 

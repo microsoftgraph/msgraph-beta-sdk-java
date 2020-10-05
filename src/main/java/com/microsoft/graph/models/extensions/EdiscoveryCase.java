@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.CaseStatus;
 import com.microsoft.graph.models.extensions.ReviewSet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ReviewSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.ReviewSetCollectionPage;
 
 
@@ -148,19 +146,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
 
 
         if (json.has("reviewSets")) {
-            final ReviewSetCollectionResponse response = new ReviewSetCollectionResponse();
-            if (json.has("reviewSets@odata.nextLink")) {
-                response.nextLink = json.get("reviewSets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("reviewSets").toString(), JsonObject[].class);
-            final ReviewSet[] array = new ReviewSet[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ReviewSet.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            reviewSets = new ReviewSetCollectionPage(response, null);
+            reviewSets = serializer.deserializeObject(json.get("reviewSets").toString(), ReviewSetCollectionPage.class);
         }
     }
 }

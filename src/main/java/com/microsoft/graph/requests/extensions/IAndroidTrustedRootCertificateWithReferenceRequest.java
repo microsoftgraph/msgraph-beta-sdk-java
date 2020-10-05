@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidTrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidTrustedRootCertificate> callback);
+    void post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidTrustedRootCertificate> callback);
 
     AndroidTrustedRootCertificate post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidTrustedRootCertificate> callback);
+    void get(final ICallback<? super AndroidTrustedRootCertificate> callback);
 
     AndroidTrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<AndroidTrustedRootCertificate> callback);
+	void delete(final ICallback<? super AndroidTrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback);
+	void patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate, final ICallback<? super AndroidTrustedRootCertificate> callback);
 
 	AndroidTrustedRootCertificate patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate) throws ClientException;
 

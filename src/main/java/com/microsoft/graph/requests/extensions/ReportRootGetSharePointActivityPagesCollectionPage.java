@@ -34,6 +34,6 @@ public class ReportRootGetSharePointActivityPagesCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSharePointActivityPagesCollectionPage(final ReportRootGetSharePointActivityPagesCollectionResponse response, final IReportRootGetSharePointActivityPagesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

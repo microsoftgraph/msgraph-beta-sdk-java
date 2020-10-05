@@ -37,7 +37,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyObjectFile> callback) {
+    public void get(final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyObjectFile> callback) {
+    public void delete(final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param sourceGroupPolicyObjectFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyObjectFile sourceGroupPolicyObjectFile, final ICallback<GroupPolicyObjectFile> callback) {
+    public void patch(final GroupPolicyObjectFile sourceGroupPolicyObjectFile, final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyObjectFile);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param newGroupPolicyObjectFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<GroupPolicyObjectFile> callback) {
+    public void post(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyObjectFile);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param newGroupPolicyObjectFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<GroupPolicyObjectFile> callback) {
+    public void put(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyObjectFile);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      */
      public IGroupPolicyObjectFileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyObjectFileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyObjectFileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyObjectFileRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
 
     /**
      * Gets the UserExperienceAnalyticsDeviceStartupProcessPerformance from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest 
      * @param sourceUserExperienceAnalyticsDeviceStartupProcessPerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsDeviceStartupProcessPerformance sourceUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+    void patch(final UserExperienceAnalyticsDeviceStartupProcessPerformance sourceUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
 
     /**
      * Patches this UserExperienceAnalyticsDeviceStartupProcessPerformance with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest 
      * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+    void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
 
     /**
      * Posts a UserExperienceAnalyticsDeviceStartupProcessPerformance with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest 
      * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+    void put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
 
     /**
      * Posts a UserExperienceAnalyticsDeviceStartupProcessPerformance with a new object

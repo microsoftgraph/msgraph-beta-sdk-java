@@ -21,7 +21,7 @@ public interface IEmailActivitySummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailActivitySummary> callback);
+    void get(final ICallback<? super EmailActivitySummary> callback);
 
     /**
      * Gets the EmailActivitySummary from the service
@@ -36,7 +36,7 @@ public interface IEmailActivitySummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailActivitySummary> callback);
+    void delete(final ICallback<? super EmailActivitySummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailActivitySummaryRequest extends IHttpRequest {
      * @param sourceEmailActivitySummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailActivitySummary sourceEmailActivitySummary, final ICallback<EmailActivitySummary> callback);
+    void patch(final EmailActivitySummary sourceEmailActivitySummary, final ICallback<? super EmailActivitySummary> callback);
 
     /**
      * Patches this EmailActivitySummary with a source
@@ -68,7 +68,7 @@ public interface IEmailActivitySummaryRequest extends IHttpRequest {
      * @param newEmailActivitySummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailActivitySummary newEmailActivitySummary, final ICallback<EmailActivitySummary> callback);
+    void post(final EmailActivitySummary newEmailActivitySummary, final ICallback<? super EmailActivitySummary> callback);
 
     /**
      * Posts a EmailActivitySummary with a new object
@@ -85,7 +85,7 @@ public interface IEmailActivitySummaryRequest extends IHttpRequest {
      * @param newEmailActivitySummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailActivitySummary newEmailActivitySummary, final ICallback<EmailActivitySummary> callback);
+    void put(final EmailActivitySummary newEmailActivitySummary, final ICallback<? super EmailActivitySummary> callback);
 
     /**
      * Posts a EmailActivitySummary with a new object

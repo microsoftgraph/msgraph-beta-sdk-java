@@ -21,7 +21,7 @@ public interface IAccessReviewDecisionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReviewDecision> callback);
+    void get(final ICallback<? super AccessReviewDecision> callback);
 
     /**
      * Gets the AccessReviewDecision from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewDecisionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReviewDecision> callback);
+    void delete(final ICallback<? super AccessReviewDecision> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewDecisionRequest extends IHttpRequest {
      * @param sourceAccessReviewDecision the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReviewDecision sourceAccessReviewDecision, final ICallback<AccessReviewDecision> callback);
+    void patch(final AccessReviewDecision sourceAccessReviewDecision, final ICallback<? super AccessReviewDecision> callback);
 
     /**
      * Patches this AccessReviewDecision with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewDecisionRequest extends IHttpRequest {
      * @param newAccessReviewDecision the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReviewDecision newAccessReviewDecision, final ICallback<AccessReviewDecision> callback);
+    void post(final AccessReviewDecision newAccessReviewDecision, final ICallback<? super AccessReviewDecision> callback);
 
     /**
      * Posts a AccessReviewDecision with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewDecisionRequest extends IHttpRequest {
      * @param newAccessReviewDecision the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReviewDecision newAccessReviewDecision, final ICallback<AccessReviewDecision> callback);
+    void put(final AccessReviewDecision newAccessReviewDecision, final ICallback<? super AccessReviewDecision> callback);
 
     /**
      * Posts a AccessReviewDecision with a new object

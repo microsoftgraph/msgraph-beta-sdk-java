@@ -38,7 +38,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ApplicationTemplate> callback) {
+    public void get(final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ApplicationTemplate> callback) {
+    public void delete(final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param sourceApplicationTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApplicationTemplate sourceApplicationTemplate, final ICallback<ApplicationTemplate> callback) {
+    public void patch(final ApplicationTemplate sourceApplicationTemplate, final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceApplicationTemplate);
     }
 
@@ -97,7 +97,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param newApplicationTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApplicationTemplate newApplicationTemplate, final ICallback<ApplicationTemplate> callback) {
+    public void post(final ApplicationTemplate newApplicationTemplate, final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.POST, callback, newApplicationTemplate);
     }
 
@@ -118,7 +118,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param newApplicationTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApplicationTemplate newApplicationTemplate, final ICallback<ApplicationTemplate> callback) {
+    public void put(final ApplicationTemplate newApplicationTemplate, final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.PUT, callback, newApplicationTemplate);
     }
 
@@ -152,17 +152,6 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      */
      public IApplicationTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplicationTemplateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IApplicationTemplateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ApplicationTemplateRequest)this;
      }
 

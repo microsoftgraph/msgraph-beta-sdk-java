@@ -23,6 +23,6 @@ public class RoleScopeTagCollectionPage extends BaseCollectionPage<RoleScopeTag,
      * @param builder  the request builder for the next collection page
      */
     public RoleScopeTagCollectionPage(final RoleScopeTagCollectionResponse response, final IRoleScopeTagCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

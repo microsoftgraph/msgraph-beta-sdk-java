@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccessReviewScheduleDefinitionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessReviewScheduleDefinitionCollectionPage> callback);
+    void get(final ICallback<? super IAccessReviewScheduleDefinitionCollectionPage> callback);
 
     IAccessReviewScheduleDefinitionCollectionPage get() throws ClientException;
 
-    void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback);
+    void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     AccessReviewScheduleDefinition post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAccessReviewScheduleDefinitionCollectionRequest extends IHttpR
      * @return the updated request
      */
     IAccessReviewScheduleDefinitionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccessReviewScheduleDefinitionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAccessReviewScheduleDefinitionCollectionRequest extends IHttpR
      *
 	 * @return the updated request
 	 */
-	IAccessReviewScheduleDefinitionCollectionRequest skipToken(String skipToken);
+	IAccessReviewScheduleDefinitionCollectionRequest skipToken(final String skipToken);
 }

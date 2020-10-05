@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagedEBookCategoryWithReferenceRequest extends IHttpRequest {
 
-    void post(final ManagedEBookCategory newManagedEBookCategory, final IJsonBackedObject payload, final ICallback<ManagedEBookCategory> callback);
+    void post(final ManagedEBookCategory newManagedEBookCategory, final IJsonBackedObject payload, final ICallback<? super ManagedEBookCategory> callback);
 
     ManagedEBookCategory post(final ManagedEBookCategory newManagedEBookCategory, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ManagedEBookCategory> callback);
+    void get(final ICallback<? super ManagedEBookCategory> callback);
 
     ManagedEBookCategory get() throws ClientException;
 
-	void delete(final ICallback<ManagedEBookCategory> callback);
+	void delete(final ICallback<? super ManagedEBookCategory> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<ManagedEBookCategory> callback);
+	void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback);
 
 	ManagedEBookCategory patch(final ManagedEBookCategory sourceManagedEBookCategory) throws ClientException;
 

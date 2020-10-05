@@ -40,7 +40,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DataLossPreventionPolicy> callback) {
+    public void get(final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DataLossPreventionPolicy> callback) {
+    public void delete(final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +78,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param sourceDataLossPreventionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataLossPreventionPolicy sourceDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback) {
+    public void patch(final DataLossPreventionPolicy sourceDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDataLossPreventionPolicy);
     }
 
@@ -99,7 +99,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param newDataLossPreventionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback) {
+    public void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.POST, callback, newDataLossPreventionPolicy);
     }
 
@@ -120,7 +120,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param newDataLossPreventionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback) {
+    public void put(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.PUT, callback, newDataLossPreventionPolicy);
     }
 
@@ -154,17 +154,6 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      */
      public IDataLossPreventionPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataLossPreventionPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDataLossPreventionPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DataLossPreventionPolicyRequest)this;
      }
 

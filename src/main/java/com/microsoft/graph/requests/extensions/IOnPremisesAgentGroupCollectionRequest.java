@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnPremisesAgentGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOnPremisesAgentGroupCollectionPage> callback);
+    void get(final ICallback<? super IOnPremisesAgentGroupCollectionPage> callback);
 
     IOnPremisesAgentGroupCollectionPage get() throws ClientException;
 
-    void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback);
+    void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback);
 
     OnPremisesAgentGroup post(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IOnPremisesAgentGroupCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOnPremisesAgentGroupCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOnPremisesAgentGroupCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IOnPremisesAgentGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOnPremisesAgentGroupCollectionRequest skipToken(String skipToken);
+	IOnPremisesAgentGroupCollectionRequest skipToken(final String skipToken);
 }

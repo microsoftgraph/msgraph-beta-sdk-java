@@ -41,7 +41,7 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GovernanceRoleSetting> callback) {
+    public void get(final ICallback<? super GovernanceRoleSetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GovernanceRoleSetting> callback) {
+    public void delete(final ICallback<? super GovernanceRoleSetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      * @param sourceGovernanceRoleSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceRoleSetting sourceGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback) {
+    public void patch(final GovernanceRoleSetting sourceGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceRoleSetting);
     }
 
@@ -100,7 +100,7 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      * @param newGovernanceRoleSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback) {
+    public void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback) {
         send(HttpMethod.POST, callback, newGovernanceRoleSetting);
     }
 
@@ -121,7 +121,7 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      * @param newGovernanceRoleSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback) {
+    public void put(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback) {
         send(HttpMethod.PUT, callback, newGovernanceRoleSetting);
     }
 
@@ -155,17 +155,6 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      */
      public IGovernanceRoleSettingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceRoleSettingRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGovernanceRoleSettingRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GovernanceRoleSettingRequest)this;
      }
 

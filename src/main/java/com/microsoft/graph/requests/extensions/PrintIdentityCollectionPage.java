@@ -23,6 +23,6 @@ public class PrintIdentityCollectionPage extends BaseCollectionPage<PrintIdentit
      * @param builder  the request builder for the next collection page
      */
     public PrintIdentityCollectionPage(final PrintIdentityCollectionResponse response, final IPrintIdentityCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

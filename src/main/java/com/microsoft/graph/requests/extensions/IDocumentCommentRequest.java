@@ -21,7 +21,7 @@ public interface IDocumentCommentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DocumentComment> callback);
+    void get(final ICallback<? super DocumentComment> callback);
 
     /**
      * Gets the DocumentComment from the service
@@ -36,7 +36,7 @@ public interface IDocumentCommentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DocumentComment> callback);
+    void delete(final ICallback<? super DocumentComment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDocumentCommentRequest extends IHttpRequest {
      * @param sourceDocumentComment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DocumentComment sourceDocumentComment, final ICallback<DocumentComment> callback);
+    void patch(final DocumentComment sourceDocumentComment, final ICallback<? super DocumentComment> callback);
 
     /**
      * Patches this DocumentComment with a source
@@ -68,7 +68,7 @@ public interface IDocumentCommentRequest extends IHttpRequest {
      * @param newDocumentComment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback);
+    void post(final DocumentComment newDocumentComment, final ICallback<? super DocumentComment> callback);
 
     /**
      * Posts a DocumentComment with a new object
@@ -85,7 +85,7 @@ public interface IDocumentCommentRequest extends IHttpRequest {
      * @param newDocumentComment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback);
+    void put(final DocumentComment newDocumentComment, final ICallback<? super DocumentComment> callback);
 
     /**
      * Posts a DocumentComment with a new object

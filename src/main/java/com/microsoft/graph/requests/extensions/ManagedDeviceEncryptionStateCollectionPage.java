@@ -23,6 +23,6 @@ public class ManagedDeviceEncryptionStateCollectionPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public ManagedDeviceEncryptionStateCollectionPage(final ManagedDeviceEncryptionStateCollectionResponse response, final IManagedDeviceEncryptionStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

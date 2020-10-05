@@ -6,10 +6,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
 
 
@@ -74,19 +72,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
 
 
         if (json.has("value")) {
-            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
-            if (json.has("value@odata.nextLink")) {
-                response.nextLink = json.get("value@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("value").toString(), JsonObject[].class);
-            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            value = new DeviceManagementSettingInstanceCollectionPage(response, null);
+            value = serializer.deserializeObject(json.get("value").toString(), DeviceManagementSettingInstanceCollectionPage.class);
         }
     }
 }

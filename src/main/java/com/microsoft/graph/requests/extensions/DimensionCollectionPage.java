@@ -23,6 +23,6 @@ public class DimensionCollectionPage extends BaseCollectionPage<Dimension, IDime
      * @param builder  the request builder for the next collection page
      */
     public DimensionCollectionPage(final DimensionCollectionResponse response, final IDimensionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

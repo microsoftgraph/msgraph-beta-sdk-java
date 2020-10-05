@@ -39,7 +39,7 @@ public class ReportRootGetMailboxUsageStorageCollectionRequest extends BaseColle
     }
 
 
-    public void get(final ICallback<IReportRootGetMailboxUsageStorageCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetMailboxUsageStorageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetMailboxUsageStorageCollectionRequest extends BaseColle
      */
     public IReportRootGetMailboxUsageStorageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetMailboxUsageStorageCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetMailboxUsageStorageCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetMailboxUsageStorageCollectionRequest)this;
     }
 

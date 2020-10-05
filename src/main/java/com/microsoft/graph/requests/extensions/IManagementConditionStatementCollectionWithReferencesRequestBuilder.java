@@ -27,7 +27,7 @@ public interface IManagementConditionStatementCollectionWithReferencesRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IManagementConditionStatementCollectionWithReferencesRequest instance
      */
     IManagementConditionStatementCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -35,7 +35,7 @@ public interface IManagementConditionStatementCollectionWithReferencesRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IManagementConditionStatementCollectionWithReferencesRequest instance
      */
     IManagementConditionStatementCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

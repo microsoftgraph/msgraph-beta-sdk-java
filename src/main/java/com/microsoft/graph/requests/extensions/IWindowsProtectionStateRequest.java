@@ -21,7 +21,7 @@ public interface IWindowsProtectionStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsProtectionState> callback);
+    void get(final ICallback<? super WindowsProtectionState> callback);
 
     /**
      * Gets the WindowsProtectionState from the service
@@ -36,7 +36,7 @@ public interface IWindowsProtectionStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsProtectionState> callback);
+    void delete(final ICallback<? super WindowsProtectionState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsProtectionStateRequest extends IHttpRequest {
      * @param sourceWindowsProtectionState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsProtectionState sourceWindowsProtectionState, final ICallback<WindowsProtectionState> callback);
+    void patch(final WindowsProtectionState sourceWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback);
 
     /**
      * Patches this WindowsProtectionState with a source
@@ -68,7 +68,7 @@ public interface IWindowsProtectionStateRequest extends IHttpRequest {
      * @param newWindowsProtectionState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsProtectionState newWindowsProtectionState, final ICallback<WindowsProtectionState> callback);
+    void post(final WindowsProtectionState newWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback);
 
     /**
      * Posts a WindowsProtectionState with a new object
@@ -85,7 +85,7 @@ public interface IWindowsProtectionStateRequest extends IHttpRequest {
      * @param newWindowsProtectionState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsProtectionState newWindowsProtectionState, final ICallback<WindowsProtectionState> callback);
+    void put(final WindowsProtectionState newWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback);
 
     /**
      * Posts a WindowsProtectionState with a new object

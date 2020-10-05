@@ -37,7 +37,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyPresentationCheckBox> callback) {
+    public void get(final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyPresentationCheckBox> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param sourceGroupPolicyPresentationCheckBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback) {
+    public void patch(final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationCheckBox);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param newGroupPolicyPresentationCheckBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback) {
+    public void post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationCheckBox);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param newGroupPolicyPresentationCheckBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback) {
+    public void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationCheckBox);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      */
      public IGroupPolicyPresentationCheckBoxRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationCheckBoxRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyPresentationCheckBoxRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyPresentationCheckBoxRequest)this;
      }
 

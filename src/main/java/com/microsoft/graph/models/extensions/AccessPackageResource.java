@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessPackageResourceAttribute;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
 import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionPage;
 
 
@@ -167,35 +164,11 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageResourceRoles")) {
-            final AccessPackageResourceRoleCollectionResponse response = new AccessPackageResourceRoleCollectionResponse();
-            if (json.has("accessPackageResourceRoles@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceRoles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceRoles").toString(), JsonObject[].class);
-            final AccessPackageResourceRole[] array = new AccessPackageResourceRole[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceRole.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceRoles = new AccessPackageResourceRoleCollectionPage(response, null);
+            accessPackageResourceRoles = serializer.deserializeObject(json.get("accessPackageResourceRoles").toString(), AccessPackageResourceRoleCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceScopes")) {
-            final AccessPackageResourceScopeCollectionResponse response = new AccessPackageResourceScopeCollectionResponse();
-            if (json.has("accessPackageResourceScopes@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceScopes").toString(), JsonObject[].class);
-            final AccessPackageResourceScope[] array = new AccessPackageResourceScope[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceScope.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceScopes = new AccessPackageResourceScopeCollectionPage(response, null);
+            accessPackageResourceScopes = serializer.deserializeObject(json.get("accessPackageResourceScopes").toString(), AccessPackageResourceScopeCollectionPage.class);
         }
     }
 }

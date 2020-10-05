@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICountryRegionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICountryRegionCollectionPage> callback);
+    void get(final ICallback<? super ICountryRegionCollectionPage> callback);
 
     ICountryRegionCollectionPage get() throws ClientException;
 
-    void post(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback);
+    void post(final CountryRegion newCountryRegion, final ICallback<? super CountryRegion> callback);
 
     CountryRegion post(final CountryRegion newCountryRegion) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ICountryRegionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ICountryRegionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICountryRegionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ICountryRegionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICountryRegionCollectionRequest skipToken(String skipToken);
+	ICountryRegionCollectionRequest skipToken(final String skipToken);
 }

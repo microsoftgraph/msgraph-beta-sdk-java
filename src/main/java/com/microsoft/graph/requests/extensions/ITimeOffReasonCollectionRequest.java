@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITimeOffReasonCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITimeOffReasonCollectionPage> callback);
+    void get(final ICallback<? super ITimeOffReasonCollectionPage> callback);
 
     ITimeOffReasonCollectionPage get() throws ClientException;
 
-    void post(final TimeOffReason newTimeOffReason, final ICallback<TimeOffReason> callback);
+    void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback);
 
     TimeOffReason post(final TimeOffReason newTimeOffReason) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITimeOffReasonCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITimeOffReasonCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITimeOffReasonCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITimeOffReasonCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITimeOffReasonCollectionRequest skipToken(String skipToken);
+	ITimeOffReasonCollectionRequest skipToken(final String skipToken);
 }

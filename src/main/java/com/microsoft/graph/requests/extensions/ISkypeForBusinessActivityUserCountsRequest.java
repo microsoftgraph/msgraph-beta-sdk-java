@@ -21,7 +21,7 @@ public interface ISkypeForBusinessActivityUserCountsRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkypeForBusinessActivityUserCounts> callback);
+    void get(final ICallback<? super SkypeForBusinessActivityUserCounts> callback);
 
     /**
      * Gets the SkypeForBusinessActivityUserCounts from the service
@@ -36,7 +36,7 @@ public interface ISkypeForBusinessActivityUserCountsRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkypeForBusinessActivityUserCounts> callback);
+    void delete(final ICallback<? super SkypeForBusinessActivityUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkypeForBusinessActivityUserCountsRequest extends IHttpRequest
      * @param sourceSkypeForBusinessActivityUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkypeForBusinessActivityUserCounts sourceSkypeForBusinessActivityUserCounts, final ICallback<SkypeForBusinessActivityUserCounts> callback);
+    void patch(final SkypeForBusinessActivityUserCounts sourceSkypeForBusinessActivityUserCounts, final ICallback<? super SkypeForBusinessActivityUserCounts> callback);
 
     /**
      * Patches this SkypeForBusinessActivityUserCounts with a source
@@ -68,7 +68,7 @@ public interface ISkypeForBusinessActivityUserCountsRequest extends IHttpRequest
      * @param newSkypeForBusinessActivityUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkypeForBusinessActivityUserCounts newSkypeForBusinessActivityUserCounts, final ICallback<SkypeForBusinessActivityUserCounts> callback);
+    void post(final SkypeForBusinessActivityUserCounts newSkypeForBusinessActivityUserCounts, final ICallback<? super SkypeForBusinessActivityUserCounts> callback);
 
     /**
      * Posts a SkypeForBusinessActivityUserCounts with a new object
@@ -85,7 +85,7 @@ public interface ISkypeForBusinessActivityUserCountsRequest extends IHttpRequest
      * @param newSkypeForBusinessActivityUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkypeForBusinessActivityUserCounts newSkypeForBusinessActivityUserCounts, final ICallback<SkypeForBusinessActivityUserCounts> callback);
+    void put(final SkypeForBusinessActivityUserCounts newSkypeForBusinessActivityUserCounts, final ICallback<? super SkypeForBusinessActivityUserCounts> callback);
 
     /**
      * Posts a SkypeForBusinessActivityUserCounts with a new object

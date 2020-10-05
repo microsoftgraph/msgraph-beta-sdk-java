@@ -34,6 +34,6 @@ public class UserFindRoomsCollectionPage extends BaseCollectionPage<EmailAddress
      * @param builder The request builder for the next collection page
      */
     public UserFindRoomsCollectionPage(final UserFindRoomsCollectionResponse response, final IUserFindRoomsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

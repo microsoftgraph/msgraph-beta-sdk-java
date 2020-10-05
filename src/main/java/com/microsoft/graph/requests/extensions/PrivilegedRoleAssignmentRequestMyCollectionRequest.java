@@ -39,7 +39,7 @@ public class PrivilegedRoleAssignmentRequestMyCollectionRequest extends BaseColl
     }
 
 
-    public void get(final ICallback<IPrivilegedRoleAssignmentRequestMyCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedRoleAssignmentRequestMyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class PrivilegedRoleAssignmentRequestMyCollectionRequest extends BaseColl
      */
     public IPrivilegedRoleAssignmentRequestMyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IPrivilegedRoleAssignmentRequestMyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentRequestMyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IPrivilegedRoleAssignmentRequestMyCollectionRequest)this;
     }
 

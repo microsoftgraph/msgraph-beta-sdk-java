@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IComanagementEligibleDeviceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IComanagementEligibleDeviceCollectionPage> callback);
+    void get(final ICallback<? super IComanagementEligibleDeviceCollectionPage> callback);
 
     IComanagementEligibleDeviceCollectionPage get() throws ClientException;
 
-    void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback);
+    void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback);
 
     ComanagementEligibleDevice post(final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IComanagementEligibleDeviceCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IComanagementEligibleDeviceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IComanagementEligibleDeviceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IComanagementEligibleDeviceCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IComanagementEligibleDeviceCollectionRequest skipToken(String skipToken);
+	IComanagementEligibleDeviceCollectionRequest skipToken(final String skipToken);
 }

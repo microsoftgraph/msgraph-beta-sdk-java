@@ -21,7 +21,7 @@ public interface IPrivilegedRoleSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedRoleSettings> callback);
+    void get(final ICallback<? super PrivilegedRoleSettings> callback);
 
     /**
      * Gets the PrivilegedRoleSettings from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedRoleSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedRoleSettings> callback);
+    void delete(final ICallback<? super PrivilegedRoleSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedRoleSettingsRequest extends IHttpRequest {
      * @param sourcePrivilegedRoleSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings, final ICallback<PrivilegedRoleSettings> callback);
+    void patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback);
 
     /**
      * Patches this PrivilegedRoleSettings with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedRoleSettingsRequest extends IHttpRequest {
      * @param newPrivilegedRoleSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final ICallback<PrivilegedRoleSettings> callback);
+    void post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback);
 
     /**
      * Posts a PrivilegedRoleSettings with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedRoleSettingsRequest extends IHttpRequest {
      * @param newPrivilegedRoleSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedRoleSettings newPrivilegedRoleSettings, final ICallback<PrivilegedRoleSettings> callback);
+    void put(final PrivilegedRoleSettings newPrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback);
 
     /**
      * Posts a PrivilegedRoleSettings with a new object

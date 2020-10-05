@@ -37,7 +37,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkPosition> callback) {
+    public void get(final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkPosition> callback) {
+    public void delete(final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param sourceWorkPosition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkPosition sourceWorkPosition, final ICallback<WorkPosition> callback) {
+    public void patch(final WorkPosition sourceWorkPosition, final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkPosition);
     }
 
@@ -96,7 +96,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param newWorkPosition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkPosition newWorkPosition, final ICallback<WorkPosition> callback) {
+    public void post(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.POST, callback, newWorkPosition);
     }
 
@@ -117,7 +117,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param newWorkPosition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkPosition newWorkPosition, final ICallback<WorkPosition> callback) {
+    public void put(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.PUT, callback, newWorkPosition);
     }
 
@@ -151,17 +151,6 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      */
      public IWorkPositionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkPositionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWorkPositionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkPositionRequest)this;
      }
 

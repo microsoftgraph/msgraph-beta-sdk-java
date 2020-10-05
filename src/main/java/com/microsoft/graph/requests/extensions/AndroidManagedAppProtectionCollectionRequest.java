@@ -41,7 +41,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, AndroidManagedAppProtectionCollectionResponse.class, IAndroidManagedAppProtectionCollectionPage.class);
     }
 
-    public void get(final ICallback<IAndroidManagedAppProtectionCollectionPage> callback) {
+    public void get(final ICallback<? super IAndroidManagedAppProtectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback) {
+    public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      */
     public IAndroidManagedAppProtectionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidManagedAppProtectionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAndroidManagedAppProtectionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AndroidManagedAppProtectionCollectionRequest)this;
     }
 

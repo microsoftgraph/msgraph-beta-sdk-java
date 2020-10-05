@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITemporaryAccessPassAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITemporaryAccessPassAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super ITemporaryAccessPassAuthenticationMethodCollectionPage> callback);
 
     ITemporaryAccessPassAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+    void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback);
 
     TemporaryAccessPassAuthenticationMethod post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITemporaryAccessPassAuthenticationMethodCollectionRequest exten
      * @return the updated request
      */
     ITemporaryAccessPassAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITemporaryAccessPassAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITemporaryAccessPassAuthenticationMethodCollectionRequest exten
      *
 	 * @return the updated request
 	 */
-	ITemporaryAccessPassAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	ITemporaryAccessPassAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

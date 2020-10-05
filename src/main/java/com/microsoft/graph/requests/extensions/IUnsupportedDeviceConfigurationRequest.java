@@ -21,7 +21,7 @@ public interface IUnsupportedDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UnsupportedDeviceConfiguration> callback);
+    void get(final ICallback<? super UnsupportedDeviceConfiguration> callback);
 
     /**
      * Gets the UnsupportedDeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IUnsupportedDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UnsupportedDeviceConfiguration> callback);
+    void delete(final ICallback<? super UnsupportedDeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUnsupportedDeviceConfigurationRequest extends IHttpRequest {
      * @param sourceUnsupportedDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UnsupportedDeviceConfiguration sourceUnsupportedDeviceConfiguration, final ICallback<UnsupportedDeviceConfiguration> callback);
+    void patch(final UnsupportedDeviceConfiguration sourceUnsupportedDeviceConfiguration, final ICallback<? super UnsupportedDeviceConfiguration> callback);
 
     /**
      * Patches this UnsupportedDeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IUnsupportedDeviceConfigurationRequest extends IHttpRequest {
      * @param newUnsupportedDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<UnsupportedDeviceConfiguration> callback);
+    void post(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<? super UnsupportedDeviceConfiguration> callback);
 
     /**
      * Posts a UnsupportedDeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IUnsupportedDeviceConfigurationRequest extends IHttpRequest {
      * @param newUnsupportedDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<UnsupportedDeviceConfiguration> callback);
+    void put(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<? super UnsupportedDeviceConfiguration> callback);
 
     /**
      * Posts a UnsupportedDeviceConfiguration with a new object

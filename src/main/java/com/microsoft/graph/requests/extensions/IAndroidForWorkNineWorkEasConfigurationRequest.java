@@ -21,7 +21,7 @@ public interface IAndroidForWorkNineWorkEasConfigurationRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkNineWorkEasConfiguration> callback);
+    void get(final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback);
 
     /**
      * Gets the AndroidForWorkNineWorkEasConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkNineWorkEasConfigurationRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkNineWorkEasConfiguration> callback);
+    void delete(final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkNineWorkEasConfigurationRequest extends IHttpReq
      * @param sourceAndroidForWorkNineWorkEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback);
+    void patch(final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback);
 
     /**
      * Patches this AndroidForWorkNineWorkEasConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkNineWorkEasConfigurationRequest extends IHttpReq
      * @param newAndroidForWorkNineWorkEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback);
+    void post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkNineWorkEasConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkNineWorkEasConfigurationRequest extends IHttpReq
      * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback);
+    void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkNineWorkEasConfiguration with a new object

@@ -39,7 +39,7 @@ public class GovernanceResourceCollectionRequest extends BaseCollectionRequest<G
         super(requestUrl, client, requestOptions, GovernanceResourceCollectionResponse.class, IGovernanceResourceCollectionPage.class);
     }
 
-    public void get(final ICallback<IGovernanceResourceCollectionPage> callback) {
+    public void get(final ICallback<? super IGovernanceResourceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class GovernanceResourceCollectionRequest extends BaseCollectionRequest<G
         return buildFromResponse(response);
     }
 
-    public void post(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback) {
+    public void post(final GovernanceResource newGovernanceResource, final ICallback<? super GovernanceResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class GovernanceResourceCollectionRequest extends BaseCollectionRequest<G
      */
     public IGovernanceResourceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GovernanceResourceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGovernanceResourceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GovernanceResourceCollectionRequest)this;
     }
 

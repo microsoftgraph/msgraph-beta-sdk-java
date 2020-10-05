@@ -40,7 +40,7 @@ public class AndroidForWorkAppConfigurationSchemaCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, AndroidForWorkAppConfigurationSchemaCollectionResponse.class, IAndroidForWorkAppConfigurationSchemaCollectionPage.class);
     }
 
-    public void get(final ICallback<IAndroidForWorkAppConfigurationSchemaCollectionPage> callback) {
+    public void get(final ICallback<? super IAndroidForWorkAppConfigurationSchemaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AndroidForWorkAppConfigurationSchemaCollectionRequest extends BaseC
         return buildFromResponse(response);
     }
 
-    public void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback) {
+    public void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<? super AndroidForWorkAppConfigurationSchema> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidForWorkAppConfigurationSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AndroidForWorkAppConfigurationSchemaCollectionRequest extends BaseC
      */
     public IAndroidForWorkAppConfigurationSchemaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidForWorkAppConfigurationSchemaCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAndroidForWorkAppConfigurationSchemaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AndroidForWorkAppConfigurationSchemaCollectionRequest)this;
     }
 

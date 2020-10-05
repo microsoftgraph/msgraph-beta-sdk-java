@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IFido2AuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IFido2AuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super IFido2AuthenticationMethodCollectionPage> callback);
 
     IFido2AuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback);
+    void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback);
 
     Fido2AuthenticationMethod post(final Fido2AuthenticationMethod newFido2AuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IFido2AuthenticationMethodCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IFido2AuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IFido2AuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IFido2AuthenticationMethodCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IFido2AuthenticationMethodCollectionRequest skipToken(String skipToken);
+	IFido2AuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

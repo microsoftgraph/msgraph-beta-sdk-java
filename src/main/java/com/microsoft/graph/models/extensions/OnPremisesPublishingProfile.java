@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.HybridAgentUpdaterConfiguration;
 import com.microsoft.graph.models.extensions.OnPremisesAgentGroup;
@@ -15,15 +14,10 @@ import com.microsoft.graph.models.extensions.ConnectorGroup;
 import com.microsoft.graph.models.extensions.Connector;
 import com.microsoft.graph.models.extensions.PublishedResource;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionPage;
-import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectorCollectionPage;
-import com.microsoft.graph.requests.extensions.PublishedResourceCollectionResponse;
 import com.microsoft.graph.requests.extensions.PublishedResourceCollectionPage;
 
 
@@ -136,83 +130,23 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
 
         if (json.has("agentGroups")) {
-            final OnPremisesAgentGroupCollectionResponse response = new OnPremisesAgentGroupCollectionResponse();
-            if (json.has("agentGroups@odata.nextLink")) {
-                response.nextLink = json.get("agentGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("agentGroups").toString(), JsonObject[].class);
-            final OnPremisesAgentGroup[] array = new OnPremisesAgentGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnPremisesAgentGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            agentGroups = new OnPremisesAgentGroupCollectionPage(response, null);
+            agentGroups = serializer.deserializeObject(json.get("agentGroups").toString(), OnPremisesAgentGroupCollectionPage.class);
         }
 
         if (json.has("agents")) {
-            final OnPremisesAgentCollectionResponse response = new OnPremisesAgentCollectionResponse();
-            if (json.has("agents@odata.nextLink")) {
-                response.nextLink = json.get("agents@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("agents").toString(), JsonObject[].class);
-            final OnPremisesAgent[] array = new OnPremisesAgent[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnPremisesAgent.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            agents = new OnPremisesAgentCollectionPage(response, null);
+            agents = serializer.deserializeObject(json.get("agents").toString(), OnPremisesAgentCollectionPage.class);
         }
 
         if (json.has("connectorGroups")) {
-            final ConnectorGroupCollectionResponse response = new ConnectorGroupCollectionResponse();
-            if (json.has("connectorGroups@odata.nextLink")) {
-                response.nextLink = json.get("connectorGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectorGroups").toString(), JsonObject[].class);
-            final ConnectorGroup[] array = new ConnectorGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConnectorGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            connectorGroups = new ConnectorGroupCollectionPage(response, null);
+            connectorGroups = serializer.deserializeObject(json.get("connectorGroups").toString(), ConnectorGroupCollectionPage.class);
         }
 
         if (json.has("connectors")) {
-            final ConnectorCollectionResponse response = new ConnectorCollectionResponse();
-            if (json.has("connectors@odata.nextLink")) {
-                response.nextLink = json.get("connectors@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectors").toString(), JsonObject[].class);
-            final Connector[] array = new Connector[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Connector.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            connectors = new ConnectorCollectionPage(response, null);
+            connectors = serializer.deserializeObject(json.get("connectors").toString(), ConnectorCollectionPage.class);
         }
 
         if (json.has("publishedResources")) {
-            final PublishedResourceCollectionResponse response = new PublishedResourceCollectionResponse();
-            if (json.has("publishedResources@odata.nextLink")) {
-                response.nextLink = json.get("publishedResources@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("publishedResources").toString(), JsonObject[].class);
-            final PublishedResource[] array = new PublishedResource[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PublishedResource.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            publishedResources = new PublishedResourceCollectionPage(response, null);
+            publishedResources = serializer.deserializeObject(json.get("publishedResources").toString(), PublishedResourceCollectionPage.class);
         }
     }
 }

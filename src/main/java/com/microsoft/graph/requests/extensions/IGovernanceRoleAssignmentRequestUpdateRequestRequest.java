@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGovernanceRoleAssignmentRequestUpdateRequestRequest extends IHttpRequest {
 
-    void post(final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void post(final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     GovernanceRoleAssignmentRequest post() throws ClientException;
 

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
 import com.microsoft.graph.models.extensions.AgreementFileProperties;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionResponse;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class AgreementFile extends AgreementFileProperties implements IJsonBacke
 
 
         if (json.has("localizations")) {
-            final AgreementFileLocalizationCollectionResponse response = new AgreementFileLocalizationCollectionResponse();
-            if (json.has("localizations@odata.nextLink")) {
-                response.nextLink = json.get("localizations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("localizations").toString(), JsonObject[].class);
-            final AgreementFileLocalization[] array = new AgreementFileLocalization[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AgreementFileLocalization.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            localizations = new AgreementFileLocalizationCollectionPage(response, null);
+            localizations = serializer.deserializeObject(json.get("localizations").toString(), AgreementFileLocalizationCollectionPage.class);
         }
     }
 }

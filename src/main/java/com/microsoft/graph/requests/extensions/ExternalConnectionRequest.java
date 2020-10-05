@@ -51,7 +51,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ExternalConnection> callback) {
+    public void get(final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -70,7 +70,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ExternalConnection> callback) {
+    public void delete(final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -89,7 +89,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param sourceExternalConnection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExternalConnection sourceExternalConnection, final ICallback<ExternalConnection> callback) {
+    public void patch(final ExternalConnection sourceExternalConnection, final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.PATCH, callback, sourceExternalConnection);
     }
 
@@ -110,7 +110,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param newExternalConnection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback) {
+    public void post(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.POST, callback, newExternalConnection);
     }
 
@@ -131,7 +131,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param newExternalConnection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback) {
+    public void put(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.PUT, callback, newExternalConnection);
     }
 
@@ -165,17 +165,6 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      */
      public IExternalConnectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExternalConnectionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IExternalConnectionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ExternalConnectionRequest)this;
      }
 

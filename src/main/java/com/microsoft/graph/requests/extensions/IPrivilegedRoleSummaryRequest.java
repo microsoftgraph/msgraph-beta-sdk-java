@@ -21,7 +21,7 @@ public interface IPrivilegedRoleSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedRoleSummary> callback);
+    void get(final ICallback<? super PrivilegedRoleSummary> callback);
 
     /**
      * Gets the PrivilegedRoleSummary from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedRoleSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedRoleSummary> callback);
+    void delete(final ICallback<? super PrivilegedRoleSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedRoleSummaryRequest extends IHttpRequest {
      * @param sourcePrivilegedRoleSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedRoleSummary sourcePrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback);
+    void patch(final PrivilegedRoleSummary sourcePrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback);
 
     /**
      * Patches this PrivilegedRoleSummary with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedRoleSummaryRequest extends IHttpRequest {
      * @param newPrivilegedRoleSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback);
+    void post(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback);
 
     /**
      * Posts a PrivilegedRoleSummary with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedRoleSummaryRequest extends IHttpRequest {
      * @param newPrivilegedRoleSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback);
+    void put(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback);
 
     /**
      * Posts a PrivilegedRoleSummary with a new object

@@ -37,7 +37,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyConfigurationAssignment> callback) {
+    public void get(final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyConfigurationAssignment> callback) {
+    public void delete(final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param sourceGroupPolicyConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback) {
+    public void patch(final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyConfigurationAssignment);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param newGroupPolicyConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback) {
+    public void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyConfigurationAssignment);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param newGroupPolicyConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback) {
+    public void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyConfigurationAssignment);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      */
      public IGroupPolicyConfigurationAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyConfigurationAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyConfigurationAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyConfigurationAssignmentRequest)this;
      }
 

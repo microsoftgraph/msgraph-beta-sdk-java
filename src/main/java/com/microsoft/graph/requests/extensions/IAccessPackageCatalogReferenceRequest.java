@@ -30,7 +30,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAccessPackageCatalogReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AccessPackageCatalog> callback);
+    void delete(final ICallback<? super AccessPackageCatalog> callback);
 
     AccessPackageCatalog delete() throws ClientException;
 
@@ -56,7 +56,7 @@ public interface IAccessPackageCatalogReferenceRequest extends IHttpRequest {
      * @param srcAccessPackageCatalog the AccessPackageCatalog to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AccessPackageCatalog srcAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback);
+    void put(AccessPackageCatalog srcAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback);
 
     /**
      * Puts the AccessPackageCatalog

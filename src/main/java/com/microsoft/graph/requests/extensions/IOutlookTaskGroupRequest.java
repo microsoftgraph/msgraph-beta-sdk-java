@@ -21,7 +21,7 @@ public interface IOutlookTaskGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OutlookTaskGroup> callback);
+    void get(final ICallback<? super OutlookTaskGroup> callback);
 
     /**
      * Gets the OutlookTaskGroup from the service
@@ -36,7 +36,7 @@ public interface IOutlookTaskGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OutlookTaskGroup> callback);
+    void delete(final ICallback<? super OutlookTaskGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOutlookTaskGroupRequest extends IHttpRequest {
      * @param sourceOutlookTaskGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OutlookTaskGroup sourceOutlookTaskGroup, final ICallback<OutlookTaskGroup> callback);
+    void patch(final OutlookTaskGroup sourceOutlookTaskGroup, final ICallback<? super OutlookTaskGroup> callback);
 
     /**
      * Patches this OutlookTaskGroup with a source
@@ -68,7 +68,7 @@ public interface IOutlookTaskGroupRequest extends IHttpRequest {
      * @param newOutlookTaskGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<OutlookTaskGroup> callback);
+    void post(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<? super OutlookTaskGroup> callback);
 
     /**
      * Posts a OutlookTaskGroup with a new object
@@ -85,7 +85,7 @@ public interface IOutlookTaskGroupRequest extends IHttpRequest {
      * @param newOutlookTaskGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<OutlookTaskGroup> callback);
+    void put(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<? super OutlookTaskGroup> callback);
 
     /**
      * Posts a OutlookTaskGroup with a new object

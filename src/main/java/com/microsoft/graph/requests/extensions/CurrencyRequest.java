@@ -37,7 +37,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Currency> callback) {
+    public void get(final ICallback<? super Currency> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Currency> callback) {
+    public void delete(final ICallback<? super Currency> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param sourceCurrency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Currency sourceCurrency, final ICallback<Currency> callback) {
+    public void patch(final Currency sourceCurrency, final ICallback<? super Currency> callback) {
         send(HttpMethod.PATCH, callback, sourceCurrency);
     }
 
@@ -96,7 +96,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param newCurrency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Currency newCurrency, final ICallback<Currency> callback) {
+    public void post(final Currency newCurrency, final ICallback<? super Currency> callback) {
         send(HttpMethod.POST, callback, newCurrency);
     }
 
@@ -117,7 +117,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param newCurrency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Currency newCurrency, final ICallback<Currency> callback) {
+    public void put(final Currency newCurrency, final ICallback<? super Currency> callback) {
         send(HttpMethod.PUT, callback, newCurrency);
     }
 
@@ -151,17 +151,6 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      */
      public ICurrencyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CurrencyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICurrencyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CurrencyRequest)this;
      }
 

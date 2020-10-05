@@ -21,7 +21,7 @@ public interface IMacOSEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSEnterpriseWiFiConfiguration> callback);
+    void get(final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback);
 
     /**
      * Gets the MacOSEnterpriseWiFiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSEnterpriseWiFiConfiguration> callback);
+    void delete(final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSEnterpriseWiFiConfiguration sourceMacOSEnterpriseWiFiConfiguration, final ICallback<MacOSEnterpriseWiFiConfiguration> callback);
+    void patch(final MacOSEnterpriseWiFiConfiguration sourceMacOSEnterpriseWiFiConfiguration, final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback);
 
     /**
      * Patches this MacOSEnterpriseWiFiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      * @param newMacOSEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<MacOSEnterpriseWiFiConfiguration> callback);
+    void post(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback);
 
     /**
      * Posts a MacOSEnterpriseWiFiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      * @param newMacOSEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<MacOSEnterpriseWiFiConfiguration> callback);
+    void put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback);
 
     /**
      * Posts a MacOSEnterpriseWiFiConfiguration with a new object

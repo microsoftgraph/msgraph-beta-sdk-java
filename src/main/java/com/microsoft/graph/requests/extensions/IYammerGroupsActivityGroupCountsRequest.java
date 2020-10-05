@@ -21,7 +21,7 @@ public interface IYammerGroupsActivityGroupCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<YammerGroupsActivityGroupCounts> callback);
+    void get(final ICallback<? super YammerGroupsActivityGroupCounts> callback);
 
     /**
      * Gets the YammerGroupsActivityGroupCounts from the service
@@ -36,7 +36,7 @@ public interface IYammerGroupsActivityGroupCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<YammerGroupsActivityGroupCounts> callback);
+    void delete(final ICallback<? super YammerGroupsActivityGroupCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IYammerGroupsActivityGroupCountsRequest extends IHttpRequest {
      * @param sourceYammerGroupsActivityGroupCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final YammerGroupsActivityGroupCounts sourceYammerGroupsActivityGroupCounts, final ICallback<YammerGroupsActivityGroupCounts> callback);
+    void patch(final YammerGroupsActivityGroupCounts sourceYammerGroupsActivityGroupCounts, final ICallback<? super YammerGroupsActivityGroupCounts> callback);
 
     /**
      * Patches this YammerGroupsActivityGroupCounts with a source
@@ -68,7 +68,7 @@ public interface IYammerGroupsActivityGroupCountsRequest extends IHttpRequest {
      * @param newYammerGroupsActivityGroupCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts, final ICallback<YammerGroupsActivityGroupCounts> callback);
+    void post(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts, final ICallback<? super YammerGroupsActivityGroupCounts> callback);
 
     /**
      * Posts a YammerGroupsActivityGroupCounts with a new object
@@ -85,7 +85,7 @@ public interface IYammerGroupsActivityGroupCountsRequest extends IHttpRequest {
      * @param newYammerGroupsActivityGroupCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts, final ICallback<YammerGroupsActivityGroupCounts> callback);
+    void put(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts, final ICallback<? super YammerGroupsActivityGroupCounts> callback);
 
     /**
      * Posts a YammerGroupsActivityGroupCounts with a new object

@@ -37,7 +37,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSMdatpApp> callback) {
+    public void get(final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSMdatpApp> callback) {
+    public void delete(final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param sourceMacOSMdatpApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSMdatpApp sourceMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback) {
+    public void patch(final MacOSMdatpApp sourceMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSMdatpApp);
     }
 
@@ -96,7 +96,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param newMacOSMdatpApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback) {
+    public void post(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.POST, callback, newMacOSMdatpApp);
     }
 
@@ -117,7 +117,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param newMacOSMdatpApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback) {
+    public void put(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.PUT, callback, newMacOSMdatpApp);
     }
 
@@ -151,17 +151,6 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      */
      public IMacOSMdatpAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSMdatpAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSMdatpAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSMdatpAppRequest)this;
      }
 

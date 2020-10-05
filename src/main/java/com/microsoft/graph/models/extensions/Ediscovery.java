@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EdiscoveryCase;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionResponse;
 import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class Ediscovery extends Entity implements IJsonBackedObject {
 
 
         if (json.has("cases")) {
-            final EdiscoveryCaseCollectionResponse response = new EdiscoveryCaseCollectionResponse();
-            if (json.has("cases@odata.nextLink")) {
-                response.nextLink = json.get("cases@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("cases").toString(), JsonObject[].class);
-            final EdiscoveryCase[] array = new EdiscoveryCase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EdiscoveryCase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            cases = new EdiscoveryCaseCollectionPage(response, null);
+            cases = serializer.deserializeObject(json.get("cases").toString(), EdiscoveryCaseCollectionPage.class);
         }
     }
 }

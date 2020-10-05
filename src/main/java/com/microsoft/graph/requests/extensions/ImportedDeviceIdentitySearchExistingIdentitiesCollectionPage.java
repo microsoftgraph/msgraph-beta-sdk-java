@@ -34,6 +34,6 @@ public class ImportedDeviceIdentitySearchExistingIdentitiesCollectionPage extend
      * @param builder The request builder for the next collection page
      */
     public ImportedDeviceIdentitySearchExistingIdentitiesCollectionPage(final ImportedDeviceIdentitySearchExistingIdentitiesCollectionResponse response, final IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

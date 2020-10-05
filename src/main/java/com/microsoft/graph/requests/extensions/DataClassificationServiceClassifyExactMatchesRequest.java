@@ -37,7 +37,7 @@ public class DataClassificationServiceClassifyExactMatchesRequest extends BaseRe
         body = new DataClassificationServiceClassifyExactMatchesBody();
     }
 
-    public void post(final ICallback<ExactMatchClassificationResult> callback) {
+    public void post(final ICallback<? super ExactMatchClassificationResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class DataClassificationServiceClassifyExactMatchesRequest extends BaseRe
      */
     public IDataClassificationServiceClassifyExactMatchesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DataClassificationServiceClassifyExactMatchesRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDataClassificationServiceClassifyExactMatchesRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DataClassificationServiceClassifyExactMatchesRequest)this;
     }
 

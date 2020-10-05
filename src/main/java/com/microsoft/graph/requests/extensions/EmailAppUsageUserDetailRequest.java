@@ -37,7 +37,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EmailAppUsageUserDetail> callback) {
+    public void get(final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EmailAppUsageUserDetail> callback) {
+    public void delete(final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param sourceEmailAppUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailAppUsageUserDetail sourceEmailAppUsageUserDetail, final ICallback<EmailAppUsageUserDetail> callback) {
+    public void patch(final EmailAppUsageUserDetail sourceEmailAppUsageUserDetail, final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailAppUsageUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param newEmailAppUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<EmailAppUsageUserDetail> callback) {
+    public void post(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.POST, callback, newEmailAppUsageUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param newEmailAppUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<EmailAppUsageUserDetail> callback) {
+    public void put(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.PUT, callback, newEmailAppUsageUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      */
      public IEmailAppUsageUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailAppUsageUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEmailAppUsageUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmailAppUsageUserDetailRequest)this;
      }
 

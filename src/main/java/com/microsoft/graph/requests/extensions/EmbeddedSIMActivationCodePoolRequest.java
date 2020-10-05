@@ -46,7 +46,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EmbeddedSIMActivationCodePool> callback) {
+    public void get(final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EmbeddedSIMActivationCodePool> callback) {
+    public void delete(final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param sourceEmbeddedSIMActivationCodePool the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback) {
+    public void patch(final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.PATCH, callback, sourceEmbeddedSIMActivationCodePool);
     }
 
@@ -105,7 +105,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param newEmbeddedSIMActivationCodePool the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback) {
+    public void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.POST, callback, newEmbeddedSIMActivationCodePool);
     }
 
@@ -126,7 +126,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param newEmbeddedSIMActivationCodePool the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback) {
+    public void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.PUT, callback, newEmbeddedSIMActivationCodePool);
     }
 
@@ -160,17 +160,6 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      */
      public IEmbeddedSIMActivationCodePoolRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmbeddedSIMActivationCodePoolRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEmbeddedSIMActivationCodePoolRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmbeddedSIMActivationCodePoolRequest)this;
      }
 

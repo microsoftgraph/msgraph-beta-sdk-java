@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookCommentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkbookCommentCollectionPage> callback);
+    void get(final ICallback<? super IWorkbookCommentCollectionPage> callback);
 
     IWorkbookCommentCollectionPage get() throws ClientException;
 
-    void post(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback);
+    void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback);
 
     WorkbookComment post(final WorkbookComment newWorkbookComment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWorkbookCommentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IWorkbookCommentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWorkbookCommentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWorkbookCommentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookCommentCollectionRequest skipToken(String skipToken);
+	IWorkbookCommentCollectionRequest skipToken(final String skipToken);
 }

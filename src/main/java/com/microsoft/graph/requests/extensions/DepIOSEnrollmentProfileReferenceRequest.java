@@ -34,7 +34,7 @@ public class DepIOSEnrollmentProfileReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, DepIOSEnrollmentProfile.class);
     }
 
-    public void delete(final ICallback<DepIOSEnrollmentProfile> callback) {
+    public void delete(final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class DepIOSEnrollmentProfileReferenceRequest extends BaseRequest impleme
         return (DepIOSEnrollmentProfileReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDepIOSEnrollmentProfileReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DepIOSEnrollmentProfileReferenceRequest)this;
-    }
-    /**
      * Puts the DepIOSEnrollmentProfile
      *
      * @param srcDepIOSEnrollmentProfile the DepIOSEnrollmentProfile reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DepIOSEnrollmentProfile srcDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback) {
+    public void put(DepIOSEnrollmentProfile srcDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, srcDepIOSEnrollmentProfile);
     }
 

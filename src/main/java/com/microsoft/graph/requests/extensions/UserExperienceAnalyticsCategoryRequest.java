@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
      * @param sourceUserExperienceAnalyticsCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsCategory);
     }
 
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
      * @param newUserExperienceAnalyticsCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsCategory);
     }
 
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
      * @param newUserExperienceAnalyticsCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsCategory);
     }
 
@@ -155,17 +155,6 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
      */
      public IUserExperienceAnalyticsCategoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsCategoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsCategoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsCategoryRequest)this;
      }
 

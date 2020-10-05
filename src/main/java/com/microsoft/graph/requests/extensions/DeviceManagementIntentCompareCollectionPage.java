@@ -34,6 +34,6 @@ public class DeviceManagementIntentCompareCollectionPage extends BaseCollectionP
      * @param builder The request builder for the next collection page
      */
     public DeviceManagementIntentCompareCollectionPage(final DeviceManagementIntentCompareCollectionResponse response, final IDeviceManagementIntentCompareCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

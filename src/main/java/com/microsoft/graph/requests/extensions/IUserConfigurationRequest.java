@@ -21,7 +21,7 @@ public interface IUserConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserConfiguration> callback);
+    void get(final ICallback<? super UserConfiguration> callback);
 
     /**
      * Gets the UserConfiguration from the service
@@ -36,7 +36,7 @@ public interface IUserConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserConfiguration> callback);
+    void delete(final ICallback<? super UserConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserConfigurationRequest extends IHttpRequest {
      * @param sourceUserConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserConfiguration sourceUserConfiguration, final ICallback<UserConfiguration> callback);
+    void patch(final UserConfiguration sourceUserConfiguration, final ICallback<? super UserConfiguration> callback);
 
     /**
      * Patches this UserConfiguration with a source
@@ -68,7 +68,7 @@ public interface IUserConfigurationRequest extends IHttpRequest {
      * @param newUserConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback);
+    void post(final UserConfiguration newUserConfiguration, final ICallback<? super UserConfiguration> callback);
 
     /**
      * Posts a UserConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IUserConfigurationRequest extends IHttpRequest {
      * @param newUserConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback);
+    void put(final UserConfiguration newUserConfiguration, final ICallback<? super UserConfiguration> callback);
 
     /**
      * Posts a UserConfiguration with a new object

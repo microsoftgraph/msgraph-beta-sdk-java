@@ -26,7 +26,7 @@ public interface IPrintJobStartPrintJobRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<PrintJobStatus> callback);
+    void post(final ICallback<? super PrintJobStatus> callback);
 
     /**
      * Creates the PrintJobStartPrintJob

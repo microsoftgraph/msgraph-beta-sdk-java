@@ -36,7 +36,7 @@ public class DeviceManagementIntentUpdateSettingsRequest extends BaseRequest imp
         body = new DeviceManagementIntentUpdateSettingsBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceManagementIntentUpdateSettingsRequest extends BaseRequest imp
      */
     public IDeviceManagementIntentUpdateSettingsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementIntentUpdateSettingsRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementIntentUpdateSettingsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementIntentUpdateSettingsRequest)this;
     }
 

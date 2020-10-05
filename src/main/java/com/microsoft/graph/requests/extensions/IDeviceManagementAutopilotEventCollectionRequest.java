@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementAutopilotEventCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementAutopilotEventCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementAutopilotEventCollectionPage> callback);
 
     IDeviceManagementAutopilotEventCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback);
+    void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback);
 
     DeviceManagementAutopilotEvent post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementAutopilotEventCollectionRequest extends IHttpR
      * @return the updated request
      */
     IDeviceManagementAutopilotEventCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementAutopilotEventCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementAutopilotEventCollectionRequest extends IHttpR
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementAutopilotEventCollectionRequest skipToken(String skipToken);
+	IDeviceManagementAutopilotEventCollectionRequest skipToken(final String skipToken);
 }

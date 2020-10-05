@@ -40,7 +40,7 @@ public class PolicySetItemCollectionRequest extends BaseCollectionRequest<Policy
         super(requestUrl, client, requestOptions, PolicySetItemCollectionResponse.class, IPolicySetItemCollectionPage.class);
     }
 
-    public void get(final ICallback<IPolicySetItemCollectionPage> callback) {
+    public void get(final ICallback<? super IPolicySetItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PolicySetItemCollectionRequest extends BaseCollectionRequest<Policy
         return buildFromResponse(response);
     }
 
-    public void post(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback) {
+    public void post(final PolicySetItem newPolicySetItem, final ICallback<? super PolicySetItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PolicySetItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PolicySetItemCollectionRequest extends BaseCollectionRequest<Policy
      */
     public IPolicySetItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PolicySetItemCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPolicySetItemCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PolicySetItemCollectionRequest)this;
     }
 

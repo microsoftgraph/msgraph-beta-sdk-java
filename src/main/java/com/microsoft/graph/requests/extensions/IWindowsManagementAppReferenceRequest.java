@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsManagementAppReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<WindowsManagementApp> callback);
+    void delete(final ICallback<? super WindowsManagementApp> callback);
 
     WindowsManagementApp delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IWindowsManagementAppReferenceRequest extends IHttpRequest {
      * @param srcWindowsManagementApp the WindowsManagementApp to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WindowsManagementApp srcWindowsManagementApp, final ICallback<WindowsManagementApp> callback);
+    void put(WindowsManagementApp srcWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback);
 
     /**
      * Puts the WindowsManagementApp

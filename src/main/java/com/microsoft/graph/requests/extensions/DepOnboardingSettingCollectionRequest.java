@@ -40,7 +40,7 @@ public class DepOnboardingSettingCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, DepOnboardingSettingCollectionResponse.class, IDepOnboardingSettingCollectionPage.class);
     }
 
-    public void get(final ICallback<IDepOnboardingSettingCollectionPage> callback) {
+    public void get(final ICallback<? super IDepOnboardingSettingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DepOnboardingSettingCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback) {
+    public void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DepOnboardingSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DepOnboardingSettingCollectionRequest extends BaseCollectionRequest
      */
     public IDepOnboardingSettingCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DepOnboardingSettingCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDepOnboardingSettingCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DepOnboardingSettingCollectionRequest)this;
     }
 

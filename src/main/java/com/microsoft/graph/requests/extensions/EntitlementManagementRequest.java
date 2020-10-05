@@ -79,7 +79,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EntitlementManagement> callback) {
+    public void get(final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -98,7 +98,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EntitlementManagement> callback) {
+    public void delete(final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -117,7 +117,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param sourceEntitlementManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EntitlementManagement sourceEntitlementManagement, final ICallback<EntitlementManagement> callback) {
+    public void patch(final EntitlementManagement sourceEntitlementManagement, final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.PATCH, callback, sourceEntitlementManagement);
     }
 
@@ -138,7 +138,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param newEntitlementManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EntitlementManagement newEntitlementManagement, final ICallback<EntitlementManagement> callback) {
+    public void post(final EntitlementManagement newEntitlementManagement, final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.POST, callback, newEntitlementManagement);
     }
 
@@ -159,7 +159,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param newEntitlementManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EntitlementManagement newEntitlementManagement, final ICallback<EntitlementManagement> callback) {
+    public void put(final EntitlementManagement newEntitlementManagement, final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.PUT, callback, newEntitlementManagement);
     }
 
@@ -193,17 +193,6 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      */
      public IEntitlementManagementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EntitlementManagementRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEntitlementManagementRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EntitlementManagementRequest)this;
      }
 

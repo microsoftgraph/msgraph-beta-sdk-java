@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsBaselineCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsBaselineCollectionResponse.class, IUserExperienceAnalyticsBaselineCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserExperienceAnalyticsBaselineCollectionPage> callback) {
+    public void get(final ICallback<? super IUserExperienceAnalyticsBaselineCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsBaselineCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback) {
+    public void post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<? super UserExperienceAnalyticsBaseline> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsBaselineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserExperienceAnalyticsBaselineCollectionRequest extends BaseCollec
      */
     public IUserExperienceAnalyticsBaselineCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExperienceAnalyticsBaselineCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsBaselineCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExperienceAnalyticsBaselineCollectionRequest)this;
     }
 

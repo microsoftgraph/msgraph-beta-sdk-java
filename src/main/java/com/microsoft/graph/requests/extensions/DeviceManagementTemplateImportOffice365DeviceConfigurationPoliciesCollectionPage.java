@@ -34,6 +34,6 @@ public class DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesC
      * @param builder The request builder for the next collection page
      */
     public DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionPage(final DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionResponse response, final IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

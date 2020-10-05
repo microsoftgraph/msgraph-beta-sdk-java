@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITodoTaskListCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITodoTaskListCollectionPage> callback);
+    void get(final ICallback<? super ITodoTaskListCollectionPage> callback);
 
     ITodoTaskListCollectionPage get() throws ClientException;
 
-    void post(final TodoTaskList newTodoTaskList, final ICallback<TodoTaskList> callback);
+    void post(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback);
 
     TodoTaskList post(final TodoTaskList newTodoTaskList) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITodoTaskListCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITodoTaskListCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITodoTaskListCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITodoTaskListCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITodoTaskListCollectionRequest skipToken(String skipToken);
+	ITodoTaskListCollectionRequest skipToken(final String skipToken);
 }

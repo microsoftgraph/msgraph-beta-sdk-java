@@ -21,7 +21,7 @@ public interface IWindows81VpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81VpnConfiguration> callback);
+    void get(final ICallback<? super Windows81VpnConfiguration> callback);
 
     /**
      * Gets the Windows81VpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows81VpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81VpnConfiguration> callback);
+    void delete(final ICallback<? super Windows81VpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81VpnConfigurationRequest extends IHttpRequest {
      * @param sourceWindows81VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81VpnConfiguration sourceWindows81VpnConfiguration, final ICallback<Windows81VpnConfiguration> callback);
+    void patch(final Windows81VpnConfiguration sourceWindows81VpnConfiguration, final ICallback<? super Windows81VpnConfiguration> callback);
 
     /**
      * Patches this Windows81VpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows81VpnConfigurationRequest extends IHttpRequest {
      * @param newWindows81VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<Windows81VpnConfiguration> callback);
+    void post(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<? super Windows81VpnConfiguration> callback);
 
     /**
      * Posts a Windows81VpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows81VpnConfigurationRequest extends IHttpRequest {
      * @param newWindows81VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<Windows81VpnConfiguration> callback);
+    void put(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<? super Windows81VpnConfiguration> callback);
 
     /**
      * Posts a Windows81VpnConfiguration with a new object

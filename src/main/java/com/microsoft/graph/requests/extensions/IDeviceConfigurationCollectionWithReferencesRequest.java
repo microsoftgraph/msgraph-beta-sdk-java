@@ -28,7 +28,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceConfigurationCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceConfigurationCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IDeviceConfigurationCollectionWithReferencesPage> callback);
 
     IDeviceConfigurationCollectionWithReferencesPage get() throws ClientException;
 

@@ -23,6 +23,6 @@ public class DeviceShellScriptCollectionPage extends BaseCollectionPage<DeviceSh
      * @param builder  the request builder for the next collection page
      */
     public DeviceShellScriptCollectionPage(final DeviceShellScriptCollectionResponse response, final IDeviceShellScriptCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

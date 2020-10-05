@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedEBookCategoryCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedEBookCategoryCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IManagedEBookCategoryCollectionWithReferencesPage> callback);
 
     IManagedEBookCategoryCollectionWithReferencesPage get() throws ClientException;
 

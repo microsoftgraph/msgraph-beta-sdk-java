@@ -40,7 +40,7 @@ public class PersonAnniversaryCollectionRequest extends BaseCollectionRequest<Pe
         super(requestUrl, client, requestOptions, PersonAnniversaryCollectionResponse.class, IPersonAnniversaryCollectionPage.class);
     }
 
-    public void get(final ICallback<IPersonAnniversaryCollectionPage> callback) {
+    public void get(final ICallback<? super IPersonAnniversaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PersonAnniversaryCollectionRequest extends BaseCollectionRequest<Pe
         return buildFromResponse(response);
     }
 
-    public void post(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback) {
+    public void post(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonAnniversaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PersonAnniversaryCollectionRequest extends BaseCollectionRequest<Pe
      */
     public IPersonAnniversaryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PersonAnniversaryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPersonAnniversaryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PersonAnniversaryCollectionRequest)this;
     }
 

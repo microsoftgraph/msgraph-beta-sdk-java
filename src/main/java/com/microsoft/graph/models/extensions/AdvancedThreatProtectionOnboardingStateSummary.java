@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AdvancedThreatProtectionOnboardingDeviceSettingState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage;
 
 
@@ -139,19 +137,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
 
 
         if (json.has("advancedThreatProtectionOnboardingDeviceSettingStates")) {
-            final AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse response = new AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse();
-            if (json.has("advancedThreatProtectionOnboardingDeviceSettingStates@odata.nextLink")) {
-                response.nextLink = json.get("advancedThreatProtectionOnboardingDeviceSettingStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("advancedThreatProtectionOnboardingDeviceSettingStates").toString(), JsonObject[].class);
-            final AdvancedThreatProtectionOnboardingDeviceSettingState[] array = new AdvancedThreatProtectionOnboardingDeviceSettingState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AdvancedThreatProtectionOnboardingDeviceSettingState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            advancedThreatProtectionOnboardingDeviceSettingStates = new AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage(response, null);
+            advancedThreatProtectionOnboardingDeviceSettingStates = serializer.deserializeObject(json.get("advancedThreatProtectionOnboardingDeviceSettingStates").toString(), AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage.class);
         }
     }
 }

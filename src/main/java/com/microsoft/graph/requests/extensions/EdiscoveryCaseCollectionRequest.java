@@ -40,7 +40,7 @@ public class EdiscoveryCaseCollectionRequest extends BaseCollectionRequest<Edisc
         super(requestUrl, client, requestOptions, EdiscoveryCaseCollectionResponse.class, IEdiscoveryCaseCollectionPage.class);
     }
 
-    public void get(final ICallback<IEdiscoveryCaseCollectionPage> callback) {
+    public void get(final ICallback<? super IEdiscoveryCaseCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EdiscoveryCaseCollectionRequest extends BaseCollectionRequest<Edisc
         return buildFromResponse(response);
     }
 
-    public void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback) {
+    public void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EdiscoveryCaseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EdiscoveryCaseCollectionRequest extends BaseCollectionRequest<Edisc
      */
     public IEdiscoveryCaseCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EdiscoveryCaseCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEdiscoveryCaseCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EdiscoveryCaseCollectionRequest)this;
     }
 

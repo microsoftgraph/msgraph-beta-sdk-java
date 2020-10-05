@@ -37,7 +37,7 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkGmailEasConfiguration> callback) {
+    public void get(final ICallback<? super AndroidForWorkGmailEasConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkGmailEasConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidForWorkGmailEasConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
      * @param sourceAndroidForWorkGmailEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkGmailEasConfiguration sourceAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback) {
+    public void patch(final AndroidForWorkGmailEasConfiguration sourceAndroidForWorkGmailEasConfiguration, final ICallback<? super AndroidForWorkGmailEasConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkGmailEasConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
      * @param newAndroidForWorkGmailEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback) {
+    public void post(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<? super AndroidForWorkGmailEasConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkGmailEasConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
      * @param newAndroidForWorkGmailEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback) {
+    public void put(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<? super AndroidForWorkGmailEasConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkGmailEasConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
      */
      public IAndroidForWorkGmailEasConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkGmailEasConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkGmailEasConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkGmailEasConfigurationRequest)this;
      }
 

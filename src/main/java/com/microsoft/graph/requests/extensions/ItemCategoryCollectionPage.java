@@ -23,6 +23,6 @@ public class ItemCategoryCollectionPage extends BaseCollectionPage<ItemCategory,
      * @param builder  the request builder for the next collection page
      */
     public ItemCategoryCollectionPage(final ItemCategoryCollectionResponse response, final IItemCategoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

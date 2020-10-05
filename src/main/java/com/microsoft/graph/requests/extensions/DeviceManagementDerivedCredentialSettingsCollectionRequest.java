@@ -40,7 +40,7 @@ public class DeviceManagementDerivedCredentialSettingsCollectionRequest extends 
         super(requestUrl, client, requestOptions, DeviceManagementDerivedCredentialSettingsCollectionResponse.class, IDeviceManagementDerivedCredentialSettingsCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementDerivedCredentialSettingsCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementDerivedCredentialSettingsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementDerivedCredentialSettingsCollectionRequest extends 
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+    public void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementDerivedCredentialSettingsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementDerivedCredentialSettingsCollectionRequest extends 
      */
     public IDeviceManagementDerivedCredentialSettingsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementDerivedCredentialSettingsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementDerivedCredentialSettingsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementDerivedCredentialSettingsCollectionRequest)this;
     }
 

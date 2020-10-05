@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMicrosoftTunnelSiteCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMicrosoftTunnelSiteCollectionPage> callback);
+    void get(final ICallback<? super IMicrosoftTunnelSiteCollectionPage> callback);
 
     IMicrosoftTunnelSiteCollectionPage get() throws ClientException;
 
-    void post(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback);
+    void post(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback);
 
     MicrosoftTunnelSite post(final MicrosoftTunnelSite newMicrosoftTunnelSite) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMicrosoftTunnelSiteCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IMicrosoftTunnelSiteCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMicrosoftTunnelSiteCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMicrosoftTunnelSiteCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMicrosoftTunnelSiteCollectionRequest skipToken(String skipToken);
+	IMicrosoftTunnelSiteCollectionRequest skipToken(final String skipToken);
 }

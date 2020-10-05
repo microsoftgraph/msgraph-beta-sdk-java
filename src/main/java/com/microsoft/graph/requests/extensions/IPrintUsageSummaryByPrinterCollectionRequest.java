@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintUsageSummaryByPrinterCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrintUsageSummaryByPrinterCollectionPage> callback);
+    void get(final ICallback<? super IPrintUsageSummaryByPrinterCollectionPage> callback);
 
     IPrintUsageSummaryByPrinterCollectionPage get() throws ClientException;
 
-    void post(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, final ICallback<PrintUsageSummaryByPrinter> callback);
+    void post(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, final ICallback<? super PrintUsageSummaryByPrinter> callback);
 
     PrintUsageSummaryByPrinter post(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPrintUsageSummaryByPrinterCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IPrintUsageSummaryByPrinterCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrintUsageSummaryByPrinterCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPrintUsageSummaryByPrinterCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IPrintUsageSummaryByPrinterCollectionRequest skipToken(String skipToken);
+	IPrintUsageSummaryByPrinterCollectionRequest skipToken(final String skipToken);
 }

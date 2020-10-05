@@ -40,7 +40,7 @@ public class PersonCertificationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, PersonCertificationCollectionResponse.class, IPersonCertificationCollectionPage.class);
     }
 
-    public void get(final ICallback<IPersonCertificationCollectionPage> callback) {
+    public void get(final ICallback<? super IPersonCertificationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PersonCertificationCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback) {
+    public void post(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonCertificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PersonCertificationCollectionRequest extends BaseCollectionRequest<
      */
     public IPersonCertificationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PersonCertificationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPersonCertificationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PersonCertificationCollectionRequest)this;
     }
 

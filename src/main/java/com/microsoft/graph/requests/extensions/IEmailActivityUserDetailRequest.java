@@ -21,7 +21,7 @@ public interface IEmailActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailActivityUserDetail> callback);
+    void get(final ICallback<? super EmailActivityUserDetail> callback);
 
     /**
      * Gets the EmailActivityUserDetail from the service
@@ -36,7 +36,7 @@ public interface IEmailActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailActivityUserDetail> callback);
+    void delete(final ICallback<? super EmailActivityUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailActivityUserDetailRequest extends IHttpRequest {
      * @param sourceEmailActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailActivityUserDetail sourceEmailActivityUserDetail, final ICallback<EmailActivityUserDetail> callback);
+    void patch(final EmailActivityUserDetail sourceEmailActivityUserDetail, final ICallback<? super EmailActivityUserDetail> callback);
 
     /**
      * Patches this EmailActivityUserDetail with a source
@@ -68,7 +68,7 @@ public interface IEmailActivityUserDetailRequest extends IHttpRequest {
      * @param newEmailActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<EmailActivityUserDetail> callback);
+    void post(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<? super EmailActivityUserDetail> callback);
 
     /**
      * Posts a EmailActivityUserDetail with a new object
@@ -85,7 +85,7 @@ public interface IEmailActivityUserDetailRequest extends IHttpRequest {
      * @param newEmailActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<EmailActivityUserDetail> callback);
+    void put(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<? super EmailActivityUserDetail> callback);
 
     /**
      * Posts a EmailActivityUserDetail with a new object

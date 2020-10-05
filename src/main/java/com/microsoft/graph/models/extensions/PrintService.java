@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PrintServiceEndpoint;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PrintServiceEndpointCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class PrintService extends Entity implements IJsonBackedObject {
 
 
         if (json.has("endpoints")) {
-            final PrintServiceEndpointCollectionResponse response = new PrintServiceEndpointCollectionResponse();
-            if (json.has("endpoints@odata.nextLink")) {
-                response.nextLink = json.get("endpoints@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("endpoints").toString(), JsonObject[].class);
-            final PrintServiceEndpoint[] array = new PrintServiceEndpoint[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintServiceEndpoint.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            endpoints = new PrintServiceEndpointCollectionPage(response, null);
+            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), PrintServiceEndpointCollectionPage.class);
         }
     }
 }

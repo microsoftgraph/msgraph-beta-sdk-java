@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementGetRoleScopeTagsByResourceCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementGetRoleScopeTagsByResourceCollectionPage> callback);
 
     IDeviceManagementGetRoleScopeTagsByResourceCollectionPage get() throws ClientException;
 

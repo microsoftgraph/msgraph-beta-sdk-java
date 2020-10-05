@@ -35,6 +35,6 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionP
      * @param builder The request builder for the next collection page
      */
     public ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionPage(final ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionResponse response, final IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

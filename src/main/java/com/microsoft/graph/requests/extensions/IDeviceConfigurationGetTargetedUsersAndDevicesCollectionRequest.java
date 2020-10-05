@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IDeviceConfigurationGetTargetedUsersAndDevicesCollectionPage> callback);
+    void post(final ICallback<? super IDeviceConfigurationGetTargetedUsersAndDevicesCollectionPage> callback);
 
     IDeviceConfigurationGetTargetedUsersAndDevicesCollectionPage post() throws ClientException;
 

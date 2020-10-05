@@ -23,6 +23,6 @@ public class GovernanceSubjectCollectionPage extends BaseCollectionPage<Governan
      * @param builder  the request builder for the next collection page
      */
     public GovernanceSubjectCollectionPage(final GovernanceSubjectCollectionResponse response, final IGovernanceSubjectCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IMeetingActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MeetingActivityStatistics> callback);
+    void get(final ICallback<? super MeetingActivityStatistics> callback);
 
     /**
      * Gets the MeetingActivityStatistics from the service
@@ -36,7 +36,7 @@ public interface IMeetingActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MeetingActivityStatistics> callback);
+    void delete(final ICallback<? super MeetingActivityStatistics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMeetingActivityStatisticsRequest extends IHttpRequest {
      * @param sourceMeetingActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MeetingActivityStatistics sourceMeetingActivityStatistics, final ICallback<MeetingActivityStatistics> callback);
+    void patch(final MeetingActivityStatistics sourceMeetingActivityStatistics, final ICallback<? super MeetingActivityStatistics> callback);
 
     /**
      * Patches this MeetingActivityStatistics with a source
@@ -68,7 +68,7 @@ public interface IMeetingActivityStatisticsRequest extends IHttpRequest {
      * @param newMeetingActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<MeetingActivityStatistics> callback);
+    void post(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<? super MeetingActivityStatistics> callback);
 
     /**
      * Posts a MeetingActivityStatistics with a new object
@@ -85,7 +85,7 @@ public interface IMeetingActivityStatisticsRequest extends IHttpRequest {
      * @param newMeetingActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<MeetingActivityStatistics> callback);
+    void put(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<? super MeetingActivityStatistics> callback);
 
     /**
      * Posts a MeetingActivityStatistics with a new object

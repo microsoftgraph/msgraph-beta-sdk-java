@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IConnectorReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Connector> callback);
+    void delete(final ICallback<? super Connector> callback);
 
     Connector delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IConnectorReferenceRequest extends IHttpRequest {
      * @param srcConnector the Connector to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Connector srcConnector, final ICallback<Connector> callback);
+    void put(Connector srcConnector, final ICallback<? super Connector> callback);
 
     /**
      * Puts the Connector

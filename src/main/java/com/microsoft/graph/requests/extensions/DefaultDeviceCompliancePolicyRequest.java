@@ -37,7 +37,7 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DefaultDeviceCompliancePolicy> callback) {
+    public void get(final ICallback<? super DefaultDeviceCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DefaultDeviceCompliancePolicy> callback) {
+    public void delete(final ICallback<? super DefaultDeviceCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
      * @param sourceDefaultDeviceCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DefaultDeviceCompliancePolicy sourceDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback) {
+    public void patch(final DefaultDeviceCompliancePolicy sourceDefaultDeviceCompliancePolicy, final ICallback<? super DefaultDeviceCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDefaultDeviceCompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
      * @param newDefaultDeviceCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback) {
+    public void post(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<? super DefaultDeviceCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newDefaultDeviceCompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
      * @param newDefaultDeviceCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback) {
+    public void put(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<? super DefaultDeviceCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newDefaultDeviceCompliancePolicy);
     }
 
@@ -151,17 +151,6 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
      */
      public IDefaultDeviceCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DefaultDeviceCompliancePolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDefaultDeviceCompliancePolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DefaultDeviceCompliancePolicyRequest)this;
      }
 

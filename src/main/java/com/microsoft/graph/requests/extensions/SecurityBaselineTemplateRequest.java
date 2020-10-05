@@ -47,7 +47,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SecurityBaselineTemplate> callback) {
+    public void get(final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SecurityBaselineTemplate> callback) {
+    public void delete(final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param sourceSecurityBaselineTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityBaselineTemplate sourceSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback) {
+    public void patch(final SecurityBaselineTemplate sourceSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityBaselineTemplate);
     }
 
@@ -106,7 +106,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param newSecurityBaselineTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback) {
+    public void post(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.POST, callback, newSecurityBaselineTemplate);
     }
 
@@ -127,7 +127,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param newSecurityBaselineTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback) {
+    public void put(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.PUT, callback, newSecurityBaselineTemplate);
     }
 
@@ -161,17 +161,6 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      */
      public ISecurityBaselineTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityBaselineTemplateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISecurityBaselineTemplateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SecurityBaselineTemplateRequest)this;
      }
 

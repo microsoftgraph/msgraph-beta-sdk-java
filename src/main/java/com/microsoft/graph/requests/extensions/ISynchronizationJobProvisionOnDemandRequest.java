@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISynchronizationJobProvisionOnDemandRequest extends IHttpRequest {
 
-    void post(final ICallback<StringKeyStringValuePair> callback);
+    void post(final ICallback<? super StringKeyStringValuePair> callback);
 
     StringKeyStringValuePair post() throws ClientException;
 

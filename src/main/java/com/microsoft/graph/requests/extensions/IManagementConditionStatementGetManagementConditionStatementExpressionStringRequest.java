@@ -26,7 +26,7 @@ public interface IManagementConditionStatementGetManagementConditionStatementExp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagementConditionExpressionString> callback);
+    void get(final ICallback<? super ManagementConditionExpressionString> callback);
 
     /**
      * Gets the ManagementConditionExpressionString

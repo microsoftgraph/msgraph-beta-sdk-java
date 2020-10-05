@@ -23,6 +23,6 @@ public class BookingCurrencyCollectionPage extends BaseCollectionPage<BookingCur
      * @param builder  the request builder for the next collection page
      */
     public BookingCurrencyCollectionPage(final BookingCurrencyCollectionResponse response, final IBookingCurrencyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

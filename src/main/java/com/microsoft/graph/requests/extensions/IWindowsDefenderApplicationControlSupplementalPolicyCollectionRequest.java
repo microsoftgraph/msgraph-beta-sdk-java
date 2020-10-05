@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage> callback);
+    void get(final ICallback<? super IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage> callback);
 
     IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage get() throws ClientException;
 
-    void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     WindowsDefenderApplicationControlSupplementalPolicy post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyCollectionR
      * @return the updated request
      */
     IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyCollectionR
      *
 	 * @return the updated request
 	 */
-	IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest skipToken(String skipToken);
+	IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest skipToken(final String skipToken);
 }

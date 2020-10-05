@@ -37,7 +37,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<FilterOperatorSchema> callback) {
+    public void get(final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<FilterOperatorSchema> callback) {
+    public void delete(final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param sourceFilterOperatorSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FilterOperatorSchema sourceFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback) {
+    public void patch(final FilterOperatorSchema sourceFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.PATCH, callback, sourceFilterOperatorSchema);
     }
 
@@ -96,7 +96,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param newFilterOperatorSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback) {
+    public void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.POST, callback, newFilterOperatorSchema);
     }
 
@@ -117,7 +117,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param newFilterOperatorSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback) {
+    public void put(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.PUT, callback, newFilterOperatorSchema);
     }
 
@@ -151,17 +151,6 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      */
      public IFilterOperatorSchemaRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FilterOperatorSchemaRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IFilterOperatorSchemaRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (FilterOperatorSchemaRequest)this;
      }
 

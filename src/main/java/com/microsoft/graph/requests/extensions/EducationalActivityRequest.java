@@ -37,7 +37,7 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationalActivity> callback) {
+    public void get(final ICallback<? super EducationalActivity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationalActivity> callback) {
+    public void delete(final ICallback<? super EducationalActivity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
      * @param sourceEducationalActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationalActivity sourceEducationalActivity, final ICallback<EducationalActivity> callback) {
+    public void patch(final EducationalActivity sourceEducationalActivity, final ICallback<? super EducationalActivity> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationalActivity);
     }
 
@@ -96,7 +96,7 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
      * @param newEducationalActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback) {
+    public void post(final EducationalActivity newEducationalActivity, final ICallback<? super EducationalActivity> callback) {
         send(HttpMethod.POST, callback, newEducationalActivity);
     }
 
@@ -117,7 +117,7 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
      * @param newEducationalActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback) {
+    public void put(final EducationalActivity newEducationalActivity, final ICallback<? super EducationalActivity> callback) {
         send(HttpMethod.PUT, callback, newEducationalActivity);
     }
 
@@ -151,17 +151,6 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
      */
      public IEducationalActivityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationalActivityRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationalActivityRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationalActivityRequest)this;
      }
 

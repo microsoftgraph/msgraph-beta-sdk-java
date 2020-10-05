@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage> callback);
 
     IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage get() throws ClientException;
 

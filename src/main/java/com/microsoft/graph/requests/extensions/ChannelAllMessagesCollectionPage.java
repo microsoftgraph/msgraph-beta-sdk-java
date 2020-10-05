@@ -34,6 +34,6 @@ public class ChannelAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
      * @param builder The request builder for the next collection page
      */
     public ChannelAllMessagesCollectionPage(final ChannelAllMessagesCollectionResponse response, final IChannelAllMessagesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

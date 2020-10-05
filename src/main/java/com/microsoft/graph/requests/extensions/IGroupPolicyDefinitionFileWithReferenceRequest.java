@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGroupPolicyDefinitionFileWithReferenceRequest extends IHttpRequest {
 
-    void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final IJsonBackedObject payload, final ICallback<GroupPolicyDefinitionFile> callback);
+    void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final IJsonBackedObject payload, final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     GroupPolicyDefinitionFile post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<GroupPolicyDefinitionFile> callback);
+    void get(final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     GroupPolicyDefinitionFile get() throws ClientException;
 
-	void delete(final ICallback<GroupPolicyDefinitionFile> callback);
+	void delete(final ICallback<? super GroupPolicyDefinitionFile> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback);
+	void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback);
 
 	GroupPolicyDefinitionFile patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile) throws ClientException;
 

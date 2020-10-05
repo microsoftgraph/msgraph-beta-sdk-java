@@ -37,7 +37,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkApp> callback) {
+    public void get(final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkApp> callback) {
+    public void delete(final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param sourceAndroidForWorkApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkApp sourceAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback) {
+    public void patch(final AndroidForWorkApp sourceAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkApp);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param newAndroidForWorkApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback) {
+    public void post(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkApp);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param newAndroidForWorkApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback) {
+    public void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkApp);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      */
      public IAndroidForWorkAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkAppRequest)this;
      }
 

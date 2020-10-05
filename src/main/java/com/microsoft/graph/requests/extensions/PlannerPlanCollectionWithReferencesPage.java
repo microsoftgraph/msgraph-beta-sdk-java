@@ -35,6 +35,6 @@ public class PlannerPlanCollectionWithReferencesPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public PlannerPlanCollectionWithReferencesPage(final PlannerPlanCollectionResponse response, final IPlannerPlanCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

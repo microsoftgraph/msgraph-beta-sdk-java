@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMdmWindowsInformationProtectionPolicyCollectionPage> callback);
+    void get(final ICallback<? super IMdmWindowsInformationProtectionPolicyCollectionPage> callback);
 
     IMdmWindowsInformationProtectionPolicyCollectionPage get() throws ClientException;
 
-    void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     MdmWindowsInformationProtectionPolicy post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends
      * @return the updated request
      */
     IMdmWindowsInformationProtectionPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMdmWindowsInformationProtectionPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends
      *
 	 * @return the updated request
 	 */
-	IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(String skipToken);
+	IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken);
 }

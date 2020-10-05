@@ -43,7 +43,7 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagementConditionStatement> callback) {
+    public void get(final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagementConditionStatement> callback) {
+    public void delete(final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
      * @param sourceManagementConditionStatement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagementConditionStatement sourceManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
+    public void patch(final ManagementConditionStatement sourceManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.PATCH, callback, sourceManagementConditionStatement);
     }
 
@@ -102,7 +102,7 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
      * @param newManagementConditionStatement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
+    public void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.POST, callback, newManagementConditionStatement);
     }
 
@@ -123,7 +123,7 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
      * @param newManagementConditionStatement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
+    public void put(final ManagementConditionStatement newManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.PUT, callback, newManagementConditionStatement);
     }
 
@@ -157,17 +157,6 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
      */
      public IManagementConditionStatementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagementConditionStatementRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IManagementConditionStatementRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagementConditionStatementRequest)this;
      }
 

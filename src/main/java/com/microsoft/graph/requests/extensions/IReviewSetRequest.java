@@ -21,7 +21,7 @@ public interface IReviewSetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ReviewSet> callback);
+    void get(final ICallback<? super ReviewSet> callback);
 
     /**
      * Gets the ReviewSet from the service
@@ -36,7 +36,7 @@ public interface IReviewSetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ReviewSet> callback);
+    void delete(final ICallback<? super ReviewSet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IReviewSetRequest extends IHttpRequest {
      * @param sourceReviewSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ReviewSet sourceReviewSet, final ICallback<ReviewSet> callback);
+    void patch(final ReviewSet sourceReviewSet, final ICallback<? super ReviewSet> callback);
 
     /**
      * Patches this ReviewSet with a source
@@ -68,7 +68,7 @@ public interface IReviewSetRequest extends IHttpRequest {
      * @param newReviewSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ReviewSet newReviewSet, final ICallback<ReviewSet> callback);
+    void post(final ReviewSet newReviewSet, final ICallback<? super ReviewSet> callback);
 
     /**
      * Posts a ReviewSet with a new object
@@ -85,7 +85,7 @@ public interface IReviewSetRequest extends IHttpRequest {
      * @param newReviewSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ReviewSet newReviewSet, final ICallback<ReviewSet> callback);
+    void put(final ReviewSet newReviewSet, final ICallback<? super ReviewSet> callback);
 
     /**
      * Posts a ReviewSet with a new object

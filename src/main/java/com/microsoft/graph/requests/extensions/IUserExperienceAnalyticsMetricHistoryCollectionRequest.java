@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsMetricHistoryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsMetricHistoryCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsMetricHistoryCollectionPage> callback);
 
     IUserExperienceAnalyticsMetricHistoryCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsMetricHistory newUserExperienceAnalyticsMetricHistory, final ICallback<UserExperienceAnalyticsMetricHistory> callback);
+    void post(final UserExperienceAnalyticsMetricHistory newUserExperienceAnalyticsMetricHistory, final ICallback<? super UserExperienceAnalyticsMetricHistory> callback);
 
     UserExperienceAnalyticsMetricHistory post(final UserExperienceAnalyticsMetricHistory newUserExperienceAnalyticsMetricHistory) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsMetricHistoryCollectionRequest extends 
      * @return the updated request
      */
     IUserExperienceAnalyticsMetricHistoryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsMetricHistoryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsMetricHistoryCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsMetricHistoryCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsMetricHistoryCollectionRequest skipToken(final String skipToken);
 }

@@ -23,6 +23,6 @@ public class DeviceConfigurationConflictSummaryCollectionPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public DeviceConfigurationConflictSummaryCollectionPage(final DeviceConfigurationConflictSummaryCollectionResponse response, final IDeviceConfigurationConflictSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

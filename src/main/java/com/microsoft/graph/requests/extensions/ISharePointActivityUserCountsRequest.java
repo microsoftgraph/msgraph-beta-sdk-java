@@ -21,7 +21,7 @@ public interface ISharePointActivityUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointActivityUserCounts> callback);
+    void get(final ICallback<? super SharePointActivityUserCounts> callback);
 
     /**
      * Gets the SharePointActivityUserCounts from the service
@@ -36,7 +36,7 @@ public interface ISharePointActivityUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointActivityUserCounts> callback);
+    void delete(final ICallback<? super SharePointActivityUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointActivityUserCountsRequest extends IHttpRequest {
      * @param sourceSharePointActivityUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointActivityUserCounts sourceSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback);
+    void patch(final SharePointActivityUserCounts sourceSharePointActivityUserCounts, final ICallback<? super SharePointActivityUserCounts> callback);
 
     /**
      * Patches this SharePointActivityUserCounts with a source
@@ -68,7 +68,7 @@ public interface ISharePointActivityUserCountsRequest extends IHttpRequest {
      * @param newSharePointActivityUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback);
+    void post(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<? super SharePointActivityUserCounts> callback);
 
     /**
      * Posts a SharePointActivityUserCounts with a new object
@@ -85,7 +85,7 @@ public interface ISharePointActivityUserCountsRequest extends IHttpRequest {
      * @param newSharePointActivityUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback);
+    void put(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<? super SharePointActivityUserCounts> callback);
 
     /**
      * Posts a SharePointActivityUserCounts with a new object

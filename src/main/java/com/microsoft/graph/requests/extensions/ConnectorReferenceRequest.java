@@ -38,7 +38,7 @@ public class ConnectorReferenceRequest extends BaseRequest implements IConnector
         super(requestUrl, client, requestOptions, Connector.class);
     }
 
-    public void delete(final ICallback<Connector> callback) {
+    public void delete(final ICallback<? super Connector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class ConnectorReferenceRequest extends BaseRequest implements IConnector
         return (ConnectorReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IConnectorReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConnectorReferenceRequest)this;
-    }
-    /**
      * Puts the Connector
      *
      * @param srcConnector the Connector reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Connector srcConnector, final ICallback<Connector> callback) {
+    public void put(Connector srcConnector, final ICallback<? super Connector> callback) {
         send(HttpMethod.PUT, callback, srcConnector);
     }
 

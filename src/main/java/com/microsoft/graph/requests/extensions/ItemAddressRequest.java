@@ -37,7 +37,7 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemAddress> callback) {
+    public void get(final ICallback<? super ItemAddress> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemAddress> callback) {
+    public void delete(final ICallback<? super ItemAddress> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
      * @param sourceItemAddress the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemAddress sourceItemAddress, final ICallback<ItemAddress> callback) {
+    public void patch(final ItemAddress sourceItemAddress, final ICallback<? super ItemAddress> callback) {
         send(HttpMethod.PATCH, callback, sourceItemAddress);
     }
 
@@ -96,7 +96,7 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
      * @param newItemAddress the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemAddress newItemAddress, final ICallback<ItemAddress> callback) {
+    public void post(final ItemAddress newItemAddress, final ICallback<? super ItemAddress> callback) {
         send(HttpMethod.POST, callback, newItemAddress);
     }
 
@@ -117,7 +117,7 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
      * @param newItemAddress the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemAddress newItemAddress, final ICallback<ItemAddress> callback) {
+    public void put(final ItemAddress newItemAddress, final ICallback<? super ItemAddress> callback) {
         send(HttpMethod.PUT, callback, newItemAddress);
     }
 
@@ -151,17 +151,6 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
      */
      public IItemAddressRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemAddressRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemAddressRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemAddressRequest)this;
      }
 

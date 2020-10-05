@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetYammerDeviceUsageUserCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetYammerDeviceUsageUserCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetYammerDeviceUsageUserCountsCollectionPage> callback);
 
     IReportRootGetYammerDeviceUsageUserCountsCollectionPage get() throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IDepMacOSEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DepMacOSEnrollmentProfile> callback);
+    void get(final ICallback<? super DepMacOSEnrollmentProfile> callback);
 
     /**
      * Gets the DepMacOSEnrollmentProfile from the service
@@ -36,7 +36,7 @@ public interface IDepMacOSEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DepMacOSEnrollmentProfile> callback);
+    void delete(final ICallback<? super DepMacOSEnrollmentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDepMacOSEnrollmentProfileRequest extends IHttpRequest {
      * @param sourceDepMacOSEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback);
+    void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback);
 
     /**
      * Patches this DepMacOSEnrollmentProfile with a source
@@ -68,7 +68,7 @@ public interface IDepMacOSEnrollmentProfileRequest extends IHttpRequest {
      * @param newDepMacOSEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback);
+    void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback);
 
     /**
      * Posts a DepMacOSEnrollmentProfile with a new object
@@ -85,7 +85,7 @@ public interface IDepMacOSEnrollmentProfileRequest extends IHttpRequest {
      * @param newDepMacOSEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback);
+    void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback);
 
     /**
      * Posts a DepMacOSEnrollmentProfile with a new object

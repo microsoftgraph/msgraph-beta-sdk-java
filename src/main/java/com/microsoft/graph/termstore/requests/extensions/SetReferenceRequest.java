@@ -44,7 +44,7 @@ public class SetReferenceRequest extends BaseRequest implements ISetReferenceReq
         super(requestUrl, client, requestOptions, Set.class);
     }
 
-    public void delete(final ICallback<Set> callback) {
+    public void delete(final ICallback<? super Set> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -74,22 +74,12 @@ public class SetReferenceRequest extends BaseRequest implements ISetReferenceReq
         return (SetReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISetReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SetReferenceRequest)this;
-    }
-    /**
      * Puts the Set
      *
      * @param srcSet the Set reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Set srcSet, final ICallback<Set> callback) {
+    public void put(Set srcSet, final ICallback<? super Set> callback) {
         send(HttpMethod.PUT, callback, srcSet);
     }
 

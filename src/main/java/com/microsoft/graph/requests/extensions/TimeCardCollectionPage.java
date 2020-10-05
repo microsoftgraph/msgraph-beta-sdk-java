@@ -23,6 +23,6 @@ public class TimeCardCollectionPage extends BaseCollectionPage<TimeCard, ITimeCa
      * @param builder  the request builder for the next collection page
      */
     public TimeCardCollectionPage(final TimeCardCollectionResponse response, final ITimeCardCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

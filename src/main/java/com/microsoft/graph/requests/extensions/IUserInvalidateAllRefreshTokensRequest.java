@@ -25,7 +25,7 @@ public interface IUserInvalidateAllRefreshTokensRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<Boolean> callback);
+    void post(final ICallback<? super Boolean> callback);
 
     /**
      * Creates the UserInvalidateAllRefreshTokens

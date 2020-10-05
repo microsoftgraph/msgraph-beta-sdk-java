@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IIosTrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<IosTrustedRootCertificate> callback);
+    void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super IosTrustedRootCertificate> callback);
 
     IosTrustedRootCertificate post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<IosTrustedRootCertificate> callback);
+    void get(final ICallback<? super IosTrustedRootCertificate> callback);
 
     IosTrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<IosTrustedRootCertificate> callback);
+	void delete(final ICallback<? super IosTrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+	void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback);
 
 	IosTrustedRootCertificate patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate) throws ClientException;
 

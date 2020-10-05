@@ -21,7 +21,7 @@ public interface IAndroidForWorkTrustedRootCertificateRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void get(final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     /**
      * Gets the AndroidForWorkTrustedRootCertificate from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkTrustedRootCertificateRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void delete(final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkTrustedRootCertificateRequest extends IHttpReque
      * @param sourceAndroidForWorkTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate, final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     /**
      * Patches this AndroidForWorkTrustedRootCertificate with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkTrustedRootCertificateRequest extends IHttpReque
      * @param newAndroidForWorkTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     /**
      * Posts a AndroidForWorkTrustedRootCertificate with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkTrustedRootCertificateRequest extends IHttpReque
      * @param newAndroidForWorkTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void put(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     /**
      * Posts a AndroidForWorkTrustedRootCertificate with a new object

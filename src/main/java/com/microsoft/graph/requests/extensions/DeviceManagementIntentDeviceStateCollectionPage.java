@@ -23,6 +23,6 @@ public class DeviceManagementIntentDeviceStateCollectionPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementIntentDeviceStateCollectionPage(final DeviceManagementIntentDeviceStateCollectionResponse response, final IDeviceManagementIntentDeviceStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

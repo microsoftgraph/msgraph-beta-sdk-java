@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOrgContactCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOrgContactCollectionPage> callback);
+    void get(final ICallback<? super IOrgContactCollectionPage> callback);
 
     IOrgContactCollectionPage get() throws ClientException;
 
-    void post(final OrgContact newOrgContact, final ICallback<OrgContact> callback);
+    void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback);
 
     OrgContact post(final OrgContact newOrgContact) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IOrgContactCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOrgContactCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOrgContactCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IOrgContactCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOrgContactCollectionRequest skipToken(String skipToken);
+	IOrgContactCollectionRequest skipToken(final String skipToken);
 }

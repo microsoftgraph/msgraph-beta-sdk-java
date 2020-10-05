@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
 import com.microsoft.graph.models.generated.EapFastConfiguration;
@@ -16,7 +15,6 @@ import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSe
 import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.models.extensions.IosTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.IosWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionPage;
 
 
@@ -161,19 +159,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            final IosTrustedRootCertificateCollectionResponse response = new IosTrustedRootCertificateCollectionResponse();
-            if (json.has("rootCertificatesForServerValidation@odata.nextLink")) {
-                response.nextLink = json.get("rootCertificatesForServerValidation@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("rootCertificatesForServerValidation").toString(), JsonObject[].class);
-            final IosTrustedRootCertificate[] array = new IosTrustedRootCertificate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosTrustedRootCertificate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            rootCertificatesForServerValidation = new IosTrustedRootCertificateCollectionPage(response, null);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation").toString(), IosTrustedRootCertificateCollectionPage.class);
         }
     }
 }

@@ -37,7 +37,7 @@ public class PrivilegedRoleAssignmentMakePermanentRequest extends BaseRequest im
         body = new PrivilegedRoleAssignmentMakePermanentBody();
     }
 
-    public void post(final ICallback<PrivilegedRoleAssignment> callback) {
+    public void post(final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class PrivilegedRoleAssignmentMakePermanentRequest extends BaseRequest im
      */
     public IPrivilegedRoleAssignmentMakePermanentRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleAssignmentMakePermanentRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleAssignmentMakePermanentRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrivilegedRoleAssignmentMakePermanentRequest)this;
     }
 

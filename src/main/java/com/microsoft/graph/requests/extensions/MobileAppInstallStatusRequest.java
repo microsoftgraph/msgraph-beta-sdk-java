@@ -39,7 +39,7 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppInstallStatus> callback) {
+    public void get(final ICallback<? super MobileAppInstallStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppInstallStatus> callback) {
+    public void delete(final ICallback<? super MobileAppInstallStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
      * @param sourceMobileAppInstallStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppInstallStatus sourceMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback) {
+    public void patch(final MobileAppInstallStatus sourceMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppInstallStatus);
     }
 
@@ -98,7 +98,7 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
      * @param newMobileAppInstallStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback) {
+    public void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback) {
         send(HttpMethod.POST, callback, newMobileAppInstallStatus);
     }
 
@@ -119,7 +119,7 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
      * @param newMobileAppInstallStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback) {
+    public void put(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback) {
         send(HttpMethod.PUT, callback, newMobileAppInstallStatus);
     }
 
@@ -153,17 +153,6 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
      */
      public IMobileAppInstallStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppInstallStatusRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppInstallStatusRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppInstallStatusRequest)this;
      }
 

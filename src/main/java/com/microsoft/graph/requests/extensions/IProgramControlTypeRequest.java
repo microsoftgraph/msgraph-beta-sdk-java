@@ -21,7 +21,7 @@ public interface IProgramControlTypeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProgramControlType> callback);
+    void get(final ICallback<? super ProgramControlType> callback);
 
     /**
      * Gets the ProgramControlType from the service
@@ -36,7 +36,7 @@ public interface IProgramControlTypeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProgramControlType> callback);
+    void delete(final ICallback<? super ProgramControlType> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProgramControlTypeRequest extends IHttpRequest {
      * @param sourceProgramControlType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProgramControlType sourceProgramControlType, final ICallback<ProgramControlType> callback);
+    void patch(final ProgramControlType sourceProgramControlType, final ICallback<? super ProgramControlType> callback);
 
     /**
      * Patches this ProgramControlType with a source
@@ -68,7 +68,7 @@ public interface IProgramControlTypeRequest extends IHttpRequest {
      * @param newProgramControlType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback);
+    void post(final ProgramControlType newProgramControlType, final ICallback<? super ProgramControlType> callback);
 
     /**
      * Posts a ProgramControlType with a new object
@@ -85,7 +85,7 @@ public interface IProgramControlTypeRequest extends IHttpRequest {
      * @param newProgramControlType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback);
+    void put(final ProgramControlType newProgramControlType, final ICallback<? super ProgramControlType> callback);
 
     /**
      * Posts a ProgramControlType with a new object

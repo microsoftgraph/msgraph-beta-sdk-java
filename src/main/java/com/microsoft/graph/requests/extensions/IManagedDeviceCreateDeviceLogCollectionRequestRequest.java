@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceCreateDeviceLogCollectionRequestRequest extends IHttpRequest {
 
-    void post(final ICallback<DeviceLogCollectionResponse> callback);
+    void post(final ICallback<? super DeviceLogCollectionResponse> callback);
 
     DeviceLogCollectionResponse post() throws ClientException;
 

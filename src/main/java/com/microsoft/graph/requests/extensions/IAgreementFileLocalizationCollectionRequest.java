@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAgreementFileLocalizationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAgreementFileLocalizationCollectionPage> callback);
+    void get(final ICallback<? super IAgreementFileLocalizationCollectionPage> callback);
 
     IAgreementFileLocalizationCollectionPage get() throws ClientException;
 
-    void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback);
+    void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback);
 
     AgreementFileLocalization post(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAgreementFileLocalizationCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IAgreementFileLocalizationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAgreementFileLocalizationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAgreementFileLocalizationCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IAgreementFileLocalizationCollectionRequest skipToken(String skipToken);
+	IAgreementFileLocalizationCollectionRequest skipToken(final String skipToken);
 }

@@ -40,7 +40,7 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
         super(requestUrl, client, requestOptions, TodoTaskListCollectionResponse.class, ITodoTaskListCollectionPage.class);
     }
 
-    public void get(final ICallback<ITodoTaskListCollectionPage> callback) {
+    public void get(final ICallback<? super ITodoTaskListCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
         return buildFromResponse(response);
     }
 
-    public void post(final TodoTaskList newTodoTaskList, final ICallback<TodoTaskList> callback) {
+    public void post(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TodoTaskListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      */
     public ITodoTaskListCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TodoTaskListCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITodoTaskListCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TodoTaskListCollectionRequest)this;
     }
 

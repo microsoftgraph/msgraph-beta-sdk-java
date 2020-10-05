@@ -36,7 +36,7 @@ public class GroupPolicyDefinitionCollectionReferenceRequest extends BaseCollect
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionCollectionResponse.class, IGroupPolicyDefinitionCollectionPage.class);
     }
 
-    public void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback) {
+    public void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/definitions/" + newGroupPolicyDefinition.id);
         new GroupPolicyDefinitionWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class GroupPolicyDefinitionCollectionReferenceRequest extends BaseCollect
      */
     public IGroupPolicyDefinitionCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyDefinitionCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicyDefinitionCollectionReferenceRequest)this;
     }
 

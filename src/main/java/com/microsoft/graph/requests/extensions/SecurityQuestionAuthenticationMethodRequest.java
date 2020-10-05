@@ -37,7 +37,7 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+    public void get(final ICallback<? super SecurityQuestionAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+    public void delete(final ICallback<? super SecurityQuestionAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
      * @param sourceSecurityQuestionAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityQuestionAuthenticationMethod sourceSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+    public void patch(final SecurityQuestionAuthenticationMethod sourceSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityQuestionAuthenticationMethod);
     }
 
@@ -96,7 +96,7 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
      * @param newSecurityQuestionAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+    public void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newSecurityQuestionAuthenticationMethod);
     }
 
@@ -117,7 +117,7 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
      * @param newSecurityQuestionAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+    public void put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newSecurityQuestionAuthenticationMethod);
     }
 
@@ -151,17 +151,6 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
      */
      public ISecurityQuestionAuthenticationMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityQuestionAuthenticationMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISecurityQuestionAuthenticationMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SecurityQuestionAuthenticationMethodRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IAgreementFileLocalizationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AgreementFileLocalization> callback);
+    void get(final ICallback<? super AgreementFileLocalization> callback);
 
     /**
      * Gets the AgreementFileLocalization from the service
@@ -36,7 +36,7 @@ public interface IAgreementFileLocalizationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AgreementFileLocalization> callback);
+    void delete(final ICallback<? super AgreementFileLocalization> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgreementFileLocalizationRequest extends IHttpRequest {
      * @param sourceAgreementFileLocalization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AgreementFileLocalization sourceAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback);
+    void patch(final AgreementFileLocalization sourceAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback);
 
     /**
      * Patches this AgreementFileLocalization with a source
@@ -68,7 +68,7 @@ public interface IAgreementFileLocalizationRequest extends IHttpRequest {
      * @param newAgreementFileLocalization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback);
+    void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback);
 
     /**
      * Posts a AgreementFileLocalization with a new object
@@ -85,7 +85,7 @@ public interface IAgreementFileLocalizationRequest extends IHttpRequest {
      * @param newAgreementFileLocalization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback);
+    void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback);
 
     /**
      * Posts a AgreementFileLocalization with a new object

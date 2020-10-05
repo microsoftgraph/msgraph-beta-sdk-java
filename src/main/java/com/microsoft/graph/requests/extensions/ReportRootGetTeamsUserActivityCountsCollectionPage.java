@@ -34,6 +34,6 @@ public class ReportRootGetTeamsUserActivityCountsCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetTeamsUserActivityCountsCollectionPage(final ReportRootGetTeamsUserActivityCountsCollectionResponse response, final IReportRootGetTeamsUserActivityCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

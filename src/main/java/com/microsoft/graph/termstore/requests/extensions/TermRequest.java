@@ -47,7 +47,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Term> callback) {
+    public void get(final ICallback<? super Term> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Term> callback) {
+    public void delete(final ICallback<? super Term> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param sourceTerm the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Term sourceTerm, final ICallback<Term> callback) {
+    public void patch(final Term sourceTerm, final ICallback<? super Term> callback) {
         send(HttpMethod.PATCH, callback, sourceTerm);
     }
 
@@ -106,7 +106,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param newTerm the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Term newTerm, final ICallback<Term> callback) {
+    public void post(final Term newTerm, final ICallback<? super Term> callback) {
         send(HttpMethod.POST, callback, newTerm);
     }
 
@@ -127,7 +127,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param newTerm the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Term newTerm, final ICallback<Term> callback) {
+    public void put(final Term newTerm, final ICallback<? super Term> callback) {
         send(HttpMethod.PUT, callback, newTerm);
     }
 
@@ -161,17 +161,6 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      */
      public ITermRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITermRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TermRequest)this;
      }
 

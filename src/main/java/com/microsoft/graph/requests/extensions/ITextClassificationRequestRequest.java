@@ -21,7 +21,7 @@ public interface ITextClassificationRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TextClassificationRequest> callback);
+    void get(final ICallback<? super TextClassificationRequest> callback);
 
     /**
      * Gets the TextClassificationRequest from the service
@@ -36,7 +36,7 @@ public interface ITextClassificationRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TextClassificationRequest> callback);
+    void delete(final ICallback<? super TextClassificationRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITextClassificationRequestRequest extends IHttpRequest {
      * @param sourceTextClassificationRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TextClassificationRequest sourceTextClassificationRequest, final ICallback<TextClassificationRequest> callback);
+    void patch(final TextClassificationRequest sourceTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback);
 
     /**
      * Patches this TextClassificationRequest with a source
@@ -68,7 +68,7 @@ public interface ITextClassificationRequestRequest extends IHttpRequest {
      * @param newTextClassificationRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<TextClassificationRequest> callback);
+    void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback);
 
     /**
      * Posts a TextClassificationRequest with a new object
@@ -85,7 +85,7 @@ public interface ITextClassificationRequestRequest extends IHttpRequest {
      * @param newTextClassificationRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TextClassificationRequest newTextClassificationRequest, final ICallback<TextClassificationRequest> callback);
+    void put(final TextClassificationRequest newTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback);
 
     /**
      * Posts a TextClassificationRequest with a new object

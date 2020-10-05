@@ -21,7 +21,7 @@ public interface IEmailAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailAuthenticationMethod> callback);
+    void get(final ICallback<? super EmailAuthenticationMethod> callback);
 
     /**
      * Gets the EmailAuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface IEmailAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailAuthenticationMethod> callback);
+    void delete(final ICallback<? super EmailAuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailAuthenticationMethodRequest extends IHttpRequest {
      * @param sourceEmailAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailAuthenticationMethod sourceEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback);
+    void patch(final EmailAuthenticationMethod sourceEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback);
 
     /**
      * Patches this EmailAuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface IEmailAuthenticationMethodRequest extends IHttpRequest {
      * @param newEmailAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback);
+    void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback);
 
     /**
      * Posts a EmailAuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface IEmailAuthenticationMethodRequest extends IHttpRequest {
      * @param newEmailAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback);
+    void put(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback);
 
     /**
      * Posts a EmailAuthenticationMethod with a new object

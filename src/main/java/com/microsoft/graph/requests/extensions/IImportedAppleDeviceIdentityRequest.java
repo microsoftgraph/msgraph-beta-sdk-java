@@ -21,7 +21,7 @@ public interface IImportedAppleDeviceIdentityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ImportedAppleDeviceIdentity> callback);
+    void get(final ICallback<? super ImportedAppleDeviceIdentity> callback);
 
     /**
      * Gets the ImportedAppleDeviceIdentity from the service
@@ -36,7 +36,7 @@ public interface IImportedAppleDeviceIdentityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ImportedAppleDeviceIdentity> callback);
+    void delete(final ICallback<? super ImportedAppleDeviceIdentity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IImportedAppleDeviceIdentityRequest extends IHttpRequest {
      * @param sourceImportedAppleDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ImportedAppleDeviceIdentity sourceImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback);
+    void patch(final ImportedAppleDeviceIdentity sourceImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback);
 
     /**
      * Patches this ImportedAppleDeviceIdentity with a source
@@ -68,7 +68,7 @@ public interface IImportedAppleDeviceIdentityRequest extends IHttpRequest {
      * @param newImportedAppleDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback);
+    void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback);
 
     /**
      * Posts a ImportedAppleDeviceIdentity with a new object
@@ -85,7 +85,7 @@ public interface IImportedAppleDeviceIdentityRequest extends IHttpRequest {
      * @param newImportedAppleDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback);
+    void put(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback);
 
     /**
      * Posts a ImportedAppleDeviceIdentity with a new object

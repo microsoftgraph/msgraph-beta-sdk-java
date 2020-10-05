@@ -21,7 +21,7 @@ public interface ISecurityActionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityAction> callback);
+    void get(final ICallback<? super SecurityAction> callback);
 
     /**
      * Gets the SecurityAction from the service
@@ -36,7 +36,7 @@ public interface ISecurityActionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityAction> callback);
+    void delete(final ICallback<? super SecurityAction> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityActionRequest extends IHttpRequest {
      * @param sourceSecurityAction the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityAction sourceSecurityAction, final ICallback<SecurityAction> callback);
+    void patch(final SecurityAction sourceSecurityAction, final ICallback<? super SecurityAction> callback);
 
     /**
      * Patches this SecurityAction with a source
@@ -68,7 +68,7 @@ public interface ISecurityActionRequest extends IHttpRequest {
      * @param newSecurityAction the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback);
+    void post(final SecurityAction newSecurityAction, final ICallback<? super SecurityAction> callback);
 
     /**
      * Posts a SecurityAction with a new object
@@ -85,7 +85,7 @@ public interface ISecurityActionRequest extends IHttpRequest {
      * @param newSecurityAction the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback);
+    void put(final SecurityAction newSecurityAction, final ICallback<? super SecurityAction> callback);
 
     /**
      * Posts a SecurityAction with a new object

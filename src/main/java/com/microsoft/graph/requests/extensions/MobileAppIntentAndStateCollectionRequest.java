@@ -40,7 +40,7 @@ public class MobileAppIntentAndStateCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, MobileAppIntentAndStateCollectionResponse.class, IMobileAppIntentAndStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppIntentAndStateCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppIntentAndStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppIntentAndStateCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback) {
+    public void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppIntentAndStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MobileAppIntentAndStateCollectionRequest extends BaseCollectionRequ
      */
     public IMobileAppIntentAndStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppIntentAndStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppIntentAndStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppIntentAndStateCollectionRequest)this;
     }
 

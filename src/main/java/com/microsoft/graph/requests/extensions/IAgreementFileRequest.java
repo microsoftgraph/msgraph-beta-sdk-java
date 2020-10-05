@@ -21,7 +21,7 @@ public interface IAgreementFileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AgreementFile> callback);
+    void get(final ICallback<? super AgreementFile> callback);
 
     /**
      * Gets the AgreementFile from the service
@@ -36,7 +36,7 @@ public interface IAgreementFileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AgreementFile> callback);
+    void delete(final ICallback<? super AgreementFile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgreementFileRequest extends IHttpRequest {
      * @param sourceAgreementFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AgreementFile sourceAgreementFile, final ICallback<AgreementFile> callback);
+    void patch(final AgreementFile sourceAgreementFile, final ICallback<? super AgreementFile> callback);
 
     /**
      * Patches this AgreementFile with a source
@@ -68,7 +68,7 @@ public interface IAgreementFileRequest extends IHttpRequest {
      * @param newAgreementFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AgreementFile newAgreementFile, final ICallback<AgreementFile> callback);
+    void post(final AgreementFile newAgreementFile, final ICallback<? super AgreementFile> callback);
 
     /**
      * Posts a AgreementFile with a new object
@@ -85,7 +85,7 @@ public interface IAgreementFileRequest extends IHttpRequest {
      * @param newAgreementFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AgreementFile newAgreementFile, final ICallback<AgreementFile> callback);
+    void put(final AgreementFile newAgreementFile, final ICallback<? super AgreementFile> callback);
 
     /**
      * Posts a AgreementFile with a new object

@@ -21,7 +21,7 @@ public interface IEducationSubmissionResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationSubmissionResource> callback);
+    void get(final ICallback<? super EducationSubmissionResource> callback);
 
     /**
      * Gets the EducationSubmissionResource from the service
@@ -36,7 +36,7 @@ public interface IEducationSubmissionResourceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationSubmissionResource> callback);
+    void delete(final ICallback<? super EducationSubmissionResource> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationSubmissionResourceRequest extends IHttpRequest {
      * @param sourceEducationSubmissionResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationSubmissionResource sourceEducationSubmissionResource, final ICallback<EducationSubmissionResource> callback);
+    void patch(final EducationSubmissionResource sourceEducationSubmissionResource, final ICallback<? super EducationSubmissionResource> callback);
 
     /**
      * Patches this EducationSubmissionResource with a source
@@ -68,7 +68,7 @@ public interface IEducationSubmissionResourceRequest extends IHttpRequest {
      * @param newEducationSubmissionResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<EducationSubmissionResource> callback);
+    void post(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<? super EducationSubmissionResource> callback);
 
     /**
      * Posts a EducationSubmissionResource with a new object
@@ -85,7 +85,7 @@ public interface IEducationSubmissionResourceRequest extends IHttpRequest {
      * @param newEducationSubmissionResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<EducationSubmissionResource> callback);
+    void put(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<? super EducationSubmissionResource> callback);
 
     /**
      * Posts a EducationSubmissionResource with a new object

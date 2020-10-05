@@ -37,7 +37,7 @@ public class ManagedEBookCategoryRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedEBookCategory> callback) {
+    public void get(final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedEBookCategoryRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedEBookCategory> callback) {
+    public void delete(final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedEBookCategoryRequest extends BaseRequest implements IManaged
      * @param sourceManagedEBookCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
+    public void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedEBookCategory);
     }
 
@@ -96,7 +96,7 @@ public class ManagedEBookCategoryRequest extends BaseRequest implements IManaged
      * @param newManagedEBookCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
+    public void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.POST, callback, newManagedEBookCategory);
     }
 
@@ -117,7 +117,7 @@ public class ManagedEBookCategoryRequest extends BaseRequest implements IManaged
      * @param newManagedEBookCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
+    public void put(final ManagedEBookCategory newManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.PUT, callback, newManagedEBookCategory);
     }
 
@@ -151,17 +151,6 @@ public class ManagedEBookCategoryRequest extends BaseRequest implements IManaged
      */
      public IManagedEBookCategoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedEBookCategoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IManagedEBookCategoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedEBookCategoryRequest)this;
      }
 

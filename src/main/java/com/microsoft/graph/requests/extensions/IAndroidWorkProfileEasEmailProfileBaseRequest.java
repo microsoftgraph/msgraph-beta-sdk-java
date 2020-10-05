@@ -21,7 +21,7 @@ public interface IAndroidWorkProfileEasEmailProfileBaseRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidWorkProfileEasEmailProfileBase> callback);
+    void get(final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback);
 
     /**
      * Gets the AndroidWorkProfileEasEmailProfileBase from the service
@@ -36,7 +36,7 @@ public interface IAndroidWorkProfileEasEmailProfileBaseRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidWorkProfileEasEmailProfileBase> callback);
+    void delete(final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidWorkProfileEasEmailProfileBaseRequest extends IHttpRequ
      * @param sourceAndroidWorkProfileEasEmailProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback);
+    void patch(final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback);
 
     /**
      * Patches this AndroidWorkProfileEasEmailProfileBase with a source
@@ -68,7 +68,7 @@ public interface IAndroidWorkProfileEasEmailProfileBaseRequest extends IHttpRequ
      * @param newAndroidWorkProfileEasEmailProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback);
+    void post(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback);
 
     /**
      * Posts a AndroidWorkProfileEasEmailProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IAndroidWorkProfileEasEmailProfileBaseRequest extends IHttpRequ
      * @param newAndroidWorkProfileEasEmailProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback);
+    void put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback);
 
     /**
      * Posts a AndroidWorkProfileEasEmailProfileBase with a new object

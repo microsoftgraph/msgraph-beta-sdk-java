@@ -23,6 +23,6 @@ public class AttributeMappingFunctionSchemaCollectionPage extends BaseCollection
      * @param builder  the request builder for the next collection page
      */
     public AttributeMappingFunctionSchemaCollectionPage(final AttributeMappingFunctionSchemaCollectionResponse response, final IAttributeMappingFunctionSchemaCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

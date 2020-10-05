@@ -45,7 +45,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IdentityProtectionRoot> callback) {
+    public void get(final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IdentityProtectionRoot> callback) {
+    public void delete(final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param sourceIdentityProtectionRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityProtectionRoot sourceIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback) {
+    public void patch(final IdentityProtectionRoot sourceIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityProtectionRoot);
     }
 
@@ -104,7 +104,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param newIdentityProtectionRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback) {
+    public void post(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.POST, callback, newIdentityProtectionRoot);
     }
 
@@ -125,7 +125,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param newIdentityProtectionRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback) {
+    public void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.PUT, callback, newIdentityProtectionRoot);
     }
 
@@ -159,17 +159,6 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      */
      public IIdentityProtectionRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityProtectionRootRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIdentityProtectionRootRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IdentityProtectionRootRequest)this;
      }
 

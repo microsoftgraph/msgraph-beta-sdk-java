@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPaymentTermCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPaymentTermCollectionPage> callback);
+    void get(final ICallback<? super IPaymentTermCollectionPage> callback);
 
     IPaymentTermCollectionPage get() throws ClientException;
 
-    void post(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback);
+    void post(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback);
 
     PaymentTerm post(final PaymentTerm newPaymentTerm) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPaymentTermCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPaymentTermCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPaymentTermCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPaymentTermCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPaymentTermCollectionRequest skipToken(String skipToken);
+	IPaymentTermCollectionRequest skipToken(final String skipToken);
 }

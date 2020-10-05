@@ -37,7 +37,7 @@ public class AndroidWorkProfileCertificateProfileBaseWithReferenceRequest extend
         super(requestUrl, client, requestOptions, AndroidWorkProfileCertificateProfileBase.class);
     }
 
-    public void post(final AndroidWorkProfileCertificateProfileBase newAndroidWorkProfileCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidWorkProfileCertificateProfileBase> callback) {
+    public void post(final AndroidWorkProfileCertificateProfileBase newAndroidWorkProfileCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -49,7 +49,7 @@ public class AndroidWorkProfileCertificateProfileBaseWithReferenceRequest extend
         return null;
     }
 
-    public void get(final ICallback<AndroidWorkProfileCertificateProfileBase> callback) {
+    public void get(final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class AndroidWorkProfileCertificateProfileBaseWithReferenceRequest extend
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidWorkProfileCertificateProfileBase> callback) {
+	public void delete(final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,7 +65,7 @@ public class AndroidWorkProfileCertificateProfileBaseWithReferenceRequest extend
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidWorkProfileCertificateProfileBase sourceAndroidWorkProfileCertificateProfileBase, final ICallback<AndroidWorkProfileCertificateProfileBase> callback) {
+	public void patch(final AndroidWorkProfileCertificateProfileBase sourceAndroidWorkProfileCertificateProfileBase, final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileCertificateProfileBase);
 	}
 
@@ -93,16 +93,6 @@ public class AndroidWorkProfileCertificateProfileBaseWithReferenceRequest extend
      */
     public IAndroidWorkProfileCertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidWorkProfileCertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidWorkProfileCertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidWorkProfileCertificateProfileBaseWithReferenceRequest)this;
     }
 }

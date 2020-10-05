@@ -21,7 +21,7 @@ public interface ITeamsDeviceUsageUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsDeviceUsageUserDetail> callback);
+    void get(final ICallback<? super TeamsDeviceUsageUserDetail> callback);
 
     /**
      * Gets the TeamsDeviceUsageUserDetail from the service
@@ -36,7 +36,7 @@ public interface ITeamsDeviceUsageUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsDeviceUsageUserDetail> callback);
+    void delete(final ICallback<? super TeamsDeviceUsageUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsDeviceUsageUserDetailRequest extends IHttpRequest {
      * @param sourceTeamsDeviceUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsDeviceUsageUserDetail sourceTeamsDeviceUsageUserDetail, final ICallback<TeamsDeviceUsageUserDetail> callback);
+    void patch(final TeamsDeviceUsageUserDetail sourceTeamsDeviceUsageUserDetail, final ICallback<? super TeamsDeviceUsageUserDetail> callback);
 
     /**
      * Patches this TeamsDeviceUsageUserDetail with a source
@@ -68,7 +68,7 @@ public interface ITeamsDeviceUsageUserDetailRequest extends IHttpRequest {
      * @param newTeamsDeviceUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<TeamsDeviceUsageUserDetail> callback);
+    void post(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<? super TeamsDeviceUsageUserDetail> callback);
 
     /**
      * Posts a TeamsDeviceUsageUserDetail with a new object
@@ -85,7 +85,7 @@ public interface ITeamsDeviceUsageUserDetailRequest extends IHttpRequest {
      * @param newTeamsDeviceUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<TeamsDeviceUsageUserDetail> callback);
+    void put(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<? super TeamsDeviceUsageUserDetail> callback);
 
     /**
      * Posts a TeamsDeviceUsageUserDetail with a new object

@@ -23,6 +23,6 @@ public class PresenceCollectionPage extends BaseCollectionPage<Presence, IPresen
      * @param builder  the request builder for the next collection page
      */
     public PresenceCollectionPage(final PresenceCollectionResponse response, final IPresenceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

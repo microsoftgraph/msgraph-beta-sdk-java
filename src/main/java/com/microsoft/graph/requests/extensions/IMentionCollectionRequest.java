@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMentionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMentionCollectionPage> callback);
+    void get(final ICallback<? super IMentionCollectionPage> callback);
 
     IMentionCollectionPage get() throws ClientException;
 
-    void post(final Mention newMention, final ICallback<Mention> callback);
+    void post(final Mention newMention, final ICallback<? super Mention> callback);
 
     Mention post(final Mention newMention) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMentionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IMentionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMentionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMentionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMentionCollectionRequest skipToken(String skipToken);
+	IMentionCollectionRequest skipToken(final String skipToken);
 }

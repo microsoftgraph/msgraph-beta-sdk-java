@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerCertificateProfileBaseRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     /**
      * Gets the AndroidDeviceOwnerCertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerCertificateProfileBaseRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerCertificateProfileBaseRequest extends IHttpR
      * @param sourceAndroidDeviceOwnerCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     /**
      * Patches this AndroidDeviceOwnerCertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerCertificateProfileBaseRequest extends IHttpR
      * @param newAndroidDeviceOwnerCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     /**
      * Posts a AndroidDeviceOwnerCertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerCertificateProfileBaseRequest extends IHttpR
      * @param newAndroidDeviceOwnerCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void put(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     /**
      * Posts a AndroidDeviceOwnerCertificateProfileBase with a new object

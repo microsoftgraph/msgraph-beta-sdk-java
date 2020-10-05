@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionReque
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse.class, IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage> callback) {
+    public void get(final ICallback<? super IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final UserExperienceAnalyticsAppHealthOSVersionPerformance newUserExperienceAnalyticsAppHealthOSVersionPerformance, final ICallback<UserExperienceAnalyticsAppHealthOSVersionPerformance> callback) {
+    public void post(final UserExperienceAnalyticsAppHealthOSVersionPerformance newUserExperienceAnalyticsAppHealthOSVersionPerformance, final ICallback<? super UserExperienceAnalyticsAppHealthOSVersionPerformance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionReque
      */
     public IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest)this;
     }
 

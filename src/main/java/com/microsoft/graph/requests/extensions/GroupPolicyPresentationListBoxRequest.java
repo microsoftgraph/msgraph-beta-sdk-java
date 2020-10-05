@@ -37,7 +37,7 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyPresentationListBox> callback) {
+    public void get(final ICallback<? super GroupPolicyPresentationListBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyPresentationListBox> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentationListBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
      * @param sourceGroupPolicyPresentationListBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationListBox sourceGroupPolicyPresentationListBox, final ICallback<GroupPolicyPresentationListBox> callback) {
+    public void patch(final GroupPolicyPresentationListBox sourceGroupPolicyPresentationListBox, final ICallback<? super GroupPolicyPresentationListBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationListBox);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
      * @param newGroupPolicyPresentationListBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationListBox newGroupPolicyPresentationListBox, final ICallback<GroupPolicyPresentationListBox> callback) {
+    public void post(final GroupPolicyPresentationListBox newGroupPolicyPresentationListBox, final ICallback<? super GroupPolicyPresentationListBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationListBox);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
      * @param newGroupPolicyPresentationListBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationListBox newGroupPolicyPresentationListBox, final ICallback<GroupPolicyPresentationListBox> callback) {
+    public void put(final GroupPolicyPresentationListBox newGroupPolicyPresentationListBox, final ICallback<? super GroupPolicyPresentationListBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationListBox);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
      */
      public IGroupPolicyPresentationListBoxRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationListBoxRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyPresentationListBoxRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyPresentationListBoxRequest)this;
      }
 

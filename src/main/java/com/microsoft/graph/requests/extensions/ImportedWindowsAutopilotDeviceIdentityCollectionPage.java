@@ -23,6 +23,6 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionPage extends BaseCo
      * @param builder  the request builder for the next collection page
      */
     public ImportedWindowsAutopilotDeviceIdentityCollectionPage(final ImportedWindowsAutopilotDeviceIdentityCollectionResponse response, final IImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

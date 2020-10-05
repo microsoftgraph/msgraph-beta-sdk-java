@@ -21,7 +21,7 @@ public interface IManagedEBookCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedEBookCategory> callback);
+    void get(final ICallback<? super ManagedEBookCategory> callback);
 
     /**
      * Gets the ManagedEBookCategory from the service
@@ -36,7 +36,7 @@ public interface IManagedEBookCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedEBookCategory> callback);
+    void delete(final ICallback<? super ManagedEBookCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedEBookCategoryRequest extends IHttpRequest {
      * @param sourceManagedEBookCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<ManagedEBookCategory> callback);
+    void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback);
 
     /**
      * Patches this ManagedEBookCategory with a source
@@ -68,7 +68,7 @@ public interface IManagedEBookCategoryRequest extends IHttpRequest {
      * @param newManagedEBookCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback);
+    void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback);
 
     /**
      * Posts a ManagedEBookCategory with a new object
@@ -85,7 +85,7 @@ public interface IManagedEBookCategoryRequest extends IHttpRequest {
      * @param newManagedEBookCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback);
+    void put(final ManagedEBookCategory newManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback);
 
     /**
      * Posts a ManagedEBookCategory with a new object

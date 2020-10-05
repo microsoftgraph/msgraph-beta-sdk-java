@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IItemPatentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IItemPatentCollectionPage> callback);
+    void get(final ICallback<? super IItemPatentCollectionPage> callback);
 
     IItemPatentCollectionPage get() throws ClientException;
 
-    void post(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback);
+    void post(final ItemPatent newItemPatent, final ICallback<? super ItemPatent> callback);
 
     ItemPatent post(final ItemPatent newItemPatent) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IItemPatentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IItemPatentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IItemPatentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IItemPatentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IItemPatentCollectionRequest skipToken(String skipToken);
+	IItemPatentCollectionRequest skipToken(final String skipToken);
 }

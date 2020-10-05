@@ -42,19 +42,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceConfigurationWithReferenceRequest extends IHttpRequest {
 
-    void post(final DeviceConfiguration newDeviceConfiguration, final IJsonBackedObject payload, final ICallback<DeviceConfiguration> callback);
+    void post(final DeviceConfiguration newDeviceConfiguration, final IJsonBackedObject payload, final ICallback<? super DeviceConfiguration> callback);
 
     DeviceConfiguration post(final DeviceConfiguration newDeviceConfiguration, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<DeviceConfiguration> callback);
+    void get(final ICallback<? super DeviceConfiguration> callback);
 
     DeviceConfiguration get() throws ClientException;
 
-	void delete(final ICallback<DeviceConfiguration> callback);
+	void delete(final ICallback<? super DeviceConfiguration> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<DeviceConfiguration> callback);
+	void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback);
 
 	DeviceConfiguration patch(final DeviceConfiguration sourceDeviceConfiguration) throws ClientException;
 

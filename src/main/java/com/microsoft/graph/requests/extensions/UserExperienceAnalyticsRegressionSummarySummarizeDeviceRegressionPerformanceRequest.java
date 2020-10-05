@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
      * @param srcUserExperienceAnalyticsRegressionSummary the UserExperienceAnalyticsRegressionSummary with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback) {
+    public void patch(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.PATCH, callback, srcUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
      * @param srcUserExperienceAnalyticsRegressionSummary the UserExperienceAnalyticsRegressionSummary to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback) {
+    public void put(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.PUT, callback, srcUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsRegressionSummary> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,6 +121,17 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
      */
     public IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest)this;
     }
 

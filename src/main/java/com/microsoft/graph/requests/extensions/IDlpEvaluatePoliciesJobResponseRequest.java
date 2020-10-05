@@ -21,7 +21,7 @@ public interface IDlpEvaluatePoliciesJobResponseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DlpEvaluatePoliciesJobResponse> callback);
+    void get(final ICallback<? super DlpEvaluatePoliciesJobResponse> callback);
 
     /**
      * Gets the DlpEvaluatePoliciesJobResponse from the service
@@ -36,7 +36,7 @@ public interface IDlpEvaluatePoliciesJobResponseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DlpEvaluatePoliciesJobResponse> callback);
+    void delete(final ICallback<? super DlpEvaluatePoliciesJobResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDlpEvaluatePoliciesJobResponseRequest extends IHttpRequest {
      * @param sourceDlpEvaluatePoliciesJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DlpEvaluatePoliciesJobResponse sourceDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback);
+    void patch(final DlpEvaluatePoliciesJobResponse sourceDlpEvaluatePoliciesJobResponse, final ICallback<? super DlpEvaluatePoliciesJobResponse> callback);
 
     /**
      * Patches this DlpEvaluatePoliciesJobResponse with a source
@@ -68,7 +68,7 @@ public interface IDlpEvaluatePoliciesJobResponseRequest extends IHttpRequest {
      * @param newDlpEvaluatePoliciesJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback);
+    void post(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<? super DlpEvaluatePoliciesJobResponse> callback);
 
     /**
      * Posts a DlpEvaluatePoliciesJobResponse with a new object
@@ -85,7 +85,7 @@ public interface IDlpEvaluatePoliciesJobResponseRequest extends IHttpRequest {
      * @param newDlpEvaluatePoliciesJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback);
+    void put(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<? super DlpEvaluatePoliciesJobResponse> callback);
 
     /**
      * Posts a DlpEvaluatePoliciesJobResponse with a new object

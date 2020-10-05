@@ -21,7 +21,7 @@ public interface IAccessReviewScheduleDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReviewScheduleDefinition> callback);
+    void get(final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     /**
      * Gets the AccessReviewScheduleDefinition from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewScheduleDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReviewScheduleDefinition> callback);
+    void delete(final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewScheduleDefinitionRequest extends IHttpRequest {
      * @param sourceAccessReviewScheduleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback);
+    void patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     /**
      * Patches this AccessReviewScheduleDefinition with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewScheduleDefinitionRequest extends IHttpRequest {
      * @param newAccessReviewScheduleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback);
+    void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     /**
      * Posts a AccessReviewScheduleDefinition with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewScheduleDefinitionRequest extends IHttpRequest {
      * @param newAccessReviewScheduleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback);
+    void put(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     /**
      * Posts a AccessReviewScheduleDefinition with a new object

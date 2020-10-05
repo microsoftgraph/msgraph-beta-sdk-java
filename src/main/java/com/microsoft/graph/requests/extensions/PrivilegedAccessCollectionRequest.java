@@ -39,7 +39,7 @@ public class PrivilegedAccessCollectionRequest extends BaseCollectionRequest<Pri
         super(requestUrl, client, requestOptions, PrivilegedAccessCollectionResponse.class, IPrivilegedAccessCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedAccessCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedAccessCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class PrivilegedAccessCollectionRequest extends BaseCollectionRequest<Pri
         return buildFromResponse(response);
     }
 
-    public void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback) {
+    public void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedAccessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class PrivilegedAccessCollectionRequest extends BaseCollectionRequest<Pri
      */
     public IPrivilegedAccessCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedAccessCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedAccessCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedAccessCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IGeneralLedgerEntryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GeneralLedgerEntry> callback);
+    void get(final ICallback<? super GeneralLedgerEntry> callback);
 
     /**
      * Gets the GeneralLedgerEntry from the service
@@ -36,7 +36,7 @@ public interface IGeneralLedgerEntryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GeneralLedgerEntry> callback);
+    void delete(final ICallback<? super GeneralLedgerEntry> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGeneralLedgerEntryRequest extends IHttpRequest {
      * @param sourceGeneralLedgerEntry the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GeneralLedgerEntry sourceGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback);
+    void patch(final GeneralLedgerEntry sourceGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback);
 
     /**
      * Patches this GeneralLedgerEntry with a source
@@ -68,7 +68,7 @@ public interface IGeneralLedgerEntryRequest extends IHttpRequest {
      * @param newGeneralLedgerEntry the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback);
+    void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback);
 
     /**
      * Posts a GeneralLedgerEntry with a new object
@@ -85,7 +85,7 @@ public interface IGeneralLedgerEntryRequest extends IHttpRequest {
      * @param newGeneralLedgerEntry the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback);
+    void put(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback);
 
     /**
      * Posts a GeneralLedgerEntry with a new object

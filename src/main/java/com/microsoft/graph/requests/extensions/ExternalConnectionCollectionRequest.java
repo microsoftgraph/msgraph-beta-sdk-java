@@ -39,7 +39,7 @@ public class ExternalConnectionCollectionRequest extends BaseCollectionRequest<E
         super(requestUrl, client, requestOptions, ExternalConnectionCollectionResponse.class, IExternalConnectionCollectionPage.class);
     }
 
-    public void get(final ICallback<IExternalConnectionCollectionPage> callback) {
+    public void get(final ICallback<? super IExternalConnectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ExternalConnectionCollectionRequest extends BaseCollectionRequest<E
         return buildFromResponse(response);
     }
 
-    public void post(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback) {
+    public void post(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExternalConnectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ExternalConnectionCollectionRequest extends BaseCollectionRequest<E
      */
     public IExternalConnectionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ExternalConnectionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IExternalConnectionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ExternalConnectionCollectionRequest)this;
     }
 

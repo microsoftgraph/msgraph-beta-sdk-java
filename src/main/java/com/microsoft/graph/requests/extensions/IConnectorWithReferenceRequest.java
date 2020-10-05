@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IConnectorWithReferenceRequest extends IHttpRequest {
 
-    void post(final Connector newConnector, final IJsonBackedObject payload, final ICallback<Connector> callback);
+    void post(final Connector newConnector, final IJsonBackedObject payload, final ICallback<? super Connector> callback);
 
     Connector post(final Connector newConnector, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Connector> callback);
+    void get(final ICallback<? super Connector> callback);
 
     Connector get() throws ClientException;
 
-	void delete(final ICallback<Connector> callback);
+	void delete(final ICallback<? super Connector> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Connector sourceConnector, final ICallback<Connector> callback);
+	void patch(final Connector sourceConnector, final ICallback<? super Connector> callback);
 
 	Connector patch(final Connector sourceConnector) throws ClientException;
 

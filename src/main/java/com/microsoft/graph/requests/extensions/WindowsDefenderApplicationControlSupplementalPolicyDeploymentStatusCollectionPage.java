@@ -23,6 +23,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param builder  the request builder for the next collection page
      */
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse response, final IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

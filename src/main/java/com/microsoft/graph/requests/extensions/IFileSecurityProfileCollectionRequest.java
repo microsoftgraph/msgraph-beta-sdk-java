@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IFileSecurityProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IFileSecurityProfileCollectionPage> callback);
+    void get(final ICallback<? super IFileSecurityProfileCollectionPage> callback);
 
     IFileSecurityProfileCollectionPage get() throws ClientException;
 
-    void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<FileSecurityProfile> callback);
+    void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<? super FileSecurityProfile> callback);
 
     FileSecurityProfile post(final FileSecurityProfile newFileSecurityProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IFileSecurityProfileCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IFileSecurityProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IFileSecurityProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IFileSecurityProfileCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IFileSecurityProfileCollectionRequest skipToken(String skipToken);
+	IFileSecurityProfileCollectionRequest skipToken(final String skipToken);
 }

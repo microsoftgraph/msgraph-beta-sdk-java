@@ -23,6 +23,6 @@ public class TrustFrameworkKeySetCollectionPage extends BaseCollectionPage<Trust
      * @param builder  the request builder for the next collection page
      */
     public TrustFrameworkKeySetCollectionPage(final TrustFrameworkKeySetCollectionResponse response, final ITrustFrameworkKeySetCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

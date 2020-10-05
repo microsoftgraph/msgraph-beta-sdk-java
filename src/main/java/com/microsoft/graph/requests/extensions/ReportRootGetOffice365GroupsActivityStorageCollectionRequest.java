@@ -39,7 +39,7 @@ public class ReportRootGetOffice365GroupsActivityStorageCollectionRequest extend
     }
 
 
-    public void get(final ICallback<IReportRootGetOffice365GroupsActivityStorageCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOffice365GroupsActivityStorageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOffice365GroupsActivityStorageCollectionRequest extend
      */
     public IReportRootGetOffice365GroupsActivityStorageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOffice365GroupsActivityStorageCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365GroupsActivityStorageCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOffice365GroupsActivityStorageCollectionRequest)this;
     }
 

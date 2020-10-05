@@ -40,7 +40,7 @@ public class VendorCollectionRequest extends BaseCollectionRequest<VendorCollect
         super(requestUrl, client, requestOptions, VendorCollectionResponse.class, IVendorCollectionPage.class);
     }
 
-    public void get(final ICallback<IVendorCollectionPage> callback) {
+    public void get(final ICallback<? super IVendorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class VendorCollectionRequest extends BaseCollectionRequest<VendorCollect
         return buildFromResponse(response);
     }
 
-    public void post(final Vendor newVendor, final ICallback<Vendor> callback) {
+    public void post(final Vendor newVendor, final ICallback<? super Vendor> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VendorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class VendorCollectionRequest extends BaseCollectionRequest<VendorCollect
      */
     public IVendorCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (VendorCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IVendorCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (VendorCollectionRequest)this;
     }
 

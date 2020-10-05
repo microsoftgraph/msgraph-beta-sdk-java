@@ -23,6 +23,6 @@ public class PrivilegedRoleCollectionPage extends BaseCollectionPage<PrivilegedR
      * @param builder  the request builder for the next collection page
      */
     public PrivilegedRoleCollectionPage(final PrivilegedRoleCollectionResponse response, final IPrivilegedRoleCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

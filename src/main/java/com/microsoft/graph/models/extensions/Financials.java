@@ -6,11 +6,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Company;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CompanyCollectionResponse;
 import com.microsoft.graph.requests.extensions.CompanyCollectionPage;
 
 
@@ -23,8 +20,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Financials.
  */
-public class Financials extends Entity implements IJsonBackedObject {
+public class Financials implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Companies.
@@ -75,19 +82,7 @@ public class Financials extends Entity implements IJsonBackedObject {
 
 
         if (json.has("companies")) {
-            final CompanyCollectionResponse response = new CompanyCollectionResponse();
-            if (json.has("companies@odata.nextLink")) {
-                response.nextLink = json.get("companies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("companies").toString(), JsonObject[].class);
-            final Company[] array = new Company[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Company.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            companies = new CompanyCollectionPage(response, null);
+            companies = serializer.deserializeObject(json.get("companies").toString(), CompanyCollectionPage.class);
         }
     }
 }

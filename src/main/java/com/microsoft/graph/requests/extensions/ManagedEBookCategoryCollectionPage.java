@@ -23,6 +23,6 @@ public class ManagedEBookCategoryCollectionPage extends BaseCollectionPage<Manag
      * @param builder  the request builder for the next collection page
      */
     public ManagedEBookCategoryCollectionPage(final ManagedEBookCategoryCollectionResponse response, final IManagedEBookCategoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

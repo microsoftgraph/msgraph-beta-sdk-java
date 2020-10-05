@@ -40,7 +40,7 @@ public class PrivilegedRoleCollectionRequest extends BaseCollectionRequest<Privi
         super(requestUrl, client, requestOptions, PrivilegedRoleCollectionResponse.class, IPrivilegedRoleCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedRoleCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedRoleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrivilegedRoleCollectionRequest extends BaseCollectionRequest<Privi
         return buildFromResponse(response);
     }
 
-    public void post(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback) {
+    public void post(final PrivilegedRole newPrivilegedRole, final ICallback<? super PrivilegedRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrivilegedRoleCollectionRequest extends BaseCollectionRequest<Privi
      */
     public IPrivilegedRoleCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedRoleCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedRoleCollectionRequest)this;
     }
 

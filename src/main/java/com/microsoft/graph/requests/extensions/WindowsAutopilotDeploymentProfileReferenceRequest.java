@@ -43,7 +43,7 @@ public class WindowsAutopilotDeploymentProfileReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfile.class);
     }
 
-    public void delete(final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -73,22 +73,12 @@ public class WindowsAutopilotDeploymentProfileReferenceRequest extends BaseReque
         return (WindowsAutopilotDeploymentProfileReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsAutopilotDeploymentProfileReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsAutopilotDeploymentProfileReferenceRequest)this;
-    }
-    /**
      * Puts the WindowsAutopilotDeploymentProfile
      *
      * @param srcWindowsAutopilotDeploymentProfile the WindowsAutopilotDeploymentProfile reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WindowsAutopilotDeploymentProfile srcWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void put(WindowsAutopilotDeploymentProfile srcWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PUT, callback, srcWindowsAutopilotDeploymentProfile);
     }
 

@@ -21,7 +21,7 @@ public interface IWindowsWifiEnterpriseEAPConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsWifiEnterpriseEAPConfiguration> callback);
+    void get(final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback);
 
     /**
      * Gets the WindowsWifiEnterpriseEAPConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsWifiEnterpriseEAPConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsWifiEnterpriseEAPConfiguration> callback);
+    void delete(final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsWifiEnterpriseEAPConfigurationRequest extends IHttpRequ
      * @param sourceWindowsWifiEnterpriseEAPConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsWifiEnterpriseEAPConfiguration sourceWindowsWifiEnterpriseEAPConfiguration, final ICallback<WindowsWifiEnterpriseEAPConfiguration> callback);
+    void patch(final WindowsWifiEnterpriseEAPConfiguration sourceWindowsWifiEnterpriseEAPConfiguration, final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback);
 
     /**
      * Patches this WindowsWifiEnterpriseEAPConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsWifiEnterpriseEAPConfigurationRequest extends IHttpRequ
      * @param newWindowsWifiEnterpriseEAPConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<WindowsWifiEnterpriseEAPConfiguration> callback);
+    void post(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback);
 
     /**
      * Posts a WindowsWifiEnterpriseEAPConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsWifiEnterpriseEAPConfigurationRequest extends IHttpRequ
      * @param newWindowsWifiEnterpriseEAPConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<WindowsWifiEnterpriseEAPConfiguration> callback);
+    void put(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback);
 
     /**
      * Posts a WindowsWifiEnterpriseEAPConfiguration with a new object

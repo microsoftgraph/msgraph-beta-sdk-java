@@ -37,7 +37,7 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OneDriveUsageAccountDetail> callback) {
+    public void get(final ICallback<? super OneDriveUsageAccountDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OneDriveUsageAccountDetail> callback) {
+    public void delete(final ICallback<? super OneDriveUsageAccountDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
      * @param sourceOneDriveUsageAccountDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OneDriveUsageAccountDetail sourceOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback) {
+    public void patch(final OneDriveUsageAccountDetail sourceOneDriveUsageAccountDetail, final ICallback<? super OneDriveUsageAccountDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceOneDriveUsageAccountDetail);
     }
 
@@ -96,7 +96,7 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
      * @param newOneDriveUsageAccountDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback) {
+    public void post(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<? super OneDriveUsageAccountDetail> callback) {
         send(HttpMethod.POST, callback, newOneDriveUsageAccountDetail);
     }
 
@@ -117,7 +117,7 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
      * @param newOneDriveUsageAccountDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback) {
+    public void put(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<? super OneDriveUsageAccountDetail> callback) {
         send(HttpMethod.PUT, callback, newOneDriveUsageAccountDetail);
     }
 
@@ -151,17 +151,6 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
      */
      public IOneDriveUsageAccountDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OneDriveUsageAccountDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOneDriveUsageAccountDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OneDriveUsageAccountDetailRequest)this;
      }
 

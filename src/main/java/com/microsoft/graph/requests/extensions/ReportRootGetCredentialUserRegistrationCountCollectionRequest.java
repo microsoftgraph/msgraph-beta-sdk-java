@@ -39,7 +39,7 @@ public class ReportRootGetCredentialUserRegistrationCountCollectionRequest exten
     }
 
 
-    public void get(final ICallback<IReportRootGetCredentialUserRegistrationCountCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetCredentialUserRegistrationCountCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetCredentialUserRegistrationCountCollectionRequest exten
      */
     public IReportRootGetCredentialUserRegistrationCountCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetCredentialUserRegistrationCountCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetCredentialUserRegistrationCountCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetCredentialUserRegistrationCountCollectionRequest)this;
     }
 

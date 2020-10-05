@@ -58,7 +58,7 @@ public class TrustFrameworkPolicyStreamRequest extends BaseStreamRequest<TrustFr
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<TrustFrameworkPolicy> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super TrustFrameworkPolicy> callback) {
         send(fileContents, callback);
     }
 

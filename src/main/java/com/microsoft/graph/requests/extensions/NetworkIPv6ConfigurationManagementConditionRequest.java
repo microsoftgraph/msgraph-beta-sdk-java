@@ -37,7 +37,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void get(final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void delete(final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param sourceNetworkIPv6ConfigurationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void patch(final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -96,7 +96,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param newNetworkIPv6ConfigurationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.POST, callback, newNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -117,7 +117,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -151,17 +151,6 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      */
      public INetworkIPv6ConfigurationManagementConditionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NetworkIPv6ConfigurationManagementConditionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public INetworkIPv6ConfigurationManagementConditionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (NetworkIPv6ConfigurationManagementConditionRequest)this;
      }
 

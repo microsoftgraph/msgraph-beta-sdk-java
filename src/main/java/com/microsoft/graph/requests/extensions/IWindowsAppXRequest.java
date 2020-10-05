@@ -21,7 +21,7 @@ public interface IWindowsAppXRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsAppX> callback);
+    void get(final ICallback<? super WindowsAppX> callback);
 
     /**
      * Gets the WindowsAppX from the service
@@ -36,7 +36,7 @@ public interface IWindowsAppXRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsAppX> callback);
+    void delete(final ICallback<? super WindowsAppX> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsAppXRequest extends IHttpRequest {
      * @param sourceWindowsAppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsAppX sourceWindowsAppX, final ICallback<WindowsAppX> callback);
+    void patch(final WindowsAppX sourceWindowsAppX, final ICallback<? super WindowsAppX> callback);
 
     /**
      * Patches this WindowsAppX with a source
@@ -68,7 +68,7 @@ public interface IWindowsAppXRequest extends IHttpRequest {
      * @param newWindowsAppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsAppX newWindowsAppX, final ICallback<WindowsAppX> callback);
+    void post(final WindowsAppX newWindowsAppX, final ICallback<? super WindowsAppX> callback);
 
     /**
      * Posts a WindowsAppX with a new object
@@ -85,7 +85,7 @@ public interface IWindowsAppXRequest extends IHttpRequest {
      * @param newWindowsAppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsAppX newWindowsAppX, final ICallback<WindowsAppX> callback);
+    void put(final WindowsAppX newWindowsAppX, final ICallback<? super WindowsAppX> callback);
 
     /**
      * Posts a WindowsAppX with a new object

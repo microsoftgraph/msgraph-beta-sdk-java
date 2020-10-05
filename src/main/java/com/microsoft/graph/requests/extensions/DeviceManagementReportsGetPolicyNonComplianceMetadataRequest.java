@@ -36,7 +36,7 @@ public class DeviceManagementReportsGetPolicyNonComplianceMetadataRequest extend
         body = new DeviceManagementReportsGetPolicyNonComplianceMetadataBody();
     }
 
-    public void post(final ICallback<java.io.InputStream> callback) {
+    public void post(final ICallback<? super java.io.InputStream> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceManagementReportsGetPolicyNonComplianceMetadataRequest extend
      */
     public IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementReportsGetPolicyNonComplianceMetadataRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementReportsGetPolicyNonComplianceMetadataRequest)this;
     }
 

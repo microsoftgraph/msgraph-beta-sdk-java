@@ -21,7 +21,7 @@ public interface IDeviceManagementTemplateSettingCategoryRequest extends IHttpRe
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementTemplateSettingCategory> callback);
+    void get(final ICallback<? super DeviceManagementTemplateSettingCategory> callback);
 
     /**
      * Gets the DeviceManagementTemplateSettingCategory from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementTemplateSettingCategoryRequest extends IHttpRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementTemplateSettingCategory> callback);
+    void delete(final ICallback<? super DeviceManagementTemplateSettingCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementTemplateSettingCategoryRequest extends IHttpRe
      * @param sourceDeviceManagementTemplateSettingCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementTemplateSettingCategory sourceDeviceManagementTemplateSettingCategory, final ICallback<DeviceManagementTemplateSettingCategory> callback);
+    void patch(final DeviceManagementTemplateSettingCategory sourceDeviceManagementTemplateSettingCategory, final ICallback<? super DeviceManagementTemplateSettingCategory> callback);
 
     /**
      * Patches this DeviceManagementTemplateSettingCategory with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementTemplateSettingCategoryRequest extends IHttpRe
      * @param newDeviceManagementTemplateSettingCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<DeviceManagementTemplateSettingCategory> callback);
+    void post(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<? super DeviceManagementTemplateSettingCategory> callback);
 
     /**
      * Posts a DeviceManagementTemplateSettingCategory with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementTemplateSettingCategoryRequest extends IHttpRe
      * @param newDeviceManagementTemplateSettingCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<DeviceManagementTemplateSettingCategory> callback);
+    void put(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<? super DeviceManagementTemplateSettingCategory> callback);
 
     /**
      * Posts a DeviceManagementTemplateSettingCategory with a new object

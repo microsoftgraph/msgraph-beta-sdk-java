@@ -21,7 +21,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10EnrollmentCompletionPageConfiguration> callback);
+    void get(final ICallback<? super Windows10EnrollmentCompletionPageConfiguration> callback);
 
     /**
      * Gets the Windows10EnrollmentCompletionPageConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10EnrollmentCompletionPageConfiguration> callback);
+    void delete(final ICallback<? super Windows10EnrollmentCompletionPageConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationRequest extends 
      * @param sourceWindows10EnrollmentCompletionPageConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10EnrollmentCompletionPageConfiguration sourceWindows10EnrollmentCompletionPageConfiguration, final ICallback<Windows10EnrollmentCompletionPageConfiguration> callback);
+    void patch(final Windows10EnrollmentCompletionPageConfiguration sourceWindows10EnrollmentCompletionPageConfiguration, final ICallback<? super Windows10EnrollmentCompletionPageConfiguration> callback);
 
     /**
      * Patches this Windows10EnrollmentCompletionPageConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationRequest extends 
      * @param newWindows10EnrollmentCompletionPageConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10EnrollmentCompletionPageConfiguration newWindows10EnrollmentCompletionPageConfiguration, final ICallback<Windows10EnrollmentCompletionPageConfiguration> callback);
+    void post(final Windows10EnrollmentCompletionPageConfiguration newWindows10EnrollmentCompletionPageConfiguration, final ICallback<? super Windows10EnrollmentCompletionPageConfiguration> callback);
 
     /**
      * Posts a Windows10EnrollmentCompletionPageConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationRequest extends 
      * @param newWindows10EnrollmentCompletionPageConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10EnrollmentCompletionPageConfiguration newWindows10EnrollmentCompletionPageConfiguration, final ICallback<Windows10EnrollmentCompletionPageConfiguration> callback);
+    void put(final Windows10EnrollmentCompletionPageConfiguration newWindows10EnrollmentCompletionPageConfiguration, final ICallback<? super Windows10EnrollmentCompletionPageConfiguration> callback);
 
     /**
      * Posts a Windows10EnrollmentCompletionPageConfiguration with a new object

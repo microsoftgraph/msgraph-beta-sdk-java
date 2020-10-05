@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceManagementScriptRunSummaryReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<DeviceManagementScriptRunSummary> callback);
+    void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     DeviceManagementScriptRunSummary delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IDeviceManagementScriptRunSummaryReferenceRequest extends IHttp
      * @param srcDeviceManagementScriptRunSummary the DeviceManagementScriptRunSummary to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DeviceManagementScriptRunSummary srcDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback);
+    void put(DeviceManagementScriptRunSummary srcDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     /**
      * Puts the DeviceManagementScriptRunSummary

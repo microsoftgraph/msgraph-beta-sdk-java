@@ -21,7 +21,7 @@ public interface IWindowsVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsVpnConfiguration> callback);
+    void get(final ICallback<? super WindowsVpnConfiguration> callback);
 
     /**
      * Gets the WindowsVpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsVpnConfiguration> callback);
+    void delete(final ICallback<? super WindowsVpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsVpnConfigurationRequest extends IHttpRequest {
      * @param sourceWindowsVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsVpnConfiguration sourceWindowsVpnConfiguration, final ICallback<WindowsVpnConfiguration> callback);
+    void patch(final WindowsVpnConfiguration sourceWindowsVpnConfiguration, final ICallback<? super WindowsVpnConfiguration> callback);
 
     /**
      * Patches this WindowsVpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsVpnConfigurationRequest extends IHttpRequest {
      * @param newWindowsVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsVpnConfiguration newWindowsVpnConfiguration, final ICallback<WindowsVpnConfiguration> callback);
+    void post(final WindowsVpnConfiguration newWindowsVpnConfiguration, final ICallback<? super WindowsVpnConfiguration> callback);
 
     /**
      * Posts a WindowsVpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsVpnConfigurationRequest extends IHttpRequest {
      * @param newWindowsVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsVpnConfiguration newWindowsVpnConfiguration, final ICallback<WindowsVpnConfiguration> callback);
+    void put(final WindowsVpnConfiguration newWindowsVpnConfiguration, final ICallback<? super WindowsVpnConfiguration> callback);
 
     /**
      * Posts a WindowsVpnConfiguration with a new object

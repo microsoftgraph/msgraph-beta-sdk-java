@@ -21,7 +21,7 @@ public interface IOfficeSuiteAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OfficeSuiteApp> callback);
+    void get(final ICallback<? super OfficeSuiteApp> callback);
 
     /**
      * Gets the OfficeSuiteApp from the service
@@ -36,7 +36,7 @@ public interface IOfficeSuiteAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OfficeSuiteApp> callback);
+    void delete(final ICallback<? super OfficeSuiteApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOfficeSuiteAppRequest extends IHttpRequest {
      * @param sourceOfficeSuiteApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OfficeSuiteApp sourceOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback);
+    void patch(final OfficeSuiteApp sourceOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback);
 
     /**
      * Patches this OfficeSuiteApp with a source
@@ -68,7 +68,7 @@ public interface IOfficeSuiteAppRequest extends IHttpRequest {
      * @param newOfficeSuiteApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback);
+    void post(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback);
 
     /**
      * Posts a OfficeSuiteApp with a new object
@@ -85,7 +85,7 @@ public interface IOfficeSuiteAppRequest extends IHttpRequest {
      * @param newOfficeSuiteApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback);
+    void put(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback);
 
     /**
      * Posts a OfficeSuiteApp with a new object

@@ -40,7 +40,7 @@ public class Windows81TrustedRootCertificateCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, Windows81TrustedRootCertificateCollectionResponse.class, IWindows81TrustedRootCertificateCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindows81TrustedRootCertificateCollectionPage> callback) {
+    public void get(final ICallback<? super IWindows81TrustedRootCertificateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class Windows81TrustedRootCertificateCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new Windows81TrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class Windows81TrustedRootCertificateCollectionRequest extends BaseCollec
      */
     public IWindows81TrustedRootCertificateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (Windows81TrustedRootCertificateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindows81TrustedRootCertificateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (Windows81TrustedRootCertificateCollectionRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class YammerGroupsActivityCountsRequest extends BaseRequest implements IY
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<YammerGroupsActivityCounts> callback) {
+    public void get(final ICallback<? super YammerGroupsActivityCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class YammerGroupsActivityCountsRequest extends BaseRequest implements IY
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<YammerGroupsActivityCounts> callback) {
+    public void delete(final ICallback<? super YammerGroupsActivityCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class YammerGroupsActivityCountsRequest extends BaseRequest implements IY
      * @param sourceYammerGroupsActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerGroupsActivityCounts sourceYammerGroupsActivityCounts, final ICallback<YammerGroupsActivityCounts> callback) {
+    public void patch(final YammerGroupsActivityCounts sourceYammerGroupsActivityCounts, final ICallback<? super YammerGroupsActivityCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerGroupsActivityCounts);
     }
 
@@ -96,7 +96,7 @@ public class YammerGroupsActivityCountsRequest extends BaseRequest implements IY
      * @param newYammerGroupsActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerGroupsActivityCounts newYammerGroupsActivityCounts, final ICallback<YammerGroupsActivityCounts> callback) {
+    public void post(final YammerGroupsActivityCounts newYammerGroupsActivityCounts, final ICallback<? super YammerGroupsActivityCounts> callback) {
         send(HttpMethod.POST, callback, newYammerGroupsActivityCounts);
     }
 
@@ -117,7 +117,7 @@ public class YammerGroupsActivityCountsRequest extends BaseRequest implements IY
      * @param newYammerGroupsActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerGroupsActivityCounts newYammerGroupsActivityCounts, final ICallback<YammerGroupsActivityCounts> callback) {
+    public void put(final YammerGroupsActivityCounts newYammerGroupsActivityCounts, final ICallback<? super YammerGroupsActivityCounts> callback) {
         send(HttpMethod.PUT, callback, newYammerGroupsActivityCounts);
     }
 
@@ -151,17 +151,6 @@ public class YammerGroupsActivityCountsRequest extends BaseRequest implements IY
      */
      public IYammerGroupsActivityCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerGroupsActivityCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IYammerGroupsActivityCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (YammerGroupsActivityCountsRequest)this;
      }
 

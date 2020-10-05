@@ -37,7 +37,7 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+    public void get(final ICallback<? super WindowsPrivacyDataAccessControlItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+    public void delete(final ICallback<? super WindowsPrivacyDataAccessControlItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
      * @param sourceWindowsPrivacyDataAccessControlItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPrivacyDataAccessControlItem sourceWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+    public void patch(final WindowsPrivacyDataAccessControlItem sourceWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPrivacyDataAccessControlItem);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
      * @param newWindowsPrivacyDataAccessControlItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+    public void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback) {
         send(HttpMethod.POST, callback, newWindowsPrivacyDataAccessControlItem);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
      * @param newWindowsPrivacyDataAccessControlItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+    public void put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback) {
         send(HttpMethod.PUT, callback, newWindowsPrivacyDataAccessControlItem);
     }
 
@@ -151,17 +151,6 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
      */
      public IWindowsPrivacyDataAccessControlItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPrivacyDataAccessControlItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPrivacyDataAccessControlItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPrivacyDataAccessControlItemRequest)this;
      }
 

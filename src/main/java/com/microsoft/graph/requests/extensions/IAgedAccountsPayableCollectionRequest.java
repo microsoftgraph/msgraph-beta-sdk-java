@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAgedAccountsPayableCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAgedAccountsPayableCollectionPage> callback);
+    void get(final ICallback<? super IAgedAccountsPayableCollectionPage> callback);
 
     IAgedAccountsPayableCollectionPage get() throws ClientException;
 
-    void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback);
+    void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback);
 
     AgedAccountsPayable post(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAgedAccountsPayableCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAgedAccountsPayableCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAgedAccountsPayableCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAgedAccountsPayableCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAgedAccountsPayableCollectionRequest skipToken(String skipToken);
+	IAgedAccountsPayableCollectionRequest skipToken(final String skipToken);
 }

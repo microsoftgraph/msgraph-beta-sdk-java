@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserScopeTeamsAppInstallationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserScopeTeamsAppInstallationCollectionPage> callback);
+    void get(final ICallback<? super IUserScopeTeamsAppInstallationCollectionPage> callback);
 
     IUserScopeTeamsAppInstallationCollectionPage get() throws ClientException;
 
-    void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback);
+    void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback);
 
     UserScopeTeamsAppInstallation post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserScopeTeamsAppInstallationCollectionRequest extends IHttpRe
      * @return the updated request
      */
     IUserScopeTeamsAppInstallationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserScopeTeamsAppInstallationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserScopeTeamsAppInstallationCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IUserScopeTeamsAppInstallationCollectionRequest skipToken(String skipToken);
+	IUserScopeTeamsAppInstallationCollectionRequest skipToken(final String skipToken);
 }

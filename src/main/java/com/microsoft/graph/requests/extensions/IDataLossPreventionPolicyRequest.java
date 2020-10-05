@@ -21,7 +21,7 @@ public interface IDataLossPreventionPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DataLossPreventionPolicy> callback);
+    void get(final ICallback<? super DataLossPreventionPolicy> callback);
 
     /**
      * Gets the DataLossPreventionPolicy from the service
@@ -36,7 +36,7 @@ public interface IDataLossPreventionPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DataLossPreventionPolicy> callback);
+    void delete(final ICallback<? super DataLossPreventionPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDataLossPreventionPolicyRequest extends IHttpRequest {
      * @param sourceDataLossPreventionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DataLossPreventionPolicy sourceDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback);
+    void patch(final DataLossPreventionPolicy sourceDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback);
 
     /**
      * Patches this DataLossPreventionPolicy with a source
@@ -68,7 +68,7 @@ public interface IDataLossPreventionPolicyRequest extends IHttpRequest {
      * @param newDataLossPreventionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback);
+    void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback);
 
     /**
      * Posts a DataLossPreventionPolicy with a new object
@@ -85,7 +85,7 @@ public interface IDataLossPreventionPolicyRequest extends IHttpRequest {
      * @param newDataLossPreventionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback);
+    void put(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback);
 
     /**
      * Posts a DataLossPreventionPolicy with a new object

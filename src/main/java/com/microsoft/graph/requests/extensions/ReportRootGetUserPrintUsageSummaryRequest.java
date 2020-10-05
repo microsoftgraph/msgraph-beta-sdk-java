@@ -37,7 +37,7 @@ public class ReportRootGetUserPrintUsageSummaryRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserPrintUsageSummary> callback) {
+    public void get(final ICallback<? super UserPrintUsageSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class ReportRootGetUserPrintUsageSummaryRequest extends BaseRequest imple
      */
     public IReportRootGetUserPrintUsageSummaryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetUserPrintUsageSummaryRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetUserPrintUsageSummaryRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetUserPrintUsageSummaryRequest)this;
     }
 

@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.RoleScopeTag;
  */
 public interface IRoleScopeTagCollectionReferenceRequest {
 
-    void post(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback);
+    void post(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
     RoleScopeTag post(final RoleScopeTag newRoleScopeTag) throws ClientException;
 

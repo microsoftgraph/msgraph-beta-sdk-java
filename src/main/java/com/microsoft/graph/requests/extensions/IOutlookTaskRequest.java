@@ -21,7 +21,7 @@ public interface IOutlookTaskRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OutlookTask> callback);
+    void get(final ICallback<? super OutlookTask> callback);
 
     /**
      * Gets the OutlookTask from the service
@@ -36,7 +36,7 @@ public interface IOutlookTaskRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OutlookTask> callback);
+    void delete(final ICallback<? super OutlookTask> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOutlookTaskRequest extends IHttpRequest {
      * @param sourceOutlookTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OutlookTask sourceOutlookTask, final ICallback<OutlookTask> callback);
+    void patch(final OutlookTask sourceOutlookTask, final ICallback<? super OutlookTask> callback);
 
     /**
      * Patches this OutlookTask with a source
@@ -68,7 +68,7 @@ public interface IOutlookTaskRequest extends IHttpRequest {
      * @param newOutlookTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OutlookTask newOutlookTask, final ICallback<OutlookTask> callback);
+    void post(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback);
 
     /**
      * Posts a OutlookTask with a new object
@@ -85,7 +85,7 @@ public interface IOutlookTaskRequest extends IHttpRequest {
      * @param newOutlookTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OutlookTask newOutlookTask, final ICallback<OutlookTask> callback);
+    void put(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback);
 
     /**
      * Posts a OutlookTask with a new object

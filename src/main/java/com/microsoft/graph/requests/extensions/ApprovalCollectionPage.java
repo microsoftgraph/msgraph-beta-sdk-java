@@ -23,6 +23,6 @@ public class ApprovalCollectionPage extends BaseCollectionPage<Approval, IApprov
      * @param builder  the request builder for the next collection page
      */
     public ApprovalCollectionPage(final ApprovalCollectionResponse response, final IApprovalCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

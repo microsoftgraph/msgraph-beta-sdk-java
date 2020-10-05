@@ -21,7 +21,7 @@ public interface IGroupPolicyConfigurationAssignmentRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyConfigurationAssignment> callback);
+    void get(final ICallback<? super GroupPolicyConfigurationAssignment> callback);
 
     /**
      * Gets the GroupPolicyConfigurationAssignment from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyConfigurationAssignmentRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyConfigurationAssignment> callback);
+    void delete(final ICallback<? super GroupPolicyConfigurationAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyConfigurationAssignmentRequest extends IHttpRequest
      * @param sourceGroupPolicyConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback);
+    void patch(final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback);
 
     /**
      * Patches this GroupPolicyConfigurationAssignment with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyConfigurationAssignmentRequest extends IHttpRequest
      * @param newGroupPolicyConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback);
+    void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback);
 
     /**
      * Posts a GroupPolicyConfigurationAssignment with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyConfigurationAssignmentRequest extends IHttpRequest
      * @param newGroupPolicyConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback);
+    void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback);
 
     /**
      * Posts a GroupPolicyConfigurationAssignment with a new object

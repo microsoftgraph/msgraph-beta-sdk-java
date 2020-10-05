@@ -37,7 +37,7 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSMicrosoftEdgeApp> callback) {
+    public void get(final ICallback<? super MacOSMicrosoftEdgeApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSMicrosoftEdgeApp> callback) {
+    public void delete(final ICallback<? super MacOSMicrosoftEdgeApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
      * @param sourceMacOSMicrosoftEdgeApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSMicrosoftEdgeApp sourceMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback) {
+    public void patch(final MacOSMicrosoftEdgeApp sourceMacOSMicrosoftEdgeApp, final ICallback<? super MacOSMicrosoftEdgeApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSMicrosoftEdgeApp);
     }
 
@@ -96,7 +96,7 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
      * @param newMacOSMicrosoftEdgeApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback) {
+    public void post(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<? super MacOSMicrosoftEdgeApp> callback) {
         send(HttpMethod.POST, callback, newMacOSMicrosoftEdgeApp);
     }
 
@@ -117,7 +117,7 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
      * @param newMacOSMicrosoftEdgeApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback) {
+    public void put(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<? super MacOSMicrosoftEdgeApp> callback) {
         send(HttpMethod.PUT, callback, newMacOSMicrosoftEdgeApp);
     }
 
@@ -151,17 +151,6 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
      */
      public IMacOSMicrosoftEdgeAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSMicrosoftEdgeAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSMicrosoftEdgeAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSMicrosoftEdgeAppRequest)this;
      }
 

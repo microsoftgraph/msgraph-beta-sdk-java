@@ -37,7 +37,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsAssignedAccessProfile> callback) {
+    public void get(final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsAssignedAccessProfile> callback) {
+    public void delete(final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param sourceWindowsAssignedAccessProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback) {
+    public void patch(final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAssignedAccessProfile);
     }
 
@@ -96,7 +96,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param newWindowsAssignedAccessProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback) {
+    public void post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.POST, callback, newWindowsAssignedAccessProfile);
     }
 
@@ -117,7 +117,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param newWindowsAssignedAccessProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback) {
+    public void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.PUT, callback, newWindowsAssignedAccessProfile);
     }
 
@@ -151,17 +151,6 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      */
      public IWindowsAssignedAccessProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAssignedAccessProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsAssignedAccessProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsAssignedAccessProfileRequest)this;
      }
 

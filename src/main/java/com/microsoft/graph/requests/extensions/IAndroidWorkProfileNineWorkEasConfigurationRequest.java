@@ -21,7 +21,7 @@ public interface IAndroidWorkProfileNineWorkEasConfigurationRequest extends IHtt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback);
+    void get(final ICallback<? super AndroidWorkProfileNineWorkEasConfiguration> callback);
 
     /**
      * Gets the AndroidWorkProfileNineWorkEasConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidWorkProfileNineWorkEasConfigurationRequest extends IHtt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback);
+    void delete(final ICallback<? super AndroidWorkProfileNineWorkEasConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidWorkProfileNineWorkEasConfigurationRequest extends IHtt
      * @param sourceAndroidWorkProfileNineWorkEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidWorkProfileNineWorkEasConfiguration sourceAndroidWorkProfileNineWorkEasConfiguration, final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback);
+    void patch(final AndroidWorkProfileNineWorkEasConfiguration sourceAndroidWorkProfileNineWorkEasConfiguration, final ICallback<? super AndroidWorkProfileNineWorkEasConfiguration> callback);
 
     /**
      * Patches this AndroidWorkProfileNineWorkEasConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidWorkProfileNineWorkEasConfigurationRequest extends IHtt
      * @param newAndroidWorkProfileNineWorkEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration, final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback);
+    void post(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration, final ICallback<? super AndroidWorkProfileNineWorkEasConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileNineWorkEasConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidWorkProfileNineWorkEasConfigurationRequest extends IHtt
      * @param newAndroidWorkProfileNineWorkEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration, final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback);
+    void put(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration, final ICallback<? super AndroidWorkProfileNineWorkEasConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileNineWorkEasConfiguration with a new object

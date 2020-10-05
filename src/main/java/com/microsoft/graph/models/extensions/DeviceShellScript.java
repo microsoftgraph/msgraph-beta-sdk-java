@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.RunAsAccountType;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
@@ -15,13 +14,9 @@ import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignme
 import com.microsoft.graph.models.extensions.DeviceManagementScriptRunSummary;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptUserState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionPage;
 
 
@@ -206,67 +201,19 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final DeviceManagementScriptAssignmentCollectionResponse response = new DeviceManagementScriptAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final DeviceManagementScriptAssignment[] array = new DeviceManagementScriptAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new DeviceManagementScriptAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceManagementScriptAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceRunStates")) {
-            final DeviceManagementScriptDeviceStateCollectionResponse response = new DeviceManagementScriptDeviceStateCollectionResponse();
-            if (json.has("deviceRunStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceRunStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceRunStates").toString(), JsonObject[].class);
-            final DeviceManagementScriptDeviceState[] array = new DeviceManagementScriptDeviceState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptDeviceState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceRunStates = new DeviceManagementScriptDeviceStateCollectionPage(response, null);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates").toString(), DeviceManagementScriptDeviceStateCollectionPage.class);
         }
 
         if (json.has("groupAssignments")) {
-            final DeviceManagementScriptGroupAssignmentCollectionResponse response = new DeviceManagementScriptGroupAssignmentCollectionResponse();
-            if (json.has("groupAssignments@odata.nextLink")) {
-                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
-            final DeviceManagementScriptGroupAssignment[] array = new DeviceManagementScriptGroupAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptGroupAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupAssignments = new DeviceManagementScriptGroupAssignmentCollectionPage(response, null);
+            groupAssignments = serializer.deserializeObject(json.get("groupAssignments").toString(), DeviceManagementScriptGroupAssignmentCollectionPage.class);
         }
 
         if (json.has("userRunStates")) {
-            final DeviceManagementScriptUserStateCollectionResponse response = new DeviceManagementScriptUserStateCollectionResponse();
-            if (json.has("userRunStates@odata.nextLink")) {
-                response.nextLink = json.get("userRunStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userRunStates").toString(), JsonObject[].class);
-            final DeviceManagementScriptUserState[] array = new DeviceManagementScriptUserState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptUserState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userRunStates = new DeviceManagementScriptUserStateCollectionPage(response, null);
+            userRunStates = serializer.deserializeObject(json.get("userRunStates").toString(), DeviceManagementScriptUserStateCollectionPage.class);
         }
     }
 }

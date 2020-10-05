@@ -24,7 +24,7 @@ import com.microsoft.graph.models.extensions.Application;
  */
 public interface IApplicationCollectionReferenceRequest {
 
-    void post(final Application newApplication, final ICallback<Application> callback);
+    void post(final Application newApplication, final ICallback<? super Application> callback);
 
     Application post(final Application newApplication) throws ClientException;
 

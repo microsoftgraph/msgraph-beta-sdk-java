@@ -40,7 +40,7 @@ public class LookupResultRowCollectionRequest extends BaseCollectionRequest<Look
         super(requestUrl, client, requestOptions, LookupResultRowCollectionResponse.class, ILookupResultRowCollectionPage.class);
     }
 
-    public void get(final ICallback<ILookupResultRowCollectionPage> callback) {
+    public void get(final ICallback<? super ILookupResultRowCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LookupResultRowCollectionRequest extends BaseCollectionRequest<Look
         return buildFromResponse(response);
     }
 
-    public void post(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback) {
+    public void post(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LookupResultRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class LookupResultRowCollectionRequest extends BaseCollectionRequest<Look
      */
     public ILookupResultRowCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (LookupResultRowCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ILookupResultRowCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LookupResultRowCollectionRequest)this;
     }
 

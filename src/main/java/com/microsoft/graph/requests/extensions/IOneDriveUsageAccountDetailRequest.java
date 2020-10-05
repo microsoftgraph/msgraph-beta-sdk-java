@@ -21,7 +21,7 @@ public interface IOneDriveUsageAccountDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OneDriveUsageAccountDetail> callback);
+    void get(final ICallback<? super OneDriveUsageAccountDetail> callback);
 
     /**
      * Gets the OneDriveUsageAccountDetail from the service
@@ -36,7 +36,7 @@ public interface IOneDriveUsageAccountDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OneDriveUsageAccountDetail> callback);
+    void delete(final ICallback<? super OneDriveUsageAccountDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOneDriveUsageAccountDetailRequest extends IHttpRequest {
      * @param sourceOneDriveUsageAccountDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OneDriveUsageAccountDetail sourceOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback);
+    void patch(final OneDriveUsageAccountDetail sourceOneDriveUsageAccountDetail, final ICallback<? super OneDriveUsageAccountDetail> callback);
 
     /**
      * Patches this OneDriveUsageAccountDetail with a source
@@ -68,7 +68,7 @@ public interface IOneDriveUsageAccountDetailRequest extends IHttpRequest {
      * @param newOneDriveUsageAccountDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback);
+    void post(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<? super OneDriveUsageAccountDetail> callback);
 
     /**
      * Posts a OneDriveUsageAccountDetail with a new object
@@ -85,7 +85,7 @@ public interface IOneDriveUsageAccountDetailRequest extends IHttpRequest {
      * @param newOneDriveUsageAccountDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback);
+    void put(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<? super OneDriveUsageAccountDetail> callback);
 
     /**
      * Posts a OneDriveUsageAccountDetail with a new object

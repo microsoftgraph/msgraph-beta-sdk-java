@@ -23,6 +23,6 @@ public class GroupPolicyMigrationReportCollectionPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public GroupPolicyMigrationReportCollectionPage(final GroupPolicyMigrationReportCollectionResponse response, final IGroupPolicyMigrationReportCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

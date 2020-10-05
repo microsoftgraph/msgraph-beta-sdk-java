@@ -21,7 +21,7 @@ public interface IAgreementAcceptanceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AgreementAcceptance> callback);
+    void get(final ICallback<? super AgreementAcceptance> callback);
 
     /**
      * Gets the AgreementAcceptance from the service
@@ -36,7 +36,7 @@ public interface IAgreementAcceptanceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AgreementAcceptance> callback);
+    void delete(final ICallback<? super AgreementAcceptance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgreementAcceptanceRequest extends IHttpRequest {
      * @param sourceAgreementAcceptance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+    void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
     /**
      * Patches this AgreementAcceptance with a source
@@ -68,7 +68,7 @@ public interface IAgreementAcceptanceRequest extends IHttpRequest {
      * @param newAgreementAcceptance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+    void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
     /**
      * Posts a AgreementAcceptance with a new object
@@ -85,7 +85,7 @@ public interface IAgreementAcceptanceRequest extends IHttpRequest {
      * @param newAgreementAcceptance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+    void put(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
     /**
      * Posts a AgreementAcceptance with a new object

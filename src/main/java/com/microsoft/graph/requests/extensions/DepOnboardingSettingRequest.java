@@ -49,7 +49,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DepOnboardingSetting> callback) {
+    public void get(final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DepOnboardingSetting> callback) {
+    public void delete(final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param sourceDepOnboardingSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DepOnboardingSetting sourceDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback) {
+    public void patch(final DepOnboardingSetting sourceDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.PATCH, callback, sourceDepOnboardingSetting);
     }
 
@@ -108,7 +108,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param newDepOnboardingSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback) {
+    public void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.POST, callback, newDepOnboardingSetting);
     }
 
@@ -129,7 +129,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param newDepOnboardingSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback) {
+    public void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.PUT, callback, newDepOnboardingSetting);
     }
 
@@ -163,17 +163,6 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      */
      public IDepOnboardingSettingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DepOnboardingSettingRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDepOnboardingSettingRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DepOnboardingSettingRequest)this;
      }
 

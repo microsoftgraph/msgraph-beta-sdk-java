@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsFeatureUpdateProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsFeatureUpdateProfileCollectionPage> callback);
+    void get(final ICallback<? super IWindowsFeatureUpdateProfileCollectionPage> callback);
 
     IWindowsFeatureUpdateProfileCollectionPage get() throws ClientException;
 
-    void post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback);
+    void post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<? super WindowsFeatureUpdateProfile> callback);
 
     WindowsFeatureUpdateProfile post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IWindowsFeatureUpdateProfileCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IWindowsFeatureUpdateProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsFeatureUpdateProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IWindowsFeatureUpdateProfileCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IWindowsFeatureUpdateProfileCollectionRequest skipToken(String skipToken);
+	IWindowsFeatureUpdateProfileCollectionRequest skipToken(final String skipToken);
 }

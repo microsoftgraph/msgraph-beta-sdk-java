@@ -42,7 +42,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IntuneBrandingProfile> callback) {
+    public void get(final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -61,7 +61,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IntuneBrandingProfile> callback) {
+    public void delete(final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param sourceIntuneBrandingProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IntuneBrandingProfile sourceIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback) {
+    public void patch(final IntuneBrandingProfile sourceIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIntuneBrandingProfile);
     }
 
@@ -101,7 +101,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param newIntuneBrandingProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback) {
+    public void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.POST, callback, newIntuneBrandingProfile);
     }
 
@@ -122,7 +122,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param newIntuneBrandingProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback) {
+    public void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.PUT, callback, newIntuneBrandingProfile);
     }
 
@@ -156,17 +156,6 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      */
      public IIntuneBrandingProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IntuneBrandingProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIntuneBrandingProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IntuneBrandingProfileRequest)this;
      }
 

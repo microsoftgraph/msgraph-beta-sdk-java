@@ -40,7 +40,7 @@ public class PresenceCollectionRequest extends BaseCollectionRequest<PresenceCol
         super(requestUrl, client, requestOptions, PresenceCollectionResponse.class, IPresenceCollectionPage.class);
     }
 
-    public void get(final ICallback<IPresenceCollectionPage> callback) {
+    public void get(final ICallback<? super IPresenceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PresenceCollectionRequest extends BaseCollectionRequest<PresenceCol
         return buildFromResponse(response);
     }
 
-    public void post(final Presence newPresence, final ICallback<Presence> callback) {
+    public void post(final Presence newPresence, final ICallback<? super Presence> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PresenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PresenceCollectionRequest extends BaseCollectionRequest<PresenceCol
      */
     public IPresenceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PresenceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPresenceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PresenceCollectionRequest)this;
     }
 

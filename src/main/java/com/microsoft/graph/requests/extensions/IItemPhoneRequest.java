@@ -21,7 +21,7 @@ public interface IItemPhoneRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemPhone> callback);
+    void get(final ICallback<? super ItemPhone> callback);
 
     /**
      * Gets the ItemPhone from the service
@@ -36,7 +36,7 @@ public interface IItemPhoneRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemPhone> callback);
+    void delete(final ICallback<? super ItemPhone> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemPhoneRequest extends IHttpRequest {
      * @param sourceItemPhone the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemPhone sourceItemPhone, final ICallback<ItemPhone> callback);
+    void patch(final ItemPhone sourceItemPhone, final ICallback<? super ItemPhone> callback);
 
     /**
      * Patches this ItemPhone with a source
@@ -68,7 +68,7 @@ public interface IItemPhoneRequest extends IHttpRequest {
      * @param newItemPhone the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback);
+    void post(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback);
 
     /**
      * Posts a ItemPhone with a new object
@@ -85,7 +85,7 @@ public interface IItemPhoneRequest extends IHttpRequest {
      * @param newItemPhone the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback);
+    void put(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback);
 
     /**
      * Posts a ItemPhone with a new object

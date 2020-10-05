@@ -21,7 +21,7 @@ public interface IDepOnboardingSettingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DepOnboardingSetting> callback);
+    void get(final ICallback<? super DepOnboardingSetting> callback);
 
     /**
      * Gets the DepOnboardingSetting from the service
@@ -36,7 +36,7 @@ public interface IDepOnboardingSettingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DepOnboardingSetting> callback);
+    void delete(final ICallback<? super DepOnboardingSetting> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDepOnboardingSettingRequest extends IHttpRequest {
      * @param sourceDepOnboardingSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DepOnboardingSetting sourceDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback);
+    void patch(final DepOnboardingSetting sourceDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback);
 
     /**
      * Patches this DepOnboardingSetting with a source
@@ -68,7 +68,7 @@ public interface IDepOnboardingSettingRequest extends IHttpRequest {
      * @param newDepOnboardingSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback);
+    void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback);
 
     /**
      * Posts a DepOnboardingSetting with a new object
@@ -85,7 +85,7 @@ public interface IDepOnboardingSettingRequest extends IHttpRequest {
      * @param newDepOnboardingSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback);
+    void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback);
 
     /**
      * Posts a DepOnboardingSetting with a new object

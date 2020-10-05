@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppIdentity;
 import com.microsoft.graph.models.extensions.PrintTask;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PrintTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionPage;
 
 
@@ -92,19 +90,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("tasks")) {
-            final PrintTaskCollectionResponse response = new PrintTaskCollectionResponse();
-            if (json.has("tasks@odata.nextLink")) {
-                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
-            final PrintTask[] array = new PrintTask[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintTask.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tasks = new PrintTaskCollectionPage(response, null);
+            tasks = serializer.deserializeObject(json.get("tasks").toString(), PrintTaskCollectionPage.class);
         }
     }
 }

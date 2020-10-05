@@ -52,7 +52,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceComplianceLocalActionBase> callback) {
+    public void get(final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceComplianceLocalActionBase> callback) {
+    public void delete(final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param sourceAndroidDeviceComplianceLocalActionBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback) {
+    public void patch(final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -111,7 +111,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param newAndroidDeviceComplianceLocalActionBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback) {
+    public void post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -132,7 +132,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback) {
+    public void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -166,17 +166,6 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      */
      public IAndroidDeviceComplianceLocalActionBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceComplianceLocalActionBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceComplianceLocalActionBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceComplianceLocalActionBaseRequest)this;
      }
 

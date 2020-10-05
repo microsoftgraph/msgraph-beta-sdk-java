@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserIdentity;
 import com.microsoft.graph.models.extensions.Identity;
@@ -15,11 +14,8 @@ import com.microsoft.graph.models.extensions.AccessReviewDecision;
 import com.microsoft.graph.models.extensions.AccessReview;
 import com.microsoft.graph.models.extensions.AccessReviewReviewer;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessReviewCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionPage;
 
 
@@ -188,67 +184,19 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
 
         if (json.has("decisions")) {
-            final AccessReviewDecisionCollectionResponse response = new AccessReviewDecisionCollectionResponse();
-            if (json.has("decisions@odata.nextLink")) {
-                response.nextLink = json.get("decisions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("decisions").toString(), JsonObject[].class);
-            final AccessReviewDecision[] array = new AccessReviewDecision[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewDecision.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            decisions = new AccessReviewDecisionCollectionPage(response, null);
+            decisions = serializer.deserializeObject(json.get("decisions").toString(), AccessReviewDecisionCollectionPage.class);
         }
 
         if (json.has("instances")) {
-            final AccessReviewCollectionResponse response = new AccessReviewCollectionResponse();
-            if (json.has("instances@odata.nextLink")) {
-                response.nextLink = json.get("instances@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("instances").toString(), JsonObject[].class);
-            final AccessReview[] array = new AccessReview[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReview.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            instances = new AccessReviewCollectionPage(response, null);
+            instances = serializer.deserializeObject(json.get("instances").toString(), AccessReviewCollectionPage.class);
         }
 
         if (json.has("myDecisions")) {
-            final AccessReviewDecisionCollectionResponse response = new AccessReviewDecisionCollectionResponse();
-            if (json.has("myDecisions@odata.nextLink")) {
-                response.nextLink = json.get("myDecisions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("myDecisions").toString(), JsonObject[].class);
-            final AccessReviewDecision[] array = new AccessReviewDecision[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewDecision.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            myDecisions = new AccessReviewDecisionCollectionPage(response, null);
+            myDecisions = serializer.deserializeObject(json.get("myDecisions").toString(), AccessReviewDecisionCollectionPage.class);
         }
 
         if (json.has("reviewers")) {
-            final AccessReviewReviewerCollectionResponse response = new AccessReviewReviewerCollectionResponse();
-            if (json.has("reviewers@odata.nextLink")) {
-                response.nextLink = json.get("reviewers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("reviewers").toString(), JsonObject[].class);
-            final AccessReviewReviewer[] array = new AccessReviewReviewer[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewReviewer.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            reviewers = new AccessReviewReviewerCollectionPage(response, null);
+            reviewers = serializer.deserializeObject(json.get("reviewers").toString(), AccessReviewReviewerCollectionPage.class);
         }
     }
 }

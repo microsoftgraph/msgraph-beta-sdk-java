@@ -23,6 +23,6 @@ public class ActivityStatisticsCollectionPage extends BaseCollectionPage<Activit
      * @param builder  the request builder for the next collection page
      */
     public ActivityStatisticsCollectionPage(final ActivityStatisticsCollectionResponse response, final IActivityStatisticsCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

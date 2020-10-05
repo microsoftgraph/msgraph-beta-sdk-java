@@ -21,7 +21,7 @@ public interface IPlannerDeltaRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerDelta> callback);
+    void get(final ICallback<? super PlannerDelta> callback);
 
     /**
      * Gets the PlannerDelta from the service
@@ -36,7 +36,7 @@ public interface IPlannerDeltaRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerDelta> callback);
+    void delete(final ICallback<? super PlannerDelta> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerDeltaRequest extends IHttpRequest {
      * @param sourcePlannerDelta the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerDelta sourcePlannerDelta, final ICallback<PlannerDelta> callback);
+    void patch(final PlannerDelta sourcePlannerDelta, final ICallback<? super PlannerDelta> callback);
 
     /**
      * Patches this PlannerDelta with a source
@@ -68,7 +68,7 @@ public interface IPlannerDeltaRequest extends IHttpRequest {
      * @param newPlannerDelta the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback);
+    void post(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback);
 
     /**
      * Posts a PlannerDelta with a new object
@@ -85,7 +85,7 @@ public interface IPlannerDeltaRequest extends IHttpRequest {
      * @param newPlannerDelta the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback);
+    void put(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback);
 
     /**
      * Posts a PlannerDelta with a new object

@@ -21,7 +21,7 @@ public interface IDimensionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Dimension> callback);
+    void get(final ICallback<? super Dimension> callback);
 
     /**
      * Gets the Dimension from the service
@@ -36,7 +36,7 @@ public interface IDimensionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Dimension> callback);
+    void delete(final ICallback<? super Dimension> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDimensionRequest extends IHttpRequest {
      * @param sourceDimension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Dimension sourceDimension, final ICallback<Dimension> callback);
+    void patch(final Dimension sourceDimension, final ICallback<? super Dimension> callback);
 
     /**
      * Patches this Dimension with a source
@@ -68,7 +68,7 @@ public interface IDimensionRequest extends IHttpRequest {
      * @param newDimension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Dimension newDimension, final ICallback<Dimension> callback);
+    void post(final Dimension newDimension, final ICallback<? super Dimension> callback);
 
     /**
      * Posts a Dimension with a new object
@@ -85,7 +85,7 @@ public interface IDimensionRequest extends IHttpRequest {
      * @param newDimension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Dimension newDimension, final ICallback<Dimension> callback);
+    void put(final Dimension newDimension, final ICallback<? super Dimension> callback);
 
     /**
      * Posts a Dimension with a new object

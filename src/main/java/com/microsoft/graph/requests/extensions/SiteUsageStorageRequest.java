@@ -37,7 +37,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SiteUsageStorage> callback) {
+    public void get(final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SiteUsageStorage> callback) {
+    public void delete(final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param sourceSiteUsageStorage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SiteUsageStorage sourceSiteUsageStorage, final ICallback<SiteUsageStorage> callback) {
+    public void patch(final SiteUsageStorage sourceSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.PATCH, callback, sourceSiteUsageStorage);
     }
 
@@ -96,7 +96,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param newSiteUsageStorage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SiteUsageStorage newSiteUsageStorage, final ICallback<SiteUsageStorage> callback) {
+    public void post(final SiteUsageStorage newSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.POST, callback, newSiteUsageStorage);
     }
 
@@ -117,7 +117,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param newSiteUsageStorage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SiteUsageStorage newSiteUsageStorage, final ICallback<SiteUsageStorage> callback) {
+    public void put(final SiteUsageStorage newSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.PUT, callback, newSiteUsageStorage);
     }
 
@@ -151,17 +151,6 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      */
      public ISiteUsageStorageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SiteUsageStorageRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISiteUsageStorageRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SiteUsageStorageRequest)this;
      }
 

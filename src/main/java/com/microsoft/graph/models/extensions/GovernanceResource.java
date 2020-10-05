@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.GovernanceResource;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignmentRequest;
@@ -14,13 +13,9 @@ import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
 import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
 import com.microsoft.graph.models.extensions.GovernanceRoleSetting;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionPage;
-import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionPage;
 
 
@@ -165,67 +160,19 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
 
         if (json.has("roleAssignmentRequests")) {
-            final GovernanceRoleAssignmentRequestCollectionResponse response = new GovernanceRoleAssignmentRequestCollectionResponse();
-            if (json.has("roleAssignmentRequests@odata.nextLink")) {
-                response.nextLink = json.get("roleAssignmentRequests@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignmentRequests").toString(), JsonObject[].class);
-            final GovernanceRoleAssignmentRequest[] array = new GovernanceRoleAssignmentRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleAssignmentRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleAssignmentRequests = new GovernanceRoleAssignmentRequestCollectionPage(response, null);
+            roleAssignmentRequests = serializer.deserializeObject(json.get("roleAssignmentRequests").toString(), GovernanceRoleAssignmentRequestCollectionPage.class);
         }
 
         if (json.has("roleAssignments")) {
-            final GovernanceRoleAssignmentCollectionResponse response = new GovernanceRoleAssignmentCollectionResponse();
-            if (json.has("roleAssignments@odata.nextLink")) {
-                response.nextLink = json.get("roleAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignments").toString(), JsonObject[].class);
-            final GovernanceRoleAssignment[] array = new GovernanceRoleAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleAssignments = new GovernanceRoleAssignmentCollectionPage(response, null);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), GovernanceRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            final GovernanceRoleDefinitionCollectionResponse response = new GovernanceRoleDefinitionCollectionResponse();
-            if (json.has("roleDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
-            final GovernanceRoleDefinition[] array = new GovernanceRoleDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleDefinitions = new GovernanceRoleDefinitionCollectionPage(response, null);
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), GovernanceRoleDefinitionCollectionPage.class);
         }
 
         if (json.has("roleSettings")) {
-            final GovernanceRoleSettingCollectionResponse response = new GovernanceRoleSettingCollectionResponse();
-            if (json.has("roleSettings@odata.nextLink")) {
-                response.nextLink = json.get("roleSettings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleSettings").toString(), JsonObject[].class);
-            final GovernanceRoleSetting[] array = new GovernanceRoleSetting[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleSetting.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleSettings = new GovernanceRoleSettingCollectionPage(response, null);
+            roleSettings = serializer.deserializeObject(json.get("roleSettings").toString(), GovernanceRoleSettingCollectionPage.class);
         }
     }
 }

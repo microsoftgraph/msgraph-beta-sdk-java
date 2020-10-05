@@ -21,7 +21,7 @@ public interface IEmployeeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Employee> callback);
+    void get(final ICallback<? super Employee> callback);
 
     /**
      * Gets the Employee from the service
@@ -36,7 +36,7 @@ public interface IEmployeeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Employee> callback);
+    void delete(final ICallback<? super Employee> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmployeeRequest extends IHttpRequest {
      * @param sourceEmployee the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Employee sourceEmployee, final ICallback<Employee> callback);
+    void patch(final Employee sourceEmployee, final ICallback<? super Employee> callback);
 
     /**
      * Patches this Employee with a source
@@ -68,7 +68,7 @@ public interface IEmployeeRequest extends IHttpRequest {
      * @param newEmployee the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Employee newEmployee, final ICallback<Employee> callback);
+    void post(final Employee newEmployee, final ICallback<? super Employee> callback);
 
     /**
      * Posts a Employee with a new object
@@ -85,7 +85,7 @@ public interface IEmployeeRequest extends IHttpRequest {
      * @param newEmployee the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Employee newEmployee, final ICallback<Employee> callback);
+    void put(final Employee newEmployee, final ICallback<? super Employee> callback);
 
     /**
      * Posts a Employee with a new object

@@ -23,6 +23,6 @@ public class BusinessFlowTemplateCollectionPage extends BaseCollectionPage<Busin
      * @param builder  the request builder for the next collection page
      */
     public BusinessFlowTemplateCollectionPage(final BusinessFlowTemplateCollectionResponse response, final IBusinessFlowTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

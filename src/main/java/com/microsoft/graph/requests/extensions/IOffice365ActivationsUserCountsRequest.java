@@ -21,7 +21,7 @@ public interface IOffice365ActivationsUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365ActivationsUserCounts> callback);
+    void get(final ICallback<? super Office365ActivationsUserCounts> callback);
 
     /**
      * Gets the Office365ActivationsUserCounts from the service
@@ -36,7 +36,7 @@ public interface IOffice365ActivationsUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365ActivationsUserCounts> callback);
+    void delete(final ICallback<? super Office365ActivationsUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365ActivationsUserCountsRequest extends IHttpRequest {
      * @param sourceOffice365ActivationsUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365ActivationsUserCounts sourceOffice365ActivationsUserCounts, final ICallback<Office365ActivationsUserCounts> callback);
+    void patch(final Office365ActivationsUserCounts sourceOffice365ActivationsUserCounts, final ICallback<? super Office365ActivationsUserCounts> callback);
 
     /**
      * Patches this Office365ActivationsUserCounts with a source
@@ -68,7 +68,7 @@ public interface IOffice365ActivationsUserCountsRequest extends IHttpRequest {
      * @param newOffice365ActivationsUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365ActivationsUserCounts newOffice365ActivationsUserCounts, final ICallback<Office365ActivationsUserCounts> callback);
+    void post(final Office365ActivationsUserCounts newOffice365ActivationsUserCounts, final ICallback<? super Office365ActivationsUserCounts> callback);
 
     /**
      * Posts a Office365ActivationsUserCounts with a new object
@@ -85,7 +85,7 @@ public interface IOffice365ActivationsUserCountsRequest extends IHttpRequest {
      * @param newOffice365ActivationsUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365ActivationsUserCounts newOffice365ActivationsUserCounts, final ICallback<Office365ActivationsUserCounts> callback);
+    void put(final Office365ActivationsUserCounts newOffice365ActivationsUserCounts, final ICallback<? super Office365ActivationsUserCounts> callback);
 
     /**
      * Posts a Office365ActivationsUserCounts with a new object

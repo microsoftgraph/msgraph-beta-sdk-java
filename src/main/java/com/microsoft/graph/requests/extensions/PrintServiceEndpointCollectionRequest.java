@@ -40,7 +40,7 @@ public class PrintServiceEndpointCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, PrintServiceEndpointCollectionResponse.class, IPrintServiceEndpointCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintServiceEndpointCollectionPage> callback) {
+    public void get(final ICallback<? super IPrintServiceEndpointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrintServiceEndpointCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback) {
+    public void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintServiceEndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrintServiceEndpointCollectionRequest extends BaseCollectionRequest
      */
     public IPrintServiceEndpointCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintServiceEndpointCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrintServiceEndpointCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintServiceEndpointCollectionRequest)this;
     }
 

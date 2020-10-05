@@ -21,7 +21,7 @@ public interface IWindowsAutopilotSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsAutopilotSettings> callback);
+    void get(final ICallback<? super WindowsAutopilotSettings> callback);
 
     /**
      * Gets the WindowsAutopilotSettings from the service
@@ -36,7 +36,7 @@ public interface IWindowsAutopilotSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsAutopilotSettings> callback);
+    void delete(final ICallback<? super WindowsAutopilotSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsAutopilotSettingsRequest extends IHttpRequest {
      * @param sourceWindowsAutopilotSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsAutopilotSettings sourceWindowsAutopilotSettings, final ICallback<WindowsAutopilotSettings> callback);
+    void patch(final WindowsAutopilotSettings sourceWindowsAutopilotSettings, final ICallback<? super WindowsAutopilotSettings> callback);
 
     /**
      * Patches this WindowsAutopilotSettings with a source
@@ -68,7 +68,7 @@ public interface IWindowsAutopilotSettingsRequest extends IHttpRequest {
      * @param newWindowsAutopilotSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<WindowsAutopilotSettings> callback);
+    void post(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<? super WindowsAutopilotSettings> callback);
 
     /**
      * Posts a WindowsAutopilotSettings with a new object
@@ -85,7 +85,7 @@ public interface IWindowsAutopilotSettingsRequest extends IHttpRequest {
      * @param newWindowsAutopilotSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<WindowsAutopilotSettings> callback);
+    void put(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<? super WindowsAutopilotSettings> callback);
 
     /**
      * Posts a WindowsAutopilotSettings with a new object

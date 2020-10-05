@@ -23,6 +23,6 @@ public class LinkedResourceCollectionPage extends BaseCollectionPage<LinkedResou
      * @param builder  the request builder for the next collection page
      */
     public LinkedResourceCollectionPage(final LinkedResourceCollectionResponse response, final ILinkedResourceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -6,16 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ConnectorGroupType;
 import com.microsoft.graph.models.generated.ConnectorGroupRegion;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.Connector;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ApplicationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionPage;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectorCollectionPage;
 
 
@@ -116,35 +113,11 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("applications")) {
-            final ApplicationCollectionResponse response = new ApplicationCollectionResponse();
-            if (json.has("applications@odata.nextLink")) {
-                response.nextLink = json.get("applications@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("applications").toString(), JsonObject[].class);
-            final Application[] array = new Application[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Application.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            applications = new ApplicationCollectionPage(response, null);
+            applications = serializer.deserializeObject(json.get("applications").toString(), ApplicationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            final ConnectorCollectionResponse response = new ConnectorCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final Connector[] array = new Connector[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Connector.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new ConnectorCollectionPage(response, null);
+            members = serializer.deserializeObject(json.get("members").toString(), ConnectorCollectionPage.class);
         }
     }
 }

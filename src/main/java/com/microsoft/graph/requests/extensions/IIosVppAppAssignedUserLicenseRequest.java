@@ -21,7 +21,7 @@ public interface IIosVppAppAssignedUserLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVppAppAssignedUserLicense> callback);
+    void get(final ICallback<? super IosVppAppAssignedUserLicense> callback);
 
     /**
      * Gets the IosVppAppAssignedUserLicense from the service
@@ -36,7 +36,7 @@ public interface IIosVppAppAssignedUserLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVppAppAssignedUserLicense> callback);
+    void delete(final ICallback<? super IosVppAppAssignedUserLicense> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVppAppAssignedUserLicenseRequest extends IHttpRequest {
      * @param sourceIosVppAppAssignedUserLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVppAppAssignedUserLicense sourceIosVppAppAssignedUserLicense, final ICallback<IosVppAppAssignedUserLicense> callback);
+    void patch(final IosVppAppAssignedUserLicense sourceIosVppAppAssignedUserLicense, final ICallback<? super IosVppAppAssignedUserLicense> callback);
 
     /**
      * Patches this IosVppAppAssignedUserLicense with a source
@@ -68,7 +68,7 @@ public interface IIosVppAppAssignedUserLicenseRequest extends IHttpRequest {
      * @param newIosVppAppAssignedUserLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<IosVppAppAssignedUserLicense> callback);
+    void post(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<? super IosVppAppAssignedUserLicense> callback);
 
     /**
      * Posts a IosVppAppAssignedUserLicense with a new object
@@ -85,7 +85,7 @@ public interface IIosVppAppAssignedUserLicenseRequest extends IHttpRequest {
      * @param newIosVppAppAssignedUserLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<IosVppAppAssignedUserLicense> callback);
+    void put(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<? super IosVppAppAssignedUserLicense> callback);
 
     /**
      * Posts a IosVppAppAssignedUserLicense with a new object

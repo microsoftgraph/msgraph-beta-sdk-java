@@ -21,7 +21,7 @@ public interface IAzureADLicenseUsageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AzureADLicenseUsage> callback);
+    void get(final ICallback<? super AzureADLicenseUsage> callback);
 
     /**
      * Gets the AzureADLicenseUsage from the service
@@ -36,7 +36,7 @@ public interface IAzureADLicenseUsageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AzureADLicenseUsage> callback);
+    void delete(final ICallback<? super AzureADLicenseUsage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAzureADLicenseUsageRequest extends IHttpRequest {
      * @param sourceAzureADLicenseUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AzureADLicenseUsage sourceAzureADLicenseUsage, final ICallback<AzureADLicenseUsage> callback);
+    void patch(final AzureADLicenseUsage sourceAzureADLicenseUsage, final ICallback<? super AzureADLicenseUsage> callback);
 
     /**
      * Patches this AzureADLicenseUsage with a source
@@ -68,7 +68,7 @@ public interface IAzureADLicenseUsageRequest extends IHttpRequest {
      * @param newAzureADLicenseUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<AzureADLicenseUsage> callback);
+    void post(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<? super AzureADLicenseUsage> callback);
 
     /**
      * Posts a AzureADLicenseUsage with a new object
@@ -85,7 +85,7 @@ public interface IAzureADLicenseUsageRequest extends IHttpRequest {
      * @param newAzureADLicenseUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<AzureADLicenseUsage> callback);
+    void put(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<? super AzureADLicenseUsage> callback);
 
     /**
      * Posts a AzureADLicenseUsage with a new object

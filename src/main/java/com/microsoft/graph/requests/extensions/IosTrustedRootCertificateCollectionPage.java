@@ -23,6 +23,6 @@ public class IosTrustedRootCertificateCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public IosTrustedRootCertificateCollectionPage(final IosTrustedRootCertificateCollectionResponse response, final IIosTrustedRootCertificateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

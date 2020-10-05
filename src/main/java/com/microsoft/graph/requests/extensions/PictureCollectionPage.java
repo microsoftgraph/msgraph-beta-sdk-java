@@ -23,6 +23,6 @@ public class PictureCollectionPage extends BaseCollectionPage<Picture, IPictureC
      * @param builder  the request builder for the next collection page
      */
     public PictureCollectionPage(final PictureCollectionResponse response, final IPictureCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

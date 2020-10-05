@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICredentialUserRegistrationDetailsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICredentialUserRegistrationDetailsCollectionPage> callback);
+    void get(final ICallback<? super ICredentialUserRegistrationDetailsCollectionPage> callback);
 
     ICredentialUserRegistrationDetailsCollectionPage get() throws ClientException;
 
-    void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback);
+    void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback);
 
     CredentialUserRegistrationDetails post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ICredentialUserRegistrationDetailsCollectionRequest extends IHt
      * @return the updated request
      */
     ICredentialUserRegistrationDetailsCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICredentialUserRegistrationDetailsCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ICredentialUserRegistrationDetailsCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	ICredentialUserRegistrationDetailsCollectionRequest skipToken(String skipToken);
+	ICredentialUserRegistrationDetailsCollectionRequest skipToken(final String skipToken);
 }

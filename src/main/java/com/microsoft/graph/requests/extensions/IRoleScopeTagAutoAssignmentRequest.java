@@ -21,7 +21,7 @@ public interface IRoleScopeTagAutoAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RoleScopeTagAutoAssignment> callback);
+    void get(final ICallback<? super RoleScopeTagAutoAssignment> callback);
 
     /**
      * Gets the RoleScopeTagAutoAssignment from the service
@@ -36,7 +36,7 @@ public interface IRoleScopeTagAutoAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RoleScopeTagAutoAssignment> callback);
+    void delete(final ICallback<? super RoleScopeTagAutoAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRoleScopeTagAutoAssignmentRequest extends IHttpRequest {
      * @param sourceRoleScopeTagAutoAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RoleScopeTagAutoAssignment sourceRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback);
+    void patch(final RoleScopeTagAutoAssignment sourceRoleScopeTagAutoAssignment, final ICallback<? super RoleScopeTagAutoAssignment> callback);
 
     /**
      * Patches this RoleScopeTagAutoAssignment with a source
@@ -68,7 +68,7 @@ public interface IRoleScopeTagAutoAssignmentRequest extends IHttpRequest {
      * @param newRoleScopeTagAutoAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback);
+    void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<? super RoleScopeTagAutoAssignment> callback);
 
     /**
      * Posts a RoleScopeTagAutoAssignment with a new object
@@ -85,7 +85,7 @@ public interface IRoleScopeTagAutoAssignmentRequest extends IHttpRequest {
      * @param newRoleScopeTagAutoAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback);
+    void put(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<? super RoleScopeTagAutoAssignment> callback);
 
     /**
      * Posts a RoleScopeTagAutoAssignment with a new object

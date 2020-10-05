@@ -40,7 +40,7 @@ public class CustomerPaymentJournalCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, CustomerPaymentJournalCollectionResponse.class, ICustomerPaymentJournalCollectionPage.class);
     }
 
-    public void get(final ICallback<ICustomerPaymentJournalCollectionPage> callback) {
+    public void get(final ICallback<? super ICustomerPaymentJournalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CustomerPaymentJournalCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback) {
+    public void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CustomerPaymentJournalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class CustomerPaymentJournalCollectionRequest extends BaseCollectionReque
      */
     public ICustomerPaymentJournalCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CustomerPaymentJournalCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICustomerPaymentJournalCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CustomerPaymentJournalCollectionRequest)this;
     }
 

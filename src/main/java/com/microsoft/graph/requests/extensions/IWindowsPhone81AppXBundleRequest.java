@@ -21,7 +21,7 @@ public interface IWindowsPhone81AppXBundleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81AppXBundle> callback);
+    void get(final ICallback<? super WindowsPhone81AppXBundle> callback);
 
     /**
      * Gets the WindowsPhone81AppXBundle from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81AppXBundleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81AppXBundle> callback);
+    void delete(final ICallback<? super WindowsPhone81AppXBundle> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81AppXBundleRequest extends IHttpRequest {
      * @param sourceWindowsPhone81AppXBundle the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81AppXBundle sourceWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback);
+    void patch(final WindowsPhone81AppXBundle sourceWindowsPhone81AppXBundle, final ICallback<? super WindowsPhone81AppXBundle> callback);
 
     /**
      * Patches this WindowsPhone81AppXBundle with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81AppXBundleRequest extends IHttpRequest {
      * @param newWindowsPhone81AppXBundle the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback);
+    void post(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<? super WindowsPhone81AppXBundle> callback);
 
     /**
      * Posts a WindowsPhone81AppXBundle with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81AppXBundleRequest extends IHttpRequest {
      * @param newWindowsPhone81AppXBundle the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback);
+    void put(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<? super WindowsPhone81AppXBundle> callback);
 
     /**
      * Posts a WindowsPhone81AppXBundle with a new object

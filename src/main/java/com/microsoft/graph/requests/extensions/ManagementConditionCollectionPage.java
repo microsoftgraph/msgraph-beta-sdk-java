@@ -23,6 +23,6 @@ public class ManagementConditionCollectionPage extends BaseCollectionPage<Manage
      * @param builder  the request builder for the next collection page
      */
     public ManagementConditionCollectionPage(final ManagementConditionCollectionResponse response, final IManagementConditionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

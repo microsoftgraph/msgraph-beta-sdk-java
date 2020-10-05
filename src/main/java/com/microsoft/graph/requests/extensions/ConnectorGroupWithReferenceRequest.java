@@ -43,7 +43,7 @@ public class ConnectorGroupWithReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, ConnectorGroup.class);
     }
 
-    public void post(final ConnectorGroup newConnectorGroup, final IJsonBackedObject payload, final ICallback<ConnectorGroup> callback) {
+    public void post(final ConnectorGroup newConnectorGroup, final IJsonBackedObject payload, final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -55,7 +55,7 @@ public class ConnectorGroupWithReferenceRequest extends BaseRequest implements I
         return null;
     }
 
-    public void get(final ICallback<ConnectorGroup> callback) {
+    public void get(final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class ConnectorGroupWithReferenceRequest extends BaseRequest implements I
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ConnectorGroup> callback) {
+	public void delete(final ICallback<? super ConnectorGroup> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -71,7 +71,7 @@ public class ConnectorGroupWithReferenceRequest extends BaseRequest implements I
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ConnectorGroup sourceConnectorGroup, final ICallback<ConnectorGroup> callback) {
+	public void patch(final ConnectorGroup sourceConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
 		send(HttpMethod.PATCH, callback, sourceConnectorGroup);
 	}
 
@@ -99,16 +99,6 @@ public class ConnectorGroupWithReferenceRequest extends BaseRequest implements I
      */
     public IConnectorGroupWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ConnectorGroupWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IConnectorGroupWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ConnectorGroupWithReferenceRequest)this;
     }
 }

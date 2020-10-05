@@ -37,7 +37,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<FocusActivityStatistics> callback) {
+    public void get(final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<FocusActivityStatistics> callback) {
+    public void delete(final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param sourceFocusActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FocusActivityStatistics sourceFocusActivityStatistics, final ICallback<FocusActivityStatistics> callback) {
+    public void patch(final FocusActivityStatistics sourceFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.PATCH, callback, sourceFocusActivityStatistics);
     }
 
@@ -96,7 +96,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param newFocusActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<FocusActivityStatistics> callback) {
+    public void post(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.POST, callback, newFocusActivityStatistics);
     }
 
@@ -117,7 +117,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param newFocusActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<FocusActivityStatistics> callback) {
+    public void put(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.PUT, callback, newFocusActivityStatistics);
     }
 
@@ -151,17 +151,6 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      */
      public IFocusActivityStatisticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FocusActivityStatisticsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IFocusActivityStatisticsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (FocusActivityStatisticsRequest)this;
      }
 

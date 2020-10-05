@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserGetEffectiveDeviceEnrollmentConfigurationsCollectionPage> callback);
+    void get(final ICallback<? super IUserGetEffectiveDeviceEnrollmentConfigurationsCollectionPage> callback);
 
     IUserGetEffectiveDeviceEnrollmentConfigurationsCollectionPage get() throws ClientException;
 

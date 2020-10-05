@@ -41,7 +41,7 @@ public class ImportedAppleDeviceIdentityCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, ImportedAppleDeviceIdentityCollectionResponse.class, IImportedAppleDeviceIdentityCollectionPage.class);
     }
 
-    public void get(final ICallback<IImportedAppleDeviceIdentityCollectionPage> callback) {
+    public void get(final ICallback<? super IImportedAppleDeviceIdentityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ImportedAppleDeviceIdentityCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback) {
+    public void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ImportedAppleDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class ImportedAppleDeviceIdentityCollectionRequest extends BaseCollection
      */
     public IImportedAppleDeviceIdentityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ImportedAppleDeviceIdentityCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IImportedAppleDeviceIdentityCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ImportedAppleDeviceIdentityCollectionRequest)this;
     }
 

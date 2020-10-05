@@ -41,7 +41,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementIntentSettingCategory> callback) {
+    public void get(final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementIntentSettingCategory> callback) {
+    public void delete(final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param sourceDeviceManagementIntentSettingCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback) {
+    public void patch(final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntentSettingCategory);
     }
 
@@ -100,7 +100,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param newDeviceManagementIntentSettingCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback) {
+    public void post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntentSettingCategory);
     }
 
@@ -121,7 +121,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param newDeviceManagementIntentSettingCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback) {
+    public void put(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntentSettingCategory);
     }
 
@@ -155,17 +155,6 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      */
      public IDeviceManagementIntentSettingCategoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentSettingCategoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementIntentSettingCategoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementIntentSettingCategoryRequest)this;
      }
 

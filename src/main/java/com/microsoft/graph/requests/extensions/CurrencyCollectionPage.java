@@ -23,6 +23,6 @@ public class CurrencyCollectionPage extends BaseCollectionPage<Currency, ICurren
      * @param builder  the request builder for the next collection page
      */
     public CurrencyCollectionPage(final CurrencyCollectionResponse response, final ICurrencyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

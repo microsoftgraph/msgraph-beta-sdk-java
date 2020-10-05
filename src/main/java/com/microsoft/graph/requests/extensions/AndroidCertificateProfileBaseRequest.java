@@ -54,7 +54,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidCertificateProfileBase> callback) {
+    public void get(final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param sourceAndroidCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback) {
+    public void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidCertificateProfileBase);
     }
 
@@ -113,7 +113,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param newAndroidCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback) {
+    public void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newAndroidCertificateProfileBase);
     }
 
@@ -134,7 +134,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param newAndroidCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback) {
+    public void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidCertificateProfileBase);
     }
 
@@ -168,17 +168,6 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      */
      public IAndroidCertificateProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidCertificateProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidCertificateProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidCertificateProfileBaseRequest)this;
      }
 

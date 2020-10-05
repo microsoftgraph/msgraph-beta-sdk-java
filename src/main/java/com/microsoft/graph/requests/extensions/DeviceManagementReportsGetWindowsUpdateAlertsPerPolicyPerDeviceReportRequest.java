@@ -36,7 +36,7 @@ public class DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceRepo
         body = new DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportBody();
     }
 
-    public void post(final ICallback<java.io.InputStream> callback) {
+    public void post(final ICallback<? super java.io.InputStream> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceRepo
      */
     public IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest)this;
     }
 

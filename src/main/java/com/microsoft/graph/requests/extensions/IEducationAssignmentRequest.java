@@ -21,7 +21,7 @@ public interface IEducationAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationAssignment> callback);
+    void get(final ICallback<? super EducationAssignment> callback);
 
     /**
      * Gets the EducationAssignment from the service
@@ -36,7 +36,7 @@ public interface IEducationAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationAssignment> callback);
+    void delete(final ICallback<? super EducationAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationAssignmentRequest extends IHttpRequest {
      * @param sourceEducationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationAssignment sourceEducationAssignment, final ICallback<EducationAssignment> callback);
+    void patch(final EducationAssignment sourceEducationAssignment, final ICallback<? super EducationAssignment> callback);
 
     /**
      * Patches this EducationAssignment with a source
@@ -68,7 +68,7 @@ public interface IEducationAssignmentRequest extends IHttpRequest {
      * @param newEducationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationAssignment newEducationAssignment, final ICallback<EducationAssignment> callback);
+    void post(final EducationAssignment newEducationAssignment, final ICallback<? super EducationAssignment> callback);
 
     /**
      * Posts a EducationAssignment with a new object
@@ -85,7 +85,7 @@ public interface IEducationAssignmentRequest extends IHttpRequest {
      * @param newEducationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationAssignment newEducationAssignment, final ICallback<EducationAssignment> callback);
+    void put(final EducationAssignment newEducationAssignment, final ICallback<? super EducationAssignment> callback);
 
     /**
      * Posts a EducationAssignment with a new object

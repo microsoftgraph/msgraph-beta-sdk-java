@@ -22,7 +22,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagementConditionCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagementConditionCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IManagementConditionCollectionWithReferencesPage> callback);
 
     IManagementConditionCollectionWithReferencesPage get() throws ClientException;
 

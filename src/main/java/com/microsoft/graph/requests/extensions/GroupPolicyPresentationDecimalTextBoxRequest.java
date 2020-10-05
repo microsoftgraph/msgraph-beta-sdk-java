@@ -37,7 +37,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyPresentationDecimalTextBox> callback) {
+    public void get(final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyPresentationDecimalTextBox> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param sourceGroupPolicyPresentationDecimalTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback) {
+    public void patch(final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param newGroupPolicyPresentationDecimalTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback) {
+    public void post(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param newGroupPolicyPresentationDecimalTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback) {
+    public void put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      */
      public IGroupPolicyPresentationDecimalTextBoxRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationDecimalTextBoxRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyPresentationDecimalTextBoxRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyPresentationDecimalTextBoxRequest)this;
      }
 

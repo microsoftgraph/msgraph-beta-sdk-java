@@ -35,7 +35,7 @@ public class ConnectorGroupCollectionWithReferencesRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, ConnectorGroupCollectionResponse.class, IConnectorGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<IConnectorGroupCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IConnectorGroupCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class ConnectorGroupCollectionWithReferencesRequest extends BaseCollectio
 
     public IConnectorGroupCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ConnectorGroupCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IConnectorGroupCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConnectorGroupCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IConnectorGroupCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IConnectorGroupCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ConnectorGroupCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IConnectorGroupCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ConnectorGroupCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IConnectorGroupCollectionWithReferencesPage buildFromResponse(final ConnectorGroupCollectionResponse response) {

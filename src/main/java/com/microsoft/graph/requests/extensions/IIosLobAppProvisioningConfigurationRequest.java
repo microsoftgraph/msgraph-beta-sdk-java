@@ -21,7 +21,7 @@ public interface IIosLobAppProvisioningConfigurationRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosLobAppProvisioningConfiguration> callback);
+    void get(final ICallback<? super IosLobAppProvisioningConfiguration> callback);
 
     /**
      * Gets the IosLobAppProvisioningConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosLobAppProvisioningConfigurationRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosLobAppProvisioningConfiguration> callback);
+    void delete(final ICallback<? super IosLobAppProvisioningConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosLobAppProvisioningConfigurationRequest extends IHttpRequest
      * @param sourceIosLobAppProvisioningConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback);
+    void patch(final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback);
 
     /**
      * Patches this IosLobAppProvisioningConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosLobAppProvisioningConfigurationRequest extends IHttpRequest
      * @param newIosLobAppProvisioningConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback);
+    void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback);
 
     /**
      * Posts a IosLobAppProvisioningConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosLobAppProvisioningConfigurationRequest extends IHttpRequest
      * @param newIosLobAppProvisioningConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback);
+    void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback);
 
     /**
      * Posts a IosLobAppProvisioningConfiguration with a new object

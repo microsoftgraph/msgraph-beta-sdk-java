@@ -21,7 +21,7 @@ public interface IDeviceConfigurationUserStateSummaryRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfigurationUserStateSummary> callback);
+    void get(final ICallback<? super DeviceConfigurationUserStateSummary> callback);
 
     /**
      * Gets the DeviceConfigurationUserStateSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationUserStateSummaryRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfigurationUserStateSummary> callback);
+    void delete(final ICallback<? super DeviceConfigurationUserStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationUserStateSummaryRequest extends IHttpReques
      * @param sourceDeviceConfigurationUserStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary, final ICallback<DeviceConfigurationUserStateSummary> callback);
+    void patch(final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback);
 
     /**
      * Patches this DeviceConfigurationUserStateSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationUserStateSummaryRequest extends IHttpReques
      * @param newDeviceConfigurationUserStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<DeviceConfigurationUserStateSummary> callback);
+    void post(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback);
 
     /**
      * Posts a DeviceConfigurationUserStateSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationUserStateSummaryRequest extends IHttpReques
      * @param newDeviceConfigurationUserStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<DeviceConfigurationUserStateSummary> callback);
+    void put(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback);
 
     /**
      * Posts a DeviceConfigurationUserStateSummary with a new object

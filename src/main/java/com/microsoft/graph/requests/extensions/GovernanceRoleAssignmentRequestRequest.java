@@ -44,7 +44,7 @@ public class GovernanceRoleAssignmentRequestRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GovernanceRoleAssignmentRequest> callback) {
+    public void get(final ICallback<? super GovernanceRoleAssignmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class GovernanceRoleAssignmentRequestRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GovernanceRoleAssignmentRequest> callback) {
+    public void delete(final ICallback<? super GovernanceRoleAssignmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class GovernanceRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param sourceGovernanceRoleAssignmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceRoleAssignmentRequest sourceGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback) {
+    public void patch(final GovernanceRoleAssignmentRequest sourceGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceRoleAssignmentRequest);
     }
 
@@ -103,7 +103,7 @@ public class GovernanceRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param newGovernanceRoleAssignmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback) {
+    public void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback) {
         send(HttpMethod.POST, callback, newGovernanceRoleAssignmentRequest);
     }
 
@@ -124,7 +124,7 @@ public class GovernanceRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param newGovernanceRoleAssignmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback) {
+    public void put(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback) {
         send(HttpMethod.PUT, callback, newGovernanceRoleAssignmentRequest);
     }
 
@@ -158,17 +158,6 @@ public class GovernanceRoleAssignmentRequestRequest extends BaseRequest implemen
      */
      public IGovernanceRoleAssignmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceRoleAssignmentRequestRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGovernanceRoleAssignmentRequestRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GovernanceRoleAssignmentRequestRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DomainSecurityProfile> callback) {
+    public void get(final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DomainSecurityProfile> callback) {
+    public void delete(final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param sourceDomainSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainSecurityProfile sourceDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback) {
+    public void patch(final DomainSecurityProfile sourceDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainSecurityProfile);
     }
 
@@ -96,7 +96,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param newDomainSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback) {
+    public void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newDomainSecurityProfile);
     }
 
@@ -117,7 +117,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param newDomainSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback) {
+    public void put(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newDomainSecurityProfile);
     }
 
@@ -151,17 +151,6 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      */
      public IDomainSecurityProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainSecurityProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDomainSecurityProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DomainSecurityProfileRequest)this;
      }
 

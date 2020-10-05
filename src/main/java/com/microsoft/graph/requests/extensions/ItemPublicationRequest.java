@@ -37,7 +37,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemPublication> callback) {
+    public void get(final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemPublication> callback) {
+    public void delete(final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param sourceItemPublication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemPublication sourceItemPublication, final ICallback<ItemPublication> callback) {
+    public void patch(final ItemPublication sourceItemPublication, final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.PATCH, callback, sourceItemPublication);
     }
 
@@ -96,7 +96,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param newItemPublication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback) {
+    public void post(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.POST, callback, newItemPublication);
     }
 
@@ -117,7 +117,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param newItemPublication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback) {
+    public void put(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.PUT, callback, newItemPublication);
     }
 
@@ -151,17 +151,6 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      */
      public IItemPublicationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemPublicationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemPublicationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemPublicationRequest)this;
      }
 

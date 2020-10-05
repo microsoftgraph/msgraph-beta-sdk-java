@@ -23,6 +23,6 @@ public class EmbeddedSIMActivationCodePoolCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public EmbeddedSIMActivationCodePoolCollectionPage(final EmbeddedSIMActivationCodePoolCollectionResponse response, final IEmbeddedSIMActivationCodePoolCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IMobileAppInstallStatusRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppInstallStatus> callback);
+    void get(final ICallback<? super MobileAppInstallStatus> callback);
 
     /**
      * Gets the MobileAppInstallStatus from the service
@@ -36,7 +36,7 @@ public interface IMobileAppInstallStatusRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppInstallStatus> callback);
+    void delete(final ICallback<? super MobileAppInstallStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppInstallStatusRequest extends IHttpRequest {
      * @param sourceMobileAppInstallStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppInstallStatus sourceMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback);
+    void patch(final MobileAppInstallStatus sourceMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback);
 
     /**
      * Patches this MobileAppInstallStatus with a source
@@ -68,7 +68,7 @@ public interface IMobileAppInstallStatusRequest extends IHttpRequest {
      * @param newMobileAppInstallStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback);
+    void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback);
 
     /**
      * Posts a MobileAppInstallStatus with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppInstallStatusRequest extends IHttpRequest {
      * @param newMobileAppInstallStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback);
+    void put(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback);
 
     /**
      * Posts a MobileAppInstallStatus with a new object

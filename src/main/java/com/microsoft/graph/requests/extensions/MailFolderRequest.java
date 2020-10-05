@@ -76,7 +76,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MailFolder> callback) {
+    public void get(final ICallback<? super MailFolder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MailFolder> callback) {
+    public void delete(final ICallback<? super MailFolder> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -114,7 +114,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      * @param sourceMailFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MailFolder sourceMailFolder, final ICallback<MailFolder> callback) {
+    public void patch(final MailFolder sourceMailFolder, final ICallback<? super MailFolder> callback) {
         send(HttpMethod.PATCH, callback, sourceMailFolder);
     }
 
@@ -135,7 +135,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      * @param newMailFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MailFolder newMailFolder, final ICallback<MailFolder> callback) {
+    public void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback) {
         send(HttpMethod.POST, callback, newMailFolder);
     }
 
@@ -156,7 +156,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      * @param newMailFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MailFolder newMailFolder, final ICallback<MailFolder> callback) {
+    public void put(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback) {
         send(HttpMethod.PUT, callback, newMailFolder);
     }
 
@@ -190,17 +190,6 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      */
      public IMailFolderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MailFolderRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMailFolderRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MailFolderRequest)this;
      }
 

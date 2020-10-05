@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppInstallStatus;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionPage;
 
 
@@ -124,19 +122,7 @@ public class UserAppInstallStatus extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceStatuses")) {
-            final MobileAppInstallStatusCollectionResponse response = new MobileAppInstallStatusCollectionResponse();
-            if (json.has("deviceStatuses@odata.nextLink")) {
-                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
-            final MobileAppInstallStatus[] array = new MobileAppInstallStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppInstallStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStatuses = new MobileAppInstallStatusCollectionPage(response, null);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), MobileAppInstallStatusCollectionPage.class);
         }
     }
 }

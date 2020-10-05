@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserExperienceAnalyticsCategoryWithReferenceRequest extends IHttpRequest {
 
-    void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload, final ICallback<UserExperienceAnalyticsCategory> callback);
+    void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     UserExperienceAnalyticsCategory post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<UserExperienceAnalyticsCategory> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     UserExperienceAnalyticsCategory get() throws ClientException;
 
-	void delete(final ICallback<UserExperienceAnalyticsCategory> callback);
+	void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+	void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
 	UserExperienceAnalyticsCategory patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory) throws ClientException;
 

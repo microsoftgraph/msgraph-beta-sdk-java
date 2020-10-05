@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessReviewScope;
 import com.microsoft.graph.models.extensions.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemCollectionPage;
 
 
@@ -117,19 +115,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
 
         if (json.has("decisions")) {
-            final AccessReviewInstanceDecisionItemCollectionResponse response = new AccessReviewInstanceDecisionItemCollectionResponse();
-            if (json.has("decisions@odata.nextLink")) {
-                response.nextLink = json.get("decisions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("decisions").toString(), JsonObject[].class);
-            final AccessReviewInstanceDecisionItem[] array = new AccessReviewInstanceDecisionItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewInstanceDecisionItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            decisions = new AccessReviewInstanceDecisionItemCollectionPage(response, null);
+            decisions = serializer.deserializeObject(json.get("decisions").toString(), AccessReviewInstanceDecisionItemCollectionPage.class);
         }
     }
 }

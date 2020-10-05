@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetSharePointSiteUsageStorageCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetSharePointSiteUsageStorageCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetSharePointSiteUsageStorageCollectionPage> callback);
 
     IReportRootGetSharePointSiteUsageStorageCollectionPage get() throws ClientException;
 

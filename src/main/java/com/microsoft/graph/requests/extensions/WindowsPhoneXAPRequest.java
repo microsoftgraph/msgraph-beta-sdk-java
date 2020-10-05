@@ -37,7 +37,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhoneXAP> callback) {
+    public void get(final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhoneXAP> callback) {
+    public void delete(final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param sourceWindowsPhoneXAP the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhoneXAP sourceWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback) {
+    public void patch(final WindowsPhoneXAP sourceWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhoneXAP);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param newWindowsPhoneXAP the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback) {
+    public void post(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.POST, callback, newWindowsPhoneXAP);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param newWindowsPhoneXAP the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback) {
+    public void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhoneXAP);
     }
 
@@ -151,17 +151,6 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      */
      public IWindowsPhoneXAPRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhoneXAPRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhoneXAPRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhoneXAPRequest)this;
      }
 

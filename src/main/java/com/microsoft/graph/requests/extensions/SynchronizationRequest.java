@@ -46,7 +46,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Synchronization> callback) {
+    public void get(final ICallback<? super Synchronization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Synchronization> callback) {
+    public void delete(final ICallback<? super Synchronization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param sourceSynchronization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Synchronization sourceSynchronization, final ICallback<Synchronization> callback) {
+    public void patch(final Synchronization sourceSynchronization, final ICallback<? super Synchronization> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronization);
     }
 
@@ -105,7 +105,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param newSynchronization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Synchronization newSynchronization, final ICallback<Synchronization> callback) {
+    public void post(final Synchronization newSynchronization, final ICallback<? super Synchronization> callback) {
         send(HttpMethod.POST, callback, newSynchronization);
     }
 
@@ -126,7 +126,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param newSynchronization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Synchronization newSynchronization, final ICallback<Synchronization> callback) {
+    public void put(final Synchronization newSynchronization, final ICallback<? super Synchronization> callback) {
         send(HttpMethod.PUT, callback, newSynchronization);
     }
 
@@ -160,17 +160,6 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      */
      public ISynchronizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISynchronizationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SynchronizationRequest)this;
      }
 

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlaceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPlaceCollectionPage> callback);
+    void get(final ICallback<? super IPlaceCollectionPage> callback);
 
     IPlaceCollectionPage get() throws ClientException;
 
-    void post(final Place newPlace, final ICallback<Place> callback);
+    void post(final Place newPlace, final ICallback<? super Place> callback);
 
     Place post(final Place newPlace) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IPlaceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPlaceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPlaceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IPlaceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlaceCollectionRequest skipToken(String skipToken);
+	IPlaceCollectionRequest skipToken(final String skipToken);
 }

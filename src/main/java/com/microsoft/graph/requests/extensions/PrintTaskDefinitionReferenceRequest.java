@@ -38,7 +38,7 @@ public class PrintTaskDefinitionReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, PrintTaskDefinition.class);
     }
 
-    public void delete(final ICallback<PrintTaskDefinition> callback) {
+    public void delete(final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class PrintTaskDefinitionReferenceRequest extends BaseRequest implements 
         return (PrintTaskDefinitionReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintTaskDefinitionReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrintTaskDefinitionReferenceRequest)this;
-    }
-    /**
      * Puts the PrintTaskDefinition
      *
      * @param srcPrintTaskDefinition the PrintTaskDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PrintTaskDefinition srcPrintTaskDefinition, final ICallback<PrintTaskDefinition> callback) {
+    public void put(PrintTaskDefinition srcPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.PUT, callback, srcPrintTaskDefinition);
     }
 

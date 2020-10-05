@@ -42,7 +42,7 @@ public interface IOrganizationalBrandingPropertiesBannerLogoStreamRequest extend
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents, final ICallback<OrganizationalBrandingProperties> callback);
+    void put(final byte[] fileContents, final ICallback<? super OrganizationalBrandingProperties> callback);
 
     /**
      * Uploads to the stream

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IBusinessFlowTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IBusinessFlowTemplateCollectionPage> callback);
+    void get(final ICallback<? super IBusinessFlowTemplateCollectionPage> callback);
 
     IBusinessFlowTemplateCollectionPage get() throws ClientException;
 
-    void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback);
+    void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback);
 
     BusinessFlowTemplate post(final BusinessFlowTemplate newBusinessFlowTemplate) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IBusinessFlowTemplateCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IBusinessFlowTemplateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IBusinessFlowTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IBusinessFlowTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IBusinessFlowTemplateCollectionRequest skipToken(String skipToken);
+	IBusinessFlowTemplateCollectionRequest skipToken(final String skipToken);
 }

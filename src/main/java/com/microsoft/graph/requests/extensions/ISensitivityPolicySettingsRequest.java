@@ -21,7 +21,7 @@ public interface ISensitivityPolicySettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SensitivityPolicySettings> callback);
+    void get(final ICallback<? super SensitivityPolicySettings> callback);
 
     /**
      * Gets the SensitivityPolicySettings from the service
@@ -36,7 +36,7 @@ public interface ISensitivityPolicySettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SensitivityPolicySettings> callback);
+    void delete(final ICallback<? super SensitivityPolicySettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISensitivityPolicySettingsRequest extends IHttpRequest {
      * @param sourceSensitivityPolicySettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SensitivityPolicySettings sourceSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback);
+    void patch(final SensitivityPolicySettings sourceSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback);
 
     /**
      * Patches this SensitivityPolicySettings with a source
@@ -68,7 +68,7 @@ public interface ISensitivityPolicySettingsRequest extends IHttpRequest {
      * @param newSensitivityPolicySettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback);
+    void post(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback);
 
     /**
      * Posts a SensitivityPolicySettings with a new object
@@ -85,7 +85,7 @@ public interface ISensitivityPolicySettingsRequest extends IHttpRequest {
      * @param newSensitivityPolicySettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback);
+    void put(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback);
 
     /**
      * Posts a SensitivityPolicySettings with a new object

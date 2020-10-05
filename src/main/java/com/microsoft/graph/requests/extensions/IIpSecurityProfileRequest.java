@@ -21,7 +21,7 @@ public interface IIpSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IpSecurityProfile> callback);
+    void get(final ICallback<? super IpSecurityProfile> callback);
 
     /**
      * Gets the IpSecurityProfile from the service
@@ -36,7 +36,7 @@ public interface IIpSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IpSecurityProfile> callback);
+    void delete(final ICallback<? super IpSecurityProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIpSecurityProfileRequest extends IHttpRequest {
      * @param sourceIpSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IpSecurityProfile sourceIpSecurityProfile, final ICallback<IpSecurityProfile> callback);
+    void patch(final IpSecurityProfile sourceIpSecurityProfile, final ICallback<? super IpSecurityProfile> callback);
 
     /**
      * Patches this IpSecurityProfile with a source
@@ -68,7 +68,7 @@ public interface IIpSecurityProfileRequest extends IHttpRequest {
      * @param newIpSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IpSecurityProfile newIpSecurityProfile, final ICallback<IpSecurityProfile> callback);
+    void post(final IpSecurityProfile newIpSecurityProfile, final ICallback<? super IpSecurityProfile> callback);
 
     /**
      * Posts a IpSecurityProfile with a new object
@@ -85,7 +85,7 @@ public interface IIpSecurityProfileRequest extends IHttpRequest {
      * @param newIpSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IpSecurityProfile newIpSecurityProfile, final ICallback<IpSecurityProfile> callback);
+    void put(final IpSecurityProfile newIpSecurityProfile, final ICallback<? super IpSecurityProfile> callback);
 
     /**
      * Posts a IpSecurityProfile with a new object

@@ -35,7 +35,7 @@ public class DetectedAppCollectionWithReferencesRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, IDetectedAppCollectionPage.class);
     }
 
-    public void get(final ICallback<IDetectedAppCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IDetectedAppCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class DetectedAppCollectionWithReferencesRequest extends BaseCollectionRe
 
     public IDetectedAppCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DetectedAppCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDetectedAppCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DetectedAppCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IDetectedAppCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IDetectedAppCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DetectedAppCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDetectedAppCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (DetectedAppCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDetectedAppCollectionWithReferencesPage buildFromResponse(final DetectedAppCollectionResponse response) {

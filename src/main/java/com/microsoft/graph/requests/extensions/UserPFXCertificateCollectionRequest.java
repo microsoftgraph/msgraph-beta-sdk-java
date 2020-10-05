@@ -40,7 +40,7 @@ public class UserPFXCertificateCollectionRequest extends BaseCollectionRequest<U
         super(requestUrl, client, requestOptions, UserPFXCertificateCollectionResponse.class, IUserPFXCertificateCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserPFXCertificateCollectionPage> callback) {
+    public void get(final ICallback<? super IUserPFXCertificateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserPFXCertificateCollectionRequest extends BaseCollectionRequest<U
         return buildFromResponse(response);
     }
 
-    public void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<UserPFXCertificate> callback) {
+    public void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserPFXCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserPFXCertificateCollectionRequest extends BaseCollectionRequest<U
      */
     public IUserPFXCertificateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserPFXCertificateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserPFXCertificateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserPFXCertificateCollectionRequest)this;
     }
 

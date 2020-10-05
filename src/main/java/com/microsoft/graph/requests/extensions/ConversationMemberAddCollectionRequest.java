@@ -45,7 +45,7 @@ public class ConversationMemberAddCollectionRequest extends BaseCollectionReques
     }
 
 
-    public void post(final ICallback<IConversationMemberAddCollectionPage> callback) {
+    public void post(final ICallback<? super IConversationMemberAddCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,6 +118,17 @@ public class ConversationMemberAddCollectionRequest extends BaseCollectionReques
      */
     public IConversationMemberAddCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IConversationMemberAddCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IConversationMemberAddCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IConversationMemberAddCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IAccountRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Account> callback);
+    void get(final ICallback<? super Account> callback);
 
     /**
      * Gets the Account from the service
@@ -36,7 +36,7 @@ public interface IAccountRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Account> callback);
+    void delete(final ICallback<? super Account> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccountRequest extends IHttpRequest {
      * @param sourceAccount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Account sourceAccount, final ICallback<Account> callback);
+    void patch(final Account sourceAccount, final ICallback<? super Account> callback);
 
     /**
      * Patches this Account with a source
@@ -68,7 +68,7 @@ public interface IAccountRequest extends IHttpRequest {
      * @param newAccount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Account newAccount, final ICallback<Account> callback);
+    void post(final Account newAccount, final ICallback<? super Account> callback);
 
     /**
      * Posts a Account with a new object
@@ -85,7 +85,7 @@ public interface IAccountRequest extends IHttpRequest {
      * @param newAccount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Account newAccount, final ICallback<Account> callback);
+    void put(final Account newAccount, final ICallback<? super Account> callback);
 
     /**
      * Posts a Account with a new object

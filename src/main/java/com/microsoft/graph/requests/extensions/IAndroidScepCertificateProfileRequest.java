@@ -21,7 +21,7 @@ public interface IAndroidScepCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidScepCertificateProfile> callback);
+    void get(final ICallback<? super AndroidScepCertificateProfile> callback);
 
     /**
      * Gets the AndroidScepCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidScepCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidScepCertificateProfile> callback);
+    void delete(final ICallback<? super AndroidScepCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidScepCertificateProfileRequest extends IHttpRequest {
      * @param sourceAndroidScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback);
+    void patch(final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback);
 
     /**
      * Patches this AndroidScepCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidScepCertificateProfileRequest extends IHttpRequest {
      * @param newAndroidScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback);
+    void post(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback);
 
     /**
      * Posts a AndroidScepCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidScepCertificateProfileRequest extends IHttpRequest {
      * @param newAndroidScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback);
+    void put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback);
 
     /**
      * Posts a AndroidScepCertificateProfile with a new object

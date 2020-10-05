@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IImportedDeviceIdentityImportDeviceIdentityListCollectionPage> callback);
+    void post(final ICallback<? super IImportedDeviceIdentityImportDeviceIdentityListCollectionPage> callback);
 
     IImportedDeviceIdentityImportDeviceIdentityListCollectionPage post() throws ClientException;
 

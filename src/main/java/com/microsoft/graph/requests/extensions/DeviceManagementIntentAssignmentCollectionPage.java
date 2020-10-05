@@ -23,6 +23,6 @@ public class DeviceManagementIntentAssignmentCollectionPage extends BaseCollecti
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementIntentAssignmentCollectionPage(final DeviceManagementIntentAssignmentCollectionResponse response, final IDeviceManagementIntentAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ISiteUsageStorageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SiteUsageStorage> callback);
+    void get(final ICallback<? super SiteUsageStorage> callback);
 
     /**
      * Gets the SiteUsageStorage from the service
@@ -36,7 +36,7 @@ public interface ISiteUsageStorageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SiteUsageStorage> callback);
+    void delete(final ICallback<? super SiteUsageStorage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISiteUsageStorageRequest extends IHttpRequest {
      * @param sourceSiteUsageStorage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SiteUsageStorage sourceSiteUsageStorage, final ICallback<SiteUsageStorage> callback);
+    void patch(final SiteUsageStorage sourceSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback);
 
     /**
      * Patches this SiteUsageStorage with a source
@@ -68,7 +68,7 @@ public interface ISiteUsageStorageRequest extends IHttpRequest {
      * @param newSiteUsageStorage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SiteUsageStorage newSiteUsageStorage, final ICallback<SiteUsageStorage> callback);
+    void post(final SiteUsageStorage newSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback);
 
     /**
      * Posts a SiteUsageStorage with a new object
@@ -85,7 +85,7 @@ public interface ISiteUsageStorageRequest extends IHttpRequest {
      * @param newSiteUsageStorage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SiteUsageStorage newSiteUsageStorage, final ICallback<SiteUsageStorage> callback);
+    void put(final SiteUsageStorage newSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback);
 
     /**
      * Posts a SiteUsageStorage with a new object

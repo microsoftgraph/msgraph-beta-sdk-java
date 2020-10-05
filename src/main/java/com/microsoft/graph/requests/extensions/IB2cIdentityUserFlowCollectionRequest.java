@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IB2cIdentityUserFlowCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IB2cIdentityUserFlowCollectionPage> callback);
+    void get(final ICallback<? super IB2cIdentityUserFlowCollectionPage> callback);
 
     IB2cIdentityUserFlowCollectionPage get() throws ClientException;
 
-    void post(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<B2cIdentityUserFlow> callback);
+    void post(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<? super B2cIdentityUserFlow> callback);
 
     B2cIdentityUserFlow post(final B2cIdentityUserFlow newB2cIdentityUserFlow) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IB2cIdentityUserFlowCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IB2cIdentityUserFlowCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IB2cIdentityUserFlowCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IB2cIdentityUserFlowCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IB2cIdentityUserFlowCollectionRequest skipToken(String skipToken);
+	IB2cIdentityUserFlowCollectionRequest skipToken(final String skipToken);
 }

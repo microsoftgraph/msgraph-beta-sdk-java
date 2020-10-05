@@ -40,7 +40,7 @@ public class BitlockerRecoveryKeyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, BitlockerRecoveryKeyCollectionResponse.class, IBitlockerRecoveryKeyCollectionPage.class);
     }
 
-    public void get(final ICallback<IBitlockerRecoveryKeyCollectionPage> callback) {
+    public void get(final ICallback<? super IBitlockerRecoveryKeyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class BitlockerRecoveryKeyCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback) {
+    public void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BitlockerRecoveryKeyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class BitlockerRecoveryKeyCollectionRequest extends BaseCollectionRequest
      */
     public IBitlockerRecoveryKeyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (BitlockerRecoveryKeyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IBitlockerRecoveryKeyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (BitlockerRecoveryKeyCollectionRequest)this;
     }
 

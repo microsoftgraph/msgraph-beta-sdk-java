@@ -34,6 +34,6 @@ public class AccessPackageAssignmentResourceRoleMyCollectionPage extends BaseCol
      * @param builder The request builder for the next collection page
      */
     public AccessPackageAssignmentResourceRoleMyCollectionPage(final AccessPackageAssignmentResourceRoleMyCollectionResponse response, final IAccessPackageAssignmentResourceRoleMyCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

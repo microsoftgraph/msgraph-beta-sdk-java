@@ -35,6 +35,6 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionPage
      * @param builder The request builder for the next collection page
      */
     public ManagementConditionGetManagementConditionsForPlatformCollectionPage(final ManagementConditionGetManagementConditionsForPlatformCollectionResponse response, final IManagementConditionGetManagementConditionsForPlatformCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

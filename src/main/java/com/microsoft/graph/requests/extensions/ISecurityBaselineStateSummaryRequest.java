@@ -21,7 +21,7 @@ public interface ISecurityBaselineStateSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityBaselineStateSummary> callback);
+    void get(final ICallback<? super SecurityBaselineStateSummary> callback);
 
     /**
      * Gets the SecurityBaselineStateSummary from the service
@@ -36,7 +36,7 @@ public interface ISecurityBaselineStateSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityBaselineStateSummary> callback);
+    void delete(final ICallback<? super SecurityBaselineStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityBaselineStateSummaryRequest extends IHttpRequest {
      * @param sourceSecurityBaselineStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityBaselineStateSummary sourceSecurityBaselineStateSummary, final ICallback<SecurityBaselineStateSummary> callback);
+    void patch(final SecurityBaselineStateSummary sourceSecurityBaselineStateSummary, final ICallback<? super SecurityBaselineStateSummary> callback);
 
     /**
      * Patches this SecurityBaselineStateSummary with a source
@@ -68,7 +68,7 @@ public interface ISecurityBaselineStateSummaryRequest extends IHttpRequest {
      * @param newSecurityBaselineStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<SecurityBaselineStateSummary> callback);
+    void post(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<? super SecurityBaselineStateSummary> callback);
 
     /**
      * Posts a SecurityBaselineStateSummary with a new object
@@ -85,7 +85,7 @@ public interface ISecurityBaselineStateSummaryRequest extends IHttpRequest {
      * @param newSecurityBaselineStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<SecurityBaselineStateSummary> callback);
+    void put(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<? super SecurityBaselineStateSummary> callback);
 
     /**
      * Posts a SecurityBaselineStateSummary with a new object

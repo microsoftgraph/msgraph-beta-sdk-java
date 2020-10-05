@@ -45,7 +45,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OnPremisesAgentGroup> callback) {
+    public void get(final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OnPremisesAgentGroup> callback) {
+    public void delete(final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param sourceOnPremisesAgentGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesAgentGroup sourceOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback) {
+    public void patch(final OnPremisesAgentGroup sourceOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesAgentGroup);
     }
 
@@ -104,7 +104,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param newOnPremisesAgentGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback) {
+    public void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.POST, callback, newOnPremisesAgentGroup);
     }
 
@@ -125,7 +125,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param newOnPremisesAgentGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback) {
+    public void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesAgentGroup);
     }
 
@@ -159,17 +159,6 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      */
      public IOnPremisesAgentGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesAgentGroupRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOnPremisesAgentGroupRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnPremisesAgentGroupRequest)this;
      }
 

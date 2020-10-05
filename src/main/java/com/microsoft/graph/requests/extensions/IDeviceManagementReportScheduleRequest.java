@@ -21,7 +21,7 @@ public interface IDeviceManagementReportScheduleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementReportSchedule> callback);
+    void get(final ICallback<? super DeviceManagementReportSchedule> callback);
 
     /**
      * Gets the DeviceManagementReportSchedule from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementReportScheduleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementReportSchedule> callback);
+    void delete(final ICallback<? super DeviceManagementReportSchedule> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementReportScheduleRequest extends IHttpRequest {
      * @param sourceDeviceManagementReportSchedule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementReportSchedule sourceDeviceManagementReportSchedule, final ICallback<DeviceManagementReportSchedule> callback);
+    void patch(final DeviceManagementReportSchedule sourceDeviceManagementReportSchedule, final ICallback<? super DeviceManagementReportSchedule> callback);
 
     /**
      * Patches this DeviceManagementReportSchedule with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementReportScheduleRequest extends IHttpRequest {
      * @param newDeviceManagementReportSchedule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<DeviceManagementReportSchedule> callback);
+    void post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<? super DeviceManagementReportSchedule> callback);
 
     /**
      * Posts a DeviceManagementReportSchedule with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementReportScheduleRequest extends IHttpRequest {
      * @param newDeviceManagementReportSchedule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<DeviceManagementReportSchedule> callback);
+    void put(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<? super DeviceManagementReportSchedule> callback);
 
     /**
      * Posts a DeviceManagementReportSchedule with a new object

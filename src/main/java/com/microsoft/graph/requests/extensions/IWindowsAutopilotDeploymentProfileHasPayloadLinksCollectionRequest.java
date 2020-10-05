@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionPage> callback);
+    void post(final ICallback<? super IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionPage> callback);
 
     IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionPage post() throws ClientException;
 

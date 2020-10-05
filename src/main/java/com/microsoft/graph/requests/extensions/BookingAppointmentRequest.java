@@ -37,7 +37,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<BookingAppointment> callback) {
+    public void get(final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<BookingAppointment> callback) {
+    public void delete(final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param sourceBookingAppointment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingAppointment sourceBookingAppointment, final ICallback<BookingAppointment> callback) {
+    public void patch(final BookingAppointment sourceBookingAppointment, final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingAppointment);
     }
 
@@ -96,7 +96,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param newBookingAppointment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback) {
+    public void post(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.POST, callback, newBookingAppointment);
     }
 
@@ -117,7 +117,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param newBookingAppointment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback) {
+    public void put(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.PUT, callback, newBookingAppointment);
     }
 
@@ -151,17 +151,6 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      */
      public IBookingAppointmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingAppointmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IBookingAppointmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BookingAppointmentRequest)this;
      }
 

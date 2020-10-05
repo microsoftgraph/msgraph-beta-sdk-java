@@ -21,7 +21,7 @@ public interface IFeatureRolloutPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FeatureRolloutPolicy> callback);
+    void get(final ICallback<? super FeatureRolloutPolicy> callback);
 
     /**
      * Gets the FeatureRolloutPolicy from the service
@@ -36,7 +36,7 @@ public interface IFeatureRolloutPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FeatureRolloutPolicy> callback);
+    void delete(final ICallback<? super FeatureRolloutPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFeatureRolloutPolicyRequest extends IHttpRequest {
      * @param sourceFeatureRolloutPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FeatureRolloutPolicy sourceFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback);
+    void patch(final FeatureRolloutPolicy sourceFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback);
 
     /**
      * Patches this FeatureRolloutPolicy with a source
@@ -68,7 +68,7 @@ public interface IFeatureRolloutPolicyRequest extends IHttpRequest {
      * @param newFeatureRolloutPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback);
+    void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback);
 
     /**
      * Posts a FeatureRolloutPolicy with a new object
@@ -85,7 +85,7 @@ public interface IFeatureRolloutPolicyRequest extends IHttpRequest {
      * @param newFeatureRolloutPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback);
+    void put(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback);
 
     /**
      * Posts a FeatureRolloutPolicy with a new object

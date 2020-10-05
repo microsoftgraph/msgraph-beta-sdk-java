@@ -37,7 +37,7 @@ public class EducationAssignmentPublishRequest extends BaseRequest implements IE
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<EducationAssignment> callback) {
+    public void post(final ICallback<? super EducationAssignment> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class EducationAssignmentPublishRequest extends BaseRequest implements IE
      */
     public IEducationAssignmentPublishRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationAssignmentPublishRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEducationAssignmentPublishRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EducationAssignmentPublishRequest)this;
     }
 

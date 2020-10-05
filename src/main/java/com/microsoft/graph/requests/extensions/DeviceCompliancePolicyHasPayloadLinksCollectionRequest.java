@@ -44,7 +44,7 @@ public class DeviceCompliancePolicyHasPayloadLinksCollectionRequest extends Base
     }
 
 
-    public void post(final ICallback<IDeviceCompliancePolicyHasPayloadLinksCollectionPage> callback) {
+    public void post(final ICallback<? super IDeviceCompliancePolicyHasPayloadLinksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class DeviceCompliancePolicyHasPayloadLinksCollectionRequest extends Base
      */
     public IDeviceCompliancePolicyHasPayloadLinksCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceCompliancePolicyHasPayloadLinksCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyHasPayloadLinksCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceCompliancePolicyHasPayloadLinksCollectionRequest)this;
     }
 

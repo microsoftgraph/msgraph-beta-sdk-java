@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationTextBoxRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationTextBox> callback);
+    void get(final ICallback<? super GroupPolicyPresentationTextBox> callback);
 
     /**
      * Gets the GroupPolicyPresentationTextBox from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationTextBoxRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationTextBox> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationTextBox> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationTextBoxRequest extends IHttpRequest {
      * @param sourceGroupPolicyPresentationTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationTextBox sourceGroupPolicyPresentationTextBox, final ICallback<GroupPolicyPresentationTextBox> callback);
+    void patch(final GroupPolicyPresentationTextBox sourceGroupPolicyPresentationTextBox, final ICallback<? super GroupPolicyPresentationTextBox> callback);
 
     /**
      * Patches this GroupPolicyPresentationTextBox with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationTextBoxRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, final ICallback<GroupPolicyPresentationTextBox> callback);
+    void post(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, final ICallback<? super GroupPolicyPresentationTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationTextBox with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationTextBoxRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, final ICallback<GroupPolicyPresentationTextBox> callback);
+    void put(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, final ICallback<? super GroupPolicyPresentationTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationTextBox with a new object

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IResourceSpecificPermissionGrantCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IResourceSpecificPermissionGrantCollectionPage> callback);
+    void get(final ICallback<? super IResourceSpecificPermissionGrantCollectionPage> callback);
 
     IResourceSpecificPermissionGrantCollectionPage get() throws ClientException;
 
-    void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback);
+    void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback);
 
     ResourceSpecificPermissionGrant post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IResourceSpecificPermissionGrantCollectionRequest extends IHttp
      * @return the updated request
      */
     IResourceSpecificPermissionGrantCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IResourceSpecificPermissionGrantCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IResourceSpecificPermissionGrantCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IResourceSpecificPermissionGrantCollectionRequest skipToken(String skipToken);
+	IResourceSpecificPermissionGrantCollectionRequest skipToken(final String skipToken);
 }

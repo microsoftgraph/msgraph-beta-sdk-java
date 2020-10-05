@@ -35,7 +35,7 @@ public class ConnectorCollectionWithReferencesRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, ConnectorCollectionResponse.class, IConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<IConnectorCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IConnectorCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class ConnectorCollectionWithReferencesRequest extends BaseCollectionRequ
 
     public IConnectorCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ConnectorCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IConnectorCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConnectorCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IConnectorCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IConnectorCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ConnectorCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IConnectorCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ConnectorCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IConnectorCollectionWithReferencesPage buildFromResponse(final ConnectorCollectionResponse response) {

@@ -23,6 +23,6 @@ public class AndroidForWorkEnrollmentProfileCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public AndroidForWorkEnrollmentProfileCollectionPage(final AndroidForWorkEnrollmentProfileCollectionResponse response, final IAndroidForWorkEnrollmentProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

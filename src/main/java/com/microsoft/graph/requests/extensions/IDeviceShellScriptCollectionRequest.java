@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceShellScriptCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceShellScriptCollectionPage> callback);
+    void get(final ICallback<? super IDeviceShellScriptCollectionPage> callback);
 
     IDeviceShellScriptCollectionPage get() throws ClientException;
 
-    void post(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback);
+    void post(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback);
 
     DeviceShellScript post(final DeviceShellScript newDeviceShellScript) throws ClientException;
 
@@ -47,6 +47,14 @@ public interface IDeviceShellScriptCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDeviceShellScriptCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceShellScriptCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -79,5 +87,5 @@ public interface IDeviceShellScriptCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDeviceShellScriptCollectionRequest skipToken(String skipToken);
+	IDeviceShellScriptCollectionRequest skipToken(final String skipToken);
 }

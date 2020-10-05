@@ -34,6 +34,6 @@ public class ReportRootGetOffice365ActiveUserCountsCollectionPage extends BaseCo
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOffice365ActiveUserCountsCollectionPage(final ReportRootGetOffice365ActiveUserCountsCollectionResponse response, final IReportRootGetOffice365ActiveUserCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IVppTokenGetLicensesForAppCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IVppTokenGetLicensesForAppCollectionPage> callback);
+    void get(final ICallback<? super IVppTokenGetLicensesForAppCollectionPage> callback);
 
     IVppTokenGetLicensesForAppCollectionPage get() throws ClientException;
 

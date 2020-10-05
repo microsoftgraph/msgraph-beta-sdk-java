@@ -40,7 +40,7 @@ public class ProviderTenantSettingCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, ProviderTenantSettingCollectionResponse.class, IProviderTenantSettingCollectionPage.class);
     }
 
-    public void get(final ICallback<IProviderTenantSettingCollectionPage> callback) {
+    public void get(final ICallback<? super IProviderTenantSettingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ProviderTenantSettingCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback) {
+    public void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProviderTenantSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ProviderTenantSettingCollectionRequest extends BaseCollectionReques
      */
     public IProviderTenantSettingCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ProviderTenantSettingCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IProviderTenantSettingCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ProviderTenantSettingCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IWebAccountRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WebAccount> callback);
+    void get(final ICallback<? super WebAccount> callback);
 
     /**
      * Gets the WebAccount from the service
@@ -36,7 +36,7 @@ public interface IWebAccountRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WebAccount> callback);
+    void delete(final ICallback<? super WebAccount> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWebAccountRequest extends IHttpRequest {
      * @param sourceWebAccount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WebAccount sourceWebAccount, final ICallback<WebAccount> callback);
+    void patch(final WebAccount sourceWebAccount, final ICallback<? super WebAccount> callback);
 
     /**
      * Patches this WebAccount with a source
@@ -68,7 +68,7 @@ public interface IWebAccountRequest extends IHttpRequest {
      * @param newWebAccount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WebAccount newWebAccount, final ICallback<WebAccount> callback);
+    void post(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback);
 
     /**
      * Posts a WebAccount with a new object
@@ -85,7 +85,7 @@ public interface IWebAccountRequest extends IHttpRequest {
      * @param newWebAccount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WebAccount newWebAccount, final ICallback<WebAccount> callback);
+    void put(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback);
 
     /**
      * Posts a WebAccount with a new object

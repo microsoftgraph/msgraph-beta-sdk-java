@@ -21,7 +21,7 @@ public interface IIosVppAppAssignedLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVppAppAssignedLicense> callback);
+    void get(final ICallback<? super IosVppAppAssignedLicense> callback);
 
     /**
      * Gets the IosVppAppAssignedLicense from the service
@@ -36,7 +36,7 @@ public interface IIosVppAppAssignedLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVppAppAssignedLicense> callback);
+    void delete(final ICallback<? super IosVppAppAssignedLicense> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVppAppAssignedLicenseRequest extends IHttpRequest {
      * @param sourceIosVppAppAssignedLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVppAppAssignedLicense sourceIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback);
+    void patch(final IosVppAppAssignedLicense sourceIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback);
 
     /**
      * Patches this IosVppAppAssignedLicense with a source
@@ -68,7 +68,7 @@ public interface IIosVppAppAssignedLicenseRequest extends IHttpRequest {
      * @param newIosVppAppAssignedLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback);
+    void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback);
 
     /**
      * Posts a IosVppAppAssignedLicense with a new object
@@ -85,7 +85,7 @@ public interface IIosVppAppAssignedLicenseRequest extends IHttpRequest {
      * @param newIosVppAppAssignedLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback);
+    void put(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback);
 
     /**
      * Posts a IosVppAppAssignedLicense with a new object

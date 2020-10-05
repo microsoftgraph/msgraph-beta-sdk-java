@@ -37,7 +37,7 @@ public class AndroidForWorkCustomConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkCustomConfiguration> callback) {
+    public void get(final ICallback<? super AndroidForWorkCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkCustomConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkCustomConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidForWorkCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkCustomConfigurationRequest extends BaseRequest implem
      * @param sourceAndroidForWorkCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkCustomConfiguration sourceAndroidForWorkCustomConfiguration, final ICallback<AndroidForWorkCustomConfiguration> callback) {
+    public void patch(final AndroidForWorkCustomConfiguration sourceAndroidForWorkCustomConfiguration, final ICallback<? super AndroidForWorkCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkCustomConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkCustomConfigurationRequest extends BaseRequest implem
      * @param newAndroidForWorkCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<AndroidForWorkCustomConfiguration> callback) {
+    public void post(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<? super AndroidForWorkCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkCustomConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkCustomConfigurationRequest extends BaseRequest implem
      * @param newAndroidForWorkCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<AndroidForWorkCustomConfiguration> callback) {
+    public void put(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<? super AndroidForWorkCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkCustomConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkCustomConfigurationRequest extends BaseRequest implem
      */
      public IAndroidForWorkCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkCustomConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkCustomConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkCustomConfigurationRequest)this;
      }
 

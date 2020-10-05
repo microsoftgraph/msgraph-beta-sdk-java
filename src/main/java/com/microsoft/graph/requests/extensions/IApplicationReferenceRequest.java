@@ -36,7 +36,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IApplicationReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Application> callback);
+    void delete(final ICallback<? super Application> callback);
 
     Application delete() throws ClientException;
 
@@ -62,7 +62,7 @@ public interface IApplicationReferenceRequest extends IHttpRequest {
      * @param srcApplication the Application to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Application srcApplication, final ICallback<Application> callback);
+    void put(Application srcApplication, final ICallback<? super Application> callback);
 
     /**
      * Puts the Application

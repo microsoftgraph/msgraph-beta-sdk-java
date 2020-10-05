@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsAutopilotDeploymentProfileReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     WindowsAutopilotDeploymentProfile delete() throws ClientException;
 
@@ -53,7 +53,7 @@ public interface IWindowsAutopilotDeploymentProfileReferenceRequest extends IHtt
      * @param srcWindowsAutopilotDeploymentProfile the WindowsAutopilotDeploymentProfile to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WindowsAutopilotDeploymentProfile srcWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void put(WindowsAutopilotDeploymentProfile srcWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Puts the WindowsAutopilotDeploymentProfile

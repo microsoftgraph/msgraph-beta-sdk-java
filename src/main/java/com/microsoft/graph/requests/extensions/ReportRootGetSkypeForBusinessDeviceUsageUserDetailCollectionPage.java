@@ -34,6 +34,6 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionPage ex
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionPage(final ReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionResponse response, final IReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

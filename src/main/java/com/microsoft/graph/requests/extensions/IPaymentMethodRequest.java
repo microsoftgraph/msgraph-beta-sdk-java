@@ -21,7 +21,7 @@ public interface IPaymentMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PaymentMethod> callback);
+    void get(final ICallback<? super PaymentMethod> callback);
 
     /**
      * Gets the PaymentMethod from the service
@@ -36,7 +36,7 @@ public interface IPaymentMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PaymentMethod> callback);
+    void delete(final ICallback<? super PaymentMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPaymentMethodRequest extends IHttpRequest {
      * @param sourcePaymentMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PaymentMethod sourcePaymentMethod, final ICallback<PaymentMethod> callback);
+    void patch(final PaymentMethod sourcePaymentMethod, final ICallback<? super PaymentMethod> callback);
 
     /**
      * Patches this PaymentMethod with a source
@@ -68,7 +68,7 @@ public interface IPaymentMethodRequest extends IHttpRequest {
      * @param newPaymentMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PaymentMethod newPaymentMethod, final ICallback<PaymentMethod> callback);
+    void post(final PaymentMethod newPaymentMethod, final ICallback<? super PaymentMethod> callback);
 
     /**
      * Posts a PaymentMethod with a new object
@@ -85,7 +85,7 @@ public interface IPaymentMethodRequest extends IHttpRequest {
      * @param newPaymentMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PaymentMethod newPaymentMethod, final ICallback<PaymentMethod> callback);
+    void put(final PaymentMethod newPaymentMethod, final ICallback<? super PaymentMethod> callback);
 
     /**
      * Posts a PaymentMethod with a new object

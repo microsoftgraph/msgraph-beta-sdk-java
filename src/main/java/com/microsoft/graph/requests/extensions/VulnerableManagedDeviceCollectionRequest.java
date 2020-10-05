@@ -40,7 +40,7 @@ public class VulnerableManagedDeviceCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, VulnerableManagedDeviceCollectionResponse.class, IVulnerableManagedDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<IVulnerableManagedDeviceCollectionPage> callback) {
+    public void get(final ICallback<? super IVulnerableManagedDeviceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class VulnerableManagedDeviceCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback) {
+    public void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VulnerableManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class VulnerableManagedDeviceCollectionRequest extends BaseCollectionRequ
      */
     public IVulnerableManagedDeviceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (VulnerableManagedDeviceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IVulnerableManagedDeviceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (VulnerableManagedDeviceCollectionRequest)this;
     }
 

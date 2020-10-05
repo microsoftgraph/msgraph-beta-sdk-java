@@ -52,7 +52,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<LocationManagementCondition> callback) {
+    public void get(final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<LocationManagementCondition> callback) {
+    public void delete(final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param sourceLocationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LocationManagementCondition sourceLocationManagementCondition, final ICallback<LocationManagementCondition> callback) {
+    public void patch(final LocationManagementCondition sourceLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceLocationManagementCondition);
     }
 
@@ -111,7 +111,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param newLocationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LocationManagementCondition newLocationManagementCondition, final ICallback<LocationManagementCondition> callback) {
+    public void post(final LocationManagementCondition newLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.POST, callback, newLocationManagementCondition);
     }
 
@@ -132,7 +132,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param newLocationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LocationManagementCondition newLocationManagementCondition, final ICallback<LocationManagementCondition> callback) {
+    public void put(final LocationManagementCondition newLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newLocationManagementCondition);
     }
 
@@ -166,17 +166,6 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      */
      public ILocationManagementConditionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LocationManagementConditionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ILocationManagementConditionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (LocationManagementConditionRequest)this;
      }
 

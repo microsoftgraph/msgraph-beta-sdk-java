@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAttributeMappingFunctionSchemaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAttributeMappingFunctionSchemaCollectionPage> callback);
+    void get(final ICallback<? super IAttributeMappingFunctionSchemaCollectionPage> callback);
 
     IAttributeMappingFunctionSchemaCollectionPage get() throws ClientException;
 
-    void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback);
+    void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback);
 
     AttributeMappingFunctionSchema post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IAttributeMappingFunctionSchemaCollectionRequest extends IHttpR
      * @return the updated request
      */
     IAttributeMappingFunctionSchemaCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAttributeMappingFunctionSchemaCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IAttributeMappingFunctionSchemaCollectionRequest extends IHttpR
      *
 	 * @return the updated request
 	 */
-	IAttributeMappingFunctionSchemaCollectionRequest skipToken(String skipToken);
+	IAttributeMappingFunctionSchemaCollectionRequest skipToken(final String skipToken);
 }

@@ -23,6 +23,6 @@ public class AgreementCollectionPage extends BaseCollectionPage<Agreement, IAgre
      * @param builder  the request builder for the next collection page
      */
     public AgreementCollectionPage(final AgreementCollectionResponse response, final IAgreementCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -37,7 +37,7 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsStoreApp> callback) {
+    public void get(final ICallback<? super WindowsStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsStoreApp> callback) {
+    public void delete(final ICallback<? super WindowsStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
      * @param sourceWindowsStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsStoreApp sourceWindowsStoreApp, final ICallback<WindowsStoreApp> callback) {
+    public void patch(final WindowsStoreApp sourceWindowsStoreApp, final ICallback<? super WindowsStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsStoreApp);
     }
 
@@ -96,7 +96,7 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
      * @param newWindowsStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsStoreApp newWindowsStoreApp, final ICallback<WindowsStoreApp> callback) {
+    public void post(final WindowsStoreApp newWindowsStoreApp, final ICallback<? super WindowsStoreApp> callback) {
         send(HttpMethod.POST, callback, newWindowsStoreApp);
     }
 
@@ -117,7 +117,7 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
      * @param newWindowsStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsStoreApp newWindowsStoreApp, final ICallback<WindowsStoreApp> callback) {
+    public void put(final WindowsStoreApp newWindowsStoreApp, final ICallback<? super WindowsStoreApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsStoreApp);
     }
 
@@ -151,17 +151,6 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
      */
      public IWindowsStoreAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsStoreAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsStoreAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsStoreAppRequest)this;
      }
 

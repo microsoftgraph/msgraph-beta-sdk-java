@@ -37,7 +37,7 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback) {
+    public void get(final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback) {
+    public void delete(final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
      * @param sourceMailboxUsageQuotaStatusMailboxCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MailboxUsageQuotaStatusMailboxCounts sourceMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback) {
+    public void patch(final MailboxUsageQuotaStatusMailboxCounts sourceMailboxUsageQuotaStatusMailboxCounts, final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceMailboxUsageQuotaStatusMailboxCounts);
     }
 
@@ -96,7 +96,7 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
      * @param newMailboxUsageQuotaStatusMailboxCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback) {
+    public void post(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback) {
         send(HttpMethod.POST, callback, newMailboxUsageQuotaStatusMailboxCounts);
     }
 
@@ -117,7 +117,7 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
      * @param newMailboxUsageQuotaStatusMailboxCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback) {
+    public void put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback) {
         send(HttpMethod.PUT, callback, newMailboxUsageQuotaStatusMailboxCounts);
     }
 
@@ -151,17 +151,6 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
      */
      public IMailboxUsageQuotaStatusMailboxCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MailboxUsageQuotaStatusMailboxCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMailboxUsageQuotaStatusMailboxCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MailboxUsageQuotaStatusMailboxCountsRequest)this;
      }
 

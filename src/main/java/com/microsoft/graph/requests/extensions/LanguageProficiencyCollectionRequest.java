@@ -40,7 +40,7 @@ public class LanguageProficiencyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, LanguageProficiencyCollectionResponse.class, ILanguageProficiencyCollectionPage.class);
     }
 
-    public void get(final ICallback<ILanguageProficiencyCollectionPage> callback) {
+    public void get(final ICallback<? super ILanguageProficiencyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LanguageProficiencyCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback) {
+    public void post(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LanguageProficiencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class LanguageProficiencyCollectionRequest extends BaseCollectionRequest<
      */
     public ILanguageProficiencyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (LanguageProficiencyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ILanguageProficiencyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LanguageProficiencyCollectionRequest)this;
     }
 

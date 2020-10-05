@@ -21,7 +21,7 @@ public interface IUnitOfMeasureRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UnitOfMeasure> callback);
+    void get(final ICallback<? super UnitOfMeasure> callback);
 
     /**
      * Gets the UnitOfMeasure from the service
@@ -36,7 +36,7 @@ public interface IUnitOfMeasureRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UnitOfMeasure> callback);
+    void delete(final ICallback<? super UnitOfMeasure> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUnitOfMeasureRequest extends IHttpRequest {
      * @param sourceUnitOfMeasure the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UnitOfMeasure sourceUnitOfMeasure, final ICallback<UnitOfMeasure> callback);
+    void patch(final UnitOfMeasure sourceUnitOfMeasure, final ICallback<? super UnitOfMeasure> callback);
 
     /**
      * Patches this UnitOfMeasure with a source
@@ -68,7 +68,7 @@ public interface IUnitOfMeasureRequest extends IHttpRequest {
      * @param newUnitOfMeasure the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UnitOfMeasure newUnitOfMeasure, final ICallback<UnitOfMeasure> callback);
+    void post(final UnitOfMeasure newUnitOfMeasure, final ICallback<? super UnitOfMeasure> callback);
 
     /**
      * Posts a UnitOfMeasure with a new object
@@ -85,7 +85,7 @@ public interface IUnitOfMeasureRequest extends IHttpRequest {
      * @param newUnitOfMeasure the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UnitOfMeasure newUnitOfMeasure, final ICallback<UnitOfMeasure> callback);
+    void put(final UnitOfMeasure newUnitOfMeasure, final ICallback<? super UnitOfMeasure> callback);
 
     /**
      * Posts a UnitOfMeasure with a new object

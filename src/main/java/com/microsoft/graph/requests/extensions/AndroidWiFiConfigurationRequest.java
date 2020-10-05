@@ -52,7 +52,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidWiFiConfiguration> callback) {
+    public void get(final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidWiFiConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param sourceAndroidWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWiFiConfiguration sourceAndroidWiFiConfiguration, final ICallback<AndroidWiFiConfiguration> callback) {
+    public void patch(final AndroidWiFiConfiguration sourceAndroidWiFiConfiguration, final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWiFiConfiguration);
     }
 
@@ -111,7 +111,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param newAndroidWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWiFiConfiguration newAndroidWiFiConfiguration, final ICallback<AndroidWiFiConfiguration> callback) {
+    public void post(final AndroidWiFiConfiguration newAndroidWiFiConfiguration, final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWiFiConfiguration);
     }
 
@@ -132,7 +132,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param newAndroidWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWiFiConfiguration newAndroidWiFiConfiguration, final ICallback<AndroidWiFiConfiguration> callback) {
+    public void put(final AndroidWiFiConfiguration newAndroidWiFiConfiguration, final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWiFiConfiguration);
     }
 
@@ -166,17 +166,6 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      */
      public IAndroidWiFiConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWiFiConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidWiFiConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidWiFiConfigurationRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface ITimeCardRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TimeCard> callback);
+    void get(final ICallback<? super TimeCard> callback);
 
     /**
      * Gets the TimeCard from the service
@@ -36,7 +36,7 @@ public interface ITimeCardRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TimeCard> callback);
+    void delete(final ICallback<? super TimeCard> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITimeCardRequest extends IHttpRequest {
      * @param sourceTimeCard the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TimeCard sourceTimeCard, final ICallback<TimeCard> callback);
+    void patch(final TimeCard sourceTimeCard, final ICallback<? super TimeCard> callback);
 
     /**
      * Patches this TimeCard with a source
@@ -68,7 +68,7 @@ public interface ITimeCardRequest extends IHttpRequest {
      * @param newTimeCard the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TimeCard newTimeCard, final ICallback<TimeCard> callback);
+    void post(final TimeCard newTimeCard, final ICallback<? super TimeCard> callback);
 
     /**
      * Posts a TimeCard with a new object
@@ -85,7 +85,7 @@ public interface ITimeCardRequest extends IHttpRequest {
      * @param newTimeCard the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TimeCard newTimeCard, final ICallback<TimeCard> callback);
+    void put(final TimeCard newTimeCard, final ICallback<? super TimeCard> callback);
 
     /**
      * Posts a TimeCard with a new object

@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUnifiedRoleDefinitionWithReferenceRequest extends IHttpRequest {
 
-    void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final IJsonBackedObject payload, final ICallback<UnifiedRoleDefinition> callback);
+    void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final IJsonBackedObject payload, final ICallback<? super UnifiedRoleDefinition> callback);
 
     UnifiedRoleDefinition post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<UnifiedRoleDefinition> callback);
+    void get(final ICallback<? super UnifiedRoleDefinition> callback);
 
     UnifiedRoleDefinition get() throws ClientException;
 
-	void delete(final ICallback<UnifiedRoleDefinition> callback);
+	void delete(final ICallback<? super UnifiedRoleDefinition> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final UnifiedRoleDefinition sourceUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback);
+	void patch(final UnifiedRoleDefinition sourceUnifiedRoleDefinition, final ICallback<? super UnifiedRoleDefinition> callback);
 
 	UnifiedRoleDefinition patch(final UnifiedRoleDefinition sourceUnifiedRoleDefinition) throws ClientException;
 

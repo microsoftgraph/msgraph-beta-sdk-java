@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsAsyncOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsAsyncOperationCollectionPage> callback);
+    void get(final ICallback<? super ITeamsAsyncOperationCollectionPage> callback);
 
     ITeamsAsyncOperationCollectionPage get() throws ClientException;
 
-    void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback);
+    void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback);
 
     TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITeamsAsyncOperationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITeamsAsyncOperationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITeamsAsyncOperationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITeamsAsyncOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsAsyncOperationCollectionRequest skipToken(String skipToken);
+	ITeamsAsyncOperationCollectionRequest skipToken(final String skipToken);
 }

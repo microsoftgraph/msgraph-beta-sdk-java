@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationValueBooleanRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationValueBoolean> callback);
+    void get(final ICallback<? super GroupPolicyPresentationValueBoolean> callback);
 
     /**
      * Gets the GroupPolicyPresentationValueBoolean from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationValueBooleanRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationValueBoolean> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationValueBoolean> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationValueBooleanRequest extends IHttpReques
      * @param sourceGroupPolicyPresentationValueBoolean the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationValueBoolean sourceGroupPolicyPresentationValueBoolean, final ICallback<GroupPolicyPresentationValueBoolean> callback);
+    void patch(final GroupPolicyPresentationValueBoolean sourceGroupPolicyPresentationValueBoolean, final ICallback<? super GroupPolicyPresentationValueBoolean> callback);
 
     /**
      * Patches this GroupPolicyPresentationValueBoolean with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationValueBooleanRequest extends IHttpReques
      * @param newGroupPolicyPresentationValueBoolean the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean, final ICallback<GroupPolicyPresentationValueBoolean> callback);
+    void post(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean, final ICallback<? super GroupPolicyPresentationValueBoolean> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueBoolean with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationValueBooleanRequest extends IHttpReques
      * @param newGroupPolicyPresentationValueBoolean the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean, final ICallback<GroupPolicyPresentationValueBoolean> callback);
+    void put(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean, final ICallback<? super GroupPolicyPresentationValueBoolean> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueBoolean with a new object

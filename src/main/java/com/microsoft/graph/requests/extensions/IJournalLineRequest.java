@@ -21,7 +21,7 @@ public interface IJournalLineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<JournalLine> callback);
+    void get(final ICallback<? super JournalLine> callback);
 
     /**
      * Gets the JournalLine from the service
@@ -36,7 +36,7 @@ public interface IJournalLineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<JournalLine> callback);
+    void delete(final ICallback<? super JournalLine> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IJournalLineRequest extends IHttpRequest {
      * @param sourceJournalLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final JournalLine sourceJournalLine, final ICallback<JournalLine> callback);
+    void patch(final JournalLine sourceJournalLine, final ICallback<? super JournalLine> callback);
 
     /**
      * Patches this JournalLine with a source
@@ -68,7 +68,7 @@ public interface IJournalLineRequest extends IHttpRequest {
      * @param newJournalLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final JournalLine newJournalLine, final ICallback<JournalLine> callback);
+    void post(final JournalLine newJournalLine, final ICallback<? super JournalLine> callback);
 
     /**
      * Posts a JournalLine with a new object
@@ -85,7 +85,7 @@ public interface IJournalLineRequest extends IHttpRequest {
      * @param newJournalLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final JournalLine newJournalLine, final ICallback<JournalLine> callback);
+    void put(final JournalLine newJournalLine, final ICallback<? super JournalLine> callback);
 
     /**
      * Posts a JournalLine with a new object

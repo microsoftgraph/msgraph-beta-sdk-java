@@ -21,7 +21,7 @@ public interface ICountryRegionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CountryRegion> callback);
+    void get(final ICallback<? super CountryRegion> callback);
 
     /**
      * Gets the CountryRegion from the service
@@ -36,7 +36,7 @@ public interface ICountryRegionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CountryRegion> callback);
+    void delete(final ICallback<? super CountryRegion> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICountryRegionRequest extends IHttpRequest {
      * @param sourceCountryRegion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CountryRegion sourceCountryRegion, final ICallback<CountryRegion> callback);
+    void patch(final CountryRegion sourceCountryRegion, final ICallback<? super CountryRegion> callback);
 
     /**
      * Patches this CountryRegion with a source
@@ -68,7 +68,7 @@ public interface ICountryRegionRequest extends IHttpRequest {
      * @param newCountryRegion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback);
+    void post(final CountryRegion newCountryRegion, final ICallback<? super CountryRegion> callback);
 
     /**
      * Posts a CountryRegion with a new object
@@ -85,7 +85,7 @@ public interface ICountryRegionRequest extends IHttpRequest {
      * @param newCountryRegion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback);
+    void put(final CountryRegion newCountryRegion, final ICallback<? super CountryRegion> callback);
 
     /**
      * Posts a CountryRegion with a new object

@@ -37,7 +37,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfigurationUserStateSummary> callback) {
+    public void get(final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfigurationUserStateSummary> callback) {
+    public void delete(final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param sourceDeviceConfigurationUserStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary, final ICallback<DeviceConfigurationUserStateSummary> callback) {
+    public void patch(final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationUserStateSummary);
     }
 
@@ -96,7 +96,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param newDeviceConfigurationUserStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<DeviceConfigurationUserStateSummary> callback) {
+    public void post(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationUserStateSummary);
     }
 
@@ -117,7 +117,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param newDeviceConfigurationUserStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<DeviceConfigurationUserStateSummary> callback) {
+    public void put(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationUserStateSummary);
     }
 
@@ -151,17 +151,6 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      */
      public IDeviceConfigurationUserStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationUserStateSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceConfigurationUserStateSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceConfigurationUserStateSummaryRequest)this;
      }
 

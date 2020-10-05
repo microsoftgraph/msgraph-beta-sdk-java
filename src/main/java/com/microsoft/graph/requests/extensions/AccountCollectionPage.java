@@ -23,6 +23,6 @@ public class AccountCollectionPage extends BaseCollectionPage<Account, IAccountC
      * @param builder  the request builder for the next collection page
      */
     public AccountCollectionPage(final AccountCollectionResponse response, final IAccountCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

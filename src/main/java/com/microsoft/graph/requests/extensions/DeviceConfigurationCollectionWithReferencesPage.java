@@ -42,6 +42,6 @@ public class DeviceConfigurationCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public DeviceConfigurationCollectionWithReferencesPage(final DeviceConfigurationCollectionResponse response, final IDeviceConfigurationCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

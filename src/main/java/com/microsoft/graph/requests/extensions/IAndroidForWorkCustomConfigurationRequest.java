@@ -21,7 +21,7 @@ public interface IAndroidForWorkCustomConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkCustomConfiguration> callback);
+    void get(final ICallback<? super AndroidForWorkCustomConfiguration> callback);
 
     /**
      * Gets the AndroidForWorkCustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkCustomConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkCustomConfiguration> callback);
+    void delete(final ICallback<? super AndroidForWorkCustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkCustomConfigurationRequest extends IHttpRequest 
      * @param sourceAndroidForWorkCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkCustomConfiguration sourceAndroidForWorkCustomConfiguration, final ICallback<AndroidForWorkCustomConfiguration> callback);
+    void patch(final AndroidForWorkCustomConfiguration sourceAndroidForWorkCustomConfiguration, final ICallback<? super AndroidForWorkCustomConfiguration> callback);
 
     /**
      * Patches this AndroidForWorkCustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkCustomConfigurationRequest extends IHttpRequest 
      * @param newAndroidForWorkCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<AndroidForWorkCustomConfiguration> callback);
+    void post(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<? super AndroidForWorkCustomConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkCustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkCustomConfigurationRequest extends IHttpRequest 
      * @param newAndroidForWorkCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<AndroidForWorkCustomConfiguration> callback);
+    void put(final AndroidForWorkCustomConfiguration newAndroidForWorkCustomConfiguration, final ICallback<? super AndroidForWorkCustomConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkCustomConfiguration with a new object

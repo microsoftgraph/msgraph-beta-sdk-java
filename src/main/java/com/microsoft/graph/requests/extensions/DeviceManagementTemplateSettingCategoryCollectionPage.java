@@ -23,6 +23,6 @@ public class DeviceManagementTemplateSettingCategoryCollectionPage extends BaseC
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementTemplateSettingCategoryCollectionPage(final DeviceManagementTemplateSettingCategoryCollectionResponse response, final IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

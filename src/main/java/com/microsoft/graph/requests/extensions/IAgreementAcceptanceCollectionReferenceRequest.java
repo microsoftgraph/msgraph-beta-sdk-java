@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.AgreementAcceptance;
  */
 public interface IAgreementAcceptanceCollectionReferenceRequest {
 
-    void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+    void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
     AgreementAcceptance post(final AgreementAcceptance newAgreementAcceptance) throws ClientException;
 

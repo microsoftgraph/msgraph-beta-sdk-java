@@ -34,6 +34,6 @@ public class ReportRootGetSharePointActivityUserDetailCollectionPage extends Bas
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSharePointActivityUserDetailCollectionPage(final ReportRootGetSharePointActivityUserDetailCollectionResponse response, final IReportRootGetSharePointActivityUserDetailCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -37,7 +37,7 @@ public class DeviceManagementGetComanagementEligibleDevicesSummaryRequest extend
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ComanagementEligibleDevicesSummary> callback) {
+    public void get(final ICallback<? super ComanagementEligibleDevicesSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class DeviceManagementGetComanagementEligibleDevicesSummaryRequest extend
      */
     public IDeviceManagementGetComanagementEligibleDevicesSummaryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementGetComanagementEligibleDevicesSummaryRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementGetComanagementEligibleDevicesSummaryRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementGetComanagementEligibleDevicesSummaryRequest)this;
     }
 

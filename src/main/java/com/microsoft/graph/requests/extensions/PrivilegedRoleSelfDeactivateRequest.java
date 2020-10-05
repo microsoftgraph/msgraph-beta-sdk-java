@@ -37,7 +37,7 @@ public class PrivilegedRoleSelfDeactivateRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<PrivilegedRoleAssignment> callback) {
+    public void post(final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class PrivilegedRoleSelfDeactivateRequest extends BaseRequest implements 
      */
     public IPrivilegedRoleSelfDeactivateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleSelfDeactivateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleSelfDeactivateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrivilegedRoleSelfDeactivateRequest)this;
     }
 

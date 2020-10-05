@@ -21,7 +21,7 @@ public interface IPrintDocumentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintDocument> callback);
+    void get(final ICallback<? super PrintDocument> callback);
 
     /**
      * Gets the PrintDocument from the service
@@ -36,7 +36,7 @@ public interface IPrintDocumentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintDocument> callback);
+    void delete(final ICallback<? super PrintDocument> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintDocumentRequest extends IHttpRequest {
      * @param sourcePrintDocument the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintDocument sourcePrintDocument, final ICallback<PrintDocument> callback);
+    void patch(final PrintDocument sourcePrintDocument, final ICallback<? super PrintDocument> callback);
 
     /**
      * Patches this PrintDocument with a source
@@ -68,7 +68,7 @@ public interface IPrintDocumentRequest extends IHttpRequest {
      * @param newPrintDocument the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintDocument newPrintDocument, final ICallback<PrintDocument> callback);
+    void post(final PrintDocument newPrintDocument, final ICallback<? super PrintDocument> callback);
 
     /**
      * Posts a PrintDocument with a new object
@@ -85,7 +85,7 @@ public interface IPrintDocumentRequest extends IHttpRequest {
      * @param newPrintDocument the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintDocument newPrintDocument, final ICallback<PrintDocument> callback);
+    void put(final PrintDocument newPrintDocument, final ICallback<? super PrintDocument> callback);
 
     /**
      * Posts a PrintDocument with a new object

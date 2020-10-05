@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentCollectionPage;
 
 
@@ -99,19 +97,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final RoleScopeTagAutoAssignmentCollectionResponse response = new RoleScopeTagAutoAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final RoleScopeTagAutoAssignment[] array = new RoleScopeTagAutoAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RoleScopeTagAutoAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new RoleScopeTagAutoAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), RoleScopeTagAutoAssignmentCollectionPage.class);
         }
     }
 }

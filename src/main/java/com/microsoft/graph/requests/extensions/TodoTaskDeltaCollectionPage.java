@@ -40,7 +40,7 @@ public class TodoTaskDeltaCollectionPage extends BaseCollectionPage<TodoTask, IT
      * @param builder The request builder for the next collection page
      */
     public TodoTaskDeltaCollectionPage(final TodoTaskDeltaCollectionResponse response, final ITodoTaskDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

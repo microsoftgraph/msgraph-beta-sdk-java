@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsScoreHistoryCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsScoreHistoryCollectionPage(final UserExperienceAnalyticsScoreHistoryCollectionResponse response, final IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

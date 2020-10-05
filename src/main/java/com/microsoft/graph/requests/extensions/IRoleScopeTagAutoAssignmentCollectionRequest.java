@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoleScopeTagAutoAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRoleScopeTagAutoAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IRoleScopeTagAutoAssignmentCollectionPage> callback);
 
     IRoleScopeTagAutoAssignmentCollectionPage get() throws ClientException;
 
-    void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback);
+    void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<? super RoleScopeTagAutoAssignment> callback);
 
     RoleScopeTagAutoAssignment post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IRoleScopeTagAutoAssignmentCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IRoleScopeTagAutoAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRoleScopeTagAutoAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IRoleScopeTagAutoAssignmentCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IRoleScopeTagAutoAssignmentCollectionRequest skipToken(String skipToken);
+	IRoleScopeTagAutoAssignmentCollectionRequest skipToken(final String skipToken);
 }

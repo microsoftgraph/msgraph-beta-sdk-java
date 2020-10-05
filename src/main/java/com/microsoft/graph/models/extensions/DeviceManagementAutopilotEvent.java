@@ -6,14 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WindowsAutopilotDeploymentState;
 import com.microsoft.graph.models.generated.EnrollmentState;
 import com.microsoft.graph.models.generated.WindowsAutopilotEnrollmentType;
 import com.microsoft.graph.models.extensions.DeviceManagementAutopilotPolicyStatusDetail;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementAutopilotPolicyStatusDetailCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementAutopilotPolicyStatusDetailCollectionPage;
 
 
@@ -262,19 +260,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
 
         if (json.has("policyStatusDetails")) {
-            final DeviceManagementAutopilotPolicyStatusDetailCollectionResponse response = new DeviceManagementAutopilotPolicyStatusDetailCollectionResponse();
-            if (json.has("policyStatusDetails@odata.nextLink")) {
-                response.nextLink = json.get("policyStatusDetails@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policyStatusDetails").toString(), JsonObject[].class);
-            final DeviceManagementAutopilotPolicyStatusDetail[] array = new DeviceManagementAutopilotPolicyStatusDetail[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementAutopilotPolicyStatusDetail.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            policyStatusDetails = new DeviceManagementAutopilotPolicyStatusDetailCollectionPage(response, null);
+            policyStatusDetails = serializer.deserializeObject(json.get("policyStatusDetails").toString(), DeviceManagementAutopilotPolicyStatusDetailCollectionPage.class);
         }
     }
 }

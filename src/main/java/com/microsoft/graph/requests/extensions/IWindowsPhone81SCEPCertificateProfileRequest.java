@@ -21,7 +21,7 @@ public interface IWindowsPhone81SCEPCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81SCEPCertificateProfile> callback);
+    void get(final ICallback<? super WindowsPhone81SCEPCertificateProfile> callback);
 
     /**
      * Gets the WindowsPhone81SCEPCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81SCEPCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81SCEPCertificateProfile> callback);
+    void delete(final ICallback<? super WindowsPhone81SCEPCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81SCEPCertificateProfileRequest extends IHttpReque
      * @param sourceWindowsPhone81SCEPCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81SCEPCertificateProfile sourceWindowsPhone81SCEPCertificateProfile, final ICallback<WindowsPhone81SCEPCertificateProfile> callback);
+    void patch(final WindowsPhone81SCEPCertificateProfile sourceWindowsPhone81SCEPCertificateProfile, final ICallback<? super WindowsPhone81SCEPCertificateProfile> callback);
 
     /**
      * Patches this WindowsPhone81SCEPCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81SCEPCertificateProfileRequest extends IHttpReque
      * @param newWindowsPhone81SCEPCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile, final ICallback<WindowsPhone81SCEPCertificateProfile> callback);
+    void post(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile, final ICallback<? super WindowsPhone81SCEPCertificateProfile> callback);
 
     /**
      * Posts a WindowsPhone81SCEPCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81SCEPCertificateProfileRequest extends IHttpReque
      * @param newWindowsPhone81SCEPCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile, final ICallback<WindowsPhone81SCEPCertificateProfile> callback);
+    void put(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile, final ICallback<? super WindowsPhone81SCEPCertificateProfile> callback);
 
     /**
      * Posts a WindowsPhone81SCEPCertificateProfile with a new object

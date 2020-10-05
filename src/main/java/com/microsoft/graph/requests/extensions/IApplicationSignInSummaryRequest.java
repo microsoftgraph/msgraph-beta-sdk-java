@@ -21,7 +21,7 @@ public interface IApplicationSignInSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ApplicationSignInSummary> callback);
+    void get(final ICallback<? super ApplicationSignInSummary> callback);
 
     /**
      * Gets the ApplicationSignInSummary from the service
@@ -36,7 +36,7 @@ public interface IApplicationSignInSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ApplicationSignInSummary> callback);
+    void delete(final ICallback<? super ApplicationSignInSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApplicationSignInSummaryRequest extends IHttpRequest {
      * @param sourceApplicationSignInSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ApplicationSignInSummary sourceApplicationSignInSummary, final ICallback<ApplicationSignInSummary> callback);
+    void patch(final ApplicationSignInSummary sourceApplicationSignInSummary, final ICallback<? super ApplicationSignInSummary> callback);
 
     /**
      * Patches this ApplicationSignInSummary with a source
@@ -68,7 +68,7 @@ public interface IApplicationSignInSummaryRequest extends IHttpRequest {
      * @param newApplicationSignInSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<ApplicationSignInSummary> callback);
+    void post(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<? super ApplicationSignInSummary> callback);
 
     /**
      * Posts a ApplicationSignInSummary with a new object
@@ -85,7 +85,7 @@ public interface IApplicationSignInSummaryRequest extends IHttpRequest {
      * @param newApplicationSignInSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<ApplicationSignInSummary> callback);
+    void put(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<? super ApplicationSignInSummary> callback);
 
     /**
      * Posts a ApplicationSignInSummary with a new object

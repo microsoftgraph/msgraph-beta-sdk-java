@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITermsAndConditionsReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<TermsAndConditions> callback);
+    void delete(final ICallback<? super TermsAndConditions> callback);
 
     TermsAndConditions delete() throws ClientException;
 
@@ -54,7 +54,7 @@ public interface ITermsAndConditionsReferenceRequest extends IHttpRequest {
      * @param srcTermsAndConditions the TermsAndConditions to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(TermsAndConditions srcTermsAndConditions, final ICallback<TermsAndConditions> callback);
+    void put(TermsAndConditions srcTermsAndConditions, final ICallback<? super TermsAndConditions> callback);
 
     /**
      * Puts the TermsAndConditions

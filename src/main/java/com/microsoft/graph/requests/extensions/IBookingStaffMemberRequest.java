@@ -21,7 +21,7 @@ public interface IBookingStaffMemberRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingStaffMember> callback);
+    void get(final ICallback<? super BookingStaffMember> callback);
 
     /**
      * Gets the BookingStaffMember from the service
@@ -36,7 +36,7 @@ public interface IBookingStaffMemberRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingStaffMember> callback);
+    void delete(final ICallback<? super BookingStaffMember> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingStaffMemberRequest extends IHttpRequest {
      * @param sourceBookingStaffMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingStaffMember sourceBookingStaffMember, final ICallback<BookingStaffMember> callback);
+    void patch(final BookingStaffMember sourceBookingStaffMember, final ICallback<? super BookingStaffMember> callback);
 
     /**
      * Patches this BookingStaffMember with a source
@@ -68,7 +68,7 @@ public interface IBookingStaffMemberRequest extends IHttpRequest {
      * @param newBookingStaffMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback);
+    void post(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback);
 
     /**
      * Posts a BookingStaffMember with a new object
@@ -85,7 +85,7 @@ public interface IBookingStaffMemberRequest extends IHttpRequest {
      * @param newBookingStaffMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback);
+    void put(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback);
 
     /**
      * Posts a BookingStaffMember with a new object

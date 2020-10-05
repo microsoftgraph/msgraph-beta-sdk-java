@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsInformationProtectionNetworkLearningSummaryCollectionPage> callback);
+    void get(final ICallback<? super IWindowsInformationProtectionNetworkLearningSummaryCollectionPage> callback);
 
     IWindowsInformationProtectionNetworkLearningSummaryCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback);
+    void post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback);
 
     WindowsInformationProtectionNetworkLearningSummary post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRe
      * @return the updated request
      */
     IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRe
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(final String skipToken);
 }

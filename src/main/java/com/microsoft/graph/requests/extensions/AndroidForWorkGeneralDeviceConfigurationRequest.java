@@ -37,7 +37,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void get(final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param sourceAndroidForWorkGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkGeneralDeviceConfiguration sourceAndroidForWorkGeneralDeviceConfiguration, final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void patch(final AndroidForWorkGeneralDeviceConfiguration sourceAndroidForWorkGeneralDeviceConfiguration, final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param newAndroidForWorkGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void post(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param newAndroidForWorkGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      */
      public IAndroidForWorkGeneralDeviceConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkGeneralDeviceConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkGeneralDeviceConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkGeneralDeviceConfigurationRequest)this;
      }
 

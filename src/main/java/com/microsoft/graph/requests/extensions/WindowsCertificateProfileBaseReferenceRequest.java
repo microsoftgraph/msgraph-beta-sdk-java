@@ -34,7 +34,7 @@ public class WindowsCertificateProfileBaseReferenceRequest extends BaseRequest i
         super(requestUrl, client, requestOptions, WindowsCertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<WindowsCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class WindowsCertificateProfileBaseReferenceRequest extends BaseRequest i
         return (WindowsCertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsCertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsCertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the WindowsCertificateProfileBase
      *
      * @param srcWindowsCertificateProfileBase the WindowsCertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WindowsCertificateProfileBase srcWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback) {
+    public void put(WindowsCertificateProfileBase srcWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcWindowsCertificateProfileBase);
     }
 

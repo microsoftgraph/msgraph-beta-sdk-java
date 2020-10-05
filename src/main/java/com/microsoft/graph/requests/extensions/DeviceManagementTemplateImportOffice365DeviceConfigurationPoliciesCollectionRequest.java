@@ -39,7 +39,7 @@ public class DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesC
     }
 
 
-    public void post(final ICallback<IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionPage> callback) {
+    public void post(final ICallback<? super IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesC
      */
     public IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest)this;
     }
 

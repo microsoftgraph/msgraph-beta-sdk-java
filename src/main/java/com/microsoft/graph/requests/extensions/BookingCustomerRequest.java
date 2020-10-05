@@ -37,7 +37,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<BookingCustomer> callback) {
+    public void get(final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<BookingCustomer> callback) {
+    public void delete(final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param sourceBookingCustomer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingCustomer sourceBookingCustomer, final ICallback<BookingCustomer> callback) {
+    public void patch(final BookingCustomer sourceBookingCustomer, final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingCustomer);
     }
 
@@ -96,7 +96,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param newBookingCustomer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingCustomer newBookingCustomer, final ICallback<BookingCustomer> callback) {
+    public void post(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.POST, callback, newBookingCustomer);
     }
 
@@ -117,7 +117,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param newBookingCustomer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingCustomer newBookingCustomer, final ICallback<BookingCustomer> callback) {
+    public void put(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.PUT, callback, newBookingCustomer);
     }
 
@@ -151,17 +151,6 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      */
      public IBookingCustomerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingCustomerRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IBookingCustomerRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BookingCustomerRequest)this;
      }
 

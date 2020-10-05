@@ -22,7 +22,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoleScopeTagCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IRoleScopeTagCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IRoleScopeTagCollectionWithReferencesPage> callback);
 
     IRoleScopeTagCollectionWithReferencesPage get() throws ClientException;
 

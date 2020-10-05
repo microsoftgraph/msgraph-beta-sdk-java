@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserCredentialUsageDetailsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserCredentialUsageDetailsCollectionPage> callback);
+    void get(final ICallback<? super IUserCredentialUsageDetailsCollectionPage> callback);
 
     IUserCredentialUsageDetailsCollectionPage get() throws ClientException;
 
-    void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback);
+    void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback);
 
     UserCredentialUsageDetails post(final UserCredentialUsageDetails newUserCredentialUsageDetails) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserCredentialUsageDetailsCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IUserCredentialUsageDetailsCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserCredentialUsageDetailsCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserCredentialUsageDetailsCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IUserCredentialUsageDetailsCollectionRequest skipToken(String skipToken);
+	IUserCredentialUsageDetailsCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class DeviceHealthScriptGetRemediationSummaryRequest extends BaseRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceHealthScriptRemediationSummary> callback) {
+    public void get(final ICallback<? super DeviceHealthScriptRemediationSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class DeviceHealthScriptGetRemediationSummaryRequest extends BaseRequest 
      */
     public IDeviceHealthScriptGetRemediationSummaryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceHealthScriptGetRemediationSummaryRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceHealthScriptGetRemediationSummaryRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceHealthScriptGetRemediationSummaryRequest)this;
     }
 

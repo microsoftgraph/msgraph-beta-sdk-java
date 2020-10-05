@@ -37,7 +37,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SensitiveType> callback) {
+    public void get(final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SensitiveType> callback) {
+    public void delete(final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param sourceSensitiveType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SensitiveType sourceSensitiveType, final ICallback<SensitiveType> callback) {
+    public void patch(final SensitiveType sourceSensitiveType, final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.PATCH, callback, sourceSensitiveType);
     }
 
@@ -96,7 +96,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param newSensitiveType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback) {
+    public void post(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.POST, callback, newSensitiveType);
     }
 
@@ -117,7 +117,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param newSensitiveType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback) {
+    public void put(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.PUT, callback, newSensitiveType);
     }
 
@@ -151,17 +151,6 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      */
      public ISensitiveTypeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SensitiveTypeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISensitiveTypeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SensitiveTypeRequest)this;
      }
 

@@ -52,7 +52,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Channel> callback) {
+    public void get(final ICallback<? super Channel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Channel> callback) {
+    public void delete(final ICallback<? super Channel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      * @param sourceChannel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Channel sourceChannel, final ICallback<Channel> callback) {
+    public void patch(final Channel sourceChannel, final ICallback<? super Channel> callback) {
         send(HttpMethod.PATCH, callback, sourceChannel);
     }
 
@@ -111,7 +111,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      * @param newChannel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Channel newChannel, final ICallback<Channel> callback) {
+    public void post(final Channel newChannel, final ICallback<? super Channel> callback) {
         send(HttpMethod.POST, callback, newChannel);
     }
 
@@ -132,7 +132,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      * @param newChannel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Channel newChannel, final ICallback<Channel> callback) {
+    public void put(final Channel newChannel, final ICallback<? super Channel> callback) {
         send(HttpMethod.PUT, callback, newChannel);
     }
 
@@ -166,17 +166,6 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      */
      public IChannelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ChannelRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IChannelRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ChannelRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IEdiscoveryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Ediscovery> callback);
+    void get(final ICallback<? super Ediscovery> callback);
 
     /**
      * Gets the Ediscovery from the service
@@ -36,7 +36,7 @@ public interface IEdiscoveryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Ediscovery> callback);
+    void delete(final ICallback<? super Ediscovery> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEdiscoveryRequest extends IHttpRequest {
      * @param sourceEdiscovery the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Ediscovery sourceEdiscovery, final ICallback<Ediscovery> callback);
+    void patch(final Ediscovery sourceEdiscovery, final ICallback<? super Ediscovery> callback);
 
     /**
      * Patches this Ediscovery with a source
@@ -68,7 +68,7 @@ public interface IEdiscoveryRequest extends IHttpRequest {
      * @param newEdiscovery the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Ediscovery newEdiscovery, final ICallback<Ediscovery> callback);
+    void post(final Ediscovery newEdiscovery, final ICallback<? super Ediscovery> callback);
 
     /**
      * Posts a Ediscovery with a new object
@@ -85,7 +85,7 @@ public interface IEdiscoveryRequest extends IHttpRequest {
      * @param newEdiscovery the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Ediscovery newEdiscovery, final ICallback<Ediscovery> callback);
+    void put(final Ediscovery newEdiscovery, final ICallback<? super Ediscovery> callback);
 
     /**
      * Posts a Ediscovery with a new object

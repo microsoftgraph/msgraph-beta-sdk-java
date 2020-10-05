@@ -21,7 +21,7 @@ public interface ISitePageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SitePage> callback);
+    void get(final ICallback<? super SitePage> callback);
 
     /**
      * Gets the SitePage from the service
@@ -36,7 +36,7 @@ public interface ISitePageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SitePage> callback);
+    void delete(final ICallback<? super SitePage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISitePageRequest extends IHttpRequest {
      * @param sourceSitePage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SitePage sourceSitePage, final ICallback<SitePage> callback);
+    void patch(final SitePage sourceSitePage, final ICallback<? super SitePage> callback);
 
     /**
      * Patches this SitePage with a source
@@ -68,7 +68,7 @@ public interface ISitePageRequest extends IHttpRequest {
      * @param newSitePage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SitePage newSitePage, final ICallback<SitePage> callback);
+    void post(final SitePage newSitePage, final ICallback<? super SitePage> callback);
 
     /**
      * Posts a SitePage with a new object
@@ -85,7 +85,7 @@ public interface ISitePageRequest extends IHttpRequest {
      * @param newSitePage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SitePage newSitePage, final ICallback<SitePage> callback);
+    void put(final SitePage newSitePage, final ICallback<? super SitePage> callback);
 
     /**
      * Posts a SitePage with a new object

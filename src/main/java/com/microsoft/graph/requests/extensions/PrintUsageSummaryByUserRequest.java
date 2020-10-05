@@ -37,7 +37,7 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintUsageSummaryByUser> callback) {
+    public void get(final ICallback<? super PrintUsageSummaryByUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintUsageSummaryByUser> callback) {
+    public void delete(final ICallback<? super PrintUsageSummaryByUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
      * @param sourcePrintUsageSummaryByUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintUsageSummaryByUser sourcePrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback) {
+    public void patch(final PrintUsageSummaryByUser sourcePrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintUsageSummaryByUser);
     }
 
@@ -96,7 +96,7 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
      * @param newPrintUsageSummaryByUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback) {
+    public void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback) {
         send(HttpMethod.POST, callback, newPrintUsageSummaryByUser);
     }
 
@@ -117,7 +117,7 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
      * @param newPrintUsageSummaryByUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback) {
+    public void put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback) {
         send(HttpMethod.PUT, callback, newPrintUsageSummaryByUser);
     }
 
@@ -151,17 +151,6 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
      */
      public IPrintUsageSummaryByUserRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintUsageSummaryByUserRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintUsageSummaryByUserRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintUsageSummaryByUserRequest)this;
      }
 

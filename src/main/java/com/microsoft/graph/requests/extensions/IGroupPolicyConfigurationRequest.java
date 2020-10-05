@@ -21,7 +21,7 @@ public interface IGroupPolicyConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyConfiguration> callback);
+    void get(final ICallback<? super GroupPolicyConfiguration> callback);
 
     /**
      * Gets the GroupPolicyConfiguration from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyConfiguration> callback);
+    void delete(final ICallback<? super GroupPolicyConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyConfigurationRequest extends IHttpRequest {
      * @param sourceGroupPolicyConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyConfiguration sourceGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback);
+    void patch(final GroupPolicyConfiguration sourceGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback);
 
     /**
      * Patches this GroupPolicyConfiguration with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyConfigurationRequest extends IHttpRequest {
      * @param newGroupPolicyConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback);
+    void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback);
 
     /**
      * Posts a GroupPolicyConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyConfigurationRequest extends IHttpRequest {
      * @param newGroupPolicyConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback);
+    void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback);
 
     /**
      * Posts a GroupPolicyConfiguration with a new object

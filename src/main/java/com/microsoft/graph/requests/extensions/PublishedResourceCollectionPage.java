@@ -23,6 +23,6 @@ public class PublishedResourceCollectionPage extends BaseCollectionPage<Publishe
      * @param builder  the request builder for the next collection page
      */
     public PublishedResourceCollectionPage(final PublishedResourceCollectionResponse response, final IPublishedResourceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

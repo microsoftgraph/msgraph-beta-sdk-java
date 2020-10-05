@@ -37,7 +37,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserConfiguration> callback) {
+    public void get(final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserConfiguration> callback) {
+    public void delete(final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param sourceUserConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserConfiguration sourceUserConfiguration, final ICallback<UserConfiguration> callback) {
+    public void patch(final UserConfiguration sourceUserConfiguration, final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceUserConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param newUserConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback) {
+    public void post(final UserConfiguration newUserConfiguration, final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.POST, callback, newUserConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param newUserConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback) {
+    public void put(final UserConfiguration newUserConfiguration, final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.PUT, callback, newUserConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      */
      public IUserConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserConfigurationRequest)this;
      }
 

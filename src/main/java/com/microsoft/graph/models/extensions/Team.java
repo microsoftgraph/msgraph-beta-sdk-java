@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamDiscoverySettings;
 import com.microsoft.graph.models.extensions.TeamFunSettings;
@@ -25,15 +24,10 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.UserCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
 
 
@@ -288,83 +282,23 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("channels")) {
-            final ChannelCollectionResponse response = new ChannelCollectionResponse();
-            if (json.has("channels@odata.nextLink")) {
-                response.nextLink = json.get("channels@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("channels").toString(), JsonObject[].class);
-            final Channel[] array = new Channel[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Channel.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            channels = new ChannelCollectionPage(response, null);
+            channels = serializer.deserializeObject(json.get("channels").toString(), ChannelCollectionPage.class);
         }
 
         if (json.has("installedApps")) {
-            final TeamsAppInstallationCollectionResponse response = new TeamsAppInstallationCollectionResponse();
-            if (json.has("installedApps@odata.nextLink")) {
-                response.nextLink = json.get("installedApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("installedApps").toString(), JsonObject[].class);
-            final TeamsAppInstallation[] array = new TeamsAppInstallation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TeamsAppInstallation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            installedApps = new TeamsAppInstallationCollectionPage(response, null);
+            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), TeamsAppInstallationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final ConversationMember[] array = new ConversationMember[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new ConversationMemberCollectionPage(response, null);
+            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            final TeamsAsyncOperationCollectionResponse response = new TeamsAsyncOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final TeamsAsyncOperation[] array = new TeamsAsyncOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TeamsAsyncOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new TeamsAsyncOperationCollectionPage(response, null);
+            operations = serializer.deserializeObject(json.get("operations").toString(), TeamsAsyncOperationCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            final UserCollectionResponse response = new UserCollectionResponse();
-            if (json.has("owners@odata.nextLink")) {
-                response.nextLink = json.get("owners@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
-            final User[] array = new User[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), User.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            owners = new UserCollectionPage(response, null);
+            owners = serializer.deserializeObject(json.get("owners").toString(), UserCollectionPage.class);
         }
     }
 }

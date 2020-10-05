@@ -34,6 +34,6 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionPage e
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionPage(final ReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionResponse response, final IReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

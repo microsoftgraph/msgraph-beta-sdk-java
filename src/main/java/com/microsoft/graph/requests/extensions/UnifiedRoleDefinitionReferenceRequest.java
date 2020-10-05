@@ -38,7 +38,7 @@ public class UnifiedRoleDefinitionReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, UnifiedRoleDefinition.class);
     }
 
-    public void delete(final ICallback<UnifiedRoleDefinition> callback) {
+    public void delete(final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class UnifiedRoleDefinitionReferenceRequest extends BaseRequest implement
         return (UnifiedRoleDefinitionReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IUnifiedRoleDefinitionReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UnifiedRoleDefinitionReferenceRequest)this;
-    }
-    /**
      * Puts the UnifiedRoleDefinition
      *
      * @param srcUnifiedRoleDefinition the UnifiedRoleDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(UnifiedRoleDefinition srcUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback) {
+    public void put(UnifiedRoleDefinition srcUnifiedRoleDefinition, final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.PUT, callback, srcUnifiedRoleDefinition);
     }
 

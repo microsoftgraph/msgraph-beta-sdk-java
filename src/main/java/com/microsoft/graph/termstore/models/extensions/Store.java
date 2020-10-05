@@ -6,14 +6,10 @@ package com.microsoft.graph.termstore.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.models.extensions.Set;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.termstore.requests.extensions.GroupCollectionResponse;
 import com.microsoft.graph.termstore.requests.extensions.GroupCollectionPage;
-import com.microsoft.graph.termstore.requests.extensions.SetCollectionResponse;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionPage;
 
 
@@ -26,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Store.
  */
-public class Store extends Entity implements IJsonBackedObject {
+public class Store implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Default Language Tag.
@@ -102,35 +108,11 @@ public class Store extends Entity implements IJsonBackedObject {
 
 
         if (json.has("groups")) {
-            final GroupCollectionResponse response = new GroupCollectionResponse();
-            if (json.has("groups@odata.nextLink")) {
-                response.nextLink = json.get("groups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groups").toString(), JsonObject[].class);
-            final Group[] array = new Group[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Group.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groups = new GroupCollectionPage(response, null);
+            groups = serializer.deserializeObject(json.get("groups").toString(), GroupCollectionPage.class);
         }
 
         if (json.has("sets")) {
-            final SetCollectionResponse response = new SetCollectionResponse();
-            if (json.has("sets@odata.nextLink")) {
-                response.nextLink = json.get("sets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sets").toString(), JsonObject[].class);
-            final Set[] array = new Set[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Set.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sets = new SetCollectionPage(response, null);
+            sets = serializer.deserializeObject(json.get("sets").toString(), SetCollectionPage.class);
         }
     }
 }

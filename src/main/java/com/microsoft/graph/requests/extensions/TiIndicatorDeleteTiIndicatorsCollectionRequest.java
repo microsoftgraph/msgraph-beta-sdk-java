@@ -44,7 +44,7 @@ public class TiIndicatorDeleteTiIndicatorsCollectionRequest extends BaseCollecti
     }
 
 
-    public void post(final ICallback<ITiIndicatorDeleteTiIndicatorsCollectionPage> callback) {
+    public void post(final ICallback<? super ITiIndicatorDeleteTiIndicatorsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class TiIndicatorDeleteTiIndicatorsCollectionRequest extends BaseCollecti
      */
     public ITiIndicatorDeleteTiIndicatorsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ITiIndicatorDeleteTiIndicatorsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITiIndicatorDeleteTiIndicatorsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ITiIndicatorDeleteTiIndicatorsCollectionRequest)this;
     }
 

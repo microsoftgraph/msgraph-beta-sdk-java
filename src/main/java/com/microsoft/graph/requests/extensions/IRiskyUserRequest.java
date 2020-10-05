@@ -21,7 +21,7 @@ public interface IRiskyUserRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RiskyUser> callback);
+    void get(final ICallback<? super RiskyUser> callback);
 
     /**
      * Gets the RiskyUser from the service
@@ -36,7 +36,7 @@ public interface IRiskyUserRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RiskyUser> callback);
+    void delete(final ICallback<? super RiskyUser> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRiskyUserRequest extends IHttpRequest {
      * @param sourceRiskyUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RiskyUser sourceRiskyUser, final ICallback<RiskyUser> callback);
+    void patch(final RiskyUser sourceRiskyUser, final ICallback<? super RiskyUser> callback);
 
     /**
      * Patches this RiskyUser with a source
@@ -68,7 +68,7 @@ public interface IRiskyUserRequest extends IHttpRequest {
      * @param newRiskyUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RiskyUser newRiskyUser, final ICallback<RiskyUser> callback);
+    void post(final RiskyUser newRiskyUser, final ICallback<? super RiskyUser> callback);
 
     /**
      * Posts a RiskyUser with a new object
@@ -85,7 +85,7 @@ public interface IRiskyUserRequest extends IHttpRequest {
      * @param newRiskyUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RiskyUser newRiskyUser, final ICallback<RiskyUser> callback);
+    void put(final RiskyUser newRiskyUser, final ICallback<? super RiskyUser> callback);
 
     /**
      * Posts a RiskyUser with a new object

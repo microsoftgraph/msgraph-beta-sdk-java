@@ -21,7 +21,7 @@ public interface IMailboxUsageDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailboxUsageDetail> callback);
+    void get(final ICallback<? super MailboxUsageDetail> callback);
 
     /**
      * Gets the MailboxUsageDetail from the service
@@ -36,7 +36,7 @@ public interface IMailboxUsageDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailboxUsageDetail> callback);
+    void delete(final ICallback<? super MailboxUsageDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailboxUsageDetailRequest extends IHttpRequest {
      * @param sourceMailboxUsageDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailboxUsageDetail sourceMailboxUsageDetail, final ICallback<MailboxUsageDetail> callback);
+    void patch(final MailboxUsageDetail sourceMailboxUsageDetail, final ICallback<? super MailboxUsageDetail> callback);
 
     /**
      * Patches this MailboxUsageDetail with a source
@@ -68,7 +68,7 @@ public interface IMailboxUsageDetailRequest extends IHttpRequest {
      * @param newMailboxUsageDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailboxUsageDetail newMailboxUsageDetail, final ICallback<MailboxUsageDetail> callback);
+    void post(final MailboxUsageDetail newMailboxUsageDetail, final ICallback<? super MailboxUsageDetail> callback);
 
     /**
      * Posts a MailboxUsageDetail with a new object
@@ -85,7 +85,7 @@ public interface IMailboxUsageDetailRequest extends IHttpRequest {
      * @param newMailboxUsageDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailboxUsageDetail newMailboxUsageDetail, final ICallback<MailboxUsageDetail> callback);
+    void put(final MailboxUsageDetail newMailboxUsageDetail, final ICallback<? super MailboxUsageDetail> callback);
 
     /**
      * Posts a MailboxUsageDetail with a new object

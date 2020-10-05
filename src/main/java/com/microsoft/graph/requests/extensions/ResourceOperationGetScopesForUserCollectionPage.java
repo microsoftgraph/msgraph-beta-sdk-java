@@ -34,6 +34,6 @@ public class ResourceOperationGetScopesForUserCollectionPage extends BaseCollect
      * @param builder The request builder for the next collection page
      */
     public ResourceOperationGetScopesForUserCollectionPage(final ResourceOperationGetScopesForUserCollectionResponse response, final IResourceOperationGetScopesForUserCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IProgramControlRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProgramControl> callback);
+    void get(final ICallback<? super ProgramControl> callback);
 
     /**
      * Gets the ProgramControl from the service
@@ -36,7 +36,7 @@ public interface IProgramControlRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProgramControl> callback);
+    void delete(final ICallback<? super ProgramControl> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProgramControlRequest extends IHttpRequest {
      * @param sourceProgramControl the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProgramControl sourceProgramControl, final ICallback<ProgramControl> callback);
+    void patch(final ProgramControl sourceProgramControl, final ICallback<? super ProgramControl> callback);
 
     /**
      * Patches this ProgramControl with a source
@@ -68,7 +68,7 @@ public interface IProgramControlRequest extends IHttpRequest {
      * @param newProgramControl the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProgramControl newProgramControl, final ICallback<ProgramControl> callback);
+    void post(final ProgramControl newProgramControl, final ICallback<? super ProgramControl> callback);
 
     /**
      * Posts a ProgramControl with a new object
@@ -85,7 +85,7 @@ public interface IProgramControlRequest extends IHttpRequest {
      * @param newProgramControl the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProgramControl newProgramControl, final ICallback<ProgramControl> callback);
+    void put(final ProgramControl newProgramControl, final ICallback<? super ProgramControl> callback);
 
     /**
      * Posts a ProgramControl with a new object

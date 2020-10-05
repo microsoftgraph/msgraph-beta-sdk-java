@@ -21,7 +21,7 @@ public interface IIosPkcsCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosPkcsCertificateProfile> callback);
+    void get(final ICallback<? super IosPkcsCertificateProfile> callback);
 
     /**
      * Gets the IosPkcsCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IIosPkcsCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosPkcsCertificateProfile> callback);
+    void delete(final ICallback<? super IosPkcsCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosPkcsCertificateProfileRequest extends IHttpRequest {
      * @param sourceIosPkcsCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosPkcsCertificateProfile sourceIosPkcsCertificateProfile, final ICallback<IosPkcsCertificateProfile> callback);
+    void patch(final IosPkcsCertificateProfile sourceIosPkcsCertificateProfile, final ICallback<? super IosPkcsCertificateProfile> callback);
 
     /**
      * Patches this IosPkcsCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IIosPkcsCertificateProfileRequest extends IHttpRequest {
      * @param newIosPkcsCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosPkcsCertificateProfile newIosPkcsCertificateProfile, final ICallback<IosPkcsCertificateProfile> callback);
+    void post(final IosPkcsCertificateProfile newIosPkcsCertificateProfile, final ICallback<? super IosPkcsCertificateProfile> callback);
 
     /**
      * Posts a IosPkcsCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IIosPkcsCertificateProfileRequest extends IHttpRequest {
      * @param newIosPkcsCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosPkcsCertificateProfile newIosPkcsCertificateProfile, final ICallback<IosPkcsCertificateProfile> callback);
+    void put(final IosPkcsCertificateProfile newIosPkcsCertificateProfile, final ICallback<? super IosPkcsCertificateProfile> callback);
 
     /**
      * Posts a IosPkcsCertificateProfile with a new object

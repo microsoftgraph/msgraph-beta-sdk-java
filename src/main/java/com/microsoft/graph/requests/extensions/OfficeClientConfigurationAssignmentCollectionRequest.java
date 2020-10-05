@@ -40,7 +40,7 @@ public class OfficeClientConfigurationAssignmentCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, OfficeClientConfigurationAssignmentCollectionResponse.class, IOfficeClientConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IOfficeClientConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IOfficeClientConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OfficeClientConfigurationAssignmentCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback) {
+    public void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<? super OfficeClientConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfficeClientConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class OfficeClientConfigurationAssignmentCollectionRequest extends BaseCo
      */
     public IOfficeClientConfigurationAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OfficeClientConfigurationAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOfficeClientConfigurationAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OfficeClientConfigurationAssignmentCollectionRequest)this;
     }
 

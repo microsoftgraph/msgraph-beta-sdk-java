@@ -23,6 +23,6 @@ public class FileClassificationRequestCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public FileClassificationRequestCollectionPage(final FileClassificationRequestCollectionResponse response, final IFileClassificationRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

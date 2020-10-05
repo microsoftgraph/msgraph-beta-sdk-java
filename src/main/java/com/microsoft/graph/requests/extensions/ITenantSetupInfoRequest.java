@@ -21,7 +21,7 @@ public interface ITenantSetupInfoRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TenantSetupInfo> callback);
+    void get(final ICallback<? super TenantSetupInfo> callback);
 
     /**
      * Gets the TenantSetupInfo from the service
@@ -36,7 +36,7 @@ public interface ITenantSetupInfoRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TenantSetupInfo> callback);
+    void delete(final ICallback<? super TenantSetupInfo> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITenantSetupInfoRequest extends IHttpRequest {
      * @param sourceTenantSetupInfo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TenantSetupInfo sourceTenantSetupInfo, final ICallback<TenantSetupInfo> callback);
+    void patch(final TenantSetupInfo sourceTenantSetupInfo, final ICallback<? super TenantSetupInfo> callback);
 
     /**
      * Patches this TenantSetupInfo with a source
@@ -68,7 +68,7 @@ public interface ITenantSetupInfoRequest extends IHttpRequest {
      * @param newTenantSetupInfo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TenantSetupInfo newTenantSetupInfo, final ICallback<TenantSetupInfo> callback);
+    void post(final TenantSetupInfo newTenantSetupInfo, final ICallback<? super TenantSetupInfo> callback);
 
     /**
      * Posts a TenantSetupInfo with a new object
@@ -85,7 +85,7 @@ public interface ITenantSetupInfoRequest extends IHttpRequest {
      * @param newTenantSetupInfo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TenantSetupInfo newTenantSetupInfo, final ICallback<TenantSetupInfo> callback);
+    void put(final TenantSetupInfo newTenantSetupInfo, final ICallback<? super TenantSetupInfo> callback);
 
     /**
      * Posts a TenantSetupInfo with a new object

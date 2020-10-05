@@ -39,7 +39,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ProgramControl> callback) {
+    public void get(final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ProgramControl> callback) {
+    public void delete(final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param sourceProgramControl the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProgramControl sourceProgramControl, final ICallback<ProgramControl> callback) {
+    public void patch(final ProgramControl sourceProgramControl, final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.PATCH, callback, sourceProgramControl);
     }
 
@@ -98,7 +98,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param newProgramControl the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProgramControl newProgramControl, final ICallback<ProgramControl> callback) {
+    public void post(final ProgramControl newProgramControl, final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.POST, callback, newProgramControl);
     }
 
@@ -119,7 +119,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param newProgramControl the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProgramControl newProgramControl, final ICallback<ProgramControl> callback) {
+    public void put(final ProgramControl newProgramControl, final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.PUT, callback, newProgramControl);
     }
 
@@ -153,17 +153,6 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      */
      public IProgramControlRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProgramControlRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IProgramControlRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ProgramControlRequest)this;
      }
 

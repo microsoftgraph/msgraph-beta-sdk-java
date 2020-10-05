@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionPage> callback);
+    void post(final ICallback<? super ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionPage> callback);
 
     ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionPage post() throws ClientException;
 

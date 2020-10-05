@@ -21,7 +21,7 @@ public interface IAccessPackageResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageResource> callback);
+    void get(final ICallback<? super AccessPackageResource> callback);
 
     /**
      * Gets the AccessPackageResource from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageResourceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageResource> callback);
+    void delete(final ICallback<? super AccessPackageResource> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageResourceRequest extends IHttpRequest {
      * @param sourceAccessPackageResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageResource sourceAccessPackageResource, final ICallback<AccessPackageResource> callback);
+    void patch(final AccessPackageResource sourceAccessPackageResource, final ICallback<? super AccessPackageResource> callback);
 
     /**
      * Patches this AccessPackageResource with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageResourceRequest extends IHttpRequest {
      * @param newAccessPackageResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageResource newAccessPackageResource, final ICallback<AccessPackageResource> callback);
+    void post(final AccessPackageResource newAccessPackageResource, final ICallback<? super AccessPackageResource> callback);
 
     /**
      * Posts a AccessPackageResource with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageResourceRequest extends IHttpRequest {
      * @param newAccessPackageResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageResource newAccessPackageResource, final ICallback<AccessPackageResource> callback);
+    void put(final AccessPackageResource newAccessPackageResource, final ICallback<? super AccessPackageResource> callback);
 
     /**
      * Posts a AccessPackageResource with a new object

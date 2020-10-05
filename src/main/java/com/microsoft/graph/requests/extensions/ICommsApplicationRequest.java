@@ -21,7 +21,7 @@ public interface ICommsApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CommsApplication> callback);
+    void get(final ICallback<? super CommsApplication> callback);
 
     /**
      * Gets the CommsApplication from the service
@@ -36,7 +36,7 @@ public interface ICommsApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CommsApplication> callback);
+    void delete(final ICallback<? super CommsApplication> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICommsApplicationRequest extends IHttpRequest {
      * @param sourceCommsApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CommsApplication sourceCommsApplication, final ICallback<CommsApplication> callback);
+    void patch(final CommsApplication sourceCommsApplication, final ICallback<? super CommsApplication> callback);
 
     /**
      * Patches this CommsApplication with a source
@@ -68,7 +68,7 @@ public interface ICommsApplicationRequest extends IHttpRequest {
      * @param newCommsApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CommsApplication newCommsApplication, final ICallback<CommsApplication> callback);
+    void post(final CommsApplication newCommsApplication, final ICallback<? super CommsApplication> callback);
 
     /**
      * Posts a CommsApplication with a new object
@@ -85,7 +85,7 @@ public interface ICommsApplicationRequest extends IHttpRequest {
      * @param newCommsApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CommsApplication newCommsApplication, final ICallback<CommsApplication> callback);
+    void put(final CommsApplication newCommsApplication, final ICallback<? super CommsApplication> callback);
 
     /**
      * Posts a CommsApplication with a new object

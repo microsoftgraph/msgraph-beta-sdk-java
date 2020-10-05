@@ -21,7 +21,7 @@ public interface ISalesQuoteLineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SalesQuoteLine> callback);
+    void get(final ICallback<? super SalesQuoteLine> callback);
 
     /**
      * Gets the SalesQuoteLine from the service
@@ -36,7 +36,7 @@ public interface ISalesQuoteLineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SalesQuoteLine> callback);
+    void delete(final ICallback<? super SalesQuoteLine> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISalesQuoteLineRequest extends IHttpRequest {
      * @param sourceSalesQuoteLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SalesQuoteLine sourceSalesQuoteLine, final ICallback<SalesQuoteLine> callback);
+    void patch(final SalesQuoteLine sourceSalesQuoteLine, final ICallback<? super SalesQuoteLine> callback);
 
     /**
      * Patches this SalesQuoteLine with a source
@@ -68,7 +68,7 @@ public interface ISalesQuoteLineRequest extends IHttpRequest {
      * @param newSalesQuoteLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SalesQuoteLine newSalesQuoteLine, final ICallback<SalesQuoteLine> callback);
+    void post(final SalesQuoteLine newSalesQuoteLine, final ICallback<? super SalesQuoteLine> callback);
 
     /**
      * Posts a SalesQuoteLine with a new object
@@ -85,7 +85,7 @@ public interface ISalesQuoteLineRequest extends IHttpRequest {
      * @param newSalesQuoteLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SalesQuoteLine newSalesQuoteLine, final ICallback<SalesQuoteLine> callback);
+    void put(final SalesQuoteLine newSalesQuoteLine, final ICallback<? super SalesQuoteLine> callback);
 
     /**
      * Posts a SalesQuoteLine with a new object

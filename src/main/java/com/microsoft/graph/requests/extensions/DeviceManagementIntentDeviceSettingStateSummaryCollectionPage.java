@@ -23,6 +23,6 @@ public class DeviceManagementIntentDeviceSettingStateSummaryCollectionPage exten
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementIntentDeviceSettingStateSummaryCollectionPage(final DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse response, final IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

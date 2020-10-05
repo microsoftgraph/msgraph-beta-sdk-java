@@ -21,7 +21,7 @@ public interface IWindowsPhone81VpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81VpnConfiguration> callback);
+    void get(final ICallback<? super WindowsPhone81VpnConfiguration> callback);
 
     /**
      * Gets the WindowsPhone81VpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81VpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81VpnConfiguration> callback);
+    void delete(final ICallback<? super WindowsPhone81VpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81VpnConfigurationRequest extends IHttpRequest {
      * @param sourceWindowsPhone81VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81VpnConfiguration sourceWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback);
+    void patch(final WindowsPhone81VpnConfiguration sourceWindowsPhone81VpnConfiguration, final ICallback<? super WindowsPhone81VpnConfiguration> callback);
 
     /**
      * Patches this WindowsPhone81VpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81VpnConfigurationRequest extends IHttpRequest {
      * @param newWindowsPhone81VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback);
+    void post(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<? super WindowsPhone81VpnConfiguration> callback);
 
     /**
      * Posts a WindowsPhone81VpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81VpnConfigurationRequest extends IHttpRequest {
      * @param newWindowsPhone81VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback);
+    void put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<? super WindowsPhone81VpnConfiguration> callback);
 
     /**
      * Posts a WindowsPhone81VpnConfiguration with a new object

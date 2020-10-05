@@ -39,7 +39,7 @@ public class AccessReviewScheduleDefinitionWithReferenceRequest extends BaseRequ
         super(requestUrl, client, requestOptions, AccessReviewScheduleDefinition.class);
     }
 
-    public void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final IJsonBackedObject payload, final ICallback<AccessReviewScheduleDefinition> callback) {
+    public void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final IJsonBackedObject payload, final ICallback<? super AccessReviewScheduleDefinition> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class AccessReviewScheduleDefinitionWithReferenceRequest extends BaseRequ
         return null;
     }
 
-    public void get(final ICallback<AccessReviewScheduleDefinition> callback) {
+    public void get(final ICallback<? super AccessReviewScheduleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class AccessReviewScheduleDefinitionWithReferenceRequest extends BaseRequ
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AccessReviewScheduleDefinition> callback) {
+	public void delete(final ICallback<? super AccessReviewScheduleDefinition> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class AccessReviewScheduleDefinitionWithReferenceRequest extends BaseRequ
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback) {
+	public void patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback) {
 		send(HttpMethod.PATCH, callback, sourceAccessReviewScheduleDefinition);
 	}
 
@@ -95,16 +95,6 @@ public class AccessReviewScheduleDefinitionWithReferenceRequest extends BaseRequ
      */
     public IAccessReviewScheduleDefinitionWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AccessReviewScheduleDefinitionWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAccessReviewScheduleDefinitionWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AccessReviewScheduleDefinitionWithReferenceRequest)this;
     }
 }

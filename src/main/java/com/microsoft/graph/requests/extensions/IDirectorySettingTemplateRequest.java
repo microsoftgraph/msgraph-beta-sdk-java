@@ -21,7 +21,7 @@ public interface IDirectorySettingTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectorySettingTemplate> callback);
+    void get(final ICallback<? super DirectorySettingTemplate> callback);
 
     /**
      * Gets the DirectorySettingTemplate from the service
@@ -36,7 +36,7 @@ public interface IDirectorySettingTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectorySettingTemplate> callback);
+    void delete(final ICallback<? super DirectorySettingTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectorySettingTemplateRequest extends IHttpRequest {
      * @param sourceDirectorySettingTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectorySettingTemplate sourceDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback);
+    void patch(final DirectorySettingTemplate sourceDirectorySettingTemplate, final ICallback<? super DirectorySettingTemplate> callback);
 
     /**
      * Patches this DirectorySettingTemplate with a source
@@ -68,7 +68,7 @@ public interface IDirectorySettingTemplateRequest extends IHttpRequest {
      * @param newDirectorySettingTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback);
+    void post(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<? super DirectorySettingTemplate> callback);
 
     /**
      * Posts a DirectorySettingTemplate with a new object
@@ -85,7 +85,7 @@ public interface IDirectorySettingTemplateRequest extends IHttpRequest {
      * @param newDirectorySettingTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback);
+    void put(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<? super DirectorySettingTemplate> callback);
 
     /**
      * Posts a DirectorySettingTemplate with a new object

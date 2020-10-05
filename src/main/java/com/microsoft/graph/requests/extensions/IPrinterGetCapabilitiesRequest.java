@@ -26,7 +26,7 @@ public interface IPrinterGetCapabilitiesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrinterCapabilities> callback);
+    void get(final ICallback<? super PrinterCapabilities> callback);
 
     /**
      * Gets the PrinterCapabilities

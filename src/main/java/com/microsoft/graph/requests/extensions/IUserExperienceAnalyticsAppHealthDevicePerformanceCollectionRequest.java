@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage> callback);
 
     IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback);
+    void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback);
 
     UserExperienceAnalyticsAppHealthDevicePerformance post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionReq
      * @return the updated request
      */
     IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionReq
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequest skipToken(final String skipToken);
 }

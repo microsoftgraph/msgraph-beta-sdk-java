@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAgreementAcceptanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAgreementAcceptanceCollectionPage> callback);
+    void get(final ICallback<? super IAgreementAcceptanceCollectionPage> callback);
 
     IAgreementAcceptanceCollectionPage get() throws ClientException;
 
-    void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+    void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
     AgreementAcceptance post(final AgreementAcceptance newAgreementAcceptance) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IAgreementAcceptanceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAgreementAcceptanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAgreementAcceptanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IAgreementAcceptanceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAgreementAcceptanceCollectionRequest skipToken(String skipToken);
+	IAgreementAcceptanceCollectionRequest skipToken(final String skipToken);
 }

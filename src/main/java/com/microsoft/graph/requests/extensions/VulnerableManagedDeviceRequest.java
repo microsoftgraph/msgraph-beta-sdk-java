@@ -37,7 +37,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<VulnerableManagedDevice> callback) {
+    public void get(final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<VulnerableManagedDevice> callback) {
+    public void delete(final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param sourceVulnerableManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final VulnerableManagedDevice sourceVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback) {
+    public void patch(final VulnerableManagedDevice sourceVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceVulnerableManagedDevice);
     }
 
@@ -96,7 +96,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param newVulnerableManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback) {
+    public void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.POST, callback, newVulnerableManagedDevice);
     }
 
@@ -117,7 +117,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param newVulnerableManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback) {
+    public void put(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.PUT, callback, newVulnerableManagedDevice);
     }
 
@@ -151,17 +151,6 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      */
      public IVulnerableManagedDeviceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VulnerableManagedDeviceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IVulnerableManagedDeviceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (VulnerableManagedDeviceRequest)this;
      }
 

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IEducationSynchronizationProfileStartCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IEducationSynchronizationProfileStartCollectionPage> callback);
+    void post(final ICallback<? super IEducationSynchronizationProfileStartCollectionPage> callback);
 
     IEducationSynchronizationProfileStartCollectionPage post() throws ClientException;
 

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IImportedDeviceIdentitySearchExistingIdentitiesCollectionPage> callback);
+    void post(final ICallback<? super IImportedDeviceIdentitySearchExistingIdentitiesCollectionPage> callback);
 
     IImportedDeviceIdentitySearchExistingIdentitiesCollectionPage post() throws ClientException;
 

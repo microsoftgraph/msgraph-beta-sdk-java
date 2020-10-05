@@ -41,7 +41,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyCollectionReques
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse.class, IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class WindowsDefenderApplicationControlSupplementalPolicyCollectionReques
      */
     public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsDefenderApplicationControlSupplementalPolicyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsDefenderApplicationControlSupplementalPolicyCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IAccessPackageSubjectRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageSubject> callback);
+    void get(final ICallback<? super AccessPackageSubject> callback);
 
     /**
      * Gets the AccessPackageSubject from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageSubjectRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageSubject> callback);
+    void delete(final ICallback<? super AccessPackageSubject> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageSubjectRequest extends IHttpRequest {
      * @param sourceAccessPackageSubject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageSubject sourceAccessPackageSubject, final ICallback<AccessPackageSubject> callback);
+    void patch(final AccessPackageSubject sourceAccessPackageSubject, final ICallback<? super AccessPackageSubject> callback);
 
     /**
      * Patches this AccessPackageSubject with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageSubjectRequest extends IHttpRequest {
      * @param newAccessPackageSubject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageSubject newAccessPackageSubject, final ICallback<AccessPackageSubject> callback);
+    void post(final AccessPackageSubject newAccessPackageSubject, final ICallback<? super AccessPackageSubject> callback);
 
     /**
      * Posts a AccessPackageSubject with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageSubjectRequest extends IHttpRequest {
      * @param newAccessPackageSubject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageSubject newAccessPackageSubject, final ICallback<AccessPackageSubject> callback);
+    void put(final AccessPackageSubject newAccessPackageSubject, final ICallback<? super AccessPackageSubject> callback);
 
     /**
      * Posts a AccessPackageSubject with a new object

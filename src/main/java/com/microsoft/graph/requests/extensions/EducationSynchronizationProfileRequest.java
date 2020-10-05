@@ -44,7 +44,7 @@ public class EducationSynchronizationProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationSynchronizationProfile> callback) {
+    public void get(final ICallback<? super EducationSynchronizationProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class EducationSynchronizationProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationSynchronizationProfile> callback) {
+    public void delete(final ICallback<? super EducationSynchronizationProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class EducationSynchronizationProfileRequest extends BaseRequest implemen
      * @param sourceEducationSynchronizationProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationSynchronizationProfile sourceEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback) {
+    public void patch(final EducationSynchronizationProfile sourceEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationSynchronizationProfile);
     }
 
@@ -103,7 +103,7 @@ public class EducationSynchronizationProfileRequest extends BaseRequest implemen
      * @param newEducationSynchronizationProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback) {
+    public void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback) {
         send(HttpMethod.POST, callback, newEducationSynchronizationProfile);
     }
 
@@ -124,7 +124,7 @@ public class EducationSynchronizationProfileRequest extends BaseRequest implemen
      * @param newEducationSynchronizationProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback) {
+    public void put(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback) {
         send(HttpMethod.PUT, callback, newEducationSynchronizationProfile);
     }
 
@@ -158,17 +158,6 @@ public class EducationSynchronizationProfileRequest extends BaseRequest implemen
      */
      public IEducationSynchronizationProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationSynchronizationProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationSynchronizationProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationSynchronizationProfileRequest)this;
      }
 

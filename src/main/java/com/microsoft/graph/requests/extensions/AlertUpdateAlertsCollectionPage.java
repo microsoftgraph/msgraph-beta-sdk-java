@@ -34,6 +34,6 @@ public class AlertUpdateAlertsCollectionPage extends BaseCollectionPage<Alert, I
      * @param builder The request builder for the next collection page
      */
     public AlertUpdateAlertsCollectionPage(final AlertUpdateAlertsCollectionResponse response, final IAlertUpdateAlertsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

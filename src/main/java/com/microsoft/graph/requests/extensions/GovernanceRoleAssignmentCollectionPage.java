@@ -23,6 +23,6 @@ public class GovernanceRoleAssignmentCollectionPage extends BaseCollectionPage<G
      * @param builder  the request builder for the next collection page
      */
     public GovernanceRoleAssignmentCollectionPage(final GovernanceRoleAssignmentCollectionResponse response, final IGovernanceRoleAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class PlannerDeltaCollectionPage extends BaseCollectionPage<PlannerDelta,
      * @param builder  the request builder for the next collection page
      */
     public PlannerDeltaCollectionPage(final PlannerDeltaCollectionResponse response, final IPlannerDeltaCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

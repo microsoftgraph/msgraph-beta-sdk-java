@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApprovalWorkflowProviderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IApprovalWorkflowProviderCollectionPage> callback);
+    void get(final ICallback<? super IApprovalWorkflowProviderCollectionPage> callback);
 
     IApprovalWorkflowProviderCollectionPage get() throws ClientException;
 
-    void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback);
+    void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback);
 
     ApprovalWorkflowProvider post(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IApprovalWorkflowProviderCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IApprovalWorkflowProviderCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IApprovalWorkflowProviderCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IApprovalWorkflowProviderCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IApprovalWorkflowProviderCollectionRequest skipToken(String skipToken);
+	IApprovalWorkflowProviderCollectionRequest skipToken(final String skipToken);
 }

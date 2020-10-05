@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("installedApps")) {
-            final UserScopeTeamsAppInstallationCollectionResponse response = new UserScopeTeamsAppInstallationCollectionResponse();
-            if (json.has("installedApps@odata.nextLink")) {
-                response.nextLink = json.get("installedApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("installedApps").toString(), JsonObject[].class);
-            final UserScopeTeamsAppInstallation[] array = new UserScopeTeamsAppInstallation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserScopeTeamsAppInstallation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            installedApps = new UserScopeTeamsAppInstallationCollectionPage(response, null);
+            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), UserScopeTeamsAppInstallationCollectionPage.class);
         }
     }
 }

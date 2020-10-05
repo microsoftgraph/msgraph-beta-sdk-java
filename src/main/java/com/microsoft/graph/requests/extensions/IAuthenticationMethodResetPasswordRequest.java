@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAuthenticationMethodResetPasswordRequest extends IHttpRequest {
 
-    void post(final ICallback<PasswordResetResponse> callback);
+    void post(final ICallback<? super PasswordResetResponse> callback);
 
     PasswordResetResponse post() throws ClientException;
 

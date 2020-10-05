@@ -21,7 +21,7 @@ public interface IPrintUsageSummaryByUserRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintUsageSummaryByUser> callback);
+    void get(final ICallback<? super PrintUsageSummaryByUser> callback);
 
     /**
      * Gets the PrintUsageSummaryByUser from the service
@@ -36,7 +36,7 @@ public interface IPrintUsageSummaryByUserRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintUsageSummaryByUser> callback);
+    void delete(final ICallback<? super PrintUsageSummaryByUser> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintUsageSummaryByUserRequest extends IHttpRequest {
      * @param sourcePrintUsageSummaryByUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintUsageSummaryByUser sourcePrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback);
+    void patch(final PrintUsageSummaryByUser sourcePrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback);
 
     /**
      * Patches this PrintUsageSummaryByUser with a source
@@ -68,7 +68,7 @@ public interface IPrintUsageSummaryByUserRequest extends IHttpRequest {
      * @param newPrintUsageSummaryByUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback);
+    void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback);
 
     /**
      * Posts a PrintUsageSummaryByUser with a new object
@@ -85,7 +85,7 @@ public interface IPrintUsageSummaryByUserRequest extends IHttpRequest {
      * @param newPrintUsageSummaryByUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback);
+    void put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback);
 
     /**
      * Posts a PrintUsageSummaryByUser with a new object

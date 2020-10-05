@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITermReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Term> callback);
+    void delete(final ICallback<? super Term> callback);
 
     Term delete() throws ClientException;
 
@@ -53,7 +53,7 @@ public interface ITermReferenceRequest extends IHttpRequest {
      * @param srcTerm the Term to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Term srcTerm, final ICallback<Term> callback);
+    void put(Term srcTerm, final ICallback<? super Term> callback);
 
     /**
      * Puts the Term

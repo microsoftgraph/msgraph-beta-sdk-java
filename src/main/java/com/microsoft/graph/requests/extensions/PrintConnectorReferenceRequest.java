@@ -34,7 +34,7 @@ public class PrintConnectorReferenceRequest extends BaseRequest implements IPrin
         super(requestUrl, client, requestOptions, PrintConnector.class);
     }
 
-    public void delete(final ICallback<PrintConnector> callback) {
+    public void delete(final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class PrintConnectorReferenceRequest extends BaseRequest implements IPrin
         return (PrintConnectorReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintConnectorReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrintConnectorReferenceRequest)this;
-    }
-    /**
      * Puts the PrintConnector
      *
      * @param srcPrintConnector the PrintConnector reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PrintConnector srcPrintConnector, final ICallback<PrintConnector> callback) {
+    public void put(PrintConnector srcPrintConnector, final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.PUT, callback, srcPrintConnector);
     }
 

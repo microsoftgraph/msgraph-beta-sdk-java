@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.GroupPolicyMigrationReadiness;
 import com.microsoft.graph.models.extensions.GroupPolicySettingMapping;
 import com.microsoft.graph.models.extensions.UnsupportedGroupPolicyExtension;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingCollectionPage;
-import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionCollectionPage;
 
 
@@ -183,35 +180,11 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
 
 
         if (json.has("groupPolicySettingMappings")) {
-            final GroupPolicySettingMappingCollectionResponse response = new GroupPolicySettingMappingCollectionResponse();
-            if (json.has("groupPolicySettingMappings@odata.nextLink")) {
-                response.nextLink = json.get("groupPolicySettingMappings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupPolicySettingMappings").toString(), JsonObject[].class);
-            final GroupPolicySettingMapping[] array = new GroupPolicySettingMapping[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicySettingMapping.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupPolicySettingMappings = new GroupPolicySettingMappingCollectionPage(response, null);
+            groupPolicySettingMappings = serializer.deserializeObject(json.get("groupPolicySettingMappings").toString(), GroupPolicySettingMappingCollectionPage.class);
         }
 
         if (json.has("unsupportedGroupPolicyExtensions")) {
-            final UnsupportedGroupPolicyExtensionCollectionResponse response = new UnsupportedGroupPolicyExtensionCollectionResponse();
-            if (json.has("unsupportedGroupPolicyExtensions@odata.nextLink")) {
-                response.nextLink = json.get("unsupportedGroupPolicyExtensions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("unsupportedGroupPolicyExtensions").toString(), JsonObject[].class);
-            final UnsupportedGroupPolicyExtension[] array = new UnsupportedGroupPolicyExtension[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UnsupportedGroupPolicyExtension.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            unsupportedGroupPolicyExtensions = new UnsupportedGroupPolicyExtensionCollectionPage(response, null);
+            unsupportedGroupPolicyExtensions = serializer.deserializeObject(json.get("unsupportedGroupPolicyExtensions").toString(), UnsupportedGroupPolicyExtensionCollectionPage.class);
         }
     }
 }

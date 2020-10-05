@@ -37,7 +37,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PersonInterest> callback) {
+    public void get(final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PersonInterest> callback) {
+    public void delete(final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param sourcePersonInterest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonInterest sourcePersonInterest, final ICallback<PersonInterest> callback) {
+    public void patch(final PersonInterest sourcePersonInterest, final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonInterest);
     }
 
@@ -96,7 +96,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param newPersonInterest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback) {
+    public void post(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.POST, callback, newPersonInterest);
     }
 
@@ -117,7 +117,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param newPersonInterest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback) {
+    public void put(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.PUT, callback, newPersonInterest);
     }
 
@@ -151,17 +151,6 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      */
      public IPersonInterestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonInterestRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPersonInterestRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonInterestRequest)this;
      }
 

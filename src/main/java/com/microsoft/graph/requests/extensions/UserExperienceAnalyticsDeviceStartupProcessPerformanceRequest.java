@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
      * @param sourceUserExperienceAnalyticsDeviceStartupProcessPerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsDeviceStartupProcessPerformance sourceUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
+    public void patch(final UserExperienceAnalyticsDeviceStartupProcessPerformance sourceUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsDeviceStartupProcessPerformance);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
      * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
+    public void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsDeviceStartupProcessPerformance);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
      * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
+    public void put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsDeviceStartupProcessPerformance);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
      */
      public IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest)this;
      }
 

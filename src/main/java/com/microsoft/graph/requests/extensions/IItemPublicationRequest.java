@@ -21,7 +21,7 @@ public interface IItemPublicationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemPublication> callback);
+    void get(final ICallback<? super ItemPublication> callback);
 
     /**
      * Gets the ItemPublication from the service
@@ -36,7 +36,7 @@ public interface IItemPublicationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemPublication> callback);
+    void delete(final ICallback<? super ItemPublication> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemPublicationRequest extends IHttpRequest {
      * @param sourceItemPublication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemPublication sourceItemPublication, final ICallback<ItemPublication> callback);
+    void patch(final ItemPublication sourceItemPublication, final ICallback<? super ItemPublication> callback);
 
     /**
      * Patches this ItemPublication with a source
@@ -68,7 +68,7 @@ public interface IItemPublicationRequest extends IHttpRequest {
      * @param newItemPublication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback);
+    void post(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback);
 
     /**
      * Posts a ItemPublication with a new object
@@ -85,7 +85,7 @@ public interface IItemPublicationRequest extends IHttpRequest {
      * @param newItemPublication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback);
+    void put(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback);
 
     /**
      * Posts a ItemPublication with a new object

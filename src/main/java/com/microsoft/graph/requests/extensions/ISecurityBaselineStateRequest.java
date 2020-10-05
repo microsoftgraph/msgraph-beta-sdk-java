@@ -21,7 +21,7 @@ public interface ISecurityBaselineStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityBaselineState> callback);
+    void get(final ICallback<? super SecurityBaselineState> callback);
 
     /**
      * Gets the SecurityBaselineState from the service
@@ -36,7 +36,7 @@ public interface ISecurityBaselineStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityBaselineState> callback);
+    void delete(final ICallback<? super SecurityBaselineState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityBaselineStateRequest extends IHttpRequest {
      * @param sourceSecurityBaselineState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityBaselineState sourceSecurityBaselineState, final ICallback<SecurityBaselineState> callback);
+    void patch(final SecurityBaselineState sourceSecurityBaselineState, final ICallback<? super SecurityBaselineState> callback);
 
     /**
      * Patches this SecurityBaselineState with a source
@@ -68,7 +68,7 @@ public interface ISecurityBaselineStateRequest extends IHttpRequest {
      * @param newSecurityBaselineState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityBaselineState newSecurityBaselineState, final ICallback<SecurityBaselineState> callback);
+    void post(final SecurityBaselineState newSecurityBaselineState, final ICallback<? super SecurityBaselineState> callback);
 
     /**
      * Posts a SecurityBaselineState with a new object
@@ -85,7 +85,7 @@ public interface ISecurityBaselineStateRequest extends IHttpRequest {
      * @param newSecurityBaselineState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityBaselineState newSecurityBaselineState, final ICallback<SecurityBaselineState> callback);
+    void put(final SecurityBaselineState newSecurityBaselineState, final ICallback<? super SecurityBaselineState> callback);
 
     /**
      * Posts a SecurityBaselineState with a new object

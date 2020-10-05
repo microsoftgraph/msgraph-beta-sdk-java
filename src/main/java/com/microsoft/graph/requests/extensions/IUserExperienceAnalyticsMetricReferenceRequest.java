@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserExperienceAnalyticsMetricReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<UserExperienceAnalyticsMetric> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     UserExperienceAnalyticsMetric delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IUserExperienceAnalyticsMetricReferenceRequest extends IHttpReq
      * @param srcUserExperienceAnalyticsMetric the UserExperienceAnalyticsMetric to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(UserExperienceAnalyticsMetric srcUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback);
+    void put(UserExperienceAnalyticsMetric srcUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     /**
      * Puts the UserExperienceAnalyticsMetric

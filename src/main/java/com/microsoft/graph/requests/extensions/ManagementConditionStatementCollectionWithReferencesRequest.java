@@ -37,7 +37,7 @@ public class ManagementConditionStatementCollectionWithReferencesRequest extends
         super(requestUrl, client, requestOptions, ManagementConditionStatementCollectionResponse.class, IManagementConditionStatementCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagementConditionStatementCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IManagementConditionStatementCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,22 +58,27 @@ public class ManagementConditionStatementCollectionWithReferencesRequest extends
 
     public IManagementConditionStatementCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagementConditionStatementCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagementConditionStatementCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagementConditionStatementCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IManagementConditionStatementCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IManagementConditionStatementCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagementConditionStatementCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagementConditionStatementCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ManagementConditionStatementCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagementConditionStatementCollectionWithReferencesPage buildFromResponse(final ManagementConditionStatementCollectionResponse response) {

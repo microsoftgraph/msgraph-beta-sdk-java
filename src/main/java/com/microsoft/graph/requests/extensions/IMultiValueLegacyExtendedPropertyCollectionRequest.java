@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMultiValueLegacyExtendedPropertyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMultiValueLegacyExtendedPropertyCollectionPage> callback);
+    void get(final ICallback<? super IMultiValueLegacyExtendedPropertyCollectionPage> callback);
 
     IMultiValueLegacyExtendedPropertyCollectionPage get() throws ClientException;
 
-    void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback);
+    void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback);
 
     MultiValueLegacyExtendedProperty post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMultiValueLegacyExtendedPropertyCollectionRequest extends IHtt
      * @return the updated request
      */
     IMultiValueLegacyExtendedPropertyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMultiValueLegacyExtendedPropertyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMultiValueLegacyExtendedPropertyCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(String skipToken);
+	IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken);
 }

@@ -21,7 +21,7 @@ public interface IDeviceManagementAutopilotPolicyStatusDetailRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback);
+    void get(final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback);
 
     /**
      * Gets the DeviceManagementAutopilotPolicyStatusDetail from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementAutopilotPolicyStatusDetailRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback);
+    void delete(final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementAutopilotPolicyStatusDetailRequest extends IHt
      * @param sourceDeviceManagementAutopilotPolicyStatusDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback);
+    void patch(final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback);
 
     /**
      * Patches this DeviceManagementAutopilotPolicyStatusDetail with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementAutopilotPolicyStatusDetailRequest extends IHt
      * @param newDeviceManagementAutopilotPolicyStatusDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback);
+    void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback);
 
     /**
      * Posts a DeviceManagementAutopilotPolicyStatusDetail with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementAutopilotPolicyStatusDetailRequest extends IHt
      * @param newDeviceManagementAutopilotPolicyStatusDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback);
+    void put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback);
 
     /**
      * Posts a DeviceManagementAutopilotPolicyStatusDetail with a new object

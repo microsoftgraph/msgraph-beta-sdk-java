@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsDevicePerformanceRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback);
 
     /**
      * Gets the UserExperienceAnalyticsDevicePerformance from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsDevicePerformanceRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsDevicePerformanceRequest extends IHttpR
      * @param sourceUserExperienceAnalyticsDevicePerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsDevicePerformance sourceUserExperienceAnalyticsDevicePerformance, final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+    void patch(final UserExperienceAnalyticsDevicePerformance sourceUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback);
 
     /**
      * Patches this UserExperienceAnalyticsDevicePerformance with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsDevicePerformanceRequest extends IHttpR
      * @param newUserExperienceAnalyticsDevicePerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+    void post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback);
 
     /**
      * Posts a UserExperienceAnalyticsDevicePerformance with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsDevicePerformanceRequest extends IHttpR
      * @param newUserExperienceAnalyticsDevicePerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+    void put(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback);
 
     /**
      * Posts a UserExperienceAnalyticsDevicePerformance with a new object

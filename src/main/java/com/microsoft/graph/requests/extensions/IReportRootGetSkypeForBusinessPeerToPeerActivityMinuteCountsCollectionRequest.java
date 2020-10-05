@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionPage> callback);
 
     IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionPage get() throws ClientException;
 

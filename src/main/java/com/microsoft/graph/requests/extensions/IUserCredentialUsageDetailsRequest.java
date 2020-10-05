@@ -21,7 +21,7 @@ public interface IUserCredentialUsageDetailsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserCredentialUsageDetails> callback);
+    void get(final ICallback<? super UserCredentialUsageDetails> callback);
 
     /**
      * Gets the UserCredentialUsageDetails from the service
@@ -36,7 +36,7 @@ public interface IUserCredentialUsageDetailsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserCredentialUsageDetails> callback);
+    void delete(final ICallback<? super UserCredentialUsageDetails> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserCredentialUsageDetailsRequest extends IHttpRequest {
      * @param sourceUserCredentialUsageDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserCredentialUsageDetails sourceUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback);
+    void patch(final UserCredentialUsageDetails sourceUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback);
 
     /**
      * Patches this UserCredentialUsageDetails with a source
@@ -68,7 +68,7 @@ public interface IUserCredentialUsageDetailsRequest extends IHttpRequest {
      * @param newUserCredentialUsageDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback);
+    void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback);
 
     /**
      * Posts a UserCredentialUsageDetails with a new object
@@ -85,7 +85,7 @@ public interface IUserCredentialUsageDetailsRequest extends IHttpRequest {
      * @param newUserCredentialUsageDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback);
+    void put(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback);
 
     /**
      * Posts a UserCredentialUsageDetails with a new object

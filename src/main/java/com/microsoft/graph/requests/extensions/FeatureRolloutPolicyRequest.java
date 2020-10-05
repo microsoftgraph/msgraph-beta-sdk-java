@@ -41,7 +41,7 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<FeatureRolloutPolicy> callback) {
+    public void get(final ICallback<? super FeatureRolloutPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<FeatureRolloutPolicy> callback) {
+    public void delete(final ICallback<? super FeatureRolloutPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
      * @param sourceFeatureRolloutPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FeatureRolloutPolicy sourceFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback) {
+    public void patch(final FeatureRolloutPolicy sourceFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceFeatureRolloutPolicy);
     }
 
@@ -100,7 +100,7 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
      * @param newFeatureRolloutPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback) {
+    public void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback) {
         send(HttpMethod.POST, callback, newFeatureRolloutPolicy);
     }
 
@@ -121,7 +121,7 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
      * @param newFeatureRolloutPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback) {
+    public void put(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback) {
         send(HttpMethod.PUT, callback, newFeatureRolloutPolicy);
     }
 
@@ -155,17 +155,6 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
      */
      public IFeatureRolloutPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FeatureRolloutPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IFeatureRolloutPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (FeatureRolloutPolicyRequest)this;
      }
 

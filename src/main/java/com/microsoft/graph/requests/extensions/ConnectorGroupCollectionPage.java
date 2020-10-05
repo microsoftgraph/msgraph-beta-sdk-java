@@ -23,6 +23,6 @@ public class ConnectorGroupCollectionPage extends BaseCollectionPage<ConnectorGr
      * @param builder  the request builder for the next collection page
      */
     public ConnectorGroupCollectionPage(final ConnectorGroupCollectionResponse response, final IConnectorGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

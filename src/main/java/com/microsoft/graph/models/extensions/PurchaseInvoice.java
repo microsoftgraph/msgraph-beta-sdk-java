@@ -6,14 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
 import com.microsoft.graph.models.extensions.Currency;
 import com.microsoft.graph.models.extensions.PurchaseInvoiceLine;
 import com.microsoft.graph.models.extensions.Vendor;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionResponse;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionPage;
 
 
@@ -302,19 +300,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("purchaseInvoiceLines")) {
-            final PurchaseInvoiceLineCollectionResponse response = new PurchaseInvoiceLineCollectionResponse();
-            if (json.has("purchaseInvoiceLines@odata.nextLink")) {
-                response.nextLink = json.get("purchaseInvoiceLines@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("purchaseInvoiceLines").toString(), JsonObject[].class);
-            final PurchaseInvoiceLine[] array = new PurchaseInvoiceLine[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PurchaseInvoiceLine.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            purchaseInvoiceLines = new PurchaseInvoiceLineCollectionPage(response, null);
+            purchaseInvoiceLines = serializer.deserializeObject(json.get("purchaseInvoiceLines").toString(), PurchaseInvoiceLineCollectionPage.class);
         }
     }
 }

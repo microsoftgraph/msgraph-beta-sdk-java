@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IInformationProtectionEvaluateLabelsAndPoliciesRequest extends IHttpRequest {
 
-    void post(final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+    void post(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback);
 
     EvaluateLabelsAndPoliciesJobResponse post() throws ClientException;
 

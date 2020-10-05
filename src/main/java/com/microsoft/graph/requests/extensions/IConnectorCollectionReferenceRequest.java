@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.Connector;
  */
 public interface IConnectorCollectionReferenceRequest {
 
-    void post(final Connector newConnector, final ICallback<Connector> callback);
+    void post(final Connector newConnector, final ICallback<? super Connector> callback);
 
     Connector post(final Connector newConnector) throws ClientException;
 

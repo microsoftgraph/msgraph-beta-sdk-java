@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsManagementAppHealthStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsManagementAppHealthStateCollectionPage> callback);
+    void get(final ICallback<? super IWindowsManagementAppHealthStateCollectionPage> callback);
 
     IWindowsManagementAppHealthStateCollectionPage get() throws ClientException;
 
-    void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback);
+    void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback);
 
     WindowsManagementAppHealthState post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsManagementAppHealthStateCollectionRequest extends IHttp
      * @return the updated request
      */
     IWindowsManagementAppHealthStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsManagementAppHealthStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsManagementAppHealthStateCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IWindowsManagementAppHealthStateCollectionRequest skipToken(String skipToken);
+	IWindowsManagementAppHealthStateCollectionRequest skipToken(final String skipToken);
 }

@@ -23,6 +23,6 @@ public class AppleEnrollmentProfileAssignmentCollectionPage extends BaseCollecti
      * @param builder  the request builder for the next collection page
      */
     public AppleEnrollmentProfileAssignmentCollectionPage(final AppleEnrollmentProfileAssignmentCollectionResponse response, final IAppleEnrollmentProfileAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

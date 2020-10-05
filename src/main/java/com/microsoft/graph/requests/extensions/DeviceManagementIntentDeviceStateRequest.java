@@ -37,7 +37,7 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementIntentDeviceState> callback) {
+    public void get(final ICallback<? super DeviceManagementIntentDeviceState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementIntentDeviceState> callback) {
+    public void delete(final ICallback<? super DeviceManagementIntentDeviceState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
      * @param sourceDeviceManagementIntentDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntentDeviceState sourceDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback) {
+    public void patch(final DeviceManagementIntentDeviceState sourceDeviceManagementIntentDeviceState, final ICallback<? super DeviceManagementIntentDeviceState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntentDeviceState);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
      * @param newDeviceManagementIntentDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback) {
+    public void post(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<? super DeviceManagementIntentDeviceState> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntentDeviceState);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
      * @param newDeviceManagementIntentDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback) {
+    public void put(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<? super DeviceManagementIntentDeviceState> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntentDeviceState);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
      */
      public IDeviceManagementIntentDeviceStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentDeviceStateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementIntentDeviceStateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementIntentDeviceStateRequest)this;
      }
 

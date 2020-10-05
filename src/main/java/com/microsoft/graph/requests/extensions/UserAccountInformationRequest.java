@@ -37,7 +37,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserAccountInformation> callback) {
+    public void get(final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserAccountInformation> callback) {
+    public void delete(final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param sourceUserAccountInformation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserAccountInformation sourceUserAccountInformation, final ICallback<UserAccountInformation> callback) {
+    public void patch(final UserAccountInformation sourceUserAccountInformation, final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.PATCH, callback, sourceUserAccountInformation);
     }
 
@@ -96,7 +96,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param newUserAccountInformation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserAccountInformation newUserAccountInformation, final ICallback<UserAccountInformation> callback) {
+    public void post(final UserAccountInformation newUserAccountInformation, final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.POST, callback, newUserAccountInformation);
     }
 
@@ -117,7 +117,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param newUserAccountInformation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserAccountInformation newUserAccountInformation, final ICallback<UserAccountInformation> callback) {
+    public void put(final UserAccountInformation newUserAccountInformation, final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.PUT, callback, newUserAccountInformation);
     }
 
@@ -151,17 +151,6 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      */
      public IUserAccountInformationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserAccountInformationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserAccountInformationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserAccountInformationRequest)this;
      }
 

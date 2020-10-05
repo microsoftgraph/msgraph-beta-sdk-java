@@ -21,7 +21,7 @@ public interface IRestrictedAppsViolationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RestrictedAppsViolation> callback);
+    void get(final ICallback<? super RestrictedAppsViolation> callback);
 
     /**
      * Gets the RestrictedAppsViolation from the service
@@ -36,7 +36,7 @@ public interface IRestrictedAppsViolationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RestrictedAppsViolation> callback);
+    void delete(final ICallback<? super RestrictedAppsViolation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRestrictedAppsViolationRequest extends IHttpRequest {
      * @param sourceRestrictedAppsViolation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RestrictedAppsViolation sourceRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback);
+    void patch(final RestrictedAppsViolation sourceRestrictedAppsViolation, final ICallback<? super RestrictedAppsViolation> callback);
 
     /**
      * Patches this RestrictedAppsViolation with a source
@@ -68,7 +68,7 @@ public interface IRestrictedAppsViolationRequest extends IHttpRequest {
      * @param newRestrictedAppsViolation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback);
+    void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<? super RestrictedAppsViolation> callback);
 
     /**
      * Posts a RestrictedAppsViolation with a new object
@@ -85,7 +85,7 @@ public interface IRestrictedAppsViolationRequest extends IHttpRequest {
      * @param newRestrictedAppsViolation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback);
+    void put(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<? super RestrictedAppsViolation> callback);
 
     /**
      * Posts a RestrictedAppsViolation with a new object

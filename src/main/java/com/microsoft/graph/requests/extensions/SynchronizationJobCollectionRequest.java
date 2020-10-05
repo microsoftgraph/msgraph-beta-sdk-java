@@ -44,7 +44,7 @@ public class SynchronizationJobCollectionRequest extends BaseCollectionRequest<S
         super(requestUrl, client, requestOptions, SynchronizationJobCollectionResponse.class, ISynchronizationJobCollectionPage.class);
     }
 
-    public void get(final ICallback<ISynchronizationJobCollectionPage> callback) {
+    public void get(final ICallback<? super ISynchronizationJobCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -63,7 +63,7 @@ public class SynchronizationJobCollectionRequest extends BaseCollectionRequest<S
         return buildFromResponse(response);
     }
 
-    public void post(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback) {
+    public void post(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SynchronizationJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -96,6 +96,17 @@ public class SynchronizationJobCollectionRequest extends BaseCollectionRequest<S
      */
     public ISynchronizationJobCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SynchronizationJobCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISynchronizationJobCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SynchronizationJobCollectionRequest)this;
     }
 

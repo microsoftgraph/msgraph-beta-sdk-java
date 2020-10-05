@@ -23,6 +23,6 @@ public class UserConsentRequestCollectionPage extends BaseCollectionPage<UserCon
      * @param builder  the request builder for the next collection page
      */
     public UserConsentRequestCollectionPage(final UserConsentRequestCollectionResponse response, final IUserConsentRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

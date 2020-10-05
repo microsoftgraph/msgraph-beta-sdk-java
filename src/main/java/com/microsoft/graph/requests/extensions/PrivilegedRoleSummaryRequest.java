@@ -37,7 +37,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrivilegedRoleSummary> callback) {
+    public void get(final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrivilegedRoleSummary> callback) {
+    public void delete(final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param sourcePrivilegedRoleSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRoleSummary sourcePrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback) {
+    public void patch(final PrivilegedRoleSummary sourcePrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRoleSummary);
     }
 
@@ -96,7 +96,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param newPrivilegedRoleSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback) {
+    public void post(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRoleSummary);
     }
 
@@ -117,7 +117,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param newPrivilegedRoleSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback) {
+    public void put(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRoleSummary);
     }
 
@@ -151,17 +151,6 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      */
      public IPrivilegedRoleSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrivilegedRoleSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrivilegedRoleSummaryRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage> callback);
+    void get(final ICallback<? super IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage> callback);
 
     IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage get() throws ClientException;
 
-    void post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback);
 
     WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      * @return the updated request
      */
     IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      *
 	 * @return the updated request
 	 */
-	IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest skipToken(String skipToken);
+	IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest skipToken(final String skipToken);
 }

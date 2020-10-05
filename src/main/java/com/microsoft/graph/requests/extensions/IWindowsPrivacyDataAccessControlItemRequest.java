@@ -21,7 +21,7 @@ public interface IWindowsPrivacyDataAccessControlItemRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+    void get(final ICallback<? super WindowsPrivacyDataAccessControlItem> callback);
 
     /**
      * Gets the WindowsPrivacyDataAccessControlItem from the service
@@ -36,7 +36,7 @@ public interface IWindowsPrivacyDataAccessControlItemRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+    void delete(final ICallback<? super WindowsPrivacyDataAccessControlItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPrivacyDataAccessControlItemRequest extends IHttpReques
      * @param sourceWindowsPrivacyDataAccessControlItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPrivacyDataAccessControlItem sourceWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+    void patch(final WindowsPrivacyDataAccessControlItem sourceWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback);
 
     /**
      * Patches this WindowsPrivacyDataAccessControlItem with a source
@@ -68,7 +68,7 @@ public interface IWindowsPrivacyDataAccessControlItemRequest extends IHttpReques
      * @param newWindowsPrivacyDataAccessControlItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+    void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback);
 
     /**
      * Posts a WindowsPrivacyDataAccessControlItem with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPrivacyDataAccessControlItemRequest extends IHttpReques
      * @param newWindowsPrivacyDataAccessControlItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+    void put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback);
 
     /**
      * Posts a WindowsPrivacyDataAccessControlItem with a new object

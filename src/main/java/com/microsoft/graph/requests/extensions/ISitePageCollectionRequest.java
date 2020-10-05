@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISitePageCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISitePageCollectionPage> callback);
+    void get(final ICallback<? super ISitePageCollectionPage> callback);
 
     ISitePageCollectionPage get() throws ClientException;
 
-    void post(final SitePage newSitePage, final ICallback<SitePage> callback);
+    void post(final SitePage newSitePage, final ICallback<? super SitePage> callback);
 
     SitePage post(final SitePage newSitePage) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISitePageCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISitePageCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISitePageCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISitePageCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISitePageCollectionRequest skipToken(String skipToken);
+	ISitePageCollectionRequest skipToken(final String skipToken);
 }

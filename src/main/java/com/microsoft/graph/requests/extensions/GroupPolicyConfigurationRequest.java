@@ -47,7 +47,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyConfiguration> callback) {
+    public void get(final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyConfiguration> callback) {
+    public void delete(final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param sourceGroupPolicyConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyConfiguration sourceGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback) {
+    public void patch(final GroupPolicyConfiguration sourceGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyConfiguration);
     }
 
@@ -106,7 +106,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param newGroupPolicyConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback) {
+    public void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyConfiguration);
     }
 
@@ -127,7 +127,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param newGroupPolicyConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback) {
+    public void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyConfiguration);
     }
 
@@ -161,17 +161,6 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      */
      public IGroupPolicyConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyConfigurationRequest)this;
      }
 

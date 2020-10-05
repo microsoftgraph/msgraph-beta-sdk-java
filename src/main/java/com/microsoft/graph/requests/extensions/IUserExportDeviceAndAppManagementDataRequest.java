@@ -27,7 +27,7 @@ public interface IUserExportDeviceAndAppManagementDataRequest extends IHttpReque
      * @param srcDeviceAndAppManagementData the DeviceAndAppManagementData with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<DeviceAndAppManagementData> callback);
+    void patch(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<? super DeviceAndAppManagementData> callback);
 
     /**
      * Patches the UserExportDeviceAndAppManagementData
@@ -44,7 +44,7 @@ public interface IUserExportDeviceAndAppManagementDataRequest extends IHttpReque
      * @param srcDeviceAndAppManagementData the DeviceAndAppManagementData to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<DeviceAndAppManagementData> callback);
+    void put(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<? super DeviceAndAppManagementData> callback);
 
     /**
      * Puts the UserExportDeviceAndAppManagementData
@@ -59,7 +59,7 @@ public interface IUserExportDeviceAndAppManagementDataRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAndAppManagementData> callback);
+    void get(final ICallback<? super DeviceAndAppManagementData> callback);
 
     /**
      * Gets the DeviceAndAppManagementData

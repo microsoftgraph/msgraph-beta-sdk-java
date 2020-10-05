@@ -36,7 +36,7 @@ public class AndroidCertificateProfileBaseReferenceRequest extends BaseRequest i
         super(requestUrl, client, requestOptions, AndroidCertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<AndroidCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -66,22 +66,12 @@ public class AndroidCertificateProfileBaseReferenceRequest extends BaseRequest i
         return (AndroidCertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidCertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AndroidCertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the AndroidCertificateProfileBase
      *
      * @param srcAndroidCertificateProfileBase the AndroidCertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AndroidCertificateProfileBase srcAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback) {
+    public void put(AndroidCertificateProfileBase srcAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcAndroidCertificateProfileBase);
     }
 

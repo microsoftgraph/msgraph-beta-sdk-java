@@ -23,6 +23,6 @@ public class DeviceManagementSettingInstanceCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementSettingInstanceCollectionPage(final DeviceManagementSettingInstanceCollectionResponse response, final IDeviceManagementSettingInstanceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

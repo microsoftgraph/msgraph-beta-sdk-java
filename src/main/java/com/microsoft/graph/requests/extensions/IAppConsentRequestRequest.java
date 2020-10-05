@@ -21,7 +21,7 @@ public interface IAppConsentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppConsentRequest> callback);
+    void get(final ICallback<? super AppConsentRequest> callback);
 
     /**
      * Gets the AppConsentRequest from the service
@@ -36,7 +36,7 @@ public interface IAppConsentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppConsentRequest> callback);
+    void delete(final ICallback<? super AppConsentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppConsentRequestRequest extends IHttpRequest {
      * @param sourceAppConsentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppConsentRequest sourceAppConsentRequest, final ICallback<AppConsentRequest> callback);
+    void patch(final AppConsentRequest sourceAppConsentRequest, final ICallback<? super AppConsentRequest> callback);
 
     /**
      * Patches this AppConsentRequest with a source
@@ -68,7 +68,7 @@ public interface IAppConsentRequestRequest extends IHttpRequest {
      * @param newAppConsentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback);
+    void post(final AppConsentRequest newAppConsentRequest, final ICallback<? super AppConsentRequest> callback);
 
     /**
      * Posts a AppConsentRequest with a new object
@@ -85,7 +85,7 @@ public interface IAppConsentRequestRequest extends IHttpRequest {
      * @param newAppConsentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback);
+    void put(final AppConsentRequest newAppConsentRequest, final ICallback<? super AppConsentRequest> callback);
 
     /**
      * Posts a AppConsentRequest with a new object

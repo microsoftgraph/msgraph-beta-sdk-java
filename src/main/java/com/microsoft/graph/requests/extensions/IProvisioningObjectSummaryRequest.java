@@ -21,7 +21,7 @@ public interface IProvisioningObjectSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProvisioningObjectSummary> callback);
+    void get(final ICallback<? super ProvisioningObjectSummary> callback);
 
     /**
      * Gets the ProvisioningObjectSummary from the service
@@ -36,7 +36,7 @@ public interface IProvisioningObjectSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProvisioningObjectSummary> callback);
+    void delete(final ICallback<? super ProvisioningObjectSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProvisioningObjectSummaryRequest extends IHttpRequest {
      * @param sourceProvisioningObjectSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProvisioningObjectSummary sourceProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback);
+    void patch(final ProvisioningObjectSummary sourceProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback);
 
     /**
      * Patches this ProvisioningObjectSummary with a source
@@ -68,7 +68,7 @@ public interface IProvisioningObjectSummaryRequest extends IHttpRequest {
      * @param newProvisioningObjectSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback);
+    void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback);
 
     /**
      * Posts a ProvisioningObjectSummary with a new object
@@ -85,7 +85,7 @@ public interface IProvisioningObjectSummaryRequest extends IHttpRequest {
      * @param newProvisioningObjectSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback);
+    void put(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback);
 
     /**
      * Posts a ProvisioningObjectSummary with a new object

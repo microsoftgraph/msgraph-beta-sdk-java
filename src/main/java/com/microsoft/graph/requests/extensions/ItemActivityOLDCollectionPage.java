@@ -23,6 +23,6 @@ public class ItemActivityOLDCollectionPage extends BaseCollectionPage<ItemActivi
      * @param builder  the request builder for the next collection page
      */
     public ItemActivityOLDCollectionPage(final ItemActivityOLDCollectionResponse response, final IItemActivityOLDCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

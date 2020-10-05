@@ -21,7 +21,7 @@ public interface IPurchaseInvoiceLineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PurchaseInvoiceLine> callback);
+    void get(final ICallback<? super PurchaseInvoiceLine> callback);
 
     /**
      * Gets the PurchaseInvoiceLine from the service
@@ -36,7 +36,7 @@ public interface IPurchaseInvoiceLineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PurchaseInvoiceLine> callback);
+    void delete(final ICallback<? super PurchaseInvoiceLine> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPurchaseInvoiceLineRequest extends IHttpRequest {
      * @param sourcePurchaseInvoiceLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PurchaseInvoiceLine sourcePurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback);
+    void patch(final PurchaseInvoiceLine sourcePurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback);
 
     /**
      * Patches this PurchaseInvoiceLine with a source
@@ -68,7 +68,7 @@ public interface IPurchaseInvoiceLineRequest extends IHttpRequest {
      * @param newPurchaseInvoiceLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback);
+    void post(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback);
 
     /**
      * Posts a PurchaseInvoiceLine with a new object
@@ -85,7 +85,7 @@ public interface IPurchaseInvoiceLineRequest extends IHttpRequest {
      * @param newPurchaseInvoiceLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback);
+    void put(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback);
 
     /**
      * Posts a PurchaseInvoiceLine with a new object

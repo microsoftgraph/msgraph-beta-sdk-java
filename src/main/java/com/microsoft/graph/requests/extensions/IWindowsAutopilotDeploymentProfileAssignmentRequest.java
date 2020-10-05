@@ -21,7 +21,7 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+    void get(final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback);
 
     /**
      * Gets the WindowsAutopilotDeploymentProfileAssignment from the service
@@ -36,7 +36,7 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+    void delete(final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentRequest extends IHt
      * @param sourceWindowsAutopilotDeploymentProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsAutopilotDeploymentProfileAssignment sourceWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+    void patch(final WindowsAutopilotDeploymentProfileAssignment sourceWindowsAutopilotDeploymentProfileAssignment, final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback);
 
     /**
      * Patches this WindowsAutopilotDeploymentProfileAssignment with a source
@@ -68,7 +68,7 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentRequest extends IHt
      * @param newWindowsAutopilotDeploymentProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+    void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback);
 
     /**
      * Posts a WindowsAutopilotDeploymentProfileAssignment with a new object
@@ -85,7 +85,7 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentRequest extends IHt
      * @param newWindowsAutopilotDeploymentProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+    void put(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback);
 
     /**
      * Posts a WindowsAutopilotDeploymentProfileAssignment with a new object

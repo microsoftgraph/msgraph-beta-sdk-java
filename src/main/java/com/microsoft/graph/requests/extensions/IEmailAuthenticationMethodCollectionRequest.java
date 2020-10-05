@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEmailAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEmailAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super IEmailAuthenticationMethodCollectionPage> callback);
 
     IEmailAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback);
+    void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback);
 
     EmailAuthenticationMethod post(final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEmailAuthenticationMethodCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IEmailAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEmailAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEmailAuthenticationMethodCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IEmailAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	IEmailAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

@@ -6,10 +6,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
 
 
@@ -104,19 +102,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
 
 
         if (json.has("networkAccessConfigurations")) {
-            final DeviceConfigurationCollectionResponse response = new DeviceConfigurationCollectionResponse();
-            if (json.has("networkAccessConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("networkAccessConfigurations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("networkAccessConfigurations").toString(), JsonObject[].class);
-            final DeviceConfiguration[] array = new DeviceConfiguration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfiguration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            networkAccessConfigurations = new DeviceConfigurationCollectionPage(response, null);
+            networkAccessConfigurations = serializer.deserializeObject(json.get("networkAccessConfigurations").toString(), DeviceConfigurationCollectionPage.class);
         }
     }
 }

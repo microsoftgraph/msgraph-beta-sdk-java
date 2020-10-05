@@ -23,6 +23,6 @@ public class DeviceManagementIntentSettingCategoryCollectionPage extends BaseCol
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementIntentSettingCategoryCollectionPage(final DeviceManagementIntentSettingCategoryCollectionResponse response, final IDeviceManagementIntentSettingCategoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

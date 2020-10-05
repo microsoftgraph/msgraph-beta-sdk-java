@@ -35,7 +35,7 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppCategoryCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IMobileAppCategoryCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
 
     public IMobileAppCategoryCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MobileAppCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IMobileAppCategoryCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MobileAppCategoryCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IMobileAppCategoryCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IMobileAppCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MobileAppCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IMobileAppCategoryCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (MobileAppCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IMobileAppCategoryCollectionWithReferencesPage buildFromResponse(final MobileAppCategoryCollectionResponse response) {

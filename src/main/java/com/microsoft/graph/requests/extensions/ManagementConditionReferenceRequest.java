@@ -39,7 +39,7 @@ public class ManagementConditionReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, ManagementCondition.class);
     }
 
-    public void delete(final ICallback<ManagementCondition> callback) {
+    public void delete(final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -69,22 +69,12 @@ public class ManagementConditionReferenceRequest extends BaseRequest implements 
         return (ManagementConditionReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagementConditionReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagementConditionReferenceRequest)this;
-    }
-    /**
      * Puts the ManagementCondition
      *
      * @param srcManagementCondition the ManagementCondition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagementCondition srcManagementCondition, final ICallback<ManagementCondition> callback) {
+    public void put(ManagementCondition srcManagementCondition, final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.PUT, callback, srcManagementCondition);
     }
 

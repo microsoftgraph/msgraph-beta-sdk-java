@@ -6,7 +6,6 @@ package com.microsoft.graph.termstore.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.termstore.models.extensions.LocalizedName;
 import com.microsoft.graph.models.extensions.KeyValue;
@@ -14,9 +13,7 @@ import com.microsoft.graph.termstore.models.extensions.Term;
 import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.models.extensions.Relation;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.termstore.requests.extensions.TermCollectionResponse;
 import com.microsoft.graph.termstore.requests.extensions.TermCollectionPage;
-import com.microsoft.graph.termstore.requests.extensions.RelationCollectionResponse;
 import com.microsoft.graph.termstore.requests.extensions.RelationCollectionPage;
 
 
@@ -137,51 +134,15 @@ public class Set extends Entity implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            final TermCollectionResponse response = new TermCollectionResponse();
-            if (json.has("children@odata.nextLink")) {
-                response.nextLink = json.get("children@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("children").toString(), JsonObject[].class);
-            final Term[] array = new Term[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Term.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            children = new TermCollectionPage(response, null);
+            children = serializer.deserializeObject(json.get("children").toString(), TermCollectionPage.class);
         }
 
         if (json.has("relations")) {
-            final RelationCollectionResponse response = new RelationCollectionResponse();
-            if (json.has("relations@odata.nextLink")) {
-                response.nextLink = json.get("relations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("relations").toString(), JsonObject[].class);
-            final Relation[] array = new Relation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Relation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            relations = new RelationCollectionPage(response, null);
+            relations = serializer.deserializeObject(json.get("relations").toString(), RelationCollectionPage.class);
         }
 
         if (json.has("terms")) {
-            final TermCollectionResponse response = new TermCollectionResponse();
-            if (json.has("terms@odata.nextLink")) {
-                response.nextLink = json.get("terms@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("terms").toString(), JsonObject[].class);
-            final Term[] array = new Term[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Term.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            terms = new TermCollectionPage(response, null);
+            terms = serializer.deserializeObject(json.get("terms").toString(), TermCollectionPage.class);
         }
     }
 }

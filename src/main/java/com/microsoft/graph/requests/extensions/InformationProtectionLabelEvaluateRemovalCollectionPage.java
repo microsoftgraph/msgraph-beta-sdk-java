@@ -36,6 +36,6 @@ public class InformationProtectionLabelEvaluateRemovalCollectionPage extends Bas
      * @param builder The request builder for the next collection page
      */
     public InformationProtectionLabelEvaluateRemovalCollectionPage(final InformationProtectionLabelEvaluateRemovalCollectionResponse response, final IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage> callback);
+    void get(final ICallback<? super IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage> callback);
 
     IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage get() throws ClientException;
 
-    void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
+    void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
 
     AdvancedThreatProtectionOnboardingDeviceSettingState post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateCollection
      * @return the updated request
      */
     IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateCollection
      *
 	 * @return the updated request
 	 */
-	IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest skipToken(String skipToken);
+	IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest skipToken(final String skipToken);
 }

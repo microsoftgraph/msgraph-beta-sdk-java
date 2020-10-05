@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPersonAnniversaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPersonAnniversaryCollectionPage> callback);
+    void get(final ICallback<? super IPersonAnniversaryCollectionPage> callback);
 
     IPersonAnniversaryCollectionPage get() throws ClientException;
 
-    void post(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback);
+    void post(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback);
 
     PersonAnniversary post(final PersonAnniversary newPersonAnniversary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPersonAnniversaryCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPersonAnniversaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPersonAnniversaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPersonAnniversaryCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPersonAnniversaryCollectionRequest skipToken(String skipToken);
+	IPersonAnniversaryCollectionRequest skipToken(final String skipToken);
 }

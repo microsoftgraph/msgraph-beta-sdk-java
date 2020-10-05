@@ -21,7 +21,7 @@ public interface IChatActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ChatActivityStatistics> callback);
+    void get(final ICallback<? super ChatActivityStatistics> callback);
 
     /**
      * Gets the ChatActivityStatistics from the service
@@ -36,7 +36,7 @@ public interface IChatActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ChatActivityStatistics> callback);
+    void delete(final ICallback<? super ChatActivityStatistics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IChatActivityStatisticsRequest extends IHttpRequest {
      * @param sourceChatActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ChatActivityStatistics sourceChatActivityStatistics, final ICallback<ChatActivityStatistics> callback);
+    void patch(final ChatActivityStatistics sourceChatActivityStatistics, final ICallback<? super ChatActivityStatistics> callback);
 
     /**
      * Patches this ChatActivityStatistics with a source
@@ -68,7 +68,7 @@ public interface IChatActivityStatisticsRequest extends IHttpRequest {
      * @param newChatActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ChatActivityStatistics newChatActivityStatistics, final ICallback<ChatActivityStatistics> callback);
+    void post(final ChatActivityStatistics newChatActivityStatistics, final ICallback<? super ChatActivityStatistics> callback);
 
     /**
      * Posts a ChatActivityStatistics with a new object
@@ -85,7 +85,7 @@ public interface IChatActivityStatisticsRequest extends IHttpRequest {
      * @param newChatActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ChatActivityStatistics newChatActivityStatistics, final ICallback<ChatActivityStatistics> callback);
+    void put(final ChatActivityStatistics newChatActivityStatistics, final ICallback<? super ChatActivityStatistics> callback);
 
     /**
      * Posts a ChatActivityStatistics with a new object

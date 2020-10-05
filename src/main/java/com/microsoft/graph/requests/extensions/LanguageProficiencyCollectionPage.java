@@ -23,6 +23,6 @@ public class LanguageProficiencyCollectionPage extends BaseCollectionPage<Langua
      * @param builder  the request builder for the next collection page
      */
     public LanguageProficiencyCollectionPage(final LanguageProficiencyCollectionResponse response, final ILanguageProficiencyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

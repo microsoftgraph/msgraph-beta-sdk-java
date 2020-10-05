@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IPrivilegedSignupStatusCompleteSetupCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IPrivilegedSignupStatusCompleteSetupCollectionPage> callback);
+    void post(final ICallback<? super IPrivilegedSignupStatusCompleteSetupCollectionPage> callback);
 
     IPrivilegedSignupStatusCompleteSetupCollectionPage post() throws ClientException;
 

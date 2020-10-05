@@ -44,7 +44,7 @@ public class TermReferenceRequest extends BaseRequest implements ITermReferenceR
         super(requestUrl, client, requestOptions, Term.class);
     }
 
-    public void delete(final ICallback<Term> callback) {
+    public void delete(final ICallback<? super Term> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -74,22 +74,12 @@ public class TermReferenceRequest extends BaseRequest implements ITermReferenceR
         return (TermReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITermReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TermReferenceRequest)this;
-    }
-    /**
      * Puts the Term
      *
      * @param srcTerm the Term reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Term srcTerm, final ICallback<Term> callback) {
+    public void put(Term srcTerm, final ICallback<? super Term> callback) {
         send(HttpMethod.PUT, callback, srcTerm);
     }
 

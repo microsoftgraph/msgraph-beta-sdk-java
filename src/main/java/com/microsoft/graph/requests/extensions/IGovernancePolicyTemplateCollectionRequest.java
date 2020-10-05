@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGovernancePolicyTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGovernancePolicyTemplateCollectionPage> callback);
+    void get(final ICallback<? super IGovernancePolicyTemplateCollectionPage> callback);
 
     IGovernancePolicyTemplateCollectionPage get() throws ClientException;
 
-    void post(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback);
+    void post(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<? super GovernancePolicyTemplate> callback);
 
     GovernancePolicyTemplate post(final GovernancePolicyTemplate newGovernancePolicyTemplate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IGovernancePolicyTemplateCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IGovernancePolicyTemplateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGovernancePolicyTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IGovernancePolicyTemplateCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IGovernancePolicyTemplateCollectionRequest skipToken(String skipToken);
+	IGovernancePolicyTemplateCollectionRequest skipToken(final String skipToken);
 }

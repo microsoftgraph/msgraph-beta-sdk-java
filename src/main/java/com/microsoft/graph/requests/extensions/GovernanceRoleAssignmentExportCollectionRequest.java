@@ -39,7 +39,7 @@ public class GovernanceRoleAssignmentExportCollectionRequest extends BaseCollect
     }
 
 
-    public void get(final ICallback<IGovernanceRoleAssignmentExportCollectionPage> callback) {
+    public void get(final ICallback<? super IGovernanceRoleAssignmentExportCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class GovernanceRoleAssignmentExportCollectionRequest extends BaseCollect
      */
     public IGovernanceRoleAssignmentExportCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IGovernanceRoleAssignmentExportCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGovernanceRoleAssignmentExportCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IGovernanceRoleAssignmentExportCollectionRequest)this;
     }
 

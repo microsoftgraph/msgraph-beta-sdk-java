@@ -21,7 +21,7 @@ public interface IDeviceConfigurationGroupAssignmentRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfigurationGroupAssignment> callback);
+    void get(final ICallback<? super DeviceConfigurationGroupAssignment> callback);
 
     /**
      * Gets the DeviceConfigurationGroupAssignment from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationGroupAssignmentRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfigurationGroupAssignment> callback);
+    void delete(final ICallback<? super DeviceConfigurationGroupAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationGroupAssignmentRequest extends IHttpRequest
      * @param sourceDeviceConfigurationGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback);
+    void patch(final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback);
 
     /**
      * Patches this DeviceConfigurationGroupAssignment with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationGroupAssignmentRequest extends IHttpRequest
      * @param newDeviceConfigurationGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback);
+    void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback);
 
     /**
      * Posts a DeviceConfigurationGroupAssignment with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationGroupAssignmentRequest extends IHttpRequest
      * @param newDeviceConfigurationGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback);
+    void put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback);
 
     /**
      * Posts a DeviceConfigurationGroupAssignment with a new object

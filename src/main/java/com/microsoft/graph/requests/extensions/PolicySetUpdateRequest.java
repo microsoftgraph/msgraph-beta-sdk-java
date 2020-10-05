@@ -36,7 +36,7 @@ public class PolicySetUpdateRequest extends BaseRequest implements IPolicySetUpd
         body = new PolicySetUpdateBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class PolicySetUpdateRequest extends BaseRequest implements IPolicySetUpd
      */
     public IPolicySetUpdateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PolicySetUpdateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPolicySetUpdateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PolicySetUpdateRequest)this;
     }
 

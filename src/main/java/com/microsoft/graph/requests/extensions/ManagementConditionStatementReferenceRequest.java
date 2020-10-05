@@ -40,7 +40,7 @@ public class ManagementConditionStatementReferenceRequest extends BaseRequest im
         super(requestUrl, client, requestOptions, ManagementConditionStatement.class);
     }
 
-    public void delete(final ICallback<ManagementConditionStatement> callback) {
+    public void delete(final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -70,22 +70,12 @@ public class ManagementConditionStatementReferenceRequest extends BaseRequest im
         return (ManagementConditionStatementReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagementConditionStatementReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagementConditionStatementReferenceRequest)this;
-    }
-    /**
      * Puts the ManagementConditionStatement
      *
      * @param srcManagementConditionStatement the ManagementConditionStatement reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagementConditionStatement srcManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
+    public void put(ManagementConditionStatement srcManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback) {
         send(HttpMethod.PUT, callback, srcManagementConditionStatement);
     }
 

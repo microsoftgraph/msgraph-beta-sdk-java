@@ -21,7 +21,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
+    void get(final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
 
     /**
      * Gets the AndroidDeviceComplianceLocalActionLockDeviceWithPasscode from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
+    void delete(final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeReques
      * @param sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
+    void patch(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
 
     /**
      * Patches this AndroidDeviceComplianceLocalActionLockDeviceWithPasscode with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeReques
      * @param newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
+    void post(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
 
     /**
      * Posts a AndroidDeviceComplianceLocalActionLockDeviceWithPasscode with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeReques
      * @param newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
+    void put(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback);
 
     /**
      * Posts a AndroidDeviceComplianceLocalActionLockDeviceWithPasscode with a new object

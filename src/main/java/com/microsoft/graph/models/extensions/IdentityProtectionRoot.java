@@ -6,14 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RiskDetection;
 import com.microsoft.graph.models.extensions.RiskyUser;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.RiskDetectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.RiskDetectionCollectionPage;
-import com.microsoft.graph.requests.extensions.RiskyUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.RiskyUserCollectionPage;
 
 
@@ -26,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Identity Protection Root.
  */
-public class IdentityProtectionRoot extends Entity implements IJsonBackedObject {
+public class IdentityProtectionRoot implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Risk Detections.
@@ -86,35 +92,11 @@ public class IdentityProtectionRoot extends Entity implements IJsonBackedObject 
 
 
         if (json.has("riskDetections")) {
-            final RiskDetectionCollectionResponse response = new RiskDetectionCollectionResponse();
-            if (json.has("riskDetections@odata.nextLink")) {
-                response.nextLink = json.get("riskDetections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("riskDetections").toString(), JsonObject[].class);
-            final RiskDetection[] array = new RiskDetection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RiskDetection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            riskDetections = new RiskDetectionCollectionPage(response, null);
+            riskDetections = serializer.deserializeObject(json.get("riskDetections").toString(), RiskDetectionCollectionPage.class);
         }
 
         if (json.has("riskyUsers")) {
-            final RiskyUserCollectionResponse response = new RiskyUserCollectionResponse();
-            if (json.has("riskyUsers@odata.nextLink")) {
-                response.nextLink = json.get("riskyUsers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("riskyUsers").toString(), JsonObject[].class);
-            final RiskyUser[] array = new RiskyUser[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RiskyUser.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            riskyUsers = new RiskyUserCollectionPage(response, null);
+            riskyUsers = serializer.deserializeObject(json.get("riskyUsers").toString(), RiskyUserCollectionPage.class);
         }
     }
 }

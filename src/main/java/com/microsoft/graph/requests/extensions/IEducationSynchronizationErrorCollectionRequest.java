@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEducationSynchronizationErrorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEducationSynchronizationErrorCollectionPage> callback);
+    void get(final ICallback<? super IEducationSynchronizationErrorCollectionPage> callback);
 
     IEducationSynchronizationErrorCollectionPage get() throws ClientException;
 
-    void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback);
+    void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback);
 
     EducationSynchronizationError post(final EducationSynchronizationError newEducationSynchronizationError) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEducationSynchronizationErrorCollectionRequest extends IHttpRe
      * @return the updated request
      */
     IEducationSynchronizationErrorCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEducationSynchronizationErrorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEducationSynchronizationErrorCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IEducationSynchronizationErrorCollectionRequest skipToken(String skipToken);
+	IEducationSynchronizationErrorCollectionRequest skipToken(final String skipToken);
 }

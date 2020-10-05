@@ -39,7 +39,7 @@ public class ReportRootGetPrintUsageSummariesByUserCollectionRequest extends Bas
     }
 
 
-    public void get(final ICallback<IReportRootGetPrintUsageSummariesByUserCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetPrintUsageSummariesByUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetPrintUsageSummariesByUserCollectionRequest extends Bas
      */
     public IReportRootGetPrintUsageSummariesByUserCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetPrintUsageSummariesByUserCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetPrintUsageSummariesByUserCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetPrintUsageSummariesByUserCollectionRequest)this;
     }
 

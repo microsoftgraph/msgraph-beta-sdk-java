@@ -39,7 +39,7 @@ public class ReportRootGetOneDriveUsageStorageCollectionRequest extends BaseColl
     }
 
 
-    public void get(final ICallback<IReportRootGetOneDriveUsageStorageCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOneDriveUsageStorageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOneDriveUsageStorageCollectionRequest extends BaseColl
      */
     public IReportRootGetOneDriveUsageStorageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOneDriveUsageStorageCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOneDriveUsageStorageCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOneDriveUsageStorageCollectionRequest)this;
     }
 

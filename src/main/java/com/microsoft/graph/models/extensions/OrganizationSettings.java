@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ItemInsightsSettings;
 import com.microsoft.graph.models.extensions.ProfileCardProperty;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionPage;
 
 
@@ -84,19 +82,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
 
         if (json.has("profileCardProperties")) {
-            final ProfileCardPropertyCollectionResponse response = new ProfileCardPropertyCollectionResponse();
-            if (json.has("profileCardProperties@odata.nextLink")) {
-                response.nextLink = json.get("profileCardProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("profileCardProperties").toString(), JsonObject[].class);
-            final ProfileCardProperty[] array = new ProfileCardProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProfileCardProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            profileCardProperties = new ProfileCardPropertyCollectionPage(response, null);
+            profileCardProperties = serializer.deserializeObject(json.get("profileCardProperties").toString(), ProfileCardPropertyCollectionPage.class);
         }
     }
 }

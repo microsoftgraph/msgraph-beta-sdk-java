@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerImportedPFXCertificateProfileRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the AndroidDeviceOwnerImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerImportedPFXCertificateProfileRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerImportedPFXCertificateProfileRequest extends
      * @param sourceAndroidDeviceOwnerImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
+    void patch(final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this AndroidDeviceOwnerImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerImportedPFXCertificateProfileRequest extends
      * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
+    void post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a AndroidDeviceOwnerImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerImportedPFXCertificateProfileRequest extends
      * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
+    void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a AndroidDeviceOwnerImportedPFXCertificateProfile with a new object

@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.BookingWorkHours;
@@ -16,13 +15,9 @@ import com.microsoft.graph.models.extensions.BookingCustomer;
 import com.microsoft.graph.models.extensions.BookingService;
 import com.microsoft.graph.models.extensions.BookingStaffMember;
 import com.microsoft.graph.models.extensions.BookingNamedEntity;
-import com.microsoft.graph.requests.extensions.BookingAppointmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.BookingAppointmentCollectionPage;
-import com.microsoft.graph.requests.extensions.BookingCustomerCollectionResponse;
 import com.microsoft.graph.requests.extensions.BookingCustomerCollectionPage;
-import com.microsoft.graph.requests.extensions.BookingServiceCollectionResponse;
 import com.microsoft.graph.requests.extensions.BookingServiceCollectionPage;
-import com.microsoft.graph.requests.extensions.BookingStaffMemberCollectionResponse;
 import com.microsoft.graph.requests.extensions.BookingStaffMemberCollectionPage;
 
 
@@ -199,83 +194,23 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
 
         if (json.has("appointments")) {
-            final BookingAppointmentCollectionResponse response = new BookingAppointmentCollectionResponse();
-            if (json.has("appointments@odata.nextLink")) {
-                response.nextLink = json.get("appointments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appointments").toString(), JsonObject[].class);
-            final BookingAppointment[] array = new BookingAppointment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BookingAppointment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            appointments = new BookingAppointmentCollectionPage(response, null);
+            appointments = serializer.deserializeObject(json.get("appointments").toString(), BookingAppointmentCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            final BookingAppointmentCollectionResponse response = new BookingAppointmentCollectionResponse();
-            if (json.has("calendarView@odata.nextLink")) {
-                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
-            final BookingAppointment[] array = new BookingAppointment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BookingAppointment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calendarView = new BookingAppointmentCollectionPage(response, null);
+            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), BookingAppointmentCollectionPage.class);
         }
 
         if (json.has("customers")) {
-            final BookingCustomerCollectionResponse response = new BookingCustomerCollectionResponse();
-            if (json.has("customers@odata.nextLink")) {
-                response.nextLink = json.get("customers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("customers").toString(), JsonObject[].class);
-            final BookingCustomer[] array = new BookingCustomer[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BookingCustomer.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            customers = new BookingCustomerCollectionPage(response, null);
+            customers = serializer.deserializeObject(json.get("customers").toString(), BookingCustomerCollectionPage.class);
         }
 
         if (json.has("services")) {
-            final BookingServiceCollectionResponse response = new BookingServiceCollectionResponse();
-            if (json.has("services@odata.nextLink")) {
-                response.nextLink = json.get("services@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("services").toString(), JsonObject[].class);
-            final BookingService[] array = new BookingService[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BookingService.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            services = new BookingServiceCollectionPage(response, null);
+            services = serializer.deserializeObject(json.get("services").toString(), BookingServiceCollectionPage.class);
         }
 
         if (json.has("staffMembers")) {
-            final BookingStaffMemberCollectionResponse response = new BookingStaffMemberCollectionResponse();
-            if (json.has("staffMembers@odata.nextLink")) {
-                response.nextLink = json.get("staffMembers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("staffMembers").toString(), JsonObject[].class);
-            final BookingStaffMember[] array = new BookingStaffMember[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BookingStaffMember.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            staffMembers = new BookingStaffMemberCollectionPage(response, null);
+            staffMembers = serializer.deserializeObject(json.get("staffMembers").toString(), BookingStaffMemberCollectionPage.class);
         }
     }
 }

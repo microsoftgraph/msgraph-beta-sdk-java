@@ -37,7 +37,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsMicrosoftEdgeApp> callback) {
+    public void get(final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsMicrosoftEdgeApp> callback) {
+    public void delete(final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param sourceWindowsMicrosoftEdgeApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback) {
+    public void patch(final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsMicrosoftEdgeApp);
     }
 
@@ -96,7 +96,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param newWindowsMicrosoftEdgeApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback) {
+    public void post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.POST, callback, newWindowsMicrosoftEdgeApp);
     }
 
@@ -117,7 +117,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param newWindowsMicrosoftEdgeApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback) {
+    public void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsMicrosoftEdgeApp);
     }
 
@@ -151,17 +151,6 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      */
      public IWindowsMicrosoftEdgeAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsMicrosoftEdgeAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsMicrosoftEdgeAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsMicrosoftEdgeAppRequest)this;
      }
 

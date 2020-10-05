@@ -36,6 +36,6 @@ public class ManagementConditionCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public ManagementConditionCollectionWithReferencesPage(final ManagementConditionCollectionResponse response, final IManagementConditionCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

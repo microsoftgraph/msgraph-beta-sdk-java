@@ -423,7 +423,7 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagement> callback) {
+    public void get(final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -442,7 +442,7 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagement> callback) {
+    public void delete(final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -461,7 +461,7 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      * @param sourceDeviceManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagement sourceDeviceManagement, final ICallback<DeviceManagement> callback) {
+    public void patch(final DeviceManagement sourceDeviceManagement, final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagement);
     }
 
@@ -482,7 +482,7 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      * @param newDeviceManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagement newDeviceManagement, final ICallback<DeviceManagement> callback) {
+    public void post(final DeviceManagement newDeviceManagement, final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.POST, callback, newDeviceManagement);
     }
 
@@ -503,7 +503,7 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      * @param newDeviceManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagement newDeviceManagement, final ICallback<DeviceManagement> callback) {
+    public void put(final DeviceManagement newDeviceManagement, final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagement);
     }
 
@@ -537,17 +537,6 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      */
      public IDeviceManagementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementRequest)this;
      }
 

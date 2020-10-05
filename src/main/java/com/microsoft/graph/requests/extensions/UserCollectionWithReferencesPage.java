@@ -54,6 +54,6 @@ public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, I
      * @param builder  the request builder for the next collection page
      */
     public UserCollectionWithReferencesPage(final UserCollectionResponse response, final IUserCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

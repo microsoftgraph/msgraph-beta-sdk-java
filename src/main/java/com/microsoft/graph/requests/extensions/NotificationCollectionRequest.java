@@ -40,7 +40,7 @@ public class NotificationCollectionRequest extends BaseCollectionRequest<Notific
         super(requestUrl, client, requestOptions, NotificationCollectionResponse.class, INotificationCollectionPage.class);
     }
 
-    public void get(final ICallback<INotificationCollectionPage> callback) {
+    public void get(final ICallback<? super INotificationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class NotificationCollectionRequest extends BaseCollectionRequest<Notific
         return buildFromResponse(response);
     }
 
-    public void post(final Notification newNotification, final ICallback<Notification> callback) {
+    public void post(final Notification newNotification, final ICallback<? super Notification> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class NotificationCollectionRequest extends BaseCollectionRequest<Notific
      */
     public INotificationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (NotificationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public INotificationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (NotificationCollectionRequest)this;
     }
 

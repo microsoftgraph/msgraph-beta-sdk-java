@@ -21,7 +21,7 @@ public interface IMacOSEndpointProtectionConfigurationRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSEndpointProtectionConfiguration> callback);
+    void get(final ICallback<? super MacOSEndpointProtectionConfiguration> callback);
 
     /**
      * Gets the MacOSEndpointProtectionConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSEndpointProtectionConfigurationRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSEndpointProtectionConfiguration> callback);
+    void delete(final ICallback<? super MacOSEndpointProtectionConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSEndpointProtectionConfigurationRequest extends IHttpReque
      * @param sourceMacOSEndpointProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSEndpointProtectionConfiguration sourceMacOSEndpointProtectionConfiguration, final ICallback<MacOSEndpointProtectionConfiguration> callback);
+    void patch(final MacOSEndpointProtectionConfiguration sourceMacOSEndpointProtectionConfiguration, final ICallback<? super MacOSEndpointProtectionConfiguration> callback);
 
     /**
      * Patches this MacOSEndpointProtectionConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSEndpointProtectionConfigurationRequest extends IHttpReque
      * @param newMacOSEndpointProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<MacOSEndpointProtectionConfiguration> callback);
+    void post(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<? super MacOSEndpointProtectionConfiguration> callback);
 
     /**
      * Posts a MacOSEndpointProtectionConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSEndpointProtectionConfigurationRequest extends IHttpReque
      * @param newMacOSEndpointProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<MacOSEndpointProtectionConfiguration> callback);
+    void put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<? super MacOSEndpointProtectionConfiguration> callback);
 
     /**
      * Posts a MacOSEndpointProtectionConfiguration with a new object

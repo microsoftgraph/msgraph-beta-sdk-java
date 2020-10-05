@@ -41,7 +41,7 @@ public class MobileAppTroubleshootingEventRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppTroubleshootingEvent> callback) {
+    public void get(final ICallback<? super MobileAppTroubleshootingEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class MobileAppTroubleshootingEventRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppTroubleshootingEvent> callback) {
+    public void delete(final ICallback<? super MobileAppTroubleshootingEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class MobileAppTroubleshootingEventRequest extends BaseRequest implements
      * @param sourceMobileAppTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppTroubleshootingEvent sourceMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback) {
+    public void patch(final MobileAppTroubleshootingEvent sourceMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppTroubleshootingEvent);
     }
 
@@ -100,7 +100,7 @@ public class MobileAppTroubleshootingEventRequest extends BaseRequest implements
      * @param newMobileAppTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback) {
+    public void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback) {
         send(HttpMethod.POST, callback, newMobileAppTroubleshootingEvent);
     }
 
@@ -121,7 +121,7 @@ public class MobileAppTroubleshootingEventRequest extends BaseRequest implements
      * @param newMobileAppTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback) {
+    public void put(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback) {
         send(HttpMethod.PUT, callback, newMobileAppTroubleshootingEvent);
     }
 
@@ -155,17 +155,6 @@ public class MobileAppTroubleshootingEventRequest extends BaseRequest implements
      */
      public IMobileAppTroubleshootingEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppTroubleshootingEventRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppTroubleshootingEventRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppTroubleshootingEventRequest)this;
      }
 

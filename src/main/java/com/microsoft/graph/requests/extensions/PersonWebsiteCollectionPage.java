@@ -23,6 +23,6 @@ public class PersonWebsiteCollectionPage extends BaseCollectionPage<PersonWebsit
      * @param builder  the request builder for the next collection page
      */
     public PersonWebsiteCollectionPage(final PersonWebsiteCollectionResponse response, final IPersonWebsiteCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class RoleScopeTagAutoAssignmentCollectionPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public RoleScopeTagAutoAssignmentCollectionPage(final RoleScopeTagAutoAssignmentCollectionResponse response, final IRoleScopeTagAutoAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

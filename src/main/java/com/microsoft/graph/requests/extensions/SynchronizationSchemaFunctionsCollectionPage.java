@@ -34,6 +34,6 @@ public class SynchronizationSchemaFunctionsCollectionPage extends BaseCollection
      * @param builder The request builder for the next collection page
      */
     public SynchronizationSchemaFunctionsCollectionPage(final SynchronizationSchemaFunctionsCollectionResponse response, final ISynchronizationSchemaFunctionsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

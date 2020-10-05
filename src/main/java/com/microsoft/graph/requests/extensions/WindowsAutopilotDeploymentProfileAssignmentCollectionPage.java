@@ -23,6 +23,6 @@ public class WindowsAutopilotDeploymentProfileAssignmentCollectionPage extends B
      * @param builder  the request builder for the next collection page
      */
     public WindowsAutopilotDeploymentProfileAssignmentCollectionPage(final WindowsAutopilotDeploymentProfileAssignmentCollectionResponse response, final IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

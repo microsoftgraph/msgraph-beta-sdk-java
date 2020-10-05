@@ -23,6 +23,6 @@ public class TaxGroupCollectionPage extends BaseCollectionPage<TaxGroup, ITaxGro
      * @param builder  the request builder for the next collection page
      */
     public TaxGroupCollectionPage(final TaxGroupCollectionResponse response, final ITaxGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionPage extends Base
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsDevicePerformanceCollectionPage(final UserExperienceAnalyticsDevicePerformanceCollectionResponse response, final IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

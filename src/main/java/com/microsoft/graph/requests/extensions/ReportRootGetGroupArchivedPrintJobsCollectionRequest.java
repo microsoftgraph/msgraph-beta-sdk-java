@@ -39,7 +39,7 @@ public class ReportRootGetGroupArchivedPrintJobsCollectionRequest extends BaseCo
     }
 
 
-    public void get(final ICallback<IReportRootGetGroupArchivedPrintJobsCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetGroupArchivedPrintJobsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetGroupArchivedPrintJobsCollectionRequest extends BaseCo
      */
     public IReportRootGetGroupArchivedPrintJobsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetGroupArchivedPrintJobsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetGroupArchivedPrintJobsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetGroupArchivedPrintJobsCollectionRequest)this;
     }
 

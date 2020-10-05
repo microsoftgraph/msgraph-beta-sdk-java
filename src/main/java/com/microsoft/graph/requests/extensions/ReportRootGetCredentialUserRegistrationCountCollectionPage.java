@@ -34,6 +34,6 @@ public class ReportRootGetCredentialUserRegistrationCountCollectionPage extends 
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetCredentialUserRegistrationCountCollectionPage(final ReportRootGetCredentialUserRegistrationCountCollectionResponse response, final IReportRootGetCredentialUserRegistrationCountCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

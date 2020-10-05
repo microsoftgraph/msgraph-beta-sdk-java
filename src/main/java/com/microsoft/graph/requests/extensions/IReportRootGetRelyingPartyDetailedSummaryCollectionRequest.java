@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetRelyingPartyDetailedSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetRelyingPartyDetailedSummaryCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetRelyingPartyDetailedSummaryCollectionPage> callback);
 
     IReportRootGetRelyingPartyDetailedSummaryCollectionPage get() throws ClientException;
 

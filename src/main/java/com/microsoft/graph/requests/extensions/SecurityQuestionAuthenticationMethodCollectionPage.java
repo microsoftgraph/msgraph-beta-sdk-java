@@ -23,6 +23,6 @@ public class SecurityQuestionAuthenticationMethodCollectionPage extends BaseColl
      * @param builder  the request builder for the next collection page
      */
     public SecurityQuestionAuthenticationMethodCollectionPage(final SecurityQuestionAuthenticationMethodCollectionResponse response, final ISecurityQuestionAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

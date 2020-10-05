@@ -39,7 +39,7 @@ public class RiskDetectionCollectionRequest extends BaseCollectionRequest<RiskDe
         super(requestUrl, client, requestOptions, RiskDetectionCollectionResponse.class, IRiskDetectionCollectionPage.class);
     }
 
-    public void get(final ICallback<IRiskDetectionCollectionPage> callback) {
+    public void get(final ICallback<? super IRiskDetectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class RiskDetectionCollectionRequest extends BaseCollectionRequest<RiskDe
         return buildFromResponse(response);
     }
 
-    public void post(final RiskDetection newRiskDetection, final ICallback<RiskDetection> callback) {
+    public void post(final RiskDetection newRiskDetection, final ICallback<? super RiskDetection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RiskDetectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class RiskDetectionCollectionRequest extends BaseCollectionRequest<RiskDe
      */
     public IRiskDetectionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RiskDetectionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRiskDetectionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RiskDetectionCollectionRequest)this;
     }
 

@@ -40,7 +40,7 @@ public class PersonInterestCollectionRequest extends BaseCollectionRequest<Perso
         super(requestUrl, client, requestOptions, PersonInterestCollectionResponse.class, IPersonInterestCollectionPage.class);
     }
 
-    public void get(final ICallback<IPersonInterestCollectionPage> callback) {
+    public void get(final ICallback<? super IPersonInterestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PersonInterestCollectionRequest extends BaseCollectionRequest<Perso
         return buildFromResponse(response);
     }
 
-    public void post(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback) {
+    public void post(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonInterestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PersonInterestCollectionRequest extends BaseCollectionRequest<Perso
      */
     public IPersonInterestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PersonInterestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPersonInterestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PersonInterestCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IImportedWindowsAutopilotDeviceIdentityRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback);
+    void get(final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback);
 
     /**
      * Gets the ImportedWindowsAutopilotDeviceIdentity from the service
@@ -36,7 +36,7 @@ public interface IImportedWindowsAutopilotDeviceIdentityRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback);
+    void delete(final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IImportedWindowsAutopilotDeviceIdentityRequest extends IHttpReq
      * @param sourceImportedWindowsAutopilotDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ImportedWindowsAutopilotDeviceIdentity sourceImportedWindowsAutopilotDeviceIdentity, final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback);
+    void patch(final ImportedWindowsAutopilotDeviceIdentity sourceImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback);
 
     /**
      * Patches this ImportedWindowsAutopilotDeviceIdentity with a source
@@ -68,7 +68,7 @@ public interface IImportedWindowsAutopilotDeviceIdentityRequest extends IHttpReq
      * @param newImportedWindowsAutopilotDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback);
+    void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback);
 
     /**
      * Posts a ImportedWindowsAutopilotDeviceIdentity with a new object
@@ -85,7 +85,7 @@ public interface IImportedWindowsAutopilotDeviceIdentityRequest extends IHttpReq
      * @param newImportedWindowsAutopilotDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback);
+    void put(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback);
 
     /**
      * Posts a ImportedWindowsAutopilotDeviceIdentity with a new object

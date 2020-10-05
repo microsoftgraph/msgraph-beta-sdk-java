@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILongRunningOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ILongRunningOperationCollectionPage> callback);
+    void get(final ICallback<? super ILongRunningOperationCollectionPage> callback);
 
     ILongRunningOperationCollectionPage get() throws ClientException;
 
-    void post(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback);
+    void post(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback);
 
     LongRunningOperation post(final LongRunningOperation newLongRunningOperation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ILongRunningOperationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ILongRunningOperationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ILongRunningOperationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ILongRunningOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ILongRunningOperationCollectionRequest skipToken(String skipToken);
+	ILongRunningOperationCollectionRequest skipToken(final String skipToken);
 }

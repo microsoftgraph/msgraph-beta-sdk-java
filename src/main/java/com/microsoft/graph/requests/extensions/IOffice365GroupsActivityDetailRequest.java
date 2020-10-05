@@ -21,7 +21,7 @@ public interface IOffice365GroupsActivityDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365GroupsActivityDetail> callback);
+    void get(final ICallback<? super Office365GroupsActivityDetail> callback);
 
     /**
      * Gets the Office365GroupsActivityDetail from the service
@@ -36,7 +36,7 @@ public interface IOffice365GroupsActivityDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365GroupsActivityDetail> callback);
+    void delete(final ICallback<? super Office365GroupsActivityDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365GroupsActivityDetailRequest extends IHttpRequest {
      * @param sourceOffice365GroupsActivityDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365GroupsActivityDetail sourceOffice365GroupsActivityDetail, final ICallback<Office365GroupsActivityDetail> callback);
+    void patch(final Office365GroupsActivityDetail sourceOffice365GroupsActivityDetail, final ICallback<? super Office365GroupsActivityDetail> callback);
 
     /**
      * Patches this Office365GroupsActivityDetail with a source
@@ -68,7 +68,7 @@ public interface IOffice365GroupsActivityDetailRequest extends IHttpRequest {
      * @param newOffice365GroupsActivityDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<Office365GroupsActivityDetail> callback);
+    void post(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<? super Office365GroupsActivityDetail> callback);
 
     /**
      * Posts a Office365GroupsActivityDetail with a new object
@@ -85,7 +85,7 @@ public interface IOffice365GroupsActivityDetailRequest extends IHttpRequest {
      * @param newOffice365GroupsActivityDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<Office365GroupsActivityDetail> callback);
+    void put(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<? super Office365GroupsActivityDetail> callback);
 
     /**
      * Posts a Office365GroupsActivityDetail with a new object

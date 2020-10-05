@@ -21,7 +21,7 @@ public interface IGroupPolicyOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyOperation> callback);
+    void get(final ICallback<? super GroupPolicyOperation> callback);
 
     /**
      * Gets the GroupPolicyOperation from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyOperation> callback);
+    void delete(final ICallback<? super GroupPolicyOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyOperationRequest extends IHttpRequest {
      * @param sourceGroupPolicyOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyOperation sourceGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback);
+    void patch(final GroupPolicyOperation sourceGroupPolicyOperation, final ICallback<? super GroupPolicyOperation> callback);
 
     /**
      * Patches this GroupPolicyOperation with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyOperationRequest extends IHttpRequest {
      * @param newGroupPolicyOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback);
+    void post(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<? super GroupPolicyOperation> callback);
 
     /**
      * Posts a GroupPolicyOperation with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyOperationRequest extends IHttpRequest {
      * @param newGroupPolicyOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback);
+    void put(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<? super GroupPolicyOperation> callback);
 
     /**
      * Posts a GroupPolicyOperation with a new object

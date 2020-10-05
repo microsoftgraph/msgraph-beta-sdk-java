@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.ConnectorGroup;
  */
 public interface IConnectorGroupCollectionReferenceRequest {
 
-    void post(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback);
+    void post(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback);
 
     ConnectorGroup post(final ConnectorGroup newConnectorGroup) throws ClientException;
 

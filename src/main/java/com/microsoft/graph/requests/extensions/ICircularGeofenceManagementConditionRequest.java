@@ -21,7 +21,7 @@ public interface ICircularGeofenceManagementConditionRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CircularGeofenceManagementCondition> callback);
+    void get(final ICallback<? super CircularGeofenceManagementCondition> callback);
 
     /**
      * Gets the CircularGeofenceManagementCondition from the service
@@ -36,7 +36,7 @@ public interface ICircularGeofenceManagementConditionRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CircularGeofenceManagementCondition> callback);
+    void delete(final ICallback<? super CircularGeofenceManagementCondition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICircularGeofenceManagementConditionRequest extends IHttpReques
      * @param sourceCircularGeofenceManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CircularGeofenceManagementCondition sourceCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback);
+    void patch(final CircularGeofenceManagementCondition sourceCircularGeofenceManagementCondition, final ICallback<? super CircularGeofenceManagementCondition> callback);
 
     /**
      * Patches this CircularGeofenceManagementCondition with a source
@@ -68,7 +68,7 @@ public interface ICircularGeofenceManagementConditionRequest extends IHttpReques
      * @param newCircularGeofenceManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback);
+    void post(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<? super CircularGeofenceManagementCondition> callback);
 
     /**
      * Posts a CircularGeofenceManagementCondition with a new object
@@ -85,7 +85,7 @@ public interface ICircularGeofenceManagementConditionRequest extends IHttpReques
      * @param newCircularGeofenceManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback);
+    void put(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<? super CircularGeofenceManagementCondition> callback);
 
     /**
      * Posts a CircularGeofenceManagementCondition with a new object

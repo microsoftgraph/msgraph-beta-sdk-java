@@ -40,7 +40,7 @@ public class WindowsFeatureUpdateProfileAssignmentCollectionRequest extends Base
         super(requestUrl, client, requestOptions, WindowsFeatureUpdateProfileAssignmentCollectionResponse.class, IWindowsFeatureUpdateProfileAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsFeatureUpdateProfileAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsFeatureUpdateProfileAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsFeatureUpdateProfileAssignmentCollectionRequest extends Base
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
+    public void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsFeatureUpdateProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsFeatureUpdateProfileAssignmentCollectionRequest extends Base
      */
     public IWindowsFeatureUpdateProfileAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsFeatureUpdateProfileAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsFeatureUpdateProfileAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsFeatureUpdateProfileAssignmentCollectionRequest)this;
     }
 

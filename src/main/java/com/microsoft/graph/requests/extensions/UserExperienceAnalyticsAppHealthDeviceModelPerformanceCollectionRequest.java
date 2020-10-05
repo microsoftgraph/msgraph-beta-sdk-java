@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionReq
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionResponse.class, IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage> callback) {
+    public void get(final ICallback<? super IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final UserExperienceAnalyticsAppHealthDeviceModelPerformance newUserExperienceAnalyticsAppHealthDeviceModelPerformance, final ICallback<UserExperienceAnalyticsAppHealthDeviceModelPerformance> callback) {
+    public void post(final UserExperienceAnalyticsAppHealthDeviceModelPerformance newUserExperienceAnalyticsAppHealthDeviceModelPerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDeviceModelPerformance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionReq
      */
     public IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest)this;
     }
 

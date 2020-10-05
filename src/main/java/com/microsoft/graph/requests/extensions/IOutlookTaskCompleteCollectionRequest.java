@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IOutlookTaskCompleteCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IOutlookTaskCompleteCollectionPage> callback);
+    void post(final ICallback<? super IOutlookTaskCompleteCollectionPage> callback);
 
     IOutlookTaskCompleteCollectionPage post() throws ClientException;
 

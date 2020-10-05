@@ -37,7 +37,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void get(final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param sourceWindows81TrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81TrustedRootCertificate);
     }
 
@@ -96,7 +96,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param newWindows81TrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newWindows81TrustedRootCertificate);
     }
 
@@ -117,7 +117,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param newWindows81TrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newWindows81TrustedRootCertificate);
     }
 
@@ -151,17 +151,6 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      */
      public IWindows81TrustedRootCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81TrustedRootCertificateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindows81TrustedRootCertificateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows81TrustedRootCertificateRequest)this;
      }
 

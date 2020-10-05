@@ -21,7 +21,7 @@ public interface IAndroidForWorkScepCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkScepCertificateProfile> callback);
+    void get(final ICallback<? super AndroidForWorkScepCertificateProfile> callback);
 
     /**
      * Gets the AndroidForWorkScepCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkScepCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkScepCertificateProfile> callback);
+    void delete(final ICallback<? super AndroidForWorkScepCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkScepCertificateProfileRequest extends IHttpReque
      * @param sourceAndroidForWorkScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkScepCertificateProfile sourceAndroidForWorkScepCertificateProfile, final ICallback<AndroidForWorkScepCertificateProfile> callback);
+    void patch(final AndroidForWorkScepCertificateProfile sourceAndroidForWorkScepCertificateProfile, final ICallback<? super AndroidForWorkScepCertificateProfile> callback);
 
     /**
      * Patches this AndroidForWorkScepCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkScepCertificateProfileRequest extends IHttpReque
      * @param newAndroidForWorkScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile, final ICallback<AndroidForWorkScepCertificateProfile> callback);
+    void post(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile, final ICallback<? super AndroidForWorkScepCertificateProfile> callback);
 
     /**
      * Posts a AndroidForWorkScepCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkScepCertificateProfileRequest extends IHttpReque
      * @param newAndroidForWorkScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile, final ICallback<AndroidForWorkScepCertificateProfile> callback);
+    void put(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile, final ICallback<? super AndroidForWorkScepCertificateProfile> callback);
 
     /**
      * Posts a AndroidForWorkScepCertificateProfile with a new object

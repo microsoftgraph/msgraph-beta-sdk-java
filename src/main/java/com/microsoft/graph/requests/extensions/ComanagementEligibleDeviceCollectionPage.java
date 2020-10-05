@@ -23,6 +23,6 @@ public class ComanagementEligibleDeviceCollectionPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public ComanagementEligibleDeviceCollectionPage(final ComanagementEligibleDeviceCollectionResponse response, final IComanagementEligibleDeviceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

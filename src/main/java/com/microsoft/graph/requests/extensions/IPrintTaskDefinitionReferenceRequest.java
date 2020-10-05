@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrintTaskDefinitionReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PrintTaskDefinition> callback);
+    void delete(final ICallback<? super PrintTaskDefinition> callback);
 
     PrintTaskDefinition delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IPrintTaskDefinitionReferenceRequest extends IHttpRequest {
      * @param srcPrintTaskDefinition the PrintTaskDefinition to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PrintTaskDefinition srcPrintTaskDefinition, final ICallback<PrintTaskDefinition> callback);
+    void put(PrintTaskDefinition srcPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback);
 
     /**
      * Puts the PrintTaskDefinition

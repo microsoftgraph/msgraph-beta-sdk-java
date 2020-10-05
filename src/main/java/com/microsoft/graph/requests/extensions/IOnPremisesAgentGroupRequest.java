@@ -21,7 +21,7 @@ public interface IOnPremisesAgentGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnPremisesAgentGroup> callback);
+    void get(final ICallback<? super OnPremisesAgentGroup> callback);
 
     /**
      * Gets the OnPremisesAgentGroup from the service
@@ -36,7 +36,7 @@ public interface IOnPremisesAgentGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnPremisesAgentGroup> callback);
+    void delete(final ICallback<? super OnPremisesAgentGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnPremisesAgentGroupRequest extends IHttpRequest {
      * @param sourceOnPremisesAgentGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnPremisesAgentGroup sourceOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback);
+    void patch(final OnPremisesAgentGroup sourceOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback);
 
     /**
      * Patches this OnPremisesAgentGroup with a source
@@ -68,7 +68,7 @@ public interface IOnPremisesAgentGroupRequest extends IHttpRequest {
      * @param newOnPremisesAgentGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback);
+    void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback);
 
     /**
      * Posts a OnPremisesAgentGroup with a new object
@@ -85,7 +85,7 @@ public interface IOnPremisesAgentGroupRequest extends IHttpRequest {
      * @param newOnPremisesAgentGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback);
+    void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback);
 
     /**
      * Posts a OnPremisesAgentGroup with a new object

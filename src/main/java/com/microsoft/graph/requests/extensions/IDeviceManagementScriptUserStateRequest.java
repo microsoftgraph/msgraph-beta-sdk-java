@@ -21,7 +21,7 @@ public interface IDeviceManagementScriptUserStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementScriptUserState> callback);
+    void get(final ICallback<? super DeviceManagementScriptUserState> callback);
 
     /**
      * Gets the DeviceManagementScriptUserState from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementScriptUserStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementScriptUserState> callback);
+    void delete(final ICallback<? super DeviceManagementScriptUserState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementScriptUserStateRequest extends IHttpRequest {
      * @param sourceDeviceManagementScriptUserState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementScriptUserState sourceDeviceManagementScriptUserState, final ICallback<DeviceManagementScriptUserState> callback);
+    void patch(final DeviceManagementScriptUserState sourceDeviceManagementScriptUserState, final ICallback<? super DeviceManagementScriptUserState> callback);
 
     /**
      * Patches this DeviceManagementScriptUserState with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementScriptUserStateRequest extends IHttpRequest {
      * @param newDeviceManagementScriptUserState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<DeviceManagementScriptUserState> callback);
+    void post(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<? super DeviceManagementScriptUserState> callback);
 
     /**
      * Posts a DeviceManagementScriptUserState with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementScriptUserStateRequest extends IHttpRequest {
      * @param newDeviceManagementScriptUserState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<DeviceManagementScriptUserState> callback);
+    void put(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<? super DeviceManagementScriptUserState> callback);
 
     /**
      * Posts a DeviceManagementScriptUserState with a new object

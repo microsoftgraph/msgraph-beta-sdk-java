@@ -21,7 +21,7 @@ public interface IBusinessFlowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BusinessFlow> callback);
+    void get(final ICallback<? super BusinessFlow> callback);
 
     /**
      * Gets the BusinessFlow from the service
@@ -36,7 +36,7 @@ public interface IBusinessFlowRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BusinessFlow> callback);
+    void delete(final ICallback<? super BusinessFlow> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBusinessFlowRequest extends IHttpRequest {
      * @param sourceBusinessFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BusinessFlow sourceBusinessFlow, final ICallback<BusinessFlow> callback);
+    void patch(final BusinessFlow sourceBusinessFlow, final ICallback<? super BusinessFlow> callback);
 
     /**
      * Patches this BusinessFlow with a source
@@ -68,7 +68,7 @@ public interface IBusinessFlowRequest extends IHttpRequest {
      * @param newBusinessFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BusinessFlow newBusinessFlow, final ICallback<BusinessFlow> callback);
+    void post(final BusinessFlow newBusinessFlow, final ICallback<? super BusinessFlow> callback);
 
     /**
      * Posts a BusinessFlow with a new object
@@ -85,7 +85,7 @@ public interface IBusinessFlowRequest extends IHttpRequest {
      * @param newBusinessFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BusinessFlow newBusinessFlow, final ICallback<BusinessFlow> callback);
+    void put(final BusinessFlow newBusinessFlow, final ICallback<? super BusinessFlow> callback);
 
     /**
      * Posts a BusinessFlow with a new object

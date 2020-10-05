@@ -23,6 +23,6 @@ public class PersonAnnotationCollectionPage extends BaseCollectionPage<PersonAnn
      * @param builder  the request builder for the next collection page
      */
     public PersonAnnotationCollectionPage(final PersonAnnotationCollectionResponse response, final IPersonAnnotationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

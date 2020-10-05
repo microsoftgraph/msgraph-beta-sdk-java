@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagementConditionStatementCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagementConditionStatementCollectionPage> callback);
+    void get(final ICallback<? super IManagementConditionStatementCollectionPage> callback);
 
     IManagementConditionStatementCollectionPage get() throws ClientException;
 
-    void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback);
+    void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback);
 
     ManagementConditionStatement post(final ManagementConditionStatement newManagementConditionStatement) throws ClientException;
 
@@ -47,6 +47,14 @@ public interface IManagementConditionStatementCollectionRequest extends IHttpReq
      * @return the updated request
      */
     IManagementConditionStatementCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagementConditionStatementCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -79,5 +87,5 @@ public interface IManagementConditionStatementCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	IManagementConditionStatementCollectionRequest skipToken(String skipToken);
+	IManagementConditionStatementCollectionRequest skipToken(final String skipToken);
 }

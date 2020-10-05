@@ -21,7 +21,7 @@ public interface ISharePointSiteUsageDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointSiteUsageDetail> callback);
+    void get(final ICallback<? super SharePointSiteUsageDetail> callback);
 
     /**
      * Gets the SharePointSiteUsageDetail from the service
@@ -36,7 +36,7 @@ public interface ISharePointSiteUsageDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointSiteUsageDetail> callback);
+    void delete(final ICallback<? super SharePointSiteUsageDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointSiteUsageDetailRequest extends IHttpRequest {
      * @param sourceSharePointSiteUsageDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback);
+    void patch(final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback);
 
     /**
      * Patches this SharePointSiteUsageDetail with a source
@@ -68,7 +68,7 @@ public interface ISharePointSiteUsageDetailRequest extends IHttpRequest {
      * @param newSharePointSiteUsageDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback);
+    void post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback);
 
     /**
      * Posts a SharePointSiteUsageDetail with a new object
@@ -85,7 +85,7 @@ public interface ISharePointSiteUsageDetailRequest extends IHttpRequest {
      * @param newSharePointSiteUsageDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback);
+    void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback);
 
     /**
      * Posts a SharePointSiteUsageDetail with a new object

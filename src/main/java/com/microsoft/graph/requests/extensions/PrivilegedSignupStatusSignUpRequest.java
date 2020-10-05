@@ -37,7 +37,7 @@ public class PrivilegedSignupStatusSignUpRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<PrivilegedSignupStatus> callback) {
+    public void post(final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class PrivilegedSignupStatusSignUpRequest extends BaseRequest implements 
      */
     public IPrivilegedSignupStatusSignUpRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedSignupStatusSignUpRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedSignupStatusSignUpRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrivilegedSignupStatusSignUpRequest)this;
     }
 

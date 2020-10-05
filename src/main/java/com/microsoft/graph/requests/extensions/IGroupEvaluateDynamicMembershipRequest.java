@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupEvaluateDynamicMembershipRequest extends IHttpRequest {
 
-    void post(final ICallback<EvaluateDynamicMembershipResult> callback);
+    void post(final ICallback<? super EvaluateDynamicMembershipResult> callback);
 
     EvaluateDynamicMembershipResult post() throws ClientException;
 

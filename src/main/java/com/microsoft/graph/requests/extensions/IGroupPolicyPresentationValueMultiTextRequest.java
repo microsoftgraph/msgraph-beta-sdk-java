@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationValueMultiTextRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationValueMultiText> callback);
+    void get(final ICallback<? super GroupPolicyPresentationValueMultiText> callback);
 
     /**
      * Gets the GroupPolicyPresentationValueMultiText from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationValueMultiTextRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationValueMultiText> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationValueMultiText> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationValueMultiTextRequest extends IHttpRequ
      * @param sourceGroupPolicyPresentationValueMultiText the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationValueMultiText sourceGroupPolicyPresentationValueMultiText, final ICallback<GroupPolicyPresentationValueMultiText> callback);
+    void patch(final GroupPolicyPresentationValueMultiText sourceGroupPolicyPresentationValueMultiText, final ICallback<? super GroupPolicyPresentationValueMultiText> callback);
 
     /**
      * Patches this GroupPolicyPresentationValueMultiText with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationValueMultiTextRequest extends IHttpRequ
      * @param newGroupPolicyPresentationValueMultiText the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<GroupPolicyPresentationValueMultiText> callback);
+    void post(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<? super GroupPolicyPresentationValueMultiText> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueMultiText with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationValueMultiTextRequest extends IHttpRequ
      * @param newGroupPolicyPresentationValueMultiText the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<GroupPolicyPresentationValueMultiText> callback);
+    void put(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<? super GroupPolicyPresentationValueMultiText> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueMultiText with a new object

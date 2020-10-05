@@ -21,7 +21,7 @@ public interface IPrivilegedRoleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedRole> callback);
+    void get(final ICallback<? super PrivilegedRole> callback);
 
     /**
      * Gets the PrivilegedRole from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedRoleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedRole> callback);
+    void delete(final ICallback<? super PrivilegedRole> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedRoleRequest extends IHttpRequest {
      * @param sourcePrivilegedRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedRole sourcePrivilegedRole, final ICallback<PrivilegedRole> callback);
+    void patch(final PrivilegedRole sourcePrivilegedRole, final ICallback<? super PrivilegedRole> callback);
 
     /**
      * Patches this PrivilegedRole with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedRoleRequest extends IHttpRequest {
      * @param newPrivilegedRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback);
+    void post(final PrivilegedRole newPrivilegedRole, final ICallback<? super PrivilegedRole> callback);
 
     /**
      * Posts a PrivilegedRole with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedRoleRequest extends IHttpRequest {
      * @param newPrivilegedRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback);
+    void put(final PrivilegedRole newPrivilegedRole, final ICallback<? super PrivilegedRole> callback);
 
     /**
      * Posts a PrivilegedRole with a new object

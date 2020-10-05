@@ -21,7 +21,7 @@ public interface IIosikEv2VpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosikEv2VpnConfiguration> callback);
+    void get(final ICallback<? super IosikEv2VpnConfiguration> callback);
 
     /**
      * Gets the IosikEv2VpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosikEv2VpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosikEv2VpnConfiguration> callback);
+    void delete(final ICallback<? super IosikEv2VpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosikEv2VpnConfigurationRequest extends IHttpRequest {
      * @param sourceIosikEv2VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback);
+    void patch(final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback);
 
     /**
      * Patches this IosikEv2VpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosikEv2VpnConfigurationRequest extends IHttpRequest {
      * @param newIosikEv2VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback);
+    void post(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback);
 
     /**
      * Posts a IosikEv2VpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosikEv2VpnConfigurationRequest extends IHttpRequest {
      * @param newIosikEv2VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback);
+    void put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback);
 
     /**
      * Posts a IosikEv2VpnConfiguration with a new object

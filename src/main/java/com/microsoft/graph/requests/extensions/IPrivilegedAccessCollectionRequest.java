@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedAccessCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedAccessCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedAccessCollectionPage> callback);
 
     IPrivilegedAccessCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback);
+    void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback);
 
     PrivilegedAccess post(final PrivilegedAccess newPrivilegedAccess) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IPrivilegedAccessCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrivilegedAccessCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedAccessCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IPrivilegedAccessCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrivilegedAccessCollectionRequest skipToken(String skipToken);
+	IPrivilegedAccessCollectionRequest skipToken(final String skipToken);
 }

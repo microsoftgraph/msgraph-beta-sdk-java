@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ITargetedManagedAppConfigurationHasPayloadLinksCollectionPage> callback);
+    void post(final ICallback<? super ITargetedManagedAppConfigurationHasPayloadLinksCollectionPage> callback);
 
     ITargetedManagedAppConfigurationHasPayloadLinksCollectionPage post() throws ClientException;
 

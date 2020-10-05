@@ -21,7 +21,7 @@ public interface IWindows10CertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10CertificateProfileBase> callback);
+    void get(final ICallback<? super Windows10CertificateProfileBase> callback);
 
     /**
      * Gets the Windows10CertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IWindows10CertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10CertificateProfileBase> callback);
+    void delete(final ICallback<? super Windows10CertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10CertificateProfileBaseRequest extends IHttpRequest {
      * @param sourceWindows10CertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10CertificateProfileBase sourceWindows10CertificateProfileBase, final ICallback<Windows10CertificateProfileBase> callback);
+    void patch(final Windows10CertificateProfileBase sourceWindows10CertificateProfileBase, final ICallback<? super Windows10CertificateProfileBase> callback);
 
     /**
      * Patches this Windows10CertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IWindows10CertificateProfileBaseRequest extends IHttpRequest {
      * @param newWindows10CertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10CertificateProfileBase newWindows10CertificateProfileBase, final ICallback<Windows10CertificateProfileBase> callback);
+    void post(final Windows10CertificateProfileBase newWindows10CertificateProfileBase, final ICallback<? super Windows10CertificateProfileBase> callback);
 
     /**
      * Posts a Windows10CertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IWindows10CertificateProfileBaseRequest extends IHttpRequest {
      * @param newWindows10CertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10CertificateProfileBase newWindows10CertificateProfileBase, final ICallback<Windows10CertificateProfileBase> callback);
+    void put(final Windows10CertificateProfileBase newWindows10CertificateProfileBase, final ICallback<? super Windows10CertificateProfileBase> callback);
 
     /**
      * Posts a Windows10CertificateProfileBase with a new object

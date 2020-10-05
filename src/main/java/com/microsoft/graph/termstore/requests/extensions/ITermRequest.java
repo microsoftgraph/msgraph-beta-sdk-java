@@ -21,7 +21,7 @@ public interface ITermRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Term> callback);
+    void get(final ICallback<? super Term> callback);
 
     /**
      * Gets the Term from the service
@@ -36,7 +36,7 @@ public interface ITermRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Term> callback);
+    void delete(final ICallback<? super Term> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITermRequest extends IHttpRequest {
      * @param sourceTerm the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Term sourceTerm, final ICallback<Term> callback);
+    void patch(final Term sourceTerm, final ICallback<? super Term> callback);
 
     /**
      * Patches this Term with a source
@@ -68,7 +68,7 @@ public interface ITermRequest extends IHttpRequest {
      * @param newTerm the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Term newTerm, final ICallback<Term> callback);
+    void post(final Term newTerm, final ICallback<? super Term> callback);
 
     /**
      * Posts a Term with a new object
@@ -85,7 +85,7 @@ public interface ITermRequest extends IHttpRequest {
      * @param newTerm the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Term newTerm, final ICallback<Term> callback);
+    void put(final Term newTerm, final ICallback<? super Term> callback);
 
     /**
      * Posts a Term with a new object

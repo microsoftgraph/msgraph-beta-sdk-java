@@ -43,7 +43,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosEasEmailProfileConfiguration> callback) {
+    public void get(final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosEasEmailProfileConfiguration> callback) {
+    public void delete(final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param sourceIosEasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback) {
+    public void patch(final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosEasEmailProfileConfiguration);
     }
 
@@ -102,7 +102,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param newIosEasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback) {
+    public void post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosEasEmailProfileConfiguration);
     }
 
@@ -123,7 +123,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param newIosEasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback) {
+    public void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosEasEmailProfileConfiguration);
     }
 
@@ -157,17 +157,6 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      */
      public IIosEasEmailProfileConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosEasEmailProfileConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosEasEmailProfileConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosEasEmailProfileConfigurationRequest)this;
      }
 

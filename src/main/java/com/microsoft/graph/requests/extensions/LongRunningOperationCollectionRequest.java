@@ -40,7 +40,7 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, LongRunningOperationCollectionResponse.class, ILongRunningOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<ILongRunningOperationCollectionPage> callback) {
+    public void get(final ICallback<? super ILongRunningOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback) {
+    public void post(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LongRunningOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
      */
     public ILongRunningOperationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (LongRunningOperationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ILongRunningOperationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LongRunningOperationCollectionRequest)this;
     }
 

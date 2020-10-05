@@ -52,7 +52,7 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintOperation> callback) {
+    public void get(final ICallback<? super PrintOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintOperation> callback) {
+    public void delete(final ICallback<? super PrintOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
      * @param sourcePrintOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintOperation sourcePrintOperation, final ICallback<PrintOperation> callback) {
+    public void patch(final PrintOperation sourcePrintOperation, final ICallback<? super PrintOperation> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintOperation);
     }
 
@@ -111,7 +111,7 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
      * @param newPrintOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintOperation newPrintOperation, final ICallback<PrintOperation> callback) {
+    public void post(final PrintOperation newPrintOperation, final ICallback<? super PrintOperation> callback) {
         send(HttpMethod.POST, callback, newPrintOperation);
     }
 
@@ -132,7 +132,7 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
      * @param newPrintOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintOperation newPrintOperation, final ICallback<PrintOperation> callback) {
+    public void put(final PrintOperation newPrintOperation, final ICallback<? super PrintOperation> callback) {
         send(HttpMethod.PUT, callback, newPrintOperation);
     }
 
@@ -166,17 +166,6 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
      */
      public IPrintOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintOperationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintOperationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintOperationRequest)this;
      }
 

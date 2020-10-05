@@ -23,6 +23,6 @@ public class DeviceManagementAutopilotEventCollectionPage extends BaseCollection
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementAutopilotEventCollectionPage(final DeviceManagementAutopilotEventCollectionResponse response, final IDeviceManagementAutopilotEventCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

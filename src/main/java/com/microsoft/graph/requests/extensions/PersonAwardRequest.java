@@ -37,7 +37,7 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PersonAward> callback) {
+    public void get(final ICallback<? super PersonAward> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PersonAward> callback) {
+    public void delete(final ICallback<? super PersonAward> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
      * @param sourcePersonAward the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonAward sourcePersonAward, final ICallback<PersonAward> callback) {
+    public void patch(final PersonAward sourcePersonAward, final ICallback<? super PersonAward> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonAward);
     }
 
@@ -96,7 +96,7 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
      * @param newPersonAward the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonAward newPersonAward, final ICallback<PersonAward> callback) {
+    public void post(final PersonAward newPersonAward, final ICallback<? super PersonAward> callback) {
         send(HttpMethod.POST, callback, newPersonAward);
     }
 
@@ -117,7 +117,7 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
      * @param newPersonAward the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonAward newPersonAward, final ICallback<PersonAward> callback) {
+    public void put(final PersonAward newPersonAward, final ICallback<? super PersonAward> callback) {
         send(HttpMethod.PUT, callback, newPersonAward);
     }
 
@@ -151,17 +151,6 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
      */
      public IPersonAwardRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonAwardRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPersonAwardRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonAwardRequest)this;
      }
 

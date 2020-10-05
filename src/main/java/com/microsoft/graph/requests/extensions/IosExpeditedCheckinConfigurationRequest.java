@@ -37,7 +37,7 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosExpeditedCheckinConfiguration> callback) {
+    public void get(final ICallback<? super IosExpeditedCheckinConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosExpeditedCheckinConfiguration> callback) {
+    public void delete(final ICallback<? super IosExpeditedCheckinConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
      * @param sourceIosExpeditedCheckinConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosExpeditedCheckinConfiguration sourceIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback) {
+    public void patch(final IosExpeditedCheckinConfiguration sourceIosExpeditedCheckinConfiguration, final ICallback<? super IosExpeditedCheckinConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosExpeditedCheckinConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
      * @param newIosExpeditedCheckinConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback) {
+    public void post(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<? super IosExpeditedCheckinConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosExpeditedCheckinConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
      * @param newIosExpeditedCheckinConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback) {
+    public void put(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<? super IosExpeditedCheckinConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosExpeditedCheckinConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
      */
      public IIosExpeditedCheckinConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosExpeditedCheckinConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosExpeditedCheckinConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosExpeditedCheckinConfigurationRequest)this;
      }
 

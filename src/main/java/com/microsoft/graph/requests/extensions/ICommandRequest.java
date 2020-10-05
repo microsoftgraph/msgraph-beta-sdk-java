@@ -21,7 +21,7 @@ public interface ICommandRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Command> callback);
+    void get(final ICallback<? super Command> callback);
 
     /**
      * Gets the Command from the service
@@ -36,7 +36,7 @@ public interface ICommandRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Command> callback);
+    void delete(final ICallback<? super Command> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICommandRequest extends IHttpRequest {
      * @param sourceCommand the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Command sourceCommand, final ICallback<Command> callback);
+    void patch(final Command sourceCommand, final ICallback<? super Command> callback);
 
     /**
      * Patches this Command with a source
@@ -68,7 +68,7 @@ public interface ICommandRequest extends IHttpRequest {
      * @param newCommand the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Command newCommand, final ICallback<Command> callback);
+    void post(final Command newCommand, final ICallback<? super Command> callback);
 
     /**
      * Posts a Command with a new object
@@ -85,7 +85,7 @@ public interface ICommandRequest extends IHttpRequest {
      * @param newCommand the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Command newCommand, final ICallback<Command> callback);
+    void put(final Command newCommand, final ICallback<? super Command> callback);
 
     /**
      * Posts a Command with a new object

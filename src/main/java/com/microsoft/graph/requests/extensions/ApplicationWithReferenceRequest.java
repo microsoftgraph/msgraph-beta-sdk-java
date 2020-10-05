@@ -61,7 +61,7 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
         super(requestUrl, client, requestOptions, Application.class);
     }
 
-    public void post(final Application newApplication, final IJsonBackedObject payload, final ICallback<Application> callback) {
+    public void post(final Application newApplication, final IJsonBackedObject payload, final ICallback<? super Application> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -73,7 +73,7 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
         return null;
     }
 
-    public void get(final ICallback<Application> callback) {
+    public void get(final ICallback<? super Application> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Application> callback) {
+	public void delete(final ICallback<? super Application> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -89,7 +89,7 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Application sourceApplication, final ICallback<Application> callback) {
+	public void patch(final Application sourceApplication, final ICallback<? super Application> callback) {
 		send(HttpMethod.PATCH, callback, sourceApplication);
 	}
 
@@ -117,16 +117,6 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
      */
     public IApplicationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IApplicationWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ApplicationWithReferenceRequest)this;
     }
 }

@@ -23,6 +23,6 @@ public class UserAppInstallStatusCollectionPage extends BaseCollectionPage<UserA
      * @param builder  the request builder for the next collection page
      */
     public UserAppInstallStatusCollectionPage(final UserAppInstallStatusCollectionResponse response, final IUserAppInstallStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

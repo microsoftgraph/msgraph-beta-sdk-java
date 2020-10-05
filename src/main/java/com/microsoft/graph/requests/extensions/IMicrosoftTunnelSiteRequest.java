@@ -21,7 +21,7 @@ public interface IMicrosoftTunnelSiteRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MicrosoftTunnelSite> callback);
+    void get(final ICallback<? super MicrosoftTunnelSite> callback);
 
     /**
      * Gets the MicrosoftTunnelSite from the service
@@ -36,7 +36,7 @@ public interface IMicrosoftTunnelSiteRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MicrosoftTunnelSite> callback);
+    void delete(final ICallback<? super MicrosoftTunnelSite> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMicrosoftTunnelSiteRequest extends IHttpRequest {
      * @param sourceMicrosoftTunnelSite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MicrosoftTunnelSite sourceMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback);
+    void patch(final MicrosoftTunnelSite sourceMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback);
 
     /**
      * Patches this MicrosoftTunnelSite with a source
@@ -68,7 +68,7 @@ public interface IMicrosoftTunnelSiteRequest extends IHttpRequest {
      * @param newMicrosoftTunnelSite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback);
+    void post(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback);
 
     /**
      * Posts a MicrosoftTunnelSite with a new object
@@ -85,7 +85,7 @@ public interface IMicrosoftTunnelSiteRequest extends IHttpRequest {
      * @param newMicrosoftTunnelSite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback);
+    void put(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback);
 
     /**
      * Posts a MicrosoftTunnelSite with a new object

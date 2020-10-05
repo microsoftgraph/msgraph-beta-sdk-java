@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApplicationSignInDetailedSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IApplicationSignInDetailedSummaryCollectionPage> callback);
+    void get(final ICallback<? super IApplicationSignInDetailedSummaryCollectionPage> callback);
 
     IApplicationSignInDetailedSummaryCollectionPage get() throws ClientException;
 
-    void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback);
+    void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback);
 
     ApplicationSignInDetailedSummary post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IApplicationSignInDetailedSummaryCollectionRequest extends IHtt
      * @return the updated request
      */
     IApplicationSignInDetailedSummaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IApplicationSignInDetailedSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IApplicationSignInDetailedSummaryCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IApplicationSignInDetailedSummaryCollectionRequest skipToken(String skipToken);
+	IApplicationSignInDetailedSummaryCollectionRequest skipToken(final String skipToken);
 }

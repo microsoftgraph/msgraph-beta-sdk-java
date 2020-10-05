@@ -21,7 +21,7 @@ public interface IAndroidForWorkAppConfigurationSchemaRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+    void get(final ICallback<? super AndroidForWorkAppConfigurationSchema> callback);
 
     /**
      * Gets the AndroidForWorkAppConfigurationSchema from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkAppConfigurationSchemaRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+    void delete(final ICallback<? super AndroidForWorkAppConfigurationSchema> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkAppConfigurationSchemaRequest extends IHttpReque
      * @param sourceAndroidForWorkAppConfigurationSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkAppConfigurationSchema sourceAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+    void patch(final AndroidForWorkAppConfigurationSchema sourceAndroidForWorkAppConfigurationSchema, final ICallback<? super AndroidForWorkAppConfigurationSchema> callback);
 
     /**
      * Patches this AndroidForWorkAppConfigurationSchema with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkAppConfigurationSchemaRequest extends IHttpReque
      * @param newAndroidForWorkAppConfigurationSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+    void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<? super AndroidForWorkAppConfigurationSchema> callback);
 
     /**
      * Posts a AndroidForWorkAppConfigurationSchema with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkAppConfigurationSchemaRequest extends IHttpReque
      * @param newAndroidForWorkAppConfigurationSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+    void put(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<? super AndroidForWorkAppConfigurationSchema> callback);
 
     /**
      * Posts a AndroidForWorkAppConfigurationSchema with a new object

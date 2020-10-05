@@ -36,7 +36,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerCertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -66,22 +66,12 @@ public class AndroidDeviceOwnerCertificateProfileBaseReferenceRequest extends Ba
         return (AndroidDeviceOwnerCertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidDeviceOwnerCertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AndroidDeviceOwnerCertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the AndroidDeviceOwnerCertificateProfileBase
      *
      * @param srcAndroidDeviceOwnerCertificateProfileBase the AndroidDeviceOwnerCertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AndroidDeviceOwnerCertificateProfileBase srcAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void put(AndroidDeviceOwnerCertificateProfileBase srcAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcAndroidDeviceOwnerCertificateProfileBase);
     }
 

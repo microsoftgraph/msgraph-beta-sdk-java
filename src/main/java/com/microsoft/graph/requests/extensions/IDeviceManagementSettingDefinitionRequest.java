@@ -21,7 +21,7 @@ public interface IDeviceManagementSettingDefinitionRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementSettingDefinition> callback);
+    void get(final ICallback<? super DeviceManagementSettingDefinition> callback);
 
     /**
      * Gets the DeviceManagementSettingDefinition from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementSettingDefinitionRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementSettingDefinition> callback);
+    void delete(final ICallback<? super DeviceManagementSettingDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementSettingDefinitionRequest extends IHttpRequest 
      * @param sourceDeviceManagementSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback);
+    void patch(final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback);
 
     /**
      * Patches this DeviceManagementSettingDefinition with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementSettingDefinitionRequest extends IHttpRequest 
      * @param newDeviceManagementSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback);
+    void post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback);
 
     /**
      * Posts a DeviceManagementSettingDefinition with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementSettingDefinitionRequest extends IHttpRequest 
      * @param newDeviceManagementSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback);
+    void put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback);
 
     /**
      * Posts a DeviceManagementSettingDefinition with a new object

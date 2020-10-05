@@ -39,7 +39,7 @@ public class DetectedAppWithReferenceRequest extends BaseRequest implements IDet
         super(requestUrl, client, requestOptions, DetectedApp.class);
     }
 
-    public void post(final DetectedApp newDetectedApp, final IJsonBackedObject payload, final ICallback<DetectedApp> callback) {
+    public void post(final DetectedApp newDetectedApp, final IJsonBackedObject payload, final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class DetectedAppWithReferenceRequest extends BaseRequest implements IDet
         return null;
     }
 
-    public void get(final ICallback<DetectedApp> callback) {
+    public void get(final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class DetectedAppWithReferenceRequest extends BaseRequest implements IDet
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DetectedApp> callback) {
+	public void delete(final ICallback<? super DetectedApp> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class DetectedAppWithReferenceRequest extends BaseRequest implements IDet
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DetectedApp sourceDetectedApp, final ICallback<DetectedApp> callback) {
+	public void patch(final DetectedApp sourceDetectedApp, final ICallback<? super DetectedApp> callback) {
 		send(HttpMethod.PATCH, callback, sourceDetectedApp);
 	}
 
@@ -95,16 +95,6 @@ public class DetectedAppWithReferenceRequest extends BaseRequest implements IDet
      */
     public IDetectedAppWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DetectedAppWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDetectedAppWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DetectedAppWithReferenceRequest)this;
     }
 }

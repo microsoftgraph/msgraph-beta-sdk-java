@@ -48,7 +48,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceComplianceScript> callback) {
+    public void get(final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,7 +67,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceComplianceScript> callback) {
+    public void delete(final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param sourceDeviceComplianceScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceScript sourceDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback) {
+    public void patch(final DeviceComplianceScript sourceDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceScript);
     }
 
@@ -107,7 +107,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceComplianceScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback) {
+    public void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceScript);
     }
 
@@ -128,7 +128,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceComplianceScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback) {
+    public void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceScript);
     }
 
@@ -162,17 +162,6 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      */
      public IDeviceComplianceScriptRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceScriptRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceComplianceScriptRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceComplianceScriptRequest)this;
      }
 

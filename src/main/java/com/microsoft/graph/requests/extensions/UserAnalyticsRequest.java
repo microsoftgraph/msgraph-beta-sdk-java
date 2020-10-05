@@ -41,7 +41,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserAnalytics> callback) {
+    public void get(final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserAnalytics> callback) {
+    public void delete(final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param sourceUserAnalytics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserAnalytics sourceUserAnalytics, final ICallback<UserAnalytics> callback) {
+    public void patch(final UserAnalytics sourceUserAnalytics, final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.PATCH, callback, sourceUserAnalytics);
     }
 
@@ -100,7 +100,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param newUserAnalytics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserAnalytics newUserAnalytics, final ICallback<UserAnalytics> callback) {
+    public void post(final UserAnalytics newUserAnalytics, final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.POST, callback, newUserAnalytics);
     }
 
@@ -121,7 +121,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param newUserAnalytics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserAnalytics newUserAnalytics, final ICallback<UserAnalytics> callback) {
+    public void put(final UserAnalytics newUserAnalytics, final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.PUT, callback, newUserAnalytics);
     }
 
@@ -155,17 +155,6 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      */
      public IUserAnalyticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserAnalyticsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserAnalyticsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserAnalyticsRequest)this;
      }
 

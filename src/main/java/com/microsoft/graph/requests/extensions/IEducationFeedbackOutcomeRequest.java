@@ -21,7 +21,7 @@ public interface IEducationFeedbackOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationFeedbackOutcome> callback);
+    void get(final ICallback<? super EducationFeedbackOutcome> callback);
 
     /**
      * Gets the EducationFeedbackOutcome from the service
@@ -36,7 +36,7 @@ public interface IEducationFeedbackOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationFeedbackOutcome> callback);
+    void delete(final ICallback<? super EducationFeedbackOutcome> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationFeedbackOutcomeRequest extends IHttpRequest {
      * @param sourceEducationFeedbackOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationFeedbackOutcome sourceEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback);
+    void patch(final EducationFeedbackOutcome sourceEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback);
 
     /**
      * Patches this EducationFeedbackOutcome with a source
@@ -68,7 +68,7 @@ public interface IEducationFeedbackOutcomeRequest extends IHttpRequest {
      * @param newEducationFeedbackOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback);
+    void post(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback);
 
     /**
      * Posts a EducationFeedbackOutcome with a new object
@@ -85,7 +85,7 @@ public interface IEducationFeedbackOutcomeRequest extends IHttpRequest {
      * @param newEducationFeedbackOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback);
+    void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback);
 
     /**
      * Posts a EducationFeedbackOutcome with a new object

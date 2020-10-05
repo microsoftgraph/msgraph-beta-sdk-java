@@ -21,7 +21,7 @@ public interface IExactMatchLookupJobRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExactMatchLookupJob> callback);
+    void get(final ICallback<? super ExactMatchLookupJob> callback);
 
     /**
      * Gets the ExactMatchLookupJob from the service
@@ -36,7 +36,7 @@ public interface IExactMatchLookupJobRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExactMatchLookupJob> callback);
+    void delete(final ICallback<? super ExactMatchLookupJob> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExactMatchLookupJobRequest extends IHttpRequest {
      * @param sourceExactMatchLookupJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExactMatchLookupJob sourceExactMatchLookupJob, final ICallback<ExactMatchLookupJob> callback);
+    void patch(final ExactMatchLookupJob sourceExactMatchLookupJob, final ICallback<? super ExactMatchLookupJob> callback);
 
     /**
      * Patches this ExactMatchLookupJob with a source
@@ -68,7 +68,7 @@ public interface IExactMatchLookupJobRequest extends IHttpRequest {
      * @param newExactMatchLookupJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<ExactMatchLookupJob> callback);
+    void post(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<? super ExactMatchLookupJob> callback);
 
     /**
      * Posts a ExactMatchLookupJob with a new object
@@ -85,7 +85,7 @@ public interface IExactMatchLookupJobRequest extends IHttpRequest {
      * @param newExactMatchLookupJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<ExactMatchLookupJob> callback);
+    void put(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<? super ExactMatchLookupJob> callback);
 
     /**
      * Posts a ExactMatchLookupJob with a new object

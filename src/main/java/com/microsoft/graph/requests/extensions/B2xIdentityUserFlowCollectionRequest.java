@@ -40,7 +40,7 @@ public class B2xIdentityUserFlowCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, B2xIdentityUserFlowCollectionResponse.class, IB2xIdentityUserFlowCollectionPage.class);
     }
 
-    public void get(final ICallback<IB2xIdentityUserFlowCollectionPage> callback) {
+    public void get(final ICallback<? super IB2xIdentityUserFlowCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class B2xIdentityUserFlowCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<B2xIdentityUserFlow> callback) {
+    public void post(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new B2xIdentityUserFlowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class B2xIdentityUserFlowCollectionRequest extends BaseCollectionRequest<
      */
     public IB2xIdentityUserFlowCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (B2xIdentityUserFlowCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IB2xIdentityUserFlowCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (B2xIdentityUserFlowCollectionRequest)this;
     }
 

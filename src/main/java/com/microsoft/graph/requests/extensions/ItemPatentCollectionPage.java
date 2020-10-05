@@ -23,6 +23,6 @@ public class ItemPatentCollectionPage extends BaseCollectionPage<ItemPatent, IIt
      * @param builder  the request builder for the next collection page
      */
     public ItemPatentCollectionPage(final ItemPatentCollectionResponse response, final IItemPatentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -37,7 +37,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MicrosoftTunnelServer> callback) {
+    public void get(final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MicrosoftTunnelServer> callback) {
+    public void delete(final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param sourceMicrosoftTunnelServer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftTunnelServer sourceMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback) {
+    public void patch(final MicrosoftTunnelServer sourceMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftTunnelServer);
     }
 
@@ -96,7 +96,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param newMicrosoftTunnelServer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback) {
+    public void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.POST, callback, newMicrosoftTunnelServer);
     }
 
@@ -117,7 +117,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param newMicrosoftTunnelServer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback) {
+    public void put(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftTunnelServer);
     }
 
@@ -151,17 +151,6 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      */
      public IMicrosoftTunnelServerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftTunnelServerRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMicrosoftTunnelServerRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MicrosoftTunnelServerRequest)this;
      }
 

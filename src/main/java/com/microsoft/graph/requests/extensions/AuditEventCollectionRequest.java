@@ -40,7 +40,7 @@ public class AuditEventCollectionRequest extends BaseCollectionRequest<AuditEven
         super(requestUrl, client, requestOptions, AuditEventCollectionResponse.class, IAuditEventCollectionPage.class);
     }
 
-    public void get(final ICallback<IAuditEventCollectionPage> callback) {
+    public void get(final ICallback<? super IAuditEventCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AuditEventCollectionRequest extends BaseCollectionRequest<AuditEven
         return buildFromResponse(response);
     }
 
-    public void post(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback) {
+    public void post(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AuditEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AuditEventCollectionRequest extends BaseCollectionRequest<AuditEven
      */
     public IAuditEventCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AuditEventCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAuditEventCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AuditEventCollectionRequest)this;
     }
 

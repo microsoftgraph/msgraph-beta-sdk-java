@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISettingStateDeviceSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISettingStateDeviceSummaryCollectionPage> callback);
+    void get(final ICallback<? super ISettingStateDeviceSummaryCollectionPage> callback);
 
     ISettingStateDeviceSummaryCollectionPage get() throws ClientException;
 
-    void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback);
+    void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback);
 
     SettingStateDeviceSummary post(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISettingStateDeviceSummaryCollectionRequest extends IHttpReques
      * @return the updated request
      */
     ISettingStateDeviceSummaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISettingStateDeviceSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISettingStateDeviceSummaryCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	ISettingStateDeviceSummaryCollectionRequest skipToken(String skipToken);
+	ISettingStateDeviceSummaryCollectionRequest skipToken(final String skipToken);
 }

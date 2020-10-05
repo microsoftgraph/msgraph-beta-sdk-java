@@ -49,7 +49,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OutlookTask> callback) {
+    public void get(final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OutlookTask> callback) {
+    public void delete(final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param sourceOutlookTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookTask sourceOutlookTask, final ICallback<OutlookTask> callback) {
+    public void patch(final OutlookTask sourceOutlookTask, final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookTask);
     }
 
@@ -108,7 +108,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param newOutlookTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookTask newOutlookTask, final ICallback<OutlookTask> callback) {
+    public void post(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.POST, callback, newOutlookTask);
     }
 
@@ -129,7 +129,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param newOutlookTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookTask newOutlookTask, final ICallback<OutlookTask> callback) {
+    public void put(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.PUT, callback, newOutlookTask);
     }
 
@@ -163,17 +163,6 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      */
      public IOutlookTaskRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookTaskRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOutlookTaskRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OutlookTaskRequest)this;
      }
 

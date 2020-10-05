@@ -21,7 +21,7 @@ public interface IWorkPositionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkPosition> callback);
+    void get(final ICallback<? super WorkPosition> callback);
 
     /**
      * Gets the WorkPosition from the service
@@ -36,7 +36,7 @@ public interface IWorkPositionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkPosition> callback);
+    void delete(final ICallback<? super WorkPosition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkPositionRequest extends IHttpRequest {
      * @param sourceWorkPosition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkPosition sourceWorkPosition, final ICallback<WorkPosition> callback);
+    void patch(final WorkPosition sourceWorkPosition, final ICallback<? super WorkPosition> callback);
 
     /**
      * Patches this WorkPosition with a source
@@ -68,7 +68,7 @@ public interface IWorkPositionRequest extends IHttpRequest {
      * @param newWorkPosition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkPosition newWorkPosition, final ICallback<WorkPosition> callback);
+    void post(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback);
 
     /**
      * Posts a WorkPosition with a new object
@@ -85,7 +85,7 @@ public interface IWorkPositionRequest extends IHttpRequest {
      * @param newWorkPosition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkPosition newWorkPosition, final ICallback<WorkPosition> callback);
+    void put(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback);
 
     /**
      * Posts a WorkPosition with a new object

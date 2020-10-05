@@ -40,7 +40,7 @@ public class ProfileCardPropertyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ProfileCardPropertyCollectionResponse.class, IProfileCardPropertyCollectionPage.class);
     }
 
-    public void get(final ICallback<IProfileCardPropertyCollectionPage> callback) {
+    public void get(final ICallback<? super IProfileCardPropertyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ProfileCardPropertyCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback) {
+    public void post(final ProfileCardProperty newProfileCardProperty, final ICallback<? super ProfileCardProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfileCardPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ProfileCardPropertyCollectionRequest extends BaseCollectionRequest<
      */
     public IProfileCardPropertyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ProfileCardPropertyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IProfileCardPropertyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ProfileCardPropertyCollectionRequest)this;
     }
 

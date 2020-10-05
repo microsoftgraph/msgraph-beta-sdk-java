@@ -21,7 +21,7 @@ public interface IOffice365GroupsActivityCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365GroupsActivityCounts> callback);
+    void get(final ICallback<? super Office365GroupsActivityCounts> callback);
 
     /**
      * Gets the Office365GroupsActivityCounts from the service
@@ -36,7 +36,7 @@ public interface IOffice365GroupsActivityCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365GroupsActivityCounts> callback);
+    void delete(final ICallback<? super Office365GroupsActivityCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365GroupsActivityCountsRequest extends IHttpRequest {
      * @param sourceOffice365GroupsActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365GroupsActivityCounts sourceOffice365GroupsActivityCounts, final ICallback<Office365GroupsActivityCounts> callback);
+    void patch(final Office365GroupsActivityCounts sourceOffice365GroupsActivityCounts, final ICallback<? super Office365GroupsActivityCounts> callback);
 
     /**
      * Patches this Office365GroupsActivityCounts with a source
@@ -68,7 +68,7 @@ public interface IOffice365GroupsActivityCountsRequest extends IHttpRequest {
      * @param newOffice365GroupsActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365GroupsActivityCounts newOffice365GroupsActivityCounts, final ICallback<Office365GroupsActivityCounts> callback);
+    void post(final Office365GroupsActivityCounts newOffice365GroupsActivityCounts, final ICallback<? super Office365GroupsActivityCounts> callback);
 
     /**
      * Posts a Office365GroupsActivityCounts with a new object
@@ -85,7 +85,7 @@ public interface IOffice365GroupsActivityCountsRequest extends IHttpRequest {
      * @param newOffice365GroupsActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365GroupsActivityCounts newOffice365GroupsActivityCounts, final ICallback<Office365GroupsActivityCounts> callback);
+    void put(final Office365GroupsActivityCounts newOffice365GroupsActivityCounts, final ICallback<? super Office365GroupsActivityCounts> callback);
 
     /**
      * Posts a Office365GroupsActivityCounts with a new object

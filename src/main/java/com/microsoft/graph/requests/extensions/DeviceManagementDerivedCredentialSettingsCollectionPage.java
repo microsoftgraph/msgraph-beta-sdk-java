@@ -23,6 +23,6 @@ public class DeviceManagementDerivedCredentialSettingsCollectionPage extends Bas
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementDerivedCredentialSettingsCollectionPage(final DeviceManagementDerivedCredentialSettingsCollectionResponse response, final IDeviceManagementDerivedCredentialSettingsCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

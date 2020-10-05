@@ -40,7 +40,7 @@ public class TextClassificationRequestCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, TextClassificationRequestCollectionResponse.class, ITextClassificationRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<ITextClassificationRequestCollectionPage> callback) {
+    public void get(final ICallback<? super ITextClassificationRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TextClassificationRequestCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<TextClassificationRequest> callback) {
+    public void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TextClassificationRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class TextClassificationRequestCollectionRequest extends BaseCollectionRe
      */
     public ITextClassificationRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TextClassificationRequestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITextClassificationRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TextClassificationRequestCollectionRequest)this;
     }
 

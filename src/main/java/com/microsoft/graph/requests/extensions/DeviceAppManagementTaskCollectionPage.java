@@ -23,6 +23,6 @@ public class DeviceAppManagementTaskCollectionPage extends BaseCollectionPage<De
      * @param builder  the request builder for the next collection page
      */
     public DeviceAppManagementTaskCollectionPage(final DeviceAppManagementTaskCollectionResponse response, final IDeviceAppManagementTaskCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

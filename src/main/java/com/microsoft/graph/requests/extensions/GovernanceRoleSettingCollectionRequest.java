@@ -39,7 +39,7 @@ public class GovernanceRoleSettingCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, GovernanceRoleSettingCollectionResponse.class, IGovernanceRoleSettingCollectionPage.class);
     }
 
-    public void get(final ICallback<IGovernanceRoleSettingCollectionPage> callback) {
+    public void get(final ICallback<? super IGovernanceRoleSettingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class GovernanceRoleSettingCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback) {
+    public void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceRoleSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class GovernanceRoleSettingCollectionRequest extends BaseCollectionReques
      */
     public IGovernanceRoleSettingCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GovernanceRoleSettingCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGovernanceRoleSettingCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GovernanceRoleSettingCollectionRequest)this;
     }
 

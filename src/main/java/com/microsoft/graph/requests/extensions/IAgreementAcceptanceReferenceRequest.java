@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAgreementAcceptanceReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AgreementAcceptance> callback);
+    void delete(final ICallback<? super AgreementAcceptance> callback);
 
     AgreementAcceptance delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IAgreementAcceptanceReferenceRequest extends IHttpRequest {
      * @param srcAgreementAcceptance the AgreementAcceptance to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AgreementAcceptance srcAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+    void put(AgreementAcceptance srcAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
     /**
      * Puts the AgreementAcceptance

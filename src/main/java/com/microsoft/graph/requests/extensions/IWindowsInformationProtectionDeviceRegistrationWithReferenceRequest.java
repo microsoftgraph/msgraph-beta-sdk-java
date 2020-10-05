@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsInformationProtectionDeviceRegistrationWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final IJsonBackedObject payload, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final IJsonBackedObject payload, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     WindowsInformationProtectionDeviceRegistration post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void get(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     WindowsInformationProtectionDeviceRegistration get() throws ClientException;
 
-	void delete(final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+	void delete(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+	void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
 	WindowsInformationProtectionDeviceRegistration patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration) throws ClientException;
 

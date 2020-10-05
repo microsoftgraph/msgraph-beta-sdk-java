@@ -33,7 +33,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrinterReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Printer> callback);
+    void delete(final ICallback<? super Printer> callback);
 
     Printer delete() throws ClientException;
 
@@ -59,7 +59,7 @@ public interface IPrinterReferenceRequest extends IHttpRequest {
      * @param srcPrinter the Printer to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Printer srcPrinter, final ICallback<Printer> callback);
+    void put(Printer srcPrinter, final ICallback<? super Printer> callback);
 
     /**
      * Puts the Printer

@@ -21,7 +21,7 @@ public interface IDeviceManagementScriptGroupAssignmentRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementScriptGroupAssignment> callback);
+    void get(final ICallback<? super DeviceManagementScriptGroupAssignment> callback);
 
     /**
      * Gets the DeviceManagementScriptGroupAssignment from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementScriptGroupAssignmentRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementScriptGroupAssignment> callback);
+    void delete(final ICallback<? super DeviceManagementScriptGroupAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementScriptGroupAssignmentRequest extends IHttpRequ
      * @param sourceDeviceManagementScriptGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementScriptGroupAssignment sourceDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback);
+    void patch(final DeviceManagementScriptGroupAssignment sourceDeviceManagementScriptGroupAssignment, final ICallback<? super DeviceManagementScriptGroupAssignment> callback);
 
     /**
      * Patches this DeviceManagementScriptGroupAssignment with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementScriptGroupAssignmentRequest extends IHttpRequ
      * @param newDeviceManagementScriptGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback);
+    void post(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<? super DeviceManagementScriptGroupAssignment> callback);
 
     /**
      * Posts a DeviceManagementScriptGroupAssignment with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementScriptGroupAssignmentRequest extends IHttpRequ
      * @param newDeviceManagementScriptGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback);
+    void put(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<? super DeviceManagementScriptGroupAssignment> callback);
 
     /**
      * Posts a DeviceManagementScriptGroupAssignment with a new object

@@ -36,7 +36,7 @@ public class IdentityProviderCollectionReferenceRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IIdentityProviderCollectionPage.class);
     }
 
-    public void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
+    public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identityProviders/" + newIdentityProvider.id);
         new IdentityProviderWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class IdentityProviderCollectionReferenceRequest extends BaseCollectionRe
      */
     public IIdentityProviderCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IdentityProviderCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IIdentityProviderCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IdentityProviderCollectionReferenceRequest)this;
     }
 

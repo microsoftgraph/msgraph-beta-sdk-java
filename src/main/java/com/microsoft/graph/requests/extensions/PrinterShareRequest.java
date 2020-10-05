@@ -47,7 +47,7 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrinterShare> callback) {
+    public void get(final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrinterShare> callback) {
+    public void delete(final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      * @param sourcePrinterShare the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrinterShare sourcePrinterShare, final ICallback<PrinterShare> callback) {
+    public void patch(final PrinterShare sourcePrinterShare, final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.PATCH, callback, sourcePrinterShare);
     }
 
@@ -106,7 +106,7 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      * @param newPrinterShare the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback) {
+    public void post(final PrinterShare newPrinterShare, final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.POST, callback, newPrinterShare);
     }
 
@@ -127,7 +127,7 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      * @param newPrinterShare the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback) {
+    public void put(final PrinterShare newPrinterShare, final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.PUT, callback, newPrinterShare);
     }
 
@@ -161,17 +161,6 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      */
      public IPrinterShareRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrinterShareRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrinterShareRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrinterShareRequest)this;
      }
 

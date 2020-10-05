@@ -34,6 +34,6 @@ public class ReportRootGetAzureADLicenseUsageCollectionPage extends BaseCollecti
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetAzureADLicenseUsageCollectionPage(final ReportRootGetAzureADLicenseUsageCollectionResponse response, final IReportRootGetAzureADLicenseUsageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

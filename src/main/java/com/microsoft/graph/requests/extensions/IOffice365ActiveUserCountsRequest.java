@@ -21,7 +21,7 @@ public interface IOffice365ActiveUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365ActiveUserCounts> callback);
+    void get(final ICallback<? super Office365ActiveUserCounts> callback);
 
     /**
      * Gets the Office365ActiveUserCounts from the service
@@ -36,7 +36,7 @@ public interface IOffice365ActiveUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365ActiveUserCounts> callback);
+    void delete(final ICallback<? super Office365ActiveUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365ActiveUserCountsRequest extends IHttpRequest {
      * @param sourceOffice365ActiveUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365ActiveUserCounts sourceOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback);
+    void patch(final Office365ActiveUserCounts sourceOffice365ActiveUserCounts, final ICallback<? super Office365ActiveUserCounts> callback);
 
     /**
      * Patches this Office365ActiveUserCounts with a source
@@ -68,7 +68,7 @@ public interface IOffice365ActiveUserCountsRequest extends IHttpRequest {
      * @param newOffice365ActiveUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback);
+    void post(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<? super Office365ActiveUserCounts> callback);
 
     /**
      * Posts a Office365ActiveUserCounts with a new object
@@ -85,7 +85,7 @@ public interface IOffice365ActiveUserCountsRequest extends IHttpRequest {
      * @param newOffice365ActiveUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback);
+    void put(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<? super Office365ActiveUserCounts> callback);
 
     /**
      * Posts a Office365ActiveUserCounts with a new object

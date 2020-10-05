@@ -37,7 +37,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void get(final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void delete(final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param sourceDeviceManagementIntentDeviceSettingStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void patch(final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param newDeviceManagementIntentDeviceSettingStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param newDeviceManagementIntentDeviceSettingStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void put(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      */
      public IDeviceManagementIntentDeviceSettingStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentDeviceSettingStateSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementIntentDeviceSettingStateSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementIntentDeviceSettingStateSummaryRequest)this;
      }
 

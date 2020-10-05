@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IChannelAllMessagesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChannelAllMessagesCollectionPage> callback);
+    void get(final ICallback<? super IChannelAllMessagesCollectionPage> callback);
 
     IChannelAllMessagesCollectionPage get() throws ClientException;
 

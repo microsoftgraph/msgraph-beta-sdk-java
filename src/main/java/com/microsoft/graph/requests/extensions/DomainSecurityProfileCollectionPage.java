@@ -23,6 +23,6 @@ public class DomainSecurityProfileCollectionPage extends BaseCollectionPage<Doma
      * @param builder  the request builder for the next collection page
      */
     public DomainSecurityProfileCollectionPage(final DomainSecurityProfileCollectionResponse response, final IDomainSecurityProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

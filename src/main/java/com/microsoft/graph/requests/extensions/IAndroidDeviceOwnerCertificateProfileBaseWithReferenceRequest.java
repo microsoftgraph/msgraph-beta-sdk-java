@@ -24,19 +24,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     AndroidDeviceOwnerCertificateProfileBase post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     AndroidDeviceOwnerCertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+	void delete(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+	void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
 	AndroidDeviceOwnerCertificateProfileBase patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase) throws ClientException;
 

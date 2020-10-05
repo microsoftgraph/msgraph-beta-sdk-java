@@ -21,7 +21,7 @@ public interface ISalesInvoiceLineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SalesInvoiceLine> callback);
+    void get(final ICallback<? super SalesInvoiceLine> callback);
 
     /**
      * Gets the SalesInvoiceLine from the service
@@ -36,7 +36,7 @@ public interface ISalesInvoiceLineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SalesInvoiceLine> callback);
+    void delete(final ICallback<? super SalesInvoiceLine> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISalesInvoiceLineRequest extends IHttpRequest {
      * @param sourceSalesInvoiceLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SalesInvoiceLine sourceSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback);
+    void patch(final SalesInvoiceLine sourceSalesInvoiceLine, final ICallback<? super SalesInvoiceLine> callback);
 
     /**
      * Patches this SalesInvoiceLine with a source
@@ -68,7 +68,7 @@ public interface ISalesInvoiceLineRequest extends IHttpRequest {
      * @param newSalesInvoiceLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback);
+    void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<? super SalesInvoiceLine> callback);
 
     /**
      * Posts a SalesInvoiceLine with a new object
@@ -85,7 +85,7 @@ public interface ISalesInvoiceLineRequest extends IHttpRequest {
      * @param newSalesInvoiceLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback);
+    void put(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<? super SalesInvoiceLine> callback);
 
     /**
      * Posts a SalesInvoiceLine with a new object

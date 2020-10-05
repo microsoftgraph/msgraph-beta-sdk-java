@@ -21,7 +21,7 @@ public interface IOneDriveUsageFileCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OneDriveUsageFileCounts> callback);
+    void get(final ICallback<? super OneDriveUsageFileCounts> callback);
 
     /**
      * Gets the OneDriveUsageFileCounts from the service
@@ -36,7 +36,7 @@ public interface IOneDriveUsageFileCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OneDriveUsageFileCounts> callback);
+    void delete(final ICallback<? super OneDriveUsageFileCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOneDriveUsageFileCountsRequest extends IHttpRequest {
      * @param sourceOneDriveUsageFileCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OneDriveUsageFileCounts sourceOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback);
+    void patch(final OneDriveUsageFileCounts sourceOneDriveUsageFileCounts, final ICallback<? super OneDriveUsageFileCounts> callback);
 
     /**
      * Patches this OneDriveUsageFileCounts with a source
@@ -68,7 +68,7 @@ public interface IOneDriveUsageFileCountsRequest extends IHttpRequest {
      * @param newOneDriveUsageFileCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback);
+    void post(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<? super OneDriveUsageFileCounts> callback);
 
     /**
      * Posts a OneDriveUsageFileCounts with a new object
@@ -85,7 +85,7 @@ public interface IOneDriveUsageFileCountsRequest extends IHttpRequest {
      * @param newOneDriveUsageFileCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback);
+    void put(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<? super OneDriveUsageFileCounts> callback);
 
     /**
      * Posts a OneDriveUsageFileCounts with a new object

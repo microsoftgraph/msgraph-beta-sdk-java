@@ -21,7 +21,7 @@ public interface IAndroidForWorkGmailEasConfigurationRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkGmailEasConfiguration> callback);
+    void get(final ICallback<? super AndroidForWorkGmailEasConfiguration> callback);
 
     /**
      * Gets the AndroidForWorkGmailEasConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkGmailEasConfigurationRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkGmailEasConfiguration> callback);
+    void delete(final ICallback<? super AndroidForWorkGmailEasConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkGmailEasConfigurationRequest extends IHttpReques
      * @param sourceAndroidForWorkGmailEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkGmailEasConfiguration sourceAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback);
+    void patch(final AndroidForWorkGmailEasConfiguration sourceAndroidForWorkGmailEasConfiguration, final ICallback<? super AndroidForWorkGmailEasConfiguration> callback);
 
     /**
      * Patches this AndroidForWorkGmailEasConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkGmailEasConfigurationRequest extends IHttpReques
      * @param newAndroidForWorkGmailEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback);
+    void post(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<? super AndroidForWorkGmailEasConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkGmailEasConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkGmailEasConfigurationRequest extends IHttpReques
      * @param newAndroidForWorkGmailEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback);
+    void put(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<? super AndroidForWorkGmailEasConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkGmailEasConfiguration with a new object

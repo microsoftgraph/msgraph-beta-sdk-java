@@ -35,7 +35,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
 
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ICertificateBasedAuthConfigurationCollectionWithReferencesPage buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {

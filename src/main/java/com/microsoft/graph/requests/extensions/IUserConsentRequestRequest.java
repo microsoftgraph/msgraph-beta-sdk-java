@@ -21,7 +21,7 @@ public interface IUserConsentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserConsentRequest> callback);
+    void get(final ICallback<? super UserConsentRequest> callback);
 
     /**
      * Gets the UserConsentRequest from the service
@@ -36,7 +36,7 @@ public interface IUserConsentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserConsentRequest> callback);
+    void delete(final ICallback<? super UserConsentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserConsentRequestRequest extends IHttpRequest {
      * @param sourceUserConsentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserConsentRequest sourceUserConsentRequest, final ICallback<UserConsentRequest> callback);
+    void patch(final UserConsentRequest sourceUserConsentRequest, final ICallback<? super UserConsentRequest> callback);
 
     /**
      * Patches this UserConsentRequest with a source
@@ -68,7 +68,7 @@ public interface IUserConsentRequestRequest extends IHttpRequest {
      * @param newUserConsentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserConsentRequest newUserConsentRequest, final ICallback<UserConsentRequest> callback);
+    void post(final UserConsentRequest newUserConsentRequest, final ICallback<? super UserConsentRequest> callback);
 
     /**
      * Posts a UserConsentRequest with a new object
@@ -85,7 +85,7 @@ public interface IUserConsentRequestRequest extends IHttpRequest {
      * @param newUserConsentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserConsentRequest newUserConsentRequest, final ICallback<UserConsentRequest> callback);
+    void put(final UserConsentRequest newUserConsentRequest, final ICallback<? super UserConsentRequest> callback);
 
     /**
      * Posts a UserConsentRequest with a new object

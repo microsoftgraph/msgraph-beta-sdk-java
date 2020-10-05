@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ApplicationSignInDetailedSummary;
 import com.microsoft.graph.models.extensions.CredentialUserRegistrationDetails;
@@ -14,15 +13,10 @@ import com.microsoft.graph.models.extensions.UserCredentialUsageDetails;
 import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
 import com.microsoft.graph.models.extensions.PrintUsageSummaryByUser;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionPage;
-import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionPage;
-import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionPage;
 
 
@@ -135,115 +129,31 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("applicationSignInDetailedSummary")) {
-            final ApplicationSignInDetailedSummaryCollectionResponse response = new ApplicationSignInDetailedSummaryCollectionResponse();
-            if (json.has("applicationSignInDetailedSummary@odata.nextLink")) {
-                response.nextLink = json.get("applicationSignInDetailedSummary@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("applicationSignInDetailedSummary").toString(), JsonObject[].class);
-            final ApplicationSignInDetailedSummary[] array = new ApplicationSignInDetailedSummary[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ApplicationSignInDetailedSummary.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            applicationSignInDetailedSummary = new ApplicationSignInDetailedSummaryCollectionPage(response, null);
+            applicationSignInDetailedSummary = serializer.deserializeObject(json.get("applicationSignInDetailedSummary").toString(), ApplicationSignInDetailedSummaryCollectionPage.class);
         }
 
         if (json.has("credentialUserRegistrationDetails")) {
-            final CredentialUserRegistrationDetailsCollectionResponse response = new CredentialUserRegistrationDetailsCollectionResponse();
-            if (json.has("credentialUserRegistrationDetails@odata.nextLink")) {
-                response.nextLink = json.get("credentialUserRegistrationDetails@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("credentialUserRegistrationDetails").toString(), JsonObject[].class);
-            final CredentialUserRegistrationDetails[] array = new CredentialUserRegistrationDetails[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CredentialUserRegistrationDetails.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            credentialUserRegistrationDetails = new CredentialUserRegistrationDetailsCollectionPage(response, null);
+            credentialUserRegistrationDetails = serializer.deserializeObject(json.get("credentialUserRegistrationDetails").toString(), CredentialUserRegistrationDetailsCollectionPage.class);
         }
 
         if (json.has("userCredentialUsageDetails")) {
-            final UserCredentialUsageDetailsCollectionResponse response = new UserCredentialUsageDetailsCollectionResponse();
-            if (json.has("userCredentialUsageDetails@odata.nextLink")) {
-                response.nextLink = json.get("userCredentialUsageDetails@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userCredentialUsageDetails").toString(), JsonObject[].class);
-            final UserCredentialUsageDetails[] array = new UserCredentialUsageDetails[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserCredentialUsageDetails.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userCredentialUsageDetails = new UserCredentialUsageDetailsCollectionPage(response, null);
+            userCredentialUsageDetails = serializer.deserializeObject(json.get("userCredentialUsageDetails").toString(), UserCredentialUsageDetailsCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageSummariesByPrinter")) {
-            final PrintUsageSummaryByPrinterCollectionResponse response = new PrintUsageSummaryByPrinterCollectionResponse();
-            if (json.has("dailyPrintUsageSummariesByPrinter@odata.nextLink")) {
-                response.nextLink = json.get("dailyPrintUsageSummariesByPrinter@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByPrinter").toString(), JsonObject[].class);
-            final PrintUsageSummaryByPrinter[] array = new PrintUsageSummaryByPrinter[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByPrinter.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            dailyPrintUsageSummariesByPrinter = new PrintUsageSummaryByPrinterCollectionPage(response, null);
+            dailyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByPrinter").toString(), PrintUsageSummaryByPrinterCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageSummariesByUser")) {
-            final PrintUsageSummaryByUserCollectionResponse response = new PrintUsageSummaryByUserCollectionResponse();
-            if (json.has("dailyPrintUsageSummariesByUser@odata.nextLink")) {
-                response.nextLink = json.get("dailyPrintUsageSummariesByUser@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser").toString(), JsonObject[].class);
-            final PrintUsageSummaryByUser[] array = new PrintUsageSummaryByUser[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByUser.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            dailyPrintUsageSummariesByUser = new PrintUsageSummaryByUserCollectionPage(response, null);
+            dailyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser").toString(), PrintUsageSummaryByUserCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageSummariesByPrinter")) {
-            final PrintUsageSummaryByPrinterCollectionResponse response = new PrintUsageSummaryByPrinterCollectionResponse();
-            if (json.has("monthlyPrintUsageSummariesByPrinter@odata.nextLink")) {
-                response.nextLink = json.get("monthlyPrintUsageSummariesByPrinter@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByPrinter").toString(), JsonObject[].class);
-            final PrintUsageSummaryByPrinter[] array = new PrintUsageSummaryByPrinter[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByPrinter.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            monthlyPrintUsageSummariesByPrinter = new PrintUsageSummaryByPrinterCollectionPage(response, null);
+            monthlyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByPrinter").toString(), PrintUsageSummaryByPrinterCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageSummariesByUser")) {
-            final PrintUsageSummaryByUserCollectionResponse response = new PrintUsageSummaryByUserCollectionResponse();
-            if (json.has("monthlyPrintUsageSummariesByUser@odata.nextLink")) {
-                response.nextLink = json.get("monthlyPrintUsageSummariesByUser@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser").toString(), JsonObject[].class);
-            final PrintUsageSummaryByUser[] array = new PrintUsageSummaryByUser[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByUser.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            monthlyPrintUsageSummariesByUser = new PrintUsageSummaryByUserCollectionPage(response, null);
+            monthlyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser").toString(), PrintUsageSummaryByUserCollectionPage.class);
         }
     }
 }

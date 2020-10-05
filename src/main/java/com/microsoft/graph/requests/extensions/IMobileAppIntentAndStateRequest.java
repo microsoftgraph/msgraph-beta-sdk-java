@@ -21,7 +21,7 @@ public interface IMobileAppIntentAndStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppIntentAndState> callback);
+    void get(final ICallback<? super MobileAppIntentAndState> callback);
 
     /**
      * Gets the MobileAppIntentAndState from the service
@@ -36,7 +36,7 @@ public interface IMobileAppIntentAndStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppIntentAndState> callback);
+    void delete(final ICallback<? super MobileAppIntentAndState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppIntentAndStateRequest extends IHttpRequest {
      * @param sourceMobileAppIntentAndState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppIntentAndState sourceMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback);
+    void patch(final MobileAppIntentAndState sourceMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback);
 
     /**
      * Patches this MobileAppIntentAndState with a source
@@ -68,7 +68,7 @@ public interface IMobileAppIntentAndStateRequest extends IHttpRequest {
      * @param newMobileAppIntentAndState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback);
+    void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback);
 
     /**
      * Posts a MobileAppIntentAndState with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppIntentAndStateRequest extends IHttpRequest {
      * @param newMobileAppIntentAndState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback);
+    void put(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback);
 
     /**
      * Posts a MobileAppIntentAndState with a new object

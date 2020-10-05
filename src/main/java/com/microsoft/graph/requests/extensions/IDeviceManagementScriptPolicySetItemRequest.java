@@ -21,7 +21,7 @@ public interface IDeviceManagementScriptPolicySetItemRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementScriptPolicySetItem> callback);
+    void get(final ICallback<? super DeviceManagementScriptPolicySetItem> callback);
 
     /**
      * Gets the DeviceManagementScriptPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementScriptPolicySetItemRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementScriptPolicySetItem> callback);
+    void delete(final ICallback<? super DeviceManagementScriptPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementScriptPolicySetItemRequest extends IHttpReques
      * @param sourceDeviceManagementScriptPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementScriptPolicySetItem sourceDeviceManagementScriptPolicySetItem, final ICallback<DeviceManagementScriptPolicySetItem> callback);
+    void patch(final DeviceManagementScriptPolicySetItem sourceDeviceManagementScriptPolicySetItem, final ICallback<? super DeviceManagementScriptPolicySetItem> callback);
 
     /**
      * Patches this DeviceManagementScriptPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementScriptPolicySetItemRequest extends IHttpReques
      * @param newDeviceManagementScriptPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<DeviceManagementScriptPolicySetItem> callback);
+    void post(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<? super DeviceManagementScriptPolicySetItem> callback);
 
     /**
      * Posts a DeviceManagementScriptPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementScriptPolicySetItemRequest extends IHttpReques
      * @param newDeviceManagementScriptPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<DeviceManagementScriptPolicySetItem> callback);
+    void put(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<? super DeviceManagementScriptPolicySetItem> callback);
 
     /**
      * Posts a DeviceManagementScriptPolicySetItem with a new object

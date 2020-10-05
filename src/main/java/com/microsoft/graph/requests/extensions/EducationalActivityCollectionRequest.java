@@ -40,7 +40,7 @@ public class EducationalActivityCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, EducationalActivityCollectionResponse.class, IEducationalActivityCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationalActivityCollectionPage> callback) {
+    public void get(final ICallback<? super IEducationalActivityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EducationalActivityCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback) {
+    public void post(final EducationalActivity newEducationalActivity, final ICallback<? super EducationalActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationalActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EducationalActivityCollectionRequest extends BaseCollectionRequest<
      */
     public IEducationalActivityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationalActivityCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEducationalActivityCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationalActivityCollectionRequest)this;
     }
 

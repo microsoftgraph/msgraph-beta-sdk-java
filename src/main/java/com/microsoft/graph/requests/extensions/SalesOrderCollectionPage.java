@@ -23,6 +23,6 @@ public class SalesOrderCollectionPage extends BaseCollectionPage<SalesOrder, ISa
      * @param builder  the request builder for the next collection page
      */
     public SalesOrderCollectionPage(final SalesOrderCollectionResponse response, final ISalesOrderCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

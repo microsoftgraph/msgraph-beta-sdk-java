@@ -38,7 +38,7 @@ public class TimeCardRequest extends BaseRequest implements ITimeCardRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TimeCard> callback) {
+    public void get(final ICallback<? super TimeCard> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class TimeCardRequest extends BaseRequest implements ITimeCardRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TimeCard> callback) {
+    public void delete(final ICallback<? super TimeCard> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class TimeCardRequest extends BaseRequest implements ITimeCardRequest {
      * @param sourceTimeCard the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TimeCard sourceTimeCard, final ICallback<TimeCard> callback) {
+    public void patch(final TimeCard sourceTimeCard, final ICallback<? super TimeCard> callback) {
         send(HttpMethod.PATCH, callback, sourceTimeCard);
     }
 
@@ -97,7 +97,7 @@ public class TimeCardRequest extends BaseRequest implements ITimeCardRequest {
      * @param newTimeCard the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TimeCard newTimeCard, final ICallback<TimeCard> callback) {
+    public void post(final TimeCard newTimeCard, final ICallback<? super TimeCard> callback) {
         send(HttpMethod.POST, callback, newTimeCard);
     }
 
@@ -118,7 +118,7 @@ public class TimeCardRequest extends BaseRequest implements ITimeCardRequest {
      * @param newTimeCard the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TimeCard newTimeCard, final ICallback<TimeCard> callback) {
+    public void put(final TimeCard newTimeCard, final ICallback<? super TimeCard> callback) {
         send(HttpMethod.PUT, callback, newTimeCard);
     }
 
@@ -152,17 +152,6 @@ public class TimeCardRequest extends BaseRequest implements ITimeCardRequest {
      */
      public ITimeCardRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TimeCardRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITimeCardRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TimeCardRequest)this;
      }
 

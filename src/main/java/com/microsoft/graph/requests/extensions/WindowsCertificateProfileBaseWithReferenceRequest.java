@@ -35,7 +35,7 @@ public class WindowsCertificateProfileBaseWithReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, WindowsCertificateProfileBase.class);
     }
 
-    public void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final IJsonBackedObject payload, final ICallback<WindowsCertificateProfileBase> callback) {
+    public void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class WindowsCertificateProfileBaseWithReferenceRequest extends BaseReque
         return null;
     }
 
-    public void get(final ICallback<WindowsCertificateProfileBase> callback) {
+    public void get(final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class WindowsCertificateProfileBaseWithReferenceRequest extends BaseReque
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsCertificateProfileBase> callback) {
+	public void delete(final ICallback<? super WindowsCertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class WindowsCertificateProfileBaseWithReferenceRequest extends BaseReque
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback) {
+	public void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsCertificateProfileBase);
 	}
 
@@ -91,16 +91,6 @@ public class WindowsCertificateProfileBaseWithReferenceRequest extends BaseReque
      */
     public IWindowsCertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsCertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsCertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsCertificateProfileBaseWithReferenceRequest)this;
     }
 }

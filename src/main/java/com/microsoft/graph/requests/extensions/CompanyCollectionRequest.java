@@ -40,7 +40,7 @@ public class CompanyCollectionRequest extends BaseCollectionRequest<CompanyColle
         super(requestUrl, client, requestOptions, CompanyCollectionResponse.class, ICompanyCollectionPage.class);
     }
 
-    public void get(final ICallback<ICompanyCollectionPage> callback) {
+    public void get(final ICallback<? super ICompanyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CompanyCollectionRequest extends BaseCollectionRequest<CompanyColle
         return buildFromResponse(response);
     }
 
-    public void post(final Company newCompany, final ICallback<Company> callback) {
+    public void post(final Company newCompany, final ICallback<? super Company> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CompanyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class CompanyCollectionRequest extends BaseCollectionRequest<CompanyColle
      */
     public ICompanyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CompanyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICompanyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CompanyCollectionRequest)this;
     }
 

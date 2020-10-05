@@ -44,7 +44,7 @@ public class RoleScopeTagGetRoleScopeTagsByIdCollectionRequest extends BaseColle
     }
 
 
-    public void post(final ICallback<IRoleScopeTagGetRoleScopeTagsByIdCollectionPage> callback) {
+    public void post(final ICallback<? super IRoleScopeTagGetRoleScopeTagsByIdCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class RoleScopeTagGetRoleScopeTagsByIdCollectionRequest extends BaseColle
      */
     public IRoleScopeTagGetRoleScopeTagsByIdCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IRoleScopeTagGetRoleScopeTagsByIdCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRoleScopeTagGetRoleScopeTagsByIdCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IRoleScopeTagGetRoleScopeTagsByIdCollectionRequest)this;
     }
 

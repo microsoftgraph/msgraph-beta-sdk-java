@@ -21,7 +21,7 @@ public interface ICompanyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Company> callback);
+    void get(final ICallback<? super Company> callback);
 
     /**
      * Gets the Company from the service
@@ -36,7 +36,7 @@ public interface ICompanyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Company> callback);
+    void delete(final ICallback<? super Company> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICompanyRequest extends IHttpRequest {
      * @param sourceCompany the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Company sourceCompany, final ICallback<Company> callback);
+    void patch(final Company sourceCompany, final ICallback<? super Company> callback);
 
     /**
      * Patches this Company with a source
@@ -68,7 +68,7 @@ public interface ICompanyRequest extends IHttpRequest {
      * @param newCompany the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Company newCompany, final ICallback<Company> callback);
+    void post(final Company newCompany, final ICallback<? super Company> callback);
 
     /**
      * Posts a Company with a new object
@@ -85,7 +85,7 @@ public interface ICompanyRequest extends IHttpRequest {
      * @param newCompany the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Company newCompany, final ICallback<Company> callback);
+    void put(final Company newCompany, final ICallback<? super Company> callback);
 
     /**
      * Posts a Company with a new object

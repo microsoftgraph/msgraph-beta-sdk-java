@@ -21,7 +21,7 @@ public interface IReviewSetQueryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ReviewSetQuery> callback);
+    void get(final ICallback<? super ReviewSetQuery> callback);
 
     /**
      * Gets the ReviewSetQuery from the service
@@ -36,7 +36,7 @@ public interface IReviewSetQueryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ReviewSetQuery> callback);
+    void delete(final ICallback<? super ReviewSetQuery> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IReviewSetQueryRequest extends IHttpRequest {
      * @param sourceReviewSetQuery the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ReviewSetQuery sourceReviewSetQuery, final ICallback<ReviewSetQuery> callback);
+    void patch(final ReviewSetQuery sourceReviewSetQuery, final ICallback<? super ReviewSetQuery> callback);
 
     /**
      * Patches this ReviewSetQuery with a source
@@ -68,7 +68,7 @@ public interface IReviewSetQueryRequest extends IHttpRequest {
      * @param newReviewSetQuery the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ReviewSetQuery newReviewSetQuery, final ICallback<ReviewSetQuery> callback);
+    void post(final ReviewSetQuery newReviewSetQuery, final ICallback<? super ReviewSetQuery> callback);
 
     /**
      * Posts a ReviewSetQuery with a new object
@@ -85,7 +85,7 @@ public interface IReviewSetQueryRequest extends IHttpRequest {
      * @param newReviewSetQuery the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ReviewSetQuery newReviewSetQuery, final ICallback<ReviewSetQuery> callback);
+    void put(final ReviewSetQuery newReviewSetQuery, final ICallback<? super ReviewSetQuery> callback);
 
     /**
      * Posts a ReviewSetQuery with a new object

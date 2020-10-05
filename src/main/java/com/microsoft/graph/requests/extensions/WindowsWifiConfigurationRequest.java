@@ -52,7 +52,7 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsWifiConfiguration> callback) {
+    public void get(final ICallback<? super WindowsWifiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsWifiConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsWifiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
      * @param sourceWindowsWifiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsWifiConfiguration sourceWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback) {
+    public void patch(final WindowsWifiConfiguration sourceWindowsWifiConfiguration, final ICallback<? super WindowsWifiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsWifiConfiguration);
     }
 
@@ -111,7 +111,7 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
      * @param newWindowsWifiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback) {
+    public void post(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<? super WindowsWifiConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsWifiConfiguration);
     }
 
@@ -132,7 +132,7 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
      * @param newWindowsWifiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback) {
+    public void put(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<? super WindowsWifiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsWifiConfiguration);
     }
 
@@ -166,17 +166,6 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
      */
      public IWindowsWifiConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsWifiConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsWifiConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsWifiConfigurationRequest)this;
      }
 

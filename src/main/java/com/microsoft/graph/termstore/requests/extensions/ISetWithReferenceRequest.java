@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ISetWithReferenceRequest extends IHttpRequest {
 
-    void post(final Set newSet, final IJsonBackedObject payload, final ICallback<Set> callback);
+    void post(final Set newSet, final IJsonBackedObject payload, final ICallback<? super Set> callback);
 
     Set post(final Set newSet, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Set> callback);
+    void get(final ICallback<? super Set> callback);
 
     Set get() throws ClientException;
 
-	void delete(final ICallback<Set> callback);
+	void delete(final ICallback<? super Set> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Set sourceSet, final ICallback<Set> callback);
+	void patch(final Set sourceSet, final ICallback<? super Set> callback);
 
 	Set patch(final Set sourceSet) throws ClientException;
 

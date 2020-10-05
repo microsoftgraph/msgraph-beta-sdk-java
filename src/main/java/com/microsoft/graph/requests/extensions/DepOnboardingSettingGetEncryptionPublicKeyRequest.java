@@ -36,7 +36,7 @@ public class DepOnboardingSettingGetEncryptionPublicKeyRequest extends BaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<String> callback) {
+    public void get(final ICallback<? super String> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,6 +80,17 @@ public class DepOnboardingSettingGetEncryptionPublicKeyRequest extends BaseReque
      */
     public IDepOnboardingSettingGetEncryptionPublicKeyRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DepOnboardingSettingGetEncryptionPublicKeyRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDepOnboardingSettingGetEncryptionPublicKeyRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DepOnboardingSettingGetEncryptionPublicKeyRequest)this;
     }
 

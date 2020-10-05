@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITermWithReferenceRequest extends IHttpRequest {
 
-    void post(final Term newTerm, final IJsonBackedObject payload, final ICallback<Term> callback);
+    void post(final Term newTerm, final IJsonBackedObject payload, final ICallback<? super Term> callback);
 
     Term post(final Term newTerm, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Term> callback);
+    void get(final ICallback<? super Term> callback);
 
     Term get() throws ClientException;
 
-	void delete(final ICallback<Term> callback);
+	void delete(final ICallback<? super Term> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Term sourceTerm, final ICallback<Term> callback);
+	void patch(final Term sourceTerm, final ICallback<? super Term> callback);
 
 	Term patch(final Term sourceTerm) throws ClientException;
 

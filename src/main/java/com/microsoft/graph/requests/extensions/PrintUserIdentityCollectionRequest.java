@@ -40,7 +40,7 @@ public class PrintUserIdentityCollectionRequest extends BaseCollectionRequest<Pr
         super(requestUrl, client, requestOptions, PrintUserIdentityCollectionResponse.class, IPrintUserIdentityCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintUserIdentityCollectionPage> callback) {
+    public void get(final ICallback<? super IPrintUserIdentityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrintUserIdentityCollectionRequest extends BaseCollectionRequest<Pr
         return buildFromResponse(response);
     }
 
-    public void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback) {
+    public void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<? super PrintUserIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintUserIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrintUserIdentityCollectionRequest extends BaseCollectionRequest<Pr
      */
     public IPrintUserIdentityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintUserIdentityCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrintUserIdentityCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintUserIdentityCollectionRequest)this;
     }
 

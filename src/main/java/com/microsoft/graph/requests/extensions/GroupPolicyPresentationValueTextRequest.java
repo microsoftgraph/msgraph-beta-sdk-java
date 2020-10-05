@@ -37,7 +37,7 @@ public class GroupPolicyPresentationValueTextRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyPresentationValueText> callback) {
+    public void get(final ICallback<? super GroupPolicyPresentationValueText> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyPresentationValueTextRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyPresentationValueText> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentationValueText> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyPresentationValueTextRequest extends BaseRequest impleme
      * @param sourceGroupPolicyPresentationValueText the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationValueText sourceGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback) {
+    public void patch(final GroupPolicyPresentationValueText sourceGroupPolicyPresentationValueText, final ICallback<? super GroupPolicyPresentationValueText> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationValueText);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyPresentationValueTextRequest extends BaseRequest impleme
      * @param newGroupPolicyPresentationValueText the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback) {
+    public void post(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<? super GroupPolicyPresentationValueText> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationValueText);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyPresentationValueTextRequest extends BaseRequest impleme
      * @param newGroupPolicyPresentationValueText the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback) {
+    public void put(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<? super GroupPolicyPresentationValueText> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueText);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyPresentationValueTextRequest extends BaseRequest impleme
      */
      public IGroupPolicyPresentationValueTextRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationValueTextRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyPresentationValueTextRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyPresentationValueTextRequest)this;
      }
 

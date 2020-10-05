@@ -37,7 +37,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<LanguageProficiency> callback) {
+    public void get(final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<LanguageProficiency> callback) {
+    public void delete(final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param sourceLanguageProficiency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LanguageProficiency sourceLanguageProficiency, final ICallback<LanguageProficiency> callback) {
+    public void patch(final LanguageProficiency sourceLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.PATCH, callback, sourceLanguageProficiency);
     }
 
@@ -96,7 +96,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param newLanguageProficiency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback) {
+    public void post(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.POST, callback, newLanguageProficiency);
     }
 
@@ -117,7 +117,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param newLanguageProficiency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback) {
+    public void put(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.PUT, callback, newLanguageProficiency);
     }
 
@@ -151,17 +151,6 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      */
      public ILanguageProficiencyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LanguageProficiencyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ILanguageProficiencyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (LanguageProficiencyRequest)this;
      }
 

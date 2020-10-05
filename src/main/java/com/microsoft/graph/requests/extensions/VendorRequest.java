@@ -47,7 +47,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Vendor> callback) {
+    public void get(final ICallback<? super Vendor> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Vendor> callback) {
+    public void delete(final ICallback<? super Vendor> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param sourceVendor the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Vendor sourceVendor, final ICallback<Vendor> callback) {
+    public void patch(final Vendor sourceVendor, final ICallback<? super Vendor> callback) {
         send(HttpMethod.PATCH, callback, sourceVendor);
     }
 
@@ -106,7 +106,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param newVendor the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Vendor newVendor, final ICallback<Vendor> callback) {
+    public void post(final Vendor newVendor, final ICallback<? super Vendor> callback) {
         send(HttpMethod.POST, callback, newVendor);
     }
 
@@ -127,7 +127,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param newVendor the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Vendor newVendor, final ICallback<Vendor> callback) {
+    public void put(final Vendor newVendor, final ICallback<? super Vendor> callback) {
         send(HttpMethod.PUT, callback, newVendor);
     }
 
@@ -161,17 +161,6 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      */
      public IVendorRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VendorRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IVendorRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (VendorRequest)this;
      }
 

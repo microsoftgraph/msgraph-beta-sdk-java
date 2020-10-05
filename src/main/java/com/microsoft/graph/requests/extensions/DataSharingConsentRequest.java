@@ -37,7 +37,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DataSharingConsent> callback) {
+    public void get(final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DataSharingConsent> callback) {
+    public void delete(final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param sourceDataSharingConsent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataSharingConsent sourceDataSharingConsent, final ICallback<DataSharingConsent> callback) {
+    public void patch(final DataSharingConsent sourceDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.PATCH, callback, sourceDataSharingConsent);
     }
 
@@ -96,7 +96,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param newDataSharingConsent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback) {
+    public void post(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.POST, callback, newDataSharingConsent);
     }
 
@@ -117,7 +117,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param newDataSharingConsent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback) {
+    public void put(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.PUT, callback, newDataSharingConsent);
     }
 
@@ -151,17 +151,6 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      */
      public IDataSharingConsentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataSharingConsentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDataSharingConsentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DataSharingConsentRequest)this;
      }
 

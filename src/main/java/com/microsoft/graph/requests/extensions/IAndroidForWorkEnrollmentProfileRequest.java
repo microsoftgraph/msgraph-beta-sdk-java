@@ -21,7 +21,7 @@ public interface IAndroidForWorkEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkEnrollmentProfile> callback);
+    void get(final ICallback<? super AndroidForWorkEnrollmentProfile> callback);
 
     /**
      * Gets the AndroidForWorkEnrollmentProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkEnrollmentProfile> callback);
+    void delete(final ICallback<? super AndroidForWorkEnrollmentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkEnrollmentProfileRequest extends IHttpRequest {
      * @param sourceAndroidForWorkEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback);
+    void patch(final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback);
 
     /**
      * Patches this AndroidForWorkEnrollmentProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkEnrollmentProfileRequest extends IHttpRequest {
      * @param newAndroidForWorkEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback);
+    void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback);
 
     /**
      * Posts a AndroidForWorkEnrollmentProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkEnrollmentProfileRequest extends IHttpRequest {
      * @param newAndroidForWorkEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback);
+    void put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback);
 
     /**
      * Posts a AndroidForWorkEnrollmentProfile with a new object

@@ -37,7 +37,7 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback) {
+    public void get(final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
      * @param sourceGroupPolicyPresentationLongDecimalTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationLongDecimalTextBox sourceGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback) {
+    public void patch(final GroupPolicyPresentationLongDecimalTextBox sourceGroupPolicyPresentationLongDecimalTextBox, final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationLongDecimalTextBox);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
      * @param newGroupPolicyPresentationLongDecimalTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback) {
+    public void post(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationLongDecimalTextBox);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
      * @param newGroupPolicyPresentationLongDecimalTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback) {
+    public void put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationLongDecimalTextBox);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
      */
      public IGroupPolicyPresentationLongDecimalTextBoxRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationLongDecimalTextBoxRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyPresentationLongDecimalTextBoxRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyPresentationLongDecimalTextBoxRequest)this;
      }
 

@@ -36,7 +36,7 @@ public class AgreementAcceptanceCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, AgreementAcceptanceCollectionResponse.class, IAgreementAcceptanceCollectionPage.class);
     }
 
-    public void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+    public void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/agreementAcceptances/" + newAgreementAcceptance.id);
         new AgreementAcceptanceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class AgreementAcceptanceCollectionReferenceRequest extends BaseCollectio
      */
     public IAgreementAcceptanceCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AgreementAcceptanceCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IAgreementAcceptanceCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AgreementAcceptanceCollectionReferenceRequest)this;
     }
 

@@ -23,6 +23,6 @@ public class EducationalActivityCollectionPage extends BaseCollectionPage<Educat
      * @param builder  the request builder for the next collection page
      */
     public EducationalActivityCollectionPage(final EducationalActivityCollectionResponse response, final IEducationalActivityCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

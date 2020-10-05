@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.PlannerPlan;
  */
 public interface IPlannerPlanCollectionReferenceRequest {
 
-    void post(final PlannerPlan newPlannerPlan, final ICallback<PlannerPlan> callback);
+    void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback);
 
     PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException;
 

@@ -37,7 +37,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PersonResponsibility> callback) {
+    public void get(final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PersonResponsibility> callback) {
+    public void delete(final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param sourcePersonResponsibility the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonResponsibility sourcePersonResponsibility, final ICallback<PersonResponsibility> callback) {
+    public void patch(final PersonResponsibility sourcePersonResponsibility, final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonResponsibility);
     }
 
@@ -96,7 +96,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param newPersonResponsibility the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonResponsibility newPersonResponsibility, final ICallback<PersonResponsibility> callback) {
+    public void post(final PersonResponsibility newPersonResponsibility, final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.POST, callback, newPersonResponsibility);
     }
 
@@ -117,7 +117,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param newPersonResponsibility the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonResponsibility newPersonResponsibility, final ICallback<PersonResponsibility> callback) {
+    public void put(final PersonResponsibility newPersonResponsibility, final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.PUT, callback, newPersonResponsibility);
     }
 
@@ -151,17 +151,6 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      */
      public IPersonResponsibilityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonResponsibilityRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPersonResponsibilityRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonResponsibilityRequest)this;
      }
 

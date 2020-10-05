@@ -21,7 +21,7 @@ public interface IDeviceManagementExportJobRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementExportJob> callback);
+    void get(final ICallback<? super DeviceManagementExportJob> callback);
 
     /**
      * Gets the DeviceManagementExportJob from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementExportJobRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementExportJob> callback);
+    void delete(final ICallback<? super DeviceManagementExportJob> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementExportJobRequest extends IHttpRequest {
      * @param sourceDeviceManagementExportJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementExportJob sourceDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback);
+    void patch(final DeviceManagementExportJob sourceDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback);
 
     /**
      * Patches this DeviceManagementExportJob with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementExportJobRequest extends IHttpRequest {
      * @param newDeviceManagementExportJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback);
+    void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback);
 
     /**
      * Posts a DeviceManagementExportJob with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementExportJobRequest extends IHttpRequest {
      * @param newDeviceManagementExportJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback);
+    void put(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback);
 
     /**
      * Posts a DeviceManagementExportJob with a new object

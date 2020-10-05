@@ -52,7 +52,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemFacet> callback) {
+    public void get(final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemFacet> callback) {
+    public void delete(final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param sourceItemFacet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemFacet sourceItemFacet, final ICallback<ItemFacet> callback) {
+    public void patch(final ItemFacet sourceItemFacet, final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.PATCH, callback, sourceItemFacet);
     }
 
@@ -111,7 +111,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param newItemFacet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemFacet newItemFacet, final ICallback<ItemFacet> callback) {
+    public void post(final ItemFacet newItemFacet, final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.POST, callback, newItemFacet);
     }
 
@@ -132,7 +132,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param newItemFacet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemFacet newItemFacet, final ICallback<ItemFacet> callback) {
+    public void put(final ItemFacet newItemFacet, final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.PUT, callback, newItemFacet);
     }
 
@@ -166,17 +166,6 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      */
      public IItemFacetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemFacetRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemFacetRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemFacetRequest)this;
      }
 

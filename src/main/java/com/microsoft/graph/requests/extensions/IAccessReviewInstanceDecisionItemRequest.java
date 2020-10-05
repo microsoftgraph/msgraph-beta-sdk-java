@@ -21,7 +21,7 @@ public interface IAccessReviewInstanceDecisionItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReviewInstanceDecisionItem> callback);
+    void get(final ICallback<? super AccessReviewInstanceDecisionItem> callback);
 
     /**
      * Gets the AccessReviewInstanceDecisionItem from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewInstanceDecisionItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReviewInstanceDecisionItem> callback);
+    void delete(final ICallback<? super AccessReviewInstanceDecisionItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewInstanceDecisionItemRequest extends IHttpRequest {
      * @param sourceAccessReviewInstanceDecisionItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReviewInstanceDecisionItem sourceAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback);
+    void patch(final AccessReviewInstanceDecisionItem sourceAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback);
 
     /**
      * Patches this AccessReviewInstanceDecisionItem with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewInstanceDecisionItemRequest extends IHttpRequest {
      * @param newAccessReviewInstanceDecisionItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback);
+    void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback);
 
     /**
      * Posts a AccessReviewInstanceDecisionItem with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewInstanceDecisionItemRequest extends IHttpRequest {
      * @param newAccessReviewInstanceDecisionItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback);
+    void put(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback);
 
     /**
      * Posts a AccessReviewInstanceDecisionItem with a new object

@@ -6,10 +6,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Ediscovery;
-import com.microsoft.graph.models.extensions.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -21,8 +19,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Compliance.
  */
-public class Compliance extends Entity implements IJsonBackedObject {
+public class Compliance implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Ediscovery.

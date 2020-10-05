@@ -40,7 +40,7 @@ public class DeviceManagementScriptUserStateCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, DeviceManagementScriptUserStateCollectionResponse.class, IDeviceManagementScriptUserStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementScriptUserStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementScriptUserStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementScriptUserStateCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<DeviceManagementScriptUserState> callback) {
+    public void post(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<? super DeviceManagementScriptUserState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementScriptUserStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementScriptUserStateCollectionRequest extends BaseCollec
      */
     public IDeviceManagementScriptUserStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementScriptUserStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementScriptUserStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementScriptUserStateCollectionRequest)this;
     }
 

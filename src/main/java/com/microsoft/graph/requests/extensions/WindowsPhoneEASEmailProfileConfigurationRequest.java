@@ -37,7 +37,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void get(final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param sourceWindowsPhoneEASEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void patch(final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param newWindowsPhoneEASEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      */
      public IWindowsPhoneEASEmailProfileConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhoneEASEmailProfileConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhoneEASEmailProfileConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhoneEASEmailProfileConfigurationRequest)this;
      }
 

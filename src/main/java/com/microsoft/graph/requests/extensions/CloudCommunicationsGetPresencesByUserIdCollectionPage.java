@@ -34,6 +34,6 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionPage extends BaseC
      * @param builder The request builder for the next collection page
      */
     public CloudCommunicationsGetPresencesByUserIdCollectionPage(final CloudCommunicationsGetPresencesByUserIdCollectionResponse response, final ICloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

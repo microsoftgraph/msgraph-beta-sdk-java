@@ -40,7 +40,7 @@ public class DocumentCommentCollectionRequest extends BaseCollectionRequest<Docu
         super(requestUrl, client, requestOptions, DocumentCommentCollectionResponse.class, IDocumentCommentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDocumentCommentCollectionPage> callback) {
+    public void get(final ICallback<? super IDocumentCommentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DocumentCommentCollectionRequest extends BaseCollectionRequest<Docu
         return buildFromResponse(response);
     }
 
-    public void post(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback) {
+    public void post(final DocumentComment newDocumentComment, final ICallback<? super DocumentComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DocumentCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DocumentCommentCollectionRequest extends BaseCollectionRequest<Docu
      */
     public IDocumentCommentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DocumentCommentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDocumentCommentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DocumentCommentCollectionRequest)this;
     }
 

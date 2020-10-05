@@ -25,7 +25,7 @@ public interface IConnectorCollectionWithReferencesRequestBuilder extends IReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IConnectorCollectionWithReferencesRequest instance
      */
     IConnectorCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -33,7 +33,7 @@ public interface IConnectorCollectionWithReferencesRequestBuilder extends IReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IConnectorCollectionWithReferencesRequest instance
      */
     IConnectorCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

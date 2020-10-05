@@ -23,6 +23,6 @@ public class MobileAppIntentAndStateCollectionPage extends BaseCollectionPage<Mo
      * @param builder  the request builder for the next collection page
      */
     public MobileAppIntentAndStateCollectionPage(final MobileAppIntentAndStateCollectionResponse response, final IMobileAppIntentAndStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

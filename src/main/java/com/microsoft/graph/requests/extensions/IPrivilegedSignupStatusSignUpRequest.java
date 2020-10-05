@@ -26,7 +26,7 @@ public interface IPrivilegedSignupStatusSignUpRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<PrivilegedSignupStatus> callback);
+    void post(final ICallback<? super PrivilegedSignupStatus> callback);
 
     /**
      * Creates the PrivilegedSignupStatusSignUp

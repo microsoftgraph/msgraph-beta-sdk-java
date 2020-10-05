@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AutomaticUpdateMode;
 import com.microsoft.graph.models.generated.AutoRestartNotificationDismissalMethod;
@@ -19,7 +18,6 @@ import com.microsoft.graph.models.generated.WindowsUpdateForBusinessUpdateWeeks;
 import com.microsoft.graph.models.generated.Enablement;
 import com.microsoft.graph.models.extensions.WindowsUpdateState;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
-import com.microsoft.graph.requests.extensions.WindowsUpdateStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsUpdateStateCollectionPage;
 
 
@@ -364,19 +362,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
         if (json.has("deviceUpdateStates")) {
-            final WindowsUpdateStateCollectionResponse response = new WindowsUpdateStateCollectionResponse();
-            if (json.has("deviceUpdateStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceUpdateStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceUpdateStates").toString(), JsonObject[].class);
-            final WindowsUpdateState[] array = new WindowsUpdateState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsUpdateState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceUpdateStates = new WindowsUpdateStateCollectionPage(response, null);
+            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates").toString(), WindowsUpdateStateCollectionPage.class);
         }
     }
 }

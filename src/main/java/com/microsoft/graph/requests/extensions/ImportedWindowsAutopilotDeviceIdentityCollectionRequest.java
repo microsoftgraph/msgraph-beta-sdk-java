@@ -40,7 +40,7 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionRequest extends Bas
         super(requestUrl, client, requestOptions, ImportedWindowsAutopilotDeviceIdentityCollectionResponse.class, IImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
     }
 
-    public void get(final ICallback<IImportedWindowsAutopilotDeviceIdentityCollectionPage> callback) {
+    public void get(final ICallback<? super IImportedWindowsAutopilotDeviceIdentityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionRequest extends Bas
         return buildFromResponse(response);
     }
 
-    public void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback) {
+    public void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionRequest extends Bas
      */
     public IImportedWindowsAutopilotDeviceIdentityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ImportedWindowsAutopilotDeviceIdentityCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IImportedWindowsAutopilotDeviceIdentityCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ImportedWindowsAutopilotDeviceIdentityCollectionRequest)this;
     }
 

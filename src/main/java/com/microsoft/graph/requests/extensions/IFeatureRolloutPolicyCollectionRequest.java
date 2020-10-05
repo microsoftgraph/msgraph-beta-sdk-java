@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IFeatureRolloutPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IFeatureRolloutPolicyCollectionPage> callback);
+    void get(final ICallback<? super IFeatureRolloutPolicyCollectionPage> callback);
 
     IFeatureRolloutPolicyCollectionPage get() throws ClientException;
 
-    void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback);
+    void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback);
 
     FeatureRolloutPolicy post(final FeatureRolloutPolicy newFeatureRolloutPolicy) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IFeatureRolloutPolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IFeatureRolloutPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IFeatureRolloutPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IFeatureRolloutPolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IFeatureRolloutPolicyCollectionRequest skipToken(String skipToken);
+	IFeatureRolloutPolicyCollectionRequest skipToken(final String skipToken);
 }

@@ -40,7 +40,7 @@ public class PasswordAuthenticationMethodCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, PasswordAuthenticationMethodCollectionResponse.class, IPasswordAuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<IPasswordAuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super IPasswordAuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PasswordAuthenticationMethodCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback) {
+    public void post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PasswordAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PasswordAuthenticationMethodCollectionRequest extends BaseCollectio
      */
     public IPasswordAuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PasswordAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPasswordAuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PasswordAuthenticationMethodCollectionRequest)this;
     }
 

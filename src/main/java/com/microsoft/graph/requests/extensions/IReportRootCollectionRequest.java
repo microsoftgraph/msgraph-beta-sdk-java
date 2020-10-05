@@ -99,11 +99,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IReportRootCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootCollectionPage> callback);
+    void get(final ICallback<? super IReportRootCollectionPage> callback);
 
     IReportRootCollectionPage get() throws ClientException;
 
-    void post(final ReportRoot newReportRoot, final ICallback<ReportRoot> callback);
+    void post(final ReportRoot newReportRoot, final ICallback<? super ReportRoot> callback);
 
     ReportRoot post(final ReportRoot newReportRoot) throws ClientException;
 
@@ -122,6 +122,14 @@ public interface IReportRootCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IReportRootCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IReportRootCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -154,5 +162,5 @@ public interface IReportRootCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IReportRootCollectionRequest skipToken(String skipToken);
+	IReportRootCollectionRequest skipToken(final String skipToken);
 }

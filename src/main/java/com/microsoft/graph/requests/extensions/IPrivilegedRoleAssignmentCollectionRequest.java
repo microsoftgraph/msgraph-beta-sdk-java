@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedRoleAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedRoleAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedRoleAssignmentCollectionPage> callback);
 
     IPrivilegedRoleAssignmentCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback);
+    void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback);
 
     PrivilegedRoleAssignment post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IPrivilegedRoleAssignmentCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IPrivilegedRoleAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedRoleAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IPrivilegedRoleAssignmentCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IPrivilegedRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IPrivilegedRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

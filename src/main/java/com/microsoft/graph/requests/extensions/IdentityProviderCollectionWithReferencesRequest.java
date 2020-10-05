@@ -35,7 +35,7 @@ public class IdentityProviderCollectionWithReferencesRequest extends BaseCollect
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IIdentityProviderCollectionPage.class);
     }
 
-    public void get(final ICallback<IIdentityProviderCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IIdentityProviderCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class IdentityProviderCollectionWithReferencesRequest extends BaseCollect
 
     public IIdentityProviderCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IdentityProviderCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IIdentityProviderCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IdentityProviderCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IIdentityProviderCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IIdentityProviderCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IdentityProviderCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IIdentityProviderCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (IdentityProviderCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IIdentityProviderCollectionWithReferencesPage buildFromResponse(final IdentityProviderCollectionResponse response) {

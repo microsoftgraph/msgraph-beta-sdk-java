@@ -35,7 +35,7 @@ public class Windows81TrustedRootCertificateWithReferenceRequest extends BaseReq
         super(requestUrl, client, requestOptions, Windows81TrustedRootCertificate.class);
     }
 
-    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class Windows81TrustedRootCertificateWithReferenceRequest extends BaseReq
         return null;
     }
 
-    public void get(final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void get(final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class Windows81TrustedRootCertificateWithReferenceRequest extends BaseReq
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Windows81TrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super Windows81TrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class Windows81TrustedRootCertificateWithReferenceRequest extends BaseReq
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+	public void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindows81TrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class Windows81TrustedRootCertificateWithReferenceRequest extends BaseReq
      */
     public IWindows81TrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (Windows81TrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindows81TrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (Windows81TrustedRootCertificateWithReferenceRequest)this;
     }
 }

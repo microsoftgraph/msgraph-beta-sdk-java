@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IReviewSetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReviewSetCollectionPage> callback);
+    void get(final ICallback<? super IReviewSetCollectionPage> callback);
 
     IReviewSetCollectionPage get() throws ClientException;
 
-    void post(final ReviewSet newReviewSet, final ICallback<ReviewSet> callback);
+    void post(final ReviewSet newReviewSet, final ICallback<? super ReviewSet> callback);
 
     ReviewSet post(final ReviewSet newReviewSet) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IReviewSetCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IReviewSetCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IReviewSetCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IReviewSetCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IReviewSetCollectionRequest skipToken(String skipToken);
+	IReviewSetCollectionRequest skipToken(final String skipToken);
 }

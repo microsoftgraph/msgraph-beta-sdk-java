@@ -37,7 +37,7 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CircularGeofenceManagementCondition> callback) {
+    public void get(final ICallback<? super CircularGeofenceManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CircularGeofenceManagementCondition> callback) {
+    public void delete(final ICallback<? super CircularGeofenceManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
      * @param sourceCircularGeofenceManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CircularGeofenceManagementCondition sourceCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback) {
+    public void patch(final CircularGeofenceManagementCondition sourceCircularGeofenceManagementCondition, final ICallback<? super CircularGeofenceManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceCircularGeofenceManagementCondition);
     }
 
@@ -96,7 +96,7 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
      * @param newCircularGeofenceManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback) {
+    public void post(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<? super CircularGeofenceManagementCondition> callback) {
         send(HttpMethod.POST, callback, newCircularGeofenceManagementCondition);
     }
 
@@ -117,7 +117,7 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
      * @param newCircularGeofenceManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback) {
+    public void put(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<? super CircularGeofenceManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newCircularGeofenceManagementCondition);
     }
 
@@ -151,17 +151,6 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
      */
      public ICircularGeofenceManagementConditionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CircularGeofenceManagementConditionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICircularGeofenceManagementConditionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CircularGeofenceManagementConditionRequest)this;
      }
 

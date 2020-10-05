@@ -26,7 +26,7 @@ public interface IDeviceManagementGetComanagedDevicesSummaryRequest extends IHtt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ComanagedDevicesSummary> callback);
+    void get(final ICallback<? super ComanagedDevicesSummary> callback);
 
     /**
      * Gets the ComanagedDevicesSummary

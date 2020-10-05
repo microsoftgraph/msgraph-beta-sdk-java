@@ -37,7 +37,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<LookupResultRow> callback) {
+    public void get(final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<LookupResultRow> callback) {
+    public void delete(final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param sourceLookupResultRow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LookupResultRow sourceLookupResultRow, final ICallback<LookupResultRow> callback) {
+    public void patch(final LookupResultRow sourceLookupResultRow, final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.PATCH, callback, sourceLookupResultRow);
     }
 
@@ -96,7 +96,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param newLookupResultRow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback) {
+    public void post(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.POST, callback, newLookupResultRow);
     }
 
@@ -117,7 +117,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param newLookupResultRow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback) {
+    public void put(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.PUT, callback, newLookupResultRow);
     }
 
@@ -151,17 +151,6 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      */
      public ILookupResultRowRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LookupResultRowRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ILookupResultRowRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (LookupResultRowRequest)this;
      }
 

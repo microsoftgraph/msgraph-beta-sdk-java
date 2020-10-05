@@ -37,7 +37,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DocumentCommentReply> callback) {
+    public void get(final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DocumentCommentReply> callback) {
+    public void delete(final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param sourceDocumentCommentReply the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DocumentCommentReply sourceDocumentCommentReply, final ICallback<DocumentCommentReply> callback) {
+    public void patch(final DocumentCommentReply sourceDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.PATCH, callback, sourceDocumentCommentReply);
     }
 
@@ -96,7 +96,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param newDocumentCommentReply the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DocumentCommentReply newDocumentCommentReply, final ICallback<DocumentCommentReply> callback) {
+    public void post(final DocumentCommentReply newDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.POST, callback, newDocumentCommentReply);
     }
 
@@ -117,7 +117,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param newDocumentCommentReply the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DocumentCommentReply newDocumentCommentReply, final ICallback<DocumentCommentReply> callback) {
+    public void put(final DocumentCommentReply newDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.PUT, callback, newDocumentCommentReply);
     }
 
@@ -151,17 +151,6 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      */
      public IDocumentCommentReplyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DocumentCommentReplyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDocumentCommentReplyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DocumentCommentReplyRequest)this;
      }
 

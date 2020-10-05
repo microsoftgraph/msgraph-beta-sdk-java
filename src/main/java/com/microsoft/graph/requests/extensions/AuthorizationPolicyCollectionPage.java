@@ -23,6 +23,6 @@ public class AuthorizationPolicyCollectionPage extends BaseCollectionPage<Author
      * @param builder  the request builder for the next collection page
      */
     public AuthorizationPolicyCollectionPage(final AuthorizationPolicyCollectionResponse response, final IAuthorizationPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IPrintTaskDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintTaskDefinition> callback);
+    void get(final ICallback<? super PrintTaskDefinition> callback);
 
     /**
      * Gets the PrintTaskDefinition from the service
@@ -36,7 +36,7 @@ public interface IPrintTaskDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintTaskDefinition> callback);
+    void delete(final ICallback<? super PrintTaskDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintTaskDefinitionRequest extends IHttpRequest {
      * @param sourcePrintTaskDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<PrintTaskDefinition> callback);
+    void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback);
 
     /**
      * Patches this PrintTaskDefinition with a source
@@ -68,7 +68,7 @@ public interface IPrintTaskDefinitionRequest extends IHttpRequest {
      * @param newPrintTaskDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<PrintTaskDefinition> callback);
+    void post(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback);
 
     /**
      * Posts a PrintTaskDefinition with a new object
@@ -85,7 +85,7 @@ public interface IPrintTaskDefinitionRequest extends IHttpRequest {
      * @param newPrintTaskDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<PrintTaskDefinition> callback);
+    void put(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback);
 
     /**
      * Posts a PrintTaskDefinition with a new object

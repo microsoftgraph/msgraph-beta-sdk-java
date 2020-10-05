@@ -37,7 +37,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SitePage> callback) {
+    public void get(final ICallback<? super SitePage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SitePage> callback) {
+    public void delete(final ICallback<? super SitePage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param sourceSitePage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SitePage sourceSitePage, final ICallback<SitePage> callback) {
+    public void patch(final SitePage sourceSitePage, final ICallback<? super SitePage> callback) {
         send(HttpMethod.PATCH, callback, sourceSitePage);
     }
 
@@ -96,7 +96,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param newSitePage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SitePage newSitePage, final ICallback<SitePage> callback) {
+    public void post(final SitePage newSitePage, final ICallback<? super SitePage> callback) {
         send(HttpMethod.POST, callback, newSitePage);
     }
 
@@ -117,7 +117,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param newSitePage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SitePage newSitePage, final ICallback<SitePage> callback) {
+    public void put(final SitePage newSitePage, final ICallback<? super SitePage> callback) {
         send(HttpMethod.PUT, callback, newSitePage);
     }
 
@@ -151,17 +151,6 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      */
      public ISitePageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SitePageRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISitePageRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SitePageRequest)this;
      }
 

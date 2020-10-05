@@ -37,7 +37,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppInstallSummary> callback) {
+    public void get(final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppInstallSummary> callback) {
+    public void delete(final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param sourceMobileAppInstallSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppInstallSummary sourceMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback) {
+    public void patch(final MobileAppInstallSummary sourceMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppInstallSummary);
     }
 
@@ -96,7 +96,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param newMobileAppInstallSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback) {
+    public void post(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.POST, callback, newMobileAppInstallSummary);
     }
 
@@ -117,7 +117,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param newMobileAppInstallSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback) {
+    public void put(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.PUT, callback, newMobileAppInstallSummary);
     }
 
@@ -151,17 +151,6 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      */
      public IMobileAppInstallSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppInstallSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppInstallSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppInstallSummaryRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementExchangeOnPremisesPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementExchangeOnPremisesPolicyCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementExchangeOnPremisesPolicyCollectionPage> callback);
 
     IDeviceManagementExchangeOnPremisesPolicyCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+    void post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback);
 
     DeviceManagementExchangeOnPremisesPolicy post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementExchangeOnPremisesPolicyCollectionRequest exte
      * @return the updated request
      */
     IDeviceManagementExchangeOnPremisesPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementExchangeOnPremisesPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementExchangeOnPremisesPolicyCollectionRequest exte
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementExchangeOnPremisesPolicyCollectionRequest skipToken(String skipToken);
+	IDeviceManagementExchangeOnPremisesPolicyCollectionRequest skipToken(final String skipToken);
 }

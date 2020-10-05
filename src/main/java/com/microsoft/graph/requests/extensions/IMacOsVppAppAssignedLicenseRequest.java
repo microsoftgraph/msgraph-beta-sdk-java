@@ -21,7 +21,7 @@ public interface IMacOsVppAppAssignedLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOsVppAppAssignedLicense> callback);
+    void get(final ICallback<? super MacOsVppAppAssignedLicense> callback);
 
     /**
      * Gets the MacOsVppAppAssignedLicense from the service
@@ -36,7 +36,7 @@ public interface IMacOsVppAppAssignedLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOsVppAppAssignedLicense> callback);
+    void delete(final ICallback<? super MacOsVppAppAssignedLicense> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOsVppAppAssignedLicenseRequest extends IHttpRequest {
      * @param sourceMacOsVppAppAssignedLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback);
+    void patch(final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback);
 
     /**
      * Patches this MacOsVppAppAssignedLicense with a source
@@ -68,7 +68,7 @@ public interface IMacOsVppAppAssignedLicenseRequest extends IHttpRequest {
      * @param newMacOsVppAppAssignedLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback);
+    void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback);
 
     /**
      * Posts a MacOsVppAppAssignedLicense with a new object
@@ -85,7 +85,7 @@ public interface IMacOsVppAppAssignedLicenseRequest extends IHttpRequest {
      * @param newMacOsVppAppAssignedLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback);
+    void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback);
 
     /**
      * Posts a MacOsVppAppAssignedLicense with a new object

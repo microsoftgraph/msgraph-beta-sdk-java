@@ -37,7 +37,7 @@ public class TimeCardClockOutRequest extends BaseRequest implements ITimeCardClo
         body = new TimeCardClockOutBody();
     }
 
-    public void post(final ICallback<TimeCard> callback) {
+    public void post(final ICallback<? super TimeCard> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class TimeCardClockOutRequest extends BaseRequest implements ITimeCardClo
      */
     public ITimeCardClockOutRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TimeCardClockOutRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITimeCardClockOutRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TimeCardClockOutRequest)this;
     }
 

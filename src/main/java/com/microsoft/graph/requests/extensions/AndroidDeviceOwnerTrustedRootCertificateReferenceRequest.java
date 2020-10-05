@@ -34,7 +34,7 @@ public class AndroidDeviceOwnerTrustedRootCertificateReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerTrustedRootCertificate.class);
     }
 
-    public void delete(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class AndroidDeviceOwnerTrustedRootCertificateReferenceRequest extends Ba
         return (AndroidDeviceOwnerTrustedRootCertificateReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidDeviceOwnerTrustedRootCertificateReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AndroidDeviceOwnerTrustedRootCertificateReferenceRequest)this;
-    }
-    /**
      * Puts the AndroidDeviceOwnerTrustedRootCertificate
      *
      * @param srcAndroidDeviceOwnerTrustedRootCertificate the AndroidDeviceOwnerTrustedRootCertificate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AndroidDeviceOwnerTrustedRootCertificate srcAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+    public void put(AndroidDeviceOwnerTrustedRootCertificate srcAndroidDeviceOwnerTrustedRootCertificate, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, srcAndroidDeviceOwnerTrustedRootCertificate);
     }
 

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetSharePointActivityPagesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetSharePointActivityPagesCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetSharePointActivityPagesCollectionPage> callback);
 
     IReportRootGetSharePointActivityPagesCollectionPage get() throws ClientException;
 

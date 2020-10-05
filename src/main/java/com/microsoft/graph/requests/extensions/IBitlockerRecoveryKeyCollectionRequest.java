@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IBitlockerRecoveryKeyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IBitlockerRecoveryKeyCollectionPage> callback);
+    void get(final ICallback<? super IBitlockerRecoveryKeyCollectionPage> callback);
 
     IBitlockerRecoveryKeyCollectionPage get() throws ClientException;
 
-    void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback);
+    void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback);
 
     BitlockerRecoveryKey post(final BitlockerRecoveryKey newBitlockerRecoveryKey) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IBitlockerRecoveryKeyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IBitlockerRecoveryKeyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IBitlockerRecoveryKeyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IBitlockerRecoveryKeyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IBitlockerRecoveryKeyCollectionRequest skipToken(String skipToken);
+	IBitlockerRecoveryKeyCollectionRequest skipToken(final String skipToken);
 }

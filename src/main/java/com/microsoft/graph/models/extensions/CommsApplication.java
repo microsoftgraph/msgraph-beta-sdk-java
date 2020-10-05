@@ -6,14 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CallCollectionResponse;
 import com.microsoft.graph.requests.extensions.CallCollectionPage;
-import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
 
 
@@ -26,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Comms Application.
  */
-public class CommsApplication extends Entity implements IJsonBackedObject {
+public class CommsApplication implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Calls.
@@ -86,35 +92,11 @@ public class CommsApplication extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calls")) {
-            final CallCollectionResponse response = new CallCollectionResponse();
-            if (json.has("calls@odata.nextLink")) {
-                response.nextLink = json.get("calls@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calls").toString(), JsonObject[].class);
-            final Call[] array = new Call[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Call.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calls = new CallCollectionPage(response, null);
+            calls = serializer.deserializeObject(json.get("calls").toString(), CallCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {
-            final OnlineMeetingCollectionResponse response = new OnlineMeetingCollectionResponse();
-            if (json.has("onlineMeetings@odata.nextLink")) {
-                response.nextLink = json.get("onlineMeetings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("onlineMeetings").toString(), JsonObject[].class);
-            final OnlineMeeting[] array = new OnlineMeeting[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnlineMeeting.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            onlineMeetings = new OnlineMeetingCollectionPage(response, null);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
         }
     }
 }

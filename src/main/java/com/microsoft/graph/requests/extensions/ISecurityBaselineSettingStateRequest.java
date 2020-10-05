@@ -21,7 +21,7 @@ public interface ISecurityBaselineSettingStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityBaselineSettingState> callback);
+    void get(final ICallback<? super SecurityBaselineSettingState> callback);
 
     /**
      * Gets the SecurityBaselineSettingState from the service
@@ -36,7 +36,7 @@ public interface ISecurityBaselineSettingStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityBaselineSettingState> callback);
+    void delete(final ICallback<? super SecurityBaselineSettingState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityBaselineSettingStateRequest extends IHttpRequest {
      * @param sourceSecurityBaselineSettingState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityBaselineSettingState sourceSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback);
+    void patch(final SecurityBaselineSettingState sourceSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback);
 
     /**
      * Patches this SecurityBaselineSettingState with a source
@@ -68,7 +68,7 @@ public interface ISecurityBaselineSettingStateRequest extends IHttpRequest {
      * @param newSecurityBaselineSettingState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback);
+    void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback);
 
     /**
      * Posts a SecurityBaselineSettingState with a new object
@@ -85,7 +85,7 @@ public interface ISecurityBaselineSettingStateRequest extends IHttpRequest {
      * @param newSecurityBaselineSettingState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback);
+    void put(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback);
 
     /**
      * Posts a SecurityBaselineSettingState with a new object

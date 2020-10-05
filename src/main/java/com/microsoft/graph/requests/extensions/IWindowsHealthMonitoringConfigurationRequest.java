@@ -21,7 +21,7 @@ public interface IWindowsHealthMonitoringConfigurationRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsHealthMonitoringConfiguration> callback);
+    void get(final ICallback<? super WindowsHealthMonitoringConfiguration> callback);
 
     /**
      * Gets the WindowsHealthMonitoringConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsHealthMonitoringConfigurationRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsHealthMonitoringConfiguration> callback);
+    void delete(final ICallback<? super WindowsHealthMonitoringConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsHealthMonitoringConfigurationRequest extends IHttpReque
      * @param sourceWindowsHealthMonitoringConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsHealthMonitoringConfiguration sourceWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback);
+    void patch(final WindowsHealthMonitoringConfiguration sourceWindowsHealthMonitoringConfiguration, final ICallback<? super WindowsHealthMonitoringConfiguration> callback);
 
     /**
      * Patches this WindowsHealthMonitoringConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsHealthMonitoringConfigurationRequest extends IHttpReque
      * @param newWindowsHealthMonitoringConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback);
+    void post(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<? super WindowsHealthMonitoringConfiguration> callback);
 
     /**
      * Posts a WindowsHealthMonitoringConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsHealthMonitoringConfigurationRequest extends IHttpReque
      * @param newWindowsHealthMonitoringConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback);
+    void put(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<? super WindowsHealthMonitoringConfiguration> callback);
 
     /**
      * Posts a WindowsHealthMonitoringConfiguration with a new object

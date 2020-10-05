@@ -23,6 +23,6 @@ public class ExactMatchDataStoreCollectionPage extends BaseCollectionPage<ExactM
      * @param builder  the request builder for the next collection page
      */
     public ExactMatchDataStoreCollectionPage(final ExactMatchDataStoreCollectionResponse response, final IExactMatchDataStoreCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

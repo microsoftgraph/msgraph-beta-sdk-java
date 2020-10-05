@@ -37,7 +37,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AzureADFeatureUsage> callback) {
+    public void get(final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AzureADFeatureUsage> callback) {
+    public void delete(final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param sourceAzureADFeatureUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AzureADFeatureUsage sourceAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback) {
+    public void patch(final AzureADFeatureUsage sourceAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.PATCH, callback, sourceAzureADFeatureUsage);
     }
 
@@ -96,7 +96,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param newAzureADFeatureUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback) {
+    public void post(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.POST, callback, newAzureADFeatureUsage);
     }
 
@@ -117,7 +117,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param newAzureADFeatureUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback) {
+    public void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.PUT, callback, newAzureADFeatureUsage);
     }
 
@@ -151,17 +151,6 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      */
      public IAzureADFeatureUsageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AzureADFeatureUsageRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAzureADFeatureUsageRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AzureADFeatureUsageRequest)this;
      }
 

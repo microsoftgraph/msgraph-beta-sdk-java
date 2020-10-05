@@ -41,7 +41,7 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DocumentComment> callback) {
+    public void get(final ICallback<? super DocumentComment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DocumentComment> callback) {
+    public void delete(final ICallback<? super DocumentComment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
      * @param sourceDocumentComment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DocumentComment sourceDocumentComment, final ICallback<DocumentComment> callback) {
+    public void patch(final DocumentComment sourceDocumentComment, final ICallback<? super DocumentComment> callback) {
         send(HttpMethod.PATCH, callback, sourceDocumentComment);
     }
 
@@ -100,7 +100,7 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
      * @param newDocumentComment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback) {
+    public void post(final DocumentComment newDocumentComment, final ICallback<? super DocumentComment> callback) {
         send(HttpMethod.POST, callback, newDocumentComment);
     }
 
@@ -121,7 +121,7 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
      * @param newDocumentComment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback) {
+    public void put(final DocumentComment newDocumentComment, final ICallback<? super DocumentComment> callback) {
         send(HttpMethod.PUT, callback, newDocumentComment);
     }
 
@@ -155,17 +155,6 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
      */
      public IDocumentCommentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DocumentCommentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDocumentCommentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DocumentCommentRequest)this;
      }
 

@@ -36,7 +36,7 @@ public class EventForwardRequest extends BaseRequest implements IEventForwardReq
         body = new EventForwardBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class EventForwardRequest extends BaseRequest implements IEventForwardReq
      */
     public IEventForwardRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EventForwardRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEventForwardRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EventForwardRequest)this;
     }
 

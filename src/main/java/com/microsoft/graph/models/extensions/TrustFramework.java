@@ -6,14 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TrustFrameworkKeySet;
 import com.microsoft.graph.models.extensions.TrustFrameworkPolicy;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionPage;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionPage;
 
 
@@ -26,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Trust Framework.
  */
-public class TrustFramework extends Entity implements IJsonBackedObject {
+public class TrustFramework implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Key Sets.
@@ -86,35 +92,11 @@ public class TrustFramework extends Entity implements IJsonBackedObject {
 
 
         if (json.has("keySets")) {
-            final TrustFrameworkKeySetCollectionResponse response = new TrustFrameworkKeySetCollectionResponse();
-            if (json.has("keySets@odata.nextLink")) {
-                response.nextLink = json.get("keySets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("keySets").toString(), JsonObject[].class);
-            final TrustFrameworkKeySet[] array = new TrustFrameworkKeySet[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TrustFrameworkKeySet.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            keySets = new TrustFrameworkKeySetCollectionPage(response, null);
+            keySets = serializer.deserializeObject(json.get("keySets").toString(), TrustFrameworkKeySetCollectionPage.class);
         }
 
         if (json.has("policies")) {
-            final TrustFrameworkPolicyCollectionResponse response = new TrustFrameworkPolicyCollectionResponse();
-            if (json.has("policies@odata.nextLink")) {
-                response.nextLink = json.get("policies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policies").toString(), JsonObject[].class);
-            final TrustFrameworkPolicy[] array = new TrustFrameworkPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TrustFrameworkPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            policies = new TrustFrameworkPolicyCollectionPage(response, null);
+            policies = serializer.deserializeObject(json.get("policies").toString(), TrustFrameworkPolicyCollectionPage.class);
         }
     }
 }

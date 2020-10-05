@@ -21,7 +21,7 @@ public interface IInformationProtectionPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<InformationProtectionPolicy> callback);
+    void get(final ICallback<? super InformationProtectionPolicy> callback);
 
     /**
      * Gets the InformationProtectionPolicy from the service
@@ -36,7 +36,7 @@ public interface IInformationProtectionPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<InformationProtectionPolicy> callback);
+    void delete(final ICallback<? super InformationProtectionPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInformationProtectionPolicyRequest extends IHttpRequest {
      * @param sourceInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final InformationProtectionPolicy sourceInformationProtectionPolicy, final ICallback<InformationProtectionPolicy> callback);
+    void patch(final InformationProtectionPolicy sourceInformationProtectionPolicy, final ICallback<? super InformationProtectionPolicy> callback);
 
     /**
      * Patches this InformationProtectionPolicy with a source
@@ -68,7 +68,7 @@ public interface IInformationProtectionPolicyRequest extends IHttpRequest {
      * @param newInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<InformationProtectionPolicy> callback);
+    void post(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<? super InformationProtectionPolicy> callback);
 
     /**
      * Posts a InformationProtectionPolicy with a new object
@@ -85,7 +85,7 @@ public interface IInformationProtectionPolicyRequest extends IHttpRequest {
      * @param newInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<InformationProtectionPolicy> callback);
+    void put(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<? super InformationProtectionPolicy> callback);
 
     /**
      * Posts a InformationProtectionPolicy with a new object

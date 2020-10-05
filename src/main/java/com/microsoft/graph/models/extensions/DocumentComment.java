@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DocumentCommentReply;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DocumentCommentReplyCollectionResponse;
 import com.microsoft.graph.requests.extensions.DocumentCommentReplyCollectionPage;
 
 
@@ -83,19 +81,7 @@ public class DocumentComment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("replies")) {
-            final DocumentCommentReplyCollectionResponse response = new DocumentCommentReplyCollectionResponse();
-            if (json.has("replies@odata.nextLink")) {
-                response.nextLink = json.get("replies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("replies").toString(), JsonObject[].class);
-            final DocumentCommentReply[] array = new DocumentCommentReply[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DocumentCommentReply.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            replies = new DocumentCommentReplyCollectionPage(response, null);
+            replies = serializer.deserializeObject(json.get("replies").toString(), DocumentCommentReplyCollectionPage.class);
         }
     }
 }

@@ -21,7 +21,7 @@ public interface IOrganizationalBrandingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OrganizationalBranding> callback);
+    void get(final ICallback<? super OrganizationalBranding> callback);
 
     /**
      * Gets the OrganizationalBranding from the service
@@ -36,7 +36,7 @@ public interface IOrganizationalBrandingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OrganizationalBranding> callback);
+    void delete(final ICallback<? super OrganizationalBranding> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOrganizationalBrandingRequest extends IHttpRequest {
      * @param sourceOrganizationalBranding the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OrganizationalBranding sourceOrganizationalBranding, final ICallback<OrganizationalBranding> callback);
+    void patch(final OrganizationalBranding sourceOrganizationalBranding, final ICallback<? super OrganizationalBranding> callback);
 
     /**
      * Patches this OrganizationalBranding with a source
@@ -68,7 +68,7 @@ public interface IOrganizationalBrandingRequest extends IHttpRequest {
      * @param newOrganizationalBranding the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OrganizationalBranding newOrganizationalBranding, final ICallback<OrganizationalBranding> callback);
+    void post(final OrganizationalBranding newOrganizationalBranding, final ICallback<? super OrganizationalBranding> callback);
 
     /**
      * Posts a OrganizationalBranding with a new object
@@ -85,7 +85,7 @@ public interface IOrganizationalBrandingRequest extends IHttpRequest {
      * @param newOrganizationalBranding the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OrganizationalBranding newOrganizationalBranding, final ICallback<OrganizationalBranding> callback);
+    void put(final OrganizationalBranding newOrganizationalBranding, final ICallback<? super OrganizationalBranding> callback);
 
     /**
      * Posts a OrganizationalBranding with a new object

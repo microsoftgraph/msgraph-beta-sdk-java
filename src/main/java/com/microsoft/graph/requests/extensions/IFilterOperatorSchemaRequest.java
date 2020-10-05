@@ -21,7 +21,7 @@ public interface IFilterOperatorSchemaRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FilterOperatorSchema> callback);
+    void get(final ICallback<? super FilterOperatorSchema> callback);
 
     /**
      * Gets the FilterOperatorSchema from the service
@@ -36,7 +36,7 @@ public interface IFilterOperatorSchemaRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FilterOperatorSchema> callback);
+    void delete(final ICallback<? super FilterOperatorSchema> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFilterOperatorSchemaRequest extends IHttpRequest {
      * @param sourceFilterOperatorSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FilterOperatorSchema sourceFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback);
+    void patch(final FilterOperatorSchema sourceFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback);
 
     /**
      * Patches this FilterOperatorSchema with a source
@@ -68,7 +68,7 @@ public interface IFilterOperatorSchemaRequest extends IHttpRequest {
      * @param newFilterOperatorSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback);
+    void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback);
 
     /**
      * Posts a FilterOperatorSchema with a new object
@@ -85,7 +85,7 @@ public interface IFilterOperatorSchemaRequest extends IHttpRequest {
      * @param newFilterOperatorSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback);
+    void put(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback);
 
     /**
      * Posts a FilterOperatorSchema with a new object

@@ -40,7 +40,7 @@ public class PaymentTermCollectionRequest extends BaseCollectionRequest<PaymentT
         super(requestUrl, client, requestOptions, PaymentTermCollectionResponse.class, IPaymentTermCollectionPage.class);
     }
 
-    public void get(final ICallback<IPaymentTermCollectionPage> callback) {
+    public void get(final ICallback<? super IPaymentTermCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PaymentTermCollectionRequest extends BaseCollectionRequest<PaymentT
         return buildFromResponse(response);
     }
 
-    public void post(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback) {
+    public void post(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PaymentTermRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PaymentTermCollectionRequest extends BaseCollectionRequest<PaymentT
      */
     public IPaymentTermCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PaymentTermCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPaymentTermCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PaymentTermCollectionRequest)this;
     }
 

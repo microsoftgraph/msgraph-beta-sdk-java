@@ -23,6 +23,6 @@ public class SalesInvoiceCollectionPage extends BaseCollectionPage<SalesInvoice,
      * @param builder  the request builder for the next collection page
      */
     public SalesInvoiceCollectionPage(final SalesInvoiceCollectionResponse response, final ISalesInvoiceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

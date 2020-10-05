@@ -44,7 +44,7 @@ public class AccessPackageReferenceRequest extends BaseRequest implements IAcces
         super(requestUrl, client, requestOptions, AccessPackage.class);
     }
 
-    public void delete(final ICallback<AccessPackage> callback) {
+    public void delete(final ICallback<? super AccessPackage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -74,22 +74,12 @@ public class AccessPackageReferenceRequest extends BaseRequest implements IAcces
         return (AccessPackageReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAccessPackageReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AccessPackageReferenceRequest)this;
-    }
-    /**
      * Puts the AccessPackage
      *
      * @param srcAccessPackage the AccessPackage reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AccessPackage srcAccessPackage, final ICallback<AccessPackage> callback) {
+    public void put(AccessPackage srcAccessPackage, final ICallback<? super AccessPackage> callback) {
         send(HttpMethod.PUT, callback, srcAccessPackage);
     }
 

@@ -36,7 +36,7 @@ public class DeviceManagementScriptAssignRequest extends BaseRequest implements 
         body = new DeviceManagementScriptAssignBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceManagementScriptAssignRequest extends BaseRequest implements 
      */
     public IDeviceManagementScriptAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementScriptAssignRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementScriptAssignRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementScriptAssignRequest)this;
     }
 

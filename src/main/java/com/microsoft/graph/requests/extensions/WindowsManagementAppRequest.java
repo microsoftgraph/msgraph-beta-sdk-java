@@ -41,7 +41,7 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsManagementApp> callback) {
+    public void get(final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsManagementApp> callback) {
+    public void delete(final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
      * @param sourceWindowsManagementApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<WindowsManagementApp> callback) {
+    public void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsManagementApp);
     }
 
@@ -100,7 +100,7 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
      * @param newWindowsManagementApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsManagementApp newWindowsManagementApp, final ICallback<WindowsManagementApp> callback) {
+    public void post(final WindowsManagementApp newWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.POST, callback, newWindowsManagementApp);
     }
 
@@ -121,7 +121,7 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
      * @param newWindowsManagementApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsManagementApp newWindowsManagementApp, final ICallback<WindowsManagementApp> callback) {
+    public void put(final WindowsManagementApp newWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsManagementApp);
     }
 
@@ -155,17 +155,6 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
      */
      public IWindowsManagementAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsManagementAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsManagementAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsManagementAppRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IPersonAwardRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonAward> callback);
+    void get(final ICallback<? super PersonAward> callback);
 
     /**
      * Gets the PersonAward from the service
@@ -36,7 +36,7 @@ public interface IPersonAwardRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonAward> callback);
+    void delete(final ICallback<? super PersonAward> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonAwardRequest extends IHttpRequest {
      * @param sourcePersonAward the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonAward sourcePersonAward, final ICallback<PersonAward> callback);
+    void patch(final PersonAward sourcePersonAward, final ICallback<? super PersonAward> callback);
 
     /**
      * Patches this PersonAward with a source
@@ -68,7 +68,7 @@ public interface IPersonAwardRequest extends IHttpRequest {
      * @param newPersonAward the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonAward newPersonAward, final ICallback<PersonAward> callback);
+    void post(final PersonAward newPersonAward, final ICallback<? super PersonAward> callback);
 
     /**
      * Posts a PersonAward with a new object
@@ -85,7 +85,7 @@ public interface IPersonAwardRequest extends IHttpRequest {
      * @param newPersonAward the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonAward newPersonAward, final ICallback<PersonAward> callback);
+    void put(final PersonAward newPersonAward, final ICallback<? super PersonAward> callback);
 
     /**
      * Posts a PersonAward with a new object

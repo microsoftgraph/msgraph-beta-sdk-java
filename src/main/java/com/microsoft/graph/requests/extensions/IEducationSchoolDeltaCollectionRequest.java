@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IEducationSchoolDeltaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEducationSchoolDeltaCollectionPage> callback);
+    void get(final ICallback<? super IEducationSchoolDeltaCollectionPage> callback);
 
     IEducationSchoolDeltaCollectionPage get() throws ClientException;
 

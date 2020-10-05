@@ -34,6 +34,6 @@ public class ReportRootGetPrintUsageSummariesByPrinterCollectionPage extends Bas
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetPrintUsageSummariesByPrinterCollectionPage(final ReportRootGetPrintUsageSummariesByPrinterCollectionResponse response, final IReportRootGetPrintUsageSummariesByPrinterCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

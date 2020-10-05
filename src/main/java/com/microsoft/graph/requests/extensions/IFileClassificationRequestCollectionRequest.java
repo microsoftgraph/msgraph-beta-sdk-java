@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IFileClassificationRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IFileClassificationRequestCollectionPage> callback);
+    void get(final ICallback<? super IFileClassificationRequestCollectionPage> callback);
 
     IFileClassificationRequestCollectionPage get() throws ClientException;
 
-    void post(final FileClassificationRequest newFileClassificationRequest, final ICallback<FileClassificationRequest> callback);
+    void post(final FileClassificationRequest newFileClassificationRequest, final ICallback<? super FileClassificationRequest> callback);
 
     FileClassificationRequest post(final FileClassificationRequest newFileClassificationRequest) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IFileClassificationRequestCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IFileClassificationRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IFileClassificationRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IFileClassificationRequestCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IFileClassificationRequestCollectionRequest skipToken(String skipToken);
+	IFileClassificationRequestCollectionRequest skipToken(final String skipToken);
 }

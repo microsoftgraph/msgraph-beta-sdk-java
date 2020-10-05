@@ -23,6 +23,6 @@ public class SideLoadingKeyCollectionPage extends BaseCollectionPage<SideLoading
      * @param builder  the request builder for the next collection page
      */
     public SideLoadingKeyCollectionPage(final SideLoadingKeyCollectionResponse response, final ISideLoadingKeyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

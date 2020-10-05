@@ -21,7 +21,7 @@ public interface ICallActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CallActivityStatistics> callback);
+    void get(final ICallback<? super CallActivityStatistics> callback);
 
     /**
      * Gets the CallActivityStatistics from the service
@@ -36,7 +36,7 @@ public interface ICallActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CallActivityStatistics> callback);
+    void delete(final ICallback<? super CallActivityStatistics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICallActivityStatisticsRequest extends IHttpRequest {
      * @param sourceCallActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CallActivityStatistics sourceCallActivityStatistics, final ICallback<CallActivityStatistics> callback);
+    void patch(final CallActivityStatistics sourceCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback);
 
     /**
      * Patches this CallActivityStatistics with a source
@@ -68,7 +68,7 @@ public interface ICallActivityStatisticsRequest extends IHttpRequest {
      * @param newCallActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CallActivityStatistics newCallActivityStatistics, final ICallback<CallActivityStatistics> callback);
+    void post(final CallActivityStatistics newCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback);
 
     /**
      * Posts a CallActivityStatistics with a new object
@@ -85,7 +85,7 @@ public interface ICallActivityStatisticsRequest extends IHttpRequest {
      * @param newCallActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CallActivityStatistics newCallActivityStatistics, final ICallback<CallActivityStatistics> callback);
+    void put(final CallActivityStatistics newCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback);
 
     /**
      * Posts a CallActivityStatistics with a new object

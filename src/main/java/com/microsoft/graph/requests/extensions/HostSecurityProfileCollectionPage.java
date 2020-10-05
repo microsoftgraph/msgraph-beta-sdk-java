@@ -23,6 +23,6 @@ public class HostSecurityProfileCollectionPage extends BaseCollectionPage<HostSe
      * @param builder  the request builder for the next collection page
      */
     public HostSecurityProfileCollectionPage(final HostSecurityProfileCollectionResponse response, final IHostSecurityProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

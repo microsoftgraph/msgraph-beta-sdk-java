@@ -34,6 +34,6 @@ public class DeviceManagementGetRoleScopeTagsByResourceCollectionPage extends Ba
      * @param builder The request builder for the next collection page
      */
     public DeviceManagementGetRoleScopeTagsByResourceCollectionPage(final DeviceManagementGetRoleScopeTagsByResourceCollectionResponse response, final IDeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

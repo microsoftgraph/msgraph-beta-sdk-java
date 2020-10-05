@@ -27,7 +27,7 @@ public interface IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegress
      * @param srcUserExperienceAnalyticsRegressionSummary the UserExperienceAnalyticsRegressionSummary with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void patch(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Patches the UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformance
@@ -44,7 +44,7 @@ public interface IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegress
      * @param srcUserExperienceAnalyticsRegressionSummary the UserExperienceAnalyticsRegressionSummary to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void put(UserExperienceAnalyticsRegressionSummary srcUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Puts the UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformance
@@ -59,7 +59,7 @@ public interface IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegress
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Gets the UserExperienceAnalyticsRegressionSummary

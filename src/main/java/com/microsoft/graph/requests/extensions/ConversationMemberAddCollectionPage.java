@@ -35,6 +35,6 @@ public class ConversationMemberAddCollectionPage extends BaseCollectionPage<Acti
      * @param builder The request builder for the next collection page
      */
     public ConversationMemberAddCollectionPage(final ConversationMemberAddCollectionResponse response, final IConversationMemberAddCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class SideLoadingKeyCollectionRequest extends BaseCollectionRequest<SideL
         super(requestUrl, client, requestOptions, SideLoadingKeyCollectionResponse.class, ISideLoadingKeyCollectionPage.class);
     }
 
-    public void get(final ICallback<ISideLoadingKeyCollectionPage> callback) {
+    public void get(final ICallback<? super ISideLoadingKeyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SideLoadingKeyCollectionRequest extends BaseCollectionRequest<SideL
         return buildFromResponse(response);
     }
 
-    public void post(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback) {
+    public void post(final SideLoadingKey newSideLoadingKey, final ICallback<? super SideLoadingKey> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SideLoadingKeyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SideLoadingKeyCollectionRequest extends BaseCollectionRequest<SideL
      */
     public ISideLoadingKeyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SideLoadingKeyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISideLoadingKeyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SideLoadingKeyCollectionRequest)this;
     }
 

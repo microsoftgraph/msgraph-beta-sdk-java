@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.DetectedApp;
  */
 public interface IDetectedAppCollectionReferenceRequest {
 
-    void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback);
+    void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback);
 
     DetectedApp post(final DetectedApp newDetectedApp) throws ClientException;
 

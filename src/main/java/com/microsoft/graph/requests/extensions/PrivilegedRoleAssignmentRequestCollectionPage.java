@@ -23,6 +23,6 @@ public class PrivilegedRoleAssignmentRequestCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public PrivilegedRoleAssignmentRequestCollectionPage(final PrivilegedRoleAssignmentRequestCollectionResponse response, final IPrivilegedRoleAssignmentRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

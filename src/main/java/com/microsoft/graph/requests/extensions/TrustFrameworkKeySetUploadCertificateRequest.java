@@ -37,7 +37,7 @@ public class TrustFrameworkKeySetUploadCertificateRequest extends BaseRequest im
         body = new TrustFrameworkKeySetUploadCertificateBody();
     }
 
-    public void post(final ICallback<TrustFrameworkKey> callback) {
+    public void post(final ICallback<? super TrustFrameworkKey> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class TrustFrameworkKeySetUploadCertificateRequest extends BaseRequest im
      */
     public ITrustFrameworkKeySetUploadCertificateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TrustFrameworkKeySetUploadCertificateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITrustFrameworkKeySetUploadCertificateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TrustFrameworkKeySetUploadCertificateRequest)this;
     }
 

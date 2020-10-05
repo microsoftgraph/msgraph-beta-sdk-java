@@ -21,7 +21,7 @@ public interface IPrivilegedOperationEventRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedOperationEvent> callback);
+    void get(final ICallback<? super PrivilegedOperationEvent> callback);
 
     /**
      * Gets the PrivilegedOperationEvent from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedOperationEventRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedOperationEvent> callback);
+    void delete(final ICallback<? super PrivilegedOperationEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedOperationEventRequest extends IHttpRequest {
      * @param sourcePrivilegedOperationEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedOperationEvent sourcePrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback);
+    void patch(final PrivilegedOperationEvent sourcePrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback);
 
     /**
      * Patches this PrivilegedOperationEvent with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedOperationEventRequest extends IHttpRequest {
      * @param newPrivilegedOperationEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback);
+    void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback);
 
     /**
      * Posts a PrivilegedOperationEvent with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedOperationEventRequest extends IHttpRequest {
      * @param newPrivilegedOperationEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback);
+    void put(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback);
 
     /**
      * Posts a PrivilegedOperationEvent with a new object

@@ -40,7 +40,7 @@ public class WindowsAutopilotDeviceIdentityCollectionRequest extends BaseCollect
         super(requestUrl, client, requestOptions, WindowsAutopilotDeviceIdentityCollectionResponse.class, IWindowsAutopilotDeviceIdentityCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsAutopilotDeviceIdentityCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsAutopilotDeviceIdentityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsAutopilotDeviceIdentityCollectionRequest extends BaseCollect
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+    public void post(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<? super WindowsAutopilotDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsAutopilotDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsAutopilotDeviceIdentityCollectionRequest extends BaseCollect
      */
     public IWindowsAutopilotDeviceIdentityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsAutopilotDeviceIdentityCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeviceIdentityCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsAutopilotDeviceIdentityCollectionRequest)this;
     }
 

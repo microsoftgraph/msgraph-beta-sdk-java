@@ -40,7 +40,7 @@ public class ConnectedOrganizationCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, ConnectedOrganizationCollectionResponse.class, IConnectedOrganizationCollectionPage.class);
     }
 
-    public void get(final ICallback<IConnectedOrganizationCollectionPage> callback) {
+    public void get(final ICallback<? super IConnectedOrganizationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ConnectedOrganizationCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+    public void post(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConnectedOrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ConnectedOrganizationCollectionRequest extends BaseCollectionReques
      */
     public IConnectedOrganizationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectedOrganizationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IConnectedOrganizationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConnectedOrganizationCollectionRequest)this;
     }
 

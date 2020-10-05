@@ -37,7 +37,7 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AppleVppTokenTroubleshootingEvent> callback) {
+    public void get(final ICallback<? super AppleVppTokenTroubleshootingEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AppleVppTokenTroubleshootingEvent> callback) {
+    public void delete(final ICallback<? super AppleVppTokenTroubleshootingEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
      * @param sourceAppleVppTokenTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleVppTokenTroubleshootingEvent sourceAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback) {
+    public void patch(final AppleVppTokenTroubleshootingEvent sourceAppleVppTokenTroubleshootingEvent, final ICallback<? super AppleVppTokenTroubleshootingEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleVppTokenTroubleshootingEvent);
     }
 
@@ -96,7 +96,7 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
      * @param newAppleVppTokenTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback) {
+    public void post(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<? super AppleVppTokenTroubleshootingEvent> callback) {
         send(HttpMethod.POST, callback, newAppleVppTokenTroubleshootingEvent);
     }
 
@@ -117,7 +117,7 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
      * @param newAppleVppTokenTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback) {
+    public void put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<? super AppleVppTokenTroubleshootingEvent> callback) {
         send(HttpMethod.PUT, callback, newAppleVppTokenTroubleshootingEvent);
     }
 
@@ -151,17 +151,6 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
      */
      public IAppleVppTokenTroubleshootingEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppleVppTokenTroubleshootingEventRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAppleVppTokenTroubleshootingEventRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AppleVppTokenTroubleshootingEventRequest)this;
      }
 

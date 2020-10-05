@@ -37,7 +37,7 @@ public class TimeCardConfirmRequest extends BaseRequest implements ITimeCardConf
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<TimeCard> callback) {
+    public void post(final ICallback<? super TimeCard> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class TimeCardConfirmRequest extends BaseRequest implements ITimeCardConf
      */
     public ITimeCardConfirmRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TimeCardConfirmRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITimeCardConfirmRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TimeCardConfirmRequest)this;
     }
 

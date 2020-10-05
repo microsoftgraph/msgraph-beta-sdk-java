@@ -21,7 +21,7 @@ public interface IFinancialsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Financials> callback);
+    void get(final ICallback<? super Financials> callback);
 
     /**
      * Gets the Financials from the service
@@ -36,7 +36,7 @@ public interface IFinancialsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Financials> callback);
+    void delete(final ICallback<? super Financials> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFinancialsRequest extends IHttpRequest {
      * @param sourceFinancials the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Financials sourceFinancials, final ICallback<Financials> callback);
+    void patch(final Financials sourceFinancials, final ICallback<? super Financials> callback);
 
     /**
      * Patches this Financials with a source
@@ -68,7 +68,7 @@ public interface IFinancialsRequest extends IHttpRequest {
      * @param newFinancials the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Financials newFinancials, final ICallback<Financials> callback);
+    void post(final Financials newFinancials, final ICallback<? super Financials> callback);
 
     /**
      * Posts a Financials with a new object
@@ -85,7 +85,7 @@ public interface IFinancialsRequest extends IHttpRequest {
      * @param newFinancials the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Financials newFinancials, final ICallback<Financials> callback);
+    void put(final Financials newFinancials, final ICallback<? super Financials> callback);
 
     /**
      * Posts a Financials with a new object

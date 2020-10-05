@@ -41,7 +41,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Financials> callback) {
+    public void get(final ICallback<? super Financials> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Financials> callback) {
+    public void delete(final ICallback<? super Financials> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param sourceFinancials the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Financials sourceFinancials, final ICallback<Financials> callback) {
+    public void patch(final Financials sourceFinancials, final ICallback<? super Financials> callback) {
         send(HttpMethod.PATCH, callback, sourceFinancials);
     }
 
@@ -100,7 +100,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param newFinancials the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Financials newFinancials, final ICallback<Financials> callback) {
+    public void post(final Financials newFinancials, final ICallback<? super Financials> callback) {
         send(HttpMethod.POST, callback, newFinancials);
     }
 
@@ -121,7 +121,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param newFinancials the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Financials newFinancials, final ICallback<Financials> callback) {
+    public void put(final Financials newFinancials, final ICallback<? super Financials> callback) {
         send(HttpMethod.PUT, callback, newFinancials);
     }
 
@@ -155,17 +155,6 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      */
      public IFinancialsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FinancialsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IFinancialsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (FinancialsRequest)this;
      }
 

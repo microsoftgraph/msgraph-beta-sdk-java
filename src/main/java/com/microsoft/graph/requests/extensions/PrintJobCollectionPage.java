@@ -23,6 +23,6 @@ public class PrintJobCollectionPage extends BaseCollectionPage<PrintJob, IPrintJ
      * @param builder  the request builder for the next collection page
      */
     public PrintJobCollectionPage(final PrintJobCollectionResponse response, final IPrintJobCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

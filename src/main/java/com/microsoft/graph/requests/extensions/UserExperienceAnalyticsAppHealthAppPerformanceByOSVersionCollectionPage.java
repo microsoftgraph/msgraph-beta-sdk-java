@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollection
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse response, final IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

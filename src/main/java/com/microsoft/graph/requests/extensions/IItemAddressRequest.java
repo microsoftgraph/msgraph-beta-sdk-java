@@ -21,7 +21,7 @@ public interface IItemAddressRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemAddress> callback);
+    void get(final ICallback<? super ItemAddress> callback);
 
     /**
      * Gets the ItemAddress from the service
@@ -36,7 +36,7 @@ public interface IItemAddressRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemAddress> callback);
+    void delete(final ICallback<? super ItemAddress> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemAddressRequest extends IHttpRequest {
      * @param sourceItemAddress the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemAddress sourceItemAddress, final ICallback<ItemAddress> callback);
+    void patch(final ItemAddress sourceItemAddress, final ICallback<? super ItemAddress> callback);
 
     /**
      * Patches this ItemAddress with a source
@@ -68,7 +68,7 @@ public interface IItemAddressRequest extends IHttpRequest {
      * @param newItemAddress the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemAddress newItemAddress, final ICallback<ItemAddress> callback);
+    void post(final ItemAddress newItemAddress, final ICallback<? super ItemAddress> callback);
 
     /**
      * Posts a ItemAddress with a new object
@@ -85,7 +85,7 @@ public interface IItemAddressRequest extends IHttpRequest {
      * @param newItemAddress the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemAddress newItemAddress, final ICallback<ItemAddress> callback);
+    void put(final ItemAddress newItemAddress, final ICallback<? super ItemAddress> callback);
 
     /**
      * Posts a ItemAddress with a new object

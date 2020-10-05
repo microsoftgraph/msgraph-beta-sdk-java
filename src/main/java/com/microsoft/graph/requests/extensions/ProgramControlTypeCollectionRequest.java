@@ -39,7 +39,7 @@ public class ProgramControlTypeCollectionRequest extends BaseCollectionRequest<P
         super(requestUrl, client, requestOptions, ProgramControlTypeCollectionResponse.class, IProgramControlTypeCollectionPage.class);
     }
 
-    public void get(final ICallback<IProgramControlTypeCollectionPage> callback) {
+    public void get(final ICallback<? super IProgramControlTypeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ProgramControlTypeCollectionRequest extends BaseCollectionRequest<P
         return buildFromResponse(response);
     }
 
-    public void post(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback) {
+    public void post(final ProgramControlType newProgramControlType, final ICallback<? super ProgramControlType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProgramControlTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ProgramControlTypeCollectionRequest extends BaseCollectionRequest<P
      */
     public IProgramControlTypeCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ProgramControlTypeCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IProgramControlTypeCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ProgramControlTypeCollectionRequest)this;
     }
 

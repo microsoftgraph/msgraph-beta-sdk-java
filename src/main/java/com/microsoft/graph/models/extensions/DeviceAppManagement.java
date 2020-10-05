@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.MicrosoftStoreForBusinessPortalSelectionOptions;
 import com.microsoft.graph.models.extensions.ManagedEBookCategory;
@@ -35,51 +34,28 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionWipeAct
 import com.microsoft.graph.models.extensions.DeviceAppManagementTask;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionPage;
-import com.microsoft.graph.requests.extensions.EnterpriseCodeSigningCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.EnterpriseCodeSigningCertificateCollectionPage;
-import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
-import com.microsoft.graph.requests.extensions.PolicySetCollectionResponse;
 import com.microsoft.graph.requests.extensions.PolicySetCollectionPage;
-import com.microsoft.graph.requests.extensions.SideLoadingKeyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SideLoadingKeyCollectionPage;
-import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionPage;
-import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceAppManagementTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementTaskCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyCollectionPage;
 
 
@@ -376,371 +352,95 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedEBookCategories")) {
-            final ManagedEBookCategoryCollectionResponse response = new ManagedEBookCategoryCollectionResponse();
-            if (json.has("managedEBookCategories@odata.nextLink")) {
-                response.nextLink = json.get("managedEBookCategories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedEBookCategories").toString(), JsonObject[].class);
-            final ManagedEBookCategory[] array = new ManagedEBookCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBookCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedEBookCategories = new ManagedEBookCategoryCollectionPage(response, null);
+            managedEBookCategories = serializer.deserializeObject(json.get("managedEBookCategories").toString(), ManagedEBookCategoryCollectionPage.class);
         }
 
         if (json.has("enterpriseCodeSigningCertificates")) {
-            final EnterpriseCodeSigningCertificateCollectionResponse response = new EnterpriseCodeSigningCertificateCollectionResponse();
-            if (json.has("enterpriseCodeSigningCertificates@odata.nextLink")) {
-                response.nextLink = json.get("enterpriseCodeSigningCertificates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("enterpriseCodeSigningCertificates").toString(), JsonObject[].class);
-            final EnterpriseCodeSigningCertificate[] array = new EnterpriseCodeSigningCertificate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EnterpriseCodeSigningCertificate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            enterpriseCodeSigningCertificates = new EnterpriseCodeSigningCertificateCollectionPage(response, null);
+            enterpriseCodeSigningCertificates = serializer.deserializeObject(json.get("enterpriseCodeSigningCertificates").toString(), EnterpriseCodeSigningCertificateCollectionPage.class);
         }
 
         if (json.has("iosLobAppProvisioningConfigurations")) {
-            final IosLobAppProvisioningConfigurationCollectionResponse response = new IosLobAppProvisioningConfigurationCollectionResponse();
-            if (json.has("iosLobAppProvisioningConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("iosLobAppProvisioningConfigurations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("iosLobAppProvisioningConfigurations").toString(), JsonObject[].class);
-            final IosLobAppProvisioningConfiguration[] array = new IosLobAppProvisioningConfiguration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosLobAppProvisioningConfiguration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            iosLobAppProvisioningConfigurations = new IosLobAppProvisioningConfigurationCollectionPage(response, null);
+            iosLobAppProvisioningConfigurations = serializer.deserializeObject(json.get("iosLobAppProvisioningConfigurations").toString(), IosLobAppProvisioningConfigurationCollectionPage.class);
         }
 
         if (json.has("mobileAppCategories")) {
-            final MobileAppCategoryCollectionResponse response = new MobileAppCategoryCollectionResponse();
-            if (json.has("mobileAppCategories@odata.nextLink")) {
-                response.nextLink = json.get("mobileAppCategories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mobileAppCategories").toString(), JsonObject[].class);
-            final MobileAppCategory[] array = new MobileAppCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            mobileAppCategories = new MobileAppCategoryCollectionPage(response, null);
+            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories").toString(), MobileAppCategoryCollectionPage.class);
         }
 
         if (json.has("mobileAppConfigurations")) {
-            final ManagedDeviceMobileAppConfigurationCollectionResponse response = new ManagedDeviceMobileAppConfigurationCollectionResponse();
-            if (json.has("mobileAppConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("mobileAppConfigurations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mobileAppConfigurations").toString(), JsonObject[].class);
-            final ManagedDeviceMobileAppConfiguration[] array = new ManagedDeviceMobileAppConfiguration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceMobileAppConfiguration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            mobileAppConfigurations = new ManagedDeviceMobileAppConfigurationCollectionPage(response, null);
+            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations").toString(), ManagedDeviceMobileAppConfigurationCollectionPage.class);
         }
 
         if (json.has("mobileApps")) {
-            final MobileAppCollectionResponse response = new MobileAppCollectionResponse();
-            if (json.has("mobileApps@odata.nextLink")) {
-                response.nextLink = json.get("mobileApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mobileApps").toString(), JsonObject[].class);
-            final MobileApp[] array = new MobileApp[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileApp.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            mobileApps = new MobileAppCollectionPage(response, null);
+            mobileApps = serializer.deserializeObject(json.get("mobileApps").toString(), MobileAppCollectionPage.class);
         }
 
         if (json.has("managedEBooks")) {
-            final ManagedEBookCollectionResponse response = new ManagedEBookCollectionResponse();
-            if (json.has("managedEBooks@odata.nextLink")) {
-                response.nextLink = json.get("managedEBooks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedEBooks").toString(), JsonObject[].class);
-            final ManagedEBook[] array = new ManagedEBook[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBook.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedEBooks = new ManagedEBookCollectionPage(response, null);
+            managedEBooks = serializer.deserializeObject(json.get("managedEBooks").toString(), ManagedEBookCollectionPage.class);
         }
 
         if (json.has("policySets")) {
-            final PolicySetCollectionResponse response = new PolicySetCollectionResponse();
-            if (json.has("policySets@odata.nextLink")) {
-                response.nextLink = json.get("policySets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policySets").toString(), JsonObject[].class);
-            final PolicySet[] array = new PolicySet[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PolicySet.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            policySets = new PolicySetCollectionPage(response, null);
+            policySets = serializer.deserializeObject(json.get("policySets").toString(), PolicySetCollectionPage.class);
         }
 
         if (json.has("sideLoadingKeys")) {
-            final SideLoadingKeyCollectionResponse response = new SideLoadingKeyCollectionResponse();
-            if (json.has("sideLoadingKeys@odata.nextLink")) {
-                response.nextLink = json.get("sideLoadingKeys@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sideLoadingKeys").toString(), JsonObject[].class);
-            final SideLoadingKey[] array = new SideLoadingKey[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SideLoadingKey.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sideLoadingKeys = new SideLoadingKeyCollectionPage(response, null);
+            sideLoadingKeys = serializer.deserializeObject(json.get("sideLoadingKeys").toString(), SideLoadingKeyCollectionPage.class);
         }
 
         if (json.has("vppTokens")) {
-            final VppTokenCollectionResponse response = new VppTokenCollectionResponse();
-            if (json.has("vppTokens@odata.nextLink")) {
-                response.nextLink = json.get("vppTokens@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("vppTokens").toString(), JsonObject[].class);
-            final VppToken[] array = new VppToken[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), VppToken.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            vppTokens = new VppTokenCollectionPage(response, null);
+            vppTokens = serializer.deserializeObject(json.get("vppTokens").toString(), VppTokenCollectionPage.class);
         }
 
         if (json.has("androidManagedAppProtections")) {
-            final AndroidManagedAppProtectionCollectionResponse response = new AndroidManagedAppProtectionCollectionResponse();
-            if (json.has("androidManagedAppProtections@odata.nextLink")) {
-                response.nextLink = json.get("androidManagedAppProtections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("androidManagedAppProtections").toString(), JsonObject[].class);
-            final AndroidManagedAppProtection[] array = new AndroidManagedAppProtection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AndroidManagedAppProtection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            androidManagedAppProtections = new AndroidManagedAppProtectionCollectionPage(response, null);
+            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections").toString(), AndroidManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("defaultManagedAppProtections")) {
-            final DefaultManagedAppProtectionCollectionResponse response = new DefaultManagedAppProtectionCollectionResponse();
-            if (json.has("defaultManagedAppProtections@odata.nextLink")) {
-                response.nextLink = json.get("defaultManagedAppProtections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("defaultManagedAppProtections").toString(), JsonObject[].class);
-            final DefaultManagedAppProtection[] array = new DefaultManagedAppProtection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DefaultManagedAppProtection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            defaultManagedAppProtections = new DefaultManagedAppProtectionCollectionPage(response, null);
+            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections").toString(), DefaultManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("iosManagedAppProtections")) {
-            final IosManagedAppProtectionCollectionResponse response = new IosManagedAppProtectionCollectionResponse();
-            if (json.has("iosManagedAppProtections@odata.nextLink")) {
-                response.nextLink = json.get("iosManagedAppProtections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), JsonObject[].class);
-            final IosManagedAppProtection[] array = new IosManagedAppProtection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosManagedAppProtection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            iosManagedAppProtections = new IosManagedAppProtectionCollectionPage(response, null);
+            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), IosManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("managedAppPolicies")) {
-            final ManagedAppPolicyCollectionResponse response = new ManagedAppPolicyCollectionResponse();
-            if (json.has("managedAppPolicies@odata.nextLink")) {
-                response.nextLink = json.get("managedAppPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppPolicies").toString(), JsonObject[].class);
-            final ManagedAppPolicy[] array = new ManagedAppPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedAppPolicies = new ManagedAppPolicyCollectionPage(response, null);
+            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies").toString(), ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("managedAppRegistrations")) {
-            final ManagedAppRegistrationCollectionResponse response = new ManagedAppRegistrationCollectionResponse();
-            if (json.has("managedAppRegistrations@odata.nextLink")) {
-                response.nextLink = json.get("managedAppRegistrations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), JsonObject[].class);
-            final ManagedAppRegistration[] array = new ManagedAppRegistration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppRegistration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedAppRegistrations = new ManagedAppRegistrationCollectionPage(response, null);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), ManagedAppRegistrationCollectionPage.class);
         }
 
         if (json.has("managedAppStatuses")) {
-            final ManagedAppStatusCollectionResponse response = new ManagedAppStatusCollectionResponse();
-            if (json.has("managedAppStatuses@odata.nextLink")) {
-                response.nextLink = json.get("managedAppStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppStatuses").toString(), JsonObject[].class);
-            final ManagedAppStatus[] array = new ManagedAppStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedAppStatuses = new ManagedAppStatusCollectionPage(response, null);
+            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses").toString(), ManagedAppStatusCollectionPage.class);
         }
 
         if (json.has("mdmWindowsInformationProtectionPolicies")) {
-            final MdmWindowsInformationProtectionPolicyCollectionResponse response = new MdmWindowsInformationProtectionPolicyCollectionResponse();
-            if (json.has("mdmWindowsInformationProtectionPolicies@odata.nextLink")) {
-                response.nextLink = json.get("mdmWindowsInformationProtectionPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), JsonObject[].class);
-            final MdmWindowsInformationProtectionPolicy[] array = new MdmWindowsInformationProtectionPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MdmWindowsInformationProtectionPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            mdmWindowsInformationProtectionPolicies = new MdmWindowsInformationProtectionPolicyCollectionPage(response, null);
+            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), MdmWindowsInformationProtectionPolicyCollectionPage.class);
         }
 
         if (json.has("targetedManagedAppConfigurations")) {
-            final TargetedManagedAppConfigurationCollectionResponse response = new TargetedManagedAppConfigurationCollectionResponse();
-            if (json.has("targetedManagedAppConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("targetedManagedAppConfigurations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), JsonObject[].class);
-            final TargetedManagedAppConfiguration[] array = new TargetedManagedAppConfiguration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TargetedManagedAppConfiguration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            targetedManagedAppConfigurations = new TargetedManagedAppConfigurationCollectionPage(response, null);
+            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), TargetedManagedAppConfigurationCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionDeviceRegistrations")) {
-            final WindowsInformationProtectionDeviceRegistrationCollectionResponse response = new WindowsInformationProtectionDeviceRegistrationCollectionResponse();
-            if (json.has("windowsInformationProtectionDeviceRegistrations@odata.nextLink")) {
-                response.nextLink = json.get("windowsInformationProtectionDeviceRegistrations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations").toString(), JsonObject[].class);
-            final WindowsInformationProtectionDeviceRegistration[] array = new WindowsInformationProtectionDeviceRegistration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionDeviceRegistration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            windowsInformationProtectionDeviceRegistrations = new WindowsInformationProtectionDeviceRegistrationCollectionPage(response, null);
+            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations").toString(), WindowsInformationProtectionDeviceRegistrationCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionPolicies")) {
-            final WindowsInformationProtectionPolicyCollectionResponse response = new WindowsInformationProtectionPolicyCollectionResponse();
-            if (json.has("windowsInformationProtectionPolicies@odata.nextLink")) {
-                response.nextLink = json.get("windowsInformationProtectionPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), JsonObject[].class);
-            final WindowsInformationProtectionPolicy[] array = new WindowsInformationProtectionPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            windowsInformationProtectionPolicies = new WindowsInformationProtectionPolicyCollectionPage(response, null);
+            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), WindowsInformationProtectionPolicyCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionWipeActions")) {
-            final WindowsInformationProtectionWipeActionCollectionResponse response = new WindowsInformationProtectionWipeActionCollectionResponse();
-            if (json.has("windowsInformationProtectionWipeActions@odata.nextLink")) {
-                response.nextLink = json.get("windowsInformationProtectionWipeActions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionWipeActions").toString(), JsonObject[].class);
-            final WindowsInformationProtectionWipeAction[] array = new WindowsInformationProtectionWipeAction[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionWipeAction.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            windowsInformationProtectionWipeActions = new WindowsInformationProtectionWipeActionCollectionPage(response, null);
+            windowsInformationProtectionWipeActions = serializer.deserializeObject(json.get("windowsInformationProtectionWipeActions").toString(), WindowsInformationProtectionWipeActionCollectionPage.class);
         }
 
         if (json.has("deviceAppManagementTasks")) {
-            final DeviceAppManagementTaskCollectionResponse response = new DeviceAppManagementTaskCollectionResponse();
-            if (json.has("deviceAppManagementTasks@odata.nextLink")) {
-                response.nextLink = json.get("deviceAppManagementTasks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceAppManagementTasks").toString(), JsonObject[].class);
-            final DeviceAppManagementTask[] array = new DeviceAppManagementTask[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceAppManagementTask.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceAppManagementTasks = new DeviceAppManagementTaskCollectionPage(response, null);
+            deviceAppManagementTasks = serializer.deserializeObject(json.get("deviceAppManagementTasks").toString(), DeviceAppManagementTaskCollectionPage.class);
         }
 
         if (json.has("wdacSupplementalPolicies")) {
-            final WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse response = new WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse();
-            if (json.has("wdacSupplementalPolicies@odata.nextLink")) {
-                response.nextLink = json.get("wdacSupplementalPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("wdacSupplementalPolicies").toString(), JsonObject[].class);
-            final WindowsDefenderApplicationControlSupplementalPolicy[] array = new WindowsDefenderApplicationControlSupplementalPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsDefenderApplicationControlSupplementalPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            wdacSupplementalPolicies = new WindowsDefenderApplicationControlSupplementalPolicyCollectionPage(response, null);
+            wdacSupplementalPolicies = serializer.deserializeObject(json.get("wdacSupplementalPolicies").toString(), WindowsDefenderApplicationControlSupplementalPolicyCollectionPage.class);
         }
     }
 }

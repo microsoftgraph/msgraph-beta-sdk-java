@@ -21,7 +21,7 @@ public interface ISharePointActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointActivityUserDetail> callback);
+    void get(final ICallback<? super SharePointActivityUserDetail> callback);
 
     /**
      * Gets the SharePointActivityUserDetail from the service
@@ -36,7 +36,7 @@ public interface ISharePointActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointActivityUserDetail> callback);
+    void delete(final ICallback<? super SharePointActivityUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointActivityUserDetailRequest extends IHttpRequest {
      * @param sourceSharePointActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointActivityUserDetail sourceSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback);
+    void patch(final SharePointActivityUserDetail sourceSharePointActivityUserDetail, final ICallback<? super SharePointActivityUserDetail> callback);
 
     /**
      * Patches this SharePointActivityUserDetail with a source
@@ -68,7 +68,7 @@ public interface ISharePointActivityUserDetailRequest extends IHttpRequest {
      * @param newSharePointActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback);
+    void post(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<? super SharePointActivityUserDetail> callback);
 
     /**
      * Posts a SharePointActivityUserDetail with a new object
@@ -85,7 +85,7 @@ public interface ISharePointActivityUserDetailRequest extends IHttpRequest {
      * @param newSharePointActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback);
+    void put(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<? super SharePointActivityUserDetail> callback);
 
     /**
      * Posts a SharePointActivityUserDetail with a new object

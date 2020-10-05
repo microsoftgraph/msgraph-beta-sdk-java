@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPlannerPlanWithReferenceRequest extends IHttpRequest {
 
-    void post(final PlannerPlan newPlannerPlan, final IJsonBackedObject payload, final ICallback<PlannerPlan> callback);
+    void post(final PlannerPlan newPlannerPlan, final IJsonBackedObject payload, final ICallback<? super PlannerPlan> callback);
 
     PlannerPlan post(final PlannerPlan newPlannerPlan, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<PlannerPlan> callback);
+    void get(final ICallback<? super PlannerPlan> callback);
 
     PlannerPlan get() throws ClientException;
 
-	void delete(final ICallback<PlannerPlan> callback);
+	void delete(final ICallback<? super PlannerPlan> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final PlannerPlan sourcePlannerPlan, final ICallback<PlannerPlan> callback);
+	void patch(final PlannerPlan sourcePlannerPlan, final ICallback<? super PlannerPlan> callback);
 
 	PlannerPlan patch(final PlannerPlan sourcePlannerPlan) throws ClientException;
 

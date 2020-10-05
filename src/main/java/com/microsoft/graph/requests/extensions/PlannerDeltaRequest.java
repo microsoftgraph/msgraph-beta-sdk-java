@@ -52,7 +52,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PlannerDelta> callback) {
+    public void get(final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PlannerDelta> callback) {
+    public void delete(final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param sourcePlannerDelta the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerDelta sourcePlannerDelta, final ICallback<PlannerDelta> callback) {
+    public void patch(final PlannerDelta sourcePlannerDelta, final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerDelta);
     }
 
@@ -111,7 +111,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param newPlannerDelta the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback) {
+    public void post(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.POST, callback, newPlannerDelta);
     }
 
@@ -132,7 +132,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param newPlannerDelta the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback) {
+    public void put(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.PUT, callback, newPlannerDelta);
     }
 
@@ -166,17 +166,6 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      */
      public IPlannerDeltaRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PlannerDeltaRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPlannerDeltaRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PlannerDeltaRequest)this;
      }
 

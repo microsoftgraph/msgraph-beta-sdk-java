@@ -6,14 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentMultiple;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleCollectionResponse;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleCollectionPage;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionPage;
 
 
@@ -86,35 +83,11 @@ public class RbacApplicationMultiple extends Entity implements IJsonBackedObject
 
 
         if (json.has("roleAssignments")) {
-            final UnifiedRoleAssignmentMultipleCollectionResponse response = new UnifiedRoleAssignmentMultipleCollectionResponse();
-            if (json.has("roleAssignments@odata.nextLink")) {
-                response.nextLink = json.get("roleAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignments").toString(), JsonObject[].class);
-            final UnifiedRoleAssignmentMultiple[] array = new UnifiedRoleAssignmentMultiple[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UnifiedRoleAssignmentMultiple.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleAssignments = new UnifiedRoleAssignmentMultipleCollectionPage(response, null);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), UnifiedRoleAssignmentMultipleCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            final UnifiedRoleDefinitionCollectionResponse response = new UnifiedRoleDefinitionCollectionResponse();
-            if (json.has("roleDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
-            final UnifiedRoleDefinition[] array = new UnifiedRoleDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UnifiedRoleDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleDefinitions = new UnifiedRoleDefinitionCollectionPage(response, null);
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), UnifiedRoleDefinitionCollectionPage.class);
         }
     }
 }

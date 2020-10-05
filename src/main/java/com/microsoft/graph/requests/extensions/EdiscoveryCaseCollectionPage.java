@@ -23,6 +23,6 @@ public class EdiscoveryCaseCollectionPage extends BaseCollectionPage<EdiscoveryC
      * @param builder  the request builder for the next collection page
      */
     public EdiscoveryCaseCollectionPage(final EdiscoveryCaseCollectionResponse response, final IEdiscoveryCaseCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

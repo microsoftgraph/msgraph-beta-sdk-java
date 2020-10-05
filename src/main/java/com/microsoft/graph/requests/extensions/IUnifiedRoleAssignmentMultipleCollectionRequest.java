@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUnifiedRoleAssignmentMultipleCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUnifiedRoleAssignmentMultipleCollectionPage> callback);
+    void get(final ICallback<? super IUnifiedRoleAssignmentMultipleCollectionPage> callback);
 
     IUnifiedRoleAssignmentMultipleCollectionPage get() throws ClientException;
 
-    void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback);
+    void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback);
 
     UnifiedRoleAssignmentMultiple post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUnifiedRoleAssignmentMultipleCollectionRequest extends IHttpRe
      * @return the updated request
      */
     IUnifiedRoleAssignmentMultipleCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUnifiedRoleAssignmentMultipleCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUnifiedRoleAssignmentMultipleCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IUnifiedRoleAssignmentMultipleCollectionRequest skipToken(String skipToken);
+	IUnifiedRoleAssignmentMultipleCollectionRequest skipToken(final String skipToken);
 }

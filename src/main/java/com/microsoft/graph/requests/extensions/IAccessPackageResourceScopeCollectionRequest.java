@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccessPackageResourceScopeCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessPackageResourceScopeCollectionPage> callback);
+    void get(final ICallback<? super IAccessPackageResourceScopeCollectionPage> callback);
 
     IAccessPackageResourceScopeCollectionPage get() throws ClientException;
 
-    void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback);
+    void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback);
 
     AccessPackageResourceScope post(final AccessPackageResourceScope newAccessPackageResourceScope) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAccessPackageResourceScopeCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IAccessPackageResourceScopeCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccessPackageResourceScopeCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAccessPackageResourceScopeCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IAccessPackageResourceScopeCollectionRequest skipToken(String skipToken);
+	IAccessPackageResourceScopeCollectionRequest skipToken(final String skipToken);
 }

@@ -35,7 +35,7 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
         super(requestUrl, client, requestOptions, PrivilegedRoleSettings.class);
     }
 
-    public void post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final IJsonBackedObject payload, final ICallback<PrivilegedRoleSettings> callback) {
+    public void post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final IJsonBackedObject payload, final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
         return null;
     }
 
-    public void get(final ICallback<PrivilegedRoleSettings> callback) {
+    public void get(final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<PrivilegedRoleSettings> callback) {
+	public void delete(final ICallback<? super PrivilegedRoleSettings> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings, final ICallback<PrivilegedRoleSettings> callback) {
+	public void patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback) {
 		send(HttpMethod.PATCH, callback, sourcePrivilegedRoleSettings);
 	}
 
@@ -91,16 +91,6 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
      */
     public IPrivilegedRoleSettingsWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleSettingsWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleSettingsWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrivilegedRoleSettingsWithReferenceRequest)this;
     }
 }

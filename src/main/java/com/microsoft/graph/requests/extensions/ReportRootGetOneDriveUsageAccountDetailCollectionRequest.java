@@ -39,7 +39,7 @@ public class ReportRootGetOneDriveUsageAccountDetailCollectionRequest extends Ba
     }
 
 
-    public void get(final ICallback<IReportRootGetOneDriveUsageAccountDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOneDriveUsageAccountDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOneDriveUsageAccountDetailCollectionRequest extends Ba
      */
     public IReportRootGetOneDriveUsageAccountDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOneDriveUsageAccountDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOneDriveUsageAccountDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOneDriveUsageAccountDetailCollectionRequest)this;
     }
 

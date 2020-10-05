@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppScope;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AppScopeCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppScopeCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
@@ -155,51 +152,15 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
 
         if (json.has("appScopes")) {
-            final AppScopeCollectionResponse response = new AppScopeCollectionResponse();
-            if (json.has("appScopes@odata.nextLink")) {
-                response.nextLink = json.get("appScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appScopes").toString(), JsonObject[].class);
-            final AppScope[] array = new AppScope[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppScope.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            appScopes = new AppScopeCollectionPage(response, null);
+            appScopes = serializer.deserializeObject(json.get("appScopes").toString(), AppScopeCollectionPage.class);
         }
 
         if (json.has("directoryScopes")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("directoryScopes@odata.nextLink")) {
-                response.nextLink = json.get("directoryScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("directoryScopes").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            directoryScopes = new DirectoryObjectCollectionPage(response, null);
+            directoryScopes = serializer.deserializeObject(json.get("directoryScopes").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("principals")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("principals@odata.nextLink")) {
-                response.nextLink = json.get("principals@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("principals").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            principals = new DirectoryObjectCollectionPage(response, null);
+            principals = serializer.deserializeObject(json.get("principals").toString(), DirectoryObjectCollectionPage.class);
         }
     }
 }

@@ -41,7 +41,7 @@ public class TiIndicatorCollectionRequest extends BaseCollectionRequest<TiIndica
         super(requestUrl, client, requestOptions, TiIndicatorCollectionResponse.class, ITiIndicatorCollectionPage.class);
     }
 
-    public void get(final ICallback<ITiIndicatorCollectionPage> callback) {
+    public void get(final ICallback<? super ITiIndicatorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class TiIndicatorCollectionRequest extends BaseCollectionRequest<TiIndica
         return buildFromResponse(response);
     }
 
-    public void post(final TiIndicator newTiIndicator, final ICallback<TiIndicator> callback) {
+    public void post(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TiIndicatorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class TiIndicatorCollectionRequest extends BaseCollectionRequest<TiIndica
      */
     public ITiIndicatorCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TiIndicatorCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITiIndicatorCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TiIndicatorCollectionRequest)this;
     }
 

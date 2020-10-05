@@ -37,7 +37,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PersonCertification> callback) {
+    public void get(final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PersonCertification> callback) {
+    public void delete(final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param sourcePersonCertification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonCertification sourcePersonCertification, final ICallback<PersonCertification> callback) {
+    public void patch(final PersonCertification sourcePersonCertification, final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonCertification);
     }
 
@@ -96,7 +96,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param newPersonCertification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback) {
+    public void post(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.POST, callback, newPersonCertification);
     }
 
@@ -117,7 +117,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param newPersonCertification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback) {
+    public void put(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.PUT, callback, newPersonCertification);
     }
 
@@ -151,17 +151,6 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      */
      public IPersonCertificationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonCertificationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPersonCertificationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonCertificationRequest)this;
      }
 

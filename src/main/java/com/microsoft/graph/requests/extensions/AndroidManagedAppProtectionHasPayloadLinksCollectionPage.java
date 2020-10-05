@@ -34,6 +34,6 @@ public class AndroidManagedAppProtectionHasPayloadLinksCollectionPage extends Ba
      * @param builder The request builder for the next collection page
      */
     public AndroidManagedAppProtectionHasPayloadLinksCollectionPage(final AndroidManagedAppProtectionHasPayloadLinksCollectionResponse response, final IAndroidManagedAppProtectionHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIosLobAppProvisioningConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIosLobAppProvisioningConfigurationCollectionPage> callback);
+    void get(final ICallback<? super IIosLobAppProvisioningConfigurationCollectionPage> callback);
 
     IIosLobAppProvisioningConfigurationCollectionPage get() throws ClientException;
 
-    void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback);
+    void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback);
 
     IosLobAppProvisioningConfiguration post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException;
 
@@ -48,6 +48,14 @@ public interface IIosLobAppProvisioningConfigurationCollectionRequest extends IH
      * @return the updated request
      */
     IIosLobAppProvisioningConfigurationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IIosLobAppProvisioningConfigurationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -80,5 +88,5 @@ public interface IIosLobAppProvisioningConfigurationCollectionRequest extends IH
      *
 	 * @return the updated request
 	 */
-	IIosLobAppProvisioningConfigurationCollectionRequest skipToken(String skipToken);
+	IIosLobAppProvisioningConfigurationCollectionRequest skipToken(final String skipToken);
 }

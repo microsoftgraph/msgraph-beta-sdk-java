@@ -40,7 +40,7 @@ public class PolicySetAssignmentCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, PolicySetAssignmentCollectionResponse.class, IPolicySetAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IPolicySetAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IPolicySetAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PolicySetAssignmentCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final PolicySetAssignment newPolicySetAssignment, final ICallback<PolicySetAssignment> callback) {
+    public void post(final PolicySetAssignment newPolicySetAssignment, final ICallback<? super PolicySetAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PolicySetAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PolicySetAssignmentCollectionRequest extends BaseCollectionRequest<
      */
     public IPolicySetAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PolicySetAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPolicySetAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PolicySetAssignmentCollectionRequest)this;
     }
 

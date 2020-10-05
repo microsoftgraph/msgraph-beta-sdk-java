@@ -34,6 +34,6 @@ public class ReportRootGetYammerDeviceUsageUserCountsCollectionPage extends Base
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetYammerDeviceUsageUserCountsCollectionPage(final ReportRootGetYammerDeviceUsageUserCountsCollectionResponse response, final IReportRootGetYammerDeviceUsageUserCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

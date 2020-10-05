@@ -40,7 +40,7 @@ public class WebAccountCollectionRequest extends BaseCollectionRequest<WebAccoun
         super(requestUrl, client, requestOptions, WebAccountCollectionResponse.class, IWebAccountCollectionPage.class);
     }
 
-    public void get(final ICallback<IWebAccountCollectionPage> callback) {
+    public void get(final ICallback<? super IWebAccountCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WebAccountCollectionRequest extends BaseCollectionRequest<WebAccoun
         return buildFromResponse(response);
     }
 
-    public void post(final WebAccount newWebAccount, final ICallback<WebAccount> callback) {
+    public void post(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WebAccountRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WebAccountCollectionRequest extends BaseCollectionRequest<WebAccoun
      */
     public IWebAccountCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WebAccountCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWebAccountCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WebAccountCollectionRequest)this;
     }
 

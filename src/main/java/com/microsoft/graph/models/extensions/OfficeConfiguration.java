@@ -6,13 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.OfficeClientCheckinStatus;
 import com.microsoft.graph.models.extensions.OfficeUserCheckinSummary;
 import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionPage;
 
 
@@ -25,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Office Configuration.
  */
-public class OfficeConfiguration extends Entity implements IJsonBackedObject {
+public class OfficeConfiguration implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Tenant Checkin Statuses.
@@ -93,19 +100,7 @@ public class OfficeConfiguration extends Entity implements IJsonBackedObject {
 
 
         if (json.has("clientConfigurations")) {
-            final OfficeClientConfigurationCollectionResponse response = new OfficeClientConfigurationCollectionResponse();
-            if (json.has("clientConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("clientConfigurations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("clientConfigurations").toString(), JsonObject[].class);
-            final OfficeClientConfiguration[] array = new OfficeClientConfiguration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OfficeClientConfiguration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            clientConfigurations = new OfficeClientConfigurationCollectionPage(response, null);
+            clientConfigurations = serializer.deserializeObject(json.get("clientConfigurations").toString(), OfficeClientConfigurationCollectionPage.class);
         }
     }
 }

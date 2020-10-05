@@ -21,7 +21,7 @@ public interface IMailboxUsageStorageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailboxUsageStorage> callback);
+    void get(final ICallback<? super MailboxUsageStorage> callback);
 
     /**
      * Gets the MailboxUsageStorage from the service
@@ -36,7 +36,7 @@ public interface IMailboxUsageStorageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailboxUsageStorage> callback);
+    void delete(final ICallback<? super MailboxUsageStorage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailboxUsageStorageRequest extends IHttpRequest {
      * @param sourceMailboxUsageStorage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailboxUsageStorage sourceMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback);
+    void patch(final MailboxUsageStorage sourceMailboxUsageStorage, final ICallback<? super MailboxUsageStorage> callback);
 
     /**
      * Patches this MailboxUsageStorage with a source
@@ -68,7 +68,7 @@ public interface IMailboxUsageStorageRequest extends IHttpRequest {
      * @param newMailboxUsageStorage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback);
+    void post(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<? super MailboxUsageStorage> callback);
 
     /**
      * Posts a MailboxUsageStorage with a new object
@@ -85,7 +85,7 @@ public interface IMailboxUsageStorageRequest extends IHttpRequest {
      * @param newMailboxUsageStorage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback);
+    void put(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<? super MailboxUsageStorage> callback);
 
     /**
      * Posts a MailboxUsageStorage with a new object

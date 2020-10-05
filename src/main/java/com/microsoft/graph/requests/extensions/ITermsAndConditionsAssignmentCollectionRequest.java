@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITermsAndConditionsAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITermsAndConditionsAssignmentCollectionPage> callback);
+    void get(final ICallback<? super ITermsAndConditionsAssignmentCollectionPage> callback);
 
     ITermsAndConditionsAssignmentCollectionPage get() throws ClientException;
 
-    void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<TermsAndConditionsAssignment> callback);
+    void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback);
 
     TermsAndConditionsAssignment post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITermsAndConditionsAssignmentCollectionRequest extends IHttpReq
      * @return the updated request
      */
     ITermsAndConditionsAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITermsAndConditionsAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITermsAndConditionsAssignmentCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	ITermsAndConditionsAssignmentCollectionRequest skipToken(String skipToken);
+	ITermsAndConditionsAssignmentCollectionRequest skipToken(final String skipToken);
 }

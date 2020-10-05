@@ -21,7 +21,7 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81ImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super WindowsPhone81ImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the WindowsPhone81ImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81ImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super WindowsPhone81ImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequest extends IHt
      * @param sourceWindowsPhone81ImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81ImportedPFXCertificateProfile sourceWindowsPhone81ImportedPFXCertificateProfile, final ICallback<WindowsPhone81ImportedPFXCertificateProfile> callback);
+    void patch(final WindowsPhone81ImportedPFXCertificateProfile sourceWindowsPhone81ImportedPFXCertificateProfile, final ICallback<? super WindowsPhone81ImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this WindowsPhone81ImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequest extends IHt
      * @param newWindowsPhone81ImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile, final ICallback<WindowsPhone81ImportedPFXCertificateProfile> callback);
+    void post(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile, final ICallback<? super WindowsPhone81ImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a WindowsPhone81ImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequest extends IHt
      * @param newWindowsPhone81ImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile, final ICallback<WindowsPhone81ImportedPFXCertificateProfile> callback);
+    void put(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile, final ICallback<? super WindowsPhone81ImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a WindowsPhone81ImportedPFXCertificateProfile with a new object

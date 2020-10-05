@@ -21,7 +21,7 @@ public interface IGovernanceRoleSettingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GovernanceRoleSetting> callback);
+    void get(final ICallback<? super GovernanceRoleSetting> callback);
 
     /**
      * Gets the GovernanceRoleSetting from the service
@@ -36,7 +36,7 @@ public interface IGovernanceRoleSettingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GovernanceRoleSetting> callback);
+    void delete(final ICallback<? super GovernanceRoleSetting> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGovernanceRoleSettingRequest extends IHttpRequest {
      * @param sourceGovernanceRoleSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GovernanceRoleSetting sourceGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback);
+    void patch(final GovernanceRoleSetting sourceGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback);
 
     /**
      * Patches this GovernanceRoleSetting with a source
@@ -68,7 +68,7 @@ public interface IGovernanceRoleSettingRequest extends IHttpRequest {
      * @param newGovernanceRoleSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback);
+    void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback);
 
     /**
      * Posts a GovernanceRoleSetting with a new object
@@ -85,7 +85,7 @@ public interface IGovernanceRoleSettingRequest extends IHttpRequest {
      * @param newGovernanceRoleSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback);
+    void put(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<? super GovernanceRoleSetting> callback);
 
     /**
      * Posts a GovernanceRoleSetting with a new object

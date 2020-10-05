@@ -6,18 +6,14 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PlannerFavoritePlanReferenceCollection;
 import com.microsoft.graph.models.extensions.PlannerRecentPlanReferenceCollection;
 import com.microsoft.graph.models.extensions.PlannerDelta;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionPage;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 
 
@@ -126,83 +122,23 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
 
         if (json.has("all")) {
-            final PlannerDeltaCollectionResponse response = new PlannerDeltaCollectionResponse();
-            if (json.has("all@odata.nextLink")) {
-                response.nextLink = json.get("all@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("all").toString(), JsonObject[].class);
-            final PlannerDelta[] array = new PlannerDelta[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerDelta.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            all = new PlannerDeltaCollectionPage(response, null);
+            all = serializer.deserializeObject(json.get("all").toString(), PlannerDeltaCollectionPage.class);
         }
 
         if (json.has("favoritePlans")) {
-            final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
-            if (json.has("favoritePlans@odata.nextLink")) {
-                response.nextLink = json.get("favoritePlans@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("favoritePlans").toString(), JsonObject[].class);
-            final PlannerPlan[] array = new PlannerPlan[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerPlan.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            favoritePlans = new PlannerPlanCollectionPage(response, null);
+            favoritePlans = serializer.deserializeObject(json.get("favoritePlans").toString(), PlannerPlanCollectionPage.class);
         }
 
         if (json.has("plans")) {
-            final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
-            if (json.has("plans@odata.nextLink")) {
-                response.nextLink = json.get("plans@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("plans").toString(), JsonObject[].class);
-            final PlannerPlan[] array = new PlannerPlan[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerPlan.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            plans = new PlannerPlanCollectionPage(response, null);
+            plans = serializer.deserializeObject(json.get("plans").toString(), PlannerPlanCollectionPage.class);
         }
 
         if (json.has("recentPlans")) {
-            final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
-            if (json.has("recentPlans@odata.nextLink")) {
-                response.nextLink = json.get("recentPlans@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("recentPlans").toString(), JsonObject[].class);
-            final PlannerPlan[] array = new PlannerPlan[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerPlan.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            recentPlans = new PlannerPlanCollectionPage(response, null);
+            recentPlans = serializer.deserializeObject(json.get("recentPlans").toString(), PlannerPlanCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            final PlannerTaskCollectionResponse response = new PlannerTaskCollectionResponse();
-            if (json.has("tasks@odata.nextLink")) {
-                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
-            final PlannerTask[] array = new PlannerTask[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerTask.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tasks = new PlannerTaskCollectionPage(response, null);
+            tasks = serializer.deserializeObject(json.get("tasks").toString(), PlannerTaskCollectionPage.class);
         }
     }
 }

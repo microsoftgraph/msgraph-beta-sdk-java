@@ -21,7 +21,7 @@ public interface ISalesCreditMemoRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SalesCreditMemo> callback);
+    void get(final ICallback<? super SalesCreditMemo> callback);
 
     /**
      * Gets the SalesCreditMemo from the service
@@ -36,7 +36,7 @@ public interface ISalesCreditMemoRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SalesCreditMemo> callback);
+    void delete(final ICallback<? super SalesCreditMemo> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISalesCreditMemoRequest extends IHttpRequest {
      * @param sourceSalesCreditMemo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SalesCreditMemo sourceSalesCreditMemo, final ICallback<SalesCreditMemo> callback);
+    void patch(final SalesCreditMemo sourceSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback);
 
     /**
      * Patches this SalesCreditMemo with a source
@@ -68,7 +68,7 @@ public interface ISalesCreditMemoRequest extends IHttpRequest {
      * @param newSalesCreditMemo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback);
+    void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback);
 
     /**
      * Posts a SalesCreditMemo with a new object
@@ -85,7 +85,7 @@ public interface ISalesCreditMemoRequest extends IHttpRequest {
      * @param newSalesCreditMemo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback);
+    void put(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback);
 
     /**
      * Posts a SalesCreditMemo with a new object

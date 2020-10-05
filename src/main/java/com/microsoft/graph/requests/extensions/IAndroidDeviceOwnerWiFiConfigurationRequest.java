@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerWiFiConfigurationRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerWiFiConfiguration> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerWiFiConfiguration> callback);
 
     /**
      * Gets the AndroidDeviceOwnerWiFiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerWiFiConfigurationRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerWiFiConfiguration> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerWiFiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerWiFiConfigurationRequest extends IHttpReques
      * @param sourceAndroidDeviceOwnerWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerWiFiConfiguration sourceAndroidDeviceOwnerWiFiConfiguration, final ICallback<AndroidDeviceOwnerWiFiConfiguration> callback);
+    void patch(final AndroidDeviceOwnerWiFiConfiguration sourceAndroidDeviceOwnerWiFiConfiguration, final ICallback<? super AndroidDeviceOwnerWiFiConfiguration> callback);
 
     /**
      * Patches this AndroidDeviceOwnerWiFiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerWiFiConfigurationRequest extends IHttpReques
      * @param newAndroidDeviceOwnerWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerWiFiConfiguration newAndroidDeviceOwnerWiFiConfiguration, final ICallback<AndroidDeviceOwnerWiFiConfiguration> callback);
+    void post(final AndroidDeviceOwnerWiFiConfiguration newAndroidDeviceOwnerWiFiConfiguration, final ICallback<? super AndroidDeviceOwnerWiFiConfiguration> callback);
 
     /**
      * Posts a AndroidDeviceOwnerWiFiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerWiFiConfigurationRequest extends IHttpReques
      * @param newAndroidDeviceOwnerWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerWiFiConfiguration newAndroidDeviceOwnerWiFiConfiguration, final ICallback<AndroidDeviceOwnerWiFiConfiguration> callback);
+    void put(final AndroidDeviceOwnerWiFiConfiguration newAndroidDeviceOwnerWiFiConfiguration, final ICallback<? super AndroidDeviceOwnerWiFiConfiguration> callback);
 
     /**
      * Posts a AndroidDeviceOwnerWiFiConfiguration with a new object

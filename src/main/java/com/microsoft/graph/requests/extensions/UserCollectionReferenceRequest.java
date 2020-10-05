@@ -55,7 +55,7 @@ public class UserCollectionReferenceRequest extends BaseCollectionRequest<UserCo
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, IUserCollectionPage.class);
     }
 
-    public void post(final User newUser, final ICallback<User> callback) {
+    public void post(final User newUser, final ICallback<? super User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/users/" + newUser.id);
         new UserWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -89,6 +89,17 @@ public class UserCollectionReferenceRequest extends BaseCollectionRequest<UserCo
      */
     public IUserCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IUserCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserCollectionReferenceRequest)this;
     }
 

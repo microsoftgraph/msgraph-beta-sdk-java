@@ -39,7 +39,7 @@ public class DeviceManagementTemplateCompareCollectionRequest extends BaseCollec
     }
 
 
-    public void get(final ICallback<IDeviceManagementTemplateCompareCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementTemplateCompareCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class DeviceManagementTemplateCompareCollectionRequest extends BaseCollec
      */
     public IDeviceManagementTemplateCompareCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceManagementTemplateCompareCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateCompareCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceManagementTemplateCompareCollectionRequest)this;
     }
 

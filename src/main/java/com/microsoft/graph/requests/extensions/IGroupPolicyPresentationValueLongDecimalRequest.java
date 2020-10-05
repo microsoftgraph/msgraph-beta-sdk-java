@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationValueLongDecimalRequest extends IHttpRe
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationValueLongDecimal> callback);
+    void get(final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback);
 
     /**
      * Gets the GroupPolicyPresentationValueLongDecimal from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationValueLongDecimalRequest extends IHttpRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationValueLongDecimal> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationValueLongDecimalRequest extends IHttpRe
      * @param sourceGroupPolicyPresentationValueLongDecimal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationValueLongDecimal sourceGroupPolicyPresentationValueLongDecimal, final ICallback<GroupPolicyPresentationValueLongDecimal> callback);
+    void patch(final GroupPolicyPresentationValueLongDecimal sourceGroupPolicyPresentationValueLongDecimal, final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback);
 
     /**
      * Patches this GroupPolicyPresentationValueLongDecimal with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationValueLongDecimalRequest extends IHttpRe
      * @param newGroupPolicyPresentationValueLongDecimal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<GroupPolicyPresentationValueLongDecimal> callback);
+    void post(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueLongDecimal with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationValueLongDecimalRequest extends IHttpRe
      * @param newGroupPolicyPresentationValueLongDecimal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<GroupPolicyPresentationValueLongDecimal> callback);
+    void put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueLongDecimal with a new object

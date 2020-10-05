@@ -40,7 +40,7 @@ public class DeviceManagementSettingInstanceCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, DeviceManagementSettingInstanceCollectionResponse.class, IDeviceManagementSettingInstanceCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementSettingInstanceCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementSettingInstanceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementSettingInstanceCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementSettingInstance newDeviceManagementSettingInstance, final ICallback<DeviceManagementSettingInstance> callback) {
+    public void post(final DeviceManagementSettingInstance newDeviceManagementSettingInstance, final ICallback<? super DeviceManagementSettingInstance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementSettingInstanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementSettingInstanceCollectionRequest extends BaseCollec
      */
     public IDeviceManagementSettingInstanceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementSettingInstanceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementSettingInstanceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementSettingInstanceCollectionRequest)this;
     }
 

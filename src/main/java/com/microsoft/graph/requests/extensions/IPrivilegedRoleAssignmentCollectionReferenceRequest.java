@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
  */
 public interface IPrivilegedRoleAssignmentCollectionReferenceRequest {
 
-    void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback);
+    void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback);
 
     PrivilegedRoleAssignment post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException;
 

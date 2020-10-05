@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceEncryptionStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedDeviceEncryptionStateCollectionPage> callback);
+    void get(final ICallback<? super IManagedDeviceEncryptionStateCollectionPage> callback);
 
     IManagedDeviceEncryptionStateCollectionPage get() throws ClientException;
 
-    void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback);
+    void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback);
 
     ManagedDeviceEncryptionState post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IManagedDeviceEncryptionStateCollectionRequest extends IHttpReq
      * @return the updated request
      */
     IManagedDeviceEncryptionStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagedDeviceEncryptionStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IManagedDeviceEncryptionStateCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceEncryptionStateCollectionRequest skipToken(String skipToken);
+	IManagedDeviceEncryptionStateCollectionRequest skipToken(final String skipToken);
 }

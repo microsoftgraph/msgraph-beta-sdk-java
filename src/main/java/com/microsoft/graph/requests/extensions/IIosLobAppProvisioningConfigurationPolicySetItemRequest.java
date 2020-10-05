@@ -21,7 +21,7 @@ public interface IIosLobAppProvisioningConfigurationPolicySetItemRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback);
+    void get(final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback);
 
     /**
      * Gets the IosLobAppProvisioningConfigurationPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IIosLobAppProvisioningConfigurationPolicySetItemRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback);
+    void delete(final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosLobAppProvisioningConfigurationPolicySetItemRequest extends
      * @param sourceIosLobAppProvisioningConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosLobAppProvisioningConfigurationPolicySetItem sourceIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback);
+    void patch(final IosLobAppProvisioningConfigurationPolicySetItem sourceIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback);
 
     /**
      * Patches this IosLobAppProvisioningConfigurationPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IIosLobAppProvisioningConfigurationPolicySetItemRequest extends
      * @param newIosLobAppProvisioningConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback);
+    void post(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback);
 
     /**
      * Posts a IosLobAppProvisioningConfigurationPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IIosLobAppProvisioningConfigurationPolicySetItemRequest extends
      * @param newIosLobAppProvisioningConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback);
+    void put(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback);
 
     /**
      * Posts a IosLobAppProvisioningConfigurationPolicySetItem with a new object

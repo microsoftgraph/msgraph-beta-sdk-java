@@ -37,7 +37,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSLobApp> callback) {
+    public void get(final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSLobApp> callback) {
+    public void delete(final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param sourceMacOSLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSLobApp sourceMacOSLobApp, final ICallback<MacOSLobApp> callback) {
+    public void patch(final MacOSLobApp sourceMacOSLobApp, final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSLobApp);
     }
 
@@ -96,7 +96,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param newMacOSLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSLobApp newMacOSLobApp, final ICallback<MacOSLobApp> callback) {
+    public void post(final MacOSLobApp newMacOSLobApp, final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.POST, callback, newMacOSLobApp);
     }
 
@@ -117,7 +117,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param newMacOSLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSLobApp newMacOSLobApp, final ICallback<MacOSLobApp> callback) {
+    public void put(final MacOSLobApp newMacOSLobApp, final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.PUT, callback, newMacOSLobApp);
     }
 
@@ -151,17 +151,6 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      */
      public IMacOSLobAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSLobAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSLobAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSLobAppRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class DeviceManagementBooleanSettingInstanceRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementBooleanSettingInstance> callback) {
+    public void get(final ICallback<? super DeviceManagementBooleanSettingInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementBooleanSettingInstanceRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementBooleanSettingInstance> callback) {
+    public void delete(final ICallback<? super DeviceManagementBooleanSettingInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementBooleanSettingInstanceRequest extends BaseRequest i
      * @param sourceDeviceManagementBooleanSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementBooleanSettingInstance sourceDeviceManagementBooleanSettingInstance, final ICallback<DeviceManagementBooleanSettingInstance> callback) {
+    public void patch(final DeviceManagementBooleanSettingInstance sourceDeviceManagementBooleanSettingInstance, final ICallback<? super DeviceManagementBooleanSettingInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementBooleanSettingInstance);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementBooleanSettingInstanceRequest extends BaseRequest i
      * @param newDeviceManagementBooleanSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<DeviceManagementBooleanSettingInstance> callback) {
+    public void post(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<? super DeviceManagementBooleanSettingInstance> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementBooleanSettingInstance);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementBooleanSettingInstanceRequest extends BaseRequest i
      * @param newDeviceManagementBooleanSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<DeviceManagementBooleanSettingInstance> callback) {
+    public void put(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<? super DeviceManagementBooleanSettingInstance> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementBooleanSettingInstance);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementBooleanSettingInstanceRequest extends BaseRequest i
      */
      public IDeviceManagementBooleanSettingInstanceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementBooleanSettingInstanceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementBooleanSettingInstanceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementBooleanSettingInstanceRequest)this;
      }
 

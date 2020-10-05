@@ -21,7 +21,7 @@ public interface IUserSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserSecurityProfile> callback);
+    void get(final ICallback<? super UserSecurityProfile> callback);
 
     /**
      * Gets the UserSecurityProfile from the service
@@ -36,7 +36,7 @@ public interface IUserSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserSecurityProfile> callback);
+    void delete(final ICallback<? super UserSecurityProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserSecurityProfileRequest extends IHttpRequest {
      * @param sourceUserSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserSecurityProfile sourceUserSecurityProfile, final ICallback<UserSecurityProfile> callback);
+    void patch(final UserSecurityProfile sourceUserSecurityProfile, final ICallback<? super UserSecurityProfile> callback);
 
     /**
      * Patches this UserSecurityProfile with a source
@@ -68,7 +68,7 @@ public interface IUserSecurityProfileRequest extends IHttpRequest {
      * @param newUserSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<UserSecurityProfile> callback);
+    void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<? super UserSecurityProfile> callback);
 
     /**
      * Posts a UserSecurityProfile with a new object
@@ -85,7 +85,7 @@ public interface IUserSecurityProfileRequest extends IHttpRequest {
      * @param newUserSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserSecurityProfile newUserSecurityProfile, final ICallback<UserSecurityProfile> callback);
+    void put(final UserSecurityProfile newUserSecurityProfile, final ICallback<? super UserSecurityProfile> callback);
 
     /**
      * Posts a UserSecurityProfile with a new object

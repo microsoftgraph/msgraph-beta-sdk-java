@@ -38,7 +38,7 @@ public class GroupPolicyDefinitionFileReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionFile.class);
     }
 
-    public void delete(final ICallback<GroupPolicyDefinitionFile> callback) {
+    public void delete(final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class GroupPolicyDefinitionFileReferenceRequest extends BaseRequest imple
         return (GroupPolicyDefinitionFileReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupPolicyDefinitionFileReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupPolicyDefinitionFileReferenceRequest)this;
-    }
-    /**
      * Puts the GroupPolicyDefinitionFile
      *
      * @param srcGroupPolicyDefinitionFile the GroupPolicyDefinitionFile reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(GroupPolicyDefinitionFile srcGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback) {
+    public void put(GroupPolicyDefinitionFile srcGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.PUT, callback, srcGroupPolicyDefinitionFile);
     }
 

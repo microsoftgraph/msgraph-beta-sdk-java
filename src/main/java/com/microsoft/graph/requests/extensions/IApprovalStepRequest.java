@@ -21,7 +21,7 @@ public interface IApprovalStepRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ApprovalStep> callback);
+    void get(final ICallback<? super ApprovalStep> callback);
 
     /**
      * Gets the ApprovalStep from the service
@@ -36,7 +36,7 @@ public interface IApprovalStepRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ApprovalStep> callback);
+    void delete(final ICallback<? super ApprovalStep> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApprovalStepRequest extends IHttpRequest {
      * @param sourceApprovalStep the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ApprovalStep sourceApprovalStep, final ICallback<ApprovalStep> callback);
+    void patch(final ApprovalStep sourceApprovalStep, final ICallback<? super ApprovalStep> callback);
 
     /**
      * Patches this ApprovalStep with a source
@@ -68,7 +68,7 @@ public interface IApprovalStepRequest extends IHttpRequest {
      * @param newApprovalStep the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ApprovalStep newApprovalStep, final ICallback<ApprovalStep> callback);
+    void post(final ApprovalStep newApprovalStep, final ICallback<? super ApprovalStep> callback);
 
     /**
      * Posts a ApprovalStep with a new object
@@ -85,7 +85,7 @@ public interface IApprovalStepRequest extends IHttpRequest {
      * @param newApprovalStep the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ApprovalStep newApprovalStep, final ICallback<ApprovalStep> callback);
+    void put(final ApprovalStep newApprovalStep, final ICallback<? super ApprovalStep> callback);
 
     /**
      * Posts a ApprovalStep with a new object

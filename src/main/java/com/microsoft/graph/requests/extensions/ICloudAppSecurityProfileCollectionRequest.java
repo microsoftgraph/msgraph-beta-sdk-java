@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICloudAppSecurityProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICloudAppSecurityProfileCollectionPage> callback);
+    void get(final ICallback<? super ICloudAppSecurityProfileCollectionPage> callback);
 
     ICloudAppSecurityProfileCollectionPage get() throws ClientException;
 
-    void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback);
+    void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback);
 
     CloudAppSecurityProfile post(final CloudAppSecurityProfile newCloudAppSecurityProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ICloudAppSecurityProfileCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     ICloudAppSecurityProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICloudAppSecurityProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ICloudAppSecurityProfileCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	ICloudAppSecurityProfileCollectionRequest skipToken(String skipToken);
+	ICloudAppSecurityProfileCollectionRequest skipToken(final String skipToken);
 }

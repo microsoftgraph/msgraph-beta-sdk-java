@@ -37,7 +37,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AuditEvent> callback) {
+    public void get(final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AuditEvent> callback) {
+    public void delete(final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param sourceAuditEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuditEvent sourceAuditEvent, final ICallback<AuditEvent> callback) {
+    public void patch(final AuditEvent sourceAuditEvent, final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceAuditEvent);
     }
 
@@ -96,7 +96,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param newAuditEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback) {
+    public void post(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.POST, callback, newAuditEvent);
     }
 
@@ -117,7 +117,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param newAuditEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback) {
+    public void put(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.PUT, callback, newAuditEvent);
     }
 
@@ -151,17 +151,6 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      */
      public IAuditEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuditEventRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAuditEventRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AuditEventRequest)this;
      }
 

@@ -23,6 +23,6 @@ public class AgreementFileLocalizationCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public AgreementFileLocalizationCollectionPage(final AgreementFileLocalizationCollectionResponse response, final IAgreementFileLocalizationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

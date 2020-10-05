@@ -34,7 +34,7 @@ public class AgreementAcceptanceReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, AgreementAcceptance.class);
     }
 
-    public void delete(final ICallback<AgreementAcceptance> callback) {
+    public void delete(final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class AgreementAcceptanceReferenceRequest extends BaseRequest implements 
         return (AgreementAcceptanceReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAgreementAcceptanceReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AgreementAcceptanceReferenceRequest)this;
-    }
-    /**
      * Puts the AgreementAcceptance
      *
      * @param srcAgreementAcceptance the AgreementAcceptance reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AgreementAcceptance srcAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+    public void put(AgreementAcceptance srcAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.PUT, callback, srcAgreementAcceptance);
     }
 

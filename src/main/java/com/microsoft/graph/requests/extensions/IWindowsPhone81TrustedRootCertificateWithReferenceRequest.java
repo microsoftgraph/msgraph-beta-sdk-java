@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsPhone81TrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     WindowsPhone81TrustedRootCertificate post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void get(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     WindowsPhone81TrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+	void delete(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+	void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
 	WindowsPhone81TrustedRootCertificate patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate) throws ClientException;
 

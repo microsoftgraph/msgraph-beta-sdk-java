@@ -37,7 +37,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationFeedbackOutcome> callback) {
+    public void get(final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationFeedbackOutcome> callback) {
+    public void delete(final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param sourceEducationFeedbackOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationFeedbackOutcome sourceEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback) {
+    public void patch(final EducationFeedbackOutcome sourceEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationFeedbackOutcome);
     }
 
@@ -96,7 +96,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param newEducationFeedbackOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback) {
+    public void post(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.POST, callback, newEducationFeedbackOutcome);
     }
 
@@ -117,7 +117,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param newEducationFeedbackOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback) {
+    public void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.PUT, callback, newEducationFeedbackOutcome);
     }
 
@@ -151,17 +151,6 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      */
      public IEducationFeedbackOutcomeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationFeedbackOutcomeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationFeedbackOutcomeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationFeedbackOutcomeRequest)this;
      }
 

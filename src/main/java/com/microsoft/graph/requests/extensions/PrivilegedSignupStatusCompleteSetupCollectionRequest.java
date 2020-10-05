@@ -45,7 +45,7 @@ public class PrivilegedSignupStatusCompleteSetupCollectionRequest extends BaseCo
     }
 
 
-    public void post(final ICallback<IPrivilegedSignupStatusCompleteSetupCollectionPage> callback) {
+    public void post(final ICallback<? super IPrivilegedSignupStatusCompleteSetupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,6 +118,17 @@ public class PrivilegedSignupStatusCompleteSetupCollectionRequest extends BaseCo
      */
     public IPrivilegedSignupStatusCompleteSetupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IPrivilegedSignupStatusCompleteSetupCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedSignupStatusCompleteSetupCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IPrivilegedSignupStatusCompleteSetupCollectionRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlannerDeltaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPlannerDeltaCollectionPage> callback);
+    void get(final ICallback<? super IPlannerDeltaCollectionPage> callback);
 
     IPlannerDeltaCollectionPage get() throws ClientException;
 
-    void post(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback);
+    void post(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback);
 
     PlannerDelta post(final PlannerDelta newPlannerDelta) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPlannerDeltaCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPlannerDeltaCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPlannerDeltaCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPlannerDeltaCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlannerDeltaCollectionRequest skipToken(String skipToken);
+	IPlannerDeltaCollectionRequest skipToken(final String skipToken);
 }

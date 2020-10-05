@@ -21,7 +21,7 @@ public interface IExternalConnectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExternalConnection> callback);
+    void get(final ICallback<? super ExternalConnection> callback);
 
     /**
      * Gets the ExternalConnection from the service
@@ -36,7 +36,7 @@ public interface IExternalConnectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExternalConnection> callback);
+    void delete(final ICallback<? super ExternalConnection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExternalConnectionRequest extends IHttpRequest {
      * @param sourceExternalConnection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExternalConnection sourceExternalConnection, final ICallback<ExternalConnection> callback);
+    void patch(final ExternalConnection sourceExternalConnection, final ICallback<? super ExternalConnection> callback);
 
     /**
      * Patches this ExternalConnection with a source
@@ -68,7 +68,7 @@ public interface IExternalConnectionRequest extends IHttpRequest {
      * @param newExternalConnection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback);
+    void post(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback);
 
     /**
      * Posts a ExternalConnection with a new object
@@ -85,7 +85,7 @@ public interface IExternalConnectionRequest extends IHttpRequest {
      * @param newExternalConnection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback);
+    void put(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback);
 
     /**
      * Posts a ExternalConnection with a new object

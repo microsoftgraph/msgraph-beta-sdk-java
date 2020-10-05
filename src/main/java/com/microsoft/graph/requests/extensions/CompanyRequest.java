@@ -177,7 +177,7 @@ public class CompanyRequest extends BaseRequest implements ICompanyRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Company> callback) {
+    public void get(final ICallback<? super Company> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -196,7 +196,7 @@ public class CompanyRequest extends BaseRequest implements ICompanyRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Company> callback) {
+    public void delete(final ICallback<? super Company> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -215,7 +215,7 @@ public class CompanyRequest extends BaseRequest implements ICompanyRequest {
      * @param sourceCompany the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Company sourceCompany, final ICallback<Company> callback) {
+    public void patch(final Company sourceCompany, final ICallback<? super Company> callback) {
         send(HttpMethod.PATCH, callback, sourceCompany);
     }
 
@@ -236,7 +236,7 @@ public class CompanyRequest extends BaseRequest implements ICompanyRequest {
      * @param newCompany the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Company newCompany, final ICallback<Company> callback) {
+    public void post(final Company newCompany, final ICallback<? super Company> callback) {
         send(HttpMethod.POST, callback, newCompany);
     }
 
@@ -257,7 +257,7 @@ public class CompanyRequest extends BaseRequest implements ICompanyRequest {
      * @param newCompany the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Company newCompany, final ICallback<Company> callback) {
+    public void put(final Company newCompany, final ICallback<? super Company> callback) {
         send(HttpMethod.PUT, callback, newCompany);
     }
 
@@ -291,17 +291,6 @@ public class CompanyRequest extends BaseRequest implements ICompanyRequest {
      */
      public ICompanyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CompanyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICompanyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CompanyRequest)this;
      }
 

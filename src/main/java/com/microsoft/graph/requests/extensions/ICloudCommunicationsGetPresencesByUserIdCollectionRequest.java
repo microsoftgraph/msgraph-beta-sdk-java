@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ICloudCommunicationsGetPresencesByUserIdCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ICloudCommunicationsGetPresencesByUserIdCollectionPage> callback);
+    void post(final ICallback<? super ICloudCommunicationsGetPresencesByUserIdCollectionPage> callback);
 
     ICloudCommunicationsGetPresencesByUserIdCollectionPage post() throws ClientException;
 

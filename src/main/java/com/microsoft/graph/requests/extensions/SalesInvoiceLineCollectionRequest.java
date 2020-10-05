@@ -40,7 +40,7 @@ public class SalesInvoiceLineCollectionRequest extends BaseCollectionRequest<Sal
         super(requestUrl, client, requestOptions, SalesInvoiceLineCollectionResponse.class, ISalesInvoiceLineCollectionPage.class);
     }
 
-    public void get(final ICallback<ISalesInvoiceLineCollectionPage> callback) {
+    public void get(final ICallback<? super ISalesInvoiceLineCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SalesInvoiceLineCollectionRequest extends BaseCollectionRequest<Sal
         return buildFromResponse(response);
     }
 
-    public void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback) {
+    public void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<? super SalesInvoiceLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesInvoiceLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SalesInvoiceLineCollectionRequest extends BaseCollectionRequest<Sal
      */
     public ISalesInvoiceLineCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SalesInvoiceLineCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISalesInvoiceLineCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SalesInvoiceLineCollectionRequest)this;
     }
 

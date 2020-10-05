@@ -21,7 +21,7 @@ public interface IDomainSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DomainSecurityProfile> callback);
+    void get(final ICallback<? super DomainSecurityProfile> callback);
 
     /**
      * Gets the DomainSecurityProfile from the service
@@ -36,7 +36,7 @@ public interface IDomainSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DomainSecurityProfile> callback);
+    void delete(final ICallback<? super DomainSecurityProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDomainSecurityProfileRequest extends IHttpRequest {
      * @param sourceDomainSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DomainSecurityProfile sourceDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback);
+    void patch(final DomainSecurityProfile sourceDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback);
 
     /**
      * Patches this DomainSecurityProfile with a source
@@ -68,7 +68,7 @@ public interface IDomainSecurityProfileRequest extends IHttpRequest {
      * @param newDomainSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback);
+    void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback);
 
     /**
      * Posts a DomainSecurityProfile with a new object
@@ -85,7 +85,7 @@ public interface IDomainSecurityProfileRequest extends IHttpRequest {
      * @param newDomainSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback);
+    void put(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback);
 
     /**
      * Posts a DomainSecurityProfile with a new object

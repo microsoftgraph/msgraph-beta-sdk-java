@@ -36,7 +36,7 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesRequest extends BaseR
         body = new GroupPolicyConfigurationUpdateDefinitionValuesBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesRequest extends BaseR
      */
     public IGroupPolicyConfigurationUpdateDefinitionValuesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupPolicyConfigurationUpdateDefinitionValuesRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupPolicyConfigurationUpdateDefinitionValuesRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupPolicyConfigurationUpdateDefinitionValuesRequest)this;
     }
 

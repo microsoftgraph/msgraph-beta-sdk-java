@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementIntentDeviceSettingStateSummaryCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementIntentDeviceSettingStateSummaryCollectionPage> callback);
 
     IDeviceManagementIntentDeviceSettingStateSummaryCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback);
+    void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback);
 
     DeviceManagementIntentDeviceSettingStateSummary post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryCollectionReque
      * @return the updated request
      */
     IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementIntentDeviceSettingStateSummaryCollectionReque
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest skipToken(String skipToken);
+	IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest skipToken(final String skipToken);
 }

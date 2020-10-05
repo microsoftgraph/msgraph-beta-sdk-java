@@ -40,7 +40,7 @@ public class AccessPackageAssignmentPolicyCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, AccessPackageAssignmentPolicyCollectionResponse.class, IAccessPackageAssignmentPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageAssignmentPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageAssignmentPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessPackageAssignmentPolicyCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback) {
+    public void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessPackageAssignmentPolicyCollectionRequest extends BaseCollecti
      */
     public IAccessPackageAssignmentPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageAssignmentPolicyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageAssignmentPolicyCollectionRequest)this;
     }
 

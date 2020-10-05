@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAppLogCollectionRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAppLogCollectionRequestCollectionPage> callback);
+    void get(final ICallback<? super IAppLogCollectionRequestCollectionPage> callback);
 
     IAppLogCollectionRequestCollectionPage get() throws ClientException;
 
-    void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback);
+    void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback);
 
     AppLogCollectionRequest post(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IAppLogCollectionRequestCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     IAppLogCollectionRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAppLogCollectionRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IAppLogCollectionRequestCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IAppLogCollectionRequestCollectionRequest skipToken(String skipToken);
+	IAppLogCollectionRequestCollectionRequest skipToken(final String skipToken);
 }

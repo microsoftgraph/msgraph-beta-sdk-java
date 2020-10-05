@@ -42,7 +42,7 @@ public interface IOfficeClientConfigurationPolicyPayloadStreamRequest extends IH
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents, final ICallback<OfficeClientConfiguration> callback);
+    void put(final byte[] fileContents, final ICallback<? super OfficeClientConfiguration> callback);
 
     /**
      * Uploads to the stream

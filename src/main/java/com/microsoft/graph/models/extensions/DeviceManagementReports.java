@@ -6,17 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementCachedReportConfiguration;
 import com.microsoft.graph.models.extensions.DeviceManagementExportJob;
 import com.microsoft.graph.models.extensions.DeviceManagementReportSchedule;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementExportJobCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementExportJobCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleCollectionPage;
 
 
@@ -97,51 +93,15 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
 
 
         if (json.has("cachedReportConfigurations")) {
-            final DeviceManagementCachedReportConfigurationCollectionResponse response = new DeviceManagementCachedReportConfigurationCollectionResponse();
-            if (json.has("cachedReportConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("cachedReportConfigurations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("cachedReportConfigurations").toString(), JsonObject[].class);
-            final DeviceManagementCachedReportConfiguration[] array = new DeviceManagementCachedReportConfiguration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementCachedReportConfiguration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            cachedReportConfigurations = new DeviceManagementCachedReportConfigurationCollectionPage(response, null);
+            cachedReportConfigurations = serializer.deserializeObject(json.get("cachedReportConfigurations").toString(), DeviceManagementCachedReportConfigurationCollectionPage.class);
         }
 
         if (json.has("exportJobs")) {
-            final DeviceManagementExportJobCollectionResponse response = new DeviceManagementExportJobCollectionResponse();
-            if (json.has("exportJobs@odata.nextLink")) {
-                response.nextLink = json.get("exportJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("exportJobs").toString(), JsonObject[].class);
-            final DeviceManagementExportJob[] array = new DeviceManagementExportJob[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementExportJob.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            exportJobs = new DeviceManagementExportJobCollectionPage(response, null);
+            exportJobs = serializer.deserializeObject(json.get("exportJobs").toString(), DeviceManagementExportJobCollectionPage.class);
         }
 
         if (json.has("reportSchedules")) {
-            final DeviceManagementReportScheduleCollectionResponse response = new DeviceManagementReportScheduleCollectionResponse();
-            if (json.has("reportSchedules@odata.nextLink")) {
-                response.nextLink = json.get("reportSchedules@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("reportSchedules").toString(), JsonObject[].class);
-            final DeviceManagementReportSchedule[] array = new DeviceManagementReportSchedule[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementReportSchedule.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            reportSchedules = new DeviceManagementReportScheduleCollectionPage(response, null);
+            reportSchedules = serializer.deserializeObject(json.get("reportSchedules").toString(), DeviceManagementReportScheduleCollectionPage.class);
         }
     }
 }

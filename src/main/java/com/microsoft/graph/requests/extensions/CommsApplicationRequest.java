@@ -45,7 +45,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CommsApplication> callback) {
+    public void get(final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CommsApplication> callback) {
+    public void delete(final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param sourceCommsApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CommsApplication sourceCommsApplication, final ICallback<CommsApplication> callback) {
+    public void patch(final CommsApplication sourceCommsApplication, final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.PATCH, callback, sourceCommsApplication);
     }
 
@@ -104,7 +104,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param newCommsApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CommsApplication newCommsApplication, final ICallback<CommsApplication> callback) {
+    public void post(final CommsApplication newCommsApplication, final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.POST, callback, newCommsApplication);
     }
 
@@ -125,7 +125,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param newCommsApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CommsApplication newCommsApplication, final ICallback<CommsApplication> callback) {
+    public void put(final CommsApplication newCommsApplication, final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.PUT, callback, newCommsApplication);
     }
 
@@ -159,17 +159,6 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      */
      public ICommsApplicationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CommsApplicationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICommsApplicationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CommsApplicationRequest)this;
      }
 

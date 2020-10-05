@@ -21,7 +21,7 @@ public interface IDeviceCompliancePolicyPolicySetItemRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceCompliancePolicyPolicySetItem> callback);
+    void get(final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback);
 
     /**
      * Gets the DeviceCompliancePolicyPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IDeviceCompliancePolicyPolicySetItemRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceCompliancePolicyPolicySetItem> callback);
+    void delete(final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceCompliancePolicyPolicySetItemRequest extends IHttpReques
      * @param sourceDeviceCompliancePolicyPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceCompliancePolicyPolicySetItem sourceDeviceCompliancePolicyPolicySetItem, final ICallback<DeviceCompliancePolicyPolicySetItem> callback);
+    void patch(final DeviceCompliancePolicyPolicySetItem sourceDeviceCompliancePolicyPolicySetItem, final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback);
 
     /**
      * Patches this DeviceCompliancePolicyPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IDeviceCompliancePolicyPolicySetItemRequest extends IHttpReques
      * @param newDeviceCompliancePolicyPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, final ICallback<DeviceCompliancePolicyPolicySetItem> callback);
+    void post(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback);
 
     /**
      * Posts a DeviceCompliancePolicyPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IDeviceCompliancePolicyPolicySetItemRequest extends IHttpReques
      * @param newDeviceCompliancePolicyPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, final ICallback<DeviceCompliancePolicyPolicySetItem> callback);
+    void put(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback);
 
     /**
      * Posts a DeviceCompliancePolicyPolicySetItem with a new object

@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback);
 
     /**
      * Gets the AndroidDeviceOwnerEnrollmentProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequest extends IHttpReques
      * @param sourceAndroidDeviceOwnerEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerEnrollmentProfile sourceAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+    void patch(final AndroidDeviceOwnerEnrollmentProfile sourceAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback);
 
     /**
      * Patches this AndroidDeviceOwnerEnrollmentProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequest extends IHttpReques
      * @param newAndroidDeviceOwnerEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+    void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback);
 
     /**
      * Posts a AndroidDeviceOwnerEnrollmentProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequest extends IHttpReques
      * @param newAndroidDeviceOwnerEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+    void put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback);
 
     /**
      * Posts a AndroidDeviceOwnerEnrollmentProfile with a new object

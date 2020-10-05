@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IConnectedOrganizationReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ConnectedOrganization> callback);
+    void delete(final ICallback<? super ConnectedOrganization> callback);
 
     ConnectedOrganization delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IConnectedOrganizationReferenceRequest extends IHttpRequest {
      * @param srcConnectedOrganization the ConnectedOrganization to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ConnectedOrganization srcConnectedOrganization, final ICallback<ConnectedOrganization> callback);
+    void put(ConnectedOrganization srcConnectedOrganization, final ICallback<? super ConnectedOrganization> callback);
 
     /**
      * Puts the ConnectedOrganization

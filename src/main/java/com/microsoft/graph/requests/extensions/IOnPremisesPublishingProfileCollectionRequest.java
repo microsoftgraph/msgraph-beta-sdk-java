@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnPremisesPublishingProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOnPremisesPublishingProfileCollectionPage> callback);
+    void get(final ICallback<? super IOnPremisesPublishingProfileCollectionPage> callback);
 
     IOnPremisesPublishingProfileCollectionPage get() throws ClientException;
 
-    void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback);
+    void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback);
 
     OnPremisesPublishingProfile post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IOnPremisesPublishingProfileCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IOnPremisesPublishingProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOnPremisesPublishingProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IOnPremisesPublishingProfileCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IOnPremisesPublishingProfileCollectionRequest skipToken(String skipToken);
+	IOnPremisesPublishingProfileCollectionRequest skipToken(final String skipToken);
 }

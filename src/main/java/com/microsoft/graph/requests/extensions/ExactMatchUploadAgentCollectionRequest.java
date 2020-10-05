@@ -40,7 +40,7 @@ public class ExactMatchUploadAgentCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, ExactMatchUploadAgentCollectionResponse.class, IExactMatchUploadAgentCollectionPage.class);
     }
 
-    public void get(final ICallback<IExactMatchUploadAgentCollectionPage> callback) {
+    public void get(final ICallback<? super IExactMatchUploadAgentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ExactMatchUploadAgentCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<ExactMatchUploadAgent> callback) {
+    public void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExactMatchUploadAgentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ExactMatchUploadAgentCollectionRequest extends BaseCollectionReques
      */
     public IExactMatchUploadAgentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ExactMatchUploadAgentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IExactMatchUploadAgentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ExactMatchUploadAgentCollectionRequest)this;
     }
 

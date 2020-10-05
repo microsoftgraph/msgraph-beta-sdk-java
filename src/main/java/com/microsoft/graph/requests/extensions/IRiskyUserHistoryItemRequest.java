@@ -21,7 +21,7 @@ public interface IRiskyUserHistoryItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RiskyUserHistoryItem> callback);
+    void get(final ICallback<? super RiskyUserHistoryItem> callback);
 
     /**
      * Gets the RiskyUserHistoryItem from the service
@@ -36,7 +36,7 @@ public interface IRiskyUserHistoryItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RiskyUserHistoryItem> callback);
+    void delete(final ICallback<? super RiskyUserHistoryItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRiskyUserHistoryItemRequest extends IHttpRequest {
      * @param sourceRiskyUserHistoryItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RiskyUserHistoryItem sourceRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback);
+    void patch(final RiskyUserHistoryItem sourceRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback);
 
     /**
      * Patches this RiskyUserHistoryItem with a source
@@ -68,7 +68,7 @@ public interface IRiskyUserHistoryItemRequest extends IHttpRequest {
      * @param newRiskyUserHistoryItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback);
+    void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback);
 
     /**
      * Posts a RiskyUserHistoryItem with a new object
@@ -85,7 +85,7 @@ public interface IRiskyUserHistoryItemRequest extends IHttpRequest {
      * @param newRiskyUserHistoryItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback);
+    void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback);
 
     /**
      * Posts a RiskyUserHistoryItem with a new object

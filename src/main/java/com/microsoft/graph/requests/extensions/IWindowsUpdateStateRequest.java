@@ -21,7 +21,7 @@ public interface IWindowsUpdateStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsUpdateState> callback);
+    void get(final ICallback<? super WindowsUpdateState> callback);
 
     /**
      * Gets the WindowsUpdateState from the service
@@ -36,7 +36,7 @@ public interface IWindowsUpdateStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsUpdateState> callback);
+    void delete(final ICallback<? super WindowsUpdateState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsUpdateStateRequest extends IHttpRequest {
      * @param sourceWindowsUpdateState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsUpdateState sourceWindowsUpdateState, final ICallback<WindowsUpdateState> callback);
+    void patch(final WindowsUpdateState sourceWindowsUpdateState, final ICallback<? super WindowsUpdateState> callback);
 
     /**
      * Patches this WindowsUpdateState with a source
@@ -68,7 +68,7 @@ public interface IWindowsUpdateStateRequest extends IHttpRequest {
      * @param newWindowsUpdateState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsUpdateState newWindowsUpdateState, final ICallback<WindowsUpdateState> callback);
+    void post(final WindowsUpdateState newWindowsUpdateState, final ICallback<? super WindowsUpdateState> callback);
 
     /**
      * Posts a WindowsUpdateState with a new object
@@ -85,7 +85,7 @@ public interface IWindowsUpdateStateRequest extends IHttpRequest {
      * @param newWindowsUpdateState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsUpdateState newWindowsUpdateState, final ICallback<WindowsUpdateState> callback);
+    void put(final WindowsUpdateState newWindowsUpdateState, final ICallback<? super WindowsUpdateState> callback);
 
     /**
      * Posts a WindowsUpdateState with a new object

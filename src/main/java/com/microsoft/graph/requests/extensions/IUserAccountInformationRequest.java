@@ -21,7 +21,7 @@ public interface IUserAccountInformationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserAccountInformation> callback);
+    void get(final ICallback<? super UserAccountInformation> callback);
 
     /**
      * Gets the UserAccountInformation from the service
@@ -36,7 +36,7 @@ public interface IUserAccountInformationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserAccountInformation> callback);
+    void delete(final ICallback<? super UserAccountInformation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserAccountInformationRequest extends IHttpRequest {
      * @param sourceUserAccountInformation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserAccountInformation sourceUserAccountInformation, final ICallback<UserAccountInformation> callback);
+    void patch(final UserAccountInformation sourceUserAccountInformation, final ICallback<? super UserAccountInformation> callback);
 
     /**
      * Patches this UserAccountInformation with a source
@@ -68,7 +68,7 @@ public interface IUserAccountInformationRequest extends IHttpRequest {
      * @param newUserAccountInformation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserAccountInformation newUserAccountInformation, final ICallback<UserAccountInformation> callback);
+    void post(final UserAccountInformation newUserAccountInformation, final ICallback<? super UserAccountInformation> callback);
 
     /**
      * Posts a UserAccountInformation with a new object
@@ -85,7 +85,7 @@ public interface IUserAccountInformationRequest extends IHttpRequest {
      * @param newUserAccountInformation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserAccountInformation newUserAccountInformation, final ICallback<UserAccountInformation> callback);
+    void put(final UserAccountInformation newUserAccountInformation, final ICallback<? super UserAccountInformation> callback);
 
     /**
      * Posts a UserAccountInformation with a new object

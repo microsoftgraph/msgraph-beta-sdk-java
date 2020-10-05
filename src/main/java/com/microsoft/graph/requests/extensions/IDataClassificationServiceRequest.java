@@ -21,7 +21,7 @@ public interface IDataClassificationServiceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DataClassificationService> callback);
+    void get(final ICallback<? super DataClassificationService> callback);
 
     /**
      * Gets the DataClassificationService from the service
@@ -36,7 +36,7 @@ public interface IDataClassificationServiceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DataClassificationService> callback);
+    void delete(final ICallback<? super DataClassificationService> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDataClassificationServiceRequest extends IHttpRequest {
      * @param sourceDataClassificationService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DataClassificationService sourceDataClassificationService, final ICallback<DataClassificationService> callback);
+    void patch(final DataClassificationService sourceDataClassificationService, final ICallback<? super DataClassificationService> callback);
 
     /**
      * Patches this DataClassificationService with a source
@@ -68,7 +68,7 @@ public interface IDataClassificationServiceRequest extends IHttpRequest {
      * @param newDataClassificationService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DataClassificationService newDataClassificationService, final ICallback<DataClassificationService> callback);
+    void post(final DataClassificationService newDataClassificationService, final ICallback<? super DataClassificationService> callback);
 
     /**
      * Posts a DataClassificationService with a new object
@@ -85,7 +85,7 @@ public interface IDataClassificationServiceRequest extends IHttpRequest {
      * @param newDataClassificationService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DataClassificationService newDataClassificationService, final ICallback<DataClassificationService> callback);
+    void put(final DataClassificationService newDataClassificationService, final ICallback<? super DataClassificationService> callback);
 
     /**
      * Posts a DataClassificationService with a new object

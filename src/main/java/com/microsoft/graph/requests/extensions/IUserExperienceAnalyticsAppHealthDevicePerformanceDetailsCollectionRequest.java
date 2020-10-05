@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage> callback);
 
     IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback);
+    void post(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformanceDetails> callback);
 
     UserExperienceAnalyticsAppHealthDevicePerformanceDetails post(final UserExperienceAnalyticsAppHealthDevicePerformanceDetails newUserExperienceAnalyticsAppHealthDevicePerformanceDetails) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollec
      * @return the updated request
      */
     IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollec
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AllowedDataLocation> callback) {
+    public void get(final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AllowedDataLocation> callback) {
+    public void delete(final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param sourceAllowedDataLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AllowedDataLocation sourceAllowedDataLocation, final ICallback<AllowedDataLocation> callback) {
+    public void patch(final AllowedDataLocation sourceAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.PATCH, callback, sourceAllowedDataLocation);
     }
 
@@ -96,7 +96,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param newAllowedDataLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback) {
+    public void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.POST, callback, newAllowedDataLocation);
     }
 
@@ -117,7 +117,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param newAllowedDataLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback) {
+    public void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.PUT, callback, newAllowedDataLocation);
     }
 
@@ -151,17 +151,6 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      */
      public IAllowedDataLocationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AllowedDataLocationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAllowedDataLocationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AllowedDataLocationRequest)this;
      }
 

@@ -49,7 +49,7 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessReview> callback) {
+    public void get(final ICallback<? super AccessReview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessReview> callback) {
+    public void delete(final ICallback<? super AccessReview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      * @param sourceAccessReview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessReview sourceAccessReview, final ICallback<AccessReview> callback) {
+    public void patch(final AccessReview sourceAccessReview, final ICallback<? super AccessReview> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessReview);
     }
 
@@ -108,7 +108,7 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      * @param newAccessReview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessReview newAccessReview, final ICallback<AccessReview> callback) {
+    public void post(final AccessReview newAccessReview, final ICallback<? super AccessReview> callback) {
         send(HttpMethod.POST, callback, newAccessReview);
     }
 
@@ -129,7 +129,7 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      * @param newAccessReview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessReview newAccessReview, final ICallback<AccessReview> callback) {
+    public void put(final AccessReview newAccessReview, final ICallback<? super AccessReview> callback) {
         send(HttpMethod.PUT, callback, newAccessReview);
     }
 
@@ -163,17 +163,6 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      */
      public IAccessReviewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessReviewRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessReviewRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessReviewRequest)this;
      }
 

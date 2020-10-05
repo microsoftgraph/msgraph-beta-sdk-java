@@ -23,6 +23,6 @@ public class NdesConnectorCollectionPage extends BaseCollectionPage<NdesConnecto
      * @param builder  the request builder for the next collection page
      */
     public NdesConnectorCollectionPage(final NdesConnectorCollectionResponse response, final INdesConnectorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

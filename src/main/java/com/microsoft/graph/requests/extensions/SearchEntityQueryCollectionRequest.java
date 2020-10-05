@@ -45,7 +45,7 @@ public class SearchEntityQueryCollectionRequest extends BaseCollectionRequest<Se
     }
 
 
-    public void post(final ICallback<ISearchEntityQueryCollectionPage> callback) {
+    public void post(final ICallback<? super ISearchEntityQueryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,6 +118,17 @@ public class SearchEntityQueryCollectionRequest extends BaseCollectionRequest<Se
      */
     public ISearchEntityQueryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ISearchEntityQueryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISearchEntityQueryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ISearchEntityQueryCollectionRequest)this;
     }
 

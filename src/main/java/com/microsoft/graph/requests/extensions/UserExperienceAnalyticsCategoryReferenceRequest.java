@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsCategoryReferenceRequest extends BaseRequest
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsCategory.class);
     }
 
-    public void delete(final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class UserExperienceAnalyticsCategoryReferenceRequest extends BaseRequest
         return (UserExperienceAnalyticsCategoryReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IUserExperienceAnalyticsCategoryReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserExperienceAnalyticsCategoryReferenceRequest)this;
-    }
-    /**
      * Puts the UserExperienceAnalyticsCategory
      *
      * @param srcUserExperienceAnalyticsCategory the UserExperienceAnalyticsCategory reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(UserExperienceAnalyticsCategory srcUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void put(UserExperienceAnalyticsCategory srcUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.PUT, callback, srcUserExperienceAnalyticsCategory);
     }
 

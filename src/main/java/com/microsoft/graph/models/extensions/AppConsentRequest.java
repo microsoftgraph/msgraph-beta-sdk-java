@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppConsentRequestScope;
 import com.microsoft.graph.models.extensions.UserConsentRequest;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UserConsentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserConsentRequestCollectionPage;
 
 
@@ -108,19 +106,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
 
         if (json.has("userConsentRequests")) {
-            final UserConsentRequestCollectionResponse response = new UserConsentRequestCollectionResponse();
-            if (json.has("userConsentRequests@odata.nextLink")) {
-                response.nextLink = json.get("userConsentRequests@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userConsentRequests").toString(), JsonObject[].class);
-            final UserConsentRequest[] array = new UserConsentRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserConsentRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userConsentRequests = new UserConsentRequestCollectionPage(response, null);
+            userConsentRequests = serializer.deserializeObject(json.get("userConsentRequests").toString(), UserConsentRequestCollectionPage.class);
         }
     }
 }

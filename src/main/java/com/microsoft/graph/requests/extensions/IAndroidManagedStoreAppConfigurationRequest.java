@@ -21,7 +21,7 @@ public interface IAndroidManagedStoreAppConfigurationRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidManagedStoreAppConfiguration> callback);
+    void get(final ICallback<? super AndroidManagedStoreAppConfiguration> callback);
 
     /**
      * Gets the AndroidManagedStoreAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidManagedStoreAppConfigurationRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidManagedStoreAppConfiguration> callback);
+    void delete(final ICallback<? super AndroidManagedStoreAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidManagedStoreAppConfigurationRequest extends IHttpReques
      * @param sourceAndroidManagedStoreAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidManagedStoreAppConfiguration sourceAndroidManagedStoreAppConfiguration, final ICallback<AndroidManagedStoreAppConfiguration> callback);
+    void patch(final AndroidManagedStoreAppConfiguration sourceAndroidManagedStoreAppConfiguration, final ICallback<? super AndroidManagedStoreAppConfiguration> callback);
 
     /**
      * Patches this AndroidManagedStoreAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidManagedStoreAppConfigurationRequest extends IHttpReques
      * @param newAndroidManagedStoreAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<AndroidManagedStoreAppConfiguration> callback);
+    void post(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<? super AndroidManagedStoreAppConfiguration> callback);
 
     /**
      * Posts a AndroidManagedStoreAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidManagedStoreAppConfigurationRequest extends IHttpReques
      * @param newAndroidManagedStoreAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<AndroidManagedStoreAppConfiguration> callback);
+    void put(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<? super AndroidManagedStoreAppConfiguration> callback);
 
     /**
      * Posts a AndroidManagedStoreAppConfiguration with a new object

@@ -21,7 +21,7 @@ public interface IVendorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Vendor> callback);
+    void get(final ICallback<? super Vendor> callback);
 
     /**
      * Gets the Vendor from the service
@@ -36,7 +36,7 @@ public interface IVendorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Vendor> callback);
+    void delete(final ICallback<? super Vendor> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IVendorRequest extends IHttpRequest {
      * @param sourceVendor the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Vendor sourceVendor, final ICallback<Vendor> callback);
+    void patch(final Vendor sourceVendor, final ICallback<? super Vendor> callback);
 
     /**
      * Patches this Vendor with a source
@@ -68,7 +68,7 @@ public interface IVendorRequest extends IHttpRequest {
      * @param newVendor the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Vendor newVendor, final ICallback<Vendor> callback);
+    void post(final Vendor newVendor, final ICallback<? super Vendor> callback);
 
     /**
      * Posts a Vendor with a new object
@@ -85,7 +85,7 @@ public interface IVendorRequest extends IHttpRequest {
      * @param newVendor the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Vendor newVendor, final ICallback<Vendor> callback);
+    void put(final Vendor newVendor, final ICallback<? super Vendor> callback);
 
     /**
      * Posts a Vendor with a new object

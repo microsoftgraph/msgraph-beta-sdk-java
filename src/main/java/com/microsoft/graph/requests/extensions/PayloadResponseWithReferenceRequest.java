@@ -35,7 +35,7 @@ public class PayloadResponseWithReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, PayloadResponse.class);
     }
 
-    public void post(final PayloadResponse newPayloadResponse, final IJsonBackedObject payload, final ICallback<PayloadResponse> callback) {
+    public void post(final PayloadResponse newPayloadResponse, final IJsonBackedObject payload, final ICallback<? super PayloadResponse> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class PayloadResponseWithReferenceRequest extends BaseRequest implements 
         return null;
     }
 
-    public void get(final ICallback<PayloadResponse> callback) {
+    public void get(final ICallback<? super PayloadResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class PayloadResponseWithReferenceRequest extends BaseRequest implements 
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<PayloadResponse> callback) {
+	public void delete(final ICallback<? super PayloadResponse> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class PayloadResponseWithReferenceRequest extends BaseRequest implements 
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final PayloadResponse sourcePayloadResponse, final ICallback<PayloadResponse> callback) {
+	public void patch(final PayloadResponse sourcePayloadResponse, final ICallback<? super PayloadResponse> callback) {
 		send(HttpMethod.PATCH, callback, sourcePayloadResponse);
 	}
 
@@ -91,16 +91,6 @@ public class PayloadResponseWithReferenceRequest extends BaseRequest implements 
      */
     public IPayloadResponseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PayloadResponseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPayloadResponseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PayloadResponseWithReferenceRequest)this;
     }
 }

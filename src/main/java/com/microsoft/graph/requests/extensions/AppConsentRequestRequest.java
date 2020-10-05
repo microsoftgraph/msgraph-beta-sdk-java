@@ -41,7 +41,7 @@ public class AppConsentRequestRequest extends BaseRequest implements IAppConsent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AppConsentRequest> callback) {
+    public void get(final ICallback<? super AppConsentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AppConsentRequestRequest extends BaseRequest implements IAppConsent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AppConsentRequest> callback) {
+    public void delete(final ICallback<? super AppConsentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AppConsentRequestRequest extends BaseRequest implements IAppConsent
      * @param sourceAppConsentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppConsentRequest sourceAppConsentRequest, final ICallback<AppConsentRequest> callback) {
+    public void patch(final AppConsentRequest sourceAppConsentRequest, final ICallback<? super AppConsentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceAppConsentRequest);
     }
 
@@ -100,7 +100,7 @@ public class AppConsentRequestRequest extends BaseRequest implements IAppConsent
      * @param newAppConsentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback) {
+    public void post(final AppConsentRequest newAppConsentRequest, final ICallback<? super AppConsentRequest> callback) {
         send(HttpMethod.POST, callback, newAppConsentRequest);
     }
 
@@ -121,7 +121,7 @@ public class AppConsentRequestRequest extends BaseRequest implements IAppConsent
      * @param newAppConsentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback) {
+    public void put(final AppConsentRequest newAppConsentRequest, final ICallback<? super AppConsentRequest> callback) {
         send(HttpMethod.PUT, callback, newAppConsentRequest);
     }
 
@@ -155,17 +155,6 @@ public class AppConsentRequestRequest extends BaseRequest implements IAppConsent
      */
      public IAppConsentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppConsentRequestRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAppConsentRequestRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AppConsentRequestRequest)this;
      }
 

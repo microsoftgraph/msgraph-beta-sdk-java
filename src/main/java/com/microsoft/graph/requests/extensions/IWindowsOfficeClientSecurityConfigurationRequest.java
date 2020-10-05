@@ -21,7 +21,7 @@ public interface IWindowsOfficeClientSecurityConfigurationRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsOfficeClientSecurityConfiguration> callback);
+    void get(final ICallback<? super WindowsOfficeClientSecurityConfiguration> callback);
 
     /**
      * Gets the WindowsOfficeClientSecurityConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsOfficeClientSecurityConfigurationRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsOfficeClientSecurityConfiguration> callback);
+    void delete(final ICallback<? super WindowsOfficeClientSecurityConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsOfficeClientSecurityConfigurationRequest extends IHttpR
      * @param sourceWindowsOfficeClientSecurityConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsOfficeClientSecurityConfiguration sourceWindowsOfficeClientSecurityConfiguration, final ICallback<WindowsOfficeClientSecurityConfiguration> callback);
+    void patch(final WindowsOfficeClientSecurityConfiguration sourceWindowsOfficeClientSecurityConfiguration, final ICallback<? super WindowsOfficeClientSecurityConfiguration> callback);
 
     /**
      * Patches this WindowsOfficeClientSecurityConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsOfficeClientSecurityConfigurationRequest extends IHttpR
      * @param newWindowsOfficeClientSecurityConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration, final ICallback<WindowsOfficeClientSecurityConfiguration> callback);
+    void post(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration, final ICallback<? super WindowsOfficeClientSecurityConfiguration> callback);
 
     /**
      * Posts a WindowsOfficeClientSecurityConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsOfficeClientSecurityConfigurationRequest extends IHttpR
      * @param newWindowsOfficeClientSecurityConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration, final ICallback<WindowsOfficeClientSecurityConfiguration> callback);
+    void put(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration, final ICallback<? super WindowsOfficeClientSecurityConfiguration> callback);
 
     /**
      * Posts a WindowsOfficeClientSecurityConfiguration with a new object

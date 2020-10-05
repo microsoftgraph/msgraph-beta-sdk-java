@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IMacOSTrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<MacOSTrustedRootCertificate> callback);
+    void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     MacOSTrustedRootCertificate post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<MacOSTrustedRootCertificate> callback);
+    void get(final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     MacOSTrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<MacOSTrustedRootCertificate> callback);
+	void delete(final ICallback<? super MacOSTrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+	void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
 	MacOSTrustedRootCertificate patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate) throws ClientException;
 

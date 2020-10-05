@@ -21,7 +21,7 @@ public interface IOneDriveActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OneDriveActivityUserDetail> callback);
+    void get(final ICallback<? super OneDriveActivityUserDetail> callback);
 
     /**
      * Gets the OneDriveActivityUserDetail from the service
@@ -36,7 +36,7 @@ public interface IOneDriveActivityUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OneDriveActivityUserDetail> callback);
+    void delete(final ICallback<? super OneDriveActivityUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOneDriveActivityUserDetailRequest extends IHttpRequest {
      * @param sourceOneDriveActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OneDriveActivityUserDetail sourceOneDriveActivityUserDetail, final ICallback<OneDriveActivityUserDetail> callback);
+    void patch(final OneDriveActivityUserDetail sourceOneDriveActivityUserDetail, final ICallback<? super OneDriveActivityUserDetail> callback);
 
     /**
      * Patches this OneDriveActivityUserDetail with a source
@@ -68,7 +68,7 @@ public interface IOneDriveActivityUserDetailRequest extends IHttpRequest {
      * @param newOneDriveActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OneDriveActivityUserDetail newOneDriveActivityUserDetail, final ICallback<OneDriveActivityUserDetail> callback);
+    void post(final OneDriveActivityUserDetail newOneDriveActivityUserDetail, final ICallback<? super OneDriveActivityUserDetail> callback);
 
     /**
      * Posts a OneDriveActivityUserDetail with a new object
@@ -85,7 +85,7 @@ public interface IOneDriveActivityUserDetailRequest extends IHttpRequest {
      * @param newOneDriveActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OneDriveActivityUserDetail newOneDriveActivityUserDetail, final ICallback<OneDriveActivityUserDetail> callback);
+    void put(final OneDriveActivityUserDetail newOneDriveActivityUserDetail, final ICallback<? super OneDriveActivityUserDetail> callback);
 
     /**
      * Posts a OneDriveActivityUserDetail with a new object

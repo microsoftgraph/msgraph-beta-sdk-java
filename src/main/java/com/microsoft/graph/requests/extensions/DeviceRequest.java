@@ -49,7 +49,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Device> callback) {
+    public void get(final ICallback<? super Device> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Device> callback) {
+    public void delete(final ICallback<? super Device> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      * @param sourceDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Device sourceDevice, final ICallback<Device> callback) {
+    public void patch(final Device sourceDevice, final ICallback<? super Device> callback) {
         send(HttpMethod.PATCH, callback, sourceDevice);
     }
 
@@ -108,7 +108,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      * @param newDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Device newDevice, final ICallback<Device> callback) {
+    public void post(final Device newDevice, final ICallback<? super Device> callback) {
         send(HttpMethod.POST, callback, newDevice);
     }
 
@@ -129,7 +129,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      * @param newDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Device newDevice, final ICallback<Device> callback) {
+    public void put(final Device newDevice, final ICallback<? super Device> callback) {
         send(HttpMethod.PUT, callback, newDevice);
     }
 
@@ -163,17 +163,6 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      */
      public IDeviceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceRequest)this;
      }
 

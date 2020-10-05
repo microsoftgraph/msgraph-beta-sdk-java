@@ -41,7 +41,7 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UnifiedRoleDefinition> callback) {
+    public void get(final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UnifiedRoleDefinition> callback) {
+    public void delete(final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
      * @param sourceUnifiedRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnifiedRoleDefinition sourceUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback) {
+    public void patch(final UnifiedRoleDefinition sourceUnifiedRoleDefinition, final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceUnifiedRoleDefinition);
     }
 
@@ -100,7 +100,7 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
      * @param newUnifiedRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback) {
+    public void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.POST, callback, newUnifiedRoleDefinition);
     }
 
@@ -121,7 +121,7 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
      * @param newUnifiedRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback) {
+    public void put(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<? super UnifiedRoleDefinition> callback) {
         send(HttpMethod.PUT, callback, newUnifiedRoleDefinition);
     }
 
@@ -155,17 +155,6 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
      */
      public IUnifiedRoleDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnifiedRoleDefinitionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUnifiedRoleDefinitionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UnifiedRoleDefinitionRequest)this;
      }
 

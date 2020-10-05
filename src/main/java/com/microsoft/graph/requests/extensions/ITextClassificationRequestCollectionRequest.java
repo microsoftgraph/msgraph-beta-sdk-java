@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITextClassificationRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITextClassificationRequestCollectionPage> callback);
+    void get(final ICallback<? super ITextClassificationRequestCollectionPage> callback);
 
     ITextClassificationRequestCollectionPage get() throws ClientException;
 
-    void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<TextClassificationRequest> callback);
+    void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback);
 
     TextClassificationRequest post(final TextClassificationRequest newTextClassificationRequest) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITextClassificationRequestCollectionRequest extends IHttpReques
      * @return the updated request
      */
     ITextClassificationRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITextClassificationRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITextClassificationRequestCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	ITextClassificationRequestCollectionRequest skipToken(String skipToken);
+	ITextClassificationRequestCollectionRequest skipToken(final String skipToken);
 }

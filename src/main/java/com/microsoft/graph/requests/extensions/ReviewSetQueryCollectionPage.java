@@ -23,6 +23,6 @@ public class ReviewSetQueryCollectionPage extends BaseCollectionPage<ReviewSetQu
      * @param builder  the request builder for the next collection page
      */
     public ReviewSetQueryCollectionPage(final ReviewSetQueryCollectionResponse response, final IReviewSetQueryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

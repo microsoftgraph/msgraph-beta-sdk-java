@@ -21,7 +21,7 @@ public interface ICustomerPaymentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CustomerPayment> callback);
+    void get(final ICallback<? super CustomerPayment> callback);
 
     /**
      * Gets the CustomerPayment from the service
@@ -36,7 +36,7 @@ public interface ICustomerPaymentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CustomerPayment> callback);
+    void delete(final ICallback<? super CustomerPayment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICustomerPaymentRequest extends IHttpRequest {
      * @param sourceCustomerPayment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CustomerPayment sourceCustomerPayment, final ICallback<CustomerPayment> callback);
+    void patch(final CustomerPayment sourceCustomerPayment, final ICallback<? super CustomerPayment> callback);
 
     /**
      * Patches this CustomerPayment with a source
@@ -68,7 +68,7 @@ public interface ICustomerPaymentRequest extends IHttpRequest {
      * @param newCustomerPayment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CustomerPayment newCustomerPayment, final ICallback<CustomerPayment> callback);
+    void post(final CustomerPayment newCustomerPayment, final ICallback<? super CustomerPayment> callback);
 
     /**
      * Posts a CustomerPayment with a new object
@@ -85,7 +85,7 @@ public interface ICustomerPaymentRequest extends IHttpRequest {
      * @param newCustomerPayment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CustomerPayment newCustomerPayment, final ICallback<CustomerPayment> callback);
+    void put(final CustomerPayment newCustomerPayment, final ICallback<? super CustomerPayment> callback);
 
     /**
      * Posts a CustomerPayment with a new object

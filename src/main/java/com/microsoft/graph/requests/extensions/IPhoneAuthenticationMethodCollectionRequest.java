@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPhoneAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPhoneAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super IPhoneAuthenticationMethodCollectionPage> callback);
 
     IPhoneAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<PhoneAuthenticationMethod> callback);
+    void post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback);
 
     PhoneAuthenticationMethod post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPhoneAuthenticationMethodCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IPhoneAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPhoneAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPhoneAuthenticationMethodCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IPhoneAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	IPhoneAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

@@ -40,7 +40,7 @@ public class AccessPackageAssignmentCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, AccessPackageAssignmentCollectionResponse.class, IAccessPackageAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessPackageAssignmentCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<AccessPackageAssignment> callback) {
+    public void post(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessPackageAssignmentCollectionRequest extends BaseCollectionRequ
      */
     public IAccessPackageAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageAssignmentCollectionRequest)this;
     }
 

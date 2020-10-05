@@ -37,7 +37,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementExportJob> callback) {
+    public void get(final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementExportJob> callback) {
+    public void delete(final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param sourceDeviceManagementExportJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementExportJob sourceDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback) {
+    public void patch(final DeviceManagementExportJob sourceDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementExportJob);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param newDeviceManagementExportJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback) {
+    public void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementExportJob);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param newDeviceManagementExportJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback) {
+    public void put(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementExportJob);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      */
      public IDeviceManagementExportJobRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementExportJobRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementExportJobRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementExportJobRequest)this;
      }
 

@@ -40,7 +40,7 @@ public class DeviceManagementAutopilotEventCollectionRequest extends BaseCollect
         super(requestUrl, client, requestOptions, DeviceManagementAutopilotEventCollectionResponse.class, IDeviceManagementAutopilotEventCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementAutopilotEventCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementAutopilotEventCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementAutopilotEventCollectionRequest extends BaseCollect
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback) {
+    public void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementAutopilotEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementAutopilotEventCollectionRequest extends BaseCollect
      */
     public IDeviceManagementAutopilotEventCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementAutopilotEventCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementAutopilotEventCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementAutopilotEventCollectionRequest)this;
     }
 

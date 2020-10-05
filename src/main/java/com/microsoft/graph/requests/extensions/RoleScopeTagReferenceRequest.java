@@ -39,7 +39,7 @@ public class RoleScopeTagReferenceRequest extends BaseRequest implements IRoleSc
         super(requestUrl, client, requestOptions, RoleScopeTag.class);
     }
 
-    public void delete(final ICallback<RoleScopeTag> callback) {
+    public void delete(final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -69,22 +69,12 @@ public class RoleScopeTagReferenceRequest extends BaseRequest implements IRoleSc
         return (RoleScopeTagReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IRoleScopeTagReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (RoleScopeTagReferenceRequest)this;
-    }
-    /**
      * Puts the RoleScopeTag
      *
      * @param srcRoleScopeTag the RoleScopeTag reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(RoleScopeTag srcRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+    public void put(RoleScopeTag srcRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.PUT, callback, srcRoleScopeTag);
     }
 

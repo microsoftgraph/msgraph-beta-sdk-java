@@ -34,6 +34,6 @@ public class WindowsAutopilotDeploymentProfileHasPayloadLinksCollectionPage exte
      * @param builder The request builder for the next collection page
      */
     public WindowsAutopilotDeploymentProfileHasPayloadLinksCollectionPage(final WindowsAutopilotDeploymentProfileHasPayloadLinksCollectionResponse response, final IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -41,7 +41,7 @@ public class B2cIdentityUserFlowRequest extends BaseRequest implements IB2cIdent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<B2cIdentityUserFlow> callback) {
+    public void get(final ICallback<? super B2cIdentityUserFlow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class B2cIdentityUserFlowRequest extends BaseRequest implements IB2cIdent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<B2cIdentityUserFlow> callback) {
+    public void delete(final ICallback<? super B2cIdentityUserFlow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class B2cIdentityUserFlowRequest extends BaseRequest implements IB2cIdent
      * @param sourceB2cIdentityUserFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final B2cIdentityUserFlow sourceB2cIdentityUserFlow, final ICallback<B2cIdentityUserFlow> callback) {
+    public void patch(final B2cIdentityUserFlow sourceB2cIdentityUserFlow, final ICallback<? super B2cIdentityUserFlow> callback) {
         send(HttpMethod.PATCH, callback, sourceB2cIdentityUserFlow);
     }
 
@@ -100,7 +100,7 @@ public class B2cIdentityUserFlowRequest extends BaseRequest implements IB2cIdent
      * @param newB2cIdentityUserFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<B2cIdentityUserFlow> callback) {
+    public void post(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<? super B2cIdentityUserFlow> callback) {
         send(HttpMethod.POST, callback, newB2cIdentityUserFlow);
     }
 
@@ -121,7 +121,7 @@ public class B2cIdentityUserFlowRequest extends BaseRequest implements IB2cIdent
      * @param newB2cIdentityUserFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<B2cIdentityUserFlow> callback) {
+    public void put(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<? super B2cIdentityUserFlow> callback) {
         send(HttpMethod.PUT, callback, newB2cIdentityUserFlow);
     }
 
@@ -155,17 +155,6 @@ public class B2cIdentityUserFlowRequest extends BaseRequest implements IB2cIdent
      */
      public IB2cIdentityUserFlowRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (B2cIdentityUserFlowRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IB2cIdentityUserFlowRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (B2cIdentityUserFlowRequest)this;
      }
 

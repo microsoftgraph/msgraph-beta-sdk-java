@@ -41,7 +41,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintService> callback) {
+    public void get(final ICallback<? super PrintService> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintService> callback) {
+    public void delete(final ICallback<? super PrintService> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param sourcePrintService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintService sourcePrintService, final ICallback<PrintService> callback) {
+    public void patch(final PrintService sourcePrintService, final ICallback<? super PrintService> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintService);
     }
 
@@ -100,7 +100,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param newPrintService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintService newPrintService, final ICallback<PrintService> callback) {
+    public void post(final PrintService newPrintService, final ICallback<? super PrintService> callback) {
         send(HttpMethod.POST, callback, newPrintService);
     }
 
@@ -121,7 +121,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param newPrintService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintService newPrintService, final ICallback<PrintService> callback) {
+    public void put(final PrintService newPrintService, final ICallback<? super PrintService> callback) {
         send(HttpMethod.PUT, callback, newPrintService);
     }
 
@@ -155,17 +155,6 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      */
      public IPrintServiceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintServiceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintServiceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintServiceRequest)this;
      }
 

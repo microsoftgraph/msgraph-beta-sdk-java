@@ -21,7 +21,7 @@ public interface IIosExpeditedCheckinConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosExpeditedCheckinConfiguration> callback);
+    void get(final ICallback<? super IosExpeditedCheckinConfiguration> callback);
 
     /**
      * Gets the IosExpeditedCheckinConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosExpeditedCheckinConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosExpeditedCheckinConfiguration> callback);
+    void delete(final ICallback<? super IosExpeditedCheckinConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosExpeditedCheckinConfigurationRequest extends IHttpRequest {
      * @param sourceIosExpeditedCheckinConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosExpeditedCheckinConfiguration sourceIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback);
+    void patch(final IosExpeditedCheckinConfiguration sourceIosExpeditedCheckinConfiguration, final ICallback<? super IosExpeditedCheckinConfiguration> callback);
 
     /**
      * Patches this IosExpeditedCheckinConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosExpeditedCheckinConfigurationRequest extends IHttpRequest {
      * @param newIosExpeditedCheckinConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback);
+    void post(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<? super IosExpeditedCheckinConfiguration> callback);
 
     /**
      * Posts a IosExpeditedCheckinConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosExpeditedCheckinConfigurationRequest extends IHttpRequest {
      * @param newIosExpeditedCheckinConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback);
+    void put(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<? super IosExpeditedCheckinConfiguration> callback);
 
     /**
      * Posts a IosExpeditedCheckinConfiguration with a new object

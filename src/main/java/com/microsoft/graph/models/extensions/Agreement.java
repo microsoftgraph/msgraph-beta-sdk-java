@@ -6,16 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TermsExpiration;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import com.microsoft.graph.models.extensions.AgreementFile;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionPage;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionResponse;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionPage;
 
 
@@ -136,35 +133,11 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptances")) {
-            final AgreementAcceptanceCollectionResponse response = new AgreementAcceptanceCollectionResponse();
-            if (json.has("acceptances@odata.nextLink")) {
-                response.nextLink = json.get("acceptances@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("acceptances").toString(), JsonObject[].class);
-            final AgreementAcceptance[] array = new AgreementAcceptance[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AgreementAcceptance.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            acceptances = new AgreementAcceptanceCollectionPage(response, null);
+            acceptances = serializer.deserializeObject(json.get("acceptances").toString(), AgreementAcceptanceCollectionPage.class);
         }
 
         if (json.has("files")) {
-            final AgreementFileLocalizationCollectionResponse response = new AgreementFileLocalizationCollectionResponse();
-            if (json.has("files@odata.nextLink")) {
-                response.nextLink = json.get("files@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("files").toString(), JsonObject[].class);
-            final AgreementFileLocalization[] array = new AgreementFileLocalization[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AgreementFileLocalization.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            files = new AgreementFileLocalizationCollectionPage(response, null);
+            files = serializer.deserializeObject(json.get("files").toString(), AgreementFileLocalizationCollectionPage.class);
         }
     }
 }

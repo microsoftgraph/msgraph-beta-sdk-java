@@ -21,7 +21,7 @@ public interface IIosEasEmailProfileConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosEasEmailProfileConfiguration> callback);
+    void get(final ICallback<? super IosEasEmailProfileConfiguration> callback);
 
     /**
      * Gets the IosEasEmailProfileConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosEasEmailProfileConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosEasEmailProfileConfiguration> callback);
+    void delete(final ICallback<? super IosEasEmailProfileConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosEasEmailProfileConfigurationRequest extends IHttpRequest {
      * @param sourceIosEasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback);
+    void patch(final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback);
 
     /**
      * Patches this IosEasEmailProfileConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosEasEmailProfileConfigurationRequest extends IHttpRequest {
      * @param newIosEasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback);
+    void post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback);
 
     /**
      * Posts a IosEasEmailProfileConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosEasEmailProfileConfigurationRequest extends IHttpRequest {
      * @param newIosEasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback);
+    void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback);
 
     /**
      * Posts a IosEasEmailProfileConfiguration with a new object

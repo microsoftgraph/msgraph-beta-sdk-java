@@ -21,7 +21,7 @@ public interface IDeviceShellScriptRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceShellScript> callback);
+    void get(final ICallback<? super DeviceShellScript> callback);
 
     /**
      * Gets the DeviceShellScript from the service
@@ -36,7 +36,7 @@ public interface IDeviceShellScriptRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceShellScript> callback);
+    void delete(final ICallback<? super DeviceShellScript> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceShellScriptRequest extends IHttpRequest {
      * @param sourceDeviceShellScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceShellScript sourceDeviceShellScript, final ICallback<DeviceShellScript> callback);
+    void patch(final DeviceShellScript sourceDeviceShellScript, final ICallback<? super DeviceShellScript> callback);
 
     /**
      * Patches this DeviceShellScript with a source
@@ -68,7 +68,7 @@ public interface IDeviceShellScriptRequest extends IHttpRequest {
      * @param newDeviceShellScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback);
+    void post(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback);
 
     /**
      * Posts a DeviceShellScript with a new object
@@ -85,7 +85,7 @@ public interface IDeviceShellScriptRequest extends IHttpRequest {
      * @param newDeviceShellScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback);
+    void put(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback);
 
     /**
      * Posts a DeviceShellScript with a new object

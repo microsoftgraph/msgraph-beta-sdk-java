@@ -109,6 +109,10 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
+    public IMessageStreamRequestBuilder content() {
+        return new MessageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+    }
+
     public IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
     }

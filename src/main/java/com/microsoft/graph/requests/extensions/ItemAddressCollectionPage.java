@@ -23,6 +23,6 @@ public class ItemAddressCollectionPage extends BaseCollectionPage<ItemAddress, I
      * @param builder  the request builder for the next collection page
      */
     public ItemAddressCollectionPage(final ItemAddressCollectionResponse response, final IItemAddressCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

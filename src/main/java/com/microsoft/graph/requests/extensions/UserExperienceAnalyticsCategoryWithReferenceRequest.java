@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsCategory.class);
     }
 
-    public void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload, final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
         return null;
     }
 
-    public void get(final ICallback<UserExperienceAnalyticsCategory> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<UserExperienceAnalyticsCategory> callback) {
+	public void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
+	public void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
 		send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsCategory);
 	}
 
@@ -95,16 +95,6 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
      */
     public IUserExperienceAnalyticsCategoryWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserExperienceAnalyticsCategoryWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserExperienceAnalyticsCategoryWithReferenceRequest)this;
     }
 }

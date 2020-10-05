@@ -37,7 +37,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param sourceMacOSTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSTrustedRootCertificate);
     }
 
@@ -96,7 +96,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param newMacOSTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newMacOSTrustedRootCertificate);
     }
 
@@ -117,7 +117,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param newMacOSTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newMacOSTrustedRootCertificate);
     }
 
@@ -151,17 +151,6 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      */
      public IMacOSTrustedRootCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSTrustedRootCertificateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSTrustedRootCertificateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSTrustedRootCertificateRequest)this;
      }
 

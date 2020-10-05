@@ -35,7 +35,7 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, WindowsPhone81TrustedRootCertificate.class);
     }
 
-    public void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
         return null;
     }
 
-    public void get(final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void get(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+	public void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsPhone81TrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
      */
     public IWindowsPhone81TrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsPhone81TrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsPhone81TrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsPhone81TrustedRootCertificateWithReferenceRequest)this;
     }
 }

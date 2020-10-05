@@ -37,6 +37,6 @@ public class ManagementConditionStatementCollectionWithReferencesPage extends Ba
      * @param builder  the request builder for the next collection page
      */
     public ManagementConditionStatementCollectionWithReferencesPage(final ManagementConditionStatementCollectionResponse response, final IManagementConditionStatementCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

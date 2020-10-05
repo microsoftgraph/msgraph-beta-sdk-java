@@ -34,6 +34,6 @@ public class AccessPackageAssignmentRequestMyCollectionPage extends BaseCollecti
      * @param builder The request builder for the next collection page
      */
     public AccessPackageAssignmentRequestMyCollectionPage(final AccessPackageAssignmentRequestMyCollectionResponse response, final IAccessPackageAssignmentRequestMyCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

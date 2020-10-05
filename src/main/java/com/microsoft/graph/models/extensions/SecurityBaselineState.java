@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SecurityBaselineSettingState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateCollectionPage;
 
 
@@ -99,19 +97,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
 
 
         if (json.has("settingStates")) {
-            final SecurityBaselineSettingStateCollectionResponse response = new SecurityBaselineSettingStateCollectionResponse();
-            if (json.has("settingStates@odata.nextLink")) {
-                response.nextLink = json.get("settingStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settingStates").toString(), JsonObject[].class);
-            final SecurityBaselineSettingState[] array = new SecurityBaselineSettingState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityBaselineSettingState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            settingStates = new SecurityBaselineSettingStateCollectionPage(response, null);
+            settingStates = serializer.deserializeObject(json.get("settingStates").toString(), SecurityBaselineSettingStateCollectionPage.class);
         }
     }
 }

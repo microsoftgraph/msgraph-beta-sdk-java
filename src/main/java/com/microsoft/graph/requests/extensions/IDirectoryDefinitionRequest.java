@@ -21,7 +21,7 @@ public interface IDirectoryDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryDefinition> callback);
+    void get(final ICallback<? super DirectoryDefinition> callback);
 
     /**
      * Gets the DirectoryDefinition from the service
@@ -36,7 +36,7 @@ public interface IDirectoryDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryDefinition> callback);
+    void delete(final ICallback<? super DirectoryDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryDefinitionRequest extends IHttpRequest {
      * @param sourceDirectoryDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryDefinition sourceDirectoryDefinition, final ICallback<DirectoryDefinition> callback);
+    void patch(final DirectoryDefinition sourceDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback);
 
     /**
      * Patches this DirectoryDefinition with a source
@@ -68,7 +68,7 @@ public interface IDirectoryDefinitionRequest extends IHttpRequest {
      * @param newDirectoryDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback);
+    void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback);
 
     /**
      * Posts a DirectoryDefinition with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryDefinitionRequest extends IHttpRequest {
      * @param newDirectoryDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback);
+    void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback);
 
     /**
      * Posts a DirectoryDefinition with a new object

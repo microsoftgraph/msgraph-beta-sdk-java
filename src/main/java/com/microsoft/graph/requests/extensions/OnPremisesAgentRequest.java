@@ -41,7 +41,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OnPremisesAgent> callback) {
+    public void get(final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OnPremisesAgent> callback) {
+    public void delete(final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param sourceOnPremisesAgent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesAgent sourceOnPremisesAgent, final ICallback<OnPremisesAgent> callback) {
+    public void patch(final OnPremisesAgent sourceOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesAgent);
     }
 
@@ -100,7 +100,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param newOnPremisesAgent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback) {
+    public void post(final OnPremisesAgent newOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.POST, callback, newOnPremisesAgent);
     }
 
@@ -121,7 +121,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param newOnPremisesAgent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback) {
+    public void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesAgent);
     }
 
@@ -155,17 +155,6 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      */
      public IOnPremisesAgentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesAgentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOnPremisesAgentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnPremisesAgentRequest)this;
      }
 

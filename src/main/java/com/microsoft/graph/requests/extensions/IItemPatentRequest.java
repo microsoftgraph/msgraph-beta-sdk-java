@@ -21,7 +21,7 @@ public interface IItemPatentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemPatent> callback);
+    void get(final ICallback<? super ItemPatent> callback);
 
     /**
      * Gets the ItemPatent from the service
@@ -36,7 +36,7 @@ public interface IItemPatentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemPatent> callback);
+    void delete(final ICallback<? super ItemPatent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemPatentRequest extends IHttpRequest {
      * @param sourceItemPatent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemPatent sourceItemPatent, final ICallback<ItemPatent> callback);
+    void patch(final ItemPatent sourceItemPatent, final ICallback<? super ItemPatent> callback);
 
     /**
      * Patches this ItemPatent with a source
@@ -68,7 +68,7 @@ public interface IItemPatentRequest extends IHttpRequest {
      * @param newItemPatent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback);
+    void post(final ItemPatent newItemPatent, final ICallback<? super ItemPatent> callback);
 
     /**
      * Posts a ItemPatent with a new object
@@ -85,7 +85,7 @@ public interface IItemPatentRequest extends IHttpRequest {
      * @param newItemPatent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback);
+    void put(final ItemPatent newItemPatent, final ICallback<? super ItemPatent> callback);
 
     /**
      * Posts a ItemPatent with a new object

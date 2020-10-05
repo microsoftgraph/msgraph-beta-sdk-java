@@ -37,7 +37,7 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AuthorizationPolicy> callback) {
+    public void get(final ICallback<? super AuthorizationPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AuthorizationPolicy> callback) {
+    public void delete(final ICallback<? super AuthorizationPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
      * @param sourceAuthorizationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthorizationPolicy sourceAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback) {
+    public void patch(final AuthorizationPolicy sourceAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthorizationPolicy);
     }
 
@@ -96,7 +96,7 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
      * @param newAuthorizationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback) {
+    public void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback) {
         send(HttpMethod.POST, callback, newAuthorizationPolicy);
     }
 
@@ -117,7 +117,7 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
      * @param newAuthorizationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback) {
+    public void put(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback) {
         send(HttpMethod.PUT, callback, newAuthorizationPolicy);
     }
 
@@ -151,17 +151,6 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
      */
      public IAuthorizationPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthorizationPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAuthorizationPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AuthorizationPolicyRequest)this;
      }
 

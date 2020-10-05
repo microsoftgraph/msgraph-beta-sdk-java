@@ -21,7 +21,7 @@ public interface IPersonInterestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonInterest> callback);
+    void get(final ICallback<? super PersonInterest> callback);
 
     /**
      * Gets the PersonInterest from the service
@@ -36,7 +36,7 @@ public interface IPersonInterestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonInterest> callback);
+    void delete(final ICallback<? super PersonInterest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonInterestRequest extends IHttpRequest {
      * @param sourcePersonInterest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonInterest sourcePersonInterest, final ICallback<PersonInterest> callback);
+    void patch(final PersonInterest sourcePersonInterest, final ICallback<? super PersonInterest> callback);
 
     /**
      * Patches this PersonInterest with a source
@@ -68,7 +68,7 @@ public interface IPersonInterestRequest extends IHttpRequest {
      * @param newPersonInterest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback);
+    void post(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback);
 
     /**
      * Posts a PersonInterest with a new object
@@ -85,7 +85,7 @@ public interface IPersonInterestRequest extends IHttpRequest {
      * @param newPersonInterest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback);
+    void put(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback);
 
     /**
      * Posts a PersonInterest with a new object

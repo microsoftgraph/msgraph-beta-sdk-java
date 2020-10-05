@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ProgramControl;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ProgramControlCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProgramControlCollectionPage;
 
 
@@ -91,19 +89,7 @@ public class Program extends Entity implements IJsonBackedObject {
 
 
         if (json.has("controls")) {
-            final ProgramControlCollectionResponse response = new ProgramControlCollectionResponse();
-            if (json.has("controls@odata.nextLink")) {
-                response.nextLink = json.get("controls@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("controls").toString(), JsonObject[].class);
-            final ProgramControl[] array = new ProgramControl[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProgramControl.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            controls = new ProgramControlCollectionPage(response, null);
+            controls = serializer.deserializeObject(json.get("controls").toString(), ProgramControlCollectionPage.class);
         }
     }
 }

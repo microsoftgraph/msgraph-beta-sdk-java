@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAuthorizationPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAuthorizationPolicyCollectionPage> callback);
+    void get(final ICallback<? super IAuthorizationPolicyCollectionPage> callback);
 
     IAuthorizationPolicyCollectionPage get() throws ClientException;
 
-    void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback);
+    void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback);
 
     AuthorizationPolicy post(final AuthorizationPolicy newAuthorizationPolicy) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAuthorizationPolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAuthorizationPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAuthorizationPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAuthorizationPolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAuthorizationPolicyCollectionRequest skipToken(String skipToken);
+	IAuthorizationPolicyCollectionRequest skipToken(final String skipToken);
 }

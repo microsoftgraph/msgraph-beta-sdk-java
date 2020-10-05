@@ -51,7 +51,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceHealthScript> callback) {
+    public void get(final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -70,7 +70,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceHealthScript> callback) {
+    public void delete(final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -89,7 +89,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param sourceDeviceHealthScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceHealthScript sourceDeviceHealthScript, final ICallback<DeviceHealthScript> callback) {
+    public void patch(final DeviceHealthScript sourceDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceHealthScript);
     }
 
@@ -110,7 +110,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param newDeviceHealthScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<DeviceHealthScript> callback) {
+    public void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.POST, callback, newDeviceHealthScript);
     }
 
@@ -131,7 +131,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param newDeviceHealthScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceHealthScript newDeviceHealthScript, final ICallback<DeviceHealthScript> callback) {
+    public void put(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceHealthScript);
     }
 
@@ -165,17 +165,6 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      */
      public IDeviceHealthScriptRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceHealthScriptRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceHealthScriptRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceHealthScriptRequest)this;
      }
 

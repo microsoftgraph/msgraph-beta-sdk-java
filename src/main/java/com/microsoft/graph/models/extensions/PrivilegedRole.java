@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSettings;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionPage;
 
 
@@ -99,19 +97,7 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final PrivilegedRoleAssignmentCollectionResponse response = new PrivilegedRoleAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final PrivilegedRoleAssignment[] array = new PrivilegedRoleAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrivilegedRoleAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new PrivilegedRoleAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), PrivilegedRoleAssignmentCollectionPage.class);
         }
     }
 }

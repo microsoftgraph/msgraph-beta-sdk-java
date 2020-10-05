@@ -21,7 +21,7 @@ public interface IFido2AuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Fido2AuthenticationMethod> callback);
+    void get(final ICallback<? super Fido2AuthenticationMethod> callback);
 
     /**
      * Gets the Fido2AuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface IFido2AuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Fido2AuthenticationMethod> callback);
+    void delete(final ICallback<? super Fido2AuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFido2AuthenticationMethodRequest extends IHttpRequest {
      * @param sourceFido2AuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Fido2AuthenticationMethod sourceFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback);
+    void patch(final Fido2AuthenticationMethod sourceFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback);
 
     /**
      * Patches this Fido2AuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface IFido2AuthenticationMethodRequest extends IHttpRequest {
      * @param newFido2AuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback);
+    void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback);
 
     /**
      * Posts a Fido2AuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface IFido2AuthenticationMethodRequest extends IHttpRequest {
      * @param newFido2AuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback);
+    void put(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback);
 
     /**
      * Posts a Fido2AuthenticationMethod with a new object

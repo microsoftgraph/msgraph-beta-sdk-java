@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage> callback);
+    void post(final ICallback<? super IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage> callback);
 
     IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage post() throws ClientException;
 

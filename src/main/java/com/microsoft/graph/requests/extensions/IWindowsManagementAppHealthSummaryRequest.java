@@ -21,7 +21,7 @@ public interface IWindowsManagementAppHealthSummaryRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsManagementAppHealthSummary> callback);
+    void get(final ICallback<? super WindowsManagementAppHealthSummary> callback);
 
     /**
      * Gets the WindowsManagementAppHealthSummary from the service
@@ -36,7 +36,7 @@ public interface IWindowsManagementAppHealthSummaryRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsManagementAppHealthSummary> callback);
+    void delete(final ICallback<? super WindowsManagementAppHealthSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsManagementAppHealthSummaryRequest extends IHttpRequest 
      * @param sourceWindowsManagementAppHealthSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsManagementAppHealthSummary sourceWindowsManagementAppHealthSummary, final ICallback<WindowsManagementAppHealthSummary> callback);
+    void patch(final WindowsManagementAppHealthSummary sourceWindowsManagementAppHealthSummary, final ICallback<? super WindowsManagementAppHealthSummary> callback);
 
     /**
      * Patches this WindowsManagementAppHealthSummary with a source
@@ -68,7 +68,7 @@ public interface IWindowsManagementAppHealthSummaryRequest extends IHttpRequest 
      * @param newWindowsManagementAppHealthSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<WindowsManagementAppHealthSummary> callback);
+    void post(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<? super WindowsManagementAppHealthSummary> callback);
 
     /**
      * Posts a WindowsManagementAppHealthSummary with a new object
@@ -85,7 +85,7 @@ public interface IWindowsManagementAppHealthSummaryRequest extends IHttpRequest 
      * @param newWindowsManagementAppHealthSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<WindowsManagementAppHealthSummary> callback);
+    void put(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<? super WindowsManagementAppHealthSummary> callback);
 
     /**
      * Posts a WindowsManagementAppHealthSummary with a new object

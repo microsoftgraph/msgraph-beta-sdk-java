@@ -21,7 +21,7 @@ public interface IWindowsManagementAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsManagementApp> callback);
+    void get(final ICallback<? super WindowsManagementApp> callback);
 
     /**
      * Gets the WindowsManagementApp from the service
@@ -36,7 +36,7 @@ public interface IWindowsManagementAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsManagementApp> callback);
+    void delete(final ICallback<? super WindowsManagementApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsManagementAppRequest extends IHttpRequest {
      * @param sourceWindowsManagementApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<WindowsManagementApp> callback);
+    void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback);
 
     /**
      * Patches this WindowsManagementApp with a source
@@ -68,7 +68,7 @@ public interface IWindowsManagementAppRequest extends IHttpRequest {
      * @param newWindowsManagementApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsManagementApp newWindowsManagementApp, final ICallback<WindowsManagementApp> callback);
+    void post(final WindowsManagementApp newWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback);
 
     /**
      * Posts a WindowsManagementApp with a new object
@@ -85,7 +85,7 @@ public interface IWindowsManagementAppRequest extends IHttpRequest {
      * @param newWindowsManagementApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsManagementApp newWindowsManagementApp, final ICallback<WindowsManagementApp> callback);
+    void put(final WindowsManagementApp newWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback);
 
     /**
      * Posts a WindowsManagementApp with a new object

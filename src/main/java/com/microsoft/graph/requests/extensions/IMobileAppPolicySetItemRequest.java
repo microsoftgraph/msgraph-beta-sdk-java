@@ -21,7 +21,7 @@ public interface IMobileAppPolicySetItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppPolicySetItem> callback);
+    void get(final ICallback<? super MobileAppPolicySetItem> callback);
 
     /**
      * Gets the MobileAppPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IMobileAppPolicySetItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppPolicySetItem> callback);
+    void delete(final ICallback<? super MobileAppPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppPolicySetItemRequest extends IHttpRequest {
      * @param sourceMobileAppPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppPolicySetItem sourceMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback);
+    void patch(final MobileAppPolicySetItem sourceMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback);
 
     /**
      * Patches this MobileAppPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IMobileAppPolicySetItemRequest extends IHttpRequest {
      * @param newMobileAppPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback);
+    void post(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback);
 
     /**
      * Posts a MobileAppPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppPolicySetItemRequest extends IHttpRequest {
      * @param newMobileAppPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback);
+    void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback);
 
     /**
      * Posts a MobileAppPolicySetItem with a new object

@@ -40,7 +40,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IUserCollectionWithReferencesPage> callback);
 
     IUserCollectionWithReferencesPage get() throws ClientException;
 

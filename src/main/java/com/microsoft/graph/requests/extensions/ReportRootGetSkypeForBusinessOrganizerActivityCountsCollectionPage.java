@@ -34,6 +34,6 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionPage 
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionPage(final ReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionResponse response, final IReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

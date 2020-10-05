@@ -34,6 +34,6 @@ public class IdentityProviderAvailableProviderTypesCollectionPage extends BaseCo
      * @param builder The request builder for the next collection page
      */
     public IdentityProviderAvailableProviderTypesCollectionPage(final IdentityProviderAvailableProviderTypesCollectionResponse response, final IIdentityProviderAvailableProviderTypesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

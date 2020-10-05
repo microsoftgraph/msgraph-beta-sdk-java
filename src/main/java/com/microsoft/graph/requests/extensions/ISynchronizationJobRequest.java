@@ -21,7 +21,7 @@ public interface ISynchronizationJobRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SynchronizationJob> callback);
+    void get(final ICallback<? super SynchronizationJob> callback);
 
     /**
      * Gets the SynchronizationJob from the service
@@ -36,7 +36,7 @@ public interface ISynchronizationJobRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SynchronizationJob> callback);
+    void delete(final ICallback<? super SynchronizationJob> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISynchronizationJobRequest extends IHttpRequest {
      * @param sourceSynchronizationJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SynchronizationJob sourceSynchronizationJob, final ICallback<SynchronizationJob> callback);
+    void patch(final SynchronizationJob sourceSynchronizationJob, final ICallback<? super SynchronizationJob> callback);
 
     /**
      * Patches this SynchronizationJob with a source
@@ -68,7 +68,7 @@ public interface ISynchronizationJobRequest extends IHttpRequest {
      * @param newSynchronizationJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback);
+    void post(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback);
 
     /**
      * Posts a SynchronizationJob with a new object
@@ -85,7 +85,7 @@ public interface ISynchronizationJobRequest extends IHttpRequest {
      * @param newSynchronizationJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback);
+    void put(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback);
 
     /**
      * Posts a SynchronizationJob with a new object

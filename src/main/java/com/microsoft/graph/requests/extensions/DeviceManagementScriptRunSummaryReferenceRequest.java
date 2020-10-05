@@ -34,7 +34,7 @@ public class DeviceManagementScriptRunSummaryReferenceRequest extends BaseReques
         super(requestUrl, client, requestOptions, DeviceManagementScriptRunSummary.class);
     }
 
-    public void delete(final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class DeviceManagementScriptRunSummaryReferenceRequest extends BaseReques
         return (DeviceManagementScriptRunSummaryReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementScriptRunSummaryReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementScriptRunSummaryReferenceRequest)this;
-    }
-    /**
      * Puts the DeviceManagementScriptRunSummary
      *
      * @param srcDeviceManagementScriptRunSummary the DeviceManagementScriptRunSummary reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DeviceManagementScriptRunSummary srcDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void put(DeviceManagementScriptRunSummary srcDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.PUT, callback, srcDeviceManagementScriptRunSummary);
     }
 

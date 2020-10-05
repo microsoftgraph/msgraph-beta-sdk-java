@@ -40,7 +40,7 @@ public class ReviewSetCollectionRequest extends BaseCollectionRequest<ReviewSetC
         super(requestUrl, client, requestOptions, ReviewSetCollectionResponse.class, IReviewSetCollectionPage.class);
     }
 
-    public void get(final ICallback<IReviewSetCollectionPage> callback) {
+    public void get(final ICallback<? super IReviewSetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ReviewSetCollectionRequest extends BaseCollectionRequest<ReviewSetC
         return buildFromResponse(response);
     }
 
-    public void post(final ReviewSet newReviewSet, final ICallback<ReviewSet> callback) {
+    public void post(final ReviewSet newReviewSet, final ICallback<? super ReviewSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ReviewSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ReviewSetCollectionRequest extends BaseCollectionRequest<ReviewSetC
      */
     public IReviewSetCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReviewSetCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReviewSetCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReviewSetCollectionRequest)this;
     }
 

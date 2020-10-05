@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IScopedRoleMembershipCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IScopedRoleMembershipCollectionPage> callback);
+    void get(final ICallback<? super IScopedRoleMembershipCollectionPage> callback);
 
     IScopedRoleMembershipCollectionPage get() throws ClientException;
 
-    void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback);
+    void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback);
 
     ScopedRoleMembership post(final ScopedRoleMembership newScopedRoleMembership) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IScopedRoleMembershipCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IScopedRoleMembershipCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IScopedRoleMembershipCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IScopedRoleMembershipCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IScopedRoleMembershipCollectionRequest skipToken(String skipToken);
+	IScopedRoleMembershipCollectionRequest skipToken(final String skipToken);
 }

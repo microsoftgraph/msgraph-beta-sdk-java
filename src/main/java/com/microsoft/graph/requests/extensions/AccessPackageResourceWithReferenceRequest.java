@@ -43,7 +43,7 @@ public class AccessPackageResourceWithReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, AccessPackageResource.class);
     }
 
-    public void post(final AccessPackageResource newAccessPackageResource, final IJsonBackedObject payload, final ICallback<AccessPackageResource> callback) {
+    public void post(final AccessPackageResource newAccessPackageResource, final IJsonBackedObject payload, final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -55,7 +55,7 @@ public class AccessPackageResourceWithReferenceRequest extends BaseRequest imple
         return null;
     }
 
-    public void get(final ICallback<AccessPackageResource> callback) {
+    public void get(final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class AccessPackageResourceWithReferenceRequest extends BaseRequest imple
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AccessPackageResource> callback) {
+	public void delete(final ICallback<? super AccessPackageResource> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -71,7 +71,7 @@ public class AccessPackageResourceWithReferenceRequest extends BaseRequest imple
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AccessPackageResource sourceAccessPackageResource, final ICallback<AccessPackageResource> callback) {
+	public void patch(final AccessPackageResource sourceAccessPackageResource, final ICallback<? super AccessPackageResource> callback) {
 		send(HttpMethod.PATCH, callback, sourceAccessPackageResource);
 	}
 
@@ -99,16 +99,6 @@ public class AccessPackageResourceWithReferenceRequest extends BaseRequest imple
      */
     public IAccessPackageResourceWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AccessPackageResourceWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAccessPackageResourceWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AccessPackageResourceWithReferenceRequest)this;
     }
 }

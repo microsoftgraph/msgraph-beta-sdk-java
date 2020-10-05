@@ -36,7 +36,7 @@ public class DeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest ex
         body = new DeviceManagementReportsGetWindowsUpdateAlertSummaryReportBody();
     }
 
-    public void post(final ICallback<java.io.InputStream> callback) {
+    public void post(final ICallback<? super java.io.InputStream> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest ex
      */
     public IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest)this;
     }
 

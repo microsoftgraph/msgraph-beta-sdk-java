@@ -23,6 +23,6 @@ public class DeviceManagementScriptCollectionPage extends BaseCollectionPage<Dev
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementScriptCollectionPage(final DeviceManagementScriptCollectionResponse response, final IDeviceManagementScriptCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class PrintServiceCollectionPage extends BaseCollectionPage<PrintService,
      * @param builder  the request builder for the next collection page
      */
     public PrintServiceCollectionPage(final PrintServiceCollectionResponse response, final IPrintServiceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

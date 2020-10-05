@@ -23,6 +23,6 @@ public class PrintTaskCollectionPage extends BaseCollectionPage<PrintTask, IPrin
      * @param builder  the request builder for the next collection page
      */
     public PrintTaskCollectionPage(final PrintTaskCollectionResponse response, final IPrintTaskCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

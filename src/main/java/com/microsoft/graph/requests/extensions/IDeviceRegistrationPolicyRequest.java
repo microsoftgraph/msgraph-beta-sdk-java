@@ -21,7 +21,7 @@ public interface IDeviceRegistrationPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceRegistrationPolicy> callback);
+    void get(final ICallback<? super DeviceRegistrationPolicy> callback);
 
     /**
      * Gets the DeviceRegistrationPolicy from the service
@@ -36,7 +36,7 @@ public interface IDeviceRegistrationPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceRegistrationPolicy> callback);
+    void delete(final ICallback<? super DeviceRegistrationPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceRegistrationPolicyRequest extends IHttpRequest {
      * @param sourceDeviceRegistrationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback);
+    void patch(final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback);
 
     /**
      * Patches this DeviceRegistrationPolicy with a source
@@ -68,7 +68,7 @@ public interface IDeviceRegistrationPolicyRequest extends IHttpRequest {
      * @param newDeviceRegistrationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback);
+    void post(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback);
 
     /**
      * Posts a DeviceRegistrationPolicy with a new object
@@ -85,7 +85,7 @@ public interface IDeviceRegistrationPolicyRequest extends IHttpRequest {
      * @param newDeviceRegistrationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback);
+    void put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback);
 
     /**
      * Posts a DeviceRegistrationPolicy with a new object

@@ -34,7 +34,7 @@ public class WindowsPhone81CertificateProfileBaseReferenceRequest extends BaseRe
         super(requestUrl, client, requestOptions, WindowsPhone81CertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void delete(final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class WindowsPhone81CertificateProfileBaseReferenceRequest extends BaseRe
         return (WindowsPhone81CertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsPhone81CertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsPhone81CertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the WindowsPhone81CertificateProfileBase
      *
      * @param srcWindowsPhone81CertificateProfileBase the WindowsPhone81CertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WindowsPhone81CertificateProfileBase srcWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void put(WindowsPhone81CertificateProfileBase srcWindowsPhone81CertificateProfileBase, final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcWindowsPhone81CertificateProfileBase);
     }
 

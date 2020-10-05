@@ -41,7 +41,7 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosImportedPFXCertificateProfile> callback) {
+    public void get(final ICallback<? super IosImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosImportedPFXCertificateProfile> callback) {
+    public void delete(final ICallback<? super IosImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
      * @param sourceIosImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosImportedPFXCertificateProfile sourceIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback) {
+    public void patch(final IosImportedPFXCertificateProfile sourceIosImportedPFXCertificateProfile, final ICallback<? super IosImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIosImportedPFXCertificateProfile);
     }
 
@@ -100,7 +100,7 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
      * @param newIosImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback) {
+    public void post(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<? super IosImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newIosImportedPFXCertificateProfile);
     }
 
@@ -121,7 +121,7 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
      * @param newIosImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback) {
+    public void put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<? super IosImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newIosImportedPFXCertificateProfile);
     }
 
@@ -155,17 +155,6 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
      */
      public IIosImportedPFXCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosImportedPFXCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosImportedPFXCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosImportedPFXCertificateProfileRequest)this;
      }
 

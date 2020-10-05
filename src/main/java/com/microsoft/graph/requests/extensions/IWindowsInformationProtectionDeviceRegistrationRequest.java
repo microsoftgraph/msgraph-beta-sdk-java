@@ -21,7 +21,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void get(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     /**
      * Gets the WindowsInformationProtectionDeviceRegistration from the service
@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void delete(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationRequest extends 
      * @param sourceWindowsInformationProtectionDeviceRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     /**
      * Patches this WindowsInformationProtectionDeviceRegistration with a source
@@ -68,7 +68,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationRequest extends 
      * @param newWindowsInformationProtectionDeviceRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     /**
      * Posts a WindowsInformationProtectionDeviceRegistration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationRequest extends 
      * @param newWindowsInformationProtectionDeviceRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void put(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     /**
      * Posts a WindowsInformationProtectionDeviceRegistration with a new object

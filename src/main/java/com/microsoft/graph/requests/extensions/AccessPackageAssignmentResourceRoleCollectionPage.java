@@ -23,6 +23,6 @@ public class AccessPackageAssignmentResourceRoleCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public AccessPackageAssignmentResourceRoleCollectionPage(final AccessPackageAssignmentResourceRoleCollectionResponse response, final IAccessPackageAssignmentResourceRoleCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

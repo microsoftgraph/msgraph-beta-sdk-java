@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserGetLoggedOnManagedDevicesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserGetLoggedOnManagedDevicesCollectionPage> callback);
+    void get(final ICallback<? super IUserGetLoggedOnManagedDevicesCollectionPage> callback);
 
     IUserGetLoggedOnManagedDevicesCollectionPage get() throws ClientException;
 

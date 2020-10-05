@@ -40,7 +40,7 @@ public class SecurityBaselineSettingStateCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, SecurityBaselineSettingStateCollectionResponse.class, ISecurityBaselineSettingStateCollectionPage.class);
     }
 
-    public void get(final ICallback<ISecurityBaselineSettingStateCollectionPage> callback) {
+    public void get(final ICallback<? super ISecurityBaselineSettingStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecurityBaselineSettingStateCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback) {
+    public void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityBaselineSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SecurityBaselineSettingStateCollectionRequest extends BaseCollectio
      */
     public ISecurityBaselineSettingStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SecurityBaselineSettingStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISecurityBaselineSettingStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SecurityBaselineSettingStateCollectionRequest)this;
     }
 

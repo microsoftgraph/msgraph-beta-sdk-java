@@ -21,7 +21,7 @@ public interface IJobResponseBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<JobResponseBase> callback);
+    void get(final ICallback<? super JobResponseBase> callback);
 
     /**
      * Gets the JobResponseBase from the service
@@ -36,7 +36,7 @@ public interface IJobResponseBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<JobResponseBase> callback);
+    void delete(final ICallback<? super JobResponseBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IJobResponseBaseRequest extends IHttpRequest {
      * @param sourceJobResponseBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final JobResponseBase sourceJobResponseBase, final ICallback<JobResponseBase> callback);
+    void patch(final JobResponseBase sourceJobResponseBase, final ICallback<? super JobResponseBase> callback);
 
     /**
      * Patches this JobResponseBase with a source
@@ -68,7 +68,7 @@ public interface IJobResponseBaseRequest extends IHttpRequest {
      * @param newJobResponseBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final JobResponseBase newJobResponseBase, final ICallback<JobResponseBase> callback);
+    void post(final JobResponseBase newJobResponseBase, final ICallback<? super JobResponseBase> callback);
 
     /**
      * Posts a JobResponseBase with a new object
@@ -85,7 +85,7 @@ public interface IJobResponseBaseRequest extends IHttpRequest {
      * @param newJobResponseBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final JobResponseBase newJobResponseBase, final ICallback<JobResponseBase> callback);
+    void put(final JobResponseBase newJobResponseBase, final ICallback<? super JobResponseBase> callback);
 
     /**
      * Posts a JobResponseBase with a new object

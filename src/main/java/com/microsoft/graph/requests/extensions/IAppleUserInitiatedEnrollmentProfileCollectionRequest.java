@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAppleUserInitiatedEnrollmentProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAppleUserInitiatedEnrollmentProfileCollectionPage> callback);
+    void get(final ICallback<? super IAppleUserInitiatedEnrollmentProfileCollectionPage> callback);
 
     IAppleUserInitiatedEnrollmentProfileCollectionPage get() throws ClientException;
 
-    void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+    void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback);
 
     AppleUserInitiatedEnrollmentProfile post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAppleUserInitiatedEnrollmentProfileCollectionRequest extends I
      * @return the updated request
      */
     IAppleUserInitiatedEnrollmentProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAppleUserInitiatedEnrollmentProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAppleUserInitiatedEnrollmentProfileCollectionRequest extends I
      *
 	 * @return the updated request
 	 */
-	IAppleUserInitiatedEnrollmentProfileCollectionRequest skipToken(String skipToken);
+	IAppleUserInitiatedEnrollmentProfileCollectionRequest skipToken(final String skipToken);
 }

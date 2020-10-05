@@ -40,7 +40,7 @@ public class DomainSecurityProfileCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, DomainSecurityProfileCollectionResponse.class, IDomainSecurityProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IDomainSecurityProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IDomainSecurityProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DomainSecurityProfileCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback) {
+    public void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DomainSecurityProfileCollectionRequest extends BaseCollectionReques
      */
     public IDomainSecurityProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DomainSecurityProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDomainSecurityProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DomainSecurityProfileCollectionRequest)this;
     }
 

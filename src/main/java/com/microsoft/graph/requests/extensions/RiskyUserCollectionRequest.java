@@ -39,7 +39,7 @@ public class RiskyUserCollectionRequest extends BaseCollectionRequest<RiskyUserC
         super(requestUrl, client, requestOptions, RiskyUserCollectionResponse.class, IRiskyUserCollectionPage.class);
     }
 
-    public void get(final ICallback<IRiskyUserCollectionPage> callback) {
+    public void get(final ICallback<? super IRiskyUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class RiskyUserCollectionRequest extends BaseCollectionRequest<RiskyUserC
         return buildFromResponse(response);
     }
 
-    public void post(final RiskyUser newRiskyUser, final ICallback<RiskyUser> callback) {
+    public void post(final RiskyUser newRiskyUser, final ICallback<? super RiskyUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RiskyUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class RiskyUserCollectionRequest extends BaseCollectionRequest<RiskyUserC
      */
     public IRiskyUserCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RiskyUserCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRiskyUserCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RiskyUserCollectionRequest)this;
     }
 

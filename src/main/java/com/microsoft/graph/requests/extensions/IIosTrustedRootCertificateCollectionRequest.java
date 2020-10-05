@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIosTrustedRootCertificateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIosTrustedRootCertificateCollectionPage> callback);
+    void get(final ICallback<? super IIosTrustedRootCertificateCollectionPage> callback);
 
     IIosTrustedRootCertificateCollectionPage get() throws ClientException;
 
-    void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+    void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback);
 
     IosTrustedRootCertificate post(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IIosTrustedRootCertificateCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IIosTrustedRootCertificateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IIosTrustedRootCertificateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IIosTrustedRootCertificateCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IIosTrustedRootCertificateCollectionRequest skipToken(String skipToken);
+	IIosTrustedRootCertificateCollectionRequest skipToken(final String skipToken);
 }

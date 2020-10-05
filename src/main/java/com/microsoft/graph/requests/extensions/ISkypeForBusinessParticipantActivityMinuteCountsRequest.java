@@ -21,7 +21,7 @@ public interface ISkypeForBusinessParticipantActivityMinuteCountsRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback);
+    void get(final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback);
 
     /**
      * Gets the SkypeForBusinessParticipantActivityMinuteCounts from the service
@@ -36,7 +36,7 @@ public interface ISkypeForBusinessParticipantActivityMinuteCountsRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback);
+    void delete(final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkypeForBusinessParticipantActivityMinuteCountsRequest extends
      * @param sourceSkypeForBusinessParticipantActivityMinuteCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkypeForBusinessParticipantActivityMinuteCounts sourceSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback);
+    void patch(final SkypeForBusinessParticipantActivityMinuteCounts sourceSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback);
 
     /**
      * Patches this SkypeForBusinessParticipantActivityMinuteCounts with a source
@@ -68,7 +68,7 @@ public interface ISkypeForBusinessParticipantActivityMinuteCountsRequest extends
      * @param newSkypeForBusinessParticipantActivityMinuteCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback);
+    void post(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback);
 
     /**
      * Posts a SkypeForBusinessParticipantActivityMinuteCounts with a new object
@@ -85,7 +85,7 @@ public interface ISkypeForBusinessParticipantActivityMinuteCountsRequest extends
      * @param newSkypeForBusinessParticipantActivityMinuteCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback);
+    void put(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback);
 
     /**
      * Posts a SkypeForBusinessParticipantActivityMinuteCounts with a new object

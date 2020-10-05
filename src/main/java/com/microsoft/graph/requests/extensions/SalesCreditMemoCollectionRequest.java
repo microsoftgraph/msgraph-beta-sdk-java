@@ -40,7 +40,7 @@ public class SalesCreditMemoCollectionRequest extends BaseCollectionRequest<Sale
         super(requestUrl, client, requestOptions, SalesCreditMemoCollectionResponse.class, ISalesCreditMemoCollectionPage.class);
     }
 
-    public void get(final ICallback<ISalesCreditMemoCollectionPage> callback) {
+    public void get(final ICallback<? super ISalesCreditMemoCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SalesCreditMemoCollectionRequest extends BaseCollectionRequest<Sale
         return buildFromResponse(response);
     }
 
-    public void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback) {
+    public void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesCreditMemoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SalesCreditMemoCollectionRequest extends BaseCollectionRequest<Sale
      */
     public ISalesCreditMemoCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SalesCreditMemoCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISalesCreditMemoCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SalesCreditMemoCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IItemActivityOLDRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemActivityOLD> callback);
+    void get(final ICallback<? super ItemActivityOLD> callback);
 
     /**
      * Gets the ItemActivityOLD from the service
@@ -36,7 +36,7 @@ public interface IItemActivityOLDRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemActivityOLD> callback);
+    void delete(final ICallback<? super ItemActivityOLD> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemActivityOLDRequest extends IHttpRequest {
      * @param sourceItemActivityOLD the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemActivityOLD sourceItemActivityOLD, final ICallback<ItemActivityOLD> callback);
+    void patch(final ItemActivityOLD sourceItemActivityOLD, final ICallback<? super ItemActivityOLD> callback);
 
     /**
      * Patches this ItemActivityOLD with a source
@@ -68,7 +68,7 @@ public interface IItemActivityOLDRequest extends IHttpRequest {
      * @param newItemActivityOLD the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemActivityOLD newItemActivityOLD, final ICallback<ItemActivityOLD> callback);
+    void post(final ItemActivityOLD newItemActivityOLD, final ICallback<? super ItemActivityOLD> callback);
 
     /**
      * Posts a ItemActivityOLD with a new object
@@ -85,7 +85,7 @@ public interface IItemActivityOLDRequest extends IHttpRequest {
      * @param newItemActivityOLD the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemActivityOLD newItemActivityOLD, final ICallback<ItemActivityOLD> callback);
+    void put(final ItemActivityOLD newItemActivityOLD, final ICallback<? super ItemActivityOLD> callback);
 
     /**
      * Posts a ItemActivityOLD with a new object

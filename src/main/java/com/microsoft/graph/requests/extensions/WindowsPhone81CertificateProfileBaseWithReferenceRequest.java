@@ -35,7 +35,7 @@ public class WindowsPhone81CertificateProfileBaseWithReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, WindowsPhone81CertificateProfileBase.class);
     }
 
-    public void post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final IJsonBackedObject payload, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class WindowsPhone81CertificateProfileBaseWithReferenceRequest extends Ba
         return null;
     }
 
-    public void get(final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void get(final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class WindowsPhone81CertificateProfileBaseWithReferenceRequest extends Ba
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+	public void delete(final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class WindowsPhone81CertificateProfileBaseWithReferenceRequest extends Ba
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+	public void patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase, final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsPhone81CertificateProfileBase);
 	}
 
@@ -91,16 +91,6 @@ public class WindowsPhone81CertificateProfileBaseWithReferenceRequest extends Ba
      */
     public IWindowsPhone81CertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsPhone81CertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsPhone81CertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsPhone81CertificateProfileBaseWithReferenceRequest)this;
     }
 }

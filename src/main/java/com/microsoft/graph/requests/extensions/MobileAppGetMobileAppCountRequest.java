@@ -36,7 +36,7 @@ public class MobileAppGetMobileAppCountRequest extends BaseRequest implements IM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Long> callback) {
+    public void get(final ICallback<? super Long> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,6 +80,17 @@ public class MobileAppGetMobileAppCountRequest extends BaseRequest implements IM
      */
     public IMobileAppGetMobileAppCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppGetMobileAppCountRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppGetMobileAppCountRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppGetMobileAppCountRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CallActivityStatistics> callback) {
+    public void get(final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CallActivityStatistics> callback) {
+    public void delete(final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param sourceCallActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CallActivityStatistics sourceCallActivityStatistics, final ICallback<CallActivityStatistics> callback) {
+    public void patch(final CallActivityStatistics sourceCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.PATCH, callback, sourceCallActivityStatistics);
     }
 
@@ -96,7 +96,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param newCallActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CallActivityStatistics newCallActivityStatistics, final ICallback<CallActivityStatistics> callback) {
+    public void post(final CallActivityStatistics newCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.POST, callback, newCallActivityStatistics);
     }
 
@@ -117,7 +117,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param newCallActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CallActivityStatistics newCallActivityStatistics, final ICallback<CallActivityStatistics> callback) {
+    public void put(final CallActivityStatistics newCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.PUT, callback, newCallActivityStatistics);
     }
 
@@ -151,17 +151,6 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      */
      public ICallActivityStatisticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CallActivityStatisticsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICallActivityStatisticsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CallActivityStatisticsRequest)this;
      }
 

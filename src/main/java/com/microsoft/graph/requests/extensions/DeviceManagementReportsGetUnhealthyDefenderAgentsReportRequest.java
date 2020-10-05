@@ -36,7 +36,7 @@ public class DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest exte
         body = new DeviceManagementReportsGetUnhealthyDefenderAgentsReportBody();
     }
 
-    public void post(final ICallback<java.io.InputStream> callback) {
+    public void post(final ICallback<? super java.io.InputStream> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest exte
      */
     public IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest)this;
     }
 

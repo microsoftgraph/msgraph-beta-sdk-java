@@ -37,7 +37,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsManagementAppHealthState> callback) {
+    public void get(final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsManagementAppHealthState> callback) {
+    public void delete(final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param sourceWindowsManagementAppHealthState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback) {
+    public void patch(final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsManagementAppHealthState);
     }
 
@@ -96,7 +96,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param newWindowsManagementAppHealthState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback) {
+    public void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.POST, callback, newWindowsManagementAppHealthState);
     }
 
@@ -117,7 +117,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param newWindowsManagementAppHealthState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback) {
+    public void put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.PUT, callback, newWindowsManagementAppHealthState);
     }
 
@@ -151,17 +151,6 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      */
      public IWindowsManagementAppHealthStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsManagementAppHealthStateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsManagementAppHealthStateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsManagementAppHealthStateRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Office365GroupsActivityFileCounts> callback) {
+    public void get(final ICallback<? super Office365GroupsActivityFileCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Office365GroupsActivityFileCounts> callback) {
+    public void delete(final ICallback<? super Office365GroupsActivityFileCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
      * @param sourceOffice365GroupsActivityFileCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365GroupsActivityFileCounts sourceOffice365GroupsActivityFileCounts, final ICallback<Office365GroupsActivityFileCounts> callback) {
+    public void patch(final Office365GroupsActivityFileCounts sourceOffice365GroupsActivityFileCounts, final ICallback<? super Office365GroupsActivityFileCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365GroupsActivityFileCounts);
     }
 
@@ -96,7 +96,7 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
      * @param newOffice365GroupsActivityFileCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts, final ICallback<Office365GroupsActivityFileCounts> callback) {
+    public void post(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts, final ICallback<? super Office365GroupsActivityFileCounts> callback) {
         send(HttpMethod.POST, callback, newOffice365GroupsActivityFileCounts);
     }
 
@@ -117,7 +117,7 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
      * @param newOffice365GroupsActivityFileCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts, final ICallback<Office365GroupsActivityFileCounts> callback) {
+    public void put(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts, final ICallback<? super Office365GroupsActivityFileCounts> callback) {
         send(HttpMethod.PUT, callback, newOffice365GroupsActivityFileCounts);
     }
 
@@ -151,17 +151,6 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
      */
      public IOffice365GroupsActivityFileCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365GroupsActivityFileCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOffice365GroupsActivityFileCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Office365GroupsActivityFileCountsRequest)this;
      }
 

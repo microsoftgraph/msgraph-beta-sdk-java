@@ -21,7 +21,7 @@ public interface ISynchronizationTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SynchronizationTemplate> callback);
+    void get(final ICallback<? super SynchronizationTemplate> callback);
 
     /**
      * Gets the SynchronizationTemplate from the service
@@ -36,7 +36,7 @@ public interface ISynchronizationTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SynchronizationTemplate> callback);
+    void delete(final ICallback<? super SynchronizationTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISynchronizationTemplateRequest extends IHttpRequest {
      * @param sourceSynchronizationTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SynchronizationTemplate sourceSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback);
+    void patch(final SynchronizationTemplate sourceSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback);
 
     /**
      * Patches this SynchronizationTemplate with a source
@@ -68,7 +68,7 @@ public interface ISynchronizationTemplateRequest extends IHttpRequest {
      * @param newSynchronizationTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback);
+    void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback);
 
     /**
      * Posts a SynchronizationTemplate with a new object
@@ -85,7 +85,7 @@ public interface ISynchronizationTemplateRequest extends IHttpRequest {
      * @param newSynchronizationTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback);
+    void put(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback);
 
     /**
      * Posts a SynchronizationTemplate with a new object

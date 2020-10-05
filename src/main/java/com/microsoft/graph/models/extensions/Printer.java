@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PrintIdentity;
 import com.microsoft.graph.models.extensions.PrintUserIdentity;
@@ -14,13 +13,9 @@ import com.microsoft.graph.models.extensions.PrintConnector;
 import com.microsoft.graph.models.extensions.PrinterShare;
 import com.microsoft.graph.models.extensions.PrintTaskTrigger;
 import com.microsoft.graph.models.extensions.PrinterBase;
-import com.microsoft.graph.requests.extensions.PrintIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionPage;
 
 
@@ -139,67 +134,19 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
 
         if (json.has("allowedGroups")) {
-            final PrintIdentityCollectionResponse response = new PrintIdentityCollectionResponse();
-            if (json.has("allowedGroups@odata.nextLink")) {
-                response.nextLink = json.get("allowedGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("allowedGroups").toString(), JsonObject[].class);
-            final PrintIdentity[] array = new PrintIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            allowedGroups = new PrintIdentityCollectionPage(response, null);
+            allowedGroups = serializer.deserializeObject(json.get("allowedGroups").toString(), PrintIdentityCollectionPage.class);
         }
 
         if (json.has("allowedUsers")) {
-            final PrintUserIdentityCollectionResponse response = new PrintUserIdentityCollectionResponse();
-            if (json.has("allowedUsers@odata.nextLink")) {
-                response.nextLink = json.get("allowedUsers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("allowedUsers").toString(), JsonObject[].class);
-            final PrintUserIdentity[] array = new PrintUserIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUserIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            allowedUsers = new PrintUserIdentityCollectionPage(response, null);
+            allowedUsers = serializer.deserializeObject(json.get("allowedUsers").toString(), PrintUserIdentityCollectionPage.class);
         }
 
         if (json.has("connectors")) {
-            final PrintConnectorCollectionResponse response = new PrintConnectorCollectionResponse();
-            if (json.has("connectors@odata.nextLink")) {
-                response.nextLink = json.get("connectors@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectors").toString(), JsonObject[].class);
-            final PrintConnector[] array = new PrintConnector[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintConnector.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            connectors = new PrintConnectorCollectionPage(response, null);
+            connectors = serializer.deserializeObject(json.get("connectors").toString(), PrintConnectorCollectionPage.class);
         }
 
         if (json.has("taskTriggers")) {
-            final PrintTaskTriggerCollectionResponse response = new PrintTaskTriggerCollectionResponse();
-            if (json.has("taskTriggers@odata.nextLink")) {
-                response.nextLink = json.get("taskTriggers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("taskTriggers").toString(), JsonObject[].class);
-            final PrintTaskTrigger[] array = new PrintTaskTrigger[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintTaskTrigger.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            taskTriggers = new PrintTaskTriggerCollectionPage(response, null);
+            taskTriggers = serializer.deserializeObject(json.get("taskTriggers").toString(), PrintTaskTriggerCollectionPage.class);
         }
     }
 }

@@ -21,7 +21,7 @@ public interface IDeviceManagementIntentUserStateSummaryRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntentUserStateSummary> callback);
+    void get(final ICallback<? super DeviceManagementIntentUserStateSummary> callback);
 
     /**
      * Gets the DeviceManagementIntentUserStateSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntentUserStateSummaryRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntentUserStateSummary> callback);
+    void delete(final ICallback<? super DeviceManagementIntentUserStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntentUserStateSummaryRequest extends IHttpReq
      * @param sourceDeviceManagementIntentUserStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntentUserStateSummary sourceDeviceManagementIntentUserStateSummary, final ICallback<DeviceManagementIntentUserStateSummary> callback);
+    void patch(final DeviceManagementIntentUserStateSummary sourceDeviceManagementIntentUserStateSummary, final ICallback<? super DeviceManagementIntentUserStateSummary> callback);
 
     /**
      * Patches this DeviceManagementIntentUserStateSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntentUserStateSummaryRequest extends IHttpReq
      * @param newDeviceManagementIntentUserStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<DeviceManagementIntentUserStateSummary> callback);
+    void post(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<? super DeviceManagementIntentUserStateSummary> callback);
 
     /**
      * Posts a DeviceManagementIntentUserStateSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntentUserStateSummaryRequest extends IHttpReq
      * @param newDeviceManagementIntentUserStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<DeviceManagementIntentUserStateSummary> callback);
+    void put(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<? super DeviceManagementIntentUserStateSummary> callback);
 
     /**
      * Posts a DeviceManagementIntentUserStateSummary with a new object

@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SecurityProviderStatus;
 import com.microsoft.graph.models.extensions.Alert;
@@ -22,29 +21,17 @@ import com.microsoft.graph.models.extensions.SecurityAction;
 import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.UserSecurityProfile;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.requests.extensions.AlertCollectionPage;
-import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.DomainSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.DomainSecurityProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.FileSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.FileSecurityProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.HostSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.HostSecurityProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.IpSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.IpSecurityProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.ProviderTenantSettingCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProviderTenantSettingCollectionPage;
-import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
-import com.microsoft.graph.requests.extensions.SecurityActionCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecurityActionCollectionPage;
-import com.microsoft.graph.requests.extensions.TiIndicatorCollectionResponse;
 import com.microsoft.graph.requests.extensions.TiIndicatorCollectionPage;
-import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionPage;
 
 
@@ -205,195 +192,51 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            final AlertCollectionResponse response = new AlertCollectionResponse();
-            if (json.has("alerts@odata.nextLink")) {
-                response.nextLink = json.get("alerts@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("alerts").toString(), JsonObject[].class);
-            final Alert[] array = new Alert[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Alert.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            alerts = new AlertCollectionPage(response, null);
+            alerts = serializer.deserializeObject(json.get("alerts").toString(), AlertCollectionPage.class);
         }
 
         if (json.has("cloudAppSecurityProfiles")) {
-            final CloudAppSecurityProfileCollectionResponse response = new CloudAppSecurityProfileCollectionResponse();
-            if (json.has("cloudAppSecurityProfiles@odata.nextLink")) {
-                response.nextLink = json.get("cloudAppSecurityProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("cloudAppSecurityProfiles").toString(), JsonObject[].class);
-            final CloudAppSecurityProfile[] array = new CloudAppSecurityProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CloudAppSecurityProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            cloudAppSecurityProfiles = new CloudAppSecurityProfileCollectionPage(response, null);
+            cloudAppSecurityProfiles = serializer.deserializeObject(json.get("cloudAppSecurityProfiles").toString(), CloudAppSecurityProfileCollectionPage.class);
         }
 
         if (json.has("domainSecurityProfiles")) {
-            final DomainSecurityProfileCollectionResponse response = new DomainSecurityProfileCollectionResponse();
-            if (json.has("domainSecurityProfiles@odata.nextLink")) {
-                response.nextLink = json.get("domainSecurityProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("domainSecurityProfiles").toString(), JsonObject[].class);
-            final DomainSecurityProfile[] array = new DomainSecurityProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DomainSecurityProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            domainSecurityProfiles = new DomainSecurityProfileCollectionPage(response, null);
+            domainSecurityProfiles = serializer.deserializeObject(json.get("domainSecurityProfiles").toString(), DomainSecurityProfileCollectionPage.class);
         }
 
         if (json.has("fileSecurityProfiles")) {
-            final FileSecurityProfileCollectionResponse response = new FileSecurityProfileCollectionResponse();
-            if (json.has("fileSecurityProfiles@odata.nextLink")) {
-                response.nextLink = json.get("fileSecurityProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("fileSecurityProfiles").toString(), JsonObject[].class);
-            final FileSecurityProfile[] array = new FileSecurityProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), FileSecurityProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            fileSecurityProfiles = new FileSecurityProfileCollectionPage(response, null);
+            fileSecurityProfiles = serializer.deserializeObject(json.get("fileSecurityProfiles").toString(), FileSecurityProfileCollectionPage.class);
         }
 
         if (json.has("hostSecurityProfiles")) {
-            final HostSecurityProfileCollectionResponse response = new HostSecurityProfileCollectionResponse();
-            if (json.has("hostSecurityProfiles@odata.nextLink")) {
-                response.nextLink = json.get("hostSecurityProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("hostSecurityProfiles").toString(), JsonObject[].class);
-            final HostSecurityProfile[] array = new HostSecurityProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), HostSecurityProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            hostSecurityProfiles = new HostSecurityProfileCollectionPage(response, null);
+            hostSecurityProfiles = serializer.deserializeObject(json.get("hostSecurityProfiles").toString(), HostSecurityProfileCollectionPage.class);
         }
 
         if (json.has("ipSecurityProfiles")) {
-            final IpSecurityProfileCollectionResponse response = new IpSecurityProfileCollectionResponse();
-            if (json.has("ipSecurityProfiles@odata.nextLink")) {
-                response.nextLink = json.get("ipSecurityProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("ipSecurityProfiles").toString(), JsonObject[].class);
-            final IpSecurityProfile[] array = new IpSecurityProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IpSecurityProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            ipSecurityProfiles = new IpSecurityProfileCollectionPage(response, null);
+            ipSecurityProfiles = serializer.deserializeObject(json.get("ipSecurityProfiles").toString(), IpSecurityProfileCollectionPage.class);
         }
 
         if (json.has("providerTenantSettings")) {
-            final ProviderTenantSettingCollectionResponse response = new ProviderTenantSettingCollectionResponse();
-            if (json.has("providerTenantSettings@odata.nextLink")) {
-                response.nextLink = json.get("providerTenantSettings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("providerTenantSettings").toString(), JsonObject[].class);
-            final ProviderTenantSetting[] array = new ProviderTenantSetting[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProviderTenantSetting.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            providerTenantSettings = new ProviderTenantSettingCollectionPage(response, null);
+            providerTenantSettings = serializer.deserializeObject(json.get("providerTenantSettings").toString(), ProviderTenantSettingCollectionPage.class);
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            final SecureScoreControlProfileCollectionResponse response = new SecureScoreControlProfileCollectionResponse();
-            if (json.has("secureScoreControlProfiles@odata.nextLink")) {
-                response.nextLink = json.get("secureScoreControlProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), JsonObject[].class);
-            final SecureScoreControlProfile[] array = new SecureScoreControlProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecureScoreControlProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            secureScoreControlProfiles = new SecureScoreControlProfileCollectionPage(response, null);
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), SecureScoreControlProfileCollectionPage.class);
         }
 
         if (json.has("secureScores")) {
-            final SecureScoreCollectionResponse response = new SecureScoreCollectionResponse();
-            if (json.has("secureScores@odata.nextLink")) {
-                response.nextLink = json.get("secureScores@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("secureScores").toString(), JsonObject[].class);
-            final SecureScore[] array = new SecureScore[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecureScore.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            secureScores = new SecureScoreCollectionPage(response, null);
+            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), SecureScoreCollectionPage.class);
         }
 
         if (json.has("securityActions")) {
-            final SecurityActionCollectionResponse response = new SecurityActionCollectionResponse();
-            if (json.has("securityActions@odata.nextLink")) {
-                response.nextLink = json.get("securityActions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("securityActions").toString(), JsonObject[].class);
-            final SecurityAction[] array = new SecurityAction[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityAction.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            securityActions = new SecurityActionCollectionPage(response, null);
+            securityActions = serializer.deserializeObject(json.get("securityActions").toString(), SecurityActionCollectionPage.class);
         }
 
         if (json.has("tiIndicators")) {
-            final TiIndicatorCollectionResponse response = new TiIndicatorCollectionResponse();
-            if (json.has("tiIndicators@odata.nextLink")) {
-                response.nextLink = json.get("tiIndicators@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tiIndicators").toString(), JsonObject[].class);
-            final TiIndicator[] array = new TiIndicator[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TiIndicator.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tiIndicators = new TiIndicatorCollectionPage(response, null);
+            tiIndicators = serializer.deserializeObject(json.get("tiIndicators").toString(), TiIndicatorCollectionPage.class);
         }
 
         if (json.has("userSecurityProfiles")) {
-            final UserSecurityProfileCollectionResponse response = new UserSecurityProfileCollectionResponse();
-            if (json.has("userSecurityProfiles@odata.nextLink")) {
-                response.nextLink = json.get("userSecurityProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userSecurityProfiles").toString(), JsonObject[].class);
-            final UserSecurityProfile[] array = new UserSecurityProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserSecurityProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userSecurityProfiles = new UserSecurityProfileCollectionPage(response, null);
+            userSecurityProfiles = serializer.deserializeObject(json.get("userSecurityProfiles").toString(), UserSecurityProfileCollectionPage.class);
         }
     }
 }

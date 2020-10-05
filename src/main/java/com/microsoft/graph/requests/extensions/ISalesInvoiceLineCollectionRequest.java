@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISalesInvoiceLineCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISalesInvoiceLineCollectionPage> callback);
+    void get(final ICallback<? super ISalesInvoiceLineCollectionPage> callback);
 
     ISalesInvoiceLineCollectionPage get() throws ClientException;
 
-    void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback);
+    void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<? super SalesInvoiceLine> callback);
 
     SalesInvoiceLine post(final SalesInvoiceLine newSalesInvoiceLine) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISalesInvoiceLineCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISalesInvoiceLineCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISalesInvoiceLineCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISalesInvoiceLineCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISalesInvoiceLineCollectionRequest skipToken(String skipToken);
+	ISalesInvoiceLineCollectionRequest skipToken(final String skipToken);
 }

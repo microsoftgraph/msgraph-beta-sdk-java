@@ -21,7 +21,7 @@ public interface IAndroidForWorkImportedPFXCertificateProfileRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the AndroidForWorkImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkImportedPFXCertificateProfileRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkImportedPFXCertificateProfileRequest extends IHt
      * @param sourceAndroidForWorkImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback);
+    void patch(final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this AndroidForWorkImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkImportedPFXCertificateProfileRequest extends IHt
      * @param newAndroidForWorkImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback);
+    void post(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a AndroidForWorkImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkImportedPFXCertificateProfileRequest extends IHt
      * @param newAndroidForWorkImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback);
+    void put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a AndroidForWorkImportedPFXCertificateProfile with a new object

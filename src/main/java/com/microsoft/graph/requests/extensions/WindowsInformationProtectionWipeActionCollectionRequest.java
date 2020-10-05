@@ -40,7 +40,7 @@ public class WindowsInformationProtectionWipeActionCollectionRequest extends Bas
         super(requestUrl, client, requestOptions, WindowsInformationProtectionWipeActionCollectionResponse.class, IWindowsInformationProtectionWipeActionCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsInformationProtectionWipeActionCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsInformationProtectionWipeActionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionWipeActionCollectionRequest extends Bas
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback) {
+    public void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionWipeActionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsInformationProtectionWipeActionCollectionRequest extends Bas
      */
     public IWindowsInformationProtectionWipeActionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsInformationProtectionWipeActionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionWipeActionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsInformationProtectionWipeActionCollectionRequest)this;
     }
 

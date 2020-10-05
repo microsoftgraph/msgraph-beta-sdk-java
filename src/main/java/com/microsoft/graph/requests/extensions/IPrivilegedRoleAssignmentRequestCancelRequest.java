@@ -26,7 +26,7 @@ public interface IPrivilegedRoleAssignmentRequestCancelRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void post(final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     /**
      * Creates the PrivilegedRoleAssignmentRequestCancel

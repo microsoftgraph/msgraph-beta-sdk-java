@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage> callback);
 
     IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance, final ICallback<UserExperienceAnalyticsAppHealthApplicationPerformance> callback);
+    void post(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance, final ICallback<? super UserExperienceAnalyticsAppHealthApplicationPerformance> callback);
 
     UserExperienceAnalyticsAppHealthApplicationPerformance post(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsAppHealthApplicationPerformanceCollecti
      * @return the updated request
      */
     IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsAppHealthApplicationPerformanceCollecti
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest skipToken(final String skipToken);
 }

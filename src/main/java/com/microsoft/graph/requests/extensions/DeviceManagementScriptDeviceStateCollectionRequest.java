@@ -40,7 +40,7 @@ public class DeviceManagementScriptDeviceStateCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, DeviceManagementScriptDeviceStateCollectionResponse.class, IDeviceManagementScriptDeviceStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementScriptDeviceStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementScriptDeviceStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementScriptDeviceStateCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<DeviceManagementScriptDeviceState> callback) {
+    public void post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementScriptDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementScriptDeviceStateCollectionRequest extends BaseColl
      */
     public IDeviceManagementScriptDeviceStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementScriptDeviceStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementScriptDeviceStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementScriptDeviceStateCollectionRequest)this;
     }
 

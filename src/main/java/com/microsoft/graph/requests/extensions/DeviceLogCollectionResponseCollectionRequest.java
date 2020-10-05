@@ -40,7 +40,7 @@ public class DeviceLogCollectionResponseCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, DeviceLogCollectionResponseCollectionResponse.class, IDeviceLogCollectionResponseCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceLogCollectionResponseCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceLogCollectionResponseCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceLogCollectionResponseCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<DeviceLogCollectionResponse> callback) {
+    public void post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceLogCollectionResponseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceLogCollectionResponseCollectionRequest extends BaseCollection
      */
     public IDeviceLogCollectionResponseCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceLogCollectionResponseCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceLogCollectionResponseCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceLogCollectionResponseCollectionRequest)this;
     }
 

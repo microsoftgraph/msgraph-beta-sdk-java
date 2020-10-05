@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage> callback);
 
     IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
+    void post(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
 
     UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion post(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionColle
      * @return the updated request
      */
     IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionColle
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequest skipToken(final String skipToken);
 }

@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionP
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage(final UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse response, final IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

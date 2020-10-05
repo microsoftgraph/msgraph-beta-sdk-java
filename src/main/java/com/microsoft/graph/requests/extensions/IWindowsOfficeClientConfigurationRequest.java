@@ -21,7 +21,7 @@ public interface IWindowsOfficeClientConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsOfficeClientConfiguration> callback);
+    void get(final ICallback<? super WindowsOfficeClientConfiguration> callback);
 
     /**
      * Gets the WindowsOfficeClientConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsOfficeClientConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsOfficeClientConfiguration> callback);
+    void delete(final ICallback<? super WindowsOfficeClientConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsOfficeClientConfigurationRequest extends IHttpRequest {
      * @param sourceWindowsOfficeClientConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsOfficeClientConfiguration sourceWindowsOfficeClientConfiguration, final ICallback<WindowsOfficeClientConfiguration> callback);
+    void patch(final WindowsOfficeClientConfiguration sourceWindowsOfficeClientConfiguration, final ICallback<? super WindowsOfficeClientConfiguration> callback);
 
     /**
      * Patches this WindowsOfficeClientConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsOfficeClientConfigurationRequest extends IHttpRequest {
      * @param newWindowsOfficeClientConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<WindowsOfficeClientConfiguration> callback);
+    void post(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<? super WindowsOfficeClientConfiguration> callback);
 
     /**
      * Posts a WindowsOfficeClientConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsOfficeClientConfigurationRequest extends IHttpRequest {
      * @param newWindowsOfficeClientConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<WindowsOfficeClientConfiguration> callback);
+    void put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<? super WindowsOfficeClientConfiguration> callback);
 
     /**
      * Posts a WindowsOfficeClientConfiguration with a new object

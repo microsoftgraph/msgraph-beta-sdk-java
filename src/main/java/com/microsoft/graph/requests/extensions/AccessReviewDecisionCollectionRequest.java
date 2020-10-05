@@ -39,7 +39,7 @@ public class AccessReviewDecisionCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, AccessReviewDecisionCollectionResponse.class, IAccessReviewDecisionCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessReviewDecisionCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessReviewDecisionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AccessReviewDecisionCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final AccessReviewDecision newAccessReviewDecision, final ICallback<AccessReviewDecision> callback) {
+    public void post(final AccessReviewDecision newAccessReviewDecision, final ICallback<? super AccessReviewDecision> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessReviewDecisionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AccessReviewDecisionCollectionRequest extends BaseCollectionRequest
      */
     public IAccessReviewDecisionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessReviewDecisionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessReviewDecisionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessReviewDecisionCollectionRequest)this;
     }
 

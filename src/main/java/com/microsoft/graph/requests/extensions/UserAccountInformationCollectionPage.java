@@ -23,6 +23,6 @@ public class UserAccountInformationCollectionPage extends BaseCollectionPage<Use
      * @param builder  the request builder for the next collection page
      */
     public UserAccountInformationCollectionPage(final UserAccountInformationCollectionResponse response, final IUserAccountInformationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

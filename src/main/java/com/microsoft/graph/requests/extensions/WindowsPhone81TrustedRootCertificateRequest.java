@@ -37,7 +37,7 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void get(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
      * @param sourceWindowsPhone81TrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81TrustedRootCertificate);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
      * @param newWindowsPhone81TrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81TrustedRootCertificate);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
      * @param newWindowsPhone81TrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback) {
+    public void put(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81TrustedRootCertificate);
     }
 
@@ -151,17 +151,6 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
      */
      public IWindowsPhone81TrustedRootCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81TrustedRootCertificateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhone81TrustedRootCertificateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81TrustedRootCertificateRequest)this;
      }
 

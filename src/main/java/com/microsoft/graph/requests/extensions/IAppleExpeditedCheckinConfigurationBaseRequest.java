@@ -21,7 +21,7 @@ public interface IAppleExpeditedCheckinConfigurationBaseRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppleExpeditedCheckinConfigurationBase> callback);
+    void get(final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback);
 
     /**
      * Gets the AppleExpeditedCheckinConfigurationBase from the service
@@ -36,7 +36,7 @@ public interface IAppleExpeditedCheckinConfigurationBaseRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppleExpeditedCheckinConfigurationBase> callback);
+    void delete(final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppleExpeditedCheckinConfigurationBaseRequest extends IHttpReq
      * @param sourceAppleExpeditedCheckinConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppleExpeditedCheckinConfigurationBase sourceAppleExpeditedCheckinConfigurationBase, final ICallback<AppleExpeditedCheckinConfigurationBase> callback);
+    void patch(final AppleExpeditedCheckinConfigurationBase sourceAppleExpeditedCheckinConfigurationBase, final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback);
 
     /**
      * Patches this AppleExpeditedCheckinConfigurationBase with a source
@@ -68,7 +68,7 @@ public interface IAppleExpeditedCheckinConfigurationBaseRequest extends IHttpReq
      * @param newAppleExpeditedCheckinConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<AppleExpeditedCheckinConfigurationBase> callback);
+    void post(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback);
 
     /**
      * Posts a AppleExpeditedCheckinConfigurationBase with a new object
@@ -85,7 +85,7 @@ public interface IAppleExpeditedCheckinConfigurationBaseRequest extends IHttpReq
      * @param newAppleExpeditedCheckinConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<AppleExpeditedCheckinConfigurationBase> callback);
+    void put(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback);
 
     /**
      * Posts a AppleExpeditedCheckinConfigurationBase with a new object

@@ -37,7 +37,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSExtensionsConfiguration> callback) {
+    public void get(final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSExtensionsConfiguration> callback) {
+    public void delete(final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param sourceMacOSExtensionsConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback) {
+    public void patch(final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSExtensionsConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param newMacOSExtensionsConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback) {
+    public void post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSExtensionsConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param newMacOSExtensionsConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback) {
+    public void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSExtensionsConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      */
      public IMacOSExtensionsConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSExtensionsConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSExtensionsConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSExtensionsConfigurationRequest)this;
      }
 

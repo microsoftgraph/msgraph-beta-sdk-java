@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPurchaseInvoiceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPurchaseInvoiceCollectionPage> callback);
+    void get(final ICallback<? super IPurchaseInvoiceCollectionPage> callback);
 
     IPurchaseInvoiceCollectionPage get() throws ClientException;
 
-    void post(final PurchaseInvoice newPurchaseInvoice, final ICallback<PurchaseInvoice> callback);
+    void post(final PurchaseInvoice newPurchaseInvoice, final ICallback<? super PurchaseInvoice> callback);
 
     PurchaseInvoice post(final PurchaseInvoice newPurchaseInvoice) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPurchaseInvoiceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPurchaseInvoiceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPurchaseInvoiceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPurchaseInvoiceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPurchaseInvoiceCollectionRequest skipToken(String skipToken);
+	IPurchaseInvoiceCollectionRequest skipToken(final String skipToken);
 }

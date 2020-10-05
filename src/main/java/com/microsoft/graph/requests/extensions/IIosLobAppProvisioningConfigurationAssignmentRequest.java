@@ -21,7 +21,7 @@ public interface IIosLobAppProvisioningConfigurationAssignmentRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosLobAppProvisioningConfigurationAssignment> callback);
+    void get(final ICallback<? super IosLobAppProvisioningConfigurationAssignment> callback);
 
     /**
      * Gets the IosLobAppProvisioningConfigurationAssignment from the service
@@ -36,7 +36,7 @@ public interface IIosLobAppProvisioningConfigurationAssignmentRequest extends IH
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosLobAppProvisioningConfigurationAssignment> callback);
+    void delete(final ICallback<? super IosLobAppProvisioningConfigurationAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosLobAppProvisioningConfigurationAssignmentRequest extends IH
      * @param sourceIosLobAppProvisioningConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosLobAppProvisioningConfigurationAssignment sourceIosLobAppProvisioningConfigurationAssignment, final ICallback<IosLobAppProvisioningConfigurationAssignment> callback);
+    void patch(final IosLobAppProvisioningConfigurationAssignment sourceIosLobAppProvisioningConfigurationAssignment, final ICallback<? super IosLobAppProvisioningConfigurationAssignment> callback);
 
     /**
      * Patches this IosLobAppProvisioningConfigurationAssignment with a source
@@ -68,7 +68,7 @@ public interface IIosLobAppProvisioningConfigurationAssignmentRequest extends IH
      * @param newIosLobAppProvisioningConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<IosLobAppProvisioningConfigurationAssignment> callback);
+    void post(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<? super IosLobAppProvisioningConfigurationAssignment> callback);
 
     /**
      * Posts a IosLobAppProvisioningConfigurationAssignment with a new object
@@ -85,7 +85,7 @@ public interface IIosLobAppProvisioningConfigurationAssignmentRequest extends IH
      * @param newIosLobAppProvisioningConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<IosLobAppProvisioningConfigurationAssignment> callback);
+    void put(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<? super IosLobAppProvisioningConfigurationAssignment> callback);
 
     /**
      * Posts a IosLobAppProvisioningConfigurationAssignment with a new object

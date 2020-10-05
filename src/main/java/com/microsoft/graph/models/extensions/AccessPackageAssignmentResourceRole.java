@@ -6,14 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessPackageAssignment;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
 import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
 import com.microsoft.graph.models.extensions.AccessPackageSubject;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionPage;
 
 
@@ -126,19 +124,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
 
         if (json.has("accessPackageAssignments")) {
-            final AccessPackageAssignmentCollectionResponse response = new AccessPackageAssignmentCollectionResponse();
-            if (json.has("accessPackageAssignments@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageAssignments").toString(), JsonObject[].class);
-            final AccessPackageAssignment[] array = new AccessPackageAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageAssignments = new AccessPackageAssignmentCollectionPage(response, null);
+            accessPackageAssignments = serializer.deserializeObject(json.get("accessPackageAssignments").toString(), AccessPackageAssignmentCollectionPage.class);
         }
     }
 }

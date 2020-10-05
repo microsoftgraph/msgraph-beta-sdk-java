@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SynchronizationRule;
 import com.microsoft.graph.models.extensions.DirectoryDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionPage;
 
 
@@ -92,19 +90,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
 
 
         if (json.has("directories")) {
-            final DirectoryDefinitionCollectionResponse response = new DirectoryDefinitionCollectionResponse();
-            if (json.has("directories@odata.nextLink")) {
-                response.nextLink = json.get("directories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("directories").toString(), JsonObject[].class);
-            final DirectoryDefinition[] array = new DirectoryDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            directories = new DirectoryDefinitionCollectionPage(response, null);
+            directories = serializer.deserializeObject(json.get("directories").toString(), DirectoryDefinitionCollectionPage.class);
         }
     }
 }

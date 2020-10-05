@@ -58,7 +58,7 @@ public class FileClassificationRequestFileStreamRequest extends BaseStreamReques
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<FileClassificationRequest> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super FileClassificationRequest> callback) {
         send(fileContents, callback);
     }
 

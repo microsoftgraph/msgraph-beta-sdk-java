@@ -23,6 +23,6 @@ public class AuditEventCollectionPage extends BaseCollectionPage<AuditEvent, IAu
      * @param builder  the request builder for the next collection page
      */
     public AuditEventCollectionPage(final AuditEventCollectionResponse response, final IAuditEventCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

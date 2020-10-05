@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintUserIdentityCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrintUserIdentityCollectionPage> callback);
+    void get(final ICallback<? super IPrintUserIdentityCollectionPage> callback);
 
     IPrintUserIdentityCollectionPage get() throws ClientException;
 
-    void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback);
+    void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<? super PrintUserIdentity> callback);
 
     PrintUserIdentity post(final PrintUserIdentity newPrintUserIdentity) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPrintUserIdentityCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrintUserIdentityCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrintUserIdentityCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPrintUserIdentityCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrintUserIdentityCollectionRequest skipToken(String skipToken);
+	IPrintUserIdentityCollectionRequest skipToken(final String skipToken);
 }

@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITrustFrameworkKeySetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITrustFrameworkKeySetCollectionPage> callback);
+    void get(final ICallback<? super ITrustFrameworkKeySetCollectionPage> callback);
 
     ITrustFrameworkKeySetCollectionPage get() throws ClientException;
 
-    void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback);
+    void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback);
 
     TrustFrameworkKeySet post(final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface ITrustFrameworkKeySetCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITrustFrameworkKeySetCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITrustFrameworkKeySetCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface ITrustFrameworkKeySetCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITrustFrameworkKeySetCollectionRequest skipToken(String skipToken);
+	ITrustFrameworkKeySetCollectionRequest skipToken(final String skipToken);
 }

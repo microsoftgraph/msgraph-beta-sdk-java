@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAudioRoutingGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAudioRoutingGroupCollectionPage> callback);
+    void get(final ICallback<? super IAudioRoutingGroupCollectionPage> callback);
 
     IAudioRoutingGroupCollectionPage get() throws ClientException;
 
-    void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<AudioRoutingGroup> callback);
+    void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback);
 
     AudioRoutingGroup post(final AudioRoutingGroup newAudioRoutingGroup) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAudioRoutingGroupCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAudioRoutingGroupCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAudioRoutingGroupCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAudioRoutingGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAudioRoutingGroupCollectionRequest skipToken(String skipToken);
+	IAudioRoutingGroupCollectionRequest skipToken(final String skipToken);
 }

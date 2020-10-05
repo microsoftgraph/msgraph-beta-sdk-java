@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileAppInstallStatusCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileAppInstallStatusCollectionPage> callback);
+    void get(final ICallback<? super IMobileAppInstallStatusCollectionPage> callback);
 
     IMobileAppInstallStatusCollectionPage get() throws ClientException;
 
-    void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback);
+    void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback);
 
     MobileAppInstallStatus post(final MobileAppInstallStatus newMobileAppInstallStatus) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMobileAppInstallStatusCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IMobileAppInstallStatusCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMobileAppInstallStatusCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMobileAppInstallStatusCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMobileAppInstallStatusCollectionRequest skipToken(String skipToken);
+	IMobileAppInstallStatusCollectionRequest skipToken(final String skipToken);
 }

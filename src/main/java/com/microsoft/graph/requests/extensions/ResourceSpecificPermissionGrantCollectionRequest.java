@@ -39,7 +39,7 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, ResourceSpecificPermissionGrantCollectionResponse.class, IResourceSpecificPermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<IResourceSpecificPermissionGrantCollectionPage> callback) {
+    public void get(final ICallback<? super IResourceSpecificPermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback) {
+    public void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceSpecificPermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseCollec
      */
     public IResourceSpecificPermissionGrantCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ResourceSpecificPermissionGrantCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IResourceSpecificPermissionGrantCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ResourceSpecificPermissionGrantCollectionRequest)this;
     }
 

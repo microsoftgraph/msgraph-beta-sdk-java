@@ -39,7 +39,7 @@ public class AccessPackageResourceScopeRequest extends BaseRequest implements IA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessPackageResourceScope> callback) {
+    public void get(final ICallback<? super AccessPackageResourceScope> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class AccessPackageResourceScopeRequest extends BaseRequest implements IA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessPackageResourceScope> callback) {
+    public void delete(final ICallback<? super AccessPackageResourceScope> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class AccessPackageResourceScopeRequest extends BaseRequest implements IA
      * @param sourceAccessPackageResourceScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResourceScope sourceAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback) {
+    public void patch(final AccessPackageResourceScope sourceAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResourceScope);
     }
 
@@ -98,7 +98,7 @@ public class AccessPackageResourceScopeRequest extends BaseRequest implements IA
      * @param newAccessPackageResourceScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback) {
+    public void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResourceScope);
     }
 
@@ -119,7 +119,7 @@ public class AccessPackageResourceScopeRequest extends BaseRequest implements IA
      * @param newAccessPackageResourceScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback) {
+    public void put(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResourceScope);
     }
 
@@ -153,17 +153,6 @@ public class AccessPackageResourceScopeRequest extends BaseRequest implements IA
      */
      public IAccessPackageResourceScopeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceScopeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessPackageResourceScopeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessPackageResourceScopeRequest)this;
      }
 

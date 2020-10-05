@@ -37,7 +37,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessReviewReviewer> callback) {
+    public void get(final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessReviewReviewer> callback) {
+    public void delete(final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param sourceAccessReviewReviewer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessReviewReviewer sourceAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback) {
+    public void patch(final AccessReviewReviewer sourceAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessReviewReviewer);
     }
 
@@ -96,7 +96,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param newAccessReviewReviewer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback) {
+    public void post(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.POST, callback, newAccessReviewReviewer);
     }
 
@@ -117,7 +117,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param newAccessReviewReviewer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback) {
+    public void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.PUT, callback, newAccessReviewReviewer);
     }
 
@@ -151,17 +151,6 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      */
      public IAccessReviewReviewerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessReviewReviewerRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessReviewReviewerRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessReviewReviewerRequest)this;
      }
 

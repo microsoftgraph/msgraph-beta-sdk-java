@@ -23,6 +23,6 @@ public class DirectorySettingTemplateCollectionPage extends BaseCollectionPage<D
      * @param builder  the request builder for the next collection page
      */
     public DirectorySettingTemplateCollectionPage(final DirectorySettingTemplateCollectionResponse response, final IDirectorySettingTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

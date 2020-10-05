@@ -37,7 +37,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows81WifiImportConfiguration> callback) {
+    public void get(final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows81WifiImportConfiguration> callback) {
+    public void delete(final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param sourceWindows81WifiImportConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback) {
+    public void patch(final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81WifiImportConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param newWindows81WifiImportConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback) {
+    public void post(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows81WifiImportConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param newWindows81WifiImportConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback) {
+    public void put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows81WifiImportConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      */
      public IWindows81WifiImportConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81WifiImportConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindows81WifiImportConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows81WifiImportConfigurationRequest)this;
      }
 

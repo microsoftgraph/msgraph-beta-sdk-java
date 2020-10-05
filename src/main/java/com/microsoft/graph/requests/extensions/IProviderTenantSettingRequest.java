@@ -21,7 +21,7 @@ public interface IProviderTenantSettingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProviderTenantSetting> callback);
+    void get(final ICallback<? super ProviderTenantSetting> callback);
 
     /**
      * Gets the ProviderTenantSetting from the service
@@ -36,7 +36,7 @@ public interface IProviderTenantSettingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProviderTenantSetting> callback);
+    void delete(final ICallback<? super ProviderTenantSetting> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProviderTenantSettingRequest extends IHttpRequest {
      * @param sourceProviderTenantSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProviderTenantSetting sourceProviderTenantSetting, final ICallback<ProviderTenantSetting> callback);
+    void patch(final ProviderTenantSetting sourceProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback);
 
     /**
      * Patches this ProviderTenantSetting with a source
@@ -68,7 +68,7 @@ public interface IProviderTenantSettingRequest extends IHttpRequest {
      * @param newProviderTenantSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback);
+    void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback);
 
     /**
      * Posts a ProviderTenantSetting with a new object
@@ -85,7 +85,7 @@ public interface IProviderTenantSettingRequest extends IHttpRequest {
      * @param newProviderTenantSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback);
+    void put(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback);
 
     /**
      * Posts a ProviderTenantSetting with a new object

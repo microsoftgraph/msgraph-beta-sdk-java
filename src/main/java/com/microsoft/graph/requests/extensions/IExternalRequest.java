@@ -21,7 +21,7 @@ public interface IExternalRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<External> callback);
+    void get(final ICallback<? super External> callback);
 
     /**
      * Gets the External from the service
@@ -36,7 +36,7 @@ public interface IExternalRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<External> callback);
+    void delete(final ICallback<? super External> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExternalRequest extends IHttpRequest {
      * @param sourceExternal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final External sourceExternal, final ICallback<External> callback);
+    void patch(final External sourceExternal, final ICallback<? super External> callback);
 
     /**
      * Patches this External with a source
@@ -68,7 +68,7 @@ public interface IExternalRequest extends IHttpRequest {
      * @param newExternal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final External newExternal, final ICallback<External> callback);
+    void post(final External newExternal, final ICallback<? super External> callback);
 
     /**
      * Posts a External with a new object
@@ -85,7 +85,7 @@ public interface IExternalRequest extends IHttpRequest {
      * @param newExternal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final External newExternal, final ICallback<External> callback);
+    void put(final External newExternal, final ICallback<? super External> callback);
 
     /**
      * Posts a External with a new object

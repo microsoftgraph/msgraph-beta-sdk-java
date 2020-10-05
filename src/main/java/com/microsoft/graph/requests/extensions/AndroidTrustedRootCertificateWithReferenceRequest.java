@@ -35,7 +35,7 @@ public class AndroidTrustedRootCertificateWithReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, AndroidTrustedRootCertificate.class);
     }
 
-    public void post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class AndroidTrustedRootCertificateWithReferenceRequest extends BaseReque
         return null;
     }
 
-    public void get(final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class AndroidTrustedRootCertificateWithReferenceRequest extends BaseReque
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidTrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super AndroidTrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class AndroidTrustedRootCertificateWithReferenceRequest extends BaseReque
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback) {
+	public void patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate, final ICallback<? super AndroidTrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidTrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class AndroidTrustedRootCertificateWithReferenceRequest extends BaseReque
      */
     public IAndroidTrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidTrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidTrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidTrustedRootCertificateWithReferenceRequest)this;
     }
 }

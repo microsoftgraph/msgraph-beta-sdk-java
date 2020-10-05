@@ -41,7 +41,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
+    public void get(final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
+    public void delete(final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param sourceAppleUserInitiatedEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
+    public void patch(final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -100,7 +100,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param newAppleUserInitiatedEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
+    public void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -121,7 +121,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param newAppleUserInitiatedEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
+    public void put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -155,17 +155,6 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      */
      public IAppleUserInitiatedEnrollmentProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppleUserInitiatedEnrollmentProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAppleUserInitiatedEnrollmentProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AppleUserInitiatedEnrollmentProfileRequest)this;
      }
 

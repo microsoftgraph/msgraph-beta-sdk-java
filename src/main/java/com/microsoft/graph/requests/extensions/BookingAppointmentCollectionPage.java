@@ -23,6 +23,6 @@ public class BookingAppointmentCollectionPage extends BaseCollectionPage<Booking
      * @param builder  the request builder for the next collection page
      */
     public BookingAppointmentCollectionPage(final BookingAppointmentCollectionResponse response, final IBookingAppointmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

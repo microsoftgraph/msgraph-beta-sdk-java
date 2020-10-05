@@ -23,6 +23,6 @@ public class DeviceManagementExportJobCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementExportJobCollectionPage(final DeviceManagementExportJobCollectionResponse response, final IDeviceManagementExportJobCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

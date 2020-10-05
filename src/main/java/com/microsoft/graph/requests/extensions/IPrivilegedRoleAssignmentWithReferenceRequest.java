@@ -24,19 +24,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrivilegedRoleAssignmentWithReferenceRequest extends IHttpRequest {
 
-    void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final IJsonBackedObject payload, final ICallback<PrivilegedRoleAssignment> callback);
+    void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final IJsonBackedObject payload, final ICallback<? super PrivilegedRoleAssignment> callback);
 
     PrivilegedRoleAssignment post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<PrivilegedRoleAssignment> callback);
+    void get(final ICallback<? super PrivilegedRoleAssignment> callback);
 
     PrivilegedRoleAssignment get() throws ClientException;
 
-	void delete(final ICallback<PrivilegedRoleAssignment> callback);
+	void delete(final ICallback<? super PrivilegedRoleAssignment> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback);
+	void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback);
 
 	PrivilegedRoleAssignment patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment) throws ClientException;
 

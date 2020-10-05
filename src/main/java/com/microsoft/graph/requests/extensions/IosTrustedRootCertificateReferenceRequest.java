@@ -34,7 +34,7 @@ public class IosTrustedRootCertificateReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, IosTrustedRootCertificate.class);
     }
 
-    public void delete(final ICallback<IosTrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class IosTrustedRootCertificateReferenceRequest extends BaseRequest imple
         return (IosTrustedRootCertificateReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIosTrustedRootCertificateReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IosTrustedRootCertificateReferenceRequest)this;
-    }
-    /**
      * Puts the IosTrustedRootCertificate
      *
      * @param srcIosTrustedRootCertificate the IosTrustedRootCertificate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(IosTrustedRootCertificate srcIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback) {
+    public void put(IosTrustedRootCertificate srcIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, srcIosTrustedRootCertificate);
     }
 

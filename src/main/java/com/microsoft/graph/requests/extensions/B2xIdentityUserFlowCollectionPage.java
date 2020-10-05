@@ -23,6 +23,6 @@ public class B2xIdentityUserFlowCollectionPage extends BaseCollectionPage<B2xIde
      * @param builder  the request builder for the next collection page
      */
     public B2xIdentityUserFlowCollectionPage(final B2xIdentityUserFlowCollectionResponse response, final IB2xIdentityUserFlowCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

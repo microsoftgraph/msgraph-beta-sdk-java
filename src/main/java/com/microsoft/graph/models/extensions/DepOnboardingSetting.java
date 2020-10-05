@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.DepTokenType;
 import com.microsoft.graph.models.extensions.DepIOSEnrollmentProfile;
@@ -14,9 +13,7 @@ import com.microsoft.graph.models.extensions.DepMacOSEnrollmentProfile;
 import com.microsoft.graph.models.extensions.EnrollmentProfile;
 import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EnrollmentProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.EnrollmentProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityCollectionPage;
 
 
@@ -201,35 +198,11 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
 
 
         if (json.has("enrollmentProfiles")) {
-            final EnrollmentProfileCollectionResponse response = new EnrollmentProfileCollectionResponse();
-            if (json.has("enrollmentProfiles@odata.nextLink")) {
-                response.nextLink = json.get("enrollmentProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("enrollmentProfiles").toString(), JsonObject[].class);
-            final EnrollmentProfile[] array = new EnrollmentProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EnrollmentProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            enrollmentProfiles = new EnrollmentProfileCollectionPage(response, null);
+            enrollmentProfiles = serializer.deserializeObject(json.get("enrollmentProfiles").toString(), EnrollmentProfileCollectionPage.class);
         }
 
         if (json.has("importedAppleDeviceIdentities")) {
-            final ImportedAppleDeviceIdentityCollectionResponse response = new ImportedAppleDeviceIdentityCollectionResponse();
-            if (json.has("importedAppleDeviceIdentities@odata.nextLink")) {
-                response.nextLink = json.get("importedAppleDeviceIdentities@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("importedAppleDeviceIdentities").toString(), JsonObject[].class);
-            final ImportedAppleDeviceIdentity[] array = new ImportedAppleDeviceIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ImportedAppleDeviceIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            importedAppleDeviceIdentities = new ImportedAppleDeviceIdentityCollectionPage(response, null);
+            importedAppleDeviceIdentities = serializer.deserializeObject(json.get("importedAppleDeviceIdentities").toString(), ImportedAppleDeviceIdentityCollectionPage.class);
         }
     }
 }

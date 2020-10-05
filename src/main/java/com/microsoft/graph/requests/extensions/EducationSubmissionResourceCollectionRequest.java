@@ -40,7 +40,7 @@ public class EducationSubmissionResourceCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, EducationSubmissionResourceCollectionResponse.class, IEducationSubmissionResourceCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationSubmissionResourceCollectionPage> callback) {
+    public void get(final ICallback<? super IEducationSubmissionResourceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EducationSubmissionResourceCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<EducationSubmissionResource> callback) {
+    public void post(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<? super EducationSubmissionResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSubmissionResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EducationSubmissionResourceCollectionRequest extends BaseCollection
      */
     public IEducationSubmissionResourceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationSubmissionResourceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEducationSubmissionResourceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationSubmissionResourceCollectionRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAndroidForWorkEnrollmentProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAndroidForWorkEnrollmentProfileCollectionPage> callback);
+    void get(final ICallback<? super IAndroidForWorkEnrollmentProfileCollectionPage> callback);
 
     IAndroidForWorkEnrollmentProfileCollectionPage get() throws ClientException;
 
-    void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback);
+    void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback);
 
     AndroidForWorkEnrollmentProfile post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAndroidForWorkEnrollmentProfileCollectionRequest extends IHttp
      * @return the updated request
      */
     IAndroidForWorkEnrollmentProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAndroidForWorkEnrollmentProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAndroidForWorkEnrollmentProfileCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IAndroidForWorkEnrollmentProfileCollectionRequest skipToken(String skipToken);
+	IAndroidForWorkEnrollmentProfileCollectionRequest skipToken(final String skipToken);
 }

@@ -34,6 +34,6 @@ public class ReportRootGetOffice365ActivationsUserCountsCollectionPage extends B
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOffice365ActivationsUserCountsCollectionPage(final ReportRootGetOffice365ActivationsUserCountsCollectionResponse response, final IReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

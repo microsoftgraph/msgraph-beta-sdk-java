@@ -21,7 +21,7 @@ public interface IWindowsAssignedAccessProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsAssignedAccessProfile> callback);
+    void get(final ICallback<? super WindowsAssignedAccessProfile> callback);
 
     /**
      * Gets the WindowsAssignedAccessProfile from the service
@@ -36,7 +36,7 @@ public interface IWindowsAssignedAccessProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsAssignedAccessProfile> callback);
+    void delete(final ICallback<? super WindowsAssignedAccessProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsAssignedAccessProfileRequest extends IHttpRequest {
      * @param sourceWindowsAssignedAccessProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback);
+    void patch(final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback);
 
     /**
      * Patches this WindowsAssignedAccessProfile with a source
@@ -68,7 +68,7 @@ public interface IWindowsAssignedAccessProfileRequest extends IHttpRequest {
      * @param newWindowsAssignedAccessProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback);
+    void post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback);
 
     /**
      * Posts a WindowsAssignedAccessProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindowsAssignedAccessProfileRequest extends IHttpRequest {
      * @param newWindowsAssignedAccessProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback);
+    void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback);
 
     /**
      * Posts a WindowsAssignedAccessProfile with a new object

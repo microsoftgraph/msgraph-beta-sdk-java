@@ -21,7 +21,7 @@ public interface ITeamsUserActivityCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsUserActivityCounts> callback);
+    void get(final ICallback<? super TeamsUserActivityCounts> callback);
 
     /**
      * Gets the TeamsUserActivityCounts from the service
@@ -36,7 +36,7 @@ public interface ITeamsUserActivityCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsUserActivityCounts> callback);
+    void delete(final ICallback<? super TeamsUserActivityCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsUserActivityCountsRequest extends IHttpRequest {
      * @param sourceTeamsUserActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsUserActivityCounts sourceTeamsUserActivityCounts, final ICallback<TeamsUserActivityCounts> callback);
+    void patch(final TeamsUserActivityCounts sourceTeamsUserActivityCounts, final ICallback<? super TeamsUserActivityCounts> callback);
 
     /**
      * Patches this TeamsUserActivityCounts with a source
@@ -68,7 +68,7 @@ public interface ITeamsUserActivityCountsRequest extends IHttpRequest {
      * @param newTeamsUserActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<TeamsUserActivityCounts> callback);
+    void post(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<? super TeamsUserActivityCounts> callback);
 
     /**
      * Posts a TeamsUserActivityCounts with a new object
@@ -85,7 +85,7 @@ public interface ITeamsUserActivityCountsRequest extends IHttpRequest {
      * @param newTeamsUserActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<TeamsUserActivityCounts> callback);
+    void put(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<? super TeamsUserActivityCounts> callback);
 
     /**
      * Posts a TeamsUserActivityCounts with a new object

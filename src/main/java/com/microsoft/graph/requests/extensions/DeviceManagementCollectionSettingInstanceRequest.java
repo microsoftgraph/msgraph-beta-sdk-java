@@ -41,7 +41,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementCollectionSettingInstance> callback) {
+    public void get(final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementCollectionSettingInstance> callback) {
+    public void delete(final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param sourceDeviceManagementCollectionSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback) {
+    public void patch(final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementCollectionSettingInstance);
     }
 
@@ -100,7 +100,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param newDeviceManagementCollectionSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback) {
+    public void post(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementCollectionSettingInstance);
     }
 
@@ -121,7 +121,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param newDeviceManagementCollectionSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback) {
+    public void put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementCollectionSettingInstance);
     }
 
@@ -155,17 +155,6 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      */
      public IDeviceManagementCollectionSettingInstanceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementCollectionSettingInstanceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementCollectionSettingInstanceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementCollectionSettingInstanceRequest)this;
      }
 

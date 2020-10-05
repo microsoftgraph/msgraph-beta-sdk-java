@@ -35,7 +35,7 @@ public class PlannerPlanCollectionWithReferencesRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, PlannerPlanCollectionResponse.class, IPlannerPlanCollectionPage.class);
     }
 
-    public void get(final ICallback<IPlannerPlanCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IPlannerPlanCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class PlannerPlanCollectionWithReferencesRequest extends BaseCollectionRe
 
     public IPlannerPlanCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PlannerPlanCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPlannerPlanCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PlannerPlanCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IPlannerPlanCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IPlannerPlanCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PlannerPlanCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPlannerPlanCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (PlannerPlanCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPlannerPlanCollectionWithReferencesPage buildFromResponse(final PlannerPlanCollectionResponse response) {

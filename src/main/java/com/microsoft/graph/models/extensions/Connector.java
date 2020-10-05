@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ConnectorStatus;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionPage;
 
 
@@ -98,19 +96,7 @@ public class Connector extends Entity implements IJsonBackedObject {
 
 
         if (json.has("memberOf")) {
-            final ConnectorGroupCollectionResponse response = new ConnectorGroupCollectionResponse();
-            if (json.has("memberOf@odata.nextLink")) {
-                response.nextLink = json.get("memberOf@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("memberOf").toString(), JsonObject[].class);
-            final ConnectorGroup[] array = new ConnectorGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConnectorGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            memberOf = new ConnectorGroupCollectionPage(response, null);
+            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), ConnectorGroupCollectionPage.class);
         }
     }
 }

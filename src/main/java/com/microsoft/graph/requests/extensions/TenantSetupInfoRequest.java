@@ -39,7 +39,7 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TenantSetupInfo> callback) {
+    public void get(final ICallback<? super TenantSetupInfo> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TenantSetupInfo> callback) {
+    public void delete(final ICallback<? super TenantSetupInfo> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
      * @param sourceTenantSetupInfo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TenantSetupInfo sourceTenantSetupInfo, final ICallback<TenantSetupInfo> callback) {
+    public void patch(final TenantSetupInfo sourceTenantSetupInfo, final ICallback<? super TenantSetupInfo> callback) {
         send(HttpMethod.PATCH, callback, sourceTenantSetupInfo);
     }
 
@@ -98,7 +98,7 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
      * @param newTenantSetupInfo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TenantSetupInfo newTenantSetupInfo, final ICallback<TenantSetupInfo> callback) {
+    public void post(final TenantSetupInfo newTenantSetupInfo, final ICallback<? super TenantSetupInfo> callback) {
         send(HttpMethod.POST, callback, newTenantSetupInfo);
     }
 
@@ -119,7 +119,7 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
      * @param newTenantSetupInfo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TenantSetupInfo newTenantSetupInfo, final ICallback<TenantSetupInfo> callback) {
+    public void put(final TenantSetupInfo newTenantSetupInfo, final ICallback<? super TenantSetupInfo> callback) {
         send(HttpMethod.PUT, callback, newTenantSetupInfo);
     }
 
@@ -153,17 +153,6 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
      */
      public ITenantSetupInfoRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TenantSetupInfoRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITenantSetupInfoRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TenantSetupInfoRequest)this;
      }
 

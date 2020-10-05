@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionPage> callback);
+    void post(final ICallback<? super IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionPage> callback);
 
     IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionPage post() throws ClientException;
 

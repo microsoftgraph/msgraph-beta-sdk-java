@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IConnectorGroupCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IConnectorGroupCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IConnectorGroupCollectionWithReferencesPage> callback);
 
     IConnectorGroupCollectionWithReferencesPage get() throws ClientException;
 

@@ -25,7 +25,7 @@ public interface IDepOnboardingSettingGetExpiringVppTokenCountRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Integer> callback);
+    void get(final ICallback<? super Integer> callback);
 
     /**
      * Gets the Integer

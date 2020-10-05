@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
@@ -16,9 +15,7 @@ import com.microsoft.graph.models.generated.TaskStatus;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.LinkedResource;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
-import com.microsoft.graph.requests.extensions.LinkedResourceCollectionResponse;
 import com.microsoft.graph.requests.extensions.LinkedResourceCollectionPage;
 
 
@@ -187,35 +184,11 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
 
         if (json.has("extensions")) {
-            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
-            if (json.has("extensions@odata.nextLink")) {
-                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
-            final Extension[] array = new Extension[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            extensions = new ExtensionCollectionPage(response, null);
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
         }
 
         if (json.has("linkedResources")) {
-            final LinkedResourceCollectionResponse response = new LinkedResourceCollectionResponse();
-            if (json.has("linkedResources@odata.nextLink")) {
-                response.nextLink = json.get("linkedResources@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("linkedResources").toString(), JsonObject[].class);
-            final LinkedResource[] array = new LinkedResource[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LinkedResource.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            linkedResources = new LinkedResourceCollectionPage(response, null);
+            linkedResources = serializer.deserializeObject(json.get("linkedResources").toString(), LinkedResourceCollectionPage.class);
         }
     }
 }

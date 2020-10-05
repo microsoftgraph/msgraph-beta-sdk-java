@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccessReviewInstanceDecisionItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessReviewInstanceDecisionItemCollectionPage> callback);
+    void get(final ICallback<? super IAccessReviewInstanceDecisionItemCollectionPage> callback);
 
     IAccessReviewInstanceDecisionItemCollectionPage get() throws ClientException;
 
-    void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback);
+    void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback);
 
     AccessReviewInstanceDecisionItem post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAccessReviewInstanceDecisionItemCollectionRequest extends IHtt
      * @return the updated request
      */
     IAccessReviewInstanceDecisionItemCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccessReviewInstanceDecisionItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAccessReviewInstanceDecisionItemCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IAccessReviewInstanceDecisionItemCollectionRequest skipToken(String skipToken);
+	IAccessReviewInstanceDecisionItemCollectionRequest skipToken(final String skipToken);
 }

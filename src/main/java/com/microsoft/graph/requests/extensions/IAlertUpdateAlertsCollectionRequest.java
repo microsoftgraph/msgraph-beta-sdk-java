@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IAlertUpdateAlertsCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IAlertUpdateAlertsCollectionPage> callback);
+    void post(final ICallback<? super IAlertUpdateAlertsCollectionPage> callback);
 
     IAlertUpdateAlertsCollectionPage post() throws ClientException;
 

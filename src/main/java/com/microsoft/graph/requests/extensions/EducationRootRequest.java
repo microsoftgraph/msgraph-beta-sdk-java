@@ -53,7 +53,7 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationRoot> callback) {
+    public void get(final ICallback<? super EducationRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationRoot> callback) {
+    public void delete(final ICallback<? super EducationRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
      * @param sourceEducationRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationRoot sourceEducationRoot, final ICallback<EducationRoot> callback) {
+    public void patch(final EducationRoot sourceEducationRoot, final ICallback<? super EducationRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationRoot);
     }
 
@@ -112,7 +112,7 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
      * @param newEducationRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationRoot newEducationRoot, final ICallback<EducationRoot> callback) {
+    public void post(final EducationRoot newEducationRoot, final ICallback<? super EducationRoot> callback) {
         send(HttpMethod.POST, callback, newEducationRoot);
     }
 
@@ -133,7 +133,7 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
      * @param newEducationRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationRoot newEducationRoot, final ICallback<EducationRoot> callback) {
+    public void put(final EducationRoot newEducationRoot, final ICallback<? super EducationRoot> callback) {
         send(HttpMethod.PUT, callback, newEducationRoot);
     }
 
@@ -167,17 +167,6 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
      */
      public IEducationRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationRootRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationRootRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationRootRequest)this;
      }
 

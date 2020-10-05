@@ -41,7 +41,7 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, PrivilegedSignupStatusCollectionResponse.class, IPrivilegedSignupStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedSignupStatusCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedSignupStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback) {
+    public void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedSignupStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
      */
     public IPrivilegedSignupStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedSignupStatusCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedSignupStatusCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedSignupStatusCollectionRequest)this;
     }
 

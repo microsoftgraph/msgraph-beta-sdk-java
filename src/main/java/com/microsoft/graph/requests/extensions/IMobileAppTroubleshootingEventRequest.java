@@ -21,7 +21,7 @@ public interface IMobileAppTroubleshootingEventRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppTroubleshootingEvent> callback);
+    void get(final ICallback<? super MobileAppTroubleshootingEvent> callback);
 
     /**
      * Gets the MobileAppTroubleshootingEvent from the service
@@ -36,7 +36,7 @@ public interface IMobileAppTroubleshootingEventRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppTroubleshootingEvent> callback);
+    void delete(final ICallback<? super MobileAppTroubleshootingEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppTroubleshootingEventRequest extends IHttpRequest {
      * @param sourceMobileAppTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppTroubleshootingEvent sourceMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback);
+    void patch(final MobileAppTroubleshootingEvent sourceMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback);
 
     /**
      * Patches this MobileAppTroubleshootingEvent with a source
@@ -68,7 +68,7 @@ public interface IMobileAppTroubleshootingEventRequest extends IHttpRequest {
      * @param newMobileAppTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback);
+    void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback);
 
     /**
      * Posts a MobileAppTroubleshootingEvent with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppTroubleshootingEventRequest extends IHttpRequest {
      * @param newMobileAppTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback);
+    void put(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<? super MobileAppTroubleshootingEvent> callback);
 
     /**
      * Posts a MobileAppTroubleshootingEvent with a new object

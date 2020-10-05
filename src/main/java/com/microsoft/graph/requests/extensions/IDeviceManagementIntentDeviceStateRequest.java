@@ -21,7 +21,7 @@ public interface IDeviceManagementIntentDeviceStateRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntentDeviceState> callback);
+    void get(final ICallback<? super DeviceManagementIntentDeviceState> callback);
 
     /**
      * Gets the DeviceManagementIntentDeviceState from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntentDeviceStateRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntentDeviceState> callback);
+    void delete(final ICallback<? super DeviceManagementIntentDeviceState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntentDeviceStateRequest extends IHttpRequest 
      * @param sourceDeviceManagementIntentDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntentDeviceState sourceDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback);
+    void patch(final DeviceManagementIntentDeviceState sourceDeviceManagementIntentDeviceState, final ICallback<? super DeviceManagementIntentDeviceState> callback);
 
     /**
      * Patches this DeviceManagementIntentDeviceState with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntentDeviceStateRequest extends IHttpRequest 
      * @param newDeviceManagementIntentDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback);
+    void post(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<? super DeviceManagementIntentDeviceState> callback);
 
     /**
      * Posts a DeviceManagementIntentDeviceState with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntentDeviceStateRequest extends IHttpRequest 
      * @param newDeviceManagementIntentDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback);
+    void put(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<? super DeviceManagementIntentDeviceState> callback);
 
     /**
      * Posts a DeviceManagementIntentDeviceState with a new object

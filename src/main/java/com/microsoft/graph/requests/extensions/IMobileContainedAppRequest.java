@@ -21,7 +21,7 @@ public interface IMobileContainedAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileContainedApp> callback);
+    void get(final ICallback<? super MobileContainedApp> callback);
 
     /**
      * Gets the MobileContainedApp from the service
@@ -36,7 +36,7 @@ public interface IMobileContainedAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileContainedApp> callback);
+    void delete(final ICallback<? super MobileContainedApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileContainedAppRequest extends IHttpRequest {
      * @param sourceMobileContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileContainedApp sourceMobileContainedApp, final ICallback<MobileContainedApp> callback);
+    void patch(final MobileContainedApp sourceMobileContainedApp, final ICallback<? super MobileContainedApp> callback);
 
     /**
      * Patches this MobileContainedApp with a source
@@ -68,7 +68,7 @@ public interface IMobileContainedAppRequest extends IHttpRequest {
      * @param newMobileContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileContainedApp newMobileContainedApp, final ICallback<MobileContainedApp> callback);
+    void post(final MobileContainedApp newMobileContainedApp, final ICallback<? super MobileContainedApp> callback);
 
     /**
      * Posts a MobileContainedApp with a new object
@@ -85,7 +85,7 @@ public interface IMobileContainedAppRequest extends IHttpRequest {
      * @param newMobileContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileContainedApp newMobileContainedApp, final ICallback<MobileContainedApp> callback);
+    void put(final MobileContainedApp newMobileContainedApp, final ICallback<? super MobileContainedApp> callback);
 
     /**
      * Posts a MobileContainedApp with a new object

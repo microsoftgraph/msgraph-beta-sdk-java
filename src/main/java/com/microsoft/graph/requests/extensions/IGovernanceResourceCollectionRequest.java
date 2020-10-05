@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGovernanceResourceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGovernanceResourceCollectionPage> callback);
+    void get(final ICallback<? super IGovernanceResourceCollectionPage> callback);
 
     IGovernanceResourceCollectionPage get() throws ClientException;
 
-    void post(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback);
+    void post(final GovernanceResource newGovernanceResource, final ICallback<? super GovernanceResource> callback);
 
     GovernanceResource post(final GovernanceResource newGovernanceResource) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IGovernanceResourceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IGovernanceResourceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGovernanceResourceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IGovernanceResourceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGovernanceResourceCollectionRequest skipToken(String skipToken);
+	IGovernanceResourceCollectionRequest skipToken(final String skipToken);
 }

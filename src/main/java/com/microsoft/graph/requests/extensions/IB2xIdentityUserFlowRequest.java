@@ -21,7 +21,7 @@ public interface IB2xIdentityUserFlowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<B2xIdentityUserFlow> callback);
+    void get(final ICallback<? super B2xIdentityUserFlow> callback);
 
     /**
      * Gets the B2xIdentityUserFlow from the service
@@ -36,7 +36,7 @@ public interface IB2xIdentityUserFlowRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<B2xIdentityUserFlow> callback);
+    void delete(final ICallback<? super B2xIdentityUserFlow> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IB2xIdentityUserFlowRequest extends IHttpRequest {
      * @param sourceB2xIdentityUserFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final B2xIdentityUserFlow sourceB2xIdentityUserFlow, final ICallback<B2xIdentityUserFlow> callback);
+    void patch(final B2xIdentityUserFlow sourceB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback);
 
     /**
      * Patches this B2xIdentityUserFlow with a source
@@ -68,7 +68,7 @@ public interface IB2xIdentityUserFlowRequest extends IHttpRequest {
      * @param newB2xIdentityUserFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<B2xIdentityUserFlow> callback);
+    void post(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback);
 
     /**
      * Posts a B2xIdentityUserFlow with a new object
@@ -85,7 +85,7 @@ public interface IB2xIdentityUserFlowRequest extends IHttpRequest {
      * @param newB2xIdentityUserFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<B2xIdentityUserFlow> callback);
+    void put(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback);
 
     /**
      * Posts a B2xIdentityUserFlow with a new object

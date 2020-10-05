@@ -33,7 +33,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IChatReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Chat> callback);
+    void delete(final ICallback<? super Chat> callback);
 
     Chat delete() throws ClientException;
 
@@ -59,7 +59,7 @@ public interface IChatReferenceRequest extends IHttpRequest {
      * @param srcChat the Chat to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Chat srcChat, final ICallback<Chat> callback);
+    void put(Chat srcChat, final ICallback<? super Chat> callback);
 
     /**
      * Puts the Chat

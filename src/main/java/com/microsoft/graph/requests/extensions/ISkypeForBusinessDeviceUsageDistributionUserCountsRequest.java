@@ -21,7 +21,7 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
+    void get(final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Gets the SkypeForBusinessDeviceUsageDistributionUserCounts from the service
@@ -36,7 +36,7 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequest exten
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
+    void delete(final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequest exten
      * @param sourceSkypeForBusinessDeviceUsageDistributionUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
+    void patch(final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Patches this SkypeForBusinessDeviceUsageDistributionUserCounts with a source
@@ -68,7 +68,7 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequest exten
      * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
+    void post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Posts a SkypeForBusinessDeviceUsageDistributionUserCounts with a new object
@@ -85,7 +85,7 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequest exten
      * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
+    void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Posts a SkypeForBusinessDeviceUsageDistributionUserCounts with a new object

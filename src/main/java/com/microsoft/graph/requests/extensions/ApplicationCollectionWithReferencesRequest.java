@@ -37,7 +37,7 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, IApplicationCollectionPage.class);
     }
 
-    public void get(final ICallback<IApplicationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IApplicationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,22 +58,27 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
 
     public IApplicationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IApplicationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ApplicationCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IApplicationCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IApplicationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ApplicationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IApplicationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ApplicationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IApplicationCollectionWithReferencesPage buildFromResponse(final ApplicationCollectionResponse response) {

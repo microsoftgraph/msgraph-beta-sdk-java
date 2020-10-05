@@ -21,7 +21,7 @@ public interface IIntuneBrandingProfileAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IntuneBrandingProfileAssignment> callback);
+    void get(final ICallback<? super IntuneBrandingProfileAssignment> callback);
 
     /**
      * Gets the IntuneBrandingProfileAssignment from the service
@@ -36,7 +36,7 @@ public interface IIntuneBrandingProfileAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IntuneBrandingProfileAssignment> callback);
+    void delete(final ICallback<? super IntuneBrandingProfileAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIntuneBrandingProfileAssignmentRequest extends IHttpRequest {
      * @param sourceIntuneBrandingProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback);
+    void patch(final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback);
 
     /**
      * Patches this IntuneBrandingProfileAssignment with a source
@@ -68,7 +68,7 @@ public interface IIntuneBrandingProfileAssignmentRequest extends IHttpRequest {
      * @param newIntuneBrandingProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback);
+    void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback);
 
     /**
      * Posts a IntuneBrandingProfileAssignment with a new object
@@ -85,7 +85,7 @@ public interface IIntuneBrandingProfileAssignmentRequest extends IHttpRequest {
      * @param newIntuneBrandingProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback);
+    void put(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback);
 
     /**
      * Posts a IntuneBrandingProfileAssignment with a new object

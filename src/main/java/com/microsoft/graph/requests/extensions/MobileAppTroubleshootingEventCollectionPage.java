@@ -23,6 +23,6 @@ public class MobileAppTroubleshootingEventCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public MobileAppTroubleshootingEventCollectionPage(final MobileAppTroubleshootingEventCollectionResponse response, final IMobileAppTroubleshootingEventCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

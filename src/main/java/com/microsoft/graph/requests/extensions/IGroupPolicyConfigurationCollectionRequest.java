@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupPolicyConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupPolicyConfigurationCollectionPage> callback);
+    void get(final ICallback<? super IGroupPolicyConfigurationCollectionPage> callback);
 
     IGroupPolicyConfigurationCollectionPage get() throws ClientException;
 
-    void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback);
+    void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback);
 
     GroupPolicyConfiguration post(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException;
 
@@ -47,6 +47,14 @@ public interface IGroupPolicyConfigurationCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IGroupPolicyConfigurationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGroupPolicyConfigurationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -79,5 +87,5 @@ public interface IGroupPolicyConfigurationCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IGroupPolicyConfigurationCollectionRequest skipToken(String skipToken);
+	IGroupPolicyConfigurationCollectionRequest skipToken(final String skipToken);
 }

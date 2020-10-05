@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILanguageProficiencyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ILanguageProficiencyCollectionPage> callback);
+    void get(final ICallback<? super ILanguageProficiencyCollectionPage> callback);
 
     ILanguageProficiencyCollectionPage get() throws ClientException;
 
-    void post(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback);
+    void post(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback);
 
     LanguageProficiency post(final LanguageProficiency newLanguageProficiency) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ILanguageProficiencyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ILanguageProficiencyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ILanguageProficiencyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ILanguageProficiencyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ILanguageProficiencyCollectionRequest skipToken(String skipToken);
+	ILanguageProficiencyCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PersonWebsite> callback) {
+    public void get(final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PersonWebsite> callback) {
+    public void delete(final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param sourcePersonWebsite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonWebsite sourcePersonWebsite, final ICallback<PersonWebsite> callback) {
+    public void patch(final PersonWebsite sourcePersonWebsite, final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonWebsite);
     }
 
@@ -96,7 +96,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param newPersonWebsite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback) {
+    public void post(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.POST, callback, newPersonWebsite);
     }
 
@@ -117,7 +117,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param newPersonWebsite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback) {
+    public void put(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.PUT, callback, newPersonWebsite);
     }
 
@@ -151,17 +151,6 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      */
      public IPersonWebsiteRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonWebsiteRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPersonWebsiteRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonWebsiteRequest)this;
      }
 

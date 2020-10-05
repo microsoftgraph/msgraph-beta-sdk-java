@@ -36,7 +36,7 @@ public class BookingAppointmentCancelRequest extends BaseRequest implements IBoo
         body = new BookingAppointmentCancelBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class BookingAppointmentCancelRequest extends BaseRequest implements IBoo
      */
     public IBookingAppointmentCancelRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (BookingAppointmentCancelRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IBookingAppointmentCancelRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (BookingAppointmentCancelRequest)this;
     }
 

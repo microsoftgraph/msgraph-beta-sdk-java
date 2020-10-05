@@ -37,7 +37,7 @@ public class PrivilegedRoleAssignmentWithReferenceRequest extends BaseRequest im
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignment.class);
     }
 
-    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final IJsonBackedObject payload, final ICallback<PrivilegedRoleAssignment> callback) {
+    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final IJsonBackedObject payload, final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -49,7 +49,7 @@ public class PrivilegedRoleAssignmentWithReferenceRequest extends BaseRequest im
         return null;
     }
 
-    public void get(final ICallback<PrivilegedRoleAssignment> callback) {
+    public void get(final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class PrivilegedRoleAssignmentWithReferenceRequest extends BaseRequest im
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<PrivilegedRoleAssignment> callback) {
+	public void delete(final ICallback<? super PrivilegedRoleAssignment> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,7 +65,7 @@ public class PrivilegedRoleAssignmentWithReferenceRequest extends BaseRequest im
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
+	public void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
 		send(HttpMethod.PATCH, callback, sourcePrivilegedRoleAssignment);
 	}
 
@@ -93,16 +93,6 @@ public class PrivilegedRoleAssignmentWithReferenceRequest extends BaseRequest im
      */
     public IPrivilegedRoleAssignmentWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleAssignmentWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleAssignmentWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrivilegedRoleAssignmentWithReferenceRequest)this;
     }
 }

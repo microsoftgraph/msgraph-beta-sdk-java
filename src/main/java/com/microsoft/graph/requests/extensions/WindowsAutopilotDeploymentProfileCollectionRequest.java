@@ -41,7 +41,7 @@ public class WindowsAutopilotDeploymentProfileCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfileCollectionResponse.class, IWindowsAutopilotDeploymentProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsAutopilotDeploymentProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsAutopilotDeploymentProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class WindowsAutopilotDeploymentProfileCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsAutopilotDeploymentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class WindowsAutopilotDeploymentProfileCollectionRequest extends BaseColl
      */
     public IWindowsAutopilotDeploymentProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsAutopilotDeploymentProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsAutopilotDeploymentProfileCollectionRequest)this;
     }
 

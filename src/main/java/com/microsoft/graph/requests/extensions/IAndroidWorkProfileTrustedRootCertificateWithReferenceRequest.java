@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidWorkProfileTrustedRootCertificate> callback);
+    void post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback);
 
     AndroidWorkProfileTrustedRootCertificate post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidWorkProfileTrustedRootCertificate> callback);
+    void get(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback);
 
     AndroidWorkProfileTrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<AndroidWorkProfileTrustedRootCertificate> callback);
+	void delete(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, final ICallback<AndroidWorkProfileTrustedRootCertificate> callback);
+	void patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback);
 
 	AndroidWorkProfileTrustedRootCertificate patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate) throws ClientException;
 

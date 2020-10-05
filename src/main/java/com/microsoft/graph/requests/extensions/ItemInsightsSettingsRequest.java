@@ -37,7 +37,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemInsightsSettings> callback) {
+    public void get(final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemInsightsSettings> callback) {
+    public void delete(final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param sourceItemInsightsSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemInsightsSettings sourceItemInsightsSettings, final ICallback<ItemInsightsSettings> callback) {
+    public void patch(final ItemInsightsSettings sourceItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceItemInsightsSettings);
     }
 
@@ -96,7 +96,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param newItemInsightsSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemInsightsSettings newItemInsightsSettings, final ICallback<ItemInsightsSettings> callback) {
+    public void post(final ItemInsightsSettings newItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.POST, callback, newItemInsightsSettings);
     }
 
@@ -117,7 +117,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param newItemInsightsSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemInsightsSettings newItemInsightsSettings, final ICallback<ItemInsightsSettings> callback) {
+    public void put(final ItemInsightsSettings newItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.PUT, callback, newItemInsightsSettings);
     }
 
@@ -151,17 +151,6 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      */
      public IItemInsightsSettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemInsightsSettingsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemInsightsSettingsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemInsightsSettingsRequest)this;
      }
 

@@ -57,7 +57,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceShellScript> callback) {
+    public void get(final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceShellScript> callback) {
+    public void delete(final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param sourceDeviceShellScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceShellScript sourceDeviceShellScript, final ICallback<DeviceShellScript> callback) {
+    public void patch(final DeviceShellScript sourceDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceShellScript);
     }
 
@@ -116,7 +116,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param newDeviceShellScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback) {
+    public void post(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.POST, callback, newDeviceShellScript);
     }
 
@@ -137,7 +137,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param newDeviceShellScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback) {
+    public void put(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceShellScript);
     }
 
@@ -171,17 +171,6 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      */
      public IDeviceShellScriptRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceShellScriptRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceShellScriptRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceShellScriptRequest)this;
      }
 

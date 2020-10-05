@@ -37,7 +37,7 @@ public class DeviceManagementScriptRunSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void get(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementScriptRunSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementScriptRunSummaryRequest extends BaseRequest impleme
      * @param sourceDeviceManagementScriptRunSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptRunSummary);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementScriptRunSummaryRequest extends BaseRequest impleme
      * @param newDeviceManagementScriptRunSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScriptRunSummary);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementScriptRunSummaryRequest extends BaseRequest impleme
      * @param newDeviceManagementScriptRunSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void put(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScriptRunSummary);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementScriptRunSummaryRequest extends BaseRequest impleme
      */
      public IDeviceManagementScriptRunSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptRunSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementScriptRunSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementScriptRunSummaryRequest)this;
      }
 

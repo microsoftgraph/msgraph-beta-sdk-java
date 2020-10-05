@@ -23,6 +23,6 @@ public class InformationProtectionLabelCollectionPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public InformationProtectionLabelCollectionPage(final InformationProtectionLabelCollectionResponse response, final IInformationProtectionLabelCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

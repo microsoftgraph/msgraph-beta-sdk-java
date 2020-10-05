@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPersonWebsiteCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPersonWebsiteCollectionPage> callback);
+    void get(final ICallback<? super IPersonWebsiteCollectionPage> callback);
 
     IPersonWebsiteCollectionPage get() throws ClientException;
 
-    void post(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback);
+    void post(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback);
 
     PersonWebsite post(final PersonWebsite newPersonWebsite) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPersonWebsiteCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPersonWebsiteCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPersonWebsiteCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPersonWebsiteCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPersonWebsiteCollectionRequest skipToken(String skipToken);
+	IPersonWebsiteCollectionRequest skipToken(final String skipToken);
 }

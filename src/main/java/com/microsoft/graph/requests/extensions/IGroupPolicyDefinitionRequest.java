@@ -21,7 +21,7 @@ public interface IGroupPolicyDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyDefinition> callback);
+    void get(final ICallback<? super GroupPolicyDefinition> callback);
 
     /**
      * Gets the GroupPolicyDefinition from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyDefinition> callback);
+    void delete(final ICallback<? super GroupPolicyDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyDefinitionRequest extends IHttpRequest {
      * @param sourceGroupPolicyDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyDefinition sourceGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback);
+    void patch(final GroupPolicyDefinition sourceGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback);
 
     /**
      * Patches this GroupPolicyDefinition with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyDefinitionRequest extends IHttpRequest {
      * @param newGroupPolicyDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback);
+    void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback);
 
     /**
      * Posts a GroupPolicyDefinition with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyDefinitionRequest extends IHttpRequest {
      * @param newGroupPolicyDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback);
+    void put(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback);
 
     /**
      * Posts a GroupPolicyDefinition with a new object

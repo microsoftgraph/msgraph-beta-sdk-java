@@ -41,7 +41,7 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Relation> callback) {
+    public void get(final ICallback<? super Relation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Relation> callback) {
+    public void delete(final ICallback<? super Relation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
      * @param sourceRelation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Relation sourceRelation, final ICallback<Relation> callback) {
+    public void patch(final Relation sourceRelation, final ICallback<? super Relation> callback) {
         send(HttpMethod.PATCH, callback, sourceRelation);
     }
 
@@ -100,7 +100,7 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
      * @param newRelation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Relation newRelation, final ICallback<Relation> callback) {
+    public void post(final Relation newRelation, final ICallback<? super Relation> callback) {
         send(HttpMethod.POST, callback, newRelation);
     }
 
@@ -121,7 +121,7 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
      * @param newRelation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Relation newRelation, final ICallback<Relation> callback) {
+    public void put(final Relation newRelation, final ICallback<? super Relation> callback) {
         send(HttpMethod.PUT, callback, newRelation);
     }
 
@@ -155,17 +155,6 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
      */
      public IRelationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RelationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IRelationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RelationRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPublishedResourceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPublishedResourceCollectionPage> callback);
+    void get(final ICallback<? super IPublishedResourceCollectionPage> callback);
 
     IPublishedResourceCollectionPage get() throws ClientException;
 
-    void post(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback);
+    void post(final PublishedResource newPublishedResource, final ICallback<? super PublishedResource> callback);
 
     PublishedResource post(final PublishedResource newPublishedResource) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPublishedResourceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPublishedResourceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPublishedResourceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPublishedResourceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPublishedResourceCollectionRequest skipToken(String skipToken);
+	IPublishedResourceCollectionRequest skipToken(final String skipToken);
 }

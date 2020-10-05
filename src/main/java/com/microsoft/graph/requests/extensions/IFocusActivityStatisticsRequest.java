@@ -21,7 +21,7 @@ public interface IFocusActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FocusActivityStatistics> callback);
+    void get(final ICallback<? super FocusActivityStatistics> callback);
 
     /**
      * Gets the FocusActivityStatistics from the service
@@ -36,7 +36,7 @@ public interface IFocusActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FocusActivityStatistics> callback);
+    void delete(final ICallback<? super FocusActivityStatistics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFocusActivityStatisticsRequest extends IHttpRequest {
      * @param sourceFocusActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FocusActivityStatistics sourceFocusActivityStatistics, final ICallback<FocusActivityStatistics> callback);
+    void patch(final FocusActivityStatistics sourceFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback);
 
     /**
      * Patches this FocusActivityStatistics with a source
@@ -68,7 +68,7 @@ public interface IFocusActivityStatisticsRequest extends IHttpRequest {
      * @param newFocusActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<FocusActivityStatistics> callback);
+    void post(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback);
 
     /**
      * Posts a FocusActivityStatistics with a new object
@@ -85,7 +85,7 @@ public interface IFocusActivityStatisticsRequest extends IHttpRequest {
      * @param newFocusActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<FocusActivityStatistics> callback);
+    void put(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback);
 
     /**
      * Posts a FocusActivityStatistics with a new object

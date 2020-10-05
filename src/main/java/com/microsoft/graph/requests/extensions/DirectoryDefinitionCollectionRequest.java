@@ -40,7 +40,7 @@ public class DirectoryDefinitionCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, DirectoryDefinitionCollectionResponse.class, IDirectoryDefinitionCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectoryDefinitionCollectionPage> callback) {
+    public void get(final ICallback<? super IDirectoryDefinitionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DirectoryDefinitionCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback) {
+    public void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DirectoryDefinitionCollectionRequest extends BaseCollectionRequest<
      */
     public IDirectoryDefinitionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DirectoryDefinitionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDirectoryDefinitionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryDefinitionCollectionRequest)this;
     }
 

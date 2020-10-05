@@ -34,6 +34,6 @@ public class GroupPolicyCategoryCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public GroupPolicyCategoryCollectionWithReferencesPage(final GroupPolicyCategoryCollectionResponse response, final IGroupPolicyCategoryCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -37,7 +37,7 @@ public class AndroidCertificateProfileBaseWithReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, AndroidCertificateProfileBase.class);
     }
 
-    public void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidCertificateProfileBase> callback) {
+    public void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -49,7 +49,7 @@ public class AndroidCertificateProfileBaseWithReferenceRequest extends BaseReque
         return null;
     }
 
-    public void get(final ICallback<AndroidCertificateProfileBase> callback) {
+    public void get(final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class AndroidCertificateProfileBaseWithReferenceRequest extends BaseReque
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidCertificateProfileBase> callback) {
+	public void delete(final ICallback<? super AndroidCertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,7 +65,7 @@ public class AndroidCertificateProfileBaseWithReferenceRequest extends BaseReque
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback) {
+	public void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidCertificateProfileBase);
 	}
 
@@ -93,16 +93,6 @@ public class AndroidCertificateProfileBaseWithReferenceRequest extends BaseReque
      */
     public IAndroidCertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidCertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidCertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidCertificateProfileBaseWithReferenceRequest)this;
     }
 }

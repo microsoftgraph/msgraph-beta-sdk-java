@@ -37,7 +37,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<NdesConnector> callback) {
+    public void get(final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<NdesConnector> callback) {
+    public void delete(final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param sourceNdesConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NdesConnector sourceNdesConnector, final ICallback<NdesConnector> callback) {
+    public void patch(final NdesConnector sourceNdesConnector, final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.PATCH, callback, sourceNdesConnector);
     }
 
@@ -96,7 +96,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param newNdesConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback) {
+    public void post(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.POST, callback, newNdesConnector);
     }
 
@@ -117,7 +117,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param newNdesConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback) {
+    public void put(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.PUT, callback, newNdesConnector);
     }
 
@@ -151,17 +151,6 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      */
      public INdesConnectorRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NdesConnectorRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public INdesConnectorRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (NdesConnectorRequest)this;
      }
 

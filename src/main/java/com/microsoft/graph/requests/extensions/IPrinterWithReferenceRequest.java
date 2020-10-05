@@ -34,19 +34,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrinterWithReferenceRequest extends IHttpRequest {
 
-    void post(final Printer newPrinter, final IJsonBackedObject payload, final ICallback<Printer> callback);
+    void post(final Printer newPrinter, final IJsonBackedObject payload, final ICallback<? super Printer> callback);
 
     Printer post(final Printer newPrinter, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Printer> callback);
+    void get(final ICallback<? super Printer> callback);
 
     Printer get() throws ClientException;
 
-	void delete(final ICallback<Printer> callback);
+	void delete(final ICallback<? super Printer> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Printer sourcePrinter, final ICallback<Printer> callback);
+	void patch(final Printer sourcePrinter, final ICallback<? super Printer> callback);
 
 	Printer patch(final Printer sourcePrinter) throws ClientException;
 

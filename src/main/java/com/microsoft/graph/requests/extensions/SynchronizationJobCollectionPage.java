@@ -23,6 +23,6 @@ public class SynchronizationJobCollectionPage extends BaseCollectionPage<Synchro
      * @param builder  the request builder for the next collection page
      */
     public SynchronizationJobCollectionPage(final SynchronizationJobCollectionResponse response, final ISynchronizationJobCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

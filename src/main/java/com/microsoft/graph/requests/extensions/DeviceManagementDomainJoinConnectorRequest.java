@@ -37,7 +37,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementDomainJoinConnector> callback) {
+    public void get(final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementDomainJoinConnector> callback) {
+    public void delete(final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param sourceDeviceManagementDomainJoinConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback) {
+    public void patch(final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementDomainJoinConnector);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param newDeviceManagementDomainJoinConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback) {
+    public void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementDomainJoinConnector);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param newDeviceManagementDomainJoinConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback) {
+    public void put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementDomainJoinConnector);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      */
      public IDeviceManagementDomainJoinConnectorRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementDomainJoinConnectorRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementDomainJoinConnectorRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementDomainJoinConnectorRequest)this;
      }
 

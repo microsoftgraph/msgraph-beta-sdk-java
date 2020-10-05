@@ -23,6 +23,6 @@ public class EducationSynchronizationErrorCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public EducationSynchronizationErrorCollectionPage(final EducationSynchronizationErrorCollectionResponse response, final IEducationSynchronizationErrorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

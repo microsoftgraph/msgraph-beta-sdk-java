@@ -37,7 +37,7 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceHealthScriptRunSummary> callback) {
+    public void get(final ICallback<? super DeviceHealthScriptRunSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceHealthScriptRunSummary> callback) {
+    public void delete(final ICallback<? super DeviceHealthScriptRunSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
      * @param sourceDeviceHealthScriptRunSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceHealthScriptRunSummary sourceDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback) {
+    public void patch(final DeviceHealthScriptRunSummary sourceDeviceHealthScriptRunSummary, final ICallback<? super DeviceHealthScriptRunSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceHealthScriptRunSummary);
     }
 
@@ -96,7 +96,7 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
      * @param newDeviceHealthScriptRunSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback) {
+    public void post(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<? super DeviceHealthScriptRunSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceHealthScriptRunSummary);
     }
 
@@ -117,7 +117,7 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
      * @param newDeviceHealthScriptRunSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback) {
+    public void put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<? super DeviceHealthScriptRunSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceHealthScriptRunSummary);
     }
 
@@ -151,17 +151,6 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
      */
      public IDeviceHealthScriptRunSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceHealthScriptRunSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceHealthScriptRunSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceHealthScriptRunSummaryRequest)this;
      }
 

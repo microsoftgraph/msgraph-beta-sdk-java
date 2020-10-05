@@ -39,7 +39,7 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ExactMatchSession> callback) {
+    public void get(final ICallback<? super ExactMatchSession> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ExactMatchSession> callback) {
+    public void delete(final ICallback<? super ExactMatchSession> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
      * @param sourceExactMatchSession the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExactMatchSession sourceExactMatchSession, final ICallback<ExactMatchSession> callback) {
+    public void patch(final ExactMatchSession sourceExactMatchSession, final ICallback<? super ExactMatchSession> callback) {
         send(HttpMethod.PATCH, callback, sourceExactMatchSession);
     }
 
@@ -98,7 +98,7 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
      * @param newExactMatchSession the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback) {
+    public void post(final ExactMatchSession newExactMatchSession, final ICallback<? super ExactMatchSession> callback) {
         send(HttpMethod.POST, callback, newExactMatchSession);
     }
 
@@ -119,7 +119,7 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
      * @param newExactMatchSession the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback) {
+    public void put(final ExactMatchSession newExactMatchSession, final ICallback<? super ExactMatchSession> callback) {
         send(HttpMethod.PUT, callback, newExactMatchSession);
     }
 
@@ -153,17 +153,6 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
      */
      public IExactMatchSessionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExactMatchSessionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IExactMatchSessionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ExactMatchSessionRequest)this;
      }
 

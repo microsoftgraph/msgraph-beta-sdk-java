@@ -113,7 +113,7 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Profile> callback) {
+    public void get(final ICallback<? super Profile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -132,7 +132,7 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Profile> callback) {
+    public void delete(final ICallback<? super Profile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -151,7 +151,7 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
      * @param sourceProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Profile sourceProfile, final ICallback<Profile> callback) {
+    public void patch(final Profile sourceProfile, final ICallback<? super Profile> callback) {
         send(HttpMethod.PATCH, callback, sourceProfile);
     }
 
@@ -172,7 +172,7 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
      * @param newProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Profile newProfile, final ICallback<Profile> callback) {
+    public void post(final Profile newProfile, final ICallback<? super Profile> callback) {
         send(HttpMethod.POST, callback, newProfile);
     }
 
@@ -193,7 +193,7 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
      * @param newProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Profile newProfile, final ICallback<Profile> callback) {
+    public void put(final Profile newProfile, final ICallback<? super Profile> callback) {
         send(HttpMethod.PUT, callback, newProfile);
     }
 
@@ -227,17 +227,6 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
      */
      public IProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ProfileRequest)this;
      }
 

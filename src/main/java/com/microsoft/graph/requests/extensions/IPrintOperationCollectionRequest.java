@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrintOperationCollectionPage> callback);
+    void get(final ICallback<? super IPrintOperationCollectionPage> callback);
 
     IPrintOperationCollectionPage get() throws ClientException;
 
-    void post(final PrintOperation newPrintOperation, final ICallback<PrintOperation> callback);
+    void post(final PrintOperation newPrintOperation, final ICallback<? super PrintOperation> callback);
 
     PrintOperation post(final PrintOperation newPrintOperation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPrintOperationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrintOperationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrintOperationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPrintOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrintOperationCollectionRequest skipToken(String skipToken);
+	IPrintOperationCollectionRequest skipToken(final String skipToken);
 }

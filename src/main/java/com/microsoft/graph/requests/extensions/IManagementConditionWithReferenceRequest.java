@@ -26,19 +26,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagementConditionWithReferenceRequest extends IHttpRequest {
 
-    void post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload, final ICallback<ManagementCondition> callback);
+    void post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload, final ICallback<? super ManagementCondition> callback);
 
     ManagementCondition post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ManagementCondition> callback);
+    void get(final ICallback<? super ManagementCondition> callback);
 
     ManagementCondition get() throws ClientException;
 
-	void delete(final ICallback<ManagementCondition> callback);
+	void delete(final ICallback<? super ManagementCondition> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ManagementCondition sourceManagementCondition, final ICallback<ManagementCondition> callback);
+	void patch(final ManagementCondition sourceManagementCondition, final ICallback<? super ManagementCondition> callback);
 
 	ManagementCondition patch(final ManagementCondition sourceManagementCondition) throws ClientException;
 

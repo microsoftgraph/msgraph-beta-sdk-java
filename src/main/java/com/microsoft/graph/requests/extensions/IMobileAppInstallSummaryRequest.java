@@ -21,7 +21,7 @@ public interface IMobileAppInstallSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppInstallSummary> callback);
+    void get(final ICallback<? super MobileAppInstallSummary> callback);
 
     /**
      * Gets the MobileAppInstallSummary from the service
@@ -36,7 +36,7 @@ public interface IMobileAppInstallSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppInstallSummary> callback);
+    void delete(final ICallback<? super MobileAppInstallSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppInstallSummaryRequest extends IHttpRequest {
      * @param sourceMobileAppInstallSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppInstallSummary sourceMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback);
+    void patch(final MobileAppInstallSummary sourceMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback);
 
     /**
      * Patches this MobileAppInstallSummary with a source
@@ -68,7 +68,7 @@ public interface IMobileAppInstallSummaryRequest extends IHttpRequest {
      * @param newMobileAppInstallSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback);
+    void post(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback);
 
     /**
      * Posts a MobileAppInstallSummary with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppInstallSummaryRequest extends IHttpRequest {
      * @param newMobileAppInstallSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback);
+    void put(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback);
 
     /**
      * Posts a MobileAppInstallSummary with a new object

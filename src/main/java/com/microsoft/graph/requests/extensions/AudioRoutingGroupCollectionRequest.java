@@ -40,7 +40,7 @@ public class AudioRoutingGroupCollectionRequest extends BaseCollectionRequest<Au
         super(requestUrl, client, requestOptions, AudioRoutingGroupCollectionResponse.class, IAudioRoutingGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<IAudioRoutingGroupCollectionPage> callback) {
+    public void get(final ICallback<? super IAudioRoutingGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AudioRoutingGroupCollectionRequest extends BaseCollectionRequest<Au
         return buildFromResponse(response);
     }
 
-    public void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<AudioRoutingGroup> callback) {
+    public void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AudioRoutingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AudioRoutingGroupCollectionRequest extends BaseCollectionRequest<Au
      */
     public IAudioRoutingGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AudioRoutingGroupCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAudioRoutingGroupCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AudioRoutingGroupCollectionRequest)this;
     }
 

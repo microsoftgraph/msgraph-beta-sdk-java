@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IEmbeddedSIMActivationCodePoolAssignCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IEmbeddedSIMActivationCodePoolAssignCollectionPage> callback);
+    void post(final ICallback<? super IEmbeddedSIMActivationCodePoolAssignCollectionPage> callback);
 
     IEmbeddedSIMActivationCodePoolAssignCollectionPage post() throws ClientException;
 

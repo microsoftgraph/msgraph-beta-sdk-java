@@ -23,6 +23,6 @@ public class ProviderTenantSettingCollectionPage extends BaseCollectionPage<Prov
      * @param builder  the request builder for the next collection page
      */
     public ProviderTenantSettingCollectionPage(final ProviderTenantSettingCollectionResponse response, final IProviderTenantSettingCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

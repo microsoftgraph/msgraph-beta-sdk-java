@@ -44,7 +44,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
-    public void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback) {
+    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -78,6 +78,17 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      */
     public IManagedDeviceCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedDeviceCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IManagedDeviceCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceCollectionReferenceRequest)this;
     }
 

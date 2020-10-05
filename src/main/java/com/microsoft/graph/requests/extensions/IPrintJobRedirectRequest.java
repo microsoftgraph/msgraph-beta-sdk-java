@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintJobRedirectRequest extends IHttpRequest {
 
-    void post(final ICallback<PrintJob> callback);
+    void post(final ICallback<? super PrintJob> callback);
 
     PrintJob post() throws ClientException;
 

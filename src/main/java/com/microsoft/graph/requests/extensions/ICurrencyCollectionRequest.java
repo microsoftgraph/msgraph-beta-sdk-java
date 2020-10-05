@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICurrencyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICurrencyCollectionPage> callback);
+    void get(final ICallback<? super ICurrencyCollectionPage> callback);
 
     ICurrencyCollectionPage get() throws ClientException;
 
-    void post(final Currency newCurrency, final ICallback<Currency> callback);
+    void post(final Currency newCurrency, final ICallback<? super Currency> callback);
 
     Currency post(final Currency newCurrency) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ICurrencyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ICurrencyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICurrencyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ICurrencyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICurrencyCollectionRequest skipToken(String skipToken);
+	ICurrencyCollectionRequest skipToken(final String skipToken);
 }

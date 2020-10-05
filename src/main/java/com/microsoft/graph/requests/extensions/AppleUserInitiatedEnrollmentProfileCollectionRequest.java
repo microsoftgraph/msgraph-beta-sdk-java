@@ -40,7 +40,7 @@ public class AppleUserInitiatedEnrollmentProfileCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, AppleUserInitiatedEnrollmentProfileCollectionResponse.class, IAppleUserInitiatedEnrollmentProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IAppleUserInitiatedEnrollmentProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IAppleUserInitiatedEnrollmentProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AppleUserInitiatedEnrollmentProfileCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
+    public void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppleUserInitiatedEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AppleUserInitiatedEnrollmentProfileCollectionRequest extends BaseCo
      */
     public IAppleUserInitiatedEnrollmentProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AppleUserInitiatedEnrollmentProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAppleUserInitiatedEnrollmentProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppleUserInitiatedEnrollmentProfileCollectionRequest)this;
     }
 

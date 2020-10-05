@@ -23,6 +23,6 @@ public class Windows81TrustedRootCertificateCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public Windows81TrustedRootCertificateCollectionPage(final Windows81TrustedRootCertificateCollectionResponse response, final IWindows81TrustedRootCertificateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

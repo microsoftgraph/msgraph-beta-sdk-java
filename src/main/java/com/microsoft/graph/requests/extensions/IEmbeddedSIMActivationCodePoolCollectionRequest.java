@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEmbeddedSIMActivationCodePoolCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEmbeddedSIMActivationCodePoolCollectionPage> callback);
+    void get(final ICallback<? super IEmbeddedSIMActivationCodePoolCollectionPage> callback);
 
     IEmbeddedSIMActivationCodePoolCollectionPage get() throws ClientException;
 
-    void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback);
+    void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback);
 
     EmbeddedSIMActivationCodePool post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IEmbeddedSIMActivationCodePoolCollectionRequest extends IHttpRe
      * @return the updated request
      */
     IEmbeddedSIMActivationCodePoolCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEmbeddedSIMActivationCodePoolCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IEmbeddedSIMActivationCodePoolCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IEmbeddedSIMActivationCodePoolCollectionRequest skipToken(String skipToken);
+	IEmbeddedSIMActivationCodePoolCollectionRequest skipToken(final String skipToken);
 }

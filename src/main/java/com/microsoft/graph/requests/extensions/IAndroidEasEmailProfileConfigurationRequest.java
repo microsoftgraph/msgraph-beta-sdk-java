@@ -21,7 +21,7 @@ public interface IAndroidEasEmailProfileConfigurationRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidEasEmailProfileConfiguration> callback);
+    void get(final ICallback<? super AndroidEasEmailProfileConfiguration> callback);
 
     /**
      * Gets the AndroidEasEmailProfileConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidEasEmailProfileConfigurationRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidEasEmailProfileConfiguration> callback);
+    void delete(final ICallback<? super AndroidEasEmailProfileConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidEasEmailProfileConfigurationRequest extends IHttpReques
      * @param sourceAndroidEasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidEasEmailProfileConfiguration sourceAndroidEasEmailProfileConfiguration, final ICallback<AndroidEasEmailProfileConfiguration> callback);
+    void patch(final AndroidEasEmailProfileConfiguration sourceAndroidEasEmailProfileConfiguration, final ICallback<? super AndroidEasEmailProfileConfiguration> callback);
 
     /**
      * Patches this AndroidEasEmailProfileConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidEasEmailProfileConfigurationRequest extends IHttpReques
      * @param newAndroidEasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<AndroidEasEmailProfileConfiguration> callback);
+    void post(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<? super AndroidEasEmailProfileConfiguration> callback);
 
     /**
      * Posts a AndroidEasEmailProfileConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidEasEmailProfileConfigurationRequest extends IHttpReques
      * @param newAndroidEasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<AndroidEasEmailProfileConfiguration> callback);
+    void put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<? super AndroidEasEmailProfileConfiguration> callback);
 
     /**
      * Posts a AndroidEasEmailProfileConfiguration with a new object

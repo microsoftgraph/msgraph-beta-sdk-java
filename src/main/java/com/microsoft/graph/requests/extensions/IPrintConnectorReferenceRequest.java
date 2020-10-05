@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrintConnectorReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PrintConnector> callback);
+    void delete(final ICallback<? super PrintConnector> callback);
 
     PrintConnector delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IPrintConnectorReferenceRequest extends IHttpRequest {
      * @param srcPrintConnector the PrintConnector to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PrintConnector srcPrintConnector, final ICallback<PrintConnector> callback);
+    void put(PrintConnector srcPrintConnector, final ICallback<? super PrintConnector> callback);
 
     /**
      * Puts the PrintConnector

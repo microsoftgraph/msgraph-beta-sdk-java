@@ -37,7 +37,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void get(final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void delete(final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param sourceMobileAppProvisioningConfigGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void patch(final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -96,7 +96,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param newMobileAppProvisioningConfigGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -117,7 +117,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param newMobileAppProvisioningConfigGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -151,17 +151,6 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      */
      public IMobileAppProvisioningConfigGroupAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppProvisioningConfigGroupAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppProvisioningConfigGroupAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppProvisioningConfigGroupAssignmentRequest)this;
      }
 

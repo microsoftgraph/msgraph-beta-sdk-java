@@ -27,7 +27,7 @@ public interface IApplicationCollectionWithReferencesRequestBuilder extends IReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IApplicationCollectionWithReferencesRequest instance
      */
     IApplicationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -35,7 +35,7 @@ public interface IApplicationCollectionWithReferencesRequestBuilder extends IReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IApplicationCollectionWithReferencesRequest instance
      */
     IApplicationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

@@ -21,7 +21,7 @@ public interface IIosImportedPFXCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super IosImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the IosImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IIosImportedPFXCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super IosImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosImportedPFXCertificateProfileRequest extends IHttpRequest {
      * @param sourceIosImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosImportedPFXCertificateProfile sourceIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback);
+    void patch(final IosImportedPFXCertificateProfile sourceIosImportedPFXCertificateProfile, final ICallback<? super IosImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this IosImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IIosImportedPFXCertificateProfileRequest extends IHttpRequest {
      * @param newIosImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback);
+    void post(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<? super IosImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a IosImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IIosImportedPFXCertificateProfileRequest extends IHttpRequest {
      * @param newIosImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback);
+    void put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<? super IosImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a IosImportedPFXCertificateProfile with a new object

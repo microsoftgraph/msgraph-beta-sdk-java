@@ -21,7 +21,7 @@ public interface IApprovalRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Approval> callback);
+    void get(final ICallback<? super Approval> callback);
 
     /**
      * Gets the Approval from the service
@@ -36,7 +36,7 @@ public interface IApprovalRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Approval> callback);
+    void delete(final ICallback<? super Approval> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApprovalRequest extends IHttpRequest {
      * @param sourceApproval the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Approval sourceApproval, final ICallback<Approval> callback);
+    void patch(final Approval sourceApproval, final ICallback<? super Approval> callback);
 
     /**
      * Patches this Approval with a source
@@ -68,7 +68,7 @@ public interface IApprovalRequest extends IHttpRequest {
      * @param newApproval the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Approval newApproval, final ICallback<Approval> callback);
+    void post(final Approval newApproval, final ICallback<? super Approval> callback);
 
     /**
      * Posts a Approval with a new object
@@ -85,7 +85,7 @@ public interface IApprovalRequest extends IHttpRequest {
      * @param newApproval the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Approval newApproval, final ICallback<Approval> callback);
+    void put(final Approval newApproval, final ICallback<? super Approval> callback);
 
     /**
      * Posts a Approval with a new object

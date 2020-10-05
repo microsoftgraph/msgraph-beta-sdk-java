@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISecurityBaselineCategoryStateSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISecurityBaselineCategoryStateSummaryCollectionPage> callback);
+    void get(final ICallback<? super ISecurityBaselineCategoryStateSummaryCollectionPage> callback);
 
     ISecurityBaselineCategoryStateSummaryCollectionPage get() throws ClientException;
 
-    void post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<SecurityBaselineCategoryStateSummary> callback);
+    void post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<? super SecurityBaselineCategoryStateSummary> callback);
 
     SecurityBaselineCategoryStateSummary post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISecurityBaselineCategoryStateSummaryCollectionRequest extends 
      * @return the updated request
      */
     ISecurityBaselineCategoryStateSummaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISecurityBaselineCategoryStateSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISecurityBaselineCategoryStateSummaryCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	ISecurityBaselineCategoryStateSummaryCollectionRequest skipToken(String skipToken);
+	ISecurityBaselineCategoryStateSummaryCollectionRequest skipToken(final String skipToken);
 }

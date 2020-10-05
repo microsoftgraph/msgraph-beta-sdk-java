@@ -37,7 +37,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void get(final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void delete(final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param sourceEnrollmentRestrictionsConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void patch(final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -96,7 +96,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param newEnrollmentRestrictionsConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void post(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -117,7 +117,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param newEnrollmentRestrictionsConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -151,17 +151,6 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      */
      public IEnrollmentRestrictionsConfigurationPolicySetItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnrollmentRestrictionsConfigurationPolicySetItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEnrollmentRestrictionsConfigurationPolicySetItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EnrollmentRestrictionsConfigurationPolicySetItemRequest)this;
      }
 

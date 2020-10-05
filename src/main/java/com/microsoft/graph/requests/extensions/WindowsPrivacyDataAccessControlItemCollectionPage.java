@@ -23,6 +23,6 @@ public class WindowsPrivacyDataAccessControlItemCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public WindowsPrivacyDataAccessControlItemCollectionPage(final WindowsPrivacyDataAccessControlItemCollectionResponse response, final IWindowsPrivacyDataAccessControlItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ITiIndicatorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TiIndicator> callback);
+    void get(final ICallback<? super TiIndicator> callback);
 
     /**
      * Gets the TiIndicator from the service
@@ -36,7 +36,7 @@ public interface ITiIndicatorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TiIndicator> callback);
+    void delete(final ICallback<? super TiIndicator> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITiIndicatorRequest extends IHttpRequest {
      * @param sourceTiIndicator the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TiIndicator sourceTiIndicator, final ICallback<TiIndicator> callback);
+    void patch(final TiIndicator sourceTiIndicator, final ICallback<? super TiIndicator> callback);
 
     /**
      * Patches this TiIndicator with a source
@@ -68,7 +68,7 @@ public interface ITiIndicatorRequest extends IHttpRequest {
      * @param newTiIndicator the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TiIndicator newTiIndicator, final ICallback<TiIndicator> callback);
+    void post(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback);
 
     /**
      * Posts a TiIndicator with a new object
@@ -85,7 +85,7 @@ public interface ITiIndicatorRequest extends IHttpRequest {
      * @param newTiIndicator the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TiIndicator newTiIndicator, final ICallback<TiIndicator> callback);
+    void put(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback);
 
     /**
      * Posts a TiIndicator with a new object

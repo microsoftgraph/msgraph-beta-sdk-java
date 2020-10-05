@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsOverview> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsOverview> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param sourceUserExperienceAnalyticsOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsOverview sourceUserExperienceAnalyticsOverview, final ICallback<UserExperienceAnalyticsOverview> callback) {
+    public void patch(final UserExperienceAnalyticsOverview sourceUserExperienceAnalyticsOverview, final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsOverview);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param newUserExperienceAnalyticsOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, final ICallback<UserExperienceAnalyticsOverview> callback) {
+    public void post(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsOverview);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param newUserExperienceAnalyticsOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, final ICallback<UserExperienceAnalyticsOverview> callback) {
+    public void put(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsOverview);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      */
      public IUserExperienceAnalyticsOverviewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsOverviewRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsOverviewRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsOverviewRequest)this;
      }
 

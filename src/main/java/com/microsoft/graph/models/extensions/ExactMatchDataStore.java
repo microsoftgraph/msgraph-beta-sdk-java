@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ExactDataMatchStoreColumn;
 import com.microsoft.graph.models.extensions.ExactMatchSession;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionPage;
 
 
@@ -108,19 +106,7 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            final ExactMatchSessionCollectionResponse response = new ExactMatchSessionCollectionResponse();
-            if (json.has("sessions@odata.nextLink")) {
-                response.nextLink = json.get("sessions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sessions").toString(), JsonObject[].class);
-            final ExactMatchSession[] array = new ExactMatchSession[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExactMatchSession.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sessions = new ExactMatchSessionCollectionPage(response, null);
+            sessions = serializer.deserializeObject(json.get("sessions").toString(), ExactMatchSessionCollectionPage.class);
         }
     }
 }

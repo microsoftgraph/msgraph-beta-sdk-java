@@ -23,6 +23,6 @@ public class FileSecurityProfileCollectionPage extends BaseCollectionPage<FileSe
      * @param builder  the request builder for the next collection page
      */
     public FileSecurityProfileCollectionPage(final FileSecurityProfileCollectionResponse response, final IFileSecurityProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IImportedDeviceIdentityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ImportedDeviceIdentity> callback);
+    void get(final ICallback<? super ImportedDeviceIdentity> callback);
 
     /**
      * Gets the ImportedDeviceIdentity from the service
@@ -36,7 +36,7 @@ public interface IImportedDeviceIdentityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ImportedDeviceIdentity> callback);
+    void delete(final ICallback<? super ImportedDeviceIdentity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IImportedDeviceIdentityRequest extends IHttpRequest {
      * @param sourceImportedDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ImportedDeviceIdentity sourceImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback);
+    void patch(final ImportedDeviceIdentity sourceImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback);
 
     /**
      * Patches this ImportedDeviceIdentity with a source
@@ -68,7 +68,7 @@ public interface IImportedDeviceIdentityRequest extends IHttpRequest {
      * @param newImportedDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback);
+    void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback);
 
     /**
      * Posts a ImportedDeviceIdentity with a new object
@@ -85,7 +85,7 @@ public interface IImportedDeviceIdentityRequest extends IHttpRequest {
      * @param newImportedDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback);
+    void put(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback);
 
     /**
      * Posts a ImportedDeviceIdentity with a new object

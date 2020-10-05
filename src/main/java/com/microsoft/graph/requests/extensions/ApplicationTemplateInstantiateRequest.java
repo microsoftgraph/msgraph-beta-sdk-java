@@ -37,7 +37,7 @@ public class ApplicationTemplateInstantiateRequest extends BaseRequest implement
         body = new ApplicationTemplateInstantiateBody();
     }
 
-    public void post(final ICallback<ApplicationServicePrincipal> callback) {
+    public void post(final ICallback<? super ApplicationServicePrincipal> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class ApplicationTemplateInstantiateRequest extends BaseRequest implement
      */
     public IApplicationTemplateInstantiateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationTemplateInstantiateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IApplicationTemplateInstantiateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ApplicationTemplateInstantiateRequest)this;
     }
 

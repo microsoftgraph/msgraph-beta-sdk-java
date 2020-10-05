@@ -25,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IRoleScopeTagReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<RoleScopeTag> callback);
+    void delete(final ICallback<? super RoleScopeTag> callback);
 
     RoleScopeTag delete() throws ClientException;
 
@@ -51,7 +51,7 @@ public interface IRoleScopeTagReferenceRequest extends IHttpRequest {
      * @param srcRoleScopeTag the RoleScopeTag to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(RoleScopeTag srcRoleScopeTag, final ICallback<RoleScopeTag> callback);
+    void put(RoleScopeTag srcRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
     /**
      * Puts the RoleScopeTag

@@ -41,7 +41,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkPkcsCertificateProfile> callback) {
+    public void get(final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkPkcsCertificateProfile> callback) {
+    public void delete(final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param sourceAndroidForWorkPkcsCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkPkcsCertificateProfile sourceAndroidForWorkPkcsCertificateProfile, final ICallback<AndroidForWorkPkcsCertificateProfile> callback) {
+    public void patch(final AndroidForWorkPkcsCertificateProfile sourceAndroidForWorkPkcsCertificateProfile, final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -100,7 +100,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param newAndroidForWorkPkcsCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, final ICallback<AndroidForWorkPkcsCertificateProfile> callback) {
+    public void post(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -121,7 +121,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param newAndroidForWorkPkcsCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, final ICallback<AndroidForWorkPkcsCertificateProfile> callback) {
+    public void put(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -155,17 +155,6 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      */
      public IAndroidForWorkPkcsCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkPkcsCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkPkcsCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkPkcsCertificateProfileRequest)this;
      }
 

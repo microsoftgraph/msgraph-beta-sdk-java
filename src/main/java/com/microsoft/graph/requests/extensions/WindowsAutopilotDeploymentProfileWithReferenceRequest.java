@@ -44,7 +44,7 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequest extends BaseR
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfile.class);
     }
 
-    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final IJsonBackedObject payload, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final IJsonBackedObject payload, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -56,7 +56,7 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequest extends BaseR
         return null;
     }
 
-    public void get(final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void get(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequest extends BaseR
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+	public void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -72,7 +72,7 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequest extends BaseR
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+	public void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsAutopilotDeploymentProfile);
 	}
 
@@ -100,16 +100,6 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequest extends BaseR
      */
     public IWindowsAutopilotDeploymentProfileWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsAutopilotDeploymentProfileWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsAutopilotDeploymentProfileWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsAutopilotDeploymentProfileWithReferenceRequest)this;
     }
 }

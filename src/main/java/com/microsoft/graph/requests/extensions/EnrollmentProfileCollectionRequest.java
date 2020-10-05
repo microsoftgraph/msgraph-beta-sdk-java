@@ -40,7 +40,7 @@ public class EnrollmentProfileCollectionRequest extends BaseCollectionRequest<En
         super(requestUrl, client, requestOptions, EnrollmentProfileCollectionResponse.class, IEnrollmentProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IEnrollmentProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IEnrollmentProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EnrollmentProfileCollectionRequest extends BaseCollectionRequest<En
         return buildFromResponse(response);
     }
 
-    public void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<EnrollmentProfile> callback) {
+    public void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EnrollmentProfileCollectionRequest extends BaseCollectionRequest<En
      */
     public IEnrollmentProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EnrollmentProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEnrollmentProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EnrollmentProfileCollectionRequest)this;
     }
 

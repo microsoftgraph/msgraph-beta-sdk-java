@@ -40,7 +40,7 @@ public class FileSecurityProfileCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, FileSecurityProfileCollectionResponse.class, IFileSecurityProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IFileSecurityProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IFileSecurityProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class FileSecurityProfileCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<FileSecurityProfile> callback) {
+    public void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<? super FileSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new FileSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class FileSecurityProfileCollectionRequest extends BaseCollectionRequest<
      */
     public IFileSecurityProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (FileSecurityProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IFileSecurityProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (FileSecurityProfileCollectionRequest)this;
     }
 

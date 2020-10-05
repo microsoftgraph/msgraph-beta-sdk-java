@@ -36,7 +36,7 @@ public class ManagementConditionCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, ManagementConditionCollectionResponse.class, IManagementConditionCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagementConditionCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IManagementConditionCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -57,22 +57,27 @@ public class ManagementConditionCollectionWithReferencesRequest extends BaseColl
 
     public IManagementConditionCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagementConditionCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagementConditionCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagementConditionCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IManagementConditionCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IManagementConditionCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagementConditionCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagementConditionCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ManagementConditionCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagementConditionCollectionWithReferencesPage buildFromResponse(final ManagementConditionCollectionResponse response) {

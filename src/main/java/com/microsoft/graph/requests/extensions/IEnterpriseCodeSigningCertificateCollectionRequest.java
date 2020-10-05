@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEnterpriseCodeSigningCertificateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEnterpriseCodeSigningCertificateCollectionPage> callback);
+    void get(final ICallback<? super IEnterpriseCodeSigningCertificateCollectionPage> callback);
 
     IEnterpriseCodeSigningCertificateCollectionPage get() throws ClientException;
 
-    void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback);
+    void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback);
 
     EnterpriseCodeSigningCertificate post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEnterpriseCodeSigningCertificateCollectionRequest extends IHtt
      * @return the updated request
      */
     IEnterpriseCodeSigningCertificateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEnterpriseCodeSigningCertificateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEnterpriseCodeSigningCertificateCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IEnterpriseCodeSigningCertificateCollectionRequest skipToken(String skipToken);
+	IEnterpriseCodeSigningCertificateCollectionRequest skipToken(final String skipToken);
 }

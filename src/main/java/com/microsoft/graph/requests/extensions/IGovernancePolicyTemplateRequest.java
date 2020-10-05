@@ -21,7 +21,7 @@ public interface IGovernancePolicyTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GovernancePolicyTemplate> callback);
+    void get(final ICallback<? super GovernancePolicyTemplate> callback);
 
     /**
      * Gets the GovernancePolicyTemplate from the service
@@ -36,7 +36,7 @@ public interface IGovernancePolicyTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GovernancePolicyTemplate> callback);
+    void delete(final ICallback<? super GovernancePolicyTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGovernancePolicyTemplateRequest extends IHttpRequest {
      * @param sourceGovernancePolicyTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GovernancePolicyTemplate sourceGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback);
+    void patch(final GovernancePolicyTemplate sourceGovernancePolicyTemplate, final ICallback<? super GovernancePolicyTemplate> callback);
 
     /**
      * Patches this GovernancePolicyTemplate with a source
@@ -68,7 +68,7 @@ public interface IGovernancePolicyTemplateRequest extends IHttpRequest {
      * @param newGovernancePolicyTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback);
+    void post(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<? super GovernancePolicyTemplate> callback);
 
     /**
      * Posts a GovernancePolicyTemplate with a new object
@@ -85,7 +85,7 @@ public interface IGovernancePolicyTemplateRequest extends IHttpRequest {
      * @param newGovernancePolicyTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback);
+    void put(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<? super GovernancePolicyTemplate> callback);
 
     /**
      * Posts a GovernancePolicyTemplate with a new object

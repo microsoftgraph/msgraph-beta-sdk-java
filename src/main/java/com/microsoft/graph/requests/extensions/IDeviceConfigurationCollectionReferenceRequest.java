@@ -29,7 +29,7 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
  */
 public interface IDeviceConfigurationCollectionReferenceRequest {
 
-    void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback);
+    void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback);
 
     DeviceConfiguration post(final DeviceConfiguration newDeviceConfiguration) throws ClientException;
 

@@ -36,7 +36,7 @@ public class SynchronizationJobRestartRequest extends BaseRequest implements ISy
         body = new SynchronizationJobRestartBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class SynchronizationJobRestartRequest extends BaseRequest implements ISy
      */
     public ISynchronizationJobRestartRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SynchronizationJobRestartRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISynchronizationJobRestartRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SynchronizationJobRestartRequest)this;
     }
 

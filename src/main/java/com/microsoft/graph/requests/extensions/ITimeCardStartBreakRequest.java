@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITimeCardStartBreakRequest extends IHttpRequest {
 
-    void post(final ICallback<TimeCard> callback);
+    void post(final ICallback<? super TimeCard> callback);
 
     TimeCard post() throws ClientException;
 

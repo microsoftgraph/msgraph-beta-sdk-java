@@ -37,6 +37,6 @@ public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public ApplicationCollectionWithReferencesPage(final ApplicationCollectionResponse response, final IApplicationCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -38,7 +38,7 @@ public class AccessReviewScheduleDefinitionReferenceRequest extends BaseRequest 
         super(requestUrl, client, requestOptions, AccessReviewScheduleDefinition.class);
     }
 
-    public void delete(final ICallback<AccessReviewScheduleDefinition> callback) {
+    public void delete(final ICallback<? super AccessReviewScheduleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class AccessReviewScheduleDefinitionReferenceRequest extends BaseRequest 
         return (AccessReviewScheduleDefinitionReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAccessReviewScheduleDefinitionReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AccessReviewScheduleDefinitionReferenceRequest)this;
-    }
-    /**
      * Puts the AccessReviewScheduleDefinition
      *
      * @param srcAccessReviewScheduleDefinition the AccessReviewScheduleDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AccessReviewScheduleDefinition srcAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback) {
+    public void put(AccessReviewScheduleDefinition srcAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback) {
         send(HttpMethod.PUT, callback, srcAccessReviewScheduleDefinition);
     }
 

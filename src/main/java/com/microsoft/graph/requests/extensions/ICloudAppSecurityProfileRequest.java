@@ -21,7 +21,7 @@ public interface ICloudAppSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CloudAppSecurityProfile> callback);
+    void get(final ICallback<? super CloudAppSecurityProfile> callback);
 
     /**
      * Gets the CloudAppSecurityProfile from the service
@@ -36,7 +36,7 @@ public interface ICloudAppSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CloudAppSecurityProfile> callback);
+    void delete(final ICallback<? super CloudAppSecurityProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICloudAppSecurityProfileRequest extends IHttpRequest {
      * @param sourceCloudAppSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CloudAppSecurityProfile sourceCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback);
+    void patch(final CloudAppSecurityProfile sourceCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback);
 
     /**
      * Patches this CloudAppSecurityProfile with a source
@@ -68,7 +68,7 @@ public interface ICloudAppSecurityProfileRequest extends IHttpRequest {
      * @param newCloudAppSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback);
+    void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback);
 
     /**
      * Posts a CloudAppSecurityProfile with a new object
@@ -85,7 +85,7 @@ public interface ICloudAppSecurityProfileRequest extends IHttpRequest {
      * @param newCloudAppSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback);
+    void put(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback);
 
     /**
      * Posts a CloudAppSecurityProfile with a new object

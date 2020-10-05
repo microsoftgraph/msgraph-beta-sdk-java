@@ -40,7 +40,7 @@ public class EnterpriseCodeSigningCertificateCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, EnterpriseCodeSigningCertificateCollectionResponse.class, IEnterpriseCodeSigningCertificateCollectionPage.class);
     }
 
-    public void get(final ICallback<IEnterpriseCodeSigningCertificateCollectionPage> callback) {
+    public void get(final ICallback<? super IEnterpriseCodeSigningCertificateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EnterpriseCodeSigningCertificateCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback) {
+    public void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnterpriseCodeSigningCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EnterpriseCodeSigningCertificateCollectionRequest extends BaseColle
      */
     public IEnterpriseCodeSigningCertificateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EnterpriseCodeSigningCertificateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEnterpriseCodeSigningCertificateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EnterpriseCodeSigningCertificateCollectionRequest)this;
     }
 

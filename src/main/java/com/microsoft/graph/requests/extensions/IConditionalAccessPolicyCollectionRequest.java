@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IConditionalAccessPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IConditionalAccessPolicyCollectionPage> callback);
+    void get(final ICallback<? super IConditionalAccessPolicyCollectionPage> callback);
 
     IConditionalAccessPolicyCollectionPage get() throws ClientException;
 
-    void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback);
+    void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback);
 
     ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IConditionalAccessPolicyCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     IConditionalAccessPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IConditionalAccessPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IConditionalAccessPolicyCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IConditionalAccessPolicyCollectionRequest skipToken(String skipToken);
+	IConditionalAccessPolicyCollectionRequest skipToken(final String skipToken);
 }

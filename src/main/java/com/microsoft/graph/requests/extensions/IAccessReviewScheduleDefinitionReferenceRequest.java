@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAccessReviewScheduleDefinitionReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AccessReviewScheduleDefinition> callback);
+    void delete(final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     AccessReviewScheduleDefinition delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IAccessReviewScheduleDefinitionReferenceRequest extends IHttpRe
      * @param srcAccessReviewScheduleDefinition the AccessReviewScheduleDefinition to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AccessReviewScheduleDefinition srcAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback);
+    void put(AccessReviewScheduleDefinition srcAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     /**
      * Puts the AccessReviewScheduleDefinition

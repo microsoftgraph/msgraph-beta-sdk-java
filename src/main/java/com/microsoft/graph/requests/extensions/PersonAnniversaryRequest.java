@@ -37,7 +37,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PersonAnniversary> callback) {
+    public void get(final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PersonAnniversary> callback) {
+    public void delete(final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param sourcePersonAnniversary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonAnniversary sourcePersonAnniversary, final ICallback<PersonAnniversary> callback) {
+    public void patch(final PersonAnniversary sourcePersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonAnniversary);
     }
 
@@ -96,7 +96,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param newPersonAnniversary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback) {
+    public void post(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.POST, callback, newPersonAnniversary);
     }
 
@@ -117,7 +117,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param newPersonAnniversary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback) {
+    public void put(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.PUT, callback, newPersonAnniversary);
     }
 
@@ -151,17 +151,6 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      */
      public IPersonAnniversaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonAnniversaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPersonAnniversaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonAnniversaryRequest)this;
      }
 

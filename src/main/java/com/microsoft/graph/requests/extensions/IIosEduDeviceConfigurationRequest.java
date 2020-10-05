@@ -21,7 +21,7 @@ public interface IIosEduDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosEduDeviceConfiguration> callback);
+    void get(final ICallback<? super IosEduDeviceConfiguration> callback);
 
     /**
      * Gets the IosEduDeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosEduDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosEduDeviceConfiguration> callback);
+    void delete(final ICallback<? super IosEduDeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosEduDeviceConfigurationRequest extends IHttpRequest {
      * @param sourceIosEduDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosEduDeviceConfiguration sourceIosEduDeviceConfiguration, final ICallback<IosEduDeviceConfiguration> callback);
+    void patch(final IosEduDeviceConfiguration sourceIosEduDeviceConfiguration, final ICallback<? super IosEduDeviceConfiguration> callback);
 
     /**
      * Patches this IosEduDeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosEduDeviceConfigurationRequest extends IHttpRequest {
      * @param newIosEduDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosEduDeviceConfiguration newIosEduDeviceConfiguration, final ICallback<IosEduDeviceConfiguration> callback);
+    void post(final IosEduDeviceConfiguration newIosEduDeviceConfiguration, final ICallback<? super IosEduDeviceConfiguration> callback);
 
     /**
      * Posts a IosEduDeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosEduDeviceConfigurationRequest extends IHttpRequest {
      * @param newIosEduDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosEduDeviceConfiguration newIosEduDeviceConfiguration, final ICallback<IosEduDeviceConfiguration> callback);
+    void put(final IosEduDeviceConfiguration newIosEduDeviceConfiguration, final ICallback<? super IosEduDeviceConfiguration> callback);
 
     /**
      * Posts a IosEduDeviceConfiguration with a new object

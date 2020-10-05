@@ -19,7 +19,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceHealthScriptUpdateGlobalScriptRequest extends IHttpRequest {
 
-    void post(final ICallback<String> callback);
+    void post(final ICallback<? super String> callback);
 
     String post() throws ClientException;
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage> callback);
 
     IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+    void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
 
     UserExperienceAnalyticsDeviceStartupProcessPerformance post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollecti
      * @return the updated request
      */
     IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollecti
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest skipToken(final String skipToken);
 }

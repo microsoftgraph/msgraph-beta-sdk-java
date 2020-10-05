@@ -45,7 +45,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TodoTaskList> callback) {
+    public void get(final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TodoTaskList> callback) {
+    public void delete(final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param sourceTodoTaskList the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TodoTaskList sourceTodoTaskList, final ICallback<TodoTaskList> callback) {
+    public void patch(final TodoTaskList sourceTodoTaskList, final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.PATCH, callback, sourceTodoTaskList);
     }
 
@@ -104,7 +104,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param newTodoTaskList the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TodoTaskList newTodoTaskList, final ICallback<TodoTaskList> callback) {
+    public void post(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.POST, callback, newTodoTaskList);
     }
 
@@ -125,7 +125,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param newTodoTaskList the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TodoTaskList newTodoTaskList, final ICallback<TodoTaskList> callback) {
+    public void put(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.PUT, callback, newTodoTaskList);
     }
 
@@ -159,17 +159,6 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      */
      public ITodoTaskListRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TodoTaskListRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITodoTaskListRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TodoTaskListRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedRoleAssignmentRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedRoleAssignmentRequestCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedRoleAssignmentRequestCollectionPage> callback);
 
     IPrivilegedRoleAssignmentRequestCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     PrivilegedRoleAssignmentRequest post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPrivilegedRoleAssignmentRequestCollectionRequest extends IHttp
      * @return the updated request
      */
     IPrivilegedRoleAssignmentRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedRoleAssignmentRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPrivilegedRoleAssignmentRequestCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IPrivilegedRoleAssignmentRequestCollectionRequest skipToken(String skipToken);
+	IPrivilegedRoleAssignmentRequestCollectionRequest skipToken(final String skipToken);
 }

@@ -21,7 +21,7 @@ public interface IProgramRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Program> callback);
+    void get(final ICallback<? super Program> callback);
 
     /**
      * Gets the Program from the service
@@ -36,7 +36,7 @@ public interface IProgramRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Program> callback);
+    void delete(final ICallback<? super Program> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProgramRequest extends IHttpRequest {
      * @param sourceProgram the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Program sourceProgram, final ICallback<Program> callback);
+    void patch(final Program sourceProgram, final ICallback<? super Program> callback);
 
     /**
      * Patches this Program with a source
@@ -68,7 +68,7 @@ public interface IProgramRequest extends IHttpRequest {
      * @param newProgram the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Program newProgram, final ICallback<Program> callback);
+    void post(final Program newProgram, final ICallback<? super Program> callback);
 
     /**
      * Posts a Program with a new object
@@ -85,7 +85,7 @@ public interface IProgramRequest extends IHttpRequest {
      * @param newProgram the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Program newProgram, final ICallback<Program> callback);
+    void put(final Program newProgram, final ICallback<? super Program> callback);
 
     /**
      * Posts a Program with a new object

@@ -21,7 +21,7 @@ public interface ISiteActivitySummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SiteActivitySummary> callback);
+    void get(final ICallback<? super SiteActivitySummary> callback);
 
     /**
      * Gets the SiteActivitySummary from the service
@@ -36,7 +36,7 @@ public interface ISiteActivitySummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SiteActivitySummary> callback);
+    void delete(final ICallback<? super SiteActivitySummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISiteActivitySummaryRequest extends IHttpRequest {
      * @param sourceSiteActivitySummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SiteActivitySummary sourceSiteActivitySummary, final ICallback<SiteActivitySummary> callback);
+    void patch(final SiteActivitySummary sourceSiteActivitySummary, final ICallback<? super SiteActivitySummary> callback);
 
     /**
      * Patches this SiteActivitySummary with a source
@@ -68,7 +68,7 @@ public interface ISiteActivitySummaryRequest extends IHttpRequest {
      * @param newSiteActivitySummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SiteActivitySummary newSiteActivitySummary, final ICallback<SiteActivitySummary> callback);
+    void post(final SiteActivitySummary newSiteActivitySummary, final ICallback<? super SiteActivitySummary> callback);
 
     /**
      * Posts a SiteActivitySummary with a new object
@@ -85,7 +85,7 @@ public interface ISiteActivitySummaryRequest extends IHttpRequest {
      * @param newSiteActivitySummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SiteActivitySummary newSiteActivitySummary, final ICallback<SiteActivitySummary> callback);
+    void put(final SiteActivitySummary newSiteActivitySummary, final ICallback<? super SiteActivitySummary> callback);
 
     /**
      * Posts a SiteActivitySummary with a new object

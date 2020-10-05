@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProvisioningObjectSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IProvisioningObjectSummaryCollectionPage> callback);
+    void get(final ICallback<? super IProvisioningObjectSummaryCollectionPage> callback);
 
     IProvisioningObjectSummaryCollectionPage get() throws ClientException;
 
-    void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback);
+    void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback);
 
     ProvisioningObjectSummary post(final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IProvisioningObjectSummaryCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IProvisioningObjectSummaryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IProvisioningObjectSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IProvisioningObjectSummaryCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IProvisioningObjectSummaryCollectionRequest skipToken(String skipToken);
+	IProvisioningObjectSummaryCollectionRequest skipToken(final String skipToken);
 }

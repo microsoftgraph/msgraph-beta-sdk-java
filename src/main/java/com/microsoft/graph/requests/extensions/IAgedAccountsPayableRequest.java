@@ -21,7 +21,7 @@ public interface IAgedAccountsPayableRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AgedAccountsPayable> callback);
+    void get(final ICallback<? super AgedAccountsPayable> callback);
 
     /**
      * Gets the AgedAccountsPayable from the service
@@ -36,7 +36,7 @@ public interface IAgedAccountsPayableRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AgedAccountsPayable> callback);
+    void delete(final ICallback<? super AgedAccountsPayable> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgedAccountsPayableRequest extends IHttpRequest {
      * @param sourceAgedAccountsPayable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AgedAccountsPayable sourceAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback);
+    void patch(final AgedAccountsPayable sourceAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback);
 
     /**
      * Patches this AgedAccountsPayable with a source
@@ -68,7 +68,7 @@ public interface IAgedAccountsPayableRequest extends IHttpRequest {
      * @param newAgedAccountsPayable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback);
+    void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback);
 
     /**
      * Posts a AgedAccountsPayable with a new object
@@ -85,7 +85,7 @@ public interface IAgedAccountsPayableRequest extends IHttpRequest {
      * @param newAgedAccountsPayable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback);
+    void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback);
 
     /**
      * Posts a AgedAccountsPayable with a new object

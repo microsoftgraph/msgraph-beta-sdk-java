@@ -21,7 +21,7 @@ public interface IWindows81WifiImportConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81WifiImportConfiguration> callback);
+    void get(final ICallback<? super Windows81WifiImportConfiguration> callback);
 
     /**
      * Gets the Windows81WifiImportConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows81WifiImportConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81WifiImportConfiguration> callback);
+    void delete(final ICallback<? super Windows81WifiImportConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81WifiImportConfigurationRequest extends IHttpRequest {
      * @param sourceWindows81WifiImportConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback);
+    void patch(final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback);
 
     /**
      * Patches this Windows81WifiImportConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows81WifiImportConfigurationRequest extends IHttpRequest {
      * @param newWindows81WifiImportConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback);
+    void post(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback);
 
     /**
      * Posts a Windows81WifiImportConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows81WifiImportConfigurationRequest extends IHttpRequest {
      * @param newWindows81WifiImportConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback);
+    void put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback);
 
     /**
      * Posts a Windows81WifiImportConfiguration with a new object

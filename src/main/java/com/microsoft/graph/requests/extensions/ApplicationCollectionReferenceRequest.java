@@ -38,7 +38,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, IApplicationCollectionPage.class);
     }
 
-    public void post(final Application newApplication, final ICallback<Application> callback) {
+    public void post(final Application newApplication, final ICallback<? super Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);
         new ApplicationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -72,6 +72,17 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionRequest
      */
     public IApplicationCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApplicationCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IApplicationCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ApplicationCollectionReferenceRequest)this;
     }
 

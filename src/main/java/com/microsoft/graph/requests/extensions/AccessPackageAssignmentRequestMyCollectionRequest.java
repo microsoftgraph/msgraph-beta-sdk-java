@@ -39,7 +39,7 @@ public class AccessPackageAssignmentRequestMyCollectionRequest extends BaseColle
     }
 
 
-    public void get(final ICallback<IAccessPackageAssignmentRequestMyCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageAssignmentRequestMyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class AccessPackageAssignmentRequestMyCollectionRequest extends BaseColle
      */
     public IAccessPackageAssignmentRequestMyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IAccessPackageAssignmentRequestMyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentRequestMyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IAccessPackageAssignmentRequestMyCollectionRequest)this;
     }
 

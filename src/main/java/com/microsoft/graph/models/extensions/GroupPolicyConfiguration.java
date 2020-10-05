@@ -6,14 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionPage;
 
 
@@ -126,35 +123,11 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
 
 
         if (json.has("assignments")) {
-            final GroupPolicyConfigurationAssignmentCollectionResponse response = new GroupPolicyConfigurationAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final GroupPolicyConfigurationAssignment[] array = new GroupPolicyConfigurationAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicyConfigurationAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new GroupPolicyConfigurationAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), GroupPolicyConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("definitionValues")) {
-            final GroupPolicyDefinitionValueCollectionResponse response = new GroupPolicyDefinitionValueCollectionResponse();
-            if (json.has("definitionValues@odata.nextLink")) {
-                response.nextLink = json.get("definitionValues@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("definitionValues").toString(), JsonObject[].class);
-            final GroupPolicyDefinitionValue[] array = new GroupPolicyDefinitionValue[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicyDefinitionValue.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            definitionValues = new GroupPolicyDefinitionValueCollectionPage(response, null);
+            definitionValues = serializer.deserializeObject(json.get("definitionValues").toString(), GroupPolicyDefinitionValueCollectionPage.class);
         }
     }
 }

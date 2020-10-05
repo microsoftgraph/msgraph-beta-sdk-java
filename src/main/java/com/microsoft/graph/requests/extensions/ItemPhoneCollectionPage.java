@@ -23,6 +23,6 @@ public class ItemPhoneCollectionPage extends BaseCollectionPage<ItemPhone, IItem
      * @param builder  the request builder for the next collection page
      */
     public ItemPhoneCollectionPage(final ItemPhoneCollectionResponse response, final IItemPhoneCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

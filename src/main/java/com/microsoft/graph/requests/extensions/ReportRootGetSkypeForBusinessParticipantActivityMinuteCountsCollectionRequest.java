@@ -39,7 +39,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollect
     }
 
 
-    public void get(final ICallback<IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollect
      */
     public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest)this;
     }
 

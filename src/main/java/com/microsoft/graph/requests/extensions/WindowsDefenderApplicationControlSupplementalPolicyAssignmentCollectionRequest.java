@@ -40,7 +40,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollec
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse.class, IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollec
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollec
      */
     public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest)this;
     }
 

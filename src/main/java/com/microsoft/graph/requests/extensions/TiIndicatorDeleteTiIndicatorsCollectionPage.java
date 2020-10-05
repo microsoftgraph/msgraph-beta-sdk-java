@@ -34,6 +34,6 @@ public class TiIndicatorDeleteTiIndicatorsCollectionPage extends BaseCollectionP
      * @param builder The request builder for the next collection page
      */
     public TiIndicatorDeleteTiIndicatorsCollectionPage(final TiIndicatorDeleteTiIndicatorsCollectionResponse response, final ITiIndicatorDeleteTiIndicatorsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

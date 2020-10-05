@@ -21,7 +21,7 @@ public interface IBitlockerRecoveryKeyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BitlockerRecoveryKey> callback);
+    void get(final ICallback<? super BitlockerRecoveryKey> callback);
 
     /**
      * Gets the BitlockerRecoveryKey from the service
@@ -36,7 +36,7 @@ public interface IBitlockerRecoveryKeyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BitlockerRecoveryKey> callback);
+    void delete(final ICallback<? super BitlockerRecoveryKey> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBitlockerRecoveryKeyRequest extends IHttpRequest {
      * @param sourceBitlockerRecoveryKey the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BitlockerRecoveryKey sourceBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback);
+    void patch(final BitlockerRecoveryKey sourceBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback);
 
     /**
      * Patches this BitlockerRecoveryKey with a source
@@ -68,7 +68,7 @@ public interface IBitlockerRecoveryKeyRequest extends IHttpRequest {
      * @param newBitlockerRecoveryKey the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback);
+    void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback);
 
     /**
      * Posts a BitlockerRecoveryKey with a new object
@@ -85,7 +85,7 @@ public interface IBitlockerRecoveryKeyRequest extends IHttpRequest {
      * @param newBitlockerRecoveryKey the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback);
+    void put(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<? super BitlockerRecoveryKey> callback);
 
     /**
      * Posts a BitlockerRecoveryKey with a new object

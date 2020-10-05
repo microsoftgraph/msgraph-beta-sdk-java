@@ -37,7 +37,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectorySetting> callback) {
+    public void get(final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectorySetting> callback) {
+    public void delete(final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param sourceDirectorySetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectorySetting sourceDirectorySetting, final ICallback<DirectorySetting> callback) {
+    public void patch(final DirectorySetting sourceDirectorySetting, final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectorySetting);
     }
 
@@ -96,7 +96,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param newDirectorySetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback) {
+    public void post(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.POST, callback, newDirectorySetting);
     }
 
@@ -117,7 +117,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param newDirectorySetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback) {
+    public void put(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.PUT, callback, newDirectorySetting);
     }
 
@@ -151,17 +151,6 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      */
      public IDirectorySettingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectorySettingRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDirectorySettingRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DirectorySettingRequest)this;
      }
 

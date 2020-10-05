@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISkillProficiencyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISkillProficiencyCollectionPage> callback);
+    void get(final ICallback<? super ISkillProficiencyCollectionPage> callback);
 
     ISkillProficiencyCollectionPage get() throws ClientException;
 
-    void post(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback);
+    void post(final SkillProficiency newSkillProficiency, final ICallback<? super SkillProficiency> callback);
 
     SkillProficiency post(final SkillProficiency newSkillProficiency) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISkillProficiencyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISkillProficiencyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISkillProficiencyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISkillProficiencyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISkillProficiencyCollectionRequest skipToken(String skipToken);
+	ISkillProficiencyCollectionRequest skipToken(final String skipToken);
 }

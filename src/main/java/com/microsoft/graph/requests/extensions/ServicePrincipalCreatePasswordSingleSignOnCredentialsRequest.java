@@ -37,7 +37,7 @@ public class ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest extend
         body = new ServicePrincipalCreatePasswordSingleSignOnCredentialsBody();
     }
 
-    public void post(final ICallback<PasswordSingleSignOnCredentialSet> callback) {
+    public void post(final ICallback<? super PasswordSingleSignOnCredentialSet> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest extend
      */
     public IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest)this;
     }
 

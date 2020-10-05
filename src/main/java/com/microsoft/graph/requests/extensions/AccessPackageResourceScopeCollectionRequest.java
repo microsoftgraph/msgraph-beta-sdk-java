@@ -40,7 +40,7 @@ public class AccessPackageResourceScopeCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, AccessPackageResourceScopeCollectionResponse.class, IAccessPackageResourceScopeCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageResourceScopeCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageResourceScopeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessPackageResourceScopeCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback) {
+    public void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageResourceScopeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessPackageResourceScopeCollectionRequest extends BaseCollectionR
      */
     public IAccessPackageResourceScopeCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageResourceScopeCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageResourceScopeCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageResourceScopeCollectionRequest)this;
     }
 

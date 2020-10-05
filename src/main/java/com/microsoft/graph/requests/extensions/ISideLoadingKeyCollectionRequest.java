@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISideLoadingKeyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISideLoadingKeyCollectionPage> callback);
+    void get(final ICallback<? super ISideLoadingKeyCollectionPage> callback);
 
     ISideLoadingKeyCollectionPage get() throws ClientException;
 
-    void post(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback);
+    void post(final SideLoadingKey newSideLoadingKey, final ICallback<? super SideLoadingKey> callback);
 
     SideLoadingKey post(final SideLoadingKey newSideLoadingKey) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISideLoadingKeyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISideLoadingKeyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISideLoadingKeyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISideLoadingKeyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISideLoadingKeyCollectionRequest skipToken(String skipToken);
+	ISideLoadingKeyCollectionRequest skipToken(final String skipToken);
 }

@@ -21,7 +21,7 @@ public interface IGroupPolicyCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyCategory> callback);
+    void get(final ICallback<? super GroupPolicyCategory> callback);
 
     /**
      * Gets the GroupPolicyCategory from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyCategory> callback);
+    void delete(final ICallback<? super GroupPolicyCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyCategoryRequest extends IHttpRequest {
      * @param sourceGroupPolicyCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyCategory sourceGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback);
+    void patch(final GroupPolicyCategory sourceGroupPolicyCategory, final ICallback<? super GroupPolicyCategory> callback);
 
     /**
      * Patches this GroupPolicyCategory with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyCategoryRequest extends IHttpRequest {
      * @param newGroupPolicyCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback);
+    void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<? super GroupPolicyCategory> callback);
 
     /**
      * Posts a GroupPolicyCategory with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyCategoryRequest extends IHttpRequest {
      * @param newGroupPolicyCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback);
+    void put(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<? super GroupPolicyCategory> callback);
 
     /**
      * Posts a GroupPolicyCategory with a new object

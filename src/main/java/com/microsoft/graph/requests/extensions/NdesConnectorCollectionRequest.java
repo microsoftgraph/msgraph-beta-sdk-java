@@ -40,7 +40,7 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
         super(requestUrl, client, requestOptions, NdesConnectorCollectionResponse.class, INdesConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<INdesConnectorCollectionPage> callback) {
+    public void get(final ICallback<? super INdesConnectorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
         return buildFromResponse(response);
     }
 
-    public void post(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback) {
+    public void post(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NdesConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
      */
     public INdesConnectorCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (NdesConnectorCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public INdesConnectorCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (NdesConnectorCollectionRequest)this;
     }
 

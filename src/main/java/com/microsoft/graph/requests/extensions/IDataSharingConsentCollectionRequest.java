@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDataSharingConsentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDataSharingConsentCollectionPage> callback);
+    void get(final ICallback<? super IDataSharingConsentCollectionPage> callback);
 
     IDataSharingConsentCollectionPage get() throws ClientException;
 
-    void post(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback);
+    void post(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback);
 
     DataSharingConsent post(final DataSharingConsent newDataSharingConsent) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDataSharingConsentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDataSharingConsentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDataSharingConsentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDataSharingConsentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDataSharingConsentCollectionRequest skipToken(String skipToken);
+	IDataSharingConsentCollectionRequest skipToken(final String skipToken);
 }

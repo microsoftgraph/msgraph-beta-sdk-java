@@ -47,7 +47,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SalesCreditMemo> callback) {
+    public void get(final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SalesCreditMemo> callback) {
+    public void delete(final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param sourceSalesCreditMemo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesCreditMemo sourceSalesCreditMemo, final ICallback<SalesCreditMemo> callback) {
+    public void patch(final SalesCreditMemo sourceSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesCreditMemo);
     }
 
@@ -106,7 +106,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param newSalesCreditMemo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback) {
+    public void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.POST, callback, newSalesCreditMemo);
     }
 
@@ -127,7 +127,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param newSalesCreditMemo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback) {
+    public void put(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.PUT, callback, newSalesCreditMemo);
     }
 
@@ -161,17 +161,6 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      */
      public ISalesCreditMemoRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesCreditMemoRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISalesCreditMemoRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SalesCreditMemoRequest)this;
      }
 

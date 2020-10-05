@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAdministrativeUnitCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAdministrativeUnitCollectionPage> callback);
+    void get(final ICallback<? super IAdministrativeUnitCollectionPage> callback);
 
     IAdministrativeUnitCollectionPage get() throws ClientException;
 
-    void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+    void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
     AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IAdministrativeUnitCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAdministrativeUnitCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAdministrativeUnitCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IAdministrativeUnitCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAdministrativeUnitCollectionRequest skipToken(String skipToken);
+	IAdministrativeUnitCollectionRequest skipToken(final String skipToken);
 }

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ExternalGroupMember;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ExternalGroupMemberCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExternalGroupMemberCollectionPage;
 
 
@@ -91,19 +89,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            final ExternalGroupMemberCollectionResponse response = new ExternalGroupMemberCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final ExternalGroupMember[] array = new ExternalGroupMember[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExternalGroupMember.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new ExternalGroupMemberCollectionPage(response, null);
+            members = serializer.deserializeObject(json.get("members").toString(), ExternalGroupMemberCollectionPage.class);
         }
     }
 }

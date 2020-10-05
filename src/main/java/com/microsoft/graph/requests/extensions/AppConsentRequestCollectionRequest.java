@@ -40,7 +40,7 @@ public class AppConsentRequestCollectionRequest extends BaseCollectionRequest<Ap
         super(requestUrl, client, requestOptions, AppConsentRequestCollectionResponse.class, IAppConsentRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<IAppConsentRequestCollectionPage> callback) {
+    public void get(final ICallback<? super IAppConsentRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AppConsentRequestCollectionRequest extends BaseCollectionRequest<Ap
         return buildFromResponse(response);
     }
 
-    public void post(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback) {
+    public void post(final AppConsentRequest newAppConsentRequest, final ICallback<? super AppConsentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppConsentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AppConsentRequestCollectionRequest extends BaseCollectionRequest<Ap
      */
     public IAppConsentRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AppConsentRequestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAppConsentRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppConsentRequestCollectionRequest)this;
     }
 

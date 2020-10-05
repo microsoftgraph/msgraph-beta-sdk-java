@@ -40,7 +40,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
         super(requestUrl, client, requestOptions, RoleScopeTag.class);
     }
 
-    public void post(final RoleScopeTag newRoleScopeTag, final IJsonBackedObject payload, final ICallback<RoleScopeTag> callback) {
+    public void post(final RoleScopeTag newRoleScopeTag, final IJsonBackedObject payload, final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -52,7 +52,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
         return null;
     }
 
-    public void get(final ICallback<RoleScopeTag> callback) {
+    public void get(final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<RoleScopeTag> callback) {
+	public void delete(final ICallback<? super RoleScopeTag> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -68,7 +68,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+	public void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
 		send(HttpMethod.PATCH, callback, sourceRoleScopeTag);
 	}
 
@@ -96,16 +96,6 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
      */
     public IRoleScopeTagWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (RoleScopeTagWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IRoleScopeTagWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (RoleScopeTagWithReferenceRequest)this;
     }
 }

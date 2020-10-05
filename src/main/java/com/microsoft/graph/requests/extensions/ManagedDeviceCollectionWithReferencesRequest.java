@@ -43,7 +43,7 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -64,22 +64,27 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
 
     public IManagedDeviceCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedDeviceCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IManagedDeviceCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IManagedDeviceCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedDeviceCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ManagedDeviceCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedDeviceCollectionWithReferencesPage buildFromResponse(final ManagedDeviceCollectionResponse response) {

@@ -21,7 +21,7 @@ public interface IGroupPolicyUploadedDefinitionFileRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyUploadedDefinitionFile> callback);
+    void get(final ICallback<? super GroupPolicyUploadedDefinitionFile> callback);
 
     /**
      * Gets the GroupPolicyUploadedDefinitionFile from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyUploadedDefinitionFileRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyUploadedDefinitionFile> callback);
+    void delete(final ICallback<? super GroupPolicyUploadedDefinitionFile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyUploadedDefinitionFileRequest extends IHttpRequest 
      * @param sourceGroupPolicyUploadedDefinitionFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyUploadedDefinitionFile sourceGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback);
+    void patch(final GroupPolicyUploadedDefinitionFile sourceGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback);
 
     /**
      * Patches this GroupPolicyUploadedDefinitionFile with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyUploadedDefinitionFileRequest extends IHttpRequest 
      * @param newGroupPolicyUploadedDefinitionFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback);
+    void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback);
 
     /**
      * Posts a GroupPolicyUploadedDefinitionFile with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyUploadedDefinitionFileRequest extends IHttpRequest 
      * @param newGroupPolicyUploadedDefinitionFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback);
+    void put(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback);
 
     /**
      * Posts a GroupPolicyUploadedDefinitionFile with a new object

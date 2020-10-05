@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IIosTrustedRootCertificateReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<IosTrustedRootCertificate> callback);
+    void delete(final ICallback<? super IosTrustedRootCertificate> callback);
 
     IosTrustedRootCertificate delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IIosTrustedRootCertificateReferenceRequest extends IHttpRequest
      * @param srcIosTrustedRootCertificate the IosTrustedRootCertificate to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(IosTrustedRootCertificate srcIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+    void put(IosTrustedRootCertificate srcIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback);
 
     /**
      * Puts the IosTrustedRootCertificate

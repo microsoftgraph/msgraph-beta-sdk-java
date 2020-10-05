@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionDeviceRegistrationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsInformationProtectionDeviceRegistrationCollectionPage> callback);
+    void get(final ICallback<? super IWindowsInformationProtectionDeviceRegistrationCollectionPage> callback);
 
     IWindowsInformationProtectionDeviceRegistrationCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     WindowsInformationProtectionDeviceRegistration post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsInformationProtectionDeviceRegistrationCollectionReques
      * @return the updated request
      */
     IWindowsInformationProtectionDeviceRegistrationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsInformationProtectionDeviceRegistrationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsInformationProtectionDeviceRegistrationCollectionReques
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionDeviceRegistrationCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionDeviceRegistrationCollectionRequest skipToken(final String skipToken);
 }

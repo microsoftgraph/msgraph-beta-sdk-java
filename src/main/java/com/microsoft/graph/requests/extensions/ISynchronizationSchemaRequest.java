@@ -21,7 +21,7 @@ public interface ISynchronizationSchemaRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SynchronizationSchema> callback);
+    void get(final ICallback<? super SynchronizationSchema> callback);
 
     /**
      * Gets the SynchronizationSchema from the service
@@ -36,7 +36,7 @@ public interface ISynchronizationSchemaRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SynchronizationSchema> callback);
+    void delete(final ICallback<? super SynchronizationSchema> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISynchronizationSchemaRequest extends IHttpRequest {
      * @param sourceSynchronizationSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SynchronizationSchema sourceSynchronizationSchema, final ICallback<SynchronizationSchema> callback);
+    void patch(final SynchronizationSchema sourceSynchronizationSchema, final ICallback<? super SynchronizationSchema> callback);
 
     /**
      * Patches this SynchronizationSchema with a source
@@ -68,7 +68,7 @@ public interface ISynchronizationSchemaRequest extends IHttpRequest {
      * @param newSynchronizationSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SynchronizationSchema newSynchronizationSchema, final ICallback<SynchronizationSchema> callback);
+    void post(final SynchronizationSchema newSynchronizationSchema, final ICallback<? super SynchronizationSchema> callback);
 
     /**
      * Posts a SynchronizationSchema with a new object
@@ -85,7 +85,7 @@ public interface ISynchronizationSchemaRequest extends IHttpRequest {
      * @param newSynchronizationSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SynchronizationSchema newSynchronizationSchema, final ICallback<SynchronizationSchema> callback);
+    void put(final SynchronizationSchema newSynchronizationSchema, final ICallback<? super SynchronizationSchema> callback);
 
     /**
      * Posts a SynchronizationSchema with a new object

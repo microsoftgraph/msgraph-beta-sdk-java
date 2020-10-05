@@ -40,7 +40,7 @@ public class RoleScopeTagAutoAssignmentCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, RoleScopeTagAutoAssignmentCollectionResponse.class, IRoleScopeTagAutoAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IRoleScopeTagAutoAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IRoleScopeTagAutoAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RoleScopeTagAutoAssignmentCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback) {
+    public void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<? super RoleScopeTagAutoAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleScopeTagAutoAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class RoleScopeTagAutoAssignmentCollectionRequest extends BaseCollectionR
      */
     public IRoleScopeTagAutoAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleScopeTagAutoAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRoleScopeTagAutoAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RoleScopeTagAutoAssignmentCollectionRequest)this;
     }
 

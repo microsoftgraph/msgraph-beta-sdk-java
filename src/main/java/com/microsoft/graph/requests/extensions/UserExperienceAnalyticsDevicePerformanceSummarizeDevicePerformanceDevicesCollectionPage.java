@@ -35,6 +35,6 @@ public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceD
      * @param builder The request builder for the next collection page
      */
     public UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage(final UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionResponse response, final IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

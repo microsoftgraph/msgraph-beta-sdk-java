@@ -34,6 +34,6 @@ public class DeviceConfigurationGetIosAvailableUpdateVersionsCollectionPage exte
      * @param builder The request builder for the next collection page
      */
     public DeviceConfigurationGetIosAvailableUpdateVersionsCollectionPage(final DeviceConfigurationGetIosAvailableUpdateVersionsCollectionResponse response, final IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

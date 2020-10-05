@@ -21,7 +21,7 @@ public interface IOpenIdConnectProviderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OpenIdConnectProvider> callback);
+    void get(final ICallback<? super OpenIdConnectProvider> callback);
 
     /**
      * Gets the OpenIdConnectProvider from the service
@@ -36,7 +36,7 @@ public interface IOpenIdConnectProviderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OpenIdConnectProvider> callback);
+    void delete(final ICallback<? super OpenIdConnectProvider> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOpenIdConnectProviderRequest extends IHttpRequest {
      * @param sourceOpenIdConnectProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OpenIdConnectProvider sourceOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback);
+    void patch(final OpenIdConnectProvider sourceOpenIdConnectProvider, final ICallback<? super OpenIdConnectProvider> callback);
 
     /**
      * Patches this OpenIdConnectProvider with a source
@@ -68,7 +68,7 @@ public interface IOpenIdConnectProviderRequest extends IHttpRequest {
      * @param newOpenIdConnectProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback);
+    void post(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<? super OpenIdConnectProvider> callback);
 
     /**
      * Posts a OpenIdConnectProvider with a new object
@@ -85,7 +85,7 @@ public interface IOpenIdConnectProviderRequest extends IHttpRequest {
      * @param newOpenIdConnectProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback);
+    void put(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<? super OpenIdConnectProvider> callback);
 
     /**
      * Posts a OpenIdConnectProvider with a new object

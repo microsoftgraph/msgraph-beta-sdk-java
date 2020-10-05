@@ -40,7 +40,7 @@ public class OutlookTaskCollectionRequest extends BaseCollectionRequest<OutlookT
         super(requestUrl, client, requestOptions, OutlookTaskCollectionResponse.class, IOutlookTaskCollectionPage.class);
     }
 
-    public void get(final ICallback<IOutlookTaskCollectionPage> callback) {
+    public void get(final ICallback<? super IOutlookTaskCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OutlookTaskCollectionRequest extends BaseCollectionRequest<OutlookT
         return buildFromResponse(response);
     }
 
-    public void post(final OutlookTask newOutlookTask, final ICallback<OutlookTask> callback) {
+    public void post(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class OutlookTaskCollectionRequest extends BaseCollectionRequest<OutlookT
      */
     public IOutlookTaskCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OutlookTaskCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOutlookTaskCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OutlookTaskCollectionRequest)this;
     }
 

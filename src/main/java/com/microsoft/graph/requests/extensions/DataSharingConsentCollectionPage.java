@@ -23,6 +23,6 @@ public class DataSharingConsentCollectionPage extends BaseCollectionPage<DataSha
      * @param builder  the request builder for the next collection page
      */
     public DataSharingConsentCollectionPage(final DataSharingConsentCollectionResponse response, final IDataSharingConsentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

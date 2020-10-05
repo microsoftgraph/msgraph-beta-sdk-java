@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupPolicyDefinitionCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupPolicyDefinitionCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IGroupPolicyDefinitionCollectionWithReferencesPage> callback);
 
     IGroupPolicyDefinitionCollectionWithReferencesPage get() throws ClientException;
 

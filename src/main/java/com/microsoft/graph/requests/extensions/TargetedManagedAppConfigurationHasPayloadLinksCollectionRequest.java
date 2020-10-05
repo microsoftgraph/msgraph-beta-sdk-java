@@ -44,7 +44,7 @@ public class TargetedManagedAppConfigurationHasPayloadLinksCollectionRequest ext
     }
 
 
-    public void post(final ICallback<ITargetedManagedAppConfigurationHasPayloadLinksCollectionPage> callback) {
+    public void post(final ICallback<? super ITargetedManagedAppConfigurationHasPayloadLinksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class TargetedManagedAppConfigurationHasPayloadLinksCollectionRequest ext
      */
     public ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequest)this;
     }
 

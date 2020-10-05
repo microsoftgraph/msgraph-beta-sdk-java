@@ -23,6 +23,6 @@ public class WindowsUpdateStateCollectionPage extends BaseCollectionPage<Windows
      * @param builder  the request builder for the next collection page
      */
     public WindowsUpdateStateCollectionPage(final WindowsUpdateStateCollectionResponse response, final IWindowsUpdateStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

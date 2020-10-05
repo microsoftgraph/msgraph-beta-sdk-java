@@ -21,7 +21,7 @@ public interface IAndroidWorkProfileCertificateProfileBaseRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void get(final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     /**
      * Gets the AndroidWorkProfileCertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IAndroidWorkProfileCertificateProfileBaseRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void delete(final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidWorkProfileCertificateProfileBaseRequest extends IHttpR
      * @param sourceAndroidWorkProfileCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidWorkProfileCertificateProfileBase sourceAndroidWorkProfileCertificateProfileBase, final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void patch(final AndroidWorkProfileCertificateProfileBase sourceAndroidWorkProfileCertificateProfileBase, final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     /**
      * Patches this AndroidWorkProfileCertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IAndroidWorkProfileCertificateProfileBaseRequest extends IHttpR
      * @param newAndroidWorkProfileCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidWorkProfileCertificateProfileBase newAndroidWorkProfileCertificateProfileBase, final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void post(final AndroidWorkProfileCertificateProfileBase newAndroidWorkProfileCertificateProfileBase, final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     /**
      * Posts a AndroidWorkProfileCertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IAndroidWorkProfileCertificateProfileBaseRequest extends IHttpR
      * @param newAndroidWorkProfileCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidWorkProfileCertificateProfileBase newAndroidWorkProfileCertificateProfileBase, final ICallback<AndroidWorkProfileCertificateProfileBase> callback);
+    void put(final AndroidWorkProfileCertificateProfileBase newAndroidWorkProfileCertificateProfileBase, final ICallback<? super AndroidWorkProfileCertificateProfileBase> callback);
 
     /**
      * Posts a AndroidWorkProfileCertificateProfileBase with a new object

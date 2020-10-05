@@ -41,7 +41,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSImportedPFXCertificateProfile> callback) {
+    public void get(final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSImportedPFXCertificateProfile> callback) {
+    public void delete(final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param sourceMacOSImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback) {
+    public void patch(final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSImportedPFXCertificateProfile);
     }
 
@@ -100,7 +100,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param newMacOSImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback) {
+    public void post(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newMacOSImportedPFXCertificateProfile);
     }
 
@@ -121,7 +121,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param newMacOSImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback) {
+    public void put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newMacOSImportedPFXCertificateProfile);
     }
 
@@ -155,17 +155,6 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      */
      public IMacOSImportedPFXCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSImportedPFXCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSImportedPFXCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSImportedPFXCertificateProfileRequest)this;
      }
 

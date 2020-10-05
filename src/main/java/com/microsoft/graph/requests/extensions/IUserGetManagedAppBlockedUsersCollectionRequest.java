@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserGetManagedAppBlockedUsersCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserGetManagedAppBlockedUsersCollectionPage> callback);
+    void get(final ICallback<? super IUserGetManagedAppBlockedUsersCollectionPage> callback);
 
     IUserGetManagedAppBlockedUsersCollectionPage get() throws ClientException;
 

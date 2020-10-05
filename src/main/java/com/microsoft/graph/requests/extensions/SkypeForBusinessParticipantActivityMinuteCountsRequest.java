@@ -37,7 +37,7 @@ public class SkypeForBusinessParticipantActivityMinuteCountsRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback) {
+    public void get(final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SkypeForBusinessParticipantActivityMinuteCountsRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback) {
+    public void delete(final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SkypeForBusinessParticipantActivityMinuteCountsRequest extends Base
      * @param sourceSkypeForBusinessParticipantActivityMinuteCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessParticipantActivityMinuteCounts sourceSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback) {
+    public void patch(final SkypeForBusinessParticipantActivityMinuteCounts sourceSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessParticipantActivityMinuteCounts);
     }
 
@@ -96,7 +96,7 @@ public class SkypeForBusinessParticipantActivityMinuteCountsRequest extends Base
      * @param newSkypeForBusinessParticipantActivityMinuteCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback) {
+    public void post(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessParticipantActivityMinuteCounts);
     }
 
@@ -117,7 +117,7 @@ public class SkypeForBusinessParticipantActivityMinuteCountsRequest extends Base
      * @param newSkypeForBusinessParticipantActivityMinuteCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<SkypeForBusinessParticipantActivityMinuteCounts> callback) {
+    public void put(final SkypeForBusinessParticipantActivityMinuteCounts newSkypeForBusinessParticipantActivityMinuteCounts, final ICallback<? super SkypeForBusinessParticipantActivityMinuteCounts> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessParticipantActivityMinuteCounts);
     }
 
@@ -151,17 +151,6 @@ public class SkypeForBusinessParticipantActivityMinuteCountsRequest extends Base
      */
      public ISkypeForBusinessParticipantActivityMinuteCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessParticipantActivityMinuteCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISkypeForBusinessParticipantActivityMinuteCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SkypeForBusinessParticipantActivityMinuteCountsRequest)this;
      }
 

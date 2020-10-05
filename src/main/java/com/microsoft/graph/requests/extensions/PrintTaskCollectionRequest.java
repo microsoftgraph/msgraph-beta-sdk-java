@@ -40,7 +40,7 @@ public class PrintTaskCollectionRequest extends BaseCollectionRequest<PrintTaskC
         super(requestUrl, client, requestOptions, PrintTaskCollectionResponse.class, IPrintTaskCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintTaskCollectionPage> callback) {
+    public void get(final ICallback<? super IPrintTaskCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrintTaskCollectionRequest extends BaseCollectionRequest<PrintTaskC
         return buildFromResponse(response);
     }
 
-    public void post(final PrintTask newPrintTask, final ICallback<PrintTask> callback) {
+    public void post(final PrintTask newPrintTask, final ICallback<? super PrintTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrintTaskCollectionRequest extends BaseCollectionRequest<PrintTaskC
      */
     public IPrintTaskCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintTaskCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrintTaskCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintTaskCollectionRequest)this;
     }
 

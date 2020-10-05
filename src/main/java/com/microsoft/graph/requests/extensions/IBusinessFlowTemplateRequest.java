@@ -21,7 +21,7 @@ public interface IBusinessFlowTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BusinessFlowTemplate> callback);
+    void get(final ICallback<? super BusinessFlowTemplate> callback);
 
     /**
      * Gets the BusinessFlowTemplate from the service
@@ -36,7 +36,7 @@ public interface IBusinessFlowTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BusinessFlowTemplate> callback);
+    void delete(final ICallback<? super BusinessFlowTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBusinessFlowTemplateRequest extends IHttpRequest {
      * @param sourceBusinessFlowTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BusinessFlowTemplate sourceBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback);
+    void patch(final BusinessFlowTemplate sourceBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback);
 
     /**
      * Patches this BusinessFlowTemplate with a source
@@ -68,7 +68,7 @@ public interface IBusinessFlowTemplateRequest extends IHttpRequest {
      * @param newBusinessFlowTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback);
+    void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback);
 
     /**
      * Posts a BusinessFlowTemplate with a new object
@@ -85,7 +85,7 @@ public interface IBusinessFlowTemplateRequest extends IHttpRequest {
      * @param newBusinessFlowTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback);
+    void put(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback);
 
     /**
      * Posts a BusinessFlowTemplate with a new object

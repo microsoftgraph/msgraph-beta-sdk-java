@@ -43,7 +43,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Journal> callback) {
+    public void get(final ICallback<? super Journal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Journal> callback) {
+    public void delete(final ICallback<? super Journal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param sourceJournal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Journal sourceJournal, final ICallback<Journal> callback) {
+    public void patch(final Journal sourceJournal, final ICallback<? super Journal> callback) {
         send(HttpMethod.PATCH, callback, sourceJournal);
     }
 
@@ -102,7 +102,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param newJournal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Journal newJournal, final ICallback<Journal> callback) {
+    public void post(final Journal newJournal, final ICallback<? super Journal> callback) {
         send(HttpMethod.POST, callback, newJournal);
     }
 
@@ -123,7 +123,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param newJournal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Journal newJournal, final ICallback<Journal> callback) {
+    public void put(final Journal newJournal, final ICallback<? super Journal> callback) {
         send(HttpMethod.PUT, callback, newJournal);
     }
 
@@ -157,17 +157,6 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      */
      public IJournalRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (JournalRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IJournalRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (JournalRequest)this;
      }
 

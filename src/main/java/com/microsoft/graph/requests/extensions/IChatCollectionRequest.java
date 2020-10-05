@@ -26,11 +26,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IChatCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChatCollectionPage> callback);
+    void get(final ICallback<? super IChatCollectionPage> callback);
 
     IChatCollectionPage get() throws ClientException;
 
-    void post(final Chat newChat, final ICallback<Chat> callback);
+    void post(final Chat newChat, final ICallback<? super Chat> callback);
 
     Chat post(final Chat newChat) throws ClientException;
 
@@ -49,6 +49,14 @@ public interface IChatCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IChatCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IChatCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -81,5 +89,5 @@ public interface IChatCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IChatCollectionRequest skipToken(String skipToken);
+	IChatCollectionRequest skipToken(final String skipToken);
 }

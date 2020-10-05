@@ -34,6 +34,6 @@ public class UserGetManagedDevicesWithFailedOrPendingAppsCollectionPage extends 
      * @param builder The request builder for the next collection page
      */
     public UserGetManagedDevicesWithFailedOrPendingAppsCollectionPage(final UserGetManagedDevicesWithFailedOrPendingAppsCollectionResponse response, final IUserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -35,7 +35,7 @@ public class IdentityProviderWithReferenceRequest extends BaseRequest implements
         super(requestUrl, client, requestOptions, IdentityProvider.class);
     }
 
-    public void post(final IdentityProvider newIdentityProvider, final IJsonBackedObject payload, final ICallback<IdentityProvider> callback) {
+    public void post(final IdentityProvider newIdentityProvider, final IJsonBackedObject payload, final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class IdentityProviderWithReferenceRequest extends BaseRequest implements
         return null;
     }
 
-    public void get(final ICallback<IdentityProvider> callback) {
+    public void get(final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class IdentityProviderWithReferenceRequest extends BaseRequest implements
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<IdentityProvider> callback) {
+	public void delete(final ICallback<? super IdentityProvider> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class IdentityProviderWithReferenceRequest extends BaseRequest implements
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final IdentityProvider sourceIdentityProvider, final ICallback<IdentityProvider> callback) {
+	public void patch(final IdentityProvider sourceIdentityProvider, final ICallback<? super IdentityProvider> callback) {
 		send(HttpMethod.PATCH, callback, sourceIdentityProvider);
 	}
 
@@ -91,16 +91,6 @@ public class IdentityProviderWithReferenceRequest extends BaseRequest implements
      */
     public IIdentityProviderWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IdentityProviderWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIdentityProviderWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (IdentityProviderWithReferenceRequest)this;
     }
 }

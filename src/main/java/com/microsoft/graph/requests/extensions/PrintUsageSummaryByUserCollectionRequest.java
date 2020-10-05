@@ -40,7 +40,7 @@ public class PrintUsageSummaryByUserCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, PrintUsageSummaryByUserCollectionResponse.class, IPrintUsageSummaryByUserCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintUsageSummaryByUserCollectionPage> callback) {
+    public void get(final ICallback<? super IPrintUsageSummaryByUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrintUsageSummaryByUserCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback) {
+    public void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<? super PrintUsageSummaryByUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintUsageSummaryByUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrintUsageSummaryByUserCollectionRequest extends BaseCollectionRequ
      */
     public IPrintUsageSummaryByUserCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintUsageSummaryByUserCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrintUsageSummaryByUserCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintUsageSummaryByUserCollectionRequest)this;
     }
 

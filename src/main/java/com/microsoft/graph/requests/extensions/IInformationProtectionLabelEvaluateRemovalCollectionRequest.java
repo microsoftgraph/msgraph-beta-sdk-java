@@ -25,7 +25,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IInformationProtectionLabelEvaluateRemovalCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IInformationProtectionLabelEvaluateRemovalCollectionPage> callback);
+    void post(final ICallback<? super IInformationProtectionLabelEvaluateRemovalCollectionPage> callback);
 
     IInformationProtectionLabelEvaluateRemovalCollectionPage post() throws ClientException;
 

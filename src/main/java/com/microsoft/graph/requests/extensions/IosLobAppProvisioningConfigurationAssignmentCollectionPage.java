@@ -23,6 +23,6 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionPage extends 
      * @param builder  the request builder for the next collection page
      */
     public IosLobAppProvisioningConfigurationAssignmentCollectionPage(final IosLobAppProvisioningConfigurationAssignmentCollectionResponse response, final IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

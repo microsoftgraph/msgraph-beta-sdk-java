@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ReviewSetQuery;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionResponse;
 import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionPage;
 
 
@@ -99,19 +97,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("queries")) {
-            final ReviewSetQueryCollectionResponse response = new ReviewSetQueryCollectionResponse();
-            if (json.has("queries@odata.nextLink")) {
-                response.nextLink = json.get("queries@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("queries").toString(), JsonObject[].class);
-            final ReviewSetQuery[] array = new ReviewSetQuery[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ReviewSetQuery.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            queries = new ReviewSetQueryCollectionPage(response, null);
+            queries = serializer.deserializeObject(json.get("queries").toString(), ReviewSetQueryCollectionPage.class);
         }
     }
 }

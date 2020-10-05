@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.LookupResultRow;
 import com.microsoft.graph.models.extensions.ExactMatchJobBase;
-import com.microsoft.graph.requests.extensions.LookupResultRowCollectionResponse;
 import com.microsoft.graph.requests.extensions.LookupResultRowCollectionPage;
 
 
@@ -83,19 +81,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements IJsonBacke
 
 
         if (json.has("matchingRows")) {
-            final LookupResultRowCollectionResponse response = new LookupResultRowCollectionResponse();
-            if (json.has("matchingRows@odata.nextLink")) {
-                response.nextLink = json.get("matchingRows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("matchingRows").toString(), JsonObject[].class);
-            final LookupResultRow[] array = new LookupResultRow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LookupResultRow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            matchingRows = new LookupResultRowCollectionPage(response, null);
+            matchingRows = serializer.deserializeObject(json.get("matchingRows").toString(), LookupResultRowCollectionPage.class);
         }
     }
 }

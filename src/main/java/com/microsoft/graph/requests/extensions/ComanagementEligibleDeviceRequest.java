@@ -37,7 +37,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ComanagementEligibleDevice> callback) {
+    public void get(final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ComanagementEligibleDevice> callback) {
+    public void delete(final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param sourceComanagementEligibleDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ComanagementEligibleDevice sourceComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback) {
+    public void patch(final ComanagementEligibleDevice sourceComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceComanagementEligibleDevice);
     }
 
@@ -96,7 +96,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param newComanagementEligibleDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback) {
+    public void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.POST, callback, newComanagementEligibleDevice);
     }
 
@@ -117,7 +117,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param newComanagementEligibleDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback) {
+    public void put(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.PUT, callback, newComanagementEligibleDevice);
     }
 
@@ -151,17 +151,6 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      */
      public IComanagementEligibleDeviceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ComanagementEligibleDeviceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IComanagementEligibleDeviceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ComanagementEligibleDeviceRequest)this;
      }
 

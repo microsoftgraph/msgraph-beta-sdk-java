@@ -21,7 +21,7 @@ public interface IEmailAppUsageAppsUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailAppUsageAppsUserCounts> callback);
+    void get(final ICallback<? super EmailAppUsageAppsUserCounts> callback);
 
     /**
      * Gets the EmailAppUsageAppsUserCounts from the service
@@ -36,7 +36,7 @@ public interface IEmailAppUsageAppsUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailAppUsageAppsUserCounts> callback);
+    void delete(final ICallback<? super EmailAppUsageAppsUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailAppUsageAppsUserCountsRequest extends IHttpRequest {
      * @param sourceEmailAppUsageAppsUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailAppUsageAppsUserCounts sourceEmailAppUsageAppsUserCounts, final ICallback<EmailAppUsageAppsUserCounts> callback);
+    void patch(final EmailAppUsageAppsUserCounts sourceEmailAppUsageAppsUserCounts, final ICallback<? super EmailAppUsageAppsUserCounts> callback);
 
     /**
      * Patches this EmailAppUsageAppsUserCounts with a source
@@ -68,7 +68,7 @@ public interface IEmailAppUsageAppsUserCountsRequest extends IHttpRequest {
      * @param newEmailAppUsageAppsUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<EmailAppUsageAppsUserCounts> callback);
+    void post(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<? super EmailAppUsageAppsUserCounts> callback);
 
     /**
      * Posts a EmailAppUsageAppsUserCounts with a new object
@@ -85,7 +85,7 @@ public interface IEmailAppUsageAppsUserCountsRequest extends IHttpRequest {
      * @param newEmailAppUsageAppsUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<EmailAppUsageAppsUserCounts> callback);
+    void put(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<? super EmailAppUsageAppsUserCounts> callback);
 
     /**
      * Posts a EmailAppUsageAppsUserCounts with a new object

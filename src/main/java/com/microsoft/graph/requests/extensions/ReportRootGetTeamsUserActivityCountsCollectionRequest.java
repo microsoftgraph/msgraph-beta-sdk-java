@@ -39,7 +39,7 @@ public class ReportRootGetTeamsUserActivityCountsCollectionRequest extends BaseC
     }
 
 
-    public void get(final ICallback<IReportRootGetTeamsUserActivityCountsCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetTeamsUserActivityCountsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetTeamsUserActivityCountsCollectionRequest extends BaseC
      */
     public IReportRootGetTeamsUserActivityCountsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetTeamsUserActivityCountsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetTeamsUserActivityCountsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetTeamsUserActivityCountsCollectionRequest)this;
     }
 

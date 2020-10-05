@@ -37,7 +37,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AgreementFileLocalization> callback) {
+    public void get(final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AgreementFileLocalization> callback) {
+    public void delete(final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param sourceAgreementFileLocalization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgreementFileLocalization sourceAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback) {
+    public void patch(final AgreementFileLocalization sourceAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreementFileLocalization);
     }
 
@@ -96,7 +96,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param newAgreementFileLocalization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback) {
+    public void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.POST, callback, newAgreementFileLocalization);
     }
 
@@ -117,7 +117,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param newAgreementFileLocalization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback) {
+    public void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.PUT, callback, newAgreementFileLocalization);
     }
 
@@ -151,17 +151,6 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      */
      public IAgreementFileLocalizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementFileLocalizationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAgreementFileLocalizationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AgreementFileLocalizationRequest)this;
      }
 

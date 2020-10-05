@@ -23,6 +23,6 @@ public class DeviceManagementScriptUserStateCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementScriptUserStateCollectionPage(final DeviceManagementScriptUserStateCollectionResponse response, final IDeviceManagementScriptUserStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

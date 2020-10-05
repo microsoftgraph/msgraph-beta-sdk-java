@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOpenShiftCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOpenShiftCollectionPage> callback);
+    void get(final ICallback<? super IOpenShiftCollectionPage> callback);
 
     IOpenShiftCollectionPage get() throws ClientException;
 
-    void post(final OpenShift newOpenShift, final ICallback<OpenShift> callback);
+    void post(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback);
 
     OpenShift post(final OpenShift newOpenShift) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IOpenShiftCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOpenShiftCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOpenShiftCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IOpenShiftCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOpenShiftCollectionRequest skipToken(String skipToken);
+	IOpenShiftCollectionRequest skipToken(final String skipToken);
 }

@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationLongDecimalTextBoxRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback);
+    void get(final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback);
 
     /**
      * Gets the GroupPolicyPresentationLongDecimalTextBox from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationLongDecimalTextBoxRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationLongDecimalTextBoxRequest extends IHttp
      * @param sourceGroupPolicyPresentationLongDecimalTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationLongDecimalTextBox sourceGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback);
+    void patch(final GroupPolicyPresentationLongDecimalTextBox sourceGroupPolicyPresentationLongDecimalTextBox, final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback);
 
     /**
      * Patches this GroupPolicyPresentationLongDecimalTextBox with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationLongDecimalTextBoxRequest extends IHttp
      * @param newGroupPolicyPresentationLongDecimalTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback);
+    void post(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationLongDecimalTextBox with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationLongDecimalTextBoxRequest extends IHttp
      * @param newGroupPolicyPresentationLongDecimalTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback);
+    void put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<? super GroupPolicyPresentationLongDecimalTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationLongDecimalTextBox with a new object

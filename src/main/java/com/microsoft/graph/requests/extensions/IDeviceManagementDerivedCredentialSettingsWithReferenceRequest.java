@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceManagementDerivedCredentialSettingsWithReferenceRequest extends IHttpRequest {
 
-    void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final IJsonBackedObject payload, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final IJsonBackedObject payload, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     DeviceManagementDerivedCredentialSettings post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void get(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     DeviceManagementDerivedCredentialSettings get() throws ClientException;
 
-	void delete(final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+	void delete(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+	void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
 	DeviceManagementDerivedCredentialSettings patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IWindowsKioskConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsKioskConfiguration> callback);
+    void get(final ICallback<? super WindowsKioskConfiguration> callback);
 
     /**
      * Gets the WindowsKioskConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsKioskConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsKioskConfiguration> callback);
+    void delete(final ICallback<? super WindowsKioskConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsKioskConfigurationRequest extends IHttpRequest {
      * @param sourceWindowsKioskConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsKioskConfiguration sourceWindowsKioskConfiguration, final ICallback<WindowsKioskConfiguration> callback);
+    void patch(final WindowsKioskConfiguration sourceWindowsKioskConfiguration, final ICallback<? super WindowsKioskConfiguration> callback);
 
     /**
      * Patches this WindowsKioskConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsKioskConfigurationRequest extends IHttpRequest {
      * @param newWindowsKioskConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsKioskConfiguration newWindowsKioskConfiguration, final ICallback<WindowsKioskConfiguration> callback);
+    void post(final WindowsKioskConfiguration newWindowsKioskConfiguration, final ICallback<? super WindowsKioskConfiguration> callback);
 
     /**
      * Posts a WindowsKioskConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsKioskConfigurationRequest extends IHttpRequest {
      * @param newWindowsKioskConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsKioskConfiguration newWindowsKioskConfiguration, final ICallback<WindowsKioskConfiguration> callback);
+    void put(final WindowsKioskConfiguration newWindowsKioskConfiguration, final ICallback<? super WindowsKioskConfiguration> callback);
 
     /**
      * Posts a WindowsKioskConfiguration with a new object

@@ -21,7 +21,7 @@ public interface IItemCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemCategory> callback);
+    void get(final ICallback<? super ItemCategory> callback);
 
     /**
      * Gets the ItemCategory from the service
@@ -36,7 +36,7 @@ public interface IItemCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemCategory> callback);
+    void delete(final ICallback<? super ItemCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemCategoryRequest extends IHttpRequest {
      * @param sourceItemCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemCategory sourceItemCategory, final ICallback<ItemCategory> callback);
+    void patch(final ItemCategory sourceItemCategory, final ICallback<? super ItemCategory> callback);
 
     /**
      * Patches this ItemCategory with a source
@@ -68,7 +68,7 @@ public interface IItemCategoryRequest extends IHttpRequest {
      * @param newItemCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemCategory newItemCategory, final ICallback<ItemCategory> callback);
+    void post(final ItemCategory newItemCategory, final ICallback<? super ItemCategory> callback);
 
     /**
      * Posts a ItemCategory with a new object
@@ -85,7 +85,7 @@ public interface IItemCategoryRequest extends IHttpRequest {
      * @param newItemCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemCategory newItemCategory, final ICallback<ItemCategory> callback);
+    void put(final ItemCategory newItemCategory, final ICallback<? super ItemCategory> callback);
 
     /**
      * Posts a ItemCategory with a new object

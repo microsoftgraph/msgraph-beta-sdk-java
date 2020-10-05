@@ -34,6 +34,6 @@ public class DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage ext
      * @param builder The request builder for the next collection page
      */
     public DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage(final DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionResponse response, final IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

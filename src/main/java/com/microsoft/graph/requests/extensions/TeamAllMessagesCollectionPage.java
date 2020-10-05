@@ -34,6 +34,6 @@ public class TeamAllMessagesCollectionPage extends BaseCollectionPage<ChatMessag
      * @param builder The request builder for the next collection page
      */
     public TeamAllMessagesCollectionPage(final TeamAllMessagesCollectionResponse response, final ITeamAllMessagesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

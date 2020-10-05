@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEmbeddedSIMDeviceStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEmbeddedSIMDeviceStateCollectionPage> callback);
+    void get(final ICallback<? super IEmbeddedSIMDeviceStateCollectionPage> callback);
 
     IEmbeddedSIMDeviceStateCollectionPage get() throws ClientException;
 
-    void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback);
+    void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback);
 
     EmbeddedSIMDeviceState post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEmbeddedSIMDeviceStateCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IEmbeddedSIMDeviceStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEmbeddedSIMDeviceStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEmbeddedSIMDeviceStateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IEmbeddedSIMDeviceStateCollectionRequest skipToken(String skipToken);
+	IEmbeddedSIMDeviceStateCollectionRequest skipToken(final String skipToken);
 }

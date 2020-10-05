@@ -52,7 +52,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IdentityUserFlow> callback) {
+    public void get(final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IdentityUserFlow> callback) {
+    public void delete(final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param sourceIdentityUserFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityUserFlow sourceIdentityUserFlow, final ICallback<IdentityUserFlow> callback) {
+    public void patch(final IdentityUserFlow sourceIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityUserFlow);
     }
 
@@ -111,7 +111,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param newIdentityUserFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback) {
+    public void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.POST, callback, newIdentityUserFlow);
     }
 
@@ -132,7 +132,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param newIdentityUserFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback) {
+    public void put(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.PUT, callback, newIdentityUserFlow);
     }
 
@@ -166,17 +166,6 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      */
      public IIdentityUserFlowRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityUserFlowRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIdentityUserFlowRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IdentityUserFlowRequest)this;
      }
 
