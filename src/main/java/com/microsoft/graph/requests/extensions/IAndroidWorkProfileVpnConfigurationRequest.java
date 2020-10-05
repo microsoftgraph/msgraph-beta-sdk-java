@@ -21,7 +21,7 @@ public interface IAndroidWorkProfileVpnConfigurationRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidWorkProfileVpnConfiguration> callback);
+    void get(final ICallback<? super AndroidWorkProfileVpnConfiguration> callback);
 
     /**
      * Gets the AndroidWorkProfileVpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidWorkProfileVpnConfigurationRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidWorkProfileVpnConfiguration> callback);
+    void delete(final ICallback<? super AndroidWorkProfileVpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidWorkProfileVpnConfigurationRequest extends IHttpRequest
      * @param sourceAndroidWorkProfileVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidWorkProfileVpnConfiguration sourceAndroidWorkProfileVpnConfiguration, final ICallback<AndroidWorkProfileVpnConfiguration> callback);
+    void patch(final AndroidWorkProfileVpnConfiguration sourceAndroidWorkProfileVpnConfiguration, final ICallback<? super AndroidWorkProfileVpnConfiguration> callback);
 
     /**
      * Patches this AndroidWorkProfileVpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidWorkProfileVpnConfigurationRequest extends IHttpRequest
      * @param newAndroidWorkProfileVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<AndroidWorkProfileVpnConfiguration> callback);
+    void post(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<? super AndroidWorkProfileVpnConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileVpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidWorkProfileVpnConfigurationRequest extends IHttpRequest
      * @param newAndroidWorkProfileVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<AndroidWorkProfileVpnConfiguration> callback);
+    void put(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<? super AndroidWorkProfileVpnConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileVpnConfiguration with a new object

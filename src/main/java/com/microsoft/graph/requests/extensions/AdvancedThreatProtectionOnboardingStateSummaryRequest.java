@@ -41,7 +41,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback) {
+    public void get(final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback) {
+    public void delete(final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
      * @param sourceAdvancedThreatProtectionOnboardingStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AdvancedThreatProtectionOnboardingStateSummary sourceAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback) {
+    public void patch(final AdvancedThreatProtectionOnboardingStateSummary sourceAdvancedThreatProtectionOnboardingStateSummary, final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceAdvancedThreatProtectionOnboardingStateSummary);
     }
 
@@ -100,7 +100,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
      * @param newAdvancedThreatProtectionOnboardingStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback) {
+    public void post(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback) {
         send(HttpMethod.POST, callback, newAdvancedThreatProtectionOnboardingStateSummary);
     }
 
@@ -121,7 +121,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
      * @param newAdvancedThreatProtectionOnboardingStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback) {
+    public void put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback) {
         send(HttpMethod.PUT, callback, newAdvancedThreatProtectionOnboardingStateSummary);
     }
 
@@ -155,17 +155,6 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
      */
      public IAdvancedThreatProtectionOnboardingStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AdvancedThreatProtectionOnboardingStateSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAdvancedThreatProtectionOnboardingStateSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AdvancedThreatProtectionOnboardingStateSummaryRequest)this;
      }
 

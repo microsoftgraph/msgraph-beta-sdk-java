@@ -40,7 +40,7 @@ public class GroupPolicyConfigurationAssignmentCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, GroupPolicyConfigurationAssignmentCollectionResponse.class, IGroupPolicyConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupPolicyConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupPolicyConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GroupPolicyConfigurationAssignmentCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback) {
+    public void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class GroupPolicyConfigurationAssignmentCollectionRequest extends BaseCol
      */
     public IGroupPolicyConfigurationAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyConfigurationAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupPolicyConfigurationAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicyConfigurationAssignmentCollectionRequest)this;
     }
 

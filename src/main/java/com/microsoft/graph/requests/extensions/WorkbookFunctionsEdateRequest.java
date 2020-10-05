@@ -37,7 +37,7 @@ public class WorkbookFunctionsEdateRequest extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsEdateBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class WorkbookFunctionsEdateRequest extends BaseRequest implements IWorkb
      */
     public IWorkbookFunctionsEdateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsEdateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsEdateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsEdateRequest)this;
     }
 

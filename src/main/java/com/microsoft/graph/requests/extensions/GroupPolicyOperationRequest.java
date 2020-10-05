@@ -37,7 +37,7 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyOperation> callback) {
+    public void get(final ICallback<? super GroupPolicyOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyOperation> callback) {
+    public void delete(final ICallback<? super GroupPolicyOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
      * @param sourceGroupPolicyOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyOperation sourceGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback) {
+    public void patch(final GroupPolicyOperation sourceGroupPolicyOperation, final ICallback<? super GroupPolicyOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyOperation);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
      * @param newGroupPolicyOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback) {
+    public void post(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<? super GroupPolicyOperation> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyOperation);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
      * @param newGroupPolicyOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback) {
+    public void put(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<? super GroupPolicyOperation> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyOperation);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
      */
      public IGroupPolicyOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyOperationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyOperationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyOperationRequest)this;
      }
 

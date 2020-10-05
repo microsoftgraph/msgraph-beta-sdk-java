@@ -23,6 +23,6 @@ public class CartToClassAssociationCollectionPage extends BaseCollectionPage<Car
      * @param builder  the request builder for the next collection page
      */
     public CartToClassAssociationCollectionPage(final CartToClassAssociationCollectionResponse response, final ICartToClassAssociationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

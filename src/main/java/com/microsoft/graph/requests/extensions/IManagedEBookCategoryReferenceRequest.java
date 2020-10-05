@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagedEBookCategoryReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ManagedEBookCategory> callback);
+    void delete(final ICallback<? super ManagedEBookCategory> callback);
 
     ManagedEBookCategory delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IManagedEBookCategoryReferenceRequest extends IHttpRequest {
      * @param srcManagedEBookCategory the ManagedEBookCategory to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ManagedEBookCategory srcManagedEBookCategory, final ICallback<ManagedEBookCategory> callback);
+    void put(ManagedEBookCategory srcManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback);
 
     /**
      * Puts the ManagedEBookCategory

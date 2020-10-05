@@ -23,6 +23,6 @@ public class OfficeClientConfigurationAssignmentCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public OfficeClientConfigurationAssignmentCollectionPage(final OfficeClientConfigurationAssignmentCollectionResponse response, final IOfficeClientConfigurationAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

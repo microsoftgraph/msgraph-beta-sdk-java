@@ -21,7 +21,7 @@ public interface IIosWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosWiFiConfiguration> callback);
+    void get(final ICallback<? super IosWiFiConfiguration> callback);
 
     /**
      * Gets the IosWiFiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosWiFiConfiguration> callback);
+    void delete(final ICallback<? super IosWiFiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosWiFiConfigurationRequest extends IHttpRequest {
      * @param sourceIosWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosWiFiConfiguration sourceIosWiFiConfiguration, final ICallback<IosWiFiConfiguration> callback);
+    void patch(final IosWiFiConfiguration sourceIosWiFiConfiguration, final ICallback<? super IosWiFiConfiguration> callback);
 
     /**
      * Patches this IosWiFiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosWiFiConfigurationRequest extends IHttpRequest {
      * @param newIosWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosWiFiConfiguration newIosWiFiConfiguration, final ICallback<IosWiFiConfiguration> callback);
+    void post(final IosWiFiConfiguration newIosWiFiConfiguration, final ICallback<? super IosWiFiConfiguration> callback);
 
     /**
      * Posts a IosWiFiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosWiFiConfigurationRequest extends IHttpRequest {
      * @param newIosWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosWiFiConfiguration newIosWiFiConfiguration, final ICallback<IosWiFiConfiguration> callback);
+    void put(final IosWiFiConfiguration newIosWiFiConfiguration, final ICallback<? super IosWiFiConfiguration> callback);
 
     /**
      * Posts a IosWiFiConfiguration with a new object

@@ -35,7 +35,7 @@ public class PrintConnectorCollectionWithReferencesRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, PrintConnectorCollectionResponse.class, IPrintConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintConnectorCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IPrintConnectorCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class PrintConnectorCollectionWithReferencesRequest extends BaseCollectio
 
     public IPrintConnectorCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintConnectorCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPrintConnectorCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrintConnectorCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IPrintConnectorCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IPrintConnectorCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PrintConnectorCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPrintConnectorCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (PrintConnectorCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPrintConnectorCollectionWithReferencesPage buildFromResponse(final PrintConnectorCollectionResponse response) {

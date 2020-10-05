@@ -35,7 +35,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferen
         super(requestUrl, client, requestOptions, WindowsInformationProtectionDeviceRegistrationCollectionResponse.class, IWindowsInformationProtectionDeviceRegistrationCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferen
 
     public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage buildFromResponse(final WindowsInformationProtectionDeviceRegistrationCollectionResponse response) {

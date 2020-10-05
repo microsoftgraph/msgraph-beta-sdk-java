@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindows81TrustedRootCertificateReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Windows81TrustedRootCertificate> callback);
+    void delete(final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     Windows81TrustedRootCertificate delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IWindows81TrustedRootCertificateReferenceRequest extends IHttpR
      * @param srcWindows81TrustedRootCertificate the Windows81TrustedRootCertificate to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Windows81TrustedRootCertificate srcWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+    void put(Windows81TrustedRootCertificate srcWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     /**
      * Puts the Windows81TrustedRootCertificate

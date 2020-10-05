@@ -23,6 +23,6 @@ public class IosVppAppAssignedLicenseCollectionPage extends BaseCollectionPage<I
      * @param builder  the request builder for the next collection page
      */
     public IosVppAppAssignedLicenseCollectionPage(final IosVppAppAssignedLicenseCollectionResponse response, final IIosVppAppAssignedLicenseCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

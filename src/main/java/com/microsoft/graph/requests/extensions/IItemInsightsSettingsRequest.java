@@ -21,7 +21,7 @@ public interface IItemInsightsSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemInsightsSettings> callback);
+    void get(final ICallback<? super ItemInsightsSettings> callback);
 
     /**
      * Gets the ItemInsightsSettings from the service
@@ -36,7 +36,7 @@ public interface IItemInsightsSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemInsightsSettings> callback);
+    void delete(final ICallback<? super ItemInsightsSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemInsightsSettingsRequest extends IHttpRequest {
      * @param sourceItemInsightsSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemInsightsSettings sourceItemInsightsSettings, final ICallback<ItemInsightsSettings> callback);
+    void patch(final ItemInsightsSettings sourceItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback);
 
     /**
      * Patches this ItemInsightsSettings with a source
@@ -68,7 +68,7 @@ public interface IItemInsightsSettingsRequest extends IHttpRequest {
      * @param newItemInsightsSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemInsightsSettings newItemInsightsSettings, final ICallback<ItemInsightsSettings> callback);
+    void post(final ItemInsightsSettings newItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback);
 
     /**
      * Posts a ItemInsightsSettings with a new object
@@ -85,7 +85,7 @@ public interface IItemInsightsSettingsRequest extends IHttpRequest {
      * @param newItemInsightsSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemInsightsSettings newItemInsightsSettings, final ICallback<ItemInsightsSettings> callback);
+    void put(final ItemInsightsSettings newItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback);
 
     /**
      * Posts a ItemInsightsSettings with a new object

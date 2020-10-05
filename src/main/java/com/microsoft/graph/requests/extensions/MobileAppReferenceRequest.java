@@ -60,7 +60,7 @@ public class MobileAppReferenceRequest extends BaseRequest implements IMobileApp
         super(requestUrl, client, requestOptions, MobileApp.class);
     }
 
-    public void delete(final ICallback<MobileApp> callback) {
+    public void delete(final ICallback<? super MobileApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,22 +90,12 @@ public class MobileAppReferenceRequest extends BaseRequest implements IMobileApp
         return (MobileAppReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IMobileAppReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MobileAppReferenceRequest)this;
-    }
-    /**
      * Puts the MobileApp
      *
      * @param srcMobileApp the MobileApp reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(MobileApp srcMobileApp, final ICallback<MobileApp> callback) {
+    public void put(MobileApp srcMobileApp, final ICallback<? super MobileApp> callback) {
         send(HttpMethod.PUT, callback, srcMobileApp);
     }
 

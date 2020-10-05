@@ -40,7 +40,7 @@ public class AccessReviewInstanceDecisionItemCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, AccessReviewInstanceDecisionItemCollectionResponse.class, IAccessReviewInstanceDecisionItemCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessReviewInstanceDecisionItemCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessReviewInstanceDecisionItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessReviewInstanceDecisionItemCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback) {
+    public void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessReviewInstanceDecisionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessReviewInstanceDecisionItemCollectionRequest extends BaseColle
      */
     public IAccessReviewInstanceDecisionItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessReviewInstanceDecisionItemCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessReviewInstanceDecisionItemCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessReviewInstanceDecisionItemCollectionRequest)this;
     }
 

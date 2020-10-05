@@ -41,7 +41,7 @@ public class AppLogCollectionRequestCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, AppLogCollectionRequestCollectionResponse.class, IAppLogCollectionRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<IAppLogCollectionRequestCollectionPage> callback) {
+    public void get(final ICallback<? super IAppLogCollectionRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class AppLogCollectionRequestCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback) {
+    public void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppLogCollectionRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class AppLogCollectionRequestCollectionRequest extends BaseCollectionRequ
      */
     public IAppLogCollectionRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AppLogCollectionRequestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAppLogCollectionRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppLogCollectionRequestCollectionRequest)this;
     }
 

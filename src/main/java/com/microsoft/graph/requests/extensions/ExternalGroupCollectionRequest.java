@@ -40,7 +40,7 @@ public class ExternalGroupCollectionRequest extends BaseCollectionRequest<Extern
         super(requestUrl, client, requestOptions, ExternalGroupCollectionResponse.class, IExternalGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<IExternalGroupCollectionPage> callback) {
+    public void get(final ICallback<? super IExternalGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ExternalGroupCollectionRequest extends BaseCollectionRequest<Extern
         return buildFromResponse(response);
     }
 
-    public void post(final ExternalGroup newExternalGroup, final ICallback<ExternalGroup> callback) {
+    public void post(final ExternalGroup newExternalGroup, final ICallback<? super ExternalGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExternalGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ExternalGroupCollectionRequest extends BaseCollectionRequest<Extern
      */
     public IExternalGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ExternalGroupCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IExternalGroupCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ExternalGroupCollectionRequest)this;
     }
 

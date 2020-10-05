@@ -23,6 +23,6 @@ public class TextClassificationRequestCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public TextClassificationRequestCollectionPage(final TextClassificationRequestCollectionResponse response, final ITextClassificationRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

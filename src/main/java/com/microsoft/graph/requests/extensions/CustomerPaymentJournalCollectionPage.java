@@ -23,6 +23,6 @@ public class CustomerPaymentJournalCollectionPage extends BaseCollectionPage<Cus
      * @param builder  the request builder for the next collection page
      */
     public CustomerPaymentJournalCollectionPage(final CustomerPaymentJournalCollectionResponse response, final ICustomerPaymentJournalCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

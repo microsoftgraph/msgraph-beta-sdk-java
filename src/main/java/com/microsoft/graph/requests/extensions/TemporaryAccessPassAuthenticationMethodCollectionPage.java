@@ -23,6 +23,6 @@ public class TemporaryAccessPassAuthenticationMethodCollectionPage extends BaseC
      * @param builder  the request builder for the next collection page
      */
     public TemporaryAccessPassAuthenticationMethodCollectionPage(final TemporaryAccessPassAuthenticationMethodCollectionResponse response, final ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ITrustFrameworkRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TrustFramework> callback);
+    void get(final ICallback<? super TrustFramework> callback);
 
     /**
      * Gets the TrustFramework from the service
@@ -36,7 +36,7 @@ public interface ITrustFrameworkRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TrustFramework> callback);
+    void delete(final ICallback<? super TrustFramework> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITrustFrameworkRequest extends IHttpRequest {
      * @param sourceTrustFramework the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TrustFramework sourceTrustFramework, final ICallback<TrustFramework> callback);
+    void patch(final TrustFramework sourceTrustFramework, final ICallback<? super TrustFramework> callback);
 
     /**
      * Patches this TrustFramework with a source
@@ -68,7 +68,7 @@ public interface ITrustFrameworkRequest extends IHttpRequest {
      * @param newTrustFramework the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TrustFramework newTrustFramework, final ICallback<TrustFramework> callback);
+    void post(final TrustFramework newTrustFramework, final ICallback<? super TrustFramework> callback);
 
     /**
      * Posts a TrustFramework with a new object
@@ -85,7 +85,7 @@ public interface ITrustFrameworkRequest extends IHttpRequest {
      * @param newTrustFramework the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TrustFramework newTrustFramework, final ICallback<TrustFramework> callback);
+    void put(final TrustFramework newTrustFramework, final ICallback<? super TrustFramework> callback);
 
     /**
      * Posts a TrustFramework with a new object

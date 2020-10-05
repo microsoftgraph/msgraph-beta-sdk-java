@@ -45,7 +45,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyReferenceRequest
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicy.class);
     }
 
-    public void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,22 +75,12 @@ public class WindowsDefenderApplicationControlSupplementalPolicyReferenceRequest
         return (WindowsDefenderApplicationControlSupplementalPolicyReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsDefenderApplicationControlSupplementalPolicyReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsDefenderApplicationControlSupplementalPolicyReferenceRequest)this;
-    }
-    /**
      * Puts the WindowsDefenderApplicationControlSupplementalPolicy
      *
      * @param srcWindowsDefenderApplicationControlSupplementalPolicy the WindowsDefenderApplicationControlSupplementalPolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WindowsDefenderApplicationControlSupplementalPolicy srcWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void put(WindowsDefenderApplicationControlSupplementalPolicy srcWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.PUT, callback, srcWindowsDefenderApplicationControlSupplementalPolicy);
     }
 

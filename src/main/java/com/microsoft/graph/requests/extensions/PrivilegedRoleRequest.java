@@ -46,7 +46,7 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrivilegedRole> callback) {
+    public void get(final ICallback<? super PrivilegedRole> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrivilegedRole> callback) {
+    public void delete(final ICallback<? super PrivilegedRole> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
      * @param sourcePrivilegedRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRole sourcePrivilegedRole, final ICallback<PrivilegedRole> callback) {
+    public void patch(final PrivilegedRole sourcePrivilegedRole, final ICallback<? super PrivilegedRole> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRole);
     }
 
@@ -105,7 +105,7 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
      * @param newPrivilegedRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback) {
+    public void post(final PrivilegedRole newPrivilegedRole, final ICallback<? super PrivilegedRole> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRole);
     }
 
@@ -126,7 +126,7 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
      * @param newPrivilegedRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback) {
+    public void put(final PrivilegedRole newPrivilegedRole, final ICallback<? super PrivilegedRole> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRole);
     }
 
@@ -160,17 +160,6 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
      */
      public IPrivilegedRoleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrivilegedRoleRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrivilegedRoleRequest)this;
      }
 

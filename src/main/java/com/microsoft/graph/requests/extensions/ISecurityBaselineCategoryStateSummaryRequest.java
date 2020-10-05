@@ -21,7 +21,7 @@ public interface ISecurityBaselineCategoryStateSummaryRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityBaselineCategoryStateSummary> callback);
+    void get(final ICallback<? super SecurityBaselineCategoryStateSummary> callback);
 
     /**
      * Gets the SecurityBaselineCategoryStateSummary from the service
@@ -36,7 +36,7 @@ public interface ISecurityBaselineCategoryStateSummaryRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityBaselineCategoryStateSummary> callback);
+    void delete(final ICallback<? super SecurityBaselineCategoryStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityBaselineCategoryStateSummaryRequest extends IHttpReque
      * @param sourceSecurityBaselineCategoryStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityBaselineCategoryStateSummary sourceSecurityBaselineCategoryStateSummary, final ICallback<SecurityBaselineCategoryStateSummary> callback);
+    void patch(final SecurityBaselineCategoryStateSummary sourceSecurityBaselineCategoryStateSummary, final ICallback<? super SecurityBaselineCategoryStateSummary> callback);
 
     /**
      * Patches this SecurityBaselineCategoryStateSummary with a source
@@ -68,7 +68,7 @@ public interface ISecurityBaselineCategoryStateSummaryRequest extends IHttpReque
      * @param newSecurityBaselineCategoryStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<SecurityBaselineCategoryStateSummary> callback);
+    void post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<? super SecurityBaselineCategoryStateSummary> callback);
 
     /**
      * Posts a SecurityBaselineCategoryStateSummary with a new object
@@ -85,7 +85,7 @@ public interface ISecurityBaselineCategoryStateSummaryRequest extends IHttpReque
      * @param newSecurityBaselineCategoryStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<SecurityBaselineCategoryStateSummary> callback);
+    void put(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<? super SecurityBaselineCategoryStateSummary> callback);
 
     /**
      * Posts a SecurityBaselineCategoryStateSummary with a new object

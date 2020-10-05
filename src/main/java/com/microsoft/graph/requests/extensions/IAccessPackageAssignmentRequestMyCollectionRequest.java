@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IAccessPackageAssignmentRequestMyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessPackageAssignmentRequestMyCollectionPage> callback);
+    void get(final ICallback<? super IAccessPackageAssignmentRequestMyCollectionPage> callback);
 
     IAccessPackageAssignmentRequestMyCollectionPage get() throws ClientException;
 

@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsManagementAppWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload, final ICallback<WindowsManagementApp> callback);
+    void post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload, final ICallback<? super WindowsManagementApp> callback);
 
     WindowsManagementApp post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsManagementApp> callback);
+    void get(final ICallback<? super WindowsManagementApp> callback);
 
     WindowsManagementApp get() throws ClientException;
 
-	void delete(final ICallback<WindowsManagementApp> callback);
+	void delete(final ICallback<? super WindowsManagementApp> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<WindowsManagementApp> callback);
+	void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback);
 
 	WindowsManagementApp patch(final WindowsManagementApp sourceWindowsManagementApp) throws ClientException;
 

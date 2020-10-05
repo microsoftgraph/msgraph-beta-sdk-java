@@ -40,7 +40,7 @@ public class DeviceHealthScriptAssignmentCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, DeviceHealthScriptAssignmentCollectionResponse.class, IDeviceHealthScriptAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceHealthScriptAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceHealthScriptAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceHealthScriptAssignmentCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback) {
+    public void post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<? super DeviceHealthScriptAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceHealthScriptAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceHealthScriptAssignmentCollectionRequest extends BaseCollectio
      */
     public IDeviceHealthScriptAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceHealthScriptAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceHealthScriptAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceHealthScriptAssignmentCollectionRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOfficeClientConfigurationAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOfficeClientConfigurationAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IOfficeClientConfigurationAssignmentCollectionPage> callback);
 
     IOfficeClientConfigurationAssignmentCollectionPage get() throws ClientException;
 
-    void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback);
+    void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<? super OfficeClientConfigurationAssignment> callback);
 
     OfficeClientConfigurationAssignment post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IOfficeClientConfigurationAssignmentCollectionRequest extends I
      * @return the updated request
      */
     IOfficeClientConfigurationAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOfficeClientConfigurationAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IOfficeClientConfigurationAssignmentCollectionRequest extends I
      *
 	 * @return the updated request
 	 */
-	IOfficeClientConfigurationAssignmentCollectionRequest skipToken(String skipToken);
+	IOfficeClientConfigurationAssignmentCollectionRequest skipToken(final String skipToken);
 }

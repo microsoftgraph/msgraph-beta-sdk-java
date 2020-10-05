@@ -34,6 +34,6 @@ public class ReportRootGetCredentialUsageSummaryCollectionPage extends BaseColle
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetCredentialUsageSummaryCollectionPage(final ReportRootGetCredentialUsageSummaryCollectionResponse response, final IReportRootGetCredentialUsageSummaryCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

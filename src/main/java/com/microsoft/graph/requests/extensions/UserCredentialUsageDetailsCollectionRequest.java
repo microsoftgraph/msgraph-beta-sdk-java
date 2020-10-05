@@ -40,7 +40,7 @@ public class UserCredentialUsageDetailsCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, UserCredentialUsageDetailsCollectionResponse.class, IUserCredentialUsageDetailsCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserCredentialUsageDetailsCollectionPage> callback) {
+    public void get(final ICallback<? super IUserCredentialUsageDetailsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserCredentialUsageDetailsCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback) {
+    public void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserCredentialUsageDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserCredentialUsageDetailsCollectionRequest extends BaseCollectionR
      */
     public IUserCredentialUsageDetailsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserCredentialUsageDetailsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserCredentialUsageDetailsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserCredentialUsageDetailsCollectionRequest)this;
     }
 

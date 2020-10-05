@@ -21,7 +21,7 @@ public interface IAccessReviewSetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReviewSet> callback);
+    void get(final ICallback<? super AccessReviewSet> callback);
 
     /**
      * Gets the AccessReviewSet from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewSetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReviewSet> callback);
+    void delete(final ICallback<? super AccessReviewSet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewSetRequest extends IHttpRequest {
      * @param sourceAccessReviewSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReviewSet sourceAccessReviewSet, final ICallback<AccessReviewSet> callback);
+    void patch(final AccessReviewSet sourceAccessReviewSet, final ICallback<? super AccessReviewSet> callback);
 
     /**
      * Patches this AccessReviewSet with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewSetRequest extends IHttpRequest {
      * @param newAccessReviewSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReviewSet newAccessReviewSet, final ICallback<AccessReviewSet> callback);
+    void post(final AccessReviewSet newAccessReviewSet, final ICallback<? super AccessReviewSet> callback);
 
     /**
      * Posts a AccessReviewSet with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewSetRequest extends IHttpRequest {
      * @param newAccessReviewSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReviewSet newAccessReviewSet, final ICallback<AccessReviewSet> callback);
+    void put(final AccessReviewSet newAccessReviewSet, final ICallback<? super AccessReviewSet> callback);
 
     /**
      * Posts a AccessReviewSet with a new object

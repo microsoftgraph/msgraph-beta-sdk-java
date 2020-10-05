@@ -21,7 +21,7 @@ public interface IItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Item> callback);
+    void get(final ICallback<? super Item> callback);
 
     /**
      * Gets the Item from the service
@@ -36,7 +36,7 @@ public interface IItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Item> callback);
+    void delete(final ICallback<? super Item> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemRequest extends IHttpRequest {
      * @param sourceItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Item sourceItem, final ICallback<Item> callback);
+    void patch(final Item sourceItem, final ICallback<? super Item> callback);
 
     /**
      * Patches this Item with a source
@@ -68,7 +68,7 @@ public interface IItemRequest extends IHttpRequest {
      * @param newItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Item newItem, final ICallback<Item> callback);
+    void post(final Item newItem, final ICallback<? super Item> callback);
 
     /**
      * Posts a Item with a new object
@@ -85,7 +85,7 @@ public interface IItemRequest extends IHttpRequest {
      * @param newItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Item newItem, final ICallback<Item> callback);
+    void put(final Item newItem, final ICallback<? super Item> callback);
 
     /**
      * Posts a Item with a new object

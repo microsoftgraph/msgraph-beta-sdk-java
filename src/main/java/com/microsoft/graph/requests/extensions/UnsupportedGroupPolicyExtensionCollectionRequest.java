@@ -40,7 +40,7 @@ public class UnsupportedGroupPolicyExtensionCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, UnsupportedGroupPolicyExtensionCollectionResponse.class, IUnsupportedGroupPolicyExtensionCollectionPage.class);
     }
 
-    public void get(final ICallback<IUnsupportedGroupPolicyExtensionCollectionPage> callback) {
+    public void get(final ICallback<? super IUnsupportedGroupPolicyExtensionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UnsupportedGroupPolicyExtensionCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback) {
+    public void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnsupportedGroupPolicyExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UnsupportedGroupPolicyExtensionCollectionRequest extends BaseCollec
      */
     public IUnsupportedGroupPolicyExtensionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UnsupportedGroupPolicyExtensionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUnsupportedGroupPolicyExtensionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UnsupportedGroupPolicyExtensionCollectionRequest)this;
     }
 

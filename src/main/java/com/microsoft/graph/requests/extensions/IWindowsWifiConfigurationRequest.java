@@ -21,7 +21,7 @@ public interface IWindowsWifiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsWifiConfiguration> callback);
+    void get(final ICallback<? super WindowsWifiConfiguration> callback);
 
     /**
      * Gets the WindowsWifiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsWifiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsWifiConfiguration> callback);
+    void delete(final ICallback<? super WindowsWifiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsWifiConfigurationRequest extends IHttpRequest {
      * @param sourceWindowsWifiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsWifiConfiguration sourceWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback);
+    void patch(final WindowsWifiConfiguration sourceWindowsWifiConfiguration, final ICallback<? super WindowsWifiConfiguration> callback);
 
     /**
      * Patches this WindowsWifiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsWifiConfigurationRequest extends IHttpRequest {
      * @param newWindowsWifiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback);
+    void post(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<? super WindowsWifiConfiguration> callback);
 
     /**
      * Posts a WindowsWifiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsWifiConfigurationRequest extends IHttpRequest {
      * @param newWindowsWifiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback);
+    void put(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<? super WindowsWifiConfiguration> callback);
 
     /**
      * Posts a WindowsWifiConfiguration with a new object

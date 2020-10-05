@@ -21,7 +21,7 @@ public interface IAzureADUserFeatureUsageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AzureADUserFeatureUsage> callback);
+    void get(final ICallback<? super AzureADUserFeatureUsage> callback);
 
     /**
      * Gets the AzureADUserFeatureUsage from the service
@@ -36,7 +36,7 @@ public interface IAzureADUserFeatureUsageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AzureADUserFeatureUsage> callback);
+    void delete(final ICallback<? super AzureADUserFeatureUsage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAzureADUserFeatureUsageRequest extends IHttpRequest {
      * @param sourceAzureADUserFeatureUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback);
+    void patch(final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback);
 
     /**
      * Patches this AzureADUserFeatureUsage with a source
@@ -68,7 +68,7 @@ public interface IAzureADUserFeatureUsageRequest extends IHttpRequest {
      * @param newAzureADUserFeatureUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback);
+    void post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback);
 
     /**
      * Posts a AzureADUserFeatureUsage with a new object
@@ -85,7 +85,7 @@ public interface IAzureADUserFeatureUsageRequest extends IHttpRequest {
      * @param newAzureADUserFeatureUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback);
+    void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback);
 
     /**
      * Posts a AzureADUserFeatureUsage with a new object

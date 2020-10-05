@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidForWorkTrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     AndroidForWorkTrustedRootCertificate post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+    void get(final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
     AndroidForWorkTrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+	void delete(final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate, final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+	void patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback);
 
 	AndroidForWorkTrustedRootCertificate patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate) throws ClientException;
 

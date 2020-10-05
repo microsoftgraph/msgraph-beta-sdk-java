@@ -21,7 +21,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback);
+    void get(final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback);
 
     /**
      * Gets the AndroidDeviceComplianceLocalActionLockDevice from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequest extends IH
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback);
+    void delete(final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequest extends IH
      * @param sourceAndroidDeviceComplianceLocalActionLockDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback);
+    void patch(final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback);
 
     /**
      * Patches this AndroidDeviceComplianceLocalActionLockDevice with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequest extends IH
      * @param newAndroidDeviceComplianceLocalActionLockDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback);
+    void post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback);
 
     /**
      * Posts a AndroidDeviceComplianceLocalActionLockDevice with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequest extends IH
      * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback);
+    void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback);
 
     /**
      * Posts a AndroidDeviceComplianceLocalActionLockDevice with a new object

@@ -37,7 +37,7 @@ public class ExternalGroupMemberRequest extends BaseRequest implements IExternal
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ExternalGroupMember> callback) {
+    public void get(final ICallback<? super ExternalGroupMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ExternalGroupMemberRequest extends BaseRequest implements IExternal
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ExternalGroupMember> callback) {
+    public void delete(final ICallback<? super ExternalGroupMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ExternalGroupMemberRequest extends BaseRequest implements IExternal
      * @param sourceExternalGroupMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExternalGroupMember sourceExternalGroupMember, final ICallback<ExternalGroupMember> callback) {
+    public void patch(final ExternalGroupMember sourceExternalGroupMember, final ICallback<? super ExternalGroupMember> callback) {
         send(HttpMethod.PATCH, callback, sourceExternalGroupMember);
     }
 
@@ -96,7 +96,7 @@ public class ExternalGroupMemberRequest extends BaseRequest implements IExternal
      * @param newExternalGroupMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExternalGroupMember newExternalGroupMember, final ICallback<ExternalGroupMember> callback) {
+    public void post(final ExternalGroupMember newExternalGroupMember, final ICallback<? super ExternalGroupMember> callback) {
         send(HttpMethod.POST, callback, newExternalGroupMember);
     }
 
@@ -117,7 +117,7 @@ public class ExternalGroupMemberRequest extends BaseRequest implements IExternal
      * @param newExternalGroupMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExternalGroupMember newExternalGroupMember, final ICallback<ExternalGroupMember> callback) {
+    public void put(final ExternalGroupMember newExternalGroupMember, final ICallback<? super ExternalGroupMember> callback) {
         send(HttpMethod.PUT, callback, newExternalGroupMember);
     }
 
@@ -151,17 +151,6 @@ public class ExternalGroupMemberRequest extends BaseRequest implements IExternal
      */
      public IExternalGroupMemberRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExternalGroupMemberRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IExternalGroupMemberRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ExternalGroupMemberRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class Office365ActivationsUserDetailRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Office365ActivationsUserDetail> callback) {
+    public void get(final ICallback<? super Office365ActivationsUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Office365ActivationsUserDetailRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Office365ActivationsUserDetail> callback) {
+    public void delete(final ICallback<? super Office365ActivationsUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Office365ActivationsUserDetailRequest extends BaseRequest implement
      * @param sourceOffice365ActivationsUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365ActivationsUserDetail sourceOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback) {
+    public void patch(final Office365ActivationsUserDetail sourceOffice365ActivationsUserDetail, final ICallback<? super Office365ActivationsUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365ActivationsUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class Office365ActivationsUserDetailRequest extends BaseRequest implement
      * @param newOffice365ActivationsUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback) {
+    public void post(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<? super Office365ActivationsUserDetail> callback) {
         send(HttpMethod.POST, callback, newOffice365ActivationsUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class Office365ActivationsUserDetailRequest extends BaseRequest implement
      * @param newOffice365ActivationsUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback) {
+    public void put(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<? super Office365ActivationsUserDetail> callback) {
         send(HttpMethod.PUT, callback, newOffice365ActivationsUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class Office365ActivationsUserDetailRequest extends BaseRequest implement
      */
      public IOffice365ActivationsUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365ActivationsUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOffice365ActivationsUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Office365ActivationsUserDetailRequest)this;
      }
 

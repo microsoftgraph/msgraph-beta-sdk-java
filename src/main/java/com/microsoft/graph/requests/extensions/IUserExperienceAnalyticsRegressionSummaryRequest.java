@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Gets the UserExperienceAnalyticsRegressionSummary from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequest extends IHttpR
      * @param sourceUserExperienceAnalyticsRegressionSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsRegressionSummary sourceUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void patch(final UserExperienceAnalyticsRegressionSummary sourceUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Patches this UserExperienceAnalyticsRegressionSummary with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequest extends IHttpR
      * @param newUserExperienceAnalyticsRegressionSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void post(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Posts a UserExperienceAnalyticsRegressionSummary with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequest extends IHttpR
      * @param newUserExperienceAnalyticsRegressionSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback);
+    void put(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback);
 
     /**
      * Posts a UserExperienceAnalyticsRegressionSummary with a new object

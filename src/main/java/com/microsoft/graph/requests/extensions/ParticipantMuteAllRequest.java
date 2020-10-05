@@ -37,7 +37,7 @@ public class ParticipantMuteAllRequest extends BaseRequest implements IParticipa
         body = new ParticipantMuteAllBody();
     }
 
-    public void post(final ICallback<MuteParticipantsOperation> callback) {
+    public void post(final ICallback<? super MuteParticipantsOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class ParticipantMuteAllRequest extends BaseRequest implements IParticipa
      */
     public IParticipantMuteAllRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ParticipantMuteAllRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IParticipantMuteAllRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ParticipantMuteAllRequest)this;
     }
 

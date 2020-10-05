@@ -40,7 +40,7 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, WindowsPrivacyDataAccessControlItemCollectionResponse.class, IWindowsPrivacyDataAccessControlItemCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsPrivacyDataAccessControlItemCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsPrivacyDataAccessControlItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+    public void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsPrivacyDataAccessControlItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequest extends BaseCo
      */
     public IWindowsPrivacyDataAccessControlItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsPrivacyDataAccessControlItemCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsPrivacyDataAccessControlItemCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsPrivacyDataAccessControlItemCollectionRequest)this;
     }
 

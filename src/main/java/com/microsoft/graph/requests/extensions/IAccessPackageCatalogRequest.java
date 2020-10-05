@@ -21,7 +21,7 @@ public interface IAccessPackageCatalogRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageCatalog> callback);
+    void get(final ICallback<? super AccessPackageCatalog> callback);
 
     /**
      * Gets the AccessPackageCatalog from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageCatalogRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageCatalog> callback);
+    void delete(final ICallback<? super AccessPackageCatalog> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageCatalogRequest extends IHttpRequest {
      * @param sourceAccessPackageCatalog the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageCatalog sourceAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback);
+    void patch(final AccessPackageCatalog sourceAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback);
 
     /**
      * Patches this AccessPackageCatalog with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageCatalogRequest extends IHttpRequest {
      * @param newAccessPackageCatalog the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback);
+    void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback);
 
     /**
      * Posts a AccessPackageCatalog with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageCatalogRequest extends IHttpRequest {
      * @param newAccessPackageCatalog the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback);
+    void put(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback);
 
     /**
      * Posts a AccessPackageCatalog with a new object

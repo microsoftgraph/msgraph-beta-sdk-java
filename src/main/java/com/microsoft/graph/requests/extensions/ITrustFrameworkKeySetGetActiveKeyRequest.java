@@ -26,7 +26,7 @@ public interface ITrustFrameworkKeySetGetActiveKeyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TrustFrameworkKey> callback);
+    void get(final ICallback<? super TrustFrameworkKey> callback);
 
     /**
      * Gets the TrustFrameworkKey

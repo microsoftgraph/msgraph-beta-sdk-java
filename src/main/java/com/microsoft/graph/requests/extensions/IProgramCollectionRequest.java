@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProgramCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IProgramCollectionPage> callback);
+    void get(final ICallback<? super IProgramCollectionPage> callback);
 
     IProgramCollectionPage get() throws ClientException;
 
-    void post(final Program newProgram, final ICallback<Program> callback);
+    void post(final Program newProgram, final ICallback<? super Program> callback);
 
     Program post(final Program newProgram) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IProgramCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IProgramCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IProgramCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IProgramCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IProgramCollectionRequest skipToken(String skipToken);
+	IProgramCollectionRequest skipToken(final String skipToken);
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupPolicyCategoryCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupPolicyCategoryCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IGroupPolicyCategoryCollectionWithReferencesPage> callback);
 
     IGroupPolicyCategoryCollectionWithReferencesPage get() throws ClientException;
 

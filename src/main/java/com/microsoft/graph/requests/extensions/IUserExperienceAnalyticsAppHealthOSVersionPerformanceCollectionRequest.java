@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage> callback);
 
     IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsAppHealthOSVersionPerformance newUserExperienceAnalyticsAppHealthOSVersionPerformance, final ICallback<UserExperienceAnalyticsAppHealthOSVersionPerformance> callback);
+    void post(final UserExperienceAnalyticsAppHealthOSVersionPerformance newUserExperienceAnalyticsAppHealthOSVersionPerformance, final ICallback<? super UserExperienceAnalyticsAppHealthOSVersionPerformance> callback);
 
     UserExperienceAnalyticsAppHealthOSVersionPerformance post(final UserExperienceAnalyticsAppHealthOSVersionPerformance newUserExperienceAnalyticsAppHealthOSVersionPerformance) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollection
      * @return the updated request
      */
     IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollection
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequest skipToken(final String skipToken);
 }

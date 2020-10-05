@@ -23,6 +23,6 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionPage extends B
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementAutopilotPolicyStatusDetailCollectionPage(final DeviceManagementAutopilotPolicyStatusDetailCollectionResponse response, final IDeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

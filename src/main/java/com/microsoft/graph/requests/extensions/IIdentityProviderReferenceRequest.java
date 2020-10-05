@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IIdentityProviderReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<IdentityProvider> callback);
+    void delete(final ICallback<? super IdentityProvider> callback);
 
     IdentityProvider delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IIdentityProviderReferenceRequest extends IHttpRequest {
      * @param srcIdentityProvider the IdentityProvider to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(IdentityProvider srcIdentityProvider, final ICallback<IdentityProvider> callback);
+    void put(IdentityProvider srcIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     /**
      * Puts the IdentityProvider

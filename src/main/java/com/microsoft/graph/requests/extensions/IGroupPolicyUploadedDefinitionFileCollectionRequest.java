@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupPolicyUploadedDefinitionFileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupPolicyUploadedDefinitionFileCollectionPage> callback);
+    void get(final ICallback<? super IGroupPolicyUploadedDefinitionFileCollectionPage> callback);
 
     IGroupPolicyUploadedDefinitionFileCollectionPage get() throws ClientException;
 
-    void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback);
+    void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback);
 
     GroupPolicyUploadedDefinitionFile post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IGroupPolicyUploadedDefinitionFileCollectionRequest extends IHt
      * @return the updated request
      */
     IGroupPolicyUploadedDefinitionFileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGroupPolicyUploadedDefinitionFileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IGroupPolicyUploadedDefinitionFileCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	IGroupPolicyUploadedDefinitionFileCollectionRequest skipToken(String skipToken);
+	IGroupPolicyUploadedDefinitionFileCollectionRequest skipToken(final String skipToken);
 }

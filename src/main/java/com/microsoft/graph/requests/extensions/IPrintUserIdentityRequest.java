@@ -21,7 +21,7 @@ public interface IPrintUserIdentityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintUserIdentity> callback);
+    void get(final ICallback<? super PrintUserIdentity> callback);
 
     /**
      * Gets the PrintUserIdentity from the service
@@ -36,7 +36,7 @@ public interface IPrintUserIdentityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintUserIdentity> callback);
+    void delete(final ICallback<? super PrintUserIdentity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintUserIdentityRequest extends IHttpRequest {
      * @param sourcePrintUserIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintUserIdentity sourcePrintUserIdentity, final ICallback<PrintUserIdentity> callback);
+    void patch(final PrintUserIdentity sourcePrintUserIdentity, final ICallback<? super PrintUserIdentity> callback);
 
     /**
      * Patches this PrintUserIdentity with a source
@@ -68,7 +68,7 @@ public interface IPrintUserIdentityRequest extends IHttpRequest {
      * @param newPrintUserIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback);
+    void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<? super PrintUserIdentity> callback);
 
     /**
      * Posts a PrintUserIdentity with a new object
@@ -85,7 +85,7 @@ public interface IPrintUserIdentityRequest extends IHttpRequest {
      * @param newPrintUserIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback);
+    void put(final PrintUserIdentity newPrintUserIdentity, final ICallback<? super PrintUserIdentity> callback);
 
     /**
      * Posts a PrintUserIdentity with a new object

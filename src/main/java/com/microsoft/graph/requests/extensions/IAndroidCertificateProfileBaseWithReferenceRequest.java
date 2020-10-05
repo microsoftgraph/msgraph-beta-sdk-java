@@ -24,19 +24,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidCertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidCertificateProfileBase> callback);
+    void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidCertificateProfileBase> callback);
 
     AndroidCertificateProfileBase post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidCertificateProfileBase> callback);
+    void get(final ICallback<? super AndroidCertificateProfileBase> callback);
 
     AndroidCertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<AndroidCertificateProfileBase> callback);
+	void delete(final ICallback<? super AndroidCertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback);
+	void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback);
 
 	AndroidCertificateProfileBase patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase) throws ClientException;
 

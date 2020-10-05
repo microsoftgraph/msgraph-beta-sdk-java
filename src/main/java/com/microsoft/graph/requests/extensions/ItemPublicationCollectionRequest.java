@@ -40,7 +40,7 @@ public class ItemPublicationCollectionRequest extends BaseCollectionRequest<Item
         super(requestUrl, client, requestOptions, ItemPublicationCollectionResponse.class, IItemPublicationCollectionPage.class);
     }
 
-    public void get(final ICallback<IItemPublicationCollectionPage> callback) {
+    public void get(final ICallback<? super IItemPublicationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ItemPublicationCollectionRequest extends BaseCollectionRequest<Item
         return buildFromResponse(response);
     }
 
-    public void post(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback) {
+    public void post(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemPublicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ItemPublicationCollectionRequest extends BaseCollectionRequest<Item
      */
     public IItemPublicationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ItemPublicationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IItemPublicationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemPublicationCollectionRequest)this;
     }
 

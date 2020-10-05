@@ -35,7 +35,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
         super(requestUrl, client, requestOptions, MacOSCertificateProfileBase.class);
     }
 
-    public void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final IJsonBackedObject payload, final ICallback<MacOSCertificateProfileBase> callback) {
+    public void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
         return null;
     }
 
-    public void get(final ICallback<MacOSCertificateProfileBase> callback) {
+    public void get(final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<MacOSCertificateProfileBase> callback) {
+	public void delete(final ICallback<? super MacOSCertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback) {
+	public void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceMacOSCertificateProfileBase);
 	}
 
@@ -91,16 +91,6 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
      */
     public IMacOSCertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MacOSCertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IMacOSCertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MacOSCertificateProfileBaseWithReferenceRequest)this;
     }
 }

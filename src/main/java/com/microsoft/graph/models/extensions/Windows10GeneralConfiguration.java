@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.Enablement;
 import com.microsoft.graph.models.generated.StateManagementSetting;
@@ -43,7 +42,6 @@ import com.microsoft.graph.models.extensions.Windows10AppsForceUpdateSchedule;
 import com.microsoft.graph.models.generated.WindowsSpotlightEnablementSettings;
 import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
-import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemCollectionPage;
 
 
@@ -2364,19 +2362,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
 
         if (json.has("privacyAccessControls")) {
-            final WindowsPrivacyDataAccessControlItemCollectionResponse response = new WindowsPrivacyDataAccessControlItemCollectionResponse();
-            if (json.has("privacyAccessControls@odata.nextLink")) {
-                response.nextLink = json.get("privacyAccessControls@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("privacyAccessControls").toString(), JsonObject[].class);
-            final WindowsPrivacyDataAccessControlItem[] array = new WindowsPrivacyDataAccessControlItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsPrivacyDataAccessControlItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            privacyAccessControls = new WindowsPrivacyDataAccessControlItemCollectionPage(response, null);
+            privacyAccessControls = serializer.deserializeObject(json.get("privacyAccessControls").toString(), WindowsPrivacyDataAccessControlItemCollectionPage.class);
         }
     }
 }

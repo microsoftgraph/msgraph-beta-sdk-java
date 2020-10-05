@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ManagedAppRemediationAction;
 import com.microsoft.graph.models.generated.ManagedAppDataEncryptionType;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.TargetedManagedAppProtection;
-import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionPage;
 
 
@@ -199,19 +197,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
 
         if (json.has("apps")) {
-            final ManagedMobileAppCollectionResponse response = new ManagedMobileAppCollectionResponse();
-            if (json.has("apps@odata.nextLink")) {
-                response.nextLink = json.get("apps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("apps").toString(), JsonObject[].class);
-            final ManagedMobileApp[] array = new ManagedMobileApp[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedMobileApp.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            apps = new ManagedMobileAppCollectionPage(response, null);
+            apps = serializer.deserializeObject(json.get("apps").toString(), ManagedMobileAppCollectionPage.class);
         }
     }
 }

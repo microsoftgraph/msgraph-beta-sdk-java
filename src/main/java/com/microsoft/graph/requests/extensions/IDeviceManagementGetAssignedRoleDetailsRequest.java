@@ -26,7 +26,7 @@ public interface IDeviceManagementGetAssignedRoleDetailsRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAndAppManagementAssignedRoleDetails> callback);
+    void get(final ICallback<? super DeviceAndAppManagementAssignedRoleDetails> callback);
 
     /**
      * Gets the DeviceAndAppManagementAssignedRoleDetails

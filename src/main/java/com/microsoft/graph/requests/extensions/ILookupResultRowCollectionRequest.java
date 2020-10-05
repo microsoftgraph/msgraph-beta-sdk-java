@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILookupResultRowCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ILookupResultRowCollectionPage> callback);
+    void get(final ICallback<? super ILookupResultRowCollectionPage> callback);
 
     ILookupResultRowCollectionPage get() throws ClientException;
 
-    void post(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback);
+    void post(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback);
 
     LookupResultRow post(final LookupResultRow newLookupResultRow) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ILookupResultRowCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ILookupResultRowCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ILookupResultRowCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ILookupResultRowCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ILookupResultRowCollectionRequest skipToken(String skipToken);
+	ILookupResultRowCollectionRequest skipToken(final String skipToken);
 }

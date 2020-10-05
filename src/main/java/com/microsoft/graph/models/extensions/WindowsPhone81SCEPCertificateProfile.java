@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.HashAlgorithms;
 import com.microsoft.graph.models.generated.KeySize;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.generated.KeyUsages;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.extensions.WindowsPhone81TrustedRootCertificate;
 import com.microsoft.graph.models.extensions.WindowsPhone81CertificateProfileBase;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionPage;
 
 
@@ -135,19 +133,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            final ManagedDeviceCertificateStateCollectionResponse response = new ManagedDeviceCertificateStateCollectionResponse();
-            if (json.has("managedDeviceCertificateStates@odata.nextLink")) {
-                response.nextLink = json.get("managedDeviceCertificateStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDeviceCertificateStates").toString(), JsonObject[].class);
-            final ManagedDeviceCertificateState[] array = new ManagedDeviceCertificateState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceCertificateState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedDeviceCertificateStates = new ManagedDeviceCertificateStateCollectionPage(response, null);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates").toString(), ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

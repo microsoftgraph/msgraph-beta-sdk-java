@@ -21,7 +21,7 @@ public interface ILanguageProficiencyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LanguageProficiency> callback);
+    void get(final ICallback<? super LanguageProficiency> callback);
 
     /**
      * Gets the LanguageProficiency from the service
@@ -36,7 +36,7 @@ public interface ILanguageProficiencyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LanguageProficiency> callback);
+    void delete(final ICallback<? super LanguageProficiency> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILanguageProficiencyRequest extends IHttpRequest {
      * @param sourceLanguageProficiency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LanguageProficiency sourceLanguageProficiency, final ICallback<LanguageProficiency> callback);
+    void patch(final LanguageProficiency sourceLanguageProficiency, final ICallback<? super LanguageProficiency> callback);
 
     /**
      * Patches this LanguageProficiency with a source
@@ -68,7 +68,7 @@ public interface ILanguageProficiencyRequest extends IHttpRequest {
      * @param newLanguageProficiency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback);
+    void post(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback);
 
     /**
      * Posts a LanguageProficiency with a new object
@@ -85,7 +85,7 @@ public interface ILanguageProficiencyRequest extends IHttpRequest {
      * @param newLanguageProficiency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback);
+    void put(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback);
 
     /**
      * Posts a LanguageProficiency with a new object

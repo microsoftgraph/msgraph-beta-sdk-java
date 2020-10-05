@@ -52,7 +52,7 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81AppX> callback) {
+    public void get(final ICallback<? super WindowsPhone81AppX> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81AppX> callback) {
+    public void delete(final ICallback<? super WindowsPhone81AppX> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
      * @param sourceWindowsPhone81AppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81AppX sourceWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback) {
+    public void patch(final WindowsPhone81AppX sourceWindowsPhone81AppX, final ICallback<? super WindowsPhone81AppX> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81AppX);
     }
 
@@ -111,7 +111,7 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
      * @param newWindowsPhone81AppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback) {
+    public void post(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<? super WindowsPhone81AppX> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81AppX);
     }
 
@@ -132,7 +132,7 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
      * @param newWindowsPhone81AppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback) {
+    public void put(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<? super WindowsPhone81AppX> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81AppX);
     }
 
@@ -166,17 +166,6 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
      */
      public IWindowsPhone81AppXRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81AppXRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhone81AppXRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81AppXRequest)this;
      }
 

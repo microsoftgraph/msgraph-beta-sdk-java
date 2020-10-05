@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsAutopilotDeploymentProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsAutopilotDeploymentProfileCollectionPage> callback);
+    void get(final ICallback<? super IWindowsAutopilotDeploymentProfileCollectionPage> callback);
 
     IWindowsAutopilotDeploymentProfileCollectionPage get() throws ClientException;
 
-    void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     WindowsAutopilotDeploymentProfile post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IWindowsAutopilotDeploymentProfileCollectionRequest extends IHt
      * @return the updated request
      */
     IWindowsAutopilotDeploymentProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsAutopilotDeploymentProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IWindowsAutopilotDeploymentProfileCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	IWindowsAutopilotDeploymentProfileCollectionRequest skipToken(String skipToken);
+	IWindowsAutopilotDeploymentProfileCollectionRequest skipToken(final String skipToken);
 }

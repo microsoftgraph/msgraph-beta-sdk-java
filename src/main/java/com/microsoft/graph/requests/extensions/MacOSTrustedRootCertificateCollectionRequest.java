@@ -40,7 +40,7 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, MacOSTrustedRootCertificateCollectionResponse.class, IMacOSTrustedRootCertificateCollectionPage.class);
     }
 
-    public void get(final ICallback<IMacOSTrustedRootCertificateCollectionPage> callback) {
+    public void get(final ICallback<? super IMacOSTrustedRootCertificateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MacOSTrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
      */
     public IMacOSTrustedRootCertificateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MacOSTrustedRootCertificateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMacOSTrustedRootCertificateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MacOSTrustedRootCertificateCollectionRequest)this;
     }
 

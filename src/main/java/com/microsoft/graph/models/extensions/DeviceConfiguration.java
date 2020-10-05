@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementApplicabilityRuleDeviceMode;
 import com.microsoft.graph.models.extensions.DeviceManagementApplicabilityRuleOsEdition;
@@ -19,15 +18,10 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionPage;
 
 
@@ -220,83 +214,23 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final DeviceConfigurationAssignmentCollectionResponse response = new DeviceConfigurationAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final DeviceConfigurationAssignment[] array = new DeviceConfigurationAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new DeviceConfigurationAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            final SettingStateDeviceSummaryCollectionResponse response = new SettingStateDeviceSummaryCollectionResponse();
-            if (json.has("deviceSettingStateSummaries@odata.nextLink")) {
-                response.nextLink = json.get("deviceSettingStateSummaries@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), JsonObject[].class);
-            final SettingStateDeviceSummary[] array = new SettingStateDeviceSummary[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SettingStateDeviceSummary.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceSettingStateSummaries = new SettingStateDeviceSummaryCollectionPage(response, null);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), SettingStateDeviceSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            final DeviceConfigurationDeviceStatusCollectionResponse response = new DeviceConfigurationDeviceStatusCollectionResponse();
-            if (json.has("deviceStatuses@odata.nextLink")) {
-                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
-            final DeviceConfigurationDeviceStatus[] array = new DeviceConfigurationDeviceStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationDeviceStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStatuses = new DeviceConfigurationDeviceStatusCollectionPage(response, null);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), DeviceConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("groupAssignments")) {
-            final DeviceConfigurationGroupAssignmentCollectionResponse response = new DeviceConfigurationGroupAssignmentCollectionResponse();
-            if (json.has("groupAssignments@odata.nextLink")) {
-                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
-            final DeviceConfigurationGroupAssignment[] array = new DeviceConfigurationGroupAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationGroupAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupAssignments = new DeviceConfigurationGroupAssignmentCollectionPage(response, null);
+            groupAssignments = serializer.deserializeObject(json.get("groupAssignments").toString(), DeviceConfigurationGroupAssignmentCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            final DeviceConfigurationUserStatusCollectionResponse response = new DeviceConfigurationUserStatusCollectionResponse();
-            if (json.has("userStatuses@odata.nextLink")) {
-                response.nextLink = json.get("userStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userStatuses").toString(), JsonObject[].class);
-            final DeviceConfigurationUserStatus[] array = new DeviceConfigurationUserStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationUserStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userStatuses = new DeviceConfigurationUserStatusCollectionPage(response, null);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), DeviceConfigurationUserStatusCollectionPage.class);
         }
     }
 }

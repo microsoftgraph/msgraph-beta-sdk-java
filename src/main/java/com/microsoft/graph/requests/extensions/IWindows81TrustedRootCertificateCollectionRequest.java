@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindows81TrustedRootCertificateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindows81TrustedRootCertificateCollectionPage> callback);
+    void get(final ICallback<? super IWindows81TrustedRootCertificateCollectionPage> callback);
 
     IWindows81TrustedRootCertificateCollectionPage get() throws ClientException;
 
-    void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+    void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     Windows81TrustedRootCertificate post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindows81TrustedRootCertificateCollectionRequest extends IHttp
      * @return the updated request
      */
     IWindows81TrustedRootCertificateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindows81TrustedRootCertificateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindows81TrustedRootCertificateCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IWindows81TrustedRootCertificateCollectionRequest skipToken(String skipToken);
+	IWindows81TrustedRootCertificateCollectionRequest skipToken(final String skipToken);
 }

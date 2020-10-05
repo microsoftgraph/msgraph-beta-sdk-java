@@ -23,6 +23,6 @@ public class RelationCollectionPage extends BaseCollectionPage<Relation, IRelati
      * @param builder  the request builder for the next collection page
      */
     public RelationCollectionPage(final RelationCollectionResponse response, final IRelationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccountCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccountCollectionPage> callback);
+    void get(final ICallback<? super IAccountCollectionPage> callback);
 
     IAccountCollectionPage get() throws ClientException;
 
-    void post(final Account newAccount, final ICallback<Account> callback);
+    void post(final Account newAccount, final ICallback<? super Account> callback);
 
     Account post(final Account newAccount) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAccountCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAccountCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccountCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAccountCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAccountCollectionRequest skipToken(String skipToken);
+	IAccountCollectionRequest skipToken(final String skipToken);
 }

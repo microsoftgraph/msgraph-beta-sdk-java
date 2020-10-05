@@ -49,7 +49,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TermsAndConditions> callback) {
+    public void get(final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TermsAndConditions> callback) {
+    public void delete(final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param sourceTermsAndConditions the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+    public void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsAndConditions);
     }
 
@@ -108,7 +108,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param newTermsAndConditions the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.POST, callback, newTermsAndConditions);
     }
 
@@ -129,7 +129,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param newTermsAndConditions the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+    public void put(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.PUT, callback, newTermsAndConditions);
     }
 
@@ -163,17 +163,6 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      */
      public ITermsAndConditionsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsAndConditionsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITermsAndConditionsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TermsAndConditionsRequest)this;
      }
 

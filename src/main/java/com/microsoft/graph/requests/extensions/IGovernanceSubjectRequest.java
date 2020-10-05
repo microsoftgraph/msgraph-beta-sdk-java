@@ -21,7 +21,7 @@ public interface IGovernanceSubjectRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GovernanceSubject> callback);
+    void get(final ICallback<? super GovernanceSubject> callback);
 
     /**
      * Gets the GovernanceSubject from the service
@@ -36,7 +36,7 @@ public interface IGovernanceSubjectRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GovernanceSubject> callback);
+    void delete(final ICallback<? super GovernanceSubject> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGovernanceSubjectRequest extends IHttpRequest {
      * @param sourceGovernanceSubject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GovernanceSubject sourceGovernanceSubject, final ICallback<GovernanceSubject> callback);
+    void patch(final GovernanceSubject sourceGovernanceSubject, final ICallback<? super GovernanceSubject> callback);
 
     /**
      * Patches this GovernanceSubject with a source
@@ -68,7 +68,7 @@ public interface IGovernanceSubjectRequest extends IHttpRequest {
      * @param newGovernanceSubject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GovernanceSubject newGovernanceSubject, final ICallback<GovernanceSubject> callback);
+    void post(final GovernanceSubject newGovernanceSubject, final ICallback<? super GovernanceSubject> callback);
 
     /**
      * Posts a GovernanceSubject with a new object
@@ -85,7 +85,7 @@ public interface IGovernanceSubjectRequest extends IHttpRequest {
      * @param newGovernanceSubject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GovernanceSubject newGovernanceSubject, final ICallback<GovernanceSubject> callback);
+    void put(final GovernanceSubject newGovernanceSubject, final ICallback<? super GovernanceSubject> callback);
 
     /**
      * Posts a GovernanceSubject with a new object

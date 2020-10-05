@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IHomeRealmDiscoveryPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IHomeRealmDiscoveryPolicyCollectionPage> callback);
+    void get(final ICallback<? super IHomeRealmDiscoveryPolicyCollectionPage> callback);
 
     IHomeRealmDiscoveryPolicyCollectionPage get() throws ClientException;
 
-    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IHomeRealmDiscoveryPolicyCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IHomeRealmDiscoveryPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IHomeRealmDiscoveryPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IHomeRealmDiscoveryPolicyCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IHomeRealmDiscoveryPolicyCollectionRequest skipToken(String skipToken);
+	IHomeRealmDiscoveryPolicyCollectionRequest skipToken(final String skipToken);
 }

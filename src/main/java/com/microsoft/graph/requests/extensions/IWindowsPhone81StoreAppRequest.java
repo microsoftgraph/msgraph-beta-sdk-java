@@ -21,7 +21,7 @@ public interface IWindowsPhone81StoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81StoreApp> callback);
+    void get(final ICallback<? super WindowsPhone81StoreApp> callback);
 
     /**
      * Gets the WindowsPhone81StoreApp from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81StoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81StoreApp> callback);
+    void delete(final ICallback<? super WindowsPhone81StoreApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81StoreAppRequest extends IHttpRequest {
      * @param sourceWindowsPhone81StoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback);
+    void patch(final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback);
 
     /**
      * Patches this WindowsPhone81StoreApp with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81StoreAppRequest extends IHttpRequest {
      * @param newWindowsPhone81StoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback);
+    void post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback);
 
     /**
      * Posts a WindowsPhone81StoreApp with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81StoreAppRequest extends IHttpRequest {
      * @param newWindowsPhone81StoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback);
+    void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback);
 
     /**
      * Posts a WindowsPhone81StoreApp with a new object

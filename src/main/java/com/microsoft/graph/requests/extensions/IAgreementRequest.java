@@ -21,7 +21,7 @@ public interface IAgreementRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Agreement> callback);
+    void get(final ICallback<? super Agreement> callback);
 
     /**
      * Gets the Agreement from the service
@@ -36,7 +36,7 @@ public interface IAgreementRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Agreement> callback);
+    void delete(final ICallback<? super Agreement> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgreementRequest extends IHttpRequest {
      * @param sourceAgreement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Agreement sourceAgreement, final ICallback<Agreement> callback);
+    void patch(final Agreement sourceAgreement, final ICallback<? super Agreement> callback);
 
     /**
      * Patches this Agreement with a source
@@ -68,7 +68,7 @@ public interface IAgreementRequest extends IHttpRequest {
      * @param newAgreement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Agreement newAgreement, final ICallback<Agreement> callback);
+    void post(final Agreement newAgreement, final ICallback<? super Agreement> callback);
 
     /**
      * Posts a Agreement with a new object
@@ -85,7 +85,7 @@ public interface IAgreementRequest extends IHttpRequest {
      * @param newAgreement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Agreement newAgreement, final ICallback<Agreement> callback);
+    void put(final Agreement newAgreement, final ICallback<? super Agreement> callback);
 
     /**
      * Posts a Agreement with a new object

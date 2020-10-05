@@ -40,7 +40,7 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, ManagementCondition.class);
     }
 
-    public void post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload, final ICallback<ManagementCondition> callback) {
+    public void post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload, final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -52,7 +52,7 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<ManagementCondition> callback) {
+    public void get(final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ManagementCondition> callback) {
+	public void delete(final ICallback<? super ManagementCondition> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -68,7 +68,7 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ManagementCondition sourceManagementCondition, final ICallback<ManagementCondition> callback) {
+	public void patch(final ManagementCondition sourceManagementCondition, final ICallback<? super ManagementCondition> callback) {
 		send(HttpMethod.PATCH, callback, sourceManagementCondition);
 	}
 
@@ -96,16 +96,6 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
      */
     public IManagementConditionWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagementConditionWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagementConditionWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagementConditionWithReferenceRequest)this;
     }
 }

@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IIosCertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final IosCertificateProfileBase newIosCertificateProfileBase, final IJsonBackedObject payload, final ICallback<IosCertificateProfileBase> callback);
+    void post(final IosCertificateProfileBase newIosCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super IosCertificateProfileBase> callback);
 
     IosCertificateProfileBase post(final IosCertificateProfileBase newIosCertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<IosCertificateProfileBase> callback);
+    void get(final ICallback<? super IosCertificateProfileBase> callback);
 
     IosCertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<IosCertificateProfileBase> callback);
+	void delete(final ICallback<? super IosCertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final IosCertificateProfileBase sourceIosCertificateProfileBase, final ICallback<IosCertificateProfileBase> callback);
+	void patch(final IosCertificateProfileBase sourceIosCertificateProfileBase, final ICallback<? super IosCertificateProfileBase> callback);
 
 	IosCertificateProfileBase patch(final IosCertificateProfileBase sourceIosCertificateProfileBase) throws ClientException;
 

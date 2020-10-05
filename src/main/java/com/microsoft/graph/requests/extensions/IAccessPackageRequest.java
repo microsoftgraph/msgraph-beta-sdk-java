@@ -21,7 +21,7 @@ public interface IAccessPackageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackage> callback);
+    void get(final ICallback<? super AccessPackage> callback);
 
     /**
      * Gets the AccessPackage from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackage> callback);
+    void delete(final ICallback<? super AccessPackage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageRequest extends IHttpRequest {
      * @param sourceAccessPackage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackage sourceAccessPackage, final ICallback<AccessPackage> callback);
+    void patch(final AccessPackage sourceAccessPackage, final ICallback<? super AccessPackage> callback);
 
     /**
      * Patches this AccessPackage with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageRequest extends IHttpRequest {
      * @param newAccessPackage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackage newAccessPackage, final ICallback<AccessPackage> callback);
+    void post(final AccessPackage newAccessPackage, final ICallback<? super AccessPackage> callback);
 
     /**
      * Posts a AccessPackage with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageRequest extends IHttpRequest {
      * @param newAccessPackage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackage newAccessPackage, final ICallback<AccessPackage> callback);
+    void put(final AccessPackage newAccessPackage, final ICallback<? super AccessPackage> callback);
 
     /**
      * Posts a AccessPackage with a new object

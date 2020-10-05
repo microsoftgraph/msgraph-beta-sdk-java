@@ -21,7 +21,7 @@ public interface IItemEmailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemEmail> callback);
+    void get(final ICallback<? super ItemEmail> callback);
 
     /**
      * Gets the ItemEmail from the service
@@ -36,7 +36,7 @@ public interface IItemEmailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemEmail> callback);
+    void delete(final ICallback<? super ItemEmail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemEmailRequest extends IHttpRequest {
      * @param sourceItemEmail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemEmail sourceItemEmail, final ICallback<ItemEmail> callback);
+    void patch(final ItemEmail sourceItemEmail, final ICallback<? super ItemEmail> callback);
 
     /**
      * Patches this ItemEmail with a source
@@ -68,7 +68,7 @@ public interface IItemEmailRequest extends IHttpRequest {
      * @param newItemEmail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemEmail newItemEmail, final ICallback<ItemEmail> callback);
+    void post(final ItemEmail newItemEmail, final ICallback<? super ItemEmail> callback);
 
     /**
      * Posts a ItemEmail with a new object
@@ -85,7 +85,7 @@ public interface IItemEmailRequest extends IHttpRequest {
      * @param newItemEmail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemEmail newItemEmail, final ICallback<ItemEmail> callback);
+    void put(final ItemEmail newItemEmail, final ICallback<? super ItemEmail> callback);
 
     /**
      * Posts a ItemEmail with a new object

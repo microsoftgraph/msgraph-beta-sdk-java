@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITrustFrameworkKeySetUploadSecretRequest extends IHttpRequest {
 
-    void post(final ICallback<TrustFrameworkKey> callback);
+    void post(final ICallback<? super TrustFrameworkKey> callback);
 
     TrustFrameworkKey post() throws ClientException;
 

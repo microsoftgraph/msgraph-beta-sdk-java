@@ -21,7 +21,7 @@ public interface IWindowsUniversalAppXContainedAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsUniversalAppXContainedApp> callback);
+    void get(final ICallback<? super WindowsUniversalAppXContainedApp> callback);
 
     /**
      * Gets the WindowsUniversalAppXContainedApp from the service
@@ -36,7 +36,7 @@ public interface IWindowsUniversalAppXContainedAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsUniversalAppXContainedApp> callback);
+    void delete(final ICallback<? super WindowsUniversalAppXContainedApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsUniversalAppXContainedAppRequest extends IHttpRequest {
      * @param sourceWindowsUniversalAppXContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsUniversalAppXContainedApp sourceWindowsUniversalAppXContainedApp, final ICallback<WindowsUniversalAppXContainedApp> callback);
+    void patch(final WindowsUniversalAppXContainedApp sourceWindowsUniversalAppXContainedApp, final ICallback<? super WindowsUniversalAppXContainedApp> callback);
 
     /**
      * Patches this WindowsUniversalAppXContainedApp with a source
@@ -68,7 +68,7 @@ public interface IWindowsUniversalAppXContainedAppRequest extends IHttpRequest {
      * @param newWindowsUniversalAppXContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<WindowsUniversalAppXContainedApp> callback);
+    void post(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<? super WindowsUniversalAppXContainedApp> callback);
 
     /**
      * Posts a WindowsUniversalAppXContainedApp with a new object
@@ -85,7 +85,7 @@ public interface IWindowsUniversalAppXContainedAppRequest extends IHttpRequest {
      * @param newWindowsUniversalAppXContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<WindowsUniversalAppXContainedApp> callback);
+    void put(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<? super WindowsUniversalAppXContainedApp> callback);
 
     /**
      * Posts a WindowsUniversalAppXContainedApp with a new object

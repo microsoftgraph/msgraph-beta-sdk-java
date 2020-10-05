@@ -44,7 +44,7 @@ public interface IUserCollectionWithReferencesRequestBuilder extends IRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IUserCollectionWithReferencesRequest instance
      */
     IUserCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -52,7 +52,7 @@ public interface IUserCollectionWithReferencesRequestBuilder extends IRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IUserCollectionWithReferencesRequest instance
      */
     IUserCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

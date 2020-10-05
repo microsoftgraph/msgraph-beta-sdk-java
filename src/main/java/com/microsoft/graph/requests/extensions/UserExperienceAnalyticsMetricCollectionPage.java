@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsMetricCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsMetricCollectionPage(final UserExperienceAnalyticsMetricCollectionResponse response, final IUserExperienceAnalyticsMetricCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

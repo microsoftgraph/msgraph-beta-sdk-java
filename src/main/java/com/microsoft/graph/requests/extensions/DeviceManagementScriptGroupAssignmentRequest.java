@@ -37,7 +37,7 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementScriptGroupAssignment> callback) {
+    public void get(final ICallback<? super DeviceManagementScriptGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementScriptGroupAssignment> callback) {
+    public void delete(final ICallback<? super DeviceManagementScriptGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
      * @param sourceDeviceManagementScriptGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScriptGroupAssignment sourceDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback) {
+    public void patch(final DeviceManagementScriptGroupAssignment sourceDeviceManagementScriptGroupAssignment, final ICallback<? super DeviceManagementScriptGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptGroupAssignment);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
      * @param newDeviceManagementScriptGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback) {
+    public void post(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<? super DeviceManagementScriptGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScriptGroupAssignment);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
      * @param newDeviceManagementScriptGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback) {
+    public void put(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<? super DeviceManagementScriptGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScriptGroupAssignment);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
      */
      public IDeviceManagementScriptGroupAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptGroupAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementScriptGroupAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementScriptGroupAssignmentRequest)this;
      }
 

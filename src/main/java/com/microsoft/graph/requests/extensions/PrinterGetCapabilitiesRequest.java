@@ -37,7 +37,7 @@ public class PrinterGetCapabilitiesRequest extends BaseRequest implements IPrint
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrinterCapabilities> callback) {
+    public void get(final ICallback<? super PrinterCapabilities> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class PrinterGetCapabilitiesRequest extends BaseRequest implements IPrint
      */
     public IPrinterGetCapabilitiesRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrinterGetCapabilitiesRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrinterGetCapabilitiesRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrinterGetCapabilitiesRequest)this;
     }
 

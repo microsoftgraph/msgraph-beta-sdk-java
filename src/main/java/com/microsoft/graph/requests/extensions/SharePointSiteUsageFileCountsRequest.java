@@ -37,7 +37,7 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SharePointSiteUsageFileCounts> callback) {
+    public void get(final ICallback<? super SharePointSiteUsageFileCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SharePointSiteUsageFileCounts> callback) {
+    public void delete(final ICallback<? super SharePointSiteUsageFileCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
      * @param sourceSharePointSiteUsageFileCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointSiteUsageFileCounts sourceSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback) {
+    public void patch(final SharePointSiteUsageFileCounts sourceSharePointSiteUsageFileCounts, final ICallback<? super SharePointSiteUsageFileCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointSiteUsageFileCounts);
     }
 
@@ -96,7 +96,7 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
      * @param newSharePointSiteUsageFileCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback) {
+    public void post(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<? super SharePointSiteUsageFileCounts> callback) {
         send(HttpMethod.POST, callback, newSharePointSiteUsageFileCounts);
     }
 
@@ -117,7 +117,7 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
      * @param newSharePointSiteUsageFileCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback) {
+    public void put(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<? super SharePointSiteUsageFileCounts> callback) {
         send(HttpMethod.PUT, callback, newSharePointSiteUsageFileCounts);
     }
 
@@ -151,17 +151,6 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
      */
      public ISharePointSiteUsageFileCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointSiteUsageFileCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISharePointSiteUsageFileCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SharePointSiteUsageFileCountsRequest)this;
      }
 

@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.DevicePlatformType;
 import com.microsoft.graph.models.extensions.ManagementConditionExpression;
 import com.microsoft.graph.models.extensions.ManagementCondition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagementConditionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagementConditionCollectionPage;
 
 
@@ -131,19 +129,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
 
 
         if (json.has("managementConditions")) {
-            final ManagementConditionCollectionResponse response = new ManagementConditionCollectionResponse();
-            if (json.has("managementConditions@odata.nextLink")) {
-                response.nextLink = json.get("managementConditions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managementConditions").toString(), JsonObject[].class);
-            final ManagementCondition[] array = new ManagementCondition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagementCondition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managementConditions = new ManagementConditionCollectionPage(response, null);
+            managementConditions = serializer.deserializeObject(json.get("managementConditions").toString(), ManagementConditionCollectionPage.class);
         }
     }
 }

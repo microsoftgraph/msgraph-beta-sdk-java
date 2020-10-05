@@ -21,7 +21,7 @@ public interface IMacOsVppAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOsVppApp> callback);
+    void get(final ICallback<? super MacOsVppApp> callback);
 
     /**
      * Gets the MacOsVppApp from the service
@@ -36,7 +36,7 @@ public interface IMacOsVppAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOsVppApp> callback);
+    void delete(final ICallback<? super MacOsVppApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOsVppAppRequest extends IHttpRequest {
      * @param sourceMacOsVppApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOsVppApp sourceMacOsVppApp, final ICallback<MacOsVppApp> callback);
+    void patch(final MacOsVppApp sourceMacOsVppApp, final ICallback<? super MacOsVppApp> callback);
 
     /**
      * Patches this MacOsVppApp with a source
@@ -68,7 +68,7 @@ public interface IMacOsVppAppRequest extends IHttpRequest {
      * @param newMacOsVppApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOsVppApp newMacOsVppApp, final ICallback<MacOsVppApp> callback);
+    void post(final MacOsVppApp newMacOsVppApp, final ICallback<? super MacOsVppApp> callback);
 
     /**
      * Posts a MacOsVppApp with a new object
@@ -85,7 +85,7 @@ public interface IMacOsVppAppRequest extends IHttpRequest {
      * @param newMacOsVppApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOsVppApp newMacOsVppApp, final ICallback<MacOsVppApp> callback);
+    void put(final MacOsVppApp newMacOsVppApp, final ICallback<? super MacOsVppApp> callback);
 
     /**
      * Posts a MacOsVppApp with a new object

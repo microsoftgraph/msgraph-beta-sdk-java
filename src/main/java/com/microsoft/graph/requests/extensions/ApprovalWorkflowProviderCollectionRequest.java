@@ -39,7 +39,7 @@ public class ApprovalWorkflowProviderCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, ApprovalWorkflowProviderCollectionResponse.class, IApprovalWorkflowProviderCollectionPage.class);
     }
 
-    public void get(final ICallback<IApprovalWorkflowProviderCollectionPage> callback) {
+    public void get(final ICallback<? super IApprovalWorkflowProviderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ApprovalWorkflowProviderCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback) {
+    public void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApprovalWorkflowProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ApprovalWorkflowProviderCollectionRequest extends BaseCollectionReq
      */
     public IApprovalWorkflowProviderCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApprovalWorkflowProviderCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IApprovalWorkflowProviderCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ApprovalWorkflowProviderCollectionRequest)this;
     }
 

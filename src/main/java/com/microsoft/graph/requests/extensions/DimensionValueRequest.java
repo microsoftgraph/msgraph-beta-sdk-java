@@ -37,7 +37,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DimensionValue> callback) {
+    public void get(final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DimensionValue> callback) {
+    public void delete(final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param sourceDimensionValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DimensionValue sourceDimensionValue, final ICallback<DimensionValue> callback) {
+    public void patch(final DimensionValue sourceDimensionValue, final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.PATCH, callback, sourceDimensionValue);
     }
 
@@ -96,7 +96,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param newDimensionValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DimensionValue newDimensionValue, final ICallback<DimensionValue> callback) {
+    public void post(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.POST, callback, newDimensionValue);
     }
 
@@ -117,7 +117,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param newDimensionValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DimensionValue newDimensionValue, final ICallback<DimensionValue> callback) {
+    public void put(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.PUT, callback, newDimensionValue);
     }
 
@@ -151,17 +151,6 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      */
      public IDimensionValueRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DimensionValueRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDimensionValueRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DimensionValueRequest)this;
      }
 

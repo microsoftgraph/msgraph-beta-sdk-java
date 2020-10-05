@@ -23,6 +23,6 @@ public class ManagedDeviceCertificateStateCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public ManagedDeviceCertificateStateCollectionPage(final ManagedDeviceCertificateStateCollectionResponse response, final IManagedDeviceCertificateStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -36,7 +36,7 @@ public class GroupPolicyPresentationReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, GroupPolicyPresentation.class);
     }
 
-    public void delete(final ICallback<GroupPolicyPresentation> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -66,22 +66,12 @@ public class GroupPolicyPresentationReferenceRequest extends BaseRequest impleme
         return (GroupPolicyPresentationReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupPolicyPresentationReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupPolicyPresentationReferenceRequest)this;
-    }
-    /**
      * Puts the GroupPolicyPresentation
      *
      * @param srcGroupPolicyPresentation the GroupPolicyPresentation reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(GroupPolicyPresentation srcGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback) {
+    public void put(GroupPolicyPresentation srcGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.PUT, callback, srcGroupPolicyPresentation);
     }
 

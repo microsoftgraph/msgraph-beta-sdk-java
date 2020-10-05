@@ -45,7 +45,7 @@ public class PrinterShareWithReferenceRequest extends BaseRequest implements IPr
         super(requestUrl, client, requestOptions, PrinterShare.class);
     }
 
-    public void post(final PrinterShare newPrinterShare, final IJsonBackedObject payload, final ICallback<PrinterShare> callback) {
+    public void post(final PrinterShare newPrinterShare, final IJsonBackedObject payload, final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -57,7 +57,7 @@ public class PrinterShareWithReferenceRequest extends BaseRequest implements IPr
         return null;
     }
 
-    public void get(final ICallback<PrinterShare> callback) {
+    public void get(final ICallback<? super PrinterShare> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class PrinterShareWithReferenceRequest extends BaseRequest implements IPr
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<PrinterShare> callback) {
+	public void delete(final ICallback<? super PrinterShare> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -73,7 +73,7 @@ public class PrinterShareWithReferenceRequest extends BaseRequest implements IPr
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final PrinterShare sourcePrinterShare, final ICallback<PrinterShare> callback) {
+	public void patch(final PrinterShare sourcePrinterShare, final ICallback<? super PrinterShare> callback) {
 		send(HttpMethod.PATCH, callback, sourcePrinterShare);
 	}
 
@@ -101,16 +101,6 @@ public class PrinterShareWithReferenceRequest extends BaseRequest implements IPr
      */
     public IPrinterShareWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrinterShareWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrinterShareWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrinterShareWithReferenceRequest)this;
     }
 }

@@ -21,7 +21,7 @@ public interface IWindows10EasEmailProfileConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10EasEmailProfileConfiguration> callback);
+    void get(final ICallback<? super Windows10EasEmailProfileConfiguration> callback);
 
     /**
      * Gets the Windows10EasEmailProfileConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10EasEmailProfileConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10EasEmailProfileConfiguration> callback);
+    void delete(final ICallback<? super Windows10EasEmailProfileConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10EasEmailProfileConfigurationRequest extends IHttpRequ
      * @param sourceWindows10EasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10EasEmailProfileConfiguration sourceWindows10EasEmailProfileConfiguration, final ICallback<Windows10EasEmailProfileConfiguration> callback);
+    void patch(final Windows10EasEmailProfileConfiguration sourceWindows10EasEmailProfileConfiguration, final ICallback<? super Windows10EasEmailProfileConfiguration> callback);
 
     /**
      * Patches this Windows10EasEmailProfileConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10EasEmailProfileConfigurationRequest extends IHttpRequ
      * @param newWindows10EasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<Windows10EasEmailProfileConfiguration> callback);
+    void post(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<? super Windows10EasEmailProfileConfiguration> callback);
 
     /**
      * Posts a Windows10EasEmailProfileConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10EasEmailProfileConfigurationRequest extends IHttpRequ
      * @param newWindows10EasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<Windows10EasEmailProfileConfiguration> callback);
+    void put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<? super Windows10EasEmailProfileConfiguration> callback);
 
     /**
      * Posts a Windows10EasEmailProfileConfiguration with a new object

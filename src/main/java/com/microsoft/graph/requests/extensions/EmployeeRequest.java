@@ -41,7 +41,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Employee> callback) {
+    public void get(final ICallback<? super Employee> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Employee> callback) {
+    public void delete(final ICallback<? super Employee> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param sourceEmployee the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Employee sourceEmployee, final ICallback<Employee> callback) {
+    public void patch(final Employee sourceEmployee, final ICallback<? super Employee> callback) {
         send(HttpMethod.PATCH, callback, sourceEmployee);
     }
 
@@ -100,7 +100,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param newEmployee the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Employee newEmployee, final ICallback<Employee> callback) {
+    public void post(final Employee newEmployee, final ICallback<? super Employee> callback) {
         send(HttpMethod.POST, callback, newEmployee);
     }
 
@@ -121,7 +121,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param newEmployee the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Employee newEmployee, final ICallback<Employee> callback) {
+    public void put(final Employee newEmployee, final ICallback<? super Employee> callback) {
         send(HttpMethod.PUT, callback, newEmployee);
     }
 
@@ -155,17 +155,6 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      */
      public IEmployeeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmployeeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEmployeeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmployeeRequest)this;
      }
 

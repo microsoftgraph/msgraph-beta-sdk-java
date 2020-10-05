@@ -34,6 +34,6 @@ public class TargetedManagedAppConfigurationHasPayloadLinksCollectionPage extend
      * @param builder The request builder for the next collection page
      */
     public TargetedManagedAppConfigurationHasPayloadLinksCollectionPage(final TargetedManagedAppConfigurationHasPayloadLinksCollectionResponse response, final ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

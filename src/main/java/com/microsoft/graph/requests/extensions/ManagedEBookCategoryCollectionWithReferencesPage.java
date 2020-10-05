@@ -35,6 +35,6 @@ public class ManagedEBookCategoryCollectionWithReferencesPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public ManagedEBookCategoryCollectionWithReferencesPage(final ManagedEBookCategoryCollectionResponse response, final IManagedEBookCategoryCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

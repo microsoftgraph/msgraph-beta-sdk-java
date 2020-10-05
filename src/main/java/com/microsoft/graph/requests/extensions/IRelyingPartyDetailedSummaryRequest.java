@@ -21,7 +21,7 @@ public interface IRelyingPartyDetailedSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RelyingPartyDetailedSummary> callback);
+    void get(final ICallback<? super RelyingPartyDetailedSummary> callback);
 
     /**
      * Gets the RelyingPartyDetailedSummary from the service
@@ -36,7 +36,7 @@ public interface IRelyingPartyDetailedSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RelyingPartyDetailedSummary> callback);
+    void delete(final ICallback<? super RelyingPartyDetailedSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRelyingPartyDetailedSummaryRequest extends IHttpRequest {
      * @param sourceRelyingPartyDetailedSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary, final ICallback<RelyingPartyDetailedSummary> callback);
+    void patch(final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback);
 
     /**
      * Patches this RelyingPartyDetailedSummary with a source
@@ -68,7 +68,7 @@ public interface IRelyingPartyDetailedSummaryRequest extends IHttpRequest {
      * @param newRelyingPartyDetailedSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<RelyingPartyDetailedSummary> callback);
+    void post(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback);
 
     /**
      * Posts a RelyingPartyDetailedSummary with a new object
@@ -85,7 +85,7 @@ public interface IRelyingPartyDetailedSummaryRequest extends IHttpRequest {
      * @param newRelyingPartyDetailedSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<RelyingPartyDetailedSummary> callback);
+    void put(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback);
 
     /**
      * Posts a RelyingPartyDetailedSummary with a new object

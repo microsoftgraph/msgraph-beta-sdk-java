@@ -36,7 +36,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionReferenceRe
         super(requestUrl, client, requestOptions, WindowsInformationProtectionDeviceRegistrationCollectionResponse.class, IWindowsInformationProtectionDeviceRegistrationCollectionPage.class);
     }
 
-    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
+    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/windowsInformationProtectionDeviceRegistrations/" + newWindowsInformationProtectionDeviceRegistration.id);
         new WindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionReferenceRe
      */
     public IWindowsInformationProtectionDeviceRegistrationCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsInformationProtectionDeviceRegistrationCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionDeviceRegistrationCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsInformationProtectionDeviceRegistrationCollectionReferenceRequest)this;
     }
 

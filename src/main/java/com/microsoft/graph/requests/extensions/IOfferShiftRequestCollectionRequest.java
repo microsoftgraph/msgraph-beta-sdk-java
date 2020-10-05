@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOfferShiftRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOfferShiftRequestCollectionPage> callback);
+    void get(final ICallback<? super IOfferShiftRequestCollectionPage> callback);
 
     IOfferShiftRequestCollectionPage get() throws ClientException;
 
-    void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback);
+    void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback);
 
     OfferShiftRequest post(final OfferShiftRequest newOfferShiftRequest) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IOfferShiftRequestCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOfferShiftRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOfferShiftRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IOfferShiftRequestCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOfferShiftRequestCollectionRequest skipToken(String skipToken);
+	IOfferShiftRequestCollectionRequest skipToken(final String skipToken);
 }

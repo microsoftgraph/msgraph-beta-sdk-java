@@ -21,7 +21,7 @@ public interface IManagedAppProtectionPolicySetItemRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppProtectionPolicySetItem> callback);
+    void get(final ICallback<? super ManagedAppProtectionPolicySetItem> callback);
 
     /**
      * Gets the ManagedAppProtectionPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IManagedAppProtectionPolicySetItemRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppProtectionPolicySetItem> callback);
+    void delete(final ICallback<? super ManagedAppProtectionPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppProtectionPolicySetItemRequest extends IHttpRequest 
      * @param sourceManagedAppProtectionPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppProtectionPolicySetItem sourceManagedAppProtectionPolicySetItem, final ICallback<ManagedAppProtectionPolicySetItem> callback);
+    void patch(final ManagedAppProtectionPolicySetItem sourceManagedAppProtectionPolicySetItem, final ICallback<? super ManagedAppProtectionPolicySetItem> callback);
 
     /**
      * Patches this ManagedAppProtectionPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IManagedAppProtectionPolicySetItemRequest extends IHttpRequest 
      * @param newManagedAppProtectionPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<ManagedAppProtectionPolicySetItem> callback);
+    void post(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<? super ManagedAppProtectionPolicySetItem> callback);
 
     /**
      * Posts a ManagedAppProtectionPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppProtectionPolicySetItemRequest extends IHttpRequest 
      * @param newManagedAppProtectionPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<ManagedAppProtectionPolicySetItem> callback);
+    void put(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<? super ManagedAppProtectionPolicySetItem> callback);
 
     /**
      * Posts a ManagedAppProtectionPolicySetItem with a new object

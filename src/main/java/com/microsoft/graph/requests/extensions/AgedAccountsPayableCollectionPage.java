@@ -23,6 +23,6 @@ public class AgedAccountsPayableCollectionPage extends BaseCollectionPage<AgedAc
      * @param builder  the request builder for the next collection page
      */
     public AgedAccountsPayableCollectionPage(final AgedAccountsPayableCollectionResponse response, final IAgedAccountsPayableCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

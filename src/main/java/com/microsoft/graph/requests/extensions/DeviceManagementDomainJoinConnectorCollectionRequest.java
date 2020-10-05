@@ -40,7 +40,7 @@ public class DeviceManagementDomainJoinConnectorCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, DeviceManagementDomainJoinConnectorCollectionResponse.class, IDeviceManagementDomainJoinConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementDomainJoinConnectorCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementDomainJoinConnectorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementDomainJoinConnectorCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback) {
+    public void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementDomainJoinConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementDomainJoinConnectorCollectionRequest extends BaseCo
      */
     public IDeviceManagementDomainJoinConnectorCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementDomainJoinConnectorCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementDomainJoinConnectorCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementDomainJoinConnectorCollectionRequest)this;
     }
 

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceCompliancePolicyValidateComplianceScriptRequest extends IHttpRequest {
 
-    void post(final ICallback<DeviceComplianceScriptValidationResult> callback);
+    void post(final ICallback<? super DeviceComplianceScriptValidationResult> callback);
 
     DeviceComplianceScriptValidationResult post() throws ClientException;
 

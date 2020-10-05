@@ -21,7 +21,7 @@ public interface IExternalGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExternalGroup> callback);
+    void get(final ICallback<? super ExternalGroup> callback);
 
     /**
      * Gets the ExternalGroup from the service
@@ -36,7 +36,7 @@ public interface IExternalGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExternalGroup> callback);
+    void delete(final ICallback<? super ExternalGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExternalGroupRequest extends IHttpRequest {
      * @param sourceExternalGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExternalGroup sourceExternalGroup, final ICallback<ExternalGroup> callback);
+    void patch(final ExternalGroup sourceExternalGroup, final ICallback<? super ExternalGroup> callback);
 
     /**
      * Patches this ExternalGroup with a source
@@ -68,7 +68,7 @@ public interface IExternalGroupRequest extends IHttpRequest {
      * @param newExternalGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExternalGroup newExternalGroup, final ICallback<ExternalGroup> callback);
+    void post(final ExternalGroup newExternalGroup, final ICallback<? super ExternalGroup> callback);
 
     /**
      * Posts a ExternalGroup with a new object
@@ -85,7 +85,7 @@ public interface IExternalGroupRequest extends IHttpRequest {
      * @param newExternalGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExternalGroup newExternalGroup, final ICallback<ExternalGroup> callback);
+    void put(final ExternalGroup newExternalGroup, final ICallback<? super ExternalGroup> callback);
 
     /**
      * Posts a ExternalGroup with a new object

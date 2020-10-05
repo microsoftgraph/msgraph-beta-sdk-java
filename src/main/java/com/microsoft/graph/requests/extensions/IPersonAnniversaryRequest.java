@@ -21,7 +21,7 @@ public interface IPersonAnniversaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonAnniversary> callback);
+    void get(final ICallback<? super PersonAnniversary> callback);
 
     /**
      * Gets the PersonAnniversary from the service
@@ -36,7 +36,7 @@ public interface IPersonAnniversaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonAnniversary> callback);
+    void delete(final ICallback<? super PersonAnniversary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonAnniversaryRequest extends IHttpRequest {
      * @param sourcePersonAnniversary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonAnniversary sourcePersonAnniversary, final ICallback<PersonAnniversary> callback);
+    void patch(final PersonAnniversary sourcePersonAnniversary, final ICallback<? super PersonAnniversary> callback);
 
     /**
      * Patches this PersonAnniversary with a source
@@ -68,7 +68,7 @@ public interface IPersonAnniversaryRequest extends IHttpRequest {
      * @param newPersonAnniversary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback);
+    void post(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback);
 
     /**
      * Posts a PersonAnniversary with a new object
@@ -85,7 +85,7 @@ public interface IPersonAnniversaryRequest extends IHttpRequest {
      * @param newPersonAnniversary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback);
+    void put(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback);
 
     /**
      * Posts a PersonAnniversary with a new object

@@ -21,7 +21,7 @@ public interface ISkypeForBusinessActivityUserDetailRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkypeForBusinessActivityUserDetail> callback);
+    void get(final ICallback<? super SkypeForBusinessActivityUserDetail> callback);
 
     /**
      * Gets the SkypeForBusinessActivityUserDetail from the service
@@ -36,7 +36,7 @@ public interface ISkypeForBusinessActivityUserDetailRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkypeForBusinessActivityUserDetail> callback);
+    void delete(final ICallback<? super SkypeForBusinessActivityUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkypeForBusinessActivityUserDetailRequest extends IHttpRequest
      * @param sourceSkypeForBusinessActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkypeForBusinessActivityUserDetail sourceSkypeForBusinessActivityUserDetail, final ICallback<SkypeForBusinessActivityUserDetail> callback);
+    void patch(final SkypeForBusinessActivityUserDetail sourceSkypeForBusinessActivityUserDetail, final ICallback<? super SkypeForBusinessActivityUserDetail> callback);
 
     /**
      * Patches this SkypeForBusinessActivityUserDetail with a source
@@ -68,7 +68,7 @@ public interface ISkypeForBusinessActivityUserDetailRequest extends IHttpRequest
      * @param newSkypeForBusinessActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<SkypeForBusinessActivityUserDetail> callback);
+    void post(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<? super SkypeForBusinessActivityUserDetail> callback);
 
     /**
      * Posts a SkypeForBusinessActivityUserDetail with a new object
@@ -85,7 +85,7 @@ public interface ISkypeForBusinessActivityUserDetailRequest extends IHttpRequest
      * @param newSkypeForBusinessActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<SkypeForBusinessActivityUserDetail> callback);
+    void put(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<? super SkypeForBusinessActivityUserDetail> callback);
 
     /**
      * Posts a SkypeForBusinessActivityUserDetail with a new object

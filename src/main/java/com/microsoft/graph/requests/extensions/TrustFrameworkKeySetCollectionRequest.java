@@ -41,7 +41,7 @@ public class TrustFrameworkKeySetCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, TrustFrameworkKeySetCollectionResponse.class, ITrustFrameworkKeySetCollectionPage.class);
     }
 
-    public void get(final ICallback<ITrustFrameworkKeySetCollectionPage> callback) {
+    public void get(final ICallback<? super ITrustFrameworkKeySetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class TrustFrameworkKeySetCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback) {
+    public void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrustFrameworkKeySetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class TrustFrameworkKeySetCollectionRequest extends BaseCollectionRequest
      */
     public ITrustFrameworkKeySetCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TrustFrameworkKeySetCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITrustFrameworkKeySetCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TrustFrameworkKeySetCollectionRequest)this;
     }
 

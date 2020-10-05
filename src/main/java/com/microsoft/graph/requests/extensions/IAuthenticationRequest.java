@@ -21,7 +21,7 @@ public interface IAuthenticationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Authentication> callback);
+    void get(final ICallback<? super Authentication> callback);
 
     /**
      * Gets the Authentication from the service
@@ -36,7 +36,7 @@ public interface IAuthenticationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Authentication> callback);
+    void delete(final ICallback<? super Authentication> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAuthenticationRequest extends IHttpRequest {
      * @param sourceAuthentication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Authentication sourceAuthentication, final ICallback<Authentication> callback);
+    void patch(final Authentication sourceAuthentication, final ICallback<? super Authentication> callback);
 
     /**
      * Patches this Authentication with a source
@@ -68,7 +68,7 @@ public interface IAuthenticationRequest extends IHttpRequest {
      * @param newAuthentication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Authentication newAuthentication, final ICallback<Authentication> callback);
+    void post(final Authentication newAuthentication, final ICallback<? super Authentication> callback);
 
     /**
      * Posts a Authentication with a new object
@@ -85,7 +85,7 @@ public interface IAuthenticationRequest extends IHttpRequest {
      * @param newAuthentication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Authentication newAuthentication, final ICallback<Authentication> callback);
+    void put(final Authentication newAuthentication, final ICallback<? super Authentication> callback);
 
     /**
      * Posts a Authentication with a new object

@@ -40,7 +40,7 @@ public class CredentialUserRegistrationDetailsCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, CredentialUserRegistrationDetailsCollectionResponse.class, ICredentialUserRegistrationDetailsCollectionPage.class);
     }
 
-    public void get(final ICallback<ICredentialUserRegistrationDetailsCollectionPage> callback) {
+    public void get(final ICallback<? super ICredentialUserRegistrationDetailsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CredentialUserRegistrationDetailsCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback) {
+    public void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CredentialUserRegistrationDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class CredentialUserRegistrationDetailsCollectionRequest extends BaseColl
      */
     public ICredentialUserRegistrationDetailsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CredentialUserRegistrationDetailsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICredentialUserRegistrationDetailsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CredentialUserRegistrationDetailsCollectionRequest)this;
     }
 

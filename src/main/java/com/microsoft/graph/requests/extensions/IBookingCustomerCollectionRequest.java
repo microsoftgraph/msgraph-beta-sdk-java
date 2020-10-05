@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IBookingCustomerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IBookingCustomerCollectionPage> callback);
+    void get(final ICallback<? super IBookingCustomerCollectionPage> callback);
 
     IBookingCustomerCollectionPage get() throws ClientException;
 
-    void post(final BookingCustomer newBookingCustomer, final ICallback<BookingCustomer> callback);
+    void post(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback);
 
     BookingCustomer post(final BookingCustomer newBookingCustomer) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IBookingCustomerCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IBookingCustomerCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IBookingCustomerCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IBookingCustomerCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IBookingCustomerCollectionRequest skipToken(String skipToken);
+	IBookingCustomerCollectionRequest skipToken(final String skipToken);
 }

@@ -34,6 +34,6 @@ public class AuditEventGetAuditActivityTypesCollectionPage extends BaseCollectio
      * @param builder The request builder for the next collection page
      */
     public AuditEventGetAuditActivityTypesCollectionPage(final AuditEventGetAuditActivityTypesCollectionResponse response, final IAuditEventGetAuditActivityTypesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

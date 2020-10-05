@@ -45,7 +45,7 @@ public class SetWithReferenceRequest extends BaseRequest implements ISetWithRefe
         super(requestUrl, client, requestOptions, Set.class);
     }
 
-    public void post(final Set newSet, final IJsonBackedObject payload, final ICallback<Set> callback) {
+    public void post(final Set newSet, final IJsonBackedObject payload, final ICallback<? super Set> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -57,7 +57,7 @@ public class SetWithReferenceRequest extends BaseRequest implements ISetWithRefe
         return null;
     }
 
-    public void get(final ICallback<Set> callback) {
+    public void get(final ICallback<? super Set> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class SetWithReferenceRequest extends BaseRequest implements ISetWithRefe
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Set> callback) {
+	public void delete(final ICallback<? super Set> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -73,7 +73,7 @@ public class SetWithReferenceRequest extends BaseRequest implements ISetWithRefe
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Set sourceSet, final ICallback<Set> callback) {
+	public void patch(final Set sourceSet, final ICallback<? super Set> callback) {
 		send(HttpMethod.PATCH, callback, sourceSet);
 	}
 
@@ -101,16 +101,6 @@ public class SetWithReferenceRequest extends BaseRequest implements ISetWithRefe
      */
     public ISetWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SetWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISetWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SetWithReferenceRequest)this;
     }
 }

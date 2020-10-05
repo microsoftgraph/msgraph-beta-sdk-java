@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MobileAppTroubleshootingHistoryItem;
 import com.microsoft.graph.models.extensions.AppLogCollectionRequest;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCollectionPage;
 
 
@@ -108,19 +106,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
 
 
         if (json.has("appLogCollectionRequests")) {
-            final AppLogCollectionRequestCollectionResponse response = new AppLogCollectionRequestCollectionResponse();
-            if (json.has("appLogCollectionRequests@odata.nextLink")) {
-                response.nextLink = json.get("appLogCollectionRequests@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appLogCollectionRequests").toString(), JsonObject[].class);
-            final AppLogCollectionRequest[] array = new AppLogCollectionRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppLogCollectionRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            appLogCollectionRequests = new AppLogCollectionRequestCollectionPage(response, null);
+            appLogCollectionRequests = serializer.deserializeObject(json.get("appLogCollectionRequests").toString(), AppLogCollectionRequestCollectionPage.class);
         }
     }
 }

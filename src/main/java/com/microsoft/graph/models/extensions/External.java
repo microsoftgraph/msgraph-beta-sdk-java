@@ -6,11 +6,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ExternalConnection;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionPage;
 
 
@@ -23,8 +20,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the External.
  */
-public class External extends Entity implements IJsonBackedObject {
+public class External implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Connections.
@@ -75,19 +82,7 @@ public class External extends Entity implements IJsonBackedObject {
 
 
         if (json.has("connections")) {
-            final ExternalConnectionCollectionResponse response = new ExternalConnectionCollectionResponse();
-            if (json.has("connections@odata.nextLink")) {
-                response.nextLink = json.get("connections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connections").toString(), JsonObject[].class);
-            final ExternalConnection[] array = new ExternalConnection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExternalConnection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            connections = new ExternalConnectionCollectionPage(response, null);
+            connections = serializer.deserializeObject(json.get("connections").toString(), ExternalConnectionCollectionPage.class);
         }
     }
 }

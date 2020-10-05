@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IChatMessageHostedContentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChatMessageHostedContentCollectionPage> callback);
+    void get(final ICallback<? super IChatMessageHostedContentCollectionPage> callback);
 
     IChatMessageHostedContentCollectionPage get() throws ClientException;
 
-    void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback);
+    void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback);
 
     ChatMessageHostedContent post(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IChatMessageHostedContentCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IChatMessageHostedContentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IChatMessageHostedContentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IChatMessageHostedContentCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IChatMessageHostedContentCollectionRequest skipToken(String skipToken);
+	IChatMessageHostedContentCollectionRequest skipToken(final String skipToken);
 }

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPayloadResponseCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPayloadResponseCollectionPage> callback);
+    void get(final ICallback<? super IPayloadResponseCollectionPage> callback);
 
     IPayloadResponseCollectionPage get() throws ClientException;
 
-    void post(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback);
+    void post(final PayloadResponse newPayloadResponse, final ICallback<? super PayloadResponse> callback);
 
     PayloadResponse post(final PayloadResponse newPayloadResponse) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IPayloadResponseCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPayloadResponseCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPayloadResponseCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IPayloadResponseCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPayloadResponseCollectionRequest skipToken(String skipToken);
+	IPayloadResponseCollectionRequest skipToken(final String skipToken);
 }

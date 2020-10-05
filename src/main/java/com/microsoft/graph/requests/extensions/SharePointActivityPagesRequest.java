@@ -37,7 +37,7 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SharePointActivityPages> callback) {
+    public void get(final ICallback<? super SharePointActivityPages> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SharePointActivityPages> callback) {
+    public void delete(final ICallback<? super SharePointActivityPages> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
      * @param sourceSharePointActivityPages the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointActivityPages sourceSharePointActivityPages, final ICallback<SharePointActivityPages> callback) {
+    public void patch(final SharePointActivityPages sourceSharePointActivityPages, final ICallback<? super SharePointActivityPages> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointActivityPages);
     }
 
@@ -96,7 +96,7 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
      * @param newSharePointActivityPages the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointActivityPages newSharePointActivityPages, final ICallback<SharePointActivityPages> callback) {
+    public void post(final SharePointActivityPages newSharePointActivityPages, final ICallback<? super SharePointActivityPages> callback) {
         send(HttpMethod.POST, callback, newSharePointActivityPages);
     }
 
@@ -117,7 +117,7 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
      * @param newSharePointActivityPages the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointActivityPages newSharePointActivityPages, final ICallback<SharePointActivityPages> callback) {
+    public void put(final SharePointActivityPages newSharePointActivityPages, final ICallback<? super SharePointActivityPages> callback) {
         send(HttpMethod.PUT, callback, newSharePointActivityPages);
     }
 
@@ -151,17 +151,6 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
      */
      public ISharePointActivityPagesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointActivityPagesRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISharePointActivityPagesRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SharePointActivityPagesRequest)this;
      }
 

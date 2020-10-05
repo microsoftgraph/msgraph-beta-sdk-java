@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMailFolderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMailFolderCollectionPage> callback);
+    void get(final ICallback<? super IMailFolderCollectionPage> callback);
 
     IMailFolderCollectionPage get() throws ClientException;
 
-    void post(final MailFolder newMailFolder, final ICallback<MailFolder> callback);
+    void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback);
 
     MailFolder post(final MailFolder newMailFolder) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IMailFolderCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IMailFolderCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMailFolderCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IMailFolderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMailFolderCollectionRequest skipToken(String skipToken);
+	IMailFolderCollectionRequest skipToken(final String skipToken);
 }

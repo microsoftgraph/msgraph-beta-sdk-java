@@ -37,7 +37,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicySettingMapping> callback) {
+    public void get(final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicySettingMapping> callback) {
+    public void delete(final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param sourceGroupPolicySettingMapping the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicySettingMapping sourceGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback) {
+    public void patch(final GroupPolicySettingMapping sourceGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicySettingMapping);
     }
 
@@ -96,7 +96,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param newGroupPolicySettingMapping the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback) {
+    public void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.POST, callback, newGroupPolicySettingMapping);
     }
 
@@ -117,7 +117,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param newGroupPolicySettingMapping the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback) {
+    public void put(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicySettingMapping);
     }
 
@@ -151,17 +151,6 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      */
      public IGroupPolicySettingMappingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicySettingMappingRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicySettingMappingRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicySettingMappingRequest)this;
      }
 

@@ -39,7 +39,7 @@ public class DirectorySettingCollectionRequest extends BaseCollectionRequest<Dir
         super(requestUrl, client, requestOptions, DirectorySettingCollectionResponse.class, IDirectorySettingCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectorySettingCollectionPage> callback) {
+    public void get(final ICallback<? super IDirectorySettingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DirectorySettingCollectionRequest extends BaseCollectionRequest<Dir
         return buildFromResponse(response);
     }
 
-    public void post(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback) {
+    public void post(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectorySettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class DirectorySettingCollectionRequest extends BaseCollectionRequest<Dir
      */
     public IDirectorySettingCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DirectorySettingCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDirectorySettingCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectorySettingCollectionRequest)this;
     }
 

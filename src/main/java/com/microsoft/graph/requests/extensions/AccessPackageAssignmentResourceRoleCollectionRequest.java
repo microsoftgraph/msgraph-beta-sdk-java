@@ -40,7 +40,7 @@ public class AccessPackageAssignmentResourceRoleCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, AccessPackageAssignmentResourceRoleCollectionResponse.class, IAccessPackageAssignmentResourceRoleCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageAssignmentResourceRoleCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageAssignmentResourceRoleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessPackageAssignmentResourceRoleCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<AccessPackageAssignmentResourceRole> callback) {
+    public void post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<? super AccessPackageAssignmentResourceRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentResourceRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessPackageAssignmentResourceRoleCollectionRequest extends BaseCo
      */
     public IAccessPackageAssignmentResourceRoleCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageAssignmentResourceRoleCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentResourceRoleCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageAssignmentResourceRoleCollectionRequest)this;
     }
 

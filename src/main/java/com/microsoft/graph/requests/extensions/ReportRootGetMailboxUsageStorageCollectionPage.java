@@ -34,6 +34,6 @@ public class ReportRootGetMailboxUsageStorageCollectionPage extends BaseCollecti
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetMailboxUsageStorageCollectionPage(final ReportRootGetMailboxUsageStorageCollectionResponse response, final IReportRootGetMailboxUsageStorageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

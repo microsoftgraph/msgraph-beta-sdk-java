@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param sourceUserExperienceAnalyticsDeviceStartupHistory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsDeviceStartupHistory sourceUserExperienceAnalyticsDeviceStartupHistory, final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void patch(final UserExperienceAnalyticsDeviceStartupHistory sourceUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param newUserExperienceAnalyticsDeviceStartupHistory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param newUserExperienceAnalyticsDeviceStartupHistory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void put(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      */
      public IUserExperienceAnalyticsDeviceStartupHistoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsDeviceStartupHistoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsDeviceStartupHistoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsDeviceStartupHistoryRequest)this;
      }
 

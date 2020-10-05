@@ -23,6 +23,6 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage 
      * @param builder  the request builder for the next collection page
      */
     public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage(final AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse response, final IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

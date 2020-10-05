@@ -21,7 +21,7 @@ public interface IPrivilegedApprovalRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedApproval> callback);
+    void get(final ICallback<? super PrivilegedApproval> callback);
 
     /**
      * Gets the PrivilegedApproval from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedApprovalRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedApproval> callback);
+    void delete(final ICallback<? super PrivilegedApproval> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedApprovalRequest extends IHttpRequest {
      * @param sourcePrivilegedApproval the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedApproval sourcePrivilegedApproval, final ICallback<PrivilegedApproval> callback);
+    void patch(final PrivilegedApproval sourcePrivilegedApproval, final ICallback<? super PrivilegedApproval> callback);
 
     /**
      * Patches this PrivilegedApproval with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedApprovalRequest extends IHttpRequest {
      * @param newPrivilegedApproval the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback);
+    void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<? super PrivilegedApproval> callback);
 
     /**
      * Posts a PrivilegedApproval with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedApprovalRequest extends IHttpRequest {
      * @param newPrivilegedApproval the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback);
+    void put(final PrivilegedApproval newPrivilegedApproval, final ICallback<? super PrivilegedApproval> callback);
 
     /**
      * Posts a PrivilegedApproval with a new object

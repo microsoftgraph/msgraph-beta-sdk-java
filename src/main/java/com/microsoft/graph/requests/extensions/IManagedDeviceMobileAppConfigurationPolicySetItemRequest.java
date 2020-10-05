@@ -21,7 +21,7 @@ public interface IManagedDeviceMobileAppConfigurationPolicySetItemRequest extend
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
+    void get(final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
 
     /**
      * Gets the ManagedDeviceMobileAppConfigurationPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceMobileAppConfigurationPolicySetItemRequest extend
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
+    void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceMobileAppConfigurationPolicySetItemRequest extend
      * @param sourceManagedDeviceMobileAppConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceMobileAppConfigurationPolicySetItem sourceManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
+    void patch(final ManagedDeviceMobileAppConfigurationPolicySetItem sourceManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
 
     /**
      * Patches this ManagedDeviceMobileAppConfigurationPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceMobileAppConfigurationPolicySetItemRequest extend
      * @param newManagedDeviceMobileAppConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
+    void post(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceMobileAppConfigurationPolicySetItemRequest extend
      * @param newManagedDeviceMobileAppConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
+    void put(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationPolicySetItem with a new object

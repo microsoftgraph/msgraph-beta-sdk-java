@@ -40,7 +40,7 @@ public class GroupPolicyDefinitionValueCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionValueCollectionResponse.class, IGroupPolicyDefinitionValueCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupPolicyDefinitionValueCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupPolicyDefinitionValueCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GroupPolicyDefinitionValueCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback) {
+    public void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyDefinitionValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class GroupPolicyDefinitionValueCollectionRequest extends BaseCollectionR
      */
     public IGroupPolicyDefinitionValueCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyDefinitionValueCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionValueCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicyDefinitionValueCollectionRequest)this;
     }
 

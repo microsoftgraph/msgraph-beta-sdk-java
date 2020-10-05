@@ -23,6 +23,6 @@ public class SalesQuoteCollectionPage extends BaseCollectionPage<SalesQuote, ISa
      * @param builder  the request builder for the next collection page
      */
     public SalesQuoteCollectionPage(final SalesQuoteCollectionResponse response, final ISalesQuoteCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

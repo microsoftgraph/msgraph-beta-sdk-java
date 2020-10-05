@@ -40,7 +40,7 @@ public class WorkPositionCollectionRequest extends BaseCollectionRequest<WorkPos
         super(requestUrl, client, requestOptions, WorkPositionCollectionResponse.class, IWorkPositionCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkPositionCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkPositionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkPositionCollectionRequest extends BaseCollectionRequest<WorkPos
         return buildFromResponse(response);
     }
 
-    public void post(final WorkPosition newWorkPosition, final ICallback<WorkPosition> callback) {
+    public void post(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkPositionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WorkPositionCollectionRequest extends BaseCollectionRequest<WorkPos
      */
     public IWorkPositionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkPositionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkPositionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkPositionCollectionRequest)this;
     }
 

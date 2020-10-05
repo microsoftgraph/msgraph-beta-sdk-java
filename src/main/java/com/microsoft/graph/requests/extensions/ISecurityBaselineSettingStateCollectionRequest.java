@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISecurityBaselineSettingStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISecurityBaselineSettingStateCollectionPage> callback);
+    void get(final ICallback<? super ISecurityBaselineSettingStateCollectionPage> callback);
 
     ISecurityBaselineSettingStateCollectionPage get() throws ClientException;
 
-    void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback);
+    void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback);
 
     SecurityBaselineSettingState post(final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISecurityBaselineSettingStateCollectionRequest extends IHttpReq
      * @return the updated request
      */
     ISecurityBaselineSettingStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISecurityBaselineSettingStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISecurityBaselineSettingStateCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	ISecurityBaselineSettingStateCollectionRequest skipToken(String skipToken);
+	ISecurityBaselineSettingStateCollectionRequest skipToken(final String skipToken);
 }

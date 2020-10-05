@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlannerPlanCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IPlannerPlanCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IPlannerPlanCollectionWithReferencesPage> callback);
 
     IPlannerPlanCollectionWithReferencesPage get() throws ClientException;
 

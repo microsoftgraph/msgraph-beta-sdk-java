@@ -39,7 +39,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementScriptDeviceState> callback) {
+    public void get(final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementScriptDeviceState> callback) {
+    public void delete(final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param sourceDeviceManagementScriptDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScriptDeviceState sourceDeviceManagementScriptDeviceState, final ICallback<DeviceManagementScriptDeviceState> callback) {
+    public void patch(final DeviceManagementScriptDeviceState sourceDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptDeviceState);
     }
 
@@ -98,7 +98,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param newDeviceManagementScriptDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<DeviceManagementScriptDeviceState> callback) {
+    public void post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScriptDeviceState);
     }
 
@@ -119,7 +119,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param newDeviceManagementScriptDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<DeviceManagementScriptDeviceState> callback) {
+    public void put(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScriptDeviceState);
     }
 
@@ -153,17 +153,6 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      */
      public IDeviceManagementScriptDeviceStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptDeviceStateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementScriptDeviceStateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementScriptDeviceStateRequest)this;
      }
 

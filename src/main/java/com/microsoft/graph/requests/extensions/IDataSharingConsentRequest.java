@@ -21,7 +21,7 @@ public interface IDataSharingConsentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DataSharingConsent> callback);
+    void get(final ICallback<? super DataSharingConsent> callback);
 
     /**
      * Gets the DataSharingConsent from the service
@@ -36,7 +36,7 @@ public interface IDataSharingConsentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DataSharingConsent> callback);
+    void delete(final ICallback<? super DataSharingConsent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDataSharingConsentRequest extends IHttpRequest {
      * @param sourceDataSharingConsent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DataSharingConsent sourceDataSharingConsent, final ICallback<DataSharingConsent> callback);
+    void patch(final DataSharingConsent sourceDataSharingConsent, final ICallback<? super DataSharingConsent> callback);
 
     /**
      * Patches this DataSharingConsent with a source
@@ -68,7 +68,7 @@ public interface IDataSharingConsentRequest extends IHttpRequest {
      * @param newDataSharingConsent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback);
+    void post(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback);
 
     /**
      * Posts a DataSharingConsent with a new object
@@ -85,7 +85,7 @@ public interface IDataSharingConsentRequest extends IHttpRequest {
      * @param newDataSharingConsent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback);
+    void put(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback);
 
     /**
      * Posts a DataSharingConsent with a new object

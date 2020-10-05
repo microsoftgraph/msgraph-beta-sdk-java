@@ -39,7 +39,7 @@ public class ReportRootGetOverallPrintUsageSummaryCollectionRequest extends Base
     }
 
 
-    public void get(final ICallback<IReportRootGetOverallPrintUsageSummaryCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOverallPrintUsageSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOverallPrintUsageSummaryCollectionRequest extends Base
      */
     public IReportRootGetOverallPrintUsageSummaryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOverallPrintUsageSummaryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOverallPrintUsageSummaryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOverallPrintUsageSummaryCollectionRequest)this;
     }
 

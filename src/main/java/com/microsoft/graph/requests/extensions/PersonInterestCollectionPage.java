@@ -23,6 +23,6 @@ public class PersonInterestCollectionPage extends BaseCollectionPage<PersonInter
      * @param builder  the request builder for the next collection page
      */
     public PersonInterestCollectionPage(final PersonInterestCollectionResponse response, final IPersonInterestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

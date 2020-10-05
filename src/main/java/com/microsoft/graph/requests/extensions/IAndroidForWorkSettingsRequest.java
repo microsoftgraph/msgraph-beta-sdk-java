@@ -21,7 +21,7 @@ public interface IAndroidForWorkSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkSettings> callback);
+    void get(final ICallback<? super AndroidForWorkSettings> callback);
 
     /**
      * Gets the AndroidForWorkSettings from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkSettings> callback);
+    void delete(final ICallback<? super AndroidForWorkSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkSettingsRequest extends IHttpRequest {
      * @param sourceAndroidForWorkSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkSettings sourceAndroidForWorkSettings, final ICallback<AndroidForWorkSettings> callback);
+    void patch(final AndroidForWorkSettings sourceAndroidForWorkSettings, final ICallback<? super AndroidForWorkSettings> callback);
 
     /**
      * Patches this AndroidForWorkSettings with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkSettingsRequest extends IHttpRequest {
      * @param newAndroidForWorkSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkSettings newAndroidForWorkSettings, final ICallback<AndroidForWorkSettings> callback);
+    void post(final AndroidForWorkSettings newAndroidForWorkSettings, final ICallback<? super AndroidForWorkSettings> callback);
 
     /**
      * Posts a AndroidForWorkSettings with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkSettingsRequest extends IHttpRequest {
      * @param newAndroidForWorkSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkSettings newAndroidForWorkSettings, final ICallback<AndroidForWorkSettings> callback);
+    void put(final AndroidForWorkSettings newAndroidForWorkSettings, final ICallback<? super AndroidForWorkSettings> callback);
 
     /**
      * Posts a AndroidForWorkSettings with a new object

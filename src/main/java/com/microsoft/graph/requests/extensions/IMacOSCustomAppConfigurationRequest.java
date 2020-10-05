@@ -21,7 +21,7 @@ public interface IMacOSCustomAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSCustomAppConfiguration> callback);
+    void get(final ICallback<? super MacOSCustomAppConfiguration> callback);
 
     /**
      * Gets the MacOSCustomAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSCustomAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSCustomAppConfiguration> callback);
+    void delete(final ICallback<? super MacOSCustomAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSCustomAppConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSCustomAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSCustomAppConfiguration sourceMacOSCustomAppConfiguration, final ICallback<MacOSCustomAppConfiguration> callback);
+    void patch(final MacOSCustomAppConfiguration sourceMacOSCustomAppConfiguration, final ICallback<? super MacOSCustomAppConfiguration> callback);
 
     /**
      * Patches this MacOSCustomAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSCustomAppConfigurationRequest extends IHttpRequest {
      * @param newMacOSCustomAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSCustomAppConfiguration newMacOSCustomAppConfiguration, final ICallback<MacOSCustomAppConfiguration> callback);
+    void post(final MacOSCustomAppConfiguration newMacOSCustomAppConfiguration, final ICallback<? super MacOSCustomAppConfiguration> callback);
 
     /**
      * Posts a MacOSCustomAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSCustomAppConfigurationRequest extends IHttpRequest {
      * @param newMacOSCustomAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSCustomAppConfiguration newMacOSCustomAppConfiguration, final ICallback<MacOSCustomAppConfiguration> callback);
+    void put(final MacOSCustomAppConfiguration newMacOSCustomAppConfiguration, final ICallback<? super MacOSCustomAppConfiguration> callback);
 
     /**
      * Posts a MacOSCustomAppConfiguration with a new object

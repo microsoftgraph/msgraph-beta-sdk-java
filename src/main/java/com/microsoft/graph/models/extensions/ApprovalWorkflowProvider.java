@@ -6,14 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.BusinessFlow;
 import com.microsoft.graph.models.extensions.GovernancePolicyTemplate;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.BusinessFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.BusinessFlowCollectionPage;
-import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionPage;
 
 
@@ -102,51 +99,15 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
 
 
         if (json.has("businessFlows")) {
-            final BusinessFlowCollectionResponse response = new BusinessFlowCollectionResponse();
-            if (json.has("businessFlows@odata.nextLink")) {
-                response.nextLink = json.get("businessFlows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("businessFlows").toString(), JsonObject[].class);
-            final BusinessFlow[] array = new BusinessFlow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BusinessFlow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            businessFlows = new BusinessFlowCollectionPage(response, null);
+            businessFlows = serializer.deserializeObject(json.get("businessFlows").toString(), BusinessFlowCollectionPage.class);
         }
 
         if (json.has("businessFlowsWithRequestsAwaitingMyDecision")) {
-            final BusinessFlowCollectionResponse response = new BusinessFlowCollectionResponse();
-            if (json.has("businessFlowsWithRequestsAwaitingMyDecision@odata.nextLink")) {
-                response.nextLink = json.get("businessFlowsWithRequestsAwaitingMyDecision@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("businessFlowsWithRequestsAwaitingMyDecision").toString(), JsonObject[].class);
-            final BusinessFlow[] array = new BusinessFlow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BusinessFlow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            businessFlowsWithRequestsAwaitingMyDecision = new BusinessFlowCollectionPage(response, null);
+            businessFlowsWithRequestsAwaitingMyDecision = serializer.deserializeObject(json.get("businessFlowsWithRequestsAwaitingMyDecision").toString(), BusinessFlowCollectionPage.class);
         }
 
         if (json.has("policyTemplates")) {
-            final GovernancePolicyTemplateCollectionResponse response = new GovernancePolicyTemplateCollectionResponse();
-            if (json.has("policyTemplates@odata.nextLink")) {
-                response.nextLink = json.get("policyTemplates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policyTemplates").toString(), JsonObject[].class);
-            final GovernancePolicyTemplate[] array = new GovernancePolicyTemplate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernancePolicyTemplate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            policyTemplates = new GovernancePolicyTemplateCollectionPage(response, null);
+            policyTemplates = serializer.deserializeObject(json.get("policyTemplates").toString(), GovernancePolicyTemplateCollectionPage.class);
         }
     }
 }

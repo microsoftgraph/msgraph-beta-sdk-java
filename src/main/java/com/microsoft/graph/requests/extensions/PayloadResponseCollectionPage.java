@@ -23,6 +23,6 @@ public class PayloadResponseCollectionPage extends BaseCollectionPage<PayloadRes
      * @param builder  the request builder for the next collection page
      */
     public PayloadResponseCollectionPage(final PayloadResponseCollectionResponse response, final IPayloadResponseCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

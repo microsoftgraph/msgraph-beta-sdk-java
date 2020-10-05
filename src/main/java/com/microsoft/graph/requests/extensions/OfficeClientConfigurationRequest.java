@@ -57,7 +57,7 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OfficeClientConfiguration> callback) {
+    public void get(final ICallback<? super OfficeClientConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OfficeClientConfiguration> callback) {
+    public void delete(final ICallback<? super OfficeClientConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
      * @param sourceOfficeClientConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfficeClientConfiguration sourceOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback) {
+    public void patch(final OfficeClientConfiguration sourceOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceOfficeClientConfiguration);
     }
 
@@ -116,7 +116,7 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
      * @param newOfficeClientConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback) {
+    public void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback) {
         send(HttpMethod.POST, callback, newOfficeClientConfiguration);
     }
 
@@ -137,7 +137,7 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
      * @param newOfficeClientConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback) {
+    public void put(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback) {
         send(HttpMethod.PUT, callback, newOfficeClientConfiguration);
     }
 
@@ -171,17 +171,6 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
      */
      public IOfficeClientConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OfficeClientConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOfficeClientConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OfficeClientConfigurationRequest)this;
      }
 

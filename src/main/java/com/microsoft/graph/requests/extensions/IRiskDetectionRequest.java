@@ -21,7 +21,7 @@ public interface IRiskDetectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RiskDetection> callback);
+    void get(final ICallback<? super RiskDetection> callback);
 
     /**
      * Gets the RiskDetection from the service
@@ -36,7 +36,7 @@ public interface IRiskDetectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RiskDetection> callback);
+    void delete(final ICallback<? super RiskDetection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRiskDetectionRequest extends IHttpRequest {
      * @param sourceRiskDetection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RiskDetection sourceRiskDetection, final ICallback<RiskDetection> callback);
+    void patch(final RiskDetection sourceRiskDetection, final ICallback<? super RiskDetection> callback);
 
     /**
      * Patches this RiskDetection with a source
@@ -68,7 +68,7 @@ public interface IRiskDetectionRequest extends IHttpRequest {
      * @param newRiskDetection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RiskDetection newRiskDetection, final ICallback<RiskDetection> callback);
+    void post(final RiskDetection newRiskDetection, final ICallback<? super RiskDetection> callback);
 
     /**
      * Posts a RiskDetection with a new object
@@ -85,7 +85,7 @@ public interface IRiskDetectionRequest extends IHttpRequest {
      * @param newRiskDetection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RiskDetection newRiskDetection, final ICallback<RiskDetection> callback);
+    void put(final RiskDetection newRiskDetection, final ICallback<? super RiskDetection> callback);
 
     /**
      * Posts a RiskDetection with a new object

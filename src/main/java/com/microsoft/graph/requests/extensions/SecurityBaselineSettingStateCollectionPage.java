@@ -23,6 +23,6 @@ public class SecurityBaselineSettingStateCollectionPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public SecurityBaselineSettingStateCollectionPage(final SecurityBaselineSettingStateCollectionResponse response, final ISecurityBaselineSettingStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

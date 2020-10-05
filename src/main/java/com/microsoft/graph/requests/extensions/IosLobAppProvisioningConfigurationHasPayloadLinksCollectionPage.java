@@ -34,6 +34,6 @@ public class IosLobAppProvisioningConfigurationHasPayloadLinksCollectionPage ext
      * @param builder The request builder for the next collection page
      */
     public IosLobAppProvisioningConfigurationHasPayloadLinksCollectionPage(final IosLobAppProvisioningConfigurationHasPayloadLinksCollectionResponse response, final IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

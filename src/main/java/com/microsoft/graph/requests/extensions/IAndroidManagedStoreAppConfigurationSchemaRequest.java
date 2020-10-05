@@ -21,7 +21,7 @@ public interface IAndroidManagedStoreAppConfigurationSchemaRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+    void get(final ICallback<? super AndroidManagedStoreAppConfigurationSchema> callback);
 
     /**
      * Gets the AndroidManagedStoreAppConfigurationSchema from the service
@@ -36,7 +36,7 @@ public interface IAndroidManagedStoreAppConfigurationSchemaRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+    void delete(final ICallback<? super AndroidManagedStoreAppConfigurationSchema> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidManagedStoreAppConfigurationSchemaRequest extends IHttp
      * @param sourceAndroidManagedStoreAppConfigurationSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidManagedStoreAppConfigurationSchema sourceAndroidManagedStoreAppConfigurationSchema, final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+    void patch(final AndroidManagedStoreAppConfigurationSchema sourceAndroidManagedStoreAppConfigurationSchema, final ICallback<? super AndroidManagedStoreAppConfigurationSchema> callback);
 
     /**
      * Patches this AndroidManagedStoreAppConfigurationSchema with a source
@@ -68,7 +68,7 @@ public interface IAndroidManagedStoreAppConfigurationSchemaRequest extends IHttp
      * @param newAndroidManagedStoreAppConfigurationSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+    void post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<? super AndroidManagedStoreAppConfigurationSchema> callback);
 
     /**
      * Posts a AndroidManagedStoreAppConfigurationSchema with a new object
@@ -85,7 +85,7 @@ public interface IAndroidManagedStoreAppConfigurationSchemaRequest extends IHttp
      * @param newAndroidManagedStoreAppConfigurationSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+    void put(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<? super AndroidManagedStoreAppConfigurationSchema> callback);
 
     /**
      * Posts a AndroidManagedStoreAppConfigurationSchema with a new object

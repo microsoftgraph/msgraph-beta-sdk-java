@@ -23,6 +23,6 @@ public class EmbeddedSIMDeviceStateCollectionPage extends BaseCollectionPage<Emb
      * @param builder  the request builder for the next collection page
      */
     public EmbeddedSIMDeviceStateCollectionPage(final EmbeddedSIMDeviceStateCollectionResponse response, final IEmbeddedSIMDeviceStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

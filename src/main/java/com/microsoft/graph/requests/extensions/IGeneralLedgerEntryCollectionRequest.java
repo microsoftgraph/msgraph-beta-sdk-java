@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGeneralLedgerEntryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGeneralLedgerEntryCollectionPage> callback);
+    void get(final ICallback<? super IGeneralLedgerEntryCollectionPage> callback);
 
     IGeneralLedgerEntryCollectionPage get() throws ClientException;
 
-    void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback);
+    void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback);
 
     GeneralLedgerEntry post(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IGeneralLedgerEntryCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IGeneralLedgerEntryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGeneralLedgerEntryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IGeneralLedgerEntryCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGeneralLedgerEntryCollectionRequest skipToken(String skipToken);
+	IGeneralLedgerEntryCollectionRequest skipToken(final String skipToken);
 }

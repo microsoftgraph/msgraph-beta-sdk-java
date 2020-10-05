@@ -41,7 +41,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void get(final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void delete(final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param sourceAndroidForWorkImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void patch(final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -100,7 +100,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param newAndroidForWorkImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void post(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -121,7 +121,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param newAndroidForWorkImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -155,17 +155,6 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      */
      public IAndroidForWorkImportedPFXCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkImportedPFXCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkImportedPFXCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkImportedPFXCertificateProfileRequest)this;
      }
 

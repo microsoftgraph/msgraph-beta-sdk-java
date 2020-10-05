@@ -44,7 +44,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SensitivityLabel> callback) {
+    public void get(final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SensitivityLabel> callback) {
+    public void delete(final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param sourceSensitivityLabel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SensitivityLabel sourceSensitivityLabel, final ICallback<SensitivityLabel> callback) {
+    public void patch(final SensitivityLabel sourceSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.PATCH, callback, sourceSensitivityLabel);
     }
 
@@ -103,7 +103,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param newSensitivityLabel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback) {
+    public void post(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.POST, callback, newSensitivityLabel);
     }
 
@@ -124,7 +124,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param newSensitivityLabel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback) {
+    public void put(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.PUT, callback, newSensitivityLabel);
     }
 
@@ -158,17 +158,6 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      */
      public ISensitivityLabelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SensitivityLabelRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISensitivityLabelRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SensitivityLabelRequest)this;
      }
 

@@ -52,7 +52,7 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppRelationship> callback) {
+    public void get(final ICallback<? super MobileAppRelationship> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppRelationship> callback) {
+    public void delete(final ICallback<? super MobileAppRelationship> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
      * @param sourceMobileAppRelationship the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppRelationship sourceMobileAppRelationship, final ICallback<MobileAppRelationship> callback) {
+    public void patch(final MobileAppRelationship sourceMobileAppRelationship, final ICallback<? super MobileAppRelationship> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppRelationship);
     }
 
@@ -111,7 +111,7 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
      * @param newMobileAppRelationship the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppRelationship newMobileAppRelationship, final ICallback<MobileAppRelationship> callback) {
+    public void post(final MobileAppRelationship newMobileAppRelationship, final ICallback<? super MobileAppRelationship> callback) {
         send(HttpMethod.POST, callback, newMobileAppRelationship);
     }
 
@@ -132,7 +132,7 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
      * @param newMobileAppRelationship the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppRelationship newMobileAppRelationship, final ICallback<MobileAppRelationship> callback) {
+    public void put(final MobileAppRelationship newMobileAppRelationship, final ICallback<? super MobileAppRelationship> callback) {
         send(HttpMethod.PUT, callback, newMobileAppRelationship);
     }
 
@@ -166,17 +166,6 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
      */
      public IMobileAppRelationshipRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppRelationshipRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppRelationshipRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppRelationshipRequest)this;
      }
 

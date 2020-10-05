@@ -23,6 +23,6 @@ public class ReportRootCollectionPage extends BaseCollectionPage<ReportRoot, IRe
      * @param builder  the request builder for the next collection page
      */
     public ReportRootCollectionPage(final ReportRootCollectionResponse response, final IReportRootCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

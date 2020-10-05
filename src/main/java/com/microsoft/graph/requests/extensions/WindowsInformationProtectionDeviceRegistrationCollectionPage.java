@@ -23,6 +23,6 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionPage extend
      * @param builder  the request builder for the next collection page
      */
     public WindowsInformationProtectionDeviceRegistrationCollectionPage(final WindowsInformationProtectionDeviceRegistrationCollectionResponse response, final IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

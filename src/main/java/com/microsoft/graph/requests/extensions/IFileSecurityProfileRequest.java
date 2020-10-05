@@ -21,7 +21,7 @@ public interface IFileSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FileSecurityProfile> callback);
+    void get(final ICallback<? super FileSecurityProfile> callback);
 
     /**
      * Gets the FileSecurityProfile from the service
@@ -36,7 +36,7 @@ public interface IFileSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FileSecurityProfile> callback);
+    void delete(final ICallback<? super FileSecurityProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFileSecurityProfileRequest extends IHttpRequest {
      * @param sourceFileSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FileSecurityProfile sourceFileSecurityProfile, final ICallback<FileSecurityProfile> callback);
+    void patch(final FileSecurityProfile sourceFileSecurityProfile, final ICallback<? super FileSecurityProfile> callback);
 
     /**
      * Patches this FileSecurityProfile with a source
@@ -68,7 +68,7 @@ public interface IFileSecurityProfileRequest extends IHttpRequest {
      * @param newFileSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<FileSecurityProfile> callback);
+    void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<? super FileSecurityProfile> callback);
 
     /**
      * Posts a FileSecurityProfile with a new object
@@ -85,7 +85,7 @@ public interface IFileSecurityProfileRequest extends IHttpRequest {
      * @param newFileSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FileSecurityProfile newFileSecurityProfile, final ICallback<FileSecurityProfile> callback);
+    void put(final FileSecurityProfile newFileSecurityProfile, final ICallback<? super FileSecurityProfile> callback);
 
     /**
      * Posts a FileSecurityProfile with a new object

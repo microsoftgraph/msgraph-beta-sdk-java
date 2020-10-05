@@ -39,7 +39,7 @@ public class AgreementCollectionRequest extends BaseCollectionRequest<AgreementC
         super(requestUrl, client, requestOptions, AgreementCollectionResponse.class, IAgreementCollectionPage.class);
     }
 
-    public void get(final ICallback<IAgreementCollectionPage> callback) {
+    public void get(final ICallback<? super IAgreementCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AgreementCollectionRequest extends BaseCollectionRequest<AgreementC
         return buildFromResponse(response);
     }
 
-    public void post(final Agreement newAgreement, final ICallback<Agreement> callback) {
+    public void post(final Agreement newAgreement, final ICallback<? super Agreement> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AgreementRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AgreementCollectionRequest extends BaseCollectionRequest<AgreementC
      */
     public IAgreementCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AgreementCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAgreementCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AgreementCollectionRequest)this;
     }
 

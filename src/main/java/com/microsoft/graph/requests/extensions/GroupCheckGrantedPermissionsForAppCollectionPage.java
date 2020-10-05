@@ -34,6 +34,6 @@ public class GroupCheckGrantedPermissionsForAppCollectionPage extends BaseCollec
      * @param builder The request builder for the next collection page
      */
     public GroupCheckGrantedPermissionsForAppCollectionPage(final GroupCheckGrantedPermissionsForAppCollectionResponse response, final IGroupCheckGrantedPermissionsForAppCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

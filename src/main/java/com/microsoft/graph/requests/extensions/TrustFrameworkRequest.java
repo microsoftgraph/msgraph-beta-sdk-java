@@ -45,7 +45,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TrustFramework> callback) {
+    public void get(final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TrustFramework> callback) {
+    public void delete(final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param sourceTrustFramework the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TrustFramework sourceTrustFramework, final ICallback<TrustFramework> callback) {
+    public void patch(final TrustFramework sourceTrustFramework, final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.PATCH, callback, sourceTrustFramework);
     }
 
@@ -104,7 +104,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param newTrustFramework the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TrustFramework newTrustFramework, final ICallback<TrustFramework> callback) {
+    public void post(final TrustFramework newTrustFramework, final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.POST, callback, newTrustFramework);
     }
 
@@ -125,7 +125,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param newTrustFramework the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TrustFramework newTrustFramework, final ICallback<TrustFramework> callback) {
+    public void put(final TrustFramework newTrustFramework, final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.PUT, callback, newTrustFramework);
     }
 
@@ -159,17 +159,6 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      */
      public ITrustFrameworkRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TrustFrameworkRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITrustFrameworkRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TrustFrameworkRequest)this;
      }
 

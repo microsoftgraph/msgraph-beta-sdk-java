@@ -40,7 +40,7 @@ public class MobileAppProvisioningConfigGroupAssignmentCollectionRequest extends
         super(requestUrl, client, requestOptions, MobileAppProvisioningConfigGroupAssignmentCollectionResponse.class, IMobileAppProvisioningConfigGroupAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppProvisioningConfigGroupAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppProvisioningConfigGroupAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppProvisioningConfigGroupAssignmentCollectionRequest extends
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppProvisioningConfigGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MobileAppProvisioningConfigGroupAssignmentCollectionRequest extends
      */
     public IMobileAppProvisioningConfigGroupAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppProvisioningConfigGroupAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppProvisioningConfigGroupAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppProvisioningConfigGroupAssignmentCollectionRequest)this;
     }
 

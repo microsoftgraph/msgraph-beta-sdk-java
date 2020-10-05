@@ -52,7 +52,7 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
         super(requestUrl, client, requestOptions, Chat.class);
     }
 
-    public void post(final Chat newChat, final IJsonBackedObject payload, final ICallback<Chat> callback) {
+    public void post(final Chat newChat, final IJsonBackedObject payload, final ICallback<? super Chat> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -64,7 +64,7 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
         return null;
     }
 
-    public void get(final ICallback<Chat> callback) {
+    public void get(final ICallback<? super Chat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Chat> callback) {
+	public void delete(final ICallback<? super Chat> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -80,7 +80,7 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Chat sourceChat, final ICallback<Chat> callback) {
+	public void patch(final Chat sourceChat, final ICallback<? super Chat> callback) {
 		send(HttpMethod.PATCH, callback, sourceChat);
 	}
 
@@ -108,16 +108,6 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
      */
     public IChatWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ChatWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IChatWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ChatWithReferenceRequest)this;
     }
 }

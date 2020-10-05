@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedRoleCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedRoleCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedRoleCollectionPage> callback);
 
     IPrivilegedRoleCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback);
+    void post(final PrivilegedRole newPrivilegedRole, final ICallback<? super PrivilegedRole> callback);
 
     PrivilegedRole post(final PrivilegedRole newPrivilegedRole) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPrivilegedRoleCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrivilegedRoleCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedRoleCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPrivilegedRoleCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrivilegedRoleCollectionRequest skipToken(String skipToken);
+	IPrivilegedRoleCollectionRequest skipToken(final String skipToken);
 }

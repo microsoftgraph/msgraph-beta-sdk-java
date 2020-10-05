@@ -21,7 +21,7 @@ public interface IPrintConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintConnector> callback);
+    void get(final ICallback<? super PrintConnector> callback);
 
     /**
      * Gets the PrintConnector from the service
@@ -36,7 +36,7 @@ public interface IPrintConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintConnector> callback);
+    void delete(final ICallback<? super PrintConnector> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintConnectorRequest extends IHttpRequest {
      * @param sourcePrintConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintConnector sourcePrintConnector, final ICallback<PrintConnector> callback);
+    void patch(final PrintConnector sourcePrintConnector, final ICallback<? super PrintConnector> callback);
 
     /**
      * Patches this PrintConnector with a source
@@ -68,7 +68,7 @@ public interface IPrintConnectorRequest extends IHttpRequest {
      * @param newPrintConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback);
+    void post(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback);
 
     /**
      * Posts a PrintConnector with a new object
@@ -85,7 +85,7 @@ public interface IPrintConnectorRequest extends IHttpRequest {
      * @param newPrintConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback);
+    void put(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback);
 
     /**
      * Posts a PrintConnector with a new object

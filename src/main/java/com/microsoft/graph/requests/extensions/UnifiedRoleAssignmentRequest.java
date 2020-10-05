@@ -43,7 +43,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UnifiedRoleAssignment> callback) {
+    public void get(final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UnifiedRoleAssignment> callback) {
+    public void delete(final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param sourceUnifiedRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnifiedRoleAssignment sourceUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback) {
+    public void patch(final UnifiedRoleAssignment sourceUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceUnifiedRoleAssignment);
     }
 
@@ -102,7 +102,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param newUnifiedRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback) {
+    public void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newUnifiedRoleAssignment);
     }
 
@@ -123,7 +123,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param newUnifiedRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback) {
+    public void put(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newUnifiedRoleAssignment);
     }
 
@@ -157,17 +157,6 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      */
      public IUnifiedRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnifiedRoleAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUnifiedRoleAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UnifiedRoleAssignmentRequest)this;
      }
 

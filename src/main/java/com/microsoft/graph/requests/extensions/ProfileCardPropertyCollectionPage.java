@@ -23,6 +23,6 @@ public class ProfileCardPropertyCollectionPage extends BaseCollectionPage<Profil
      * @param builder  the request builder for the next collection page
      */
     public ProfileCardPropertyCollectionPage(final ProfileCardPropertyCollectionResponse response, final IProfileCardPropertyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

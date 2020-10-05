@@ -53,7 +53,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AuthenticationMethod> callback) {
+    public void get(final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AuthenticationMethod> callback) {
+    public void delete(final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param sourceAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthenticationMethod sourceAuthenticationMethod, final ICallback<AuthenticationMethod> callback) {
+    public void patch(final AuthenticationMethod sourceAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthenticationMethod);
     }
 
@@ -112,7 +112,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param newAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthenticationMethod newAuthenticationMethod, final ICallback<AuthenticationMethod> callback) {
+    public void post(final AuthenticationMethod newAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newAuthenticationMethod);
     }
 
@@ -133,7 +133,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param newAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthenticationMethod newAuthenticationMethod, final ICallback<AuthenticationMethod> callback) {
+    public void put(final AuthenticationMethod newAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newAuthenticationMethod);
     }
 
@@ -167,17 +167,6 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      */
      public IAuthenticationMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAuthenticationMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AuthenticationMethodRequest)this;
      }
 

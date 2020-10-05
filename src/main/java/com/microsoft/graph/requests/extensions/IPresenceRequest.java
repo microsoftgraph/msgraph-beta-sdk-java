@@ -21,7 +21,7 @@ public interface IPresenceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Presence> callback);
+    void get(final ICallback<? super Presence> callback);
 
     /**
      * Gets the Presence from the service
@@ -36,7 +36,7 @@ public interface IPresenceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Presence> callback);
+    void delete(final ICallback<? super Presence> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPresenceRequest extends IHttpRequest {
      * @param sourcePresence the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Presence sourcePresence, final ICallback<Presence> callback);
+    void patch(final Presence sourcePresence, final ICallback<? super Presence> callback);
 
     /**
      * Patches this Presence with a source
@@ -68,7 +68,7 @@ public interface IPresenceRequest extends IHttpRequest {
      * @param newPresence the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Presence newPresence, final ICallback<Presence> callback);
+    void post(final Presence newPresence, final ICallback<? super Presence> callback);
 
     /**
      * Posts a Presence with a new object
@@ -85,7 +85,7 @@ public interface IPresenceRequest extends IHttpRequest {
      * @param newPresence the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Presence newPresence, final ICallback<Presence> callback);
+    void put(final Presence newPresence, final ICallback<? super Presence> callback);
 
     /**
      * Posts a Presence with a new object

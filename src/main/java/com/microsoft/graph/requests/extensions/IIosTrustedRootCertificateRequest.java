@@ -21,7 +21,7 @@ public interface IIosTrustedRootCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosTrustedRootCertificate> callback);
+    void get(final ICallback<? super IosTrustedRootCertificate> callback);
 
     /**
      * Gets the IosTrustedRootCertificate from the service
@@ -36,7 +36,7 @@ public interface IIosTrustedRootCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosTrustedRootCertificate> callback);
+    void delete(final ICallback<? super IosTrustedRootCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosTrustedRootCertificateRequest extends IHttpRequest {
      * @param sourceIosTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+    void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback);
 
     /**
      * Patches this IosTrustedRootCertificate with a source
@@ -68,7 +68,7 @@ public interface IIosTrustedRootCertificateRequest extends IHttpRequest {
      * @param newIosTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+    void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback);
 
     /**
      * Posts a IosTrustedRootCertificate with a new object
@@ -85,7 +85,7 @@ public interface IIosTrustedRootCertificateRequest extends IHttpRequest {
      * @param newIosTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+    void put(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback);
 
     /**
      * Posts a IosTrustedRootCertificate with a new object

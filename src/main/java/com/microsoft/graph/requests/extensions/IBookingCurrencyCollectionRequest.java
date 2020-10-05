@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IBookingCurrencyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IBookingCurrencyCollectionPage> callback);
+    void get(final ICallback<? super IBookingCurrencyCollectionPage> callback);
 
     IBookingCurrencyCollectionPage get() throws ClientException;
 
-    void post(final BookingCurrency newBookingCurrency, final ICallback<BookingCurrency> callback);
+    void post(final BookingCurrency newBookingCurrency, final ICallback<? super BookingCurrency> callback);
 
     BookingCurrency post(final BookingCurrency newBookingCurrency) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IBookingCurrencyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IBookingCurrencyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IBookingCurrencyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IBookingCurrencyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IBookingCurrencyCollectionRequest skipToken(String skipToken);
+	IBookingCurrencyCollectionRequest skipToken(final String skipToken);
 }

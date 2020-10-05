@@ -36,7 +36,7 @@ public class EventMessageRequestDeclineRequest extends BaseRequest implements IE
         body = new EventMessageRequestDeclineBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class EventMessageRequestDeclineRequest extends BaseRequest implements IE
      */
     public IEventMessageRequestDeclineRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EventMessageRequestDeclineRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEventMessageRequestDeclineRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EventMessageRequestDeclineRequest)this;
     }
 

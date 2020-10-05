@@ -43,7 +43,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosScepCertificateProfile> callback) {
+    public void get(final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosScepCertificateProfile> callback) {
+    public void delete(final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param sourceIosScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosScepCertificateProfile sourceIosScepCertificateProfile, final ICallback<IosScepCertificateProfile> callback) {
+    public void patch(final IosScepCertificateProfile sourceIosScepCertificateProfile, final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIosScepCertificateProfile);
     }
 
@@ -102,7 +102,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param newIosScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<IosScepCertificateProfile> callback) {
+    public void post(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newIosScepCertificateProfile);
     }
 
@@ -123,7 +123,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param newIosScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<IosScepCertificateProfile> callback) {
+    public void put(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newIosScepCertificateProfile);
     }
 
@@ -157,17 +157,6 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      */
      public IIosScepCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosScepCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosScepCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosScepCertificateProfileRequest)this;
      }
 

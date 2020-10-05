@@ -23,6 +23,6 @@ public class TermCollectionPage extends BaseCollectionPage<Term, ITermCollection
      * @param builder  the request builder for the next collection page
      */
     public TermCollectionPage(final TermCollectionResponse response, final ITermCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

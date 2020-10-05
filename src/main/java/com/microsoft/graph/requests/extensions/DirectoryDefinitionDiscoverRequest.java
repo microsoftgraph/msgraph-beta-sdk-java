@@ -37,7 +37,7 @@ public class DirectoryDefinitionDiscoverRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<DirectoryDefinition> callback) {
+    public void post(final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class DirectoryDefinitionDiscoverRequest extends BaseRequest implements I
      */
     public IDirectoryDefinitionDiscoverRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryDefinitionDiscoverRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDirectoryDefinitionDiscoverRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DirectoryDefinitionDiscoverRequest)this;
     }
 

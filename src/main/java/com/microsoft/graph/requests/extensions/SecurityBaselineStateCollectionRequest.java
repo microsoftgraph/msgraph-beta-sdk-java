@@ -40,7 +40,7 @@ public class SecurityBaselineStateCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, SecurityBaselineStateCollectionResponse.class, ISecurityBaselineStateCollectionPage.class);
     }
 
-    public void get(final ICallback<ISecurityBaselineStateCollectionPage> callback) {
+    public void get(final ICallback<? super ISecurityBaselineStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecurityBaselineStateCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final SecurityBaselineState newSecurityBaselineState, final ICallback<SecurityBaselineState> callback) {
+    public void post(final SecurityBaselineState newSecurityBaselineState, final ICallback<? super SecurityBaselineState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityBaselineStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SecurityBaselineStateCollectionRequest extends BaseCollectionReques
      */
     public ISecurityBaselineStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SecurityBaselineStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISecurityBaselineStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SecurityBaselineStateCollectionRequest)this;
     }
 

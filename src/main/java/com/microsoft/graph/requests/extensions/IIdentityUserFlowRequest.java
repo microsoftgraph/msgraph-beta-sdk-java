@@ -21,7 +21,7 @@ public interface IIdentityUserFlowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IdentityUserFlow> callback);
+    void get(final ICallback<? super IdentityUserFlow> callback);
 
     /**
      * Gets the IdentityUserFlow from the service
@@ -36,7 +36,7 @@ public interface IIdentityUserFlowRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IdentityUserFlow> callback);
+    void delete(final ICallback<? super IdentityUserFlow> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIdentityUserFlowRequest extends IHttpRequest {
      * @param sourceIdentityUserFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IdentityUserFlow sourceIdentityUserFlow, final ICallback<IdentityUserFlow> callback);
+    void patch(final IdentityUserFlow sourceIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback);
 
     /**
      * Patches this IdentityUserFlow with a source
@@ -68,7 +68,7 @@ public interface IIdentityUserFlowRequest extends IHttpRequest {
      * @param newIdentityUserFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback);
+    void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback);
 
     /**
      * Posts a IdentityUserFlow with a new object
@@ -85,7 +85,7 @@ public interface IIdentityUserFlowRequest extends IHttpRequest {
      * @param newIdentityUserFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback);
+    void put(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback);
 
     /**
      * Posts a IdentityUserFlow with a new object

@@ -39,7 +39,7 @@ public class ConnectorGroupCollectionRequest extends BaseCollectionRequest<Conne
         super(requestUrl, client, requestOptions, ConnectorGroupCollectionResponse.class, IConnectorGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<IConnectorGroupCollectionPage> callback) {
+    public void get(final ICallback<? super IConnectorGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ConnectorGroupCollectionRequest extends BaseCollectionRequest<Conne
         return buildFromResponse(response);
     }
 
-    public void post(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback) {
+    public void post(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConnectorGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ConnectorGroupCollectionRequest extends BaseCollectionRequest<Conne
      */
     public IConnectorGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectorGroupCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IConnectorGroupCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConnectorGroupCollectionRequest)this;
     }
 

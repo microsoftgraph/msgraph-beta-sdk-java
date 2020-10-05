@@ -23,6 +23,6 @@ public class GovernancePolicyTemplateCollectionPage extends BaseCollectionPage<G
      * @param builder  the request builder for the next collection page
      */
     public GovernancePolicyTemplateCollectionPage(final GovernancePolicyTemplateCollectionResponse response, final IGovernancePolicyTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

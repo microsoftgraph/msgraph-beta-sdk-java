@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SecurityBaselineCategoryStateSummary;
 import com.microsoft.graph.models.extensions.SecurityBaselineDeviceState;
 import com.microsoft.graph.models.extensions.SecurityBaselineStateSummary;
 import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
-import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryCollectionPage;
-import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateCollectionPage;
 
 
@@ -95,35 +92,11 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
 
 
         if (json.has("categoryDeviceStateSummaries")) {
-            final SecurityBaselineCategoryStateSummaryCollectionResponse response = new SecurityBaselineCategoryStateSummaryCollectionResponse();
-            if (json.has("categoryDeviceStateSummaries@odata.nextLink")) {
-                response.nextLink = json.get("categoryDeviceStateSummaries@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categoryDeviceStateSummaries").toString(), JsonObject[].class);
-            final SecurityBaselineCategoryStateSummary[] array = new SecurityBaselineCategoryStateSummary[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityBaselineCategoryStateSummary.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categoryDeviceStateSummaries = new SecurityBaselineCategoryStateSummaryCollectionPage(response, null);
+            categoryDeviceStateSummaries = serializer.deserializeObject(json.get("categoryDeviceStateSummaries").toString(), SecurityBaselineCategoryStateSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            final SecurityBaselineDeviceStateCollectionResponse response = new SecurityBaselineDeviceStateCollectionResponse();
-            if (json.has("deviceStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStates").toString(), JsonObject[].class);
-            final SecurityBaselineDeviceState[] array = new SecurityBaselineDeviceState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityBaselineDeviceState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStates = new SecurityBaselineDeviceStateCollectionPage(response, null);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), SecurityBaselineDeviceStateCollectionPage.class);
         }
     }
 }

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionPage> callback);
 
     IReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionPage get() throws ClientException;
 

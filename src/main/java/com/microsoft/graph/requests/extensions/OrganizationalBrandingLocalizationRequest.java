@@ -37,7 +37,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OrganizationalBrandingLocalization> callback) {
+    public void get(final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OrganizationalBrandingLocalization> callback) {
+    public void delete(final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param sourceOrganizationalBrandingLocalization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback) {
+    public void patch(final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganizationalBrandingLocalization);
     }
 
@@ -96,7 +96,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param newOrganizationalBrandingLocalization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback) {
+    public void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.POST, callback, newOrganizationalBrandingLocalization);
     }
 
@@ -117,7 +117,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param newOrganizationalBrandingLocalization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback) {
+    public void put(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.PUT, callback, newOrganizationalBrandingLocalization);
     }
 
@@ -151,17 +151,6 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      */
      public IOrganizationalBrandingLocalizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationalBrandingLocalizationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOrganizationalBrandingLocalizationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OrganizationalBrandingLocalizationRequest)this;
      }
 

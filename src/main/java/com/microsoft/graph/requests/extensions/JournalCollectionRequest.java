@@ -40,7 +40,7 @@ public class JournalCollectionRequest extends BaseCollectionRequest<JournalColle
         super(requestUrl, client, requestOptions, JournalCollectionResponse.class, IJournalCollectionPage.class);
     }
 
-    public void get(final ICallback<IJournalCollectionPage> callback) {
+    public void get(final ICallback<? super IJournalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class JournalCollectionRequest extends BaseCollectionRequest<JournalColle
         return buildFromResponse(response);
     }
 
-    public void post(final Journal newJournal, final ICallback<Journal> callback) {
+    public void post(final Journal newJournal, final ICallback<? super Journal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new JournalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class JournalCollectionRequest extends BaseCollectionRequest<JournalColle
      */
     public IJournalCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (JournalCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IJournalCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (JournalCollectionRequest)this;
     }
 

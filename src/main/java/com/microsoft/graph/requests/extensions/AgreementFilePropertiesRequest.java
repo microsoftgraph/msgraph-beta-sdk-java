@@ -52,7 +52,7 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AgreementFileProperties> callback) {
+    public void get(final ICallback<? super AgreementFileProperties> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AgreementFileProperties> callback) {
+    public void delete(final ICallback<? super AgreementFileProperties> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
      * @param sourceAgreementFileProperties the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgreementFileProperties sourceAgreementFileProperties, final ICallback<AgreementFileProperties> callback) {
+    public void patch(final AgreementFileProperties sourceAgreementFileProperties, final ICallback<? super AgreementFileProperties> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreementFileProperties);
     }
 
@@ -111,7 +111,7 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
      * @param newAgreementFileProperties the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgreementFileProperties newAgreementFileProperties, final ICallback<AgreementFileProperties> callback) {
+    public void post(final AgreementFileProperties newAgreementFileProperties, final ICallback<? super AgreementFileProperties> callback) {
         send(HttpMethod.POST, callback, newAgreementFileProperties);
     }
 
@@ -132,7 +132,7 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
      * @param newAgreementFileProperties the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgreementFileProperties newAgreementFileProperties, final ICallback<AgreementFileProperties> callback) {
+    public void put(final AgreementFileProperties newAgreementFileProperties, final ICallback<? super AgreementFileProperties> callback) {
         send(HttpMethod.PUT, callback, newAgreementFileProperties);
     }
 
@@ -166,17 +166,6 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
      */
      public IAgreementFilePropertiesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementFilePropertiesRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAgreementFilePropertiesRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AgreementFilePropertiesRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IGroupPolicyDefinitionFileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyDefinitionFile> callback);
+    void get(final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     /**
      * Gets the GroupPolicyDefinitionFile from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyDefinitionFileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyDefinitionFile> callback);
+    void delete(final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyDefinitionFileRequest extends IHttpRequest {
      * @param sourceGroupPolicyDefinitionFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback);
+    void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     /**
      * Patches this GroupPolicyDefinitionFile with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyDefinitionFileRequest extends IHttpRequest {
      * @param newGroupPolicyDefinitionFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback);
+    void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     /**
      * Posts a GroupPolicyDefinitionFile with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyDefinitionFileRequest extends IHttpRequest {
      * @param newGroupPolicyDefinitionFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback);
+    void put(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     /**
      * Posts a GroupPolicyDefinitionFile with a new object

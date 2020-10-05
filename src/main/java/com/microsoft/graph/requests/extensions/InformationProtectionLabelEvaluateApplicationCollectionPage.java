@@ -36,6 +36,6 @@ public class InformationProtectionLabelEvaluateApplicationCollectionPage extends
      * @param builder The request builder for the next collection page
      */
     public InformationProtectionLabelEvaluateApplicationCollectionPage(final InformationProtectionLabelEvaluateApplicationCollectionResponse response, final IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -39,7 +39,7 @@ public class ReportRootGetYammerDeviceUsageUserDetailCollectionRequest extends B
     }
 
 
-    public void get(final ICallback<IReportRootGetYammerDeviceUsageUserDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetYammerDeviceUsageUserDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetYammerDeviceUsageUserDetailCollectionRequest extends B
      */
     public IReportRootGetYammerDeviceUsageUserDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetYammerDeviceUsageUserDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetYammerDeviceUsageUserDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetYammerDeviceUsageUserDetailCollectionRequest)this;
     }
 

@@ -34,6 +34,6 @@ public class ReportRootGetSharePointSiteUsageStorageCollectionPage extends BaseC
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSharePointSiteUsageStorageCollectionPage(final ReportRootGetSharePointSiteUsageStorageCollectionResponse response, final IReportRootGetSharePointSiteUsageStorageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

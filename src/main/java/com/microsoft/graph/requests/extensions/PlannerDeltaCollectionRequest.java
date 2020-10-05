@@ -40,7 +40,7 @@ public class PlannerDeltaCollectionRequest extends BaseCollectionRequest<Planner
         super(requestUrl, client, requestOptions, PlannerDeltaCollectionResponse.class, IPlannerDeltaCollectionPage.class);
     }
 
-    public void get(final ICallback<IPlannerDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IPlannerDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PlannerDeltaCollectionRequest extends BaseCollectionRequest<Planner
         return buildFromResponse(response);
     }
 
-    public void post(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback) {
+    public void post(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerDeltaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PlannerDeltaCollectionRequest extends BaseCollectionRequest<Planner
      */
     public IPlannerDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PlannerDeltaCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPlannerDeltaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PlannerDeltaCollectionRequest)this;
     }
 

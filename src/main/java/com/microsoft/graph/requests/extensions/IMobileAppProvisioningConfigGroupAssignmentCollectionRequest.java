@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileAppProvisioningConfigGroupAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileAppProvisioningConfigGroupAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IMobileAppProvisioningConfigGroupAssignmentCollectionPage> callback);
 
     IMobileAppProvisioningConfigGroupAssignmentCollectionPage get() throws ClientException;
 
-    void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback);
+    void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback);
 
     MobileAppProvisioningConfigGroupAssignment post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMobileAppProvisioningConfigGroupAssignmentCollectionRequest ex
      * @return the updated request
      */
     IMobileAppProvisioningConfigGroupAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMobileAppProvisioningConfigGroupAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMobileAppProvisioningConfigGroupAssignmentCollectionRequest ex
      *
 	 * @return the updated request
 	 */
-	IMobileAppProvisioningConfigGroupAssignmentCollectionRequest skipToken(String skipToken);
+	IMobileAppProvisioningConfigGroupAssignmentCollectionRequest skipToken(final String skipToken);
 }

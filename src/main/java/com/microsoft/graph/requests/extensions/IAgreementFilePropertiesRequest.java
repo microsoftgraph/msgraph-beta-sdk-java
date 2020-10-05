@@ -21,7 +21,7 @@ public interface IAgreementFilePropertiesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AgreementFileProperties> callback);
+    void get(final ICallback<? super AgreementFileProperties> callback);
 
     /**
      * Gets the AgreementFileProperties from the service
@@ -36,7 +36,7 @@ public interface IAgreementFilePropertiesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AgreementFileProperties> callback);
+    void delete(final ICallback<? super AgreementFileProperties> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAgreementFilePropertiesRequest extends IHttpRequest {
      * @param sourceAgreementFileProperties the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AgreementFileProperties sourceAgreementFileProperties, final ICallback<AgreementFileProperties> callback);
+    void patch(final AgreementFileProperties sourceAgreementFileProperties, final ICallback<? super AgreementFileProperties> callback);
 
     /**
      * Patches this AgreementFileProperties with a source
@@ -68,7 +68,7 @@ public interface IAgreementFilePropertiesRequest extends IHttpRequest {
      * @param newAgreementFileProperties the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AgreementFileProperties newAgreementFileProperties, final ICallback<AgreementFileProperties> callback);
+    void post(final AgreementFileProperties newAgreementFileProperties, final ICallback<? super AgreementFileProperties> callback);
 
     /**
      * Posts a AgreementFileProperties with a new object
@@ -85,7 +85,7 @@ public interface IAgreementFilePropertiesRequest extends IHttpRequest {
      * @param newAgreementFileProperties the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AgreementFileProperties newAgreementFileProperties, final ICallback<AgreementFileProperties> callback);
+    void put(final AgreementFileProperties newAgreementFileProperties, final ICallback<? super AgreementFileProperties> callback);
 
     /**
      * Posts a AgreementFileProperties with a new object

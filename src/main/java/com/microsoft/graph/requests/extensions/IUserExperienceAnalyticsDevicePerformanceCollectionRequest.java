@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsDevicePerformanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsDevicePerformanceCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsDevicePerformanceCollectionPage> callback);
 
     IUserExperienceAnalyticsDevicePerformanceCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+    void post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback);
 
     UserExperienceAnalyticsDevicePerformance post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IUserExperienceAnalyticsDevicePerformanceCollectionRequest exte
      * @return the updated request
      */
     IUserExperienceAnalyticsDevicePerformanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsDevicePerformanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IUserExperienceAnalyticsDevicePerformanceCollectionRequest exte
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsDevicePerformanceCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsDevicePerformanceCollectionRequest skipToken(final String skipToken);
 }

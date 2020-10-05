@@ -21,7 +21,7 @@ public interface INetworkManagementConditionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<NetworkManagementCondition> callback);
+    void get(final ICallback<? super NetworkManagementCondition> callback);
 
     /**
      * Gets the NetworkManagementCondition from the service
@@ -36,7 +36,7 @@ public interface INetworkManagementConditionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<NetworkManagementCondition> callback);
+    void delete(final ICallback<? super NetworkManagementCondition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INetworkManagementConditionRequest extends IHttpRequest {
      * @param sourceNetworkManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final NetworkManagementCondition sourceNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback);
+    void patch(final NetworkManagementCondition sourceNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback);
 
     /**
      * Patches this NetworkManagementCondition with a source
@@ -68,7 +68,7 @@ public interface INetworkManagementConditionRequest extends IHttpRequest {
      * @param newNetworkManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback);
+    void post(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback);
 
     /**
      * Posts a NetworkManagementCondition with a new object
@@ -85,7 +85,7 @@ public interface INetworkManagementConditionRequest extends IHttpRequest {
      * @param newNetworkManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback);
+    void put(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback);
 
     /**
      * Posts a NetworkManagementCondition with a new object

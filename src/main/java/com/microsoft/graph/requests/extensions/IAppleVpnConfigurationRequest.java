@@ -21,7 +21,7 @@ public interface IAppleVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppleVpnConfiguration> callback);
+    void get(final ICallback<? super AppleVpnConfiguration> callback);
 
     /**
      * Gets the AppleVpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAppleVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppleVpnConfiguration> callback);
+    void delete(final ICallback<? super AppleVpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppleVpnConfigurationRequest extends IHttpRequest {
      * @param sourceAppleVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppleVpnConfiguration sourceAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback);
+    void patch(final AppleVpnConfiguration sourceAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback);
 
     /**
      * Patches this AppleVpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAppleVpnConfigurationRequest extends IHttpRequest {
      * @param newAppleVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback);
+    void post(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback);
 
     /**
      * Posts a AppleVpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAppleVpnConfigurationRequest extends IHttpRequest {
      * @param newAppleVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback);
+    void put(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback);
 
     /**
      * Posts a AppleVpnConfiguration with a new object

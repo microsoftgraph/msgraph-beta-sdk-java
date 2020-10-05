@@ -23,6 +23,6 @@ public class PhoneAuthenticationMethodCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public PhoneAuthenticationMethodCollectionPage(final PhoneAuthenticationMethodCollectionResponse response, final IPhoneAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
  */
 public interface IGroupPolicyDefinitionCollectionReferenceRequest {
 
-    void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback);
+    void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback);
 
     GroupPolicyDefinition post(final GroupPolicyDefinition newGroupPolicyDefinition) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IMacOSWiredNetworkConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSWiredNetworkConfiguration> callback);
+    void get(final ICallback<? super MacOSWiredNetworkConfiguration> callback);
 
     /**
      * Gets the MacOSWiredNetworkConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSWiredNetworkConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSWiredNetworkConfiguration> callback);
+    void delete(final ICallback<? super MacOSWiredNetworkConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSWiredNetworkConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSWiredNetworkConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration, final ICallback<MacOSWiredNetworkConfiguration> callback);
+    void patch(final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback);
 
     /**
      * Patches this MacOSWiredNetworkConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSWiredNetworkConfigurationRequest extends IHttpRequest {
      * @param newMacOSWiredNetworkConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<MacOSWiredNetworkConfiguration> callback);
+    void post(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback);
 
     /**
      * Posts a MacOSWiredNetworkConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSWiredNetworkConfigurationRequest extends IHttpRequest {
      * @param newMacOSWiredNetworkConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<MacOSWiredNetworkConfiguration> callback);
+    void put(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback);
 
     /**
      * Posts a MacOSWiredNetworkConfiguration with a new object

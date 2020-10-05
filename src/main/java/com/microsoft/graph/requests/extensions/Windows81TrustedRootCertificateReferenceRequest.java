@@ -34,7 +34,7 @@ public class Windows81TrustedRootCertificateReferenceRequest extends BaseRequest
         super(requestUrl, client, requestOptions, Windows81TrustedRootCertificate.class);
     }
 
-    public void delete(final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class Windows81TrustedRootCertificateReferenceRequest extends BaseRequest
         return (Windows81TrustedRootCertificateReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindows81TrustedRootCertificateReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (Windows81TrustedRootCertificateReferenceRequest)this;
-    }
-    /**
      * Puts the Windows81TrustedRootCertificate
      *
      * @param srcWindows81TrustedRootCertificate the Windows81TrustedRootCertificate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Windows81TrustedRootCertificate srcWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+    public void put(Windows81TrustedRootCertificate srcWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, srcWindows81TrustedRootCertificate);
     }
 

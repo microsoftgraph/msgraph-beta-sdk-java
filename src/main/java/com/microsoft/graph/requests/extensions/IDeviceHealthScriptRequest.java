@@ -21,7 +21,7 @@ public interface IDeviceHealthScriptRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceHealthScript> callback);
+    void get(final ICallback<? super DeviceHealthScript> callback);
 
     /**
      * Gets the DeviceHealthScript from the service
@@ -36,7 +36,7 @@ public interface IDeviceHealthScriptRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceHealthScript> callback);
+    void delete(final ICallback<? super DeviceHealthScript> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceHealthScriptRequest extends IHttpRequest {
      * @param sourceDeviceHealthScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceHealthScript sourceDeviceHealthScript, final ICallback<DeviceHealthScript> callback);
+    void patch(final DeviceHealthScript sourceDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback);
 
     /**
      * Patches this DeviceHealthScript with a source
@@ -68,7 +68,7 @@ public interface IDeviceHealthScriptRequest extends IHttpRequest {
      * @param newDeviceHealthScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<DeviceHealthScript> callback);
+    void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback);
 
     /**
      * Posts a DeviceHealthScript with a new object
@@ -85,7 +85,7 @@ public interface IDeviceHealthScriptRequest extends IHttpRequest {
      * @param newDeviceHealthScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceHealthScript newDeviceHealthScript, final ICallback<DeviceHealthScript> callback);
+    void put(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback);
 
     /**
      * Posts a DeviceHealthScript with a new object

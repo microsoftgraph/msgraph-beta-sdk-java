@@ -21,7 +21,7 @@ public interface IDeviceManagementCollectionSettingInstanceRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementCollectionSettingInstance> callback);
+    void get(final ICallback<? super DeviceManagementCollectionSettingInstance> callback);
 
     /**
      * Gets the DeviceManagementCollectionSettingInstance from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementCollectionSettingInstanceRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementCollectionSettingInstance> callback);
+    void delete(final ICallback<? super DeviceManagementCollectionSettingInstance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementCollectionSettingInstanceRequest extends IHttp
      * @param sourceDeviceManagementCollectionSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback);
+    void patch(final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback);
 
     /**
      * Patches this DeviceManagementCollectionSettingInstance with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementCollectionSettingInstanceRequest extends IHttp
      * @param newDeviceManagementCollectionSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback);
+    void post(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementCollectionSettingInstance with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementCollectionSettingInstanceRequest extends IHttp
      * @param newDeviceManagementCollectionSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback);
+    void put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementCollectionSettingInstance with a new object

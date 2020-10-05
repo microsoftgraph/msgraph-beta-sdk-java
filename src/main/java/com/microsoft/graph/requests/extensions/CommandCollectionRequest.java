@@ -39,7 +39,7 @@ public class CommandCollectionRequest extends BaseCollectionRequest<CommandColle
         super(requestUrl, client, requestOptions, CommandCollectionResponse.class, ICommandCollectionPage.class);
     }
 
-    public void get(final ICallback<ICommandCollectionPage> callback) {
+    public void get(final ICallback<? super ICommandCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class CommandCollectionRequest extends BaseCollectionRequest<CommandColle
         return buildFromResponse(response);
     }
 
-    public void post(final Command newCommand, final ICallback<Command> callback) {
+    public void post(final Command newCommand, final ICallback<? super Command> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommandRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class CommandCollectionRequest extends BaseCollectionRequest<CommandColle
      */
     public ICommandCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CommandCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICommandCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CommandCollectionRequest)this;
     }
 

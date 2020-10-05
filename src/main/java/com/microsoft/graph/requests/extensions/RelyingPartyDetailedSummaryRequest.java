@@ -37,7 +37,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RelyingPartyDetailedSummary> callback) {
+    public void get(final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RelyingPartyDetailedSummary> callback) {
+    public void delete(final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param sourceRelyingPartyDetailedSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary, final ICallback<RelyingPartyDetailedSummary> callback) {
+    public void patch(final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceRelyingPartyDetailedSummary);
     }
 
@@ -96,7 +96,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param newRelyingPartyDetailedSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<RelyingPartyDetailedSummary> callback) {
+    public void post(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.POST, callback, newRelyingPartyDetailedSummary);
     }
 
@@ -117,7 +117,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param newRelyingPartyDetailedSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<RelyingPartyDetailedSummary> callback) {
+    public void put(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.PUT, callback, newRelyingPartyDetailedSummary);
     }
 
@@ -151,17 +151,6 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      */
      public IRelyingPartyDetailedSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RelyingPartyDetailedSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IRelyingPartyDetailedSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RelyingPartyDetailedSummaryRequest)this;
      }
 

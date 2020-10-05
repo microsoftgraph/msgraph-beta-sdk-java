@@ -23,6 +23,6 @@ public class PersonAnniversaryCollectionPage extends BaseCollectionPage<PersonAn
      * @param builder  the request builder for the next collection page
      */
     public PersonAnniversaryCollectionPage(final PersonAnniversaryCollectionResponse response, final IPersonAnniversaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

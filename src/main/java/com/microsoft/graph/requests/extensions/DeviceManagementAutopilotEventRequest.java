@@ -41,7 +41,7 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementAutopilotEvent> callback) {
+    public void get(final ICallback<? super DeviceManagementAutopilotEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementAutopilotEvent> callback) {
+    public void delete(final ICallback<? super DeviceManagementAutopilotEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
      * @param sourceDeviceManagementAutopilotEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementAutopilotEvent sourceDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback) {
+    public void patch(final DeviceManagementAutopilotEvent sourceDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementAutopilotEvent);
     }
 
@@ -100,7 +100,7 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
      * @param newDeviceManagementAutopilotEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback) {
+    public void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementAutopilotEvent);
     }
 
@@ -121,7 +121,7 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
      * @param newDeviceManagementAutopilotEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback) {
+    public void put(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementAutopilotEvent);
     }
 
@@ -155,17 +155,6 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
      */
      public IDeviceManagementAutopilotEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementAutopilotEventRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementAutopilotEventRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementAutopilotEventRequest)this;
      }
 

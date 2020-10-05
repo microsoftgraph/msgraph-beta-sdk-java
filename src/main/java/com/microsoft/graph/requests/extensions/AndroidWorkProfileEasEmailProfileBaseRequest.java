@@ -54,7 +54,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void get(final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param sourceAndroidWorkProfileEasEmailProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void patch(final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -113,7 +113,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param newAndroidWorkProfileEasEmailProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void post(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -134,7 +134,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param newAndroidWorkProfileEasEmailProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -168,17 +168,6 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      */
      public IAndroidWorkProfileEasEmailProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileEasEmailProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidWorkProfileEasEmailProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidWorkProfileEasEmailProfileBaseRequest)this;
      }
 

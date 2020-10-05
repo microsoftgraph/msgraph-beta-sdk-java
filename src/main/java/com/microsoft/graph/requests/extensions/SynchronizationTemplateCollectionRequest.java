@@ -40,7 +40,7 @@ public class SynchronizationTemplateCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, SynchronizationTemplateCollectionResponse.class, ISynchronizationTemplateCollectionPage.class);
     }
 
-    public void get(final ICallback<ISynchronizationTemplateCollectionPage> callback) {
+    public void get(final ICallback<? super ISynchronizationTemplateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SynchronizationTemplateCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback) {
+    public void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SynchronizationTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SynchronizationTemplateCollectionRequest extends BaseCollectionRequ
      */
     public ISynchronizationTemplateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SynchronizationTemplateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISynchronizationTemplateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SynchronizationTemplateCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IAccessPackageResourceRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageResourceRequest> callback);
+    void get(final ICallback<? super AccessPackageResourceRequest> callback);
 
     /**
      * Gets the AccessPackageResourceRequest from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageResourceRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageResourceRequest> callback);
+    void delete(final ICallback<? super AccessPackageResourceRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageResourceRequestRequest extends IHttpRequest {
      * @param sourceAccessPackageResourceRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageResourceRequest sourceAccessPackageResourceRequest, final ICallback<AccessPackageResourceRequest> callback);
+    void patch(final AccessPackageResourceRequest sourceAccessPackageResourceRequest, final ICallback<? super AccessPackageResourceRequest> callback);
 
     /**
      * Patches this AccessPackageResourceRequest with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageResourceRequestRequest extends IHttpRequest {
      * @param newAccessPackageResourceRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<AccessPackageResourceRequest> callback);
+    void post(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<? super AccessPackageResourceRequest> callback);
 
     /**
      * Posts a AccessPackageResourceRequest with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageResourceRequestRequest extends IHttpRequest {
      * @param newAccessPackageResourceRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<AccessPackageResourceRequest> callback);
+    void put(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<? super AccessPackageResourceRequest> callback);
 
     /**
      * Posts a AccessPackageResourceRequest with a new object

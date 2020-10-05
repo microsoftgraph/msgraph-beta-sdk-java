@@ -40,7 +40,7 @@ public class WindowsUpdateStateCollectionRequest extends BaseCollectionRequest<W
         super(requestUrl, client, requestOptions, WindowsUpdateStateCollectionResponse.class, IWindowsUpdateStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsUpdateStateCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsUpdateStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsUpdateStateCollectionRequest extends BaseCollectionRequest<W
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsUpdateState newWindowsUpdateState, final ICallback<WindowsUpdateState> callback) {
+    public void post(final WindowsUpdateState newWindowsUpdateState, final ICallback<? super WindowsUpdateState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsUpdateStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsUpdateStateCollectionRequest extends BaseCollectionRequest<W
      */
     public IWindowsUpdateStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsUpdateStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsUpdateStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsUpdateStateCollectionRequest)this;
     }
 

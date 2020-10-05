@@ -52,7 +52,7 @@ public class EducationOutcomeRequest extends BaseRequest implements IEducationOu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationOutcome> callback) {
+    public void get(final ICallback<? super EducationOutcome> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class EducationOutcomeRequest extends BaseRequest implements IEducationOu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationOutcome> callback) {
+    public void delete(final ICallback<? super EducationOutcome> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class EducationOutcomeRequest extends BaseRequest implements IEducationOu
      * @param sourceEducationOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationOutcome sourceEducationOutcome, final ICallback<EducationOutcome> callback) {
+    public void patch(final EducationOutcome sourceEducationOutcome, final ICallback<? super EducationOutcome> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationOutcome);
     }
 
@@ -111,7 +111,7 @@ public class EducationOutcomeRequest extends BaseRequest implements IEducationOu
      * @param newEducationOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationOutcome newEducationOutcome, final ICallback<EducationOutcome> callback) {
+    public void post(final EducationOutcome newEducationOutcome, final ICallback<? super EducationOutcome> callback) {
         send(HttpMethod.POST, callback, newEducationOutcome);
     }
 
@@ -132,7 +132,7 @@ public class EducationOutcomeRequest extends BaseRequest implements IEducationOu
      * @param newEducationOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationOutcome newEducationOutcome, final ICallback<EducationOutcome> callback) {
+    public void put(final EducationOutcome newEducationOutcome, final ICallback<? super EducationOutcome> callback) {
         send(HttpMethod.PUT, callback, newEducationOutcome);
     }
 
@@ -166,17 +166,6 @@ public class EducationOutcomeRequest extends BaseRequest implements IEducationOu
      */
      public IEducationOutcomeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationOutcomeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationOutcomeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationOutcomeRequest)this;
      }
 

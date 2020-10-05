@@ -37,7 +37,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<LongRunningOperation> callback) {
+    public void get(final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<LongRunningOperation> callback) {
+    public void delete(final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param sourceLongRunningOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LongRunningOperation sourceLongRunningOperation, final ICallback<LongRunningOperation> callback) {
+    public void patch(final LongRunningOperation sourceLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceLongRunningOperation);
     }
 
@@ -96,7 +96,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param newLongRunningOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback) {
+    public void post(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.POST, callback, newLongRunningOperation);
     }
 
@@ -117,7 +117,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param newLongRunningOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback) {
+    public void put(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.PUT, callback, newLongRunningOperation);
     }
 
@@ -151,17 +151,6 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      */
      public ILongRunningOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LongRunningOperationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ILongRunningOperationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (LongRunningOperationRequest)this;
      }
 

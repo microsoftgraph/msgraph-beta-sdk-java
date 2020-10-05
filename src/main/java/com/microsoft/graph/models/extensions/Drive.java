@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.Quota;
@@ -16,9 +15,7 @@ import com.microsoft.graph.models.extensions.ItemActivityOLD;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionResponse;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 
 
@@ -171,83 +168,23 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            final ItemActivityOLDCollectionResponse response = new ItemActivityOLDCollectionResponse();
-            if (json.has("activities@odata.nextLink")) {
-                response.nextLink = json.get("activities@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("activities").toString(), JsonObject[].class);
-            final ItemActivityOLD[] array = new ItemActivityOLD[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ItemActivityOLD.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            activities = new ItemActivityOLDCollectionPage(response, null);
+            activities = serializer.deserializeObject(json.get("activities").toString(), ItemActivityOLDCollectionPage.class);
         }
 
         if (json.has("bundles")) {
-            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
-            if (json.has("bundles@odata.nextLink")) {
-                response.nextLink = json.get("bundles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("bundles").toString(), JsonObject[].class);
-            final DriveItem[] array = new DriveItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            bundles = new DriveItemCollectionPage(response, null);
+            bundles = serializer.deserializeObject(json.get("bundles").toString(), DriveItemCollectionPage.class);
         }
 
         if (json.has("following")) {
-            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
-            if (json.has("following@odata.nextLink")) {
-                response.nextLink = json.get("following@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("following").toString(), JsonObject[].class);
-            final DriveItem[] array = new DriveItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            following = new DriveItemCollectionPage(response, null);
+            following = serializer.deserializeObject(json.get("following").toString(), DriveItemCollectionPage.class);
         }
 
         if (json.has("items")) {
-            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
-            if (json.has("items@odata.nextLink")) {
-                response.nextLink = json.get("items@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
-            final DriveItem[] array = new DriveItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            items = new DriveItemCollectionPage(response, null);
+            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
         }
 
         if (json.has("special")) {
-            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
-            if (json.has("special@odata.nextLink")) {
-                response.nextLink = json.get("special@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("special").toString(), JsonObject[].class);
-            final DriveItem[] array = new DriveItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            special = new DriveItemCollectionPage(response, null);
+            special = serializer.deserializeObject(json.get("special").toString(), DriveItemCollectionPage.class);
         }
     }
 }

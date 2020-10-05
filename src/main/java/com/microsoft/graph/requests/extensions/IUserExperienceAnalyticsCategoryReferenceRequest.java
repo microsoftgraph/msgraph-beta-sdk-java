@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserExperienceAnalyticsCategoryReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<UserExperienceAnalyticsCategory> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     UserExperienceAnalyticsCategory delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IUserExperienceAnalyticsCategoryReferenceRequest extends IHttpR
      * @param srcUserExperienceAnalyticsCategory the UserExperienceAnalyticsCategory to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(UserExperienceAnalyticsCategory srcUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+    void put(UserExperienceAnalyticsCategory srcUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     /**
      * Puts the UserExperienceAnalyticsCategory

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEducationUserCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEducationUserCollectionPage> callback);
+    void get(final ICallback<? super IEducationUserCollectionPage> callback);
 
     IEducationUserCollectionPage get() throws ClientException;
 
-    void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback);
+    void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback);
 
     EducationUser post(final EducationUser newEducationUser) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEducationUserCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IEducationUserCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEducationUserCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEducationUserCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IEducationUserCollectionRequest skipToken(String skipToken);
+	IEducationUserCollectionRequest skipToken(final String skipToken);
 }

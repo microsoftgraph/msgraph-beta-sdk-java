@@ -23,6 +23,6 @@ public class AccessPackageResourceRoleScopeCollectionPage extends BaseCollection
      * @param builder  the request builder for the next collection page
      */
     public AccessPackageResourceRoleScopeCollectionPage(final AccessPackageResourceRoleScopeCollectionResponse response, final IAccessPackageResourceRoleScopeCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

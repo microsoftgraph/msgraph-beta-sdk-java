@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionPage> callback);
+    void get(final ICallback<? super IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionPage> callback);
 
     IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionPage get() throws ClientException;
 

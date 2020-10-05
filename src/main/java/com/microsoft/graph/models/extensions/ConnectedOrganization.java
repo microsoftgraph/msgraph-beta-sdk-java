@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySource;
 import com.microsoft.graph.models.generated.ConnectedOrganizationState;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
@@ -149,35 +147,11 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
 
         if (json.has("externalSponsors")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("externalSponsors@odata.nextLink")) {
-                response.nextLink = json.get("externalSponsors@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("externalSponsors").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            externalSponsors = new DirectoryObjectCollectionPage(response, null);
+            externalSponsors = serializer.deserializeObject(json.get("externalSponsors").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("internalSponsors")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("internalSponsors@odata.nextLink")) {
-                response.nextLink = json.get("internalSponsors@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("internalSponsors").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            internalSponsors = new DirectoryObjectCollectionPage(response, null);
+            internalSponsors = serializer.deserializeObject(json.get("internalSponsors").toString(), DirectoryObjectCollectionPage.class);
         }
     }
 }

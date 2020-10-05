@@ -21,7 +21,7 @@ public interface IVulnerableManagedDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<VulnerableManagedDevice> callback);
+    void get(final ICallback<? super VulnerableManagedDevice> callback);
 
     /**
      * Gets the VulnerableManagedDevice from the service
@@ -36,7 +36,7 @@ public interface IVulnerableManagedDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<VulnerableManagedDevice> callback);
+    void delete(final ICallback<? super VulnerableManagedDevice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IVulnerableManagedDeviceRequest extends IHttpRequest {
      * @param sourceVulnerableManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final VulnerableManagedDevice sourceVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback);
+    void patch(final VulnerableManagedDevice sourceVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback);
 
     /**
      * Patches this VulnerableManagedDevice with a source
@@ -68,7 +68,7 @@ public interface IVulnerableManagedDeviceRequest extends IHttpRequest {
      * @param newVulnerableManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback);
+    void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback);
 
     /**
      * Posts a VulnerableManagedDevice with a new object
@@ -85,7 +85,7 @@ public interface IVulnerableManagedDeviceRequest extends IHttpRequest {
      * @param newVulnerableManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback);
+    void put(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback);
 
     /**
      * Posts a VulnerableManagedDevice with a new object

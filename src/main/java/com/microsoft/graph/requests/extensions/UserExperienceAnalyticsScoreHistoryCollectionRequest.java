@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsScoreHistoryCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsScoreHistoryCollectionResponse.class, IUserExperienceAnalyticsScoreHistoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserExperienceAnalyticsScoreHistoryCollectionPage> callback) {
+    public void get(final ICallback<? super IUserExperienceAnalyticsScoreHistoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsScoreHistoryCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+    public void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsScoreHistoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserExperienceAnalyticsScoreHistoryCollectionRequest extends BaseCo
      */
     public IUserExperienceAnalyticsScoreHistoryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExperienceAnalyticsScoreHistoryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsScoreHistoryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExperienceAnalyticsScoreHistoryCollectionRequest)this;
     }
 

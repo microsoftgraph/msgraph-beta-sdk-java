@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookRangeBorderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkbookRangeBorderCollectionPage> callback);
+    void get(final ICallback<? super IWorkbookRangeBorderCollectionPage> callback);
 
     IWorkbookRangeBorderCollectionPage get() throws ClientException;
 
-    void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWorkbookRangeBorderCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IWorkbookRangeBorderCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWorkbookRangeBorderCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWorkbookRangeBorderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookRangeBorderCollectionRequest skipToken(String skipToken);
+	IWorkbookRangeBorderCollectionRequest skipToken(final String skipToken);
 }

@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ISetReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Set> callback);
+    void delete(final ICallback<? super Set> callback);
 
     Set delete() throws ClientException;
 
@@ -53,7 +53,7 @@ public interface ISetReferenceRequest extends IHttpRequest {
      * @param srcSet the Set to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Set srcSet, final ICallback<Set> callback);
+    void put(Set srcSet, final ICallback<? super Set> callback);
 
     /**
      * Puts the Set

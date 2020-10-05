@@ -34,6 +34,6 @@ public class IosManagedAppProtectionHasPayloadLinksCollectionPage extends BaseCo
      * @param builder The request builder for the next collection page
      */
     public IosManagedAppProtectionHasPayloadLinksCollectionPage(final IosManagedAppProtectionHasPayloadLinksCollectionResponse response, final IIosManagedAppProtectionHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

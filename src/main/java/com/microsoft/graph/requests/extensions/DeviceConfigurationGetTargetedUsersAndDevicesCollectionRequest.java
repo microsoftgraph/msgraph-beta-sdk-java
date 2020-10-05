@@ -44,7 +44,7 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest exte
     }
 
 
-    public void post(final ICallback<IDeviceConfigurationGetTargetedUsersAndDevicesCollectionPage> callback) {
+    public void post(final ICallback<? super IDeviceConfigurationGetTargetedUsersAndDevicesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest exte
      */
     public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest)this;
     }
 

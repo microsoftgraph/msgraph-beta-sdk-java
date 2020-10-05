@@ -41,7 +41,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceCompliancePolicyReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<DeviceCompliancePolicy> callback);
+    void delete(final ICallback<? super DeviceCompliancePolicy> callback);
 
     DeviceCompliancePolicy delete() throws ClientException;
 
@@ -67,7 +67,7 @@ public interface IDeviceCompliancePolicyReferenceRequest extends IHttpRequest {
      * @param srcDeviceCompliancePolicy the DeviceCompliancePolicy to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DeviceCompliancePolicy srcDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
+    void put(DeviceCompliancePolicy srcDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
 
     /**
      * Puts the DeviceCompliancePolicy

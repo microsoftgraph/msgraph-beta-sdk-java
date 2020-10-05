@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.PrintConnector;
  */
 public interface IPrintConnectorCollectionReferenceRequest {
 
-    void post(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback);
+    void post(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback);
 
     PrintConnector post(final PrintConnector newPrintConnector) throws ClientException;
 

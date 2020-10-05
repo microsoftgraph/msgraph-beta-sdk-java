@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITiIndicatorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITiIndicatorCollectionPage> callback);
+    void get(final ICallback<? super ITiIndicatorCollectionPage> callback);
 
     ITiIndicatorCollectionPage get() throws ClientException;
 
-    void post(final TiIndicator newTiIndicator, final ICallback<TiIndicator> callback);
+    void post(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback);
 
     TiIndicator post(final TiIndicator newTiIndicator) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface ITiIndicatorCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITiIndicatorCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITiIndicatorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface ITiIndicatorCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITiIndicatorCollectionRequest skipToken(String skipToken);
+	ITiIndicatorCollectionRequest skipToken(final String skipToken);
 }

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptDeviceState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionPage;
 
 
@@ -99,19 +97,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
 
 
         if (json.has("deviceRunStates")) {
-            final DeviceManagementScriptDeviceStateCollectionResponse response = new DeviceManagementScriptDeviceStateCollectionResponse();
-            if (json.has("deviceRunStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceRunStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceRunStates").toString(), JsonObject[].class);
-            final DeviceManagementScriptDeviceState[] array = new DeviceManagementScriptDeviceState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptDeviceState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceRunStates = new DeviceManagementScriptDeviceStateCollectionPage(response, null);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates").toString(), DeviceManagementScriptDeviceStateCollectionPage.class);
         }
     }
 }

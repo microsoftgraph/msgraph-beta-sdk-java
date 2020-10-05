@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsPhone81CertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final IJsonBackedObject payload, final ICallback<WindowsPhone81CertificateProfileBase> callback);
+    void post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super WindowsPhone81CertificateProfileBase> callback);
 
     WindowsPhone81CertificateProfileBase post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsPhone81CertificateProfileBase> callback);
+    void get(final ICallback<? super WindowsPhone81CertificateProfileBase> callback);
 
     WindowsPhone81CertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<WindowsPhone81CertificateProfileBase> callback);
+	void delete(final ICallback<? super WindowsPhone81CertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback);
+	void patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase, final ICallback<? super WindowsPhone81CertificateProfileBase> callback);
 
 	WindowsPhone81CertificateProfileBase patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase) throws ClientException;
 

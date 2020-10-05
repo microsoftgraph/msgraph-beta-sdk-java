@@ -21,7 +21,7 @@ public interface IDeviceConfigurationPolicySetItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfigurationPolicySetItem> callback);
+    void get(final ICallback<? super DeviceConfigurationPolicySetItem> callback);
 
     /**
      * Gets the DeviceConfigurationPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationPolicySetItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfigurationPolicySetItem> callback);
+    void delete(final ICallback<? super DeviceConfigurationPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationPolicySetItemRequest extends IHttpRequest {
      * @param sourceDeviceConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfigurationPolicySetItem sourceDeviceConfigurationPolicySetItem, final ICallback<DeviceConfigurationPolicySetItem> callback);
+    void patch(final DeviceConfigurationPolicySetItem sourceDeviceConfigurationPolicySetItem, final ICallback<? super DeviceConfigurationPolicySetItem> callback);
 
     /**
      * Patches this DeviceConfigurationPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationPolicySetItemRequest extends IHttpRequest {
      * @param newDeviceConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<DeviceConfigurationPolicySetItem> callback);
+    void post(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<? super DeviceConfigurationPolicySetItem> callback);
 
     /**
      * Posts a DeviceConfigurationPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationPolicySetItemRequest extends IHttpRequest {
      * @param newDeviceConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<DeviceConfigurationPolicySetItem> callback);
+    void put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<? super DeviceConfigurationPolicySetItem> callback);
 
     /**
      * Posts a DeviceConfigurationPolicySetItem with a new object

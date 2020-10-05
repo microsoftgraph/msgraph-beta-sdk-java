@@ -21,7 +21,7 @@ public interface IDeviceLogCollectionResponseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceLogCollectionResponse> callback);
+    void get(final ICallback<? super DeviceLogCollectionResponse> callback);
 
     /**
      * Gets the DeviceLogCollectionResponse from the service
@@ -36,7 +36,7 @@ public interface IDeviceLogCollectionResponseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceLogCollectionResponse> callback);
+    void delete(final ICallback<? super DeviceLogCollectionResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceLogCollectionResponseRequest extends IHttpRequest {
      * @param sourceDeviceLogCollectionResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceLogCollectionResponse sourceDeviceLogCollectionResponse, final ICallback<DeviceLogCollectionResponse> callback);
+    void patch(final DeviceLogCollectionResponse sourceDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback);
 
     /**
      * Patches this DeviceLogCollectionResponse with a source
@@ -68,7 +68,7 @@ public interface IDeviceLogCollectionResponseRequest extends IHttpRequest {
      * @param newDeviceLogCollectionResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<DeviceLogCollectionResponse> callback);
+    void post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback);
 
     /**
      * Posts a DeviceLogCollectionResponse with a new object
@@ -85,7 +85,7 @@ public interface IDeviceLogCollectionResponseRequest extends IHttpRequest {
      * @param newDeviceLogCollectionResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<DeviceLogCollectionResponse> callback);
+    void put(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback);
 
     /**
      * Posts a DeviceLogCollectionResponse with a new object

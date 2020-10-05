@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IImportedDeviceIdentityCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IImportedDeviceIdentityCollectionPage> callback);
+    void get(final ICallback<? super IImportedDeviceIdentityCollectionPage> callback);
 
     IImportedDeviceIdentityCollectionPage get() throws ClientException;
 
-    void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback);
+    void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback);
 
     ImportedDeviceIdentity post(final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IImportedDeviceIdentityCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IImportedDeviceIdentityCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IImportedDeviceIdentityCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IImportedDeviceIdentityCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IImportedDeviceIdentityCollectionRequest skipToken(String skipToken);
+	IImportedDeviceIdentityCollectionRequest skipToken(final String skipToken);
 }

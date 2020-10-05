@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMacOsVppAppAssignedLicenseCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMacOsVppAppAssignedLicenseCollectionPage> callback);
+    void get(final ICallback<? super IMacOsVppAppAssignedLicenseCollectionPage> callback);
 
     IMacOsVppAppAssignedLicenseCollectionPage get() throws ClientException;
 
-    void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback);
+    void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback);
 
     MacOsVppAppAssignedLicense post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMacOsVppAppAssignedLicenseCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IMacOsVppAppAssignedLicenseCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMacOsVppAppAssignedLicenseCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMacOsVppAppAssignedLicenseCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IMacOsVppAppAssignedLicenseCollectionRequest skipToken(String skipToken);
+	IMacOsVppAppAssignedLicenseCollectionRequest skipToken(final String skipToken);
 }

@@ -34,6 +34,6 @@ public class ReportRootGetGroupArchivedPrintJobsCollectionPage extends BaseColle
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetGroupArchivedPrintJobsCollectionPage(final ReportRootGetGroupArchivedPrintJobsCollectionResponse response, final IReportRootGetGroupArchivedPrintJobsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

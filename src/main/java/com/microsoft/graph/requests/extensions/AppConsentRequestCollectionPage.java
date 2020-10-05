@@ -23,6 +23,6 @@ public class AppConsentRequestCollectionPage extends BaseCollectionPage<AppConse
      * @param builder  the request builder for the next collection page
      */
     public AppConsentRequestCollectionPage(final AppConsentRequestCollectionResponse response, final IAppConsentRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

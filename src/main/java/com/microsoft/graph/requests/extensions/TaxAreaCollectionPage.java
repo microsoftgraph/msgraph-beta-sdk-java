@@ -23,6 +23,6 @@ public class TaxAreaCollectionPage extends BaseCollectionPage<TaxArea, ITaxAreaC
      * @param builder  the request builder for the next collection page
      */
     public TaxAreaCollectionPage(final TaxAreaCollectionResponse response, final ITaxAreaCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

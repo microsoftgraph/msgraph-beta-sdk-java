@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetAzureADApplicationSignInSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetAzureADApplicationSignInSummaryCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetAzureADApplicationSignInSummaryCollectionPage> callback);
 
     IReportRootGetAzureADApplicationSignInSummaryCollectionPage get() throws ClientException;
 

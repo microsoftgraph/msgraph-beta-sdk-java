@@ -21,7 +21,7 @@ public interface IWindowsIdentityProtectionConfigurationRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsIdentityProtectionConfiguration> callback);
+    void get(final ICallback<? super WindowsIdentityProtectionConfiguration> callback);
 
     /**
      * Gets the WindowsIdentityProtectionConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsIdentityProtectionConfigurationRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsIdentityProtectionConfiguration> callback);
+    void delete(final ICallback<? super WindowsIdentityProtectionConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsIdentityProtectionConfigurationRequest extends IHttpReq
      * @param sourceWindowsIdentityProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsIdentityProtectionConfiguration sourceWindowsIdentityProtectionConfiguration, final ICallback<WindowsIdentityProtectionConfiguration> callback);
+    void patch(final WindowsIdentityProtectionConfiguration sourceWindowsIdentityProtectionConfiguration, final ICallback<? super WindowsIdentityProtectionConfiguration> callback);
 
     /**
      * Patches this WindowsIdentityProtectionConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsIdentityProtectionConfigurationRequest extends IHttpReq
      * @param newWindowsIdentityProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<WindowsIdentityProtectionConfiguration> callback);
+    void post(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<? super WindowsIdentityProtectionConfiguration> callback);
 
     /**
      * Posts a WindowsIdentityProtectionConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsIdentityProtectionConfigurationRequest extends IHttpReq
      * @param newWindowsIdentityProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<WindowsIdentityProtectionConfiguration> callback);
+    void put(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<? super WindowsIdentityProtectionConfiguration> callback);
 
     /**
      * Posts a WindowsIdentityProtectionConfiguration with a new object

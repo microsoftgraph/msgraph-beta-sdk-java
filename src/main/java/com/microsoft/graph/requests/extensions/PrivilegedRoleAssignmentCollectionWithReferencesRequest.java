@@ -35,7 +35,7 @@ public class PrivilegedRoleAssignmentCollectionWithReferencesRequest extends Bas
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignmentCollectionResponse.class, IPrivilegedRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedRoleAssignmentCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IPrivilegedRoleAssignmentCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class PrivilegedRoleAssignmentCollectionWithReferencesRequest extends Bas
 
     public IPrivilegedRoleAssignmentCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPrivilegedRoleAssignmentCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IPrivilegedRoleAssignmentCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IPrivilegedRoleAssignmentCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPrivilegedRoleAssignmentCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IPrivilegedRoleAssignmentCollectionWithReferencesPage buildFromResponse(final PrivilegedRoleAssignmentCollectionResponse response) {

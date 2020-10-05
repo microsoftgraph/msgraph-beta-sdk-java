@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.ManagementCondition;
  */
 public interface IManagementConditionCollectionReferenceRequest {
 
-    void post(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback);
+    void post(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback);
 
     ManagementCondition post(final ManagementCondition newManagementCondition) throws ClientException;
 

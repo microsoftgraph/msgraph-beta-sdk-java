@@ -43,7 +43,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Item> callback) {
+    public void get(final ICallback<? super Item> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Item> callback) {
+    public void delete(final ICallback<? super Item> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param sourceItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Item sourceItem, final ICallback<Item> callback) {
+    public void patch(final Item sourceItem, final ICallback<? super Item> callback) {
         send(HttpMethod.PATCH, callback, sourceItem);
     }
 
@@ -102,7 +102,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param newItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Item newItem, final ICallback<Item> callback) {
+    public void post(final Item newItem, final ICallback<? super Item> callback) {
         send(HttpMethod.POST, callback, newItem);
     }
 
@@ -123,7 +123,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param newItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Item newItem, final ICallback<Item> callback) {
+    public void put(final Item newItem, final ICallback<? super Item> callback) {
         send(HttpMethod.PUT, callback, newItem);
     }
 
@@ -157,17 +157,6 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      */
      public IItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemRequest)this;
      }
 

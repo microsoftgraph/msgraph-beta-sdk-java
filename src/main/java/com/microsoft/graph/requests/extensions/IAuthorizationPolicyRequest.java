@@ -21,7 +21,7 @@ public interface IAuthorizationPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AuthorizationPolicy> callback);
+    void get(final ICallback<? super AuthorizationPolicy> callback);
 
     /**
      * Gets the AuthorizationPolicy from the service
@@ -36,7 +36,7 @@ public interface IAuthorizationPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AuthorizationPolicy> callback);
+    void delete(final ICallback<? super AuthorizationPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAuthorizationPolicyRequest extends IHttpRequest {
      * @param sourceAuthorizationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AuthorizationPolicy sourceAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback);
+    void patch(final AuthorizationPolicy sourceAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback);
 
     /**
      * Patches this AuthorizationPolicy with a source
@@ -68,7 +68,7 @@ public interface IAuthorizationPolicyRequest extends IHttpRequest {
      * @param newAuthorizationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback);
+    void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback);
 
     /**
      * Posts a AuthorizationPolicy with a new object
@@ -85,7 +85,7 @@ public interface IAuthorizationPolicyRequest extends IHttpRequest {
      * @param newAuthorizationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback);
+    void put(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<? super AuthorizationPolicy> callback);
 
     /**
      * Posts a AuthorizationPolicy with a new object

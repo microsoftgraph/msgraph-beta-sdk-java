@@ -21,7 +21,7 @@ public interface IWindowsAutopilotDeploymentProfilePolicySetItemRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback);
+    void get(final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback);
 
     /**
      * Gets the WindowsAutopilotDeploymentProfilePolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IWindowsAutopilotDeploymentProfilePolicySetItemRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback);
+    void delete(final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsAutopilotDeploymentProfilePolicySetItemRequest extends 
      * @param sourceWindowsAutopilotDeploymentProfilePolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback);
+    void patch(final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback);
 
     /**
      * Patches this WindowsAutopilotDeploymentProfilePolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IWindowsAutopilotDeploymentProfilePolicySetItemRequest extends 
      * @param newWindowsAutopilotDeploymentProfilePolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback);
+    void post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback);
 
     /**
      * Posts a WindowsAutopilotDeploymentProfilePolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IWindowsAutopilotDeploymentProfilePolicySetItemRequest extends 
      * @param newWindowsAutopilotDeploymentProfilePolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback);
+    void put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback);
 
     /**
      * Posts a WindowsAutopilotDeploymentProfilePolicySetItem with a new object

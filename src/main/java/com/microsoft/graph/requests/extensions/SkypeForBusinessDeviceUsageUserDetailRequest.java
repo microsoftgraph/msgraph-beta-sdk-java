@@ -37,7 +37,7 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback) {
+    public void get(final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback) {
+    public void delete(final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
      * @param sourceSkypeForBusinessDeviceUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessDeviceUsageUserDetail sourceSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback) {
+    public void patch(final SkypeForBusinessDeviceUsageUserDetail sourceSkypeForBusinessDeviceUsageUserDetail, final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessDeviceUsageUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
      * @param newSkypeForBusinessDeviceUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback) {
+    public void post(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessDeviceUsageUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
      * @param newSkypeForBusinessDeviceUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback) {
+    public void put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessDeviceUsageUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
      */
      public ISkypeForBusinessDeviceUsageUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessDeviceUsageUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISkypeForBusinessDeviceUsageUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SkypeForBusinessDeviceUsageUserDetailRequest)this;
      }
 

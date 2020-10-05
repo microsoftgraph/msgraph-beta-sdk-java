@@ -37,7 +37,7 @@ public class DeviceManagementIntentCreateCopyRequest extends BaseRequest impleme
         body = new DeviceManagementIntentCreateCopyBody();
     }
 
-    public void post(final ICallback<DeviceManagementIntent> callback) {
+    public void post(final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class DeviceManagementIntentCreateCopyRequest extends BaseRequest impleme
      */
     public IDeviceManagementIntentCreateCopyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementIntentCreateCopyRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementIntentCreateCopyRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementIntentCreateCopyRequest)this;
     }
 

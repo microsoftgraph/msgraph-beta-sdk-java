@@ -34,7 +34,7 @@ public class AndroidWorkProfileTrustedRootCertificateReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, AndroidWorkProfileTrustedRootCertificate.class);
     }
 
-    public void delete(final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class AndroidWorkProfileTrustedRootCertificateReferenceRequest extends Ba
         return (AndroidWorkProfileTrustedRootCertificateReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidWorkProfileTrustedRootCertificateReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AndroidWorkProfileTrustedRootCertificateReferenceRequest)this;
-    }
-    /**
      * Puts the AndroidWorkProfileTrustedRootCertificate
      *
      * @param srcAndroidWorkProfileTrustedRootCertificate the AndroidWorkProfileTrustedRootCertificate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AndroidWorkProfileTrustedRootCertificate srcAndroidWorkProfileTrustedRootCertificate, final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void put(AndroidWorkProfileTrustedRootCertificate srcAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, srcAndroidWorkProfileTrustedRootCertificate);
     }
 

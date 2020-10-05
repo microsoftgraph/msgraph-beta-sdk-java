@@ -39,7 +39,7 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
     }
 
 
-    public void get(final ICallback<ITodoTaskListDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super ITodoTaskListDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      */
     public ITodoTaskListDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ITodoTaskListDeltaCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITodoTaskListDeltaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ITodoTaskListDeltaCollectionRequest)this;
     }
 

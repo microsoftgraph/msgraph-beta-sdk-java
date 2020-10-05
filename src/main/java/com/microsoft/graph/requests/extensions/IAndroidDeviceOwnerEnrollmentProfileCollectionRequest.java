@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAndroidDeviceOwnerEnrollmentProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAndroidDeviceOwnerEnrollmentProfileCollectionPage> callback);
+    void get(final ICallback<? super IAndroidDeviceOwnerEnrollmentProfileCollectionPage> callback);
 
     IAndroidDeviceOwnerEnrollmentProfileCollectionPage get() throws ClientException;
 
-    void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+    void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback);
 
     AndroidDeviceOwnerEnrollmentProfile post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAndroidDeviceOwnerEnrollmentProfileCollectionRequest extends I
      * @return the updated request
      */
     IAndroidDeviceOwnerEnrollmentProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAndroidDeviceOwnerEnrollmentProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAndroidDeviceOwnerEnrollmentProfileCollectionRequest extends I
      *
 	 * @return the updated request
 	 */
-	IAndroidDeviceOwnerEnrollmentProfileCollectionRequest skipToken(String skipToken);
+	IAndroidDeviceOwnerEnrollmentProfileCollectionRequest skipToken(final String skipToken);
 }

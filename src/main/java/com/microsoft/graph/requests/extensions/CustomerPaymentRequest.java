@@ -39,7 +39,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CustomerPayment> callback) {
+    public void get(final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CustomerPayment> callback) {
+    public void delete(final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param sourceCustomerPayment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CustomerPayment sourceCustomerPayment, final ICallback<CustomerPayment> callback) {
+    public void patch(final CustomerPayment sourceCustomerPayment, final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.PATCH, callback, sourceCustomerPayment);
     }
 
@@ -98,7 +98,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param newCustomerPayment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CustomerPayment newCustomerPayment, final ICallback<CustomerPayment> callback) {
+    public void post(final CustomerPayment newCustomerPayment, final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.POST, callback, newCustomerPayment);
     }
 
@@ -119,7 +119,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param newCustomerPayment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CustomerPayment newCustomerPayment, final ICallback<CustomerPayment> callback) {
+    public void put(final CustomerPayment newCustomerPayment, final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.PUT, callback, newCustomerPayment);
     }
 
@@ -153,17 +153,6 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      */
      public ICustomerPaymentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CustomerPaymentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICustomerPaymentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CustomerPaymentRequest)this;
      }
 

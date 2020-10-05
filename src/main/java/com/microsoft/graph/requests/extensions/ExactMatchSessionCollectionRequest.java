@@ -40,7 +40,7 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
         super(requestUrl, client, requestOptions, ExactMatchSessionCollectionResponse.class, IExactMatchSessionCollectionPage.class);
     }
 
-    public void get(final ICallback<IExactMatchSessionCollectionPage> callback) {
+    public void get(final ICallback<? super IExactMatchSessionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
         return buildFromResponse(response);
     }
 
-    public void post(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback) {
+    public void post(final ExactMatchSession newExactMatchSession, final ICallback<? super ExactMatchSession> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExactMatchSessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
      */
     public IExactMatchSessionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ExactMatchSessionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IExactMatchSessionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ExactMatchSessionCollectionRequest)this;
     }
 

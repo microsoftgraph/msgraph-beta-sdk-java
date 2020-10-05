@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintJobCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrintJobCollectionPage> callback);
+    void get(final ICallback<? super IPrintJobCollectionPage> callback);
 
     IPrintJobCollectionPage get() throws ClientException;
 
-    void post(final PrintJob newPrintJob, final ICallback<PrintJob> callback);
+    void post(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback);
 
     PrintJob post(final PrintJob newPrintJob) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IPrintJobCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrintJobCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrintJobCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IPrintJobCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrintJobCollectionRequest skipToken(String skipToken);
+	IPrintJobCollectionRequest skipToken(final String skipToken);
 }

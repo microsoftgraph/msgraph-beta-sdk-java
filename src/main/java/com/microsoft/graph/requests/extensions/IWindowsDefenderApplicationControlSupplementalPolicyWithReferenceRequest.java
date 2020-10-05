@@ -29,19 +29,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final IJsonBackedObject payload, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final IJsonBackedObject payload, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     WindowsDefenderApplicationControlSupplementalPolicy post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     WindowsDefenderApplicationControlSupplementalPolicy get() throws ClientException;
 
-	void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+	void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+	void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
 	WindowsDefenderApplicationControlSupplementalPolicy patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException;
 

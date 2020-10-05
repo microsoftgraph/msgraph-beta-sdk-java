@@ -40,7 +40,7 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationCollectionResponse.class, IUserScopeTeamsAppInstallationCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserScopeTeamsAppInstallationCollectionPage> callback) {
+    public void get(final ICallback<? super IUserScopeTeamsAppInstallationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback) {
+    public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
      */
     public IUserScopeTeamsAppInstallationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserScopeTeamsAppInstallationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserScopeTeamsAppInstallationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserScopeTeamsAppInstallationCollectionRequest)this;
     }
 

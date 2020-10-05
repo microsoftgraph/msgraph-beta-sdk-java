@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.SensitivityLabelTarget;
 import com.microsoft.graph.models.generated.ApplicationMode;
@@ -15,7 +14,6 @@ import com.microsoft.graph.models.extensions.AutoLabeling;
 import com.microsoft.graph.models.extensions.LabelActionBase;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionResponse;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionPage;
 
 
@@ -176,19 +174,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sublabels")) {
-            final SensitivityLabelCollectionResponse response = new SensitivityLabelCollectionResponse();
-            if (json.has("sublabels@odata.nextLink")) {
-                response.nextLink = json.get("sublabels@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sublabels").toString(), JsonObject[].class);
-            final SensitivityLabel[] array = new SensitivityLabel[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitivityLabel.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sublabels = new SensitivityLabelCollectionPage(response, null);
+            sublabels = serializer.deserializeObject(json.get("sublabels").toString(), SensitivityLabelCollectionPage.class);
         }
     }
 }

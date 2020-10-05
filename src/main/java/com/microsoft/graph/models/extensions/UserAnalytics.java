@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Settings;
 import com.microsoft.graph.models.extensions.ActivityStatistics;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionPage;
 
 
@@ -84,19 +82,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activityStatistics")) {
-            final ActivityStatisticsCollectionResponse response = new ActivityStatisticsCollectionResponse();
-            if (json.has("activityStatistics@odata.nextLink")) {
-                response.nextLink = json.get("activityStatistics@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("activityStatistics").toString(), JsonObject[].class);
-            final ActivityStatistics[] array = new ActivityStatistics[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ActivityStatistics.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            activityStatistics = new ActivityStatisticsCollectionPage(response, null);
+            activityStatistics = serializer.deserializeObject(json.get("activityStatistics").toString(), ActivityStatisticsCollectionPage.class);
         }
     }
 }

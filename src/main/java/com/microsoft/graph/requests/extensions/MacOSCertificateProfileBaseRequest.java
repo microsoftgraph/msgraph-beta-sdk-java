@@ -52,7 +52,7 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSCertificateProfileBase> callback) {
+    public void get(final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
      * @param sourceMacOSCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback) {
+    public void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSCertificateProfileBase);
     }
 
@@ -111,7 +111,7 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
      * @param newMacOSCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback) {
+    public void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newMacOSCertificateProfileBase);
     }
 
@@ -132,7 +132,7 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
      * @param newMacOSCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback) {
+    public void put(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newMacOSCertificateProfileBase);
     }
 
@@ -166,17 +166,6 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
      */
      public IMacOSCertificateProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSCertificateProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSCertificateProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSCertificateProfileBaseRequest)this;
      }
 

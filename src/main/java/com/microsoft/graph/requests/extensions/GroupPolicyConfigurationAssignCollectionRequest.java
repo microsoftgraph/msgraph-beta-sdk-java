@@ -44,7 +44,7 @@ public class GroupPolicyConfigurationAssignCollectionRequest extends BaseCollect
     }
 
 
-    public void post(final ICallback<IGroupPolicyConfigurationAssignCollectionPage> callback) {
+    public void post(final ICallback<? super IGroupPolicyConfigurationAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class GroupPolicyConfigurationAssignCollectionRequest extends BaseCollect
      */
     public IGroupPolicyConfigurationAssignCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IGroupPolicyConfigurationAssignCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupPolicyConfigurationAssignCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IGroupPolicyConfigurationAssignCollectionRequest)this;
     }
 

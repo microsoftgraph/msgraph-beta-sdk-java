@@ -23,6 +23,6 @@ public class DeviceManagementTemplateCollectionPage extends BaseCollectionPage<D
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementTemplateCollectionPage(final DeviceManagementTemplateCollectionResponse response, final IDeviceManagementTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

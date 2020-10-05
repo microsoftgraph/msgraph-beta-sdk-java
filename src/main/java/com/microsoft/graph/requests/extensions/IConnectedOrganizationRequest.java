@@ -21,7 +21,7 @@ public interface IConnectedOrganizationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConnectedOrganization> callback);
+    void get(final ICallback<? super ConnectedOrganization> callback);
 
     /**
      * Gets the ConnectedOrganization from the service
@@ -36,7 +36,7 @@ public interface IConnectedOrganizationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConnectedOrganization> callback);
+    void delete(final ICallback<? super ConnectedOrganization> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConnectedOrganizationRequest extends IHttpRequest {
      * @param sourceConnectedOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<ConnectedOrganization> callback);
+    void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<? super ConnectedOrganization> callback);
 
     /**
      * Patches this ConnectedOrganization with a source
@@ -68,7 +68,7 @@ public interface IConnectedOrganizationRequest extends IHttpRequest {
      * @param newConnectedOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback);
+    void post(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback);
 
     /**
      * Posts a ConnectedOrganization with a new object
@@ -85,7 +85,7 @@ public interface IConnectedOrganizationRequest extends IHttpRequest {
      * @param newConnectedOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback);
+    void put(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback);
 
     /**
      * Posts a ConnectedOrganization with a new object

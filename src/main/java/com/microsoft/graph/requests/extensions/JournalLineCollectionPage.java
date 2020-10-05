@@ -23,6 +23,6 @@ public class JournalLineCollectionPage extends BaseCollectionPage<JournalLine, I
      * @param builder  the request builder for the next collection page
      */
     public JournalLineCollectionPage(final JournalLineCollectionResponse response, final IJournalLineCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

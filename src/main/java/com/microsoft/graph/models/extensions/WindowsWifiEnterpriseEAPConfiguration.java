@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
 import com.microsoft.graph.models.generated.EapType;
@@ -15,7 +14,6 @@ import com.microsoft.graph.models.generated.NetworkSingleSignOnType;
 import com.microsoft.graph.models.extensions.WindowsCertificateProfileBase;
 import com.microsoft.graph.models.extensions.Windows81TrustedRootCertificate;
 import com.microsoft.graph.models.extensions.WindowsWifiConfiguration;
-import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionPage;
 
 
@@ -224,19 +222,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            final Windows81TrustedRootCertificateCollectionResponse response = new Windows81TrustedRootCertificateCollectionResponse();
-            if (json.has("rootCertificatesForServerValidation@odata.nextLink")) {
-                response.nextLink = json.get("rootCertificatesForServerValidation@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("rootCertificatesForServerValidation").toString(), JsonObject[].class);
-            final Windows81TrustedRootCertificate[] array = new Windows81TrustedRootCertificate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Windows81TrustedRootCertificate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            rootCertificatesForServerValidation = new Windows81TrustedRootCertificateCollectionPage(response, null);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation").toString(), Windows81TrustedRootCertificateCollectionPage.class);
         }
     }
 }

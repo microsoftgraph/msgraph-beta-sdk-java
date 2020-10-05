@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ImportedWindowsAutopilotDeviceIdentityUploadStatus;
 import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
 
 
@@ -92,19 +90,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
 
 
         if (json.has("deviceIdentities")) {
-            final ImportedWindowsAutopilotDeviceIdentityCollectionResponse response = new ImportedWindowsAutopilotDeviceIdentityCollectionResponse();
-            if (json.has("deviceIdentities@odata.nextLink")) {
-                response.nextLink = json.get("deviceIdentities@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceIdentities").toString(), JsonObject[].class);
-            final ImportedWindowsAutopilotDeviceIdentity[] array = new ImportedWindowsAutopilotDeviceIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ImportedWindowsAutopilotDeviceIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceIdentities = new ImportedWindowsAutopilotDeviceIdentityCollectionPage(response, null);
+            deviceIdentities = serializer.deserializeObject(json.get("deviceIdentities").toString(), ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
         }
     }
 }

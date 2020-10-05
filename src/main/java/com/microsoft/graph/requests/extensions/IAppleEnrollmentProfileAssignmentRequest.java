@@ -21,7 +21,7 @@ public interface IAppleEnrollmentProfileAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppleEnrollmentProfileAssignment> callback);
+    void get(final ICallback<? super AppleEnrollmentProfileAssignment> callback);
 
     /**
      * Gets the AppleEnrollmentProfileAssignment from the service
@@ -36,7 +36,7 @@ public interface IAppleEnrollmentProfileAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppleEnrollmentProfileAssignment> callback);
+    void delete(final ICallback<? super AppleEnrollmentProfileAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppleEnrollmentProfileAssignmentRequest extends IHttpRequest {
      * @param sourceAppleEnrollmentProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppleEnrollmentProfileAssignment sourceAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback);
+    void patch(final AppleEnrollmentProfileAssignment sourceAppleEnrollmentProfileAssignment, final ICallback<? super AppleEnrollmentProfileAssignment> callback);
 
     /**
      * Patches this AppleEnrollmentProfileAssignment with a source
@@ -68,7 +68,7 @@ public interface IAppleEnrollmentProfileAssignmentRequest extends IHttpRequest {
      * @param newAppleEnrollmentProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback);
+    void post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<? super AppleEnrollmentProfileAssignment> callback);
 
     /**
      * Posts a AppleEnrollmentProfileAssignment with a new object
@@ -85,7 +85,7 @@ public interface IAppleEnrollmentProfileAssignmentRequest extends IHttpRequest {
      * @param newAppleEnrollmentProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback);
+    void put(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<? super AppleEnrollmentProfileAssignment> callback);
 
     /**
      * Posts a AppleEnrollmentProfileAssignment with a new object

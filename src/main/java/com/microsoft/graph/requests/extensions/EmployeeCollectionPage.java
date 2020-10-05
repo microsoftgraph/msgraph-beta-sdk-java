@@ -23,6 +23,6 @@ public class EmployeeCollectionPage extends BaseCollectionPage<Employee, IEmploy
      * @param builder  the request builder for the next collection page
      */
     public EmployeeCollectionPage(final EmployeeCollectionResponse response, final IEmployeeCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

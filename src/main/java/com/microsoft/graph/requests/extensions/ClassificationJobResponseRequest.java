@@ -37,7 +37,7 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ClassificationJobResponse> callback) {
+    public void get(final ICallback<? super ClassificationJobResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ClassificationJobResponse> callback) {
+    public void delete(final ICallback<? super ClassificationJobResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
      * @param sourceClassificationJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ClassificationJobResponse sourceClassificationJobResponse, final ICallback<ClassificationJobResponse> callback) {
+    public void patch(final ClassificationJobResponse sourceClassificationJobResponse, final ICallback<? super ClassificationJobResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceClassificationJobResponse);
     }
 
@@ -96,7 +96,7 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
      * @param newClassificationJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ClassificationJobResponse newClassificationJobResponse, final ICallback<ClassificationJobResponse> callback) {
+    public void post(final ClassificationJobResponse newClassificationJobResponse, final ICallback<? super ClassificationJobResponse> callback) {
         send(HttpMethod.POST, callback, newClassificationJobResponse);
     }
 
@@ -117,7 +117,7 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
      * @param newClassificationJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ClassificationJobResponse newClassificationJobResponse, final ICallback<ClassificationJobResponse> callback) {
+    public void put(final ClassificationJobResponse newClassificationJobResponse, final ICallback<? super ClassificationJobResponse> callback) {
         send(HttpMethod.PUT, callback, newClassificationJobResponse);
     }
 
@@ -151,17 +151,6 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
      */
      public IClassificationJobResponseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ClassificationJobResponseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IClassificationJobResponseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ClassificationJobResponseRequest)this;
      }
 

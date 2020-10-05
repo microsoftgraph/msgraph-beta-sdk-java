@@ -40,7 +40,7 @@ public class CartToClassAssociationCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, CartToClassAssociationCollectionResponse.class, ICartToClassAssociationCollectionPage.class);
     }
 
-    public void get(final ICallback<ICartToClassAssociationCollectionPage> callback) {
+    public void get(final ICallback<? super ICartToClassAssociationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CartToClassAssociationCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<CartToClassAssociation> callback) {
+    public void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CartToClassAssociationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class CartToClassAssociationCollectionRequest extends BaseCollectionReque
      */
     public ICartToClassAssociationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CartToClassAssociationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICartToClassAssociationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CartToClassAssociationCollectionRequest)this;
     }
 

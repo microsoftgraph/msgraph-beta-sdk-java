@@ -21,7 +21,7 @@ public interface IImportedDeviceIdentityResultRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ImportedDeviceIdentityResult> callback);
+    void get(final ICallback<? super ImportedDeviceIdentityResult> callback);
 
     /**
      * Gets the ImportedDeviceIdentityResult from the service
@@ -36,7 +36,7 @@ public interface IImportedDeviceIdentityResultRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ImportedDeviceIdentityResult> callback);
+    void delete(final ICallback<? super ImportedDeviceIdentityResult> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IImportedDeviceIdentityResultRequest extends IHttpRequest {
      * @param sourceImportedDeviceIdentityResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ImportedDeviceIdentityResult sourceImportedDeviceIdentityResult, final ICallback<ImportedDeviceIdentityResult> callback);
+    void patch(final ImportedDeviceIdentityResult sourceImportedDeviceIdentityResult, final ICallback<? super ImportedDeviceIdentityResult> callback);
 
     /**
      * Patches this ImportedDeviceIdentityResult with a source
@@ -68,7 +68,7 @@ public interface IImportedDeviceIdentityResultRequest extends IHttpRequest {
      * @param newImportedDeviceIdentityResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<ImportedDeviceIdentityResult> callback);
+    void post(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<? super ImportedDeviceIdentityResult> callback);
 
     /**
      * Posts a ImportedDeviceIdentityResult with a new object
@@ -85,7 +85,7 @@ public interface IImportedDeviceIdentityResultRequest extends IHttpRequest {
      * @param newImportedDeviceIdentityResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<ImportedDeviceIdentityResult> callback);
+    void put(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<? super ImportedDeviceIdentityResult> callback);
 
     /**
      * Posts a ImportedDeviceIdentityResult with a new object

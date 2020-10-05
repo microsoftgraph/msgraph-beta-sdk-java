@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPersonAnnotationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPersonAnnotationCollectionPage> callback);
+    void get(final ICallback<? super IPersonAnnotationCollectionPage> callback);
 
     IPersonAnnotationCollectionPage get() throws ClientException;
 
-    void post(final PersonAnnotation newPersonAnnotation, final ICallback<PersonAnnotation> callback);
+    void post(final PersonAnnotation newPersonAnnotation, final ICallback<? super PersonAnnotation> callback);
 
     PersonAnnotation post(final PersonAnnotation newPersonAnnotation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPersonAnnotationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPersonAnnotationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPersonAnnotationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPersonAnnotationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPersonAnnotationCollectionRequest skipToken(String skipToken);
+	IPersonAnnotationCollectionRequest skipToken(final String skipToken);
 }

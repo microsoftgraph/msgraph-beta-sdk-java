@@ -26,7 +26,7 @@ public interface IDataSharingConsentConsentToDataSharingRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<DataSharingConsent> callback);
+    void post(final ICallback<? super DataSharingConsent> callback);
 
     /**
      * Creates the DataSharingConsentConsentToDataSharing

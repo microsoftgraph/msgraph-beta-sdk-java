@@ -40,7 +40,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends
         super(requestUrl, client, requestOptions, MicrosoftAuthenticatorAuthenticationMethodCollectionResponse.class, IMicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<IMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super IMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends
         return buildFromResponse(response);
     }
 
-    public void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends
      */
     public IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
     }
 

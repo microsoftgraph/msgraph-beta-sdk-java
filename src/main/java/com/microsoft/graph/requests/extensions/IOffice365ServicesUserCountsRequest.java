@@ -21,7 +21,7 @@ public interface IOffice365ServicesUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365ServicesUserCounts> callback);
+    void get(final ICallback<? super Office365ServicesUserCounts> callback);
 
     /**
      * Gets the Office365ServicesUserCounts from the service
@@ -36,7 +36,7 @@ public interface IOffice365ServicesUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365ServicesUserCounts> callback);
+    void delete(final ICallback<? super Office365ServicesUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365ServicesUserCountsRequest extends IHttpRequest {
      * @param sourceOffice365ServicesUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365ServicesUserCounts sourceOffice365ServicesUserCounts, final ICallback<Office365ServicesUserCounts> callback);
+    void patch(final Office365ServicesUserCounts sourceOffice365ServicesUserCounts, final ICallback<? super Office365ServicesUserCounts> callback);
 
     /**
      * Patches this Office365ServicesUserCounts with a source
@@ -68,7 +68,7 @@ public interface IOffice365ServicesUserCountsRequest extends IHttpRequest {
      * @param newOffice365ServicesUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<Office365ServicesUserCounts> callback);
+    void post(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<? super Office365ServicesUserCounts> callback);
 
     /**
      * Posts a Office365ServicesUserCounts with a new object
@@ -85,7 +85,7 @@ public interface IOffice365ServicesUserCountsRequest extends IHttpRequest {
      * @param newOffice365ServicesUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<Office365ServicesUserCounts> callback);
+    void put(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<? super Office365ServicesUserCounts> callback);
 
     /**
      * Posts a Office365ServicesUserCounts with a new object

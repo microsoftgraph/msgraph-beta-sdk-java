@@ -37,7 +37,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosikEv2VpnConfiguration> callback) {
+    public void get(final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosikEv2VpnConfiguration> callback) {
+    public void delete(final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param sourceIosikEv2VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback) {
+    public void patch(final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosikEv2VpnConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param newIosikEv2VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback) {
+    public void post(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosikEv2VpnConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param newIosikEv2VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback) {
+    public void put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosikEv2VpnConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      */
      public IIosikEv2VpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosikEv2VpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosikEv2VpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosikEv2VpnConfigurationRequest)this;
      }
 

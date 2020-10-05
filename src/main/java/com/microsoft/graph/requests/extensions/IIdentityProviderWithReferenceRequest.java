@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IIdentityProviderWithReferenceRequest extends IHttpRequest {
 
-    void post(final IdentityProvider newIdentityProvider, final IJsonBackedObject payload, final ICallback<IdentityProvider> callback);
+    void post(final IdentityProvider newIdentityProvider, final IJsonBackedObject payload, final ICallback<? super IdentityProvider> callback);
 
     IdentityProvider post(final IdentityProvider newIdentityProvider, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<IdentityProvider> callback);
+    void get(final ICallback<? super IdentityProvider> callback);
 
     IdentityProvider get() throws ClientException;
 
-	void delete(final ICallback<IdentityProvider> callback);
+	void delete(final ICallback<? super IdentityProvider> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final IdentityProvider sourceIdentityProvider, final ICallback<IdentityProvider> callback);
+	void patch(final IdentityProvider sourceIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
 	IdentityProvider patch(final IdentityProvider sourceIdentityProvider) throws ClientException;
 

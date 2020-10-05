@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerTrustedRootCertificateRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     /**
      * Gets the AndroidDeviceOwnerTrustedRootCertificate from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerTrustedRootCertificateRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerTrustedRootCertificateRequest extends IHttpR
      * @param sourceAndroidDeviceOwnerTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     /**
      * Patches this AndroidDeviceOwnerTrustedRootCertificate with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerTrustedRootCertificateRequest extends IHttpR
      * @param newAndroidDeviceOwnerTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     /**
      * Posts a AndroidDeviceOwnerTrustedRootCertificate with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerTrustedRootCertificateRequest extends IHttpR
      * @param newAndroidDeviceOwnerTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void put(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     /**
      * Posts a AndroidDeviceOwnerTrustedRootCertificate with a new object

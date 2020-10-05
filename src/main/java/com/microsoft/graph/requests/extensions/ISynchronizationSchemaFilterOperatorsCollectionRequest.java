@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ISynchronizationSchemaFilterOperatorsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISynchronizationSchemaFilterOperatorsCollectionPage> callback);
+    void get(final ICallback<? super ISynchronizationSchemaFilterOperatorsCollectionPage> callback);
 
     ISynchronizationSchemaFilterOperatorsCollectionPage get() throws ClientException;
 

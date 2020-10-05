@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IIosManagedAppProtectionHasPayloadLinksCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IIosManagedAppProtectionHasPayloadLinksCollectionPage> callback);
+    void post(final ICallback<? super IIosManagedAppProtectionHasPayloadLinksCollectionPage> callback);
 
     IIosManagedAppProtectionHasPayloadLinksCollectionPage post() throws ClientException;
 

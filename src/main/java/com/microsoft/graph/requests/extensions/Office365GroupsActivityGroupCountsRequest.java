@@ -37,7 +37,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Office365GroupsActivityGroupCounts> callback) {
+    public void get(final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Office365GroupsActivityGroupCounts> callback) {
+    public void delete(final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param sourceOffice365GroupsActivityGroupCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365GroupsActivityGroupCounts sourceOffice365GroupsActivityGroupCounts, final ICallback<Office365GroupsActivityGroupCounts> callback) {
+    public void patch(final Office365GroupsActivityGroupCounts sourceOffice365GroupsActivityGroupCounts, final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365GroupsActivityGroupCounts);
     }
 
@@ -96,7 +96,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param newOffice365GroupsActivityGroupCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<Office365GroupsActivityGroupCounts> callback) {
+    public void post(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.POST, callback, newOffice365GroupsActivityGroupCounts);
     }
 
@@ -117,7 +117,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param newOffice365GroupsActivityGroupCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<Office365GroupsActivityGroupCounts> callback) {
+    public void put(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.PUT, callback, newOffice365GroupsActivityGroupCounts);
     }
 
@@ -151,17 +151,6 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      */
      public IOffice365GroupsActivityGroupCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365GroupsActivityGroupCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOffice365GroupsActivityGroupCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Office365GroupsActivityGroupCountsRequest)this;
      }
 

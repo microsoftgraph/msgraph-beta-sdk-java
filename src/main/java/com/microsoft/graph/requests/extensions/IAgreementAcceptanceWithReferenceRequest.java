@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAgreementAcceptanceWithReferenceRequest extends IHttpRequest {
 
-    void post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload, final ICallback<AgreementAcceptance> callback);
+    void post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload, final ICallback<? super AgreementAcceptance> callback);
 
     AgreementAcceptance post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AgreementAcceptance> callback);
+    void get(final ICallback<? super AgreementAcceptance> callback);
 
     AgreementAcceptance get() throws ClientException;
 
-	void delete(final ICallback<AgreementAcceptance> callback);
+	void delete(final ICallback<? super AgreementAcceptance> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+	void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback);
 
 	AgreementAcceptance patch(final AgreementAcceptance sourceAgreementAcceptance) throws ClientException;
 

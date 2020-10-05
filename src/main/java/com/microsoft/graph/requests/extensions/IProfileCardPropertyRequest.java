@@ -21,7 +21,7 @@ public interface IProfileCardPropertyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProfileCardProperty> callback);
+    void get(final ICallback<? super ProfileCardProperty> callback);
 
     /**
      * Gets the ProfileCardProperty from the service
@@ -36,7 +36,7 @@ public interface IProfileCardPropertyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProfileCardProperty> callback);
+    void delete(final ICallback<? super ProfileCardProperty> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProfileCardPropertyRequest extends IHttpRequest {
      * @param sourceProfileCardProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProfileCardProperty sourceProfileCardProperty, final ICallback<ProfileCardProperty> callback);
+    void patch(final ProfileCardProperty sourceProfileCardProperty, final ICallback<? super ProfileCardProperty> callback);
 
     /**
      * Patches this ProfileCardProperty with a source
@@ -68,7 +68,7 @@ public interface IProfileCardPropertyRequest extends IHttpRequest {
      * @param newProfileCardProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback);
+    void post(final ProfileCardProperty newProfileCardProperty, final ICallback<? super ProfileCardProperty> callback);
 
     /**
      * Posts a ProfileCardProperty with a new object
@@ -85,7 +85,7 @@ public interface IProfileCardPropertyRequest extends IHttpRequest {
      * @param newProfileCardProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback);
+    void put(final ProfileCardProperty newProfileCardProperty, final ICallback<? super ProfileCardProperty> callback);
 
     /**
      * Posts a ProfileCardProperty with a new object

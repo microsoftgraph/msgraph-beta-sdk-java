@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
 import com.microsoft.graph.models.extensions.Currency;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.models.extensions.PaymentTerm;
 import com.microsoft.graph.models.extensions.SalesCreditMemoLine;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionResponse;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionPage;
 
 
@@ -327,19 +325,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
 
 
         if (json.has("salesCreditMemoLines")) {
-            final SalesCreditMemoLineCollectionResponse response = new SalesCreditMemoLineCollectionResponse();
-            if (json.has("salesCreditMemoLines@odata.nextLink")) {
-                response.nextLink = json.get("salesCreditMemoLines@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("salesCreditMemoLines").toString(), JsonObject[].class);
-            final SalesCreditMemoLine[] array = new SalesCreditMemoLine[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SalesCreditMemoLine.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            salesCreditMemoLines = new SalesCreditMemoLineCollectionPage(response, null);
+            salesCreditMemoLines = serializer.deserializeObject(json.get("salesCreditMemoLines").toString(), SalesCreditMemoLineCollectionPage.class);
         }
     }
 }

@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsCertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final IJsonBackedObject payload, final ICallback<WindowsCertificateProfileBase> callback);
+    void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super WindowsCertificateProfileBase> callback);
 
     WindowsCertificateProfileBase post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsCertificateProfileBase> callback);
+    void get(final ICallback<? super WindowsCertificateProfileBase> callback);
 
     WindowsCertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<WindowsCertificateProfileBase> callback);
+	void delete(final ICallback<? super WindowsCertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback);
+	void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback);
 
 	WindowsCertificateProfileBase patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase) throws ClientException;
 

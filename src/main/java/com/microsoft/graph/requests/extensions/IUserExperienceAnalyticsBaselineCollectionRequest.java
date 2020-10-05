@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsBaselineCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsBaselineCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsBaselineCollectionPage> callback);
 
     IUserExperienceAnalyticsBaselineCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback);
+    void post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<? super UserExperienceAnalyticsBaseline> callback);
 
     UserExperienceAnalyticsBaseline post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsBaselineCollectionRequest extends IHttp
      * @return the updated request
      */
     IUserExperienceAnalyticsBaselineCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsBaselineCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsBaselineCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsBaselineCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsBaselineCollectionRequest skipToken(final String skipToken);
 }

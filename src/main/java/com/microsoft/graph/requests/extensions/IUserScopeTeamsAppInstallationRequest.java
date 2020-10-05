@@ -21,7 +21,7 @@ public interface IUserScopeTeamsAppInstallationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserScopeTeamsAppInstallation> callback);
+    void get(final ICallback<? super UserScopeTeamsAppInstallation> callback);
 
     /**
      * Gets the UserScopeTeamsAppInstallation from the service
@@ -36,7 +36,7 @@ public interface IUserScopeTeamsAppInstallationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserScopeTeamsAppInstallation> callback);
+    void delete(final ICallback<? super UserScopeTeamsAppInstallation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserScopeTeamsAppInstallationRequest extends IHttpRequest {
      * @param sourceUserScopeTeamsAppInstallation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback);
+    void patch(final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback);
 
     /**
      * Patches this UserScopeTeamsAppInstallation with a source
@@ -68,7 +68,7 @@ public interface IUserScopeTeamsAppInstallationRequest extends IHttpRequest {
      * @param newUserScopeTeamsAppInstallation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback);
+    void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback);
 
     /**
      * Posts a UserScopeTeamsAppInstallation with a new object
@@ -85,7 +85,7 @@ public interface IUserScopeTeamsAppInstallationRequest extends IHttpRequest {
      * @param newUserScopeTeamsAppInstallation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback);
+    void put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback);
 
     /**
      * Posts a UserScopeTeamsAppInstallation with a new object

@@ -21,7 +21,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
+    void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
 
     /**
      * Gets the WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary from the service
@@ -36,7 +36,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
+    void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
+    void patch(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
 
     /**
      * Patches this WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary with a source
@@ -68,7 +68,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
 
     /**
      * Posts a WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary with a new object
@@ -85,7 +85,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
      * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
+    void put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback);
 
     /**
      * Posts a WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary with a new object

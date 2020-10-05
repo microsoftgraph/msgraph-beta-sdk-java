@@ -41,7 +41,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Bitlocker> callback) {
+    public void get(final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Bitlocker> callback) {
+    public void delete(final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param sourceBitlocker the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Bitlocker sourceBitlocker, final ICallback<Bitlocker> callback) {
+    public void patch(final Bitlocker sourceBitlocker, final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.PATCH, callback, sourceBitlocker);
     }
 
@@ -100,7 +100,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param newBitlocker the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Bitlocker newBitlocker, final ICallback<Bitlocker> callback) {
+    public void post(final Bitlocker newBitlocker, final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.POST, callback, newBitlocker);
     }
 
@@ -121,7 +121,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param newBitlocker the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Bitlocker newBitlocker, final ICallback<Bitlocker> callback) {
+    public void put(final Bitlocker newBitlocker, final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.PUT, callback, newBitlocker);
     }
 
@@ -155,17 +155,6 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      */
      public IBitlockerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BitlockerRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IBitlockerRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BitlockerRequest)this;
      }
 

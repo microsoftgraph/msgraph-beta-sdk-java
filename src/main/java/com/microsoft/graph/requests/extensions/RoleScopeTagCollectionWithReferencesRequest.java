@@ -36,7 +36,7 @@ public class RoleScopeTagCollectionWithReferencesRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, RoleScopeTagCollectionResponse.class, IRoleScopeTagCollectionPage.class);
     }
 
-    public void get(final ICallback<IRoleScopeTagCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IRoleScopeTagCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -57,22 +57,27 @@ public class RoleScopeTagCollectionWithReferencesRequest extends BaseCollectionR
 
     public IRoleScopeTagCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (RoleScopeTagCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IRoleScopeTagCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (RoleScopeTagCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IRoleScopeTagCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IRoleScopeTagCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (RoleScopeTagCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IRoleScopeTagCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (RoleScopeTagCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IRoleScopeTagCollectionWithReferencesPage buildFromResponse(final RoleScopeTagCollectionResponse response) {

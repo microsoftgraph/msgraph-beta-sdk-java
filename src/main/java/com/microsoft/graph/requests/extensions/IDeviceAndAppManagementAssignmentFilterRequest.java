@@ -21,7 +21,7 @@ public interface IDeviceAndAppManagementAssignmentFilterRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAndAppManagementAssignmentFilter> callback);
+    void get(final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback);
 
     /**
      * Gets the DeviceAndAppManagementAssignmentFilter from the service
@@ -36,7 +36,7 @@ public interface IDeviceAndAppManagementAssignmentFilterRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceAndAppManagementAssignmentFilter> callback);
+    void delete(final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceAndAppManagementAssignmentFilterRequest extends IHttpReq
      * @param sourceDeviceAndAppManagementAssignmentFilter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceAndAppManagementAssignmentFilter sourceDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback);
+    void patch(final DeviceAndAppManagementAssignmentFilter sourceDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback);
 
     /**
      * Patches this DeviceAndAppManagementAssignmentFilter with a source
@@ -68,7 +68,7 @@ public interface IDeviceAndAppManagementAssignmentFilterRequest extends IHttpReq
      * @param newDeviceAndAppManagementAssignmentFilter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback);
+    void post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback);
 
     /**
      * Posts a DeviceAndAppManagementAssignmentFilter with a new object
@@ -85,7 +85,7 @@ public interface IDeviceAndAppManagementAssignmentFilterRequest extends IHttpReq
      * @param newDeviceAndAppManagementAssignmentFilter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback);
+    void put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback);
 
     /**
      * Posts a DeviceAndAppManagementAssignmentFilter with a new object

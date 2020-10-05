@@ -39,7 +39,7 @@ public class PrivilegedRoleAssignmentCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignmentCollectionResponse.class, IPrivilegedRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class PrivilegedRoleAssignmentCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
+    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class PrivilegedRoleAssignmentCollectionRequest extends BaseCollectionReq
      */
     public IPrivilegedRoleAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedRoleAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedRoleAssignmentCollectionRequest)this;
     }
 

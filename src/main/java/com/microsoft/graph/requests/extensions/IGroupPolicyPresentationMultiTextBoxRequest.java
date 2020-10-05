@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationMultiTextBoxRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationMultiTextBox> callback);
+    void get(final ICallback<? super GroupPolicyPresentationMultiTextBox> callback);
 
     /**
      * Gets the GroupPolicyPresentationMultiTextBox from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationMultiTextBoxRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationMultiTextBox> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationMultiTextBox> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationMultiTextBoxRequest extends IHttpReques
      * @param sourceGroupPolicyPresentationMultiTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationMultiTextBox sourceGroupPolicyPresentationMultiTextBox, final ICallback<GroupPolicyPresentationMultiTextBox> callback);
+    void patch(final GroupPolicyPresentationMultiTextBox sourceGroupPolicyPresentationMultiTextBox, final ICallback<? super GroupPolicyPresentationMultiTextBox> callback);
 
     /**
      * Patches this GroupPolicyPresentationMultiTextBox with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationMultiTextBoxRequest extends IHttpReques
      * @param newGroupPolicyPresentationMultiTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<GroupPolicyPresentationMultiTextBox> callback);
+    void post(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<? super GroupPolicyPresentationMultiTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationMultiTextBox with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationMultiTextBoxRequest extends IHttpReques
      * @param newGroupPolicyPresentationMultiTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<GroupPolicyPresentationMultiTextBox> callback);
+    void put(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<? super GroupPolicyPresentationMultiTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationMultiTextBox with a new object

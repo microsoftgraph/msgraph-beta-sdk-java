@@ -34,6 +34,6 @@ public class PrivilegedApprovalMyRequestsCollectionPage extends BaseCollectionPa
      * @param builder The request builder for the next collection page
      */
     public PrivilegedApprovalMyRequestsCollectionPage(final PrivilegedApprovalMyRequestsCollectionResponse response, final IPrivilegedApprovalMyRequestsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

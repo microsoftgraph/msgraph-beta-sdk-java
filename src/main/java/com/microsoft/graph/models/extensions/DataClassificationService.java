@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ExactMatchDataStore;
 import com.microsoft.graph.models.extensions.FileClassificationRequest;
@@ -16,19 +15,12 @@ import com.microsoft.graph.models.extensions.SensitiveType;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.ExactMatchUploadAgent;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionPage;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionResponse;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionPage;
-import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionResponse;
 import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionPage;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionResponse;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionPage;
-import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentCollectionPage;
 
 
@@ -181,195 +173,51 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
 
 
         if (json.has("exactMatchDataStores")) {
-            final ExactMatchDataStoreCollectionResponse response = new ExactMatchDataStoreCollectionResponse();
-            if (json.has("exactMatchDataStores@odata.nextLink")) {
-                response.nextLink = json.get("exactMatchDataStores@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("exactMatchDataStores").toString(), JsonObject[].class);
-            final ExactMatchDataStore[] array = new ExactMatchDataStore[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExactMatchDataStore.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            exactMatchDataStores = new ExactMatchDataStoreCollectionPage(response, null);
+            exactMatchDataStores = serializer.deserializeObject(json.get("exactMatchDataStores").toString(), ExactMatchDataStoreCollectionPage.class);
         }
 
         if (json.has("classifyFile")) {
-            final FileClassificationRequestCollectionResponse response = new FileClassificationRequestCollectionResponse();
-            if (json.has("classifyFile@odata.nextLink")) {
-                response.nextLink = json.get("classifyFile@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyFile").toString(), JsonObject[].class);
-            final FileClassificationRequest[] array = new FileClassificationRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), FileClassificationRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            classifyFile = new FileClassificationRequestCollectionPage(response, null);
+            classifyFile = serializer.deserializeObject(json.get("classifyFile").toString(), FileClassificationRequestCollectionPage.class);
         }
 
         if (json.has("classifyFileJobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("classifyFileJobs@odata.nextLink")) {
-                response.nextLink = json.get("classifyFileJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyFileJobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            classifyFileJobs = new JobResponseBaseCollectionPage(response, null);
+            classifyFileJobs = serializer.deserializeObject(json.get("classifyFileJobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("classifyText")) {
-            final TextClassificationRequestCollectionResponse response = new TextClassificationRequestCollectionResponse();
-            if (json.has("classifyText@odata.nextLink")) {
-                response.nextLink = json.get("classifyText@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyText").toString(), JsonObject[].class);
-            final TextClassificationRequest[] array = new TextClassificationRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TextClassificationRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            classifyText = new TextClassificationRequestCollectionPage(response, null);
+            classifyText = serializer.deserializeObject(json.get("classifyText").toString(), TextClassificationRequestCollectionPage.class);
         }
 
         if (json.has("classifyTextJobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("classifyTextJobs@odata.nextLink")) {
-                response.nextLink = json.get("classifyTextJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyTextJobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            classifyTextJobs = new JobResponseBaseCollectionPage(response, null);
+            classifyTextJobs = serializer.deserializeObject(json.get("classifyTextJobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("evaluateDlpPoliciesJobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("evaluateDlpPoliciesJobs@odata.nextLink")) {
-                response.nextLink = json.get("evaluateDlpPoliciesJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("evaluateDlpPoliciesJobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            evaluateDlpPoliciesJobs = new JobResponseBaseCollectionPage(response, null);
+            evaluateDlpPoliciesJobs = serializer.deserializeObject(json.get("evaluateDlpPoliciesJobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("evaluateLabelJobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("evaluateLabelJobs@odata.nextLink")) {
-                response.nextLink = json.get("evaluateLabelJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("evaluateLabelJobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            evaluateLabelJobs = new JobResponseBaseCollectionPage(response, null);
+            evaluateLabelJobs = serializer.deserializeObject(json.get("evaluateLabelJobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("jobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("jobs@odata.nextLink")) {
-                response.nextLink = json.get("jobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("jobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            jobs = new JobResponseBaseCollectionPage(response, null);
+            jobs = serializer.deserializeObject(json.get("jobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("labelsAndPoliciesEvaluationJobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("labelsAndPoliciesEvaluationJobs@odata.nextLink")) {
-                response.nextLink = json.get("labelsAndPoliciesEvaluationJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("labelsAndPoliciesEvaluationJobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            labelsAndPoliciesEvaluationJobs = new JobResponseBaseCollectionPage(response, null);
+            labelsAndPoliciesEvaluationJobs = serializer.deserializeObject(json.get("labelsAndPoliciesEvaluationJobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("sensitiveTypes")) {
-            final SensitiveTypeCollectionResponse response = new SensitiveTypeCollectionResponse();
-            if (json.has("sensitiveTypes@odata.nextLink")) {
-                response.nextLink = json.get("sensitiveTypes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sensitiveTypes").toString(), JsonObject[].class);
-            final SensitiveType[] array = new SensitiveType[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitiveType.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sensitiveTypes = new SensitiveTypeCollectionPage(response, null);
+            sensitiveTypes = serializer.deserializeObject(json.get("sensitiveTypes").toString(), SensitiveTypeCollectionPage.class);
         }
 
         if (json.has("sensitivityLabels")) {
-            final SensitivityLabelCollectionResponse response = new SensitivityLabelCollectionResponse();
-            if (json.has("sensitivityLabels@odata.nextLink")) {
-                response.nextLink = json.get("sensitivityLabels@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sensitivityLabels").toString(), JsonObject[].class);
-            final SensitivityLabel[] array = new SensitivityLabel[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitivityLabel.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sensitivityLabels = new SensitivityLabelCollectionPage(response, null);
+            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels").toString(), SensitivityLabelCollectionPage.class);
         }
 
         if (json.has("exactMatchUploadAgents")) {
-            final ExactMatchUploadAgentCollectionResponse response = new ExactMatchUploadAgentCollectionResponse();
-            if (json.has("exactMatchUploadAgents@odata.nextLink")) {
-                response.nextLink = json.get("exactMatchUploadAgents@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("exactMatchUploadAgents").toString(), JsonObject[].class);
-            final ExactMatchUploadAgent[] array = new ExactMatchUploadAgent[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExactMatchUploadAgent.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            exactMatchUploadAgents = new ExactMatchUploadAgentCollectionPage(response, null);
+            exactMatchUploadAgents = serializer.deserializeObject(json.get("exactMatchUploadAgents").toString(), ExactMatchUploadAgentCollectionPage.class);
         }
     }
 }

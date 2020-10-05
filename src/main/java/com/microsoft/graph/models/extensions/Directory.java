@@ -6,17 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.FeatureRolloutPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionResponse;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionPage;
 
 
@@ -97,51 +93,15 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("administrativeUnits")) {
-            final AdministrativeUnitCollectionResponse response = new AdministrativeUnitCollectionResponse();
-            if (json.has("administrativeUnits@odata.nextLink")) {
-                response.nextLink = json.get("administrativeUnits@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("administrativeUnits").toString(), JsonObject[].class);
-            final AdministrativeUnit[] array = new AdministrativeUnit[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AdministrativeUnit.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            administrativeUnits = new AdministrativeUnitCollectionPage(response, null);
+            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits").toString(), AdministrativeUnitCollectionPage.class);
         }
 
         if (json.has("deletedItems")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("deletedItems@odata.nextLink")) {
-                response.nextLink = json.get("deletedItems@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deletedItems").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deletedItems = new DirectoryObjectCollectionPage(response, null);
+            deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("featureRolloutPolicies")) {
-            final FeatureRolloutPolicyCollectionResponse response = new FeatureRolloutPolicyCollectionResponse();
-            if (json.has("featureRolloutPolicies@odata.nextLink")) {
-                response.nextLink = json.get("featureRolloutPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("featureRolloutPolicies").toString(), JsonObject[].class);
-            final FeatureRolloutPolicy[] array = new FeatureRolloutPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), FeatureRolloutPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            featureRolloutPolicies = new FeatureRolloutPolicyCollectionPage(response, null);
+            featureRolloutPolicies = serializer.deserializeObject(json.get("featureRolloutPolicies").toString(), FeatureRolloutPolicyCollectionPage.class);
         }
     }
 }

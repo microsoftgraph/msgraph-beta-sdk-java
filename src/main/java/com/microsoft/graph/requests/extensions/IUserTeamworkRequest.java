@@ -21,7 +21,7 @@ public interface IUserTeamworkRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserTeamwork> callback);
+    void get(final ICallback<? super UserTeamwork> callback);
 
     /**
      * Gets the UserTeamwork from the service
@@ -36,7 +36,7 @@ public interface IUserTeamworkRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserTeamwork> callback);
+    void delete(final ICallback<? super UserTeamwork> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserTeamworkRequest extends IHttpRequest {
      * @param sourceUserTeamwork the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserTeamwork sourceUserTeamwork, final ICallback<UserTeamwork> callback);
+    void patch(final UserTeamwork sourceUserTeamwork, final ICallback<? super UserTeamwork> callback);
 
     /**
      * Patches this UserTeamwork with a source
@@ -68,7 +68,7 @@ public interface IUserTeamworkRequest extends IHttpRequest {
      * @param newUserTeamwork the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserTeamwork newUserTeamwork, final ICallback<UserTeamwork> callback);
+    void post(final UserTeamwork newUserTeamwork, final ICallback<? super UserTeamwork> callback);
 
     /**
      * Posts a UserTeamwork with a new object
@@ -85,7 +85,7 @@ public interface IUserTeamworkRequest extends IHttpRequest {
      * @param newUserTeamwork the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserTeamwork newUserTeamwork, final ICallback<UserTeamwork> callback);
+    void put(final UserTeamwork newUserTeamwork, final ICallback<? super UserTeamwork> callback);
 
     /**
      * Posts a UserTeamwork with a new object

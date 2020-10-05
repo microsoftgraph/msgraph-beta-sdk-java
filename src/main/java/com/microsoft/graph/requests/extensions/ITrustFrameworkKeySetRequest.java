@@ -21,7 +21,7 @@ public interface ITrustFrameworkKeySetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TrustFrameworkKeySet> callback);
+    void get(final ICallback<? super TrustFrameworkKeySet> callback);
 
     /**
      * Gets the TrustFrameworkKeySet from the service
@@ -36,7 +36,7 @@ public interface ITrustFrameworkKeySetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TrustFrameworkKeySet> callback);
+    void delete(final ICallback<? super TrustFrameworkKeySet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITrustFrameworkKeySetRequest extends IHttpRequest {
      * @param sourceTrustFrameworkKeySet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TrustFrameworkKeySet sourceTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback);
+    void patch(final TrustFrameworkKeySet sourceTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback);
 
     /**
      * Patches this TrustFrameworkKeySet with a source
@@ -68,7 +68,7 @@ public interface ITrustFrameworkKeySetRequest extends IHttpRequest {
      * @param newTrustFrameworkKeySet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback);
+    void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback);
 
     /**
      * Posts a TrustFrameworkKeySet with a new object
@@ -85,7 +85,7 @@ public interface ITrustFrameworkKeySetRequest extends IHttpRequest {
      * @param newTrustFrameworkKeySet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback);
+    void put(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback);
 
     /**
      * Posts a TrustFrameworkKeySet with a new object

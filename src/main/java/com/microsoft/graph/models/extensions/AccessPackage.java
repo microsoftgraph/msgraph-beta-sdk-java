@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRoleScope;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionPage;
 
 
@@ -167,35 +164,11 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageAssignmentPolicies")) {
-            final AccessPackageAssignmentPolicyCollectionResponse response = new AccessPackageAssignmentPolicyCollectionResponse();
-            if (json.has("accessPackageAssignmentPolicies@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageAssignmentPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageAssignmentPolicies").toString(), JsonObject[].class);
-            final AccessPackageAssignmentPolicy[] array = new AccessPackageAssignmentPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageAssignmentPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageAssignmentPolicies = new AccessPackageAssignmentPolicyCollectionPage(response, null);
+            accessPackageAssignmentPolicies = serializer.deserializeObject(json.get("accessPackageAssignmentPolicies").toString(), AccessPackageAssignmentPolicyCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceRoleScopes")) {
-            final AccessPackageResourceRoleScopeCollectionResponse response = new AccessPackageResourceRoleScopeCollectionResponse();
-            if (json.has("accessPackageResourceRoleScopes@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceRoleScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes").toString(), JsonObject[].class);
-            final AccessPackageResourceRoleScope[] array = new AccessPackageResourceRoleScope[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceRoleScope.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceRoleScopes = new AccessPackageResourceRoleScopeCollectionPage(response, null);
+            accessPackageResourceRoleScopes = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes").toString(), AccessPackageResourceRoleScopeCollectionPage.class);
         }
     }
 }

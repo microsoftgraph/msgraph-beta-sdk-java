@@ -23,6 +23,6 @@ public class WindowsAutopilotDeviceIdentityCollectionPage extends BaseCollection
      * @param builder  the request builder for the next collection page
      */
     public WindowsAutopilotDeviceIdentityCollectionPage(final WindowsAutopilotDeviceIdentityCollectionResponse response, final IWindowsAutopilotDeviceIdentityCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

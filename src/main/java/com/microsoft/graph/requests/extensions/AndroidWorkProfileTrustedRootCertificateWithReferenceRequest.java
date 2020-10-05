@@ -35,7 +35,7 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
         super(requestUrl, client, requestOptions, AndroidWorkProfileTrustedRootCertificate.class);
     }
 
-    public void post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
         return null;
     }
 
-    public void get(final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+	public void patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileTrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
      */
     public IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidWorkProfileTrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidWorkProfileTrustedRootCertificateWithReferenceRequest)this;
     }
 }

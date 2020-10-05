@@ -23,6 +23,6 @@ public class RiskyUserCollectionPage extends BaseCollectionPage<RiskyUser, IRisk
      * @param builder  the request builder for the next collection page
      */
     public RiskyUserCollectionPage(final RiskyUserCollectionResponse response, final IRiskyUserCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

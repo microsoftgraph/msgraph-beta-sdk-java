@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlannerTaskCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPlannerTaskCollectionPage> callback);
+    void get(final ICallback<? super IPlannerTaskCollectionPage> callback);
 
     IPlannerTaskCollectionPage get() throws ClientException;
 
-    void post(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback);
+    void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback);
 
     PlannerTask post(final PlannerTask newPlannerTask) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPlannerTaskCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPlannerTaskCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPlannerTaskCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPlannerTaskCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlannerTaskCollectionRequest skipToken(String skipToken);
+	IPlannerTaskCollectionRequest skipToken(final String skipToken);
 }

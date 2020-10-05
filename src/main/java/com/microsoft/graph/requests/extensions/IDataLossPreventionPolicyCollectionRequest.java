@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDataLossPreventionPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDataLossPreventionPolicyCollectionPage> callback);
+    void get(final ICallback<? super IDataLossPreventionPolicyCollectionPage> callback);
 
     IDataLossPreventionPolicyCollectionPage get() throws ClientException;
 
-    void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback);
+    void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback);
 
     DataLossPreventionPolicy post(final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException;
 
@@ -48,6 +48,14 @@ public interface IDataLossPreventionPolicyCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IDataLossPreventionPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDataLossPreventionPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -80,5 +88,5 @@ public interface IDataLossPreventionPolicyCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IDataLossPreventionPolicyCollectionRequest skipToken(String skipToken);
+	IDataLossPreventionPolicyCollectionRequest skipToken(final String skipToken);
 }

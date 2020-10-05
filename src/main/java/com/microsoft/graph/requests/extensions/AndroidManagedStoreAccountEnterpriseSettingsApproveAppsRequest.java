@@ -36,7 +36,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest exte
         body = new AndroidManagedStoreAccountEnterpriseSettingsApproveAppsBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest exte
      */
     public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest)this;
     }
 

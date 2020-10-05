@@ -21,7 +21,7 @@ public interface IPrivilegedRoleAssignmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void get(final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     /**
      * Gets the PrivilegedRoleAssignmentRequest from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedRoleAssignmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void delete(final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedRoleAssignmentRequestRequest extends IHttpRequest {
      * @param sourcePrivilegedRoleAssignmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedRoleAssignmentRequest sourcePrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void patch(final PrivilegedRoleAssignmentRequest sourcePrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     /**
      * Patches this PrivilegedRoleAssignmentRequest with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedRoleAssignmentRequestRequest extends IHttpRequest {
      * @param newPrivilegedRoleAssignmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     /**
      * Posts a PrivilegedRoleAssignmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedRoleAssignmentRequestRequest extends IHttpRequest {
      * @param newPrivilegedRoleAssignmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback);
+    void put(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback);
 
     /**
      * Posts a PrivilegedRoleAssignmentRequest with a new object

@@ -21,7 +21,7 @@ public interface IDocumentCommentReplyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DocumentCommentReply> callback);
+    void get(final ICallback<? super DocumentCommentReply> callback);
 
     /**
      * Gets the DocumentCommentReply from the service
@@ -36,7 +36,7 @@ public interface IDocumentCommentReplyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DocumentCommentReply> callback);
+    void delete(final ICallback<? super DocumentCommentReply> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDocumentCommentReplyRequest extends IHttpRequest {
      * @param sourceDocumentCommentReply the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DocumentCommentReply sourceDocumentCommentReply, final ICallback<DocumentCommentReply> callback);
+    void patch(final DocumentCommentReply sourceDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback);
 
     /**
      * Patches this DocumentCommentReply with a source
@@ -68,7 +68,7 @@ public interface IDocumentCommentReplyRequest extends IHttpRequest {
      * @param newDocumentCommentReply the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DocumentCommentReply newDocumentCommentReply, final ICallback<DocumentCommentReply> callback);
+    void post(final DocumentCommentReply newDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback);
 
     /**
      * Posts a DocumentCommentReply with a new object
@@ -85,7 +85,7 @@ public interface IDocumentCommentReplyRequest extends IHttpRequest {
      * @param newDocumentCommentReply the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DocumentCommentReply newDocumentCommentReply, final ICallback<DocumentCommentReply> callback);
+    void put(final DocumentCommentReply newDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback);
 
     /**
      * Posts a DocumentCommentReply with a new object

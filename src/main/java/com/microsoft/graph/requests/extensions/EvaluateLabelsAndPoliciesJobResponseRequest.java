@@ -37,7 +37,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void get(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void delete(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param sourceEvaluateLabelsAndPoliciesJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void patch(final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -96,7 +96,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param newEvaluateLabelsAndPoliciesJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.POST, callback, newEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -117,7 +117,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.PUT, callback, newEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -151,17 +151,6 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      */
      public IEvaluateLabelsAndPoliciesJobResponseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EvaluateLabelsAndPoliciesJobResponseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEvaluateLabelsAndPoliciesJobResponseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EvaluateLabelsAndPoliciesJobResponseRequest)this;
      }
 

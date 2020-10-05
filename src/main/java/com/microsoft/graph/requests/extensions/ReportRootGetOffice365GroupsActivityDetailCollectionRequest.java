@@ -39,7 +39,7 @@ public class ReportRootGetOffice365GroupsActivityDetailCollectionRequest extends
     }
 
 
-    public void get(final ICallback<IReportRootGetOffice365GroupsActivityDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOffice365GroupsActivityDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOffice365GroupsActivityDetailCollectionRequest extends
      */
     public IReportRootGetOffice365GroupsActivityDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOffice365GroupsActivityDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365GroupsActivityDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOffice365GroupsActivityDetailCollectionRequest)this;
     }
 

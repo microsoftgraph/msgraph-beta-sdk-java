@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAccessReviewScheduleDefinitionWithReferenceRequest extends IHttpRequest {
 
-    void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final IJsonBackedObject payload, final ICallback<AccessReviewScheduleDefinition> callback);
+    void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final IJsonBackedObject payload, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     AccessReviewScheduleDefinition post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AccessReviewScheduleDefinition> callback);
+    void get(final ICallback<? super AccessReviewScheduleDefinition> callback);
 
     AccessReviewScheduleDefinition get() throws ClientException;
 
-	void delete(final ICallback<AccessReviewScheduleDefinition> callback);
+	void delete(final ICallback<? super AccessReviewScheduleDefinition> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback);
+	void patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition, final ICallback<? super AccessReviewScheduleDefinition> callback);
 
 	AccessReviewScheduleDefinition patch(final AccessReviewScheduleDefinition sourceAccessReviewScheduleDefinition) throws ClientException;
 

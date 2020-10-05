@@ -37,7 +37,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SensitivityPolicySettings> callback) {
+    public void get(final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SensitivityPolicySettings> callback) {
+    public void delete(final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param sourceSensitivityPolicySettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SensitivityPolicySettings sourceSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback) {
+    public void patch(final SensitivityPolicySettings sourceSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.PATCH, callback, sourceSensitivityPolicySettings);
     }
 
@@ -96,7 +96,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param newSensitivityPolicySettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback) {
+    public void post(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.POST, callback, newSensitivityPolicySettings);
     }
 
@@ -117,7 +117,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param newSensitivityPolicySettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback) {
+    public void put(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.PUT, callback, newSensitivityPolicySettings);
     }
 
@@ -151,17 +151,6 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      */
      public ISensitivityPolicySettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SensitivityPolicySettingsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISensitivityPolicySettingsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SensitivityPolicySettingsRequest)this;
      }
 

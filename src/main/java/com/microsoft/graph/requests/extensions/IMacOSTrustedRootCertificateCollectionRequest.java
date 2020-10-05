@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMacOSTrustedRootCertificateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMacOSTrustedRootCertificateCollectionPage> callback);
+    void get(final ICallback<? super IMacOSTrustedRootCertificateCollectionPage> callback);
 
     IMacOSTrustedRootCertificateCollectionPage get() throws ClientException;
 
-    void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+    void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     MacOSTrustedRootCertificate post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMacOSTrustedRootCertificateCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IMacOSTrustedRootCertificateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMacOSTrustedRootCertificateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMacOSTrustedRootCertificateCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IMacOSTrustedRootCertificateCollectionRequest skipToken(String skipToken);
+	IMacOSTrustedRootCertificateCollectionRequest skipToken(final String skipToken);
 }

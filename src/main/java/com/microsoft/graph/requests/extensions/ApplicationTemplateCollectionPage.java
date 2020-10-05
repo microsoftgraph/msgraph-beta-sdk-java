@@ -23,6 +23,6 @@ public class ApplicationTemplateCollectionPage extends BaseCollectionPage<Applic
      * @param builder  the request builder for the next collection page
      */
     public ApplicationTemplateCollectionPage(final ApplicationTemplateCollectionResponse response, final IApplicationTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

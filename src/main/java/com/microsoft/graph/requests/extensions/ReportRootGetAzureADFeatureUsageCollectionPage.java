@@ -34,6 +34,6 @@ public class ReportRootGetAzureADFeatureUsageCollectionPage extends BaseCollecti
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetAzureADFeatureUsageCollectionPage(final ReportRootGetAzureADFeatureUsageCollectionResponse response, final IReportRootGetAzureADFeatureUsageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IAndroidForWorkCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkCompliancePolicy> callback);
+    void get(final ICallback<? super AndroidForWorkCompliancePolicy> callback);
 
     /**
      * Gets the AndroidForWorkCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkCompliancePolicy> callback);
+    void delete(final ICallback<? super AndroidForWorkCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkCompliancePolicyRequest extends IHttpRequest {
      * @param sourceAndroidForWorkCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkCompliancePolicy sourceAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback);
+    void patch(final AndroidForWorkCompliancePolicy sourceAndroidForWorkCompliancePolicy, final ICallback<? super AndroidForWorkCompliancePolicy> callback);
 
     /**
      * Patches this AndroidForWorkCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkCompliancePolicyRequest extends IHttpRequest {
      * @param newAndroidForWorkCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback);
+    void post(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<? super AndroidForWorkCompliancePolicy> callback);
 
     /**
      * Posts a AndroidForWorkCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkCompliancePolicyRequest extends IHttpRequest {
      * @param newAndroidForWorkCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback);
+    void put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<? super AndroidForWorkCompliancePolicy> callback);
 
     /**
      * Posts a AndroidForWorkCompliancePolicy with a new object

@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsMetricRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsMetric> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     /**
      * Gets the UserExperienceAnalyticsMetric from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsMetricRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsMetric> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsMetricRequest extends IHttpRequest {
      * @param sourceUserExperienceAnalyticsMetric the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback);
+    void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     /**
      * Patches this UserExperienceAnalyticsMetric with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsMetricRequest extends IHttpRequest {
      * @param newUserExperienceAnalyticsMetric the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback);
+    void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     /**
      * Posts a UserExperienceAnalyticsMetric with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsMetricRequest extends IHttpRequest {
      * @param newUserExperienceAnalyticsMetric the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback);
+    void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     /**
      * Posts a UserExperienceAnalyticsMetric with a new object

@@ -43,7 +43,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SynchronizationJob> callback) {
+    public void get(final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SynchronizationJob> callback) {
+    public void delete(final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param sourceSynchronizationJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SynchronizationJob sourceSynchronizationJob, final ICallback<SynchronizationJob> callback) {
+    public void patch(final SynchronizationJob sourceSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronizationJob);
     }
 
@@ -102,7 +102,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param newSynchronizationJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback) {
+    public void post(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.POST, callback, newSynchronizationJob);
     }
 
@@ -123,7 +123,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param newSynchronizationJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback) {
+    public void put(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.PUT, callback, newSynchronizationJob);
     }
 
@@ -157,17 +157,6 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      */
      public ISynchronizationJobRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationJobRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISynchronizationJobRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SynchronizationJobRequest)this;
      }
 

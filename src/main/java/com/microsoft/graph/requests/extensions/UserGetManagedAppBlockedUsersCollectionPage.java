@@ -34,6 +34,6 @@ public class UserGetManagedAppBlockedUsersCollectionPage extends BaseCollectionP
      * @param builder The request builder for the next collection page
      */
     public UserGetManagedAppBlockedUsersCollectionPage(final UserGetManagedAppBlockedUsersCollectionResponse response, final IUserGetManagedAppBlockedUsersCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

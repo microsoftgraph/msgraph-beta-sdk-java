@@ -23,6 +23,6 @@ public class ImportedAppleDeviceIdentityCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public ImportedAppleDeviceIdentityCollectionPage(final ImportedAppleDeviceIdentityCollectionResponse response, final IImportedAppleDeviceIdentityCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class UserSecurityProfileCollectionPage extends BaseCollectionPage<UserSe
      * @param builder  the request builder for the next collection page
      */
     public UserSecurityProfileCollectionPage(final UserSecurityProfileCollectionResponse response, final IUserSecurityProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

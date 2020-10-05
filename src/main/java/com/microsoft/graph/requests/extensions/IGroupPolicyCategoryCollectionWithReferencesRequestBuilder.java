@@ -24,7 +24,7 @@ public interface IGroupPolicyCategoryCollectionWithReferencesRequestBuilder exte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IGroupPolicyCategoryCollectionWithReferencesRequest instance
      */
     IGroupPolicyCategoryCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -32,7 +32,7 @@ public interface IGroupPolicyCategoryCollectionWithReferencesRequestBuilder exte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IGroupPolicyCategoryCollectionWithReferencesRequest instance
      */
     IGroupPolicyCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

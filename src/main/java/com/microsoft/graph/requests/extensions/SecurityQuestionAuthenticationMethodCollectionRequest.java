@@ -40,7 +40,7 @@ public class SecurityQuestionAuthenticationMethodCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, SecurityQuestionAuthenticationMethodCollectionResponse.class, ISecurityQuestionAuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<ISecurityQuestionAuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super ISecurityQuestionAuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecurityQuestionAuthenticationMethodCollectionRequest extends BaseC
         return buildFromResponse(response);
     }
 
-    public void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+    public void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityQuestionAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SecurityQuestionAuthenticationMethodCollectionRequest extends BaseC
      */
     public ISecurityQuestionAuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SecurityQuestionAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISecurityQuestionAuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SecurityQuestionAuthenticationMethodCollectionRequest)this;
     }
 

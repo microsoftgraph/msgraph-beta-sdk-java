@@ -40,7 +40,7 @@ public class DataSharingConsentCollectionRequest extends BaseCollectionRequest<D
         super(requestUrl, client, requestOptions, DataSharingConsentCollectionResponse.class, IDataSharingConsentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDataSharingConsentCollectionPage> callback) {
+    public void get(final ICallback<? super IDataSharingConsentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DataSharingConsentCollectionRequest extends BaseCollectionRequest<D
         return buildFromResponse(response);
     }
 
-    public void post(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback) {
+    public void post(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataSharingConsentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DataSharingConsentCollectionRequest extends BaseCollectionRequest<D
      */
     public IDataSharingConsentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DataSharingConsentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDataSharingConsentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DataSharingConsentCollectionRequest)this;
     }
 

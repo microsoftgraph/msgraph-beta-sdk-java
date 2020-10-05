@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IResourceOperationGetScopesForUserCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IResourceOperationGetScopesForUserCollectionPage> callback);
+    void get(final ICallback<? super IResourceOperationGetScopesForUserCollectionPage> callback);
 
     IResourceOperationGetScopesForUserCollectionPage get() throws ClientException;
 

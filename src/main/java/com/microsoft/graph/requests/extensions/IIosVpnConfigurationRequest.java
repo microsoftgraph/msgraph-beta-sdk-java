@@ -21,7 +21,7 @@ public interface IIosVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVpnConfiguration> callback);
+    void get(final ICallback<? super IosVpnConfiguration> callback);
 
     /**
      * Gets the IosVpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVpnConfiguration> callback);
+    void delete(final ICallback<? super IosVpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVpnConfigurationRequest extends IHttpRequest {
      * @param sourceIosVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVpnConfiguration sourceIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback);
+    void patch(final IosVpnConfiguration sourceIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback);
 
     /**
      * Patches this IosVpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosVpnConfigurationRequest extends IHttpRequest {
      * @param newIosVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback);
+    void post(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback);
 
     /**
      * Posts a IosVpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosVpnConfigurationRequest extends IHttpRequest {
      * @param newIosVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback);
+    void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback);
 
     /**
      * Posts a IosVpnConfiguration with a new object

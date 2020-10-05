@@ -21,7 +21,7 @@ public interface INetworkIPv4ConfigurationManagementConditionRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<NetworkIPv4ConfigurationManagementCondition> callback);
+    void get(final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback);
 
     /**
      * Gets the NetworkIPv4ConfigurationManagementCondition from the service
@@ -36,7 +36,7 @@ public interface INetworkIPv4ConfigurationManagementConditionRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<NetworkIPv4ConfigurationManagementCondition> callback);
+    void delete(final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INetworkIPv4ConfigurationManagementConditionRequest extends IHt
      * @param sourceNetworkIPv4ConfigurationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final NetworkIPv4ConfigurationManagementCondition sourceNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback);
+    void patch(final NetworkIPv4ConfigurationManagementCondition sourceNetworkIPv4ConfigurationManagementCondition, final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback);
 
     /**
      * Patches this NetworkIPv4ConfigurationManagementCondition with a source
@@ -68,7 +68,7 @@ public interface INetworkIPv4ConfigurationManagementConditionRequest extends IHt
      * @param newNetworkIPv4ConfigurationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback);
+    void post(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback);
 
     /**
      * Posts a NetworkIPv4ConfigurationManagementCondition with a new object
@@ -85,7 +85,7 @@ public interface INetworkIPv4ConfigurationManagementConditionRequest extends IHt
      * @param newNetworkIPv4ConfigurationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback);
+    void put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback);
 
     /**
      * Posts a NetworkIPv4ConfigurationManagementCondition with a new object

@@ -21,7 +21,7 @@ public interface IAllowedDataLocationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AllowedDataLocation> callback);
+    void get(final ICallback<? super AllowedDataLocation> callback);
 
     /**
      * Gets the AllowedDataLocation from the service
@@ -36,7 +36,7 @@ public interface IAllowedDataLocationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AllowedDataLocation> callback);
+    void delete(final ICallback<? super AllowedDataLocation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAllowedDataLocationRequest extends IHttpRequest {
      * @param sourceAllowedDataLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AllowedDataLocation sourceAllowedDataLocation, final ICallback<AllowedDataLocation> callback);
+    void patch(final AllowedDataLocation sourceAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback);
 
     /**
      * Patches this AllowedDataLocation with a source
@@ -68,7 +68,7 @@ public interface IAllowedDataLocationRequest extends IHttpRequest {
      * @param newAllowedDataLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback);
+    void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback);
 
     /**
      * Posts a AllowedDataLocation with a new object
@@ -85,7 +85,7 @@ public interface IAllowedDataLocationRequest extends IHttpRequest {
      * @param newAllowedDataLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback);
+    void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback);
 
     /**
      * Posts a AllowedDataLocation with a new object

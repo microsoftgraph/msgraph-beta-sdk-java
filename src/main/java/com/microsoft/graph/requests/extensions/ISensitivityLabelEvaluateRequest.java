@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISensitivityLabelEvaluateRequest extends IHttpRequest {
 
-    void post(final ICallback<EvaluateLabelJobResponse> callback);
+    void post(final ICallback<? super EvaluateLabelJobResponse> callback);
 
     EvaluateLabelJobResponse post() throws ClientException;
 

@@ -21,7 +21,7 @@ public interface ISalesCreditMemoLineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SalesCreditMemoLine> callback);
+    void get(final ICallback<? super SalesCreditMemoLine> callback);
 
     /**
      * Gets the SalesCreditMemoLine from the service
@@ -36,7 +36,7 @@ public interface ISalesCreditMemoLineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SalesCreditMemoLine> callback);
+    void delete(final ICallback<? super SalesCreditMemoLine> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISalesCreditMemoLineRequest extends IHttpRequest {
      * @param sourceSalesCreditMemoLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SalesCreditMemoLine sourceSalesCreditMemoLine, final ICallback<SalesCreditMemoLine> callback);
+    void patch(final SalesCreditMemoLine sourceSalesCreditMemoLine, final ICallback<? super SalesCreditMemoLine> callback);
 
     /**
      * Patches this SalesCreditMemoLine with a source
@@ -68,7 +68,7 @@ public interface ISalesCreditMemoLineRequest extends IHttpRequest {
      * @param newSalesCreditMemoLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<SalesCreditMemoLine> callback);
+    void post(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<? super SalesCreditMemoLine> callback);
 
     /**
      * Posts a SalesCreditMemoLine with a new object
@@ -85,7 +85,7 @@ public interface ISalesCreditMemoLineRequest extends IHttpRequest {
      * @param newSalesCreditMemoLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<SalesCreditMemoLine> callback);
+    void put(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<? super SalesCreditMemoLine> callback);
 
     /**
      * Posts a SalesCreditMemoLine with a new object

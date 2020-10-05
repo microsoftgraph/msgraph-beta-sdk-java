@@ -21,7 +21,7 @@ public interface IEducationSynchronizationErrorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationSynchronizationError> callback);
+    void get(final ICallback<? super EducationSynchronizationError> callback);
 
     /**
      * Gets the EducationSynchronizationError from the service
@@ -36,7 +36,7 @@ public interface IEducationSynchronizationErrorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationSynchronizationError> callback);
+    void delete(final ICallback<? super EducationSynchronizationError> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationSynchronizationErrorRequest extends IHttpRequest {
      * @param sourceEducationSynchronizationError the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationSynchronizationError sourceEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback);
+    void patch(final EducationSynchronizationError sourceEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback);
 
     /**
      * Patches this EducationSynchronizationError with a source
@@ -68,7 +68,7 @@ public interface IEducationSynchronizationErrorRequest extends IHttpRequest {
      * @param newEducationSynchronizationError the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback);
+    void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback);
 
     /**
      * Posts a EducationSynchronizationError with a new object
@@ -85,7 +85,7 @@ public interface IEducationSynchronizationErrorRequest extends IHttpRequest {
      * @param newEducationSynchronizationError the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback);
+    void put(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback);
 
     /**
      * Posts a EducationSynchronizationError with a new object

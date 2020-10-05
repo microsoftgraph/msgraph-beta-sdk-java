@@ -23,6 +23,6 @@ public class DocumentCommentReplyCollectionPage extends BaseCollectionPage<Docum
      * @param builder  the request builder for the next collection page
      */
     public DocumentCommentReplyCollectionPage(final DocumentCommentReplyCollectionResponse response, final IDocumentCommentReplyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

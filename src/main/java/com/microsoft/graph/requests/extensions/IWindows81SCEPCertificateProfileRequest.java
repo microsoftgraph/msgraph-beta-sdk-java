@@ -21,7 +21,7 @@ public interface IWindows81SCEPCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81SCEPCertificateProfile> callback);
+    void get(final ICallback<? super Windows81SCEPCertificateProfile> callback);
 
     /**
      * Gets the Windows81SCEPCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IWindows81SCEPCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81SCEPCertificateProfile> callback);
+    void delete(final ICallback<? super Windows81SCEPCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81SCEPCertificateProfileRequest extends IHttpRequest {
      * @param sourceWindows81SCEPCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81SCEPCertificateProfile sourceWindows81SCEPCertificateProfile, final ICallback<Windows81SCEPCertificateProfile> callback);
+    void patch(final Windows81SCEPCertificateProfile sourceWindows81SCEPCertificateProfile, final ICallback<? super Windows81SCEPCertificateProfile> callback);
 
     /**
      * Patches this Windows81SCEPCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IWindows81SCEPCertificateProfileRequest extends IHttpRequest {
      * @param newWindows81SCEPCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<Windows81SCEPCertificateProfile> callback);
+    void post(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<? super Windows81SCEPCertificateProfile> callback);
 
     /**
      * Posts a Windows81SCEPCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindows81SCEPCertificateProfileRequest extends IHttpRequest {
      * @param newWindows81SCEPCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<Windows81SCEPCertificateProfile> callback);
+    void put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<? super Windows81SCEPCertificateProfile> callback);
 
     /**
      * Posts a Windows81SCEPCertificateProfile with a new object

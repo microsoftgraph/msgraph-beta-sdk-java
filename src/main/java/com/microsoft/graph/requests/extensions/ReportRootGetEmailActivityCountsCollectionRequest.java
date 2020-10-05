@@ -39,7 +39,7 @@ public class ReportRootGetEmailActivityCountsCollectionRequest extends BaseColle
     }
 
 
-    public void get(final ICallback<IReportRootGetEmailActivityCountsCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetEmailActivityCountsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetEmailActivityCountsCollectionRequest extends BaseColle
      */
     public IReportRootGetEmailActivityCountsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetEmailActivityCountsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetEmailActivityCountsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetEmailActivityCountsCollectionRequest)this;
     }
 

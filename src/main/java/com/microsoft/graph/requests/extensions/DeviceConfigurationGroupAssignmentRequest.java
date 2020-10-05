@@ -39,7 +39,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfigurationGroupAssignment> callback) {
+    public void get(final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfigurationGroupAssignment> callback) {
+    public void delete(final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param sourceDeviceConfigurationGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback) {
+    public void patch(final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationGroupAssignment);
     }
 
@@ -98,7 +98,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param newDeviceConfigurationGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback) {
+    public void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationGroupAssignment);
     }
 
@@ -119,7 +119,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param newDeviceConfigurationGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback) {
+    public void put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationGroupAssignment);
     }
 
@@ -153,17 +153,6 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      */
      public IDeviceConfigurationGroupAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationGroupAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceConfigurationGroupAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceConfigurationGroupAssignmentRequest)this;
      }
 

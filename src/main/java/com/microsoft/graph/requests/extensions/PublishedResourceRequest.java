@@ -41,7 +41,7 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PublishedResource> callback) {
+    public void get(final ICallback<? super PublishedResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PublishedResource> callback) {
+    public void delete(final ICallback<? super PublishedResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
      * @param sourcePublishedResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PublishedResource sourcePublishedResource, final ICallback<PublishedResource> callback) {
+    public void patch(final PublishedResource sourcePublishedResource, final ICallback<? super PublishedResource> callback) {
         send(HttpMethod.PATCH, callback, sourcePublishedResource);
     }
 
@@ -100,7 +100,7 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
      * @param newPublishedResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback) {
+    public void post(final PublishedResource newPublishedResource, final ICallback<? super PublishedResource> callback) {
         send(HttpMethod.POST, callback, newPublishedResource);
     }
 
@@ -121,7 +121,7 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
      * @param newPublishedResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback) {
+    public void put(final PublishedResource newPublishedResource, final ICallback<? super PublishedResource> callback) {
         send(HttpMethod.PUT, callback, newPublishedResource);
     }
 
@@ -155,17 +155,6 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
      */
      public IPublishedResourceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PublishedResourceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPublishedResourceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PublishedResourceRequest)this;
      }
 

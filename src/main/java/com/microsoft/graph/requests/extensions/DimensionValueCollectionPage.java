@@ -23,6 +23,6 @@ public class DimensionValueCollectionPage extends BaseCollectionPage<DimensionVa
      * @param builder  the request builder for the next collection page
      */
     public DimensionValueCollectionPage(final DimensionValueCollectionResponse response, final IDimensionValueCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

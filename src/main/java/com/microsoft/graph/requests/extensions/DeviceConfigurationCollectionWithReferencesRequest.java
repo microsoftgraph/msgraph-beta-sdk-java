@@ -42,7 +42,7 @@ public class DeviceConfigurationCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, DeviceConfigurationCollectionResponse.class, IDeviceConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceConfigurationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IDeviceConfigurationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -63,22 +63,27 @@ public class DeviceConfigurationCollectionWithReferencesRequest extends BaseColl
 
     public IDeviceConfigurationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceConfigurationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDeviceConfigurationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceConfigurationCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IDeviceConfigurationCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IDeviceConfigurationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceConfigurationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDeviceConfigurationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (DeviceConfigurationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDeviceConfigurationCollectionWithReferencesPage buildFromResponse(final DeviceConfigurationCollectionResponse response) {

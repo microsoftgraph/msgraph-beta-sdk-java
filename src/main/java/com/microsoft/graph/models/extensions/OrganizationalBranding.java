@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.OrganizationalBrandingLocalization;
 import com.microsoft.graph.models.extensions.OrganizationalBrandingProperties;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingLocalizationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingLocalizationCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
 
 
         if (json.has("localizations")) {
-            final OrganizationalBrandingLocalizationCollectionResponse response = new OrganizationalBrandingLocalizationCollectionResponse();
-            if (json.has("localizations@odata.nextLink")) {
-                response.nextLink = json.get("localizations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("localizations").toString(), JsonObject[].class);
-            final OrganizationalBrandingLocalization[] array = new OrganizationalBrandingLocalization[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OrganizationalBrandingLocalization.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            localizations = new OrganizationalBrandingLocalizationCollectionPage(response, null);
+            localizations = serializer.deserializeObject(json.get("localizations").toString(), OrganizationalBrandingLocalizationCollectionPage.class);
         }
     }
 }

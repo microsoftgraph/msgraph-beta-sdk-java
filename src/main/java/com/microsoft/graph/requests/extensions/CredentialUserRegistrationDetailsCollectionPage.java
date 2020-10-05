@@ -23,6 +23,6 @@ public class CredentialUserRegistrationDetailsCollectionPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public CredentialUserRegistrationDetailsCollectionPage(final CredentialUserRegistrationDetailsCollectionResponse response, final ICredentialUserRegistrationDetailsCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

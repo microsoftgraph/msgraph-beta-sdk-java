@@ -37,7 +37,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ShipmentMethod> callback) {
+    public void get(final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ShipmentMethod> callback) {
+    public void delete(final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param sourceShipmentMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ShipmentMethod sourceShipmentMethod, final ICallback<ShipmentMethod> callback) {
+    public void patch(final ShipmentMethod sourceShipmentMethod, final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceShipmentMethod);
     }
 
@@ -96,7 +96,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param newShipmentMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback) {
+    public void post(final ShipmentMethod newShipmentMethod, final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.POST, callback, newShipmentMethod);
     }
 
@@ -117,7 +117,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param newShipmentMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback) {
+    public void put(final ShipmentMethod newShipmentMethod, final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.PUT, callback, newShipmentMethod);
     }
 
@@ -151,17 +151,6 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      */
      public IShipmentMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ShipmentMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IShipmentMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ShipmentMethodRequest)this;
      }
 

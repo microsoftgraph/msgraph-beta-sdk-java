@@ -34,7 +34,7 @@ public class IosCertificateProfileBaseReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, IosCertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<IosCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super IosCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class IosCertificateProfileBaseReferenceRequest extends BaseRequest imple
         return (IosCertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIosCertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IosCertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the IosCertificateProfileBase
      *
      * @param srcIosCertificateProfileBase the IosCertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(IosCertificateProfileBase srcIosCertificateProfileBase, final ICallback<IosCertificateProfileBase> callback) {
+    public void put(IosCertificateProfileBase srcIosCertificateProfileBase, final ICallback<? super IosCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcIosCertificateProfileBase);
     }
 

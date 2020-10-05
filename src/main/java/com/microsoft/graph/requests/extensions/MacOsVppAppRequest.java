@@ -41,7 +41,7 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOsVppApp> callback) {
+    public void get(final ICallback<? super MacOsVppApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOsVppApp> callback) {
+    public void delete(final ICallback<? super MacOsVppApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
      * @param sourceMacOsVppApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOsVppApp sourceMacOsVppApp, final ICallback<MacOsVppApp> callback) {
+    public void patch(final MacOsVppApp sourceMacOsVppApp, final ICallback<? super MacOsVppApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOsVppApp);
     }
 
@@ -100,7 +100,7 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
      * @param newMacOsVppApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOsVppApp newMacOsVppApp, final ICallback<MacOsVppApp> callback) {
+    public void post(final MacOsVppApp newMacOsVppApp, final ICallback<? super MacOsVppApp> callback) {
         send(HttpMethod.POST, callback, newMacOsVppApp);
     }
 
@@ -121,7 +121,7 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
      * @param newMacOsVppApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOsVppApp newMacOsVppApp, final ICallback<MacOsVppApp> callback) {
+    public void put(final MacOsVppApp newMacOsVppApp, final ICallback<? super MacOsVppApp> callback) {
         send(HttpMethod.PUT, callback, newMacOsVppApp);
     }
 
@@ -155,17 +155,6 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
      */
      public IMacOsVppAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOsVppAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOsVppAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOsVppAppRequest)this;
      }
 

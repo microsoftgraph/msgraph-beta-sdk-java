@@ -21,7 +21,7 @@ public interface IBookingServiceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingService> callback);
+    void get(final ICallback<? super BookingService> callback);
 
     /**
      * Gets the BookingService from the service
@@ -36,7 +36,7 @@ public interface IBookingServiceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingService> callback);
+    void delete(final ICallback<? super BookingService> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingServiceRequest extends IHttpRequest {
      * @param sourceBookingService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingService sourceBookingService, final ICallback<BookingService> callback);
+    void patch(final BookingService sourceBookingService, final ICallback<? super BookingService> callback);
 
     /**
      * Patches this BookingService with a source
@@ -68,7 +68,7 @@ public interface IBookingServiceRequest extends IHttpRequest {
      * @param newBookingService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingService newBookingService, final ICallback<BookingService> callback);
+    void post(final BookingService newBookingService, final ICallback<? super BookingService> callback);
 
     /**
      * Posts a BookingService with a new object
@@ -85,7 +85,7 @@ public interface IBookingServiceRequest extends IHttpRequest {
      * @param newBookingService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingService newBookingService, final ICallback<BookingService> callback);
+    void put(final BookingService newBookingService, final ICallback<? super BookingService> callback);
 
     /**
      * Posts a BookingService with a new object

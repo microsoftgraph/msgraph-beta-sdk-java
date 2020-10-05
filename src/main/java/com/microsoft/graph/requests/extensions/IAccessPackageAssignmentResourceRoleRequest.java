@@ -21,7 +21,7 @@ public interface IAccessPackageAssignmentResourceRoleRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageAssignmentResourceRole> callback);
+    void get(final ICallback<? super AccessPackageAssignmentResourceRole> callback);
 
     /**
      * Gets the AccessPackageAssignmentResourceRole from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageAssignmentResourceRoleRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageAssignmentResourceRole> callback);
+    void delete(final ICallback<? super AccessPackageAssignmentResourceRole> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageAssignmentResourceRoleRequest extends IHttpReques
      * @param sourceAccessPackageAssignmentResourceRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageAssignmentResourceRole sourceAccessPackageAssignmentResourceRole, final ICallback<AccessPackageAssignmentResourceRole> callback);
+    void patch(final AccessPackageAssignmentResourceRole sourceAccessPackageAssignmentResourceRole, final ICallback<? super AccessPackageAssignmentResourceRole> callback);
 
     /**
      * Patches this AccessPackageAssignmentResourceRole with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageAssignmentResourceRoleRequest extends IHttpReques
      * @param newAccessPackageAssignmentResourceRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<AccessPackageAssignmentResourceRole> callback);
+    void post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<? super AccessPackageAssignmentResourceRole> callback);
 
     /**
      * Posts a AccessPackageAssignmentResourceRole with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageAssignmentResourceRoleRequest extends IHttpReques
      * @param newAccessPackageAssignmentResourceRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<AccessPackageAssignmentResourceRole> callback);
+    void put(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<? super AccessPackageAssignmentResourceRole> callback);
 
     /**
      * Posts a AccessPackageAssignmentResourceRole with a new object

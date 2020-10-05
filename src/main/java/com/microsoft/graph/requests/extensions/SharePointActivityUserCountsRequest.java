@@ -37,7 +37,7 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SharePointActivityUserCounts> callback) {
+    public void get(final ICallback<? super SharePointActivityUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SharePointActivityUserCounts> callback) {
+    public void delete(final ICallback<? super SharePointActivityUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
      * @param sourceSharePointActivityUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointActivityUserCounts sourceSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback) {
+    public void patch(final SharePointActivityUserCounts sourceSharePointActivityUserCounts, final ICallback<? super SharePointActivityUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointActivityUserCounts);
     }
 
@@ -96,7 +96,7 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
      * @param newSharePointActivityUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback) {
+    public void post(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<? super SharePointActivityUserCounts> callback) {
         send(HttpMethod.POST, callback, newSharePointActivityUserCounts);
     }
 
@@ -117,7 +117,7 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
      * @param newSharePointActivityUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback) {
+    public void put(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<? super SharePointActivityUserCounts> callback) {
         send(HttpMethod.PUT, callback, newSharePointActivityUserCounts);
     }
 
@@ -151,17 +151,6 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
      */
      public ISharePointActivityUserCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointActivityUserCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISharePointActivityUserCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SharePointActivityUserCountsRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IDeviceCompliancePolicyGroupAssignmentRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceCompliancePolicyGroupAssignment> callback);
+    void get(final ICallback<? super DeviceCompliancePolicyGroupAssignment> callback);
 
     /**
      * Gets the DeviceCompliancePolicyGroupAssignment from the service
@@ -36,7 +36,7 @@ public interface IDeviceCompliancePolicyGroupAssignmentRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceCompliancePolicyGroupAssignment> callback);
+    void delete(final ICallback<? super DeviceCompliancePolicyGroupAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceCompliancePolicyGroupAssignmentRequest extends IHttpRequ
      * @param sourceDeviceCompliancePolicyGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceCompliancePolicyGroupAssignment sourceDeviceCompliancePolicyGroupAssignment, final ICallback<DeviceCompliancePolicyGroupAssignment> callback);
+    void patch(final DeviceCompliancePolicyGroupAssignment sourceDeviceCompliancePolicyGroupAssignment, final ICallback<? super DeviceCompliancePolicyGroupAssignment> callback);
 
     /**
      * Patches this DeviceCompliancePolicyGroupAssignment with a source
@@ -68,7 +68,7 @@ public interface IDeviceCompliancePolicyGroupAssignmentRequest extends IHttpRequ
      * @param newDeviceCompliancePolicyGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment, final ICallback<DeviceCompliancePolicyGroupAssignment> callback);
+    void post(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment, final ICallback<? super DeviceCompliancePolicyGroupAssignment> callback);
 
     /**
      * Posts a DeviceCompliancePolicyGroupAssignment with a new object
@@ -85,7 +85,7 @@ public interface IDeviceCompliancePolicyGroupAssignmentRequest extends IHttpRequ
      * @param newDeviceCompliancePolicyGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment, final ICallback<DeviceCompliancePolicyGroupAssignment> callback);
+    void put(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment, final ICallback<? super DeviceCompliancePolicyGroupAssignment> callback);
 
     /**
      * Posts a DeviceCompliancePolicyGroupAssignment with a new object

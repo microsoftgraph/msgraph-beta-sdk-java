@@ -41,7 +41,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ExactMatchDataStore> callback) {
+    public void get(final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ExactMatchDataStore> callback) {
+    public void delete(final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param sourceExactMatchDataStore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExactMatchDataStore sourceExactMatchDataStore, final ICallback<ExactMatchDataStore> callback) {
+    public void patch(final ExactMatchDataStore sourceExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.PATCH, callback, sourceExactMatchDataStore);
     }
 
@@ -100,7 +100,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param newExactMatchDataStore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback) {
+    public void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.POST, callback, newExactMatchDataStore);
     }
 
@@ -121,7 +121,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param newExactMatchDataStore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback) {
+    public void put(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.PUT, callback, newExactMatchDataStore);
     }
 
@@ -155,17 +155,6 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      */
      public IExactMatchDataStoreRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExactMatchDataStoreRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IExactMatchDataStoreRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ExactMatchDataStoreRequest)this;
      }
 

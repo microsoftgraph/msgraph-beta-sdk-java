@@ -37,7 +37,7 @@ public class WindowsFeatureUpdateProfileAssignmentRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
+    public void get(final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsFeatureUpdateProfileAssignmentRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
+    public void delete(final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsFeatureUpdateProfileAssignmentRequest extends BaseRequest im
      * @param sourceWindowsFeatureUpdateProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsFeatureUpdateProfileAssignment sourceWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
+    public void patch(final WindowsFeatureUpdateProfileAssignment sourceWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsFeatureUpdateProfileAssignment);
     }
 
@@ -96,7 +96,7 @@ public class WindowsFeatureUpdateProfileAssignmentRequest extends BaseRequest im
      * @param newWindowsFeatureUpdateProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
+    public void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback) {
         send(HttpMethod.POST, callback, newWindowsFeatureUpdateProfileAssignment);
     }
 
@@ -117,7 +117,7 @@ public class WindowsFeatureUpdateProfileAssignmentRequest extends BaseRequest im
      * @param newWindowsFeatureUpdateProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
+    public void put(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback) {
         send(HttpMethod.PUT, callback, newWindowsFeatureUpdateProfileAssignment);
     }
 
@@ -151,17 +151,6 @@ public class WindowsFeatureUpdateProfileAssignmentRequest extends BaseRequest im
      */
      public IWindowsFeatureUpdateProfileAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsFeatureUpdateProfileAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsFeatureUpdateProfileAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsFeatureUpdateProfileAssignmentRequest)this;
      }
 

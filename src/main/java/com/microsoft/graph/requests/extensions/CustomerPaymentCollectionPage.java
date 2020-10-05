@@ -23,6 +23,6 @@ public class CustomerPaymentCollectionPage extends BaseCollectionPage<CustomerPa
      * @param builder  the request builder for the next collection page
      */
     public CustomerPaymentCollectionPage(final CustomerPaymentCollectionResponse response, final ICustomerPaymentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

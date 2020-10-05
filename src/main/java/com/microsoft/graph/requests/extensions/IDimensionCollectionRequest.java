@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDimensionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDimensionCollectionPage> callback);
+    void get(final ICallback<? super IDimensionCollectionPage> callback);
 
     IDimensionCollectionPage get() throws ClientException;
 
-    void post(final Dimension newDimension, final ICallback<Dimension> callback);
+    void post(final Dimension newDimension, final ICallback<? super Dimension> callback);
 
     Dimension post(final Dimension newDimension) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDimensionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDimensionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDimensionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDimensionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDimensionCollectionRequest skipToken(String skipToken);
+	IDimensionCollectionRequest skipToken(final String skipToken);
 }

@@ -40,7 +40,7 @@ public class ApprovalStepCollectionRequest extends BaseCollectionRequest<Approva
         super(requestUrl, client, requestOptions, ApprovalStepCollectionResponse.class, IApprovalStepCollectionPage.class);
     }
 
-    public void get(final ICallback<IApprovalStepCollectionPage> callback) {
+    public void get(final ICallback<? super IApprovalStepCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ApprovalStepCollectionRequest extends BaseCollectionRequest<Approva
         return buildFromResponse(response);
     }
 
-    public void post(final ApprovalStep newApprovalStep, final ICallback<ApprovalStep> callback) {
+    public void post(final ApprovalStep newApprovalStep, final ICallback<? super ApprovalStep> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApprovalStepRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ApprovalStepCollectionRequest extends BaseCollectionRequest<Approva
      */
     public IApprovalStepCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApprovalStepCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IApprovalStepCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ApprovalStepCollectionRequest)this;
     }
 

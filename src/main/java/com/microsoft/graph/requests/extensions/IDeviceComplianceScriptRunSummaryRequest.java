@@ -21,7 +21,7 @@ public interface IDeviceComplianceScriptRunSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceComplianceScriptRunSummary> callback);
+    void get(final ICallback<? super DeviceComplianceScriptRunSummary> callback);
 
     /**
      * Gets the DeviceComplianceScriptRunSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceComplianceScriptRunSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceComplianceScriptRunSummary> callback);
+    void delete(final ICallback<? super DeviceComplianceScriptRunSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceComplianceScriptRunSummaryRequest extends IHttpRequest {
      * @param sourceDeviceComplianceScriptRunSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceComplianceScriptRunSummary sourceDeviceComplianceScriptRunSummary, final ICallback<DeviceComplianceScriptRunSummary> callback);
+    void patch(final DeviceComplianceScriptRunSummary sourceDeviceComplianceScriptRunSummary, final ICallback<? super DeviceComplianceScriptRunSummary> callback);
 
     /**
      * Patches this DeviceComplianceScriptRunSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceComplianceScriptRunSummaryRequest extends IHttpRequest {
      * @param newDeviceComplianceScriptRunSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<DeviceComplianceScriptRunSummary> callback);
+    void post(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<? super DeviceComplianceScriptRunSummary> callback);
 
     /**
      * Posts a DeviceComplianceScriptRunSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceComplianceScriptRunSummaryRequest extends IHttpRequest {
      * @param newDeviceComplianceScriptRunSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<DeviceComplianceScriptRunSummary> callback);
+    void put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<? super DeviceComplianceScriptRunSummary> callback);
 
     /**
      * Posts a DeviceComplianceScriptRunSummary with a new object

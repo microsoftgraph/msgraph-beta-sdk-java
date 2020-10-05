@@ -21,7 +21,7 @@ public interface IEntitlementManagementSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EntitlementManagementSettings> callback);
+    void get(final ICallback<? super EntitlementManagementSettings> callback);
 
     /**
      * Gets the EntitlementManagementSettings from the service
@@ -36,7 +36,7 @@ public interface IEntitlementManagementSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EntitlementManagementSettings> callback);
+    void delete(final ICallback<? super EntitlementManagementSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEntitlementManagementSettingsRequest extends IHttpRequest {
      * @param sourceEntitlementManagementSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EntitlementManagementSettings sourceEntitlementManagementSettings, final ICallback<EntitlementManagementSettings> callback);
+    void patch(final EntitlementManagementSettings sourceEntitlementManagementSettings, final ICallback<? super EntitlementManagementSettings> callback);
 
     /**
      * Patches this EntitlementManagementSettings with a source
@@ -68,7 +68,7 @@ public interface IEntitlementManagementSettingsRequest extends IHttpRequest {
      * @param newEntitlementManagementSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<EntitlementManagementSettings> callback);
+    void post(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<? super EntitlementManagementSettings> callback);
 
     /**
      * Posts a EntitlementManagementSettings with a new object
@@ -85,7 +85,7 @@ public interface IEntitlementManagementSettingsRequest extends IHttpRequest {
      * @param newEntitlementManagementSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<EntitlementManagementSettings> callback);
+    void put(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<? super EntitlementManagementSettings> callback);
 
     /**
      * Posts a EntitlementManagementSettings with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEnrollmentProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEnrollmentProfileCollectionPage> callback);
+    void get(final ICallback<? super IEnrollmentProfileCollectionPage> callback);
 
     IEnrollmentProfileCollectionPage get() throws ClientException;
 
-    void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<EnrollmentProfile> callback);
+    void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback);
 
     EnrollmentProfile post(final EnrollmentProfile newEnrollmentProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEnrollmentProfileCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IEnrollmentProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEnrollmentProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEnrollmentProfileCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IEnrollmentProfileCollectionRequest skipToken(String skipToken);
+	IEnrollmentProfileCollectionRequest skipToken(final String skipToken);
 }

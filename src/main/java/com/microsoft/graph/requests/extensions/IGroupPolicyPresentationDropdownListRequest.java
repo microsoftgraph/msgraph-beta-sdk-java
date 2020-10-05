@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationDropdownListRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationDropdownList> callback);
+    void get(final ICallback<? super GroupPolicyPresentationDropdownList> callback);
 
     /**
      * Gets the GroupPolicyPresentationDropdownList from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationDropdownListRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationDropdownList> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationDropdownList> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationDropdownListRequest extends IHttpReques
      * @param sourceGroupPolicyPresentationDropdownList the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationDropdownList sourceGroupPolicyPresentationDropdownList, final ICallback<GroupPolicyPresentationDropdownList> callback);
+    void patch(final GroupPolicyPresentationDropdownList sourceGroupPolicyPresentationDropdownList, final ICallback<? super GroupPolicyPresentationDropdownList> callback);
 
     /**
      * Patches this GroupPolicyPresentationDropdownList with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationDropdownListRequest extends IHttpReques
      * @param newGroupPolicyPresentationDropdownList the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList, final ICallback<GroupPolicyPresentationDropdownList> callback);
+    void post(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList, final ICallback<? super GroupPolicyPresentationDropdownList> callback);
 
     /**
      * Posts a GroupPolicyPresentationDropdownList with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationDropdownListRequest extends IHttpReques
      * @param newGroupPolicyPresentationDropdownList the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList, final ICallback<GroupPolicyPresentationDropdownList> callback);
+    void put(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList, final ICallback<? super GroupPolicyPresentationDropdownList> callback);
 
     /**
      * Posts a GroupPolicyPresentationDropdownList with a new object

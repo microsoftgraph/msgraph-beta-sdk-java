@@ -37,7 +37,7 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationSynchronizationError> callback) {
+    public void get(final ICallback<? super EducationSynchronizationError> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationSynchronizationError> callback) {
+    public void delete(final ICallback<? super EducationSynchronizationError> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
      * @param sourceEducationSynchronizationError the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationSynchronizationError sourceEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback) {
+    public void patch(final EducationSynchronizationError sourceEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationSynchronizationError);
     }
 
@@ -96,7 +96,7 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
      * @param newEducationSynchronizationError the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback) {
+    public void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback) {
         send(HttpMethod.POST, callback, newEducationSynchronizationError);
     }
 
@@ -117,7 +117,7 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
      * @param newEducationSynchronizationError the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback) {
+    public void put(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<? super EducationSynchronizationError> callback) {
         send(HttpMethod.PUT, callback, newEducationSynchronizationError);
     }
 
@@ -151,17 +151,6 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
      */
      public IEducationSynchronizationErrorRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationSynchronizationErrorRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationSynchronizationErrorRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationSynchronizationErrorRequest)this;
      }
 

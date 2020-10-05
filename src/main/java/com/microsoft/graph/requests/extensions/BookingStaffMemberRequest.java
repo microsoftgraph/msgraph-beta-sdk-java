@@ -37,7 +37,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<BookingStaffMember> callback) {
+    public void get(final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<BookingStaffMember> callback) {
+    public void delete(final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param sourceBookingStaffMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingStaffMember sourceBookingStaffMember, final ICallback<BookingStaffMember> callback) {
+    public void patch(final BookingStaffMember sourceBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingStaffMember);
     }
 
@@ -96,7 +96,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param newBookingStaffMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback) {
+    public void post(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.POST, callback, newBookingStaffMember);
     }
 
@@ -117,7 +117,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param newBookingStaffMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback) {
+    public void put(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.PUT, callback, newBookingStaffMember);
     }
 
@@ -151,17 +151,6 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      */
      public IBookingStaffMemberRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingStaffMemberRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IBookingStaffMemberRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BookingStaffMemberRequest)this;
      }
 

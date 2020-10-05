@@ -21,7 +21,7 @@ public interface ISkypeForBusinessDeviceUsageUserDetailRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback);
+    void get(final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback);
 
     /**
      * Gets the SkypeForBusinessDeviceUsageUserDetail from the service
@@ -36,7 +36,7 @@ public interface ISkypeForBusinessDeviceUsageUserDetailRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback);
+    void delete(final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkypeForBusinessDeviceUsageUserDetailRequest extends IHttpRequ
      * @param sourceSkypeForBusinessDeviceUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkypeForBusinessDeviceUsageUserDetail sourceSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback);
+    void patch(final SkypeForBusinessDeviceUsageUserDetail sourceSkypeForBusinessDeviceUsageUserDetail, final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback);
 
     /**
      * Patches this SkypeForBusinessDeviceUsageUserDetail with a source
@@ -68,7 +68,7 @@ public interface ISkypeForBusinessDeviceUsageUserDetailRequest extends IHttpRequ
      * @param newSkypeForBusinessDeviceUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback);
+    void post(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback);
 
     /**
      * Posts a SkypeForBusinessDeviceUsageUserDetail with a new object
@@ -85,7 +85,7 @@ public interface ISkypeForBusinessDeviceUsageUserDetailRequest extends IHttpRequ
      * @param newSkypeForBusinessDeviceUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback);
+    void put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<? super SkypeForBusinessDeviceUsageUserDetail> callback);
 
     /**
      * Posts a SkypeForBusinessDeviceUsageUserDetail with a new object

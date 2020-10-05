@@ -37,7 +37,7 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosEducationDeviceConfiguration> callback) {
+    public void get(final ICallback<? super IosEducationDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosEducationDeviceConfiguration> callback) {
+    public void delete(final ICallback<? super IosEducationDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
      * @param sourceIosEducationDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosEducationDeviceConfiguration sourceIosEducationDeviceConfiguration, final ICallback<IosEducationDeviceConfiguration> callback) {
+    public void patch(final IosEducationDeviceConfiguration sourceIosEducationDeviceConfiguration, final ICallback<? super IosEducationDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosEducationDeviceConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
      * @param newIosEducationDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration, final ICallback<IosEducationDeviceConfiguration> callback) {
+    public void post(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration, final ICallback<? super IosEducationDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosEducationDeviceConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
      * @param newIosEducationDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration, final ICallback<IosEducationDeviceConfiguration> callback) {
+    public void put(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration, final ICallback<? super IosEducationDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosEducationDeviceConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
      */
      public IIosEducationDeviceConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosEducationDeviceConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosEducationDeviceConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosEducationDeviceConfigurationRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IDeviceManagementDerivedCredentialSettingsRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void get(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     /**
      * Gets the DeviceManagementDerivedCredentialSettings from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementDerivedCredentialSettingsRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void delete(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementDerivedCredentialSettingsRequest extends IHttp
      * @param sourceDeviceManagementDerivedCredentialSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     /**
      * Patches this DeviceManagementDerivedCredentialSettings with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementDerivedCredentialSettingsRequest extends IHttp
      * @param newDeviceManagementDerivedCredentialSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     /**
      * Posts a DeviceManagementDerivedCredentialSettings with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementDerivedCredentialSettingsRequest extends IHttp
      * @param newDeviceManagementDerivedCredentialSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void put(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     /**
      * Posts a DeviceManagementDerivedCredentialSettings with a new object

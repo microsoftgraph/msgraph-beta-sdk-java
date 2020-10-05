@@ -21,7 +21,7 @@ public interface ITaxAreaRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TaxArea> callback);
+    void get(final ICallback<? super TaxArea> callback);
 
     /**
      * Gets the TaxArea from the service
@@ -36,7 +36,7 @@ public interface ITaxAreaRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TaxArea> callback);
+    void delete(final ICallback<? super TaxArea> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITaxAreaRequest extends IHttpRequest {
      * @param sourceTaxArea the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TaxArea sourceTaxArea, final ICallback<TaxArea> callback);
+    void patch(final TaxArea sourceTaxArea, final ICallback<? super TaxArea> callback);
 
     /**
      * Patches this TaxArea with a source
@@ -68,7 +68,7 @@ public interface ITaxAreaRequest extends IHttpRequest {
      * @param newTaxArea the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TaxArea newTaxArea, final ICallback<TaxArea> callback);
+    void post(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback);
 
     /**
      * Posts a TaxArea with a new object
@@ -85,7 +85,7 @@ public interface ITaxAreaRequest extends IHttpRequest {
      * @param newTaxArea the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TaxArea newTaxArea, final ICallback<TaxArea> callback);
+    void put(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback);
 
     /**
      * Posts a TaxArea with a new object

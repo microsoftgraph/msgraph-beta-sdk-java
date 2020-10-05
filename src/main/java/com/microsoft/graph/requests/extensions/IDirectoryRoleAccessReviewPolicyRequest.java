@@ -21,7 +21,7 @@ public interface IDirectoryRoleAccessReviewPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryRoleAccessReviewPolicy> callback);
+    void get(final ICallback<? super DirectoryRoleAccessReviewPolicy> callback);
 
     /**
      * Gets the DirectoryRoleAccessReviewPolicy from the service
@@ -36,7 +36,7 @@ public interface IDirectoryRoleAccessReviewPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryRoleAccessReviewPolicy> callback);
+    void delete(final ICallback<? super DirectoryRoleAccessReviewPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryRoleAccessReviewPolicyRequest extends IHttpRequest {
      * @param sourceDirectoryRoleAccessReviewPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback);
+    void patch(final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback);
 
     /**
      * Patches this DirectoryRoleAccessReviewPolicy with a source
@@ -68,7 +68,7 @@ public interface IDirectoryRoleAccessReviewPolicyRequest extends IHttpRequest {
      * @param newDirectoryRoleAccessReviewPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback);
+    void post(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback);
 
     /**
      * Posts a DirectoryRoleAccessReviewPolicy with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryRoleAccessReviewPolicyRequest extends IHttpRequest {
      * @param newDirectoryRoleAccessReviewPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback);
+    void put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback);
 
     /**
      * Posts a DirectoryRoleAccessReviewPolicy with a new object

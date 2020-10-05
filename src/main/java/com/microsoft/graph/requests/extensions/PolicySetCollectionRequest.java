@@ -42,7 +42,7 @@ public class PolicySetCollectionRequest extends BaseCollectionRequest<PolicySetC
         super(requestUrl, client, requestOptions, PolicySetCollectionResponse.class, IPolicySetCollectionPage.class);
     }
 
-    public void get(final ICallback<IPolicySetCollectionPage> callback) {
+    public void get(final ICallback<? super IPolicySetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class PolicySetCollectionRequest extends BaseCollectionRequest<PolicySetC
         return buildFromResponse(response);
     }
 
-    public void post(final PolicySet newPolicySet, final ICallback<PolicySet> callback) {
+    public void post(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PolicySetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,6 +94,17 @@ public class PolicySetCollectionRequest extends BaseCollectionRequest<PolicySetC
      */
     public IPolicySetCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PolicySetCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPolicySetCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PolicySetCollectionRequest)this;
     }
 

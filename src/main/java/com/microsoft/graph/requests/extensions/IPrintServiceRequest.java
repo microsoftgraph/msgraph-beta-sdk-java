@@ -21,7 +21,7 @@ public interface IPrintServiceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintService> callback);
+    void get(final ICallback<? super PrintService> callback);
 
     /**
      * Gets the PrintService from the service
@@ -36,7 +36,7 @@ public interface IPrintServiceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintService> callback);
+    void delete(final ICallback<? super PrintService> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintServiceRequest extends IHttpRequest {
      * @param sourcePrintService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintService sourcePrintService, final ICallback<PrintService> callback);
+    void patch(final PrintService sourcePrintService, final ICallback<? super PrintService> callback);
 
     /**
      * Patches this PrintService with a source
@@ -68,7 +68,7 @@ public interface IPrintServiceRequest extends IHttpRequest {
      * @param newPrintService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintService newPrintService, final ICallback<PrintService> callback);
+    void post(final PrintService newPrintService, final ICallback<? super PrintService> callback);
 
     /**
      * Posts a PrintService with a new object
@@ -85,7 +85,7 @@ public interface IPrintServiceRequest extends IHttpRequest {
      * @param newPrintService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintService newPrintService, final ICallback<PrintService> callback);
+    void put(final PrintService newPrintService, final ICallback<? super PrintService> callback);
 
     /**
      * Posts a PrintService with a new object

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetUserArchivedPrintJobsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetUserArchivedPrintJobsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetUserArchivedPrintJobsCollectionPage> callback);
 
     IReportRootGetUserArchivedPrintJobsCollectionPage get() throws ClientException;
 

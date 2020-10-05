@@ -40,7 +40,7 @@ public class DeviceManagementCachedReportConfigurationCollectionRequest extends 
         super(requestUrl, client, requestOptions, DeviceManagementCachedReportConfigurationCollectionResponse.class, IDeviceManagementCachedReportConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementCachedReportConfigurationCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementCachedReportConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementCachedReportConfigurationCollectionRequest extends 
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<DeviceManagementCachedReportConfiguration> callback) {
+    public void post(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<? super DeviceManagementCachedReportConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementCachedReportConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementCachedReportConfigurationCollectionRequest extends 
      */
     public IDeviceManagementCachedReportConfigurationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementCachedReportConfigurationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementCachedReportConfigurationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementCachedReportConfigurationCollectionRequest)this;
     }
 

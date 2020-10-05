@@ -23,6 +23,6 @@ public class SecurityBaselineCategoryStateSummaryCollectionPage extends BaseColl
      * @param builder  the request builder for the next collection page
      */
     public SecurityBaselineCategoryStateSummaryCollectionPage(final SecurityBaselineCategoryStateSummaryCollectionResponse response, final ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class TemporaryAccessPassAuthenticationMethodCollectionRequest extends Ba
         super(requestUrl, client, requestOptions, TemporaryAccessPassAuthenticationMethodCollectionResponse.class, ITemporaryAccessPassAuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<ITemporaryAccessPassAuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super ITemporaryAccessPassAuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TemporaryAccessPassAuthenticationMethodCollectionRequest extends Ba
         return buildFromResponse(response);
     }
 
-    public void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback) {
+    public void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TemporaryAccessPassAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class TemporaryAccessPassAuthenticationMethodCollectionRequest extends Ba
      */
     public ITemporaryAccessPassAuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TemporaryAccessPassAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITemporaryAccessPassAuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TemporaryAccessPassAuthenticationMethodCollectionRequest)this;
     }
 

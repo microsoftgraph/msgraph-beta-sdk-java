@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
 
     /**
      * Gets the UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionReque
      * @param sourceUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion sourceUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
+    void patch(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion sourceUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
 
     /**
      * Patches this UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionReque
      * @param newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
+    void post(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
 
     /**
      * Posts a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionReque
      * @param newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
+    void put(final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion newUserExperienceAnalyticsAppHealthAppPerformanceByOSVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> callback);
 
     /**
      * Posts a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion with a new object

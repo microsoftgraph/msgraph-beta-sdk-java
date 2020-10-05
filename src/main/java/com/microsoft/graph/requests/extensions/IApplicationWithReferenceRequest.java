@@ -37,19 +37,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IApplicationWithReferenceRequest extends IHttpRequest {
 
-    void post(final Application newApplication, final IJsonBackedObject payload, final ICallback<Application> callback);
+    void post(final Application newApplication, final IJsonBackedObject payload, final ICallback<? super Application> callback);
 
     Application post(final Application newApplication, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Application> callback);
+    void get(final ICallback<? super Application> callback);
 
     Application get() throws ClientException;
 
-	void delete(final ICallback<Application> callback);
+	void delete(final ICallback<? super Application> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Application sourceApplication, final ICallback<Application> callback);
+	void patch(final Application sourceApplication, final ICallback<? super Application> callback);
 
 	Application patch(final Application sourceApplication) throws ClientException;
 

@@ -41,7 +41,7 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Document> callback) {
+    public void get(final ICallback<? super Document> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Document> callback) {
+    public void delete(final ICallback<? super Document> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
      * @param sourceDocument the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Document sourceDocument, final ICallback<Document> callback) {
+    public void patch(final Document sourceDocument, final ICallback<? super Document> callback) {
         send(HttpMethod.PATCH, callback, sourceDocument);
     }
 
@@ -100,7 +100,7 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
      * @param newDocument the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Document newDocument, final ICallback<Document> callback) {
+    public void post(final Document newDocument, final ICallback<? super Document> callback) {
         send(HttpMethod.POST, callback, newDocument);
     }
 
@@ -121,7 +121,7 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
      * @param newDocument the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Document newDocument, final ICallback<Document> callback) {
+    public void put(final Document newDocument, final ICallback<? super Document> callback) {
         send(HttpMethod.PUT, callback, newDocument);
     }
 
@@ -155,17 +155,6 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
      */
      public IDocumentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DocumentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDocumentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DocumentRequest)this;
      }
 

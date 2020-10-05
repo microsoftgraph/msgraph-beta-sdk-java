@@ -21,7 +21,7 @@ public interface IExternalItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExternalItem> callback);
+    void get(final ICallback<? super ExternalItem> callback);
 
     /**
      * Gets the ExternalItem from the service
@@ -36,7 +36,7 @@ public interface IExternalItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExternalItem> callback);
+    void delete(final ICallback<? super ExternalItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExternalItemRequest extends IHttpRequest {
      * @param sourceExternalItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExternalItem sourceExternalItem, final ICallback<ExternalItem> callback);
+    void patch(final ExternalItem sourceExternalItem, final ICallback<? super ExternalItem> callback);
 
     /**
      * Patches this ExternalItem with a source
@@ -68,7 +68,7 @@ public interface IExternalItemRequest extends IHttpRequest {
      * @param newExternalItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExternalItem newExternalItem, final ICallback<ExternalItem> callback);
+    void post(final ExternalItem newExternalItem, final ICallback<? super ExternalItem> callback);
 
     /**
      * Posts a ExternalItem with a new object
@@ -85,7 +85,7 @@ public interface IExternalItemRequest extends IHttpRequest {
      * @param newExternalItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExternalItem newExternalItem, final ICallback<ExternalItem> callback);
+    void put(final ExternalItem newExternalItem, final ICallback<? super ExternalItem> callback);
 
     /**
      * Posts a ExternalItem with a new object

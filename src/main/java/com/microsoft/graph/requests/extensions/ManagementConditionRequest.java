@@ -57,7 +57,7 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagementCondition> callback) {
+    public void get(final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagementCondition> callback) {
+    public void delete(final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
      * @param sourceManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagementCondition sourceManagementCondition, final ICallback<ManagementCondition> callback) {
+    public void patch(final ManagementCondition sourceManagementCondition, final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceManagementCondition);
     }
 
@@ -116,7 +116,7 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
      * @param newManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback) {
+    public void post(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.POST, callback, newManagementCondition);
     }
 
@@ -137,7 +137,7 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
      * @param newManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback) {
+    public void put(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newManagementCondition);
     }
 
@@ -171,17 +171,6 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
      */
      public IManagementConditionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagementConditionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IManagementConditionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagementConditionRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IPrinterCreateOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrinterCreateOperation> callback);
+    void get(final ICallback<? super PrinterCreateOperation> callback);
 
     /**
      * Gets the PrinterCreateOperation from the service
@@ -36,7 +36,7 @@ public interface IPrinterCreateOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrinterCreateOperation> callback);
+    void delete(final ICallback<? super PrinterCreateOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrinterCreateOperationRequest extends IHttpRequest {
      * @param sourcePrinterCreateOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrinterCreateOperation sourcePrinterCreateOperation, final ICallback<PrinterCreateOperation> callback);
+    void patch(final PrinterCreateOperation sourcePrinterCreateOperation, final ICallback<? super PrinterCreateOperation> callback);
 
     /**
      * Patches this PrinterCreateOperation with a source
@@ -68,7 +68,7 @@ public interface IPrinterCreateOperationRequest extends IHttpRequest {
      * @param newPrinterCreateOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<PrinterCreateOperation> callback);
+    void post(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<? super PrinterCreateOperation> callback);
 
     /**
      * Posts a PrinterCreateOperation with a new object
@@ -85,7 +85,7 @@ public interface IPrinterCreateOperationRequest extends IHttpRequest {
      * @param newPrinterCreateOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<PrinterCreateOperation> callback);
+    void put(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<? super PrinterCreateOperation> callback);
 
     /**
      * Posts a PrinterCreateOperation with a new object

@@ -6,19 +6,14 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import com.microsoft.graph.models.extensions.ContinuousAccessEvaluationPolicy;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionPage;
-import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionPage;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionPage;
 
 
@@ -31,8 +26,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Identity Container.
  */
-public class IdentityContainer extends Entity implements IJsonBackedObject {
+public class IdentityContainer implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Conditional Access.
@@ -115,51 +120,15 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 
 
         if (json.has("b2cUserFlows")) {
-            final B2cIdentityUserFlowCollectionResponse response = new B2cIdentityUserFlowCollectionResponse();
-            if (json.has("b2cUserFlows@odata.nextLink")) {
-                response.nextLink = json.get("b2cUserFlows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("b2cUserFlows").toString(), JsonObject[].class);
-            final B2cIdentityUserFlow[] array = new B2cIdentityUserFlow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), B2cIdentityUserFlow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            b2cUserFlows = new B2cIdentityUserFlowCollectionPage(response, null);
+            b2cUserFlows = serializer.deserializeObject(json.get("b2cUserFlows").toString(), B2cIdentityUserFlowCollectionPage.class);
         }
 
         if (json.has("b2xUserFlows")) {
-            final B2xIdentityUserFlowCollectionResponse response = new B2xIdentityUserFlowCollectionResponse();
-            if (json.has("b2xUserFlows@odata.nextLink")) {
-                response.nextLink = json.get("b2xUserFlows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("b2xUserFlows").toString(), JsonObject[].class);
-            final B2xIdentityUserFlow[] array = new B2xIdentityUserFlow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), B2xIdentityUserFlow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            b2xUserFlows = new B2xIdentityUserFlowCollectionPage(response, null);
+            b2xUserFlows = serializer.deserializeObject(json.get("b2xUserFlows").toString(), B2xIdentityUserFlowCollectionPage.class);
         }
 
         if (json.has("userFlows")) {
-            final IdentityUserFlowCollectionResponse response = new IdentityUserFlowCollectionResponse();
-            if (json.has("userFlows@odata.nextLink")) {
-                response.nextLink = json.get("userFlows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userFlows").toString(), JsonObject[].class);
-            final IdentityUserFlow[] array = new IdentityUserFlow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IdentityUserFlow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userFlows = new IdentityUserFlowCollectionPage(response, null);
+            userFlows = serializer.deserializeObject(json.get("userFlows").toString(), IdentityUserFlowCollectionPage.class);
         }
     }
 }

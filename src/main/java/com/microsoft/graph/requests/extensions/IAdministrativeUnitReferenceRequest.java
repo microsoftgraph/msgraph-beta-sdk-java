@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAdministrativeUnitReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AdministrativeUnit> callback);
+    void delete(final ICallback<? super AdministrativeUnit> callback);
 
     AdministrativeUnit delete() throws ClientException;
 
@@ -54,7 +54,7 @@ public interface IAdministrativeUnitReferenceRequest extends IHttpRequest {
      * @param srcAdministrativeUnit the AdministrativeUnit to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AdministrativeUnit srcAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+    void put(AdministrativeUnit srcAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
     /**
      * Puts the AdministrativeUnit

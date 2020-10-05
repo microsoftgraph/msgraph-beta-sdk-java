@@ -37,7 +37,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EmbeddedSIMDeviceState> callback) {
+    public void get(final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EmbeddedSIMDeviceState> callback) {
+    public void delete(final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param sourceEmbeddedSIMDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback) {
+    public void patch(final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.PATCH, callback, sourceEmbeddedSIMDeviceState);
     }
 
@@ -96,7 +96,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param newEmbeddedSIMDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback) {
+    public void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.POST, callback, newEmbeddedSIMDeviceState);
     }
 
@@ -117,7 +117,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param newEmbeddedSIMDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback) {
+    public void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.PUT, callback, newEmbeddedSIMDeviceState);
     }
 
@@ -151,17 +151,6 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      */
      public IEmbeddedSIMDeviceStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmbeddedSIMDeviceStateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEmbeddedSIMDeviceStateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmbeddedSIMDeviceStateRequest)this;
      }
 

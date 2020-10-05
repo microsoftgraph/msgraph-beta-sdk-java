@@ -37,7 +37,7 @@ public class PrintTaskTriggerWithReferenceRequest extends BaseRequest implements
         super(requestUrl, client, requestOptions, PrintTaskTrigger.class);
     }
 
-    public void post(final PrintTaskTrigger newPrintTaskTrigger, final IJsonBackedObject payload, final ICallback<PrintTaskTrigger> callback) {
+    public void post(final PrintTaskTrigger newPrintTaskTrigger, final IJsonBackedObject payload, final ICallback<? super PrintTaskTrigger> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -49,7 +49,7 @@ public class PrintTaskTriggerWithReferenceRequest extends BaseRequest implements
         return null;
     }
 
-    public void get(final ICallback<PrintTaskTrigger> callback) {
+    public void get(final ICallback<? super PrintTaskTrigger> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class PrintTaskTriggerWithReferenceRequest extends BaseRequest implements
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<PrintTaskTrigger> callback) {
+	public void delete(final ICallback<? super PrintTaskTrigger> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,7 +65,7 @@ public class PrintTaskTriggerWithReferenceRequest extends BaseRequest implements
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final PrintTaskTrigger sourcePrintTaskTrigger, final ICallback<PrintTaskTrigger> callback) {
+	public void patch(final PrintTaskTrigger sourcePrintTaskTrigger, final ICallback<? super PrintTaskTrigger> callback) {
 		send(HttpMethod.PATCH, callback, sourcePrintTaskTrigger);
 	}
 
@@ -93,16 +93,6 @@ public class PrintTaskTriggerWithReferenceRequest extends BaseRequest implements
      */
     public IPrintTaskTriggerWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintTaskTriggerWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintTaskTriggerWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrintTaskTriggerWithReferenceRequest)this;
     }
 }

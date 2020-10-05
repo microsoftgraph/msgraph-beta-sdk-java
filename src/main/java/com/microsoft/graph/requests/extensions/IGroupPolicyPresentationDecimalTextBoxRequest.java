@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationDecimalTextBoxRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationDecimalTextBox> callback);
+    void get(final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback);
 
     /**
      * Gets the GroupPolicyPresentationDecimalTextBox from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationDecimalTextBoxRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationDecimalTextBox> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationDecimalTextBoxRequest extends IHttpRequ
      * @param sourceGroupPolicyPresentationDecimalTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback);
+    void patch(final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback);
 
     /**
      * Patches this GroupPolicyPresentationDecimalTextBox with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationDecimalTextBoxRequest extends IHttpRequ
      * @param newGroupPolicyPresentationDecimalTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback);
+    void post(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationDecimalTextBox with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationDecimalTextBoxRequest extends IHttpRequ
      * @param newGroupPolicyPresentationDecimalTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback);
+    void put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationDecimalTextBox with a new object

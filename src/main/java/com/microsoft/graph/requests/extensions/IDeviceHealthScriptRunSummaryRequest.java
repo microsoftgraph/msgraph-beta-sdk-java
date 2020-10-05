@@ -21,7 +21,7 @@ public interface IDeviceHealthScriptRunSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceHealthScriptRunSummary> callback);
+    void get(final ICallback<? super DeviceHealthScriptRunSummary> callback);
 
     /**
      * Gets the DeviceHealthScriptRunSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceHealthScriptRunSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceHealthScriptRunSummary> callback);
+    void delete(final ICallback<? super DeviceHealthScriptRunSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceHealthScriptRunSummaryRequest extends IHttpRequest {
      * @param sourceDeviceHealthScriptRunSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceHealthScriptRunSummary sourceDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback);
+    void patch(final DeviceHealthScriptRunSummary sourceDeviceHealthScriptRunSummary, final ICallback<? super DeviceHealthScriptRunSummary> callback);
 
     /**
      * Patches this DeviceHealthScriptRunSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceHealthScriptRunSummaryRequest extends IHttpRequest {
      * @param newDeviceHealthScriptRunSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback);
+    void post(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<? super DeviceHealthScriptRunSummary> callback);
 
     /**
      * Posts a DeviceHealthScriptRunSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceHealthScriptRunSummaryRequest extends IHttpRequest {
      * @param newDeviceHealthScriptRunSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback);
+    void put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<? super DeviceHealthScriptRunSummary> callback);
 
     /**
      * Posts a DeviceHealthScriptRunSummary with a new object

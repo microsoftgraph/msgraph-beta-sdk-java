@@ -41,7 +41,7 @@ public class AccessPackageAssignmentRequestCollectionRequest extends BaseCollect
         super(requestUrl, client, requestOptions, AccessPackageAssignmentRequestCollectionResponse.class, IAccessPackageAssignmentRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageAssignmentRequestCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageAssignmentRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class AccessPackageAssignmentRequestCollectionRequest extends BaseCollect
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<AccessPackageAssignmentRequest> callback) {
+    public void post(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<? super AccessPackageAssignmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class AccessPackageAssignmentRequestCollectionRequest extends BaseCollect
      */
     public IAccessPackageAssignmentRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageAssignmentRequestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageAssignmentRequestCollectionRequest)this;
     }
 

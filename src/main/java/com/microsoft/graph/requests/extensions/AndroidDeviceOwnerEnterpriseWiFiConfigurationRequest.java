@@ -43,7 +43,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest extends BaseRe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest extends BaseRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest extends BaseRe
      * @param sourceAndroidDeviceOwnerEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerEnterpriseWiFiConfiguration sourceAndroidDeviceOwnerEnterpriseWiFiConfiguration, final ICallback<AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
+    public void patch(final AndroidDeviceOwnerEnterpriseWiFiConfiguration sourceAndroidDeviceOwnerEnterpriseWiFiConfiguration, final ICallback<? super AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerEnterpriseWiFiConfiguration);
     }
 
@@ -102,7 +102,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest extends BaseRe
      * @param newAndroidDeviceOwnerEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerEnterpriseWiFiConfiguration newAndroidDeviceOwnerEnterpriseWiFiConfiguration, final ICallback<AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
+    public void post(final AndroidDeviceOwnerEnterpriseWiFiConfiguration newAndroidDeviceOwnerEnterpriseWiFiConfiguration, final ICallback<? super AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerEnterpriseWiFiConfiguration);
     }
 
@@ -123,7 +123,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest extends BaseRe
      * @param newAndroidDeviceOwnerEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerEnterpriseWiFiConfiguration newAndroidDeviceOwnerEnterpriseWiFiConfiguration, final ICallback<AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
+    public void put(final AndroidDeviceOwnerEnterpriseWiFiConfiguration newAndroidDeviceOwnerEnterpriseWiFiConfiguration, final ICallback<? super AndroidDeviceOwnerEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerEnterpriseWiFiConfiguration);
     }
 
@@ -157,17 +157,6 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest extends BaseRe
      */
      public IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceOwnerEnterpriseWiFiConfigurationRequest)this;
      }
 

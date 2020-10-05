@@ -39,7 +39,7 @@ public class ReportRootGetOffice365ActivationsUserDetailCollectionRequest extend
     }
 
 
-    public void get(final ICallback<IReportRootGetOffice365ActivationsUserDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetOffice365ActivationsUserDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetOffice365ActivationsUserDetailCollectionRequest extend
      */
     public IReportRootGetOffice365ActivationsUserDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOffice365ActivationsUserDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365ActivationsUserDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetOffice365ActivationsUserDetailCollectionRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IPrintServiceEndpointRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintServiceEndpoint> callback);
+    void get(final ICallback<? super PrintServiceEndpoint> callback);
 
     /**
      * Gets the PrintServiceEndpoint from the service
@@ -36,7 +36,7 @@ public interface IPrintServiceEndpointRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintServiceEndpoint> callback);
+    void delete(final ICallback<? super PrintServiceEndpoint> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintServiceEndpointRequest extends IHttpRequest {
      * @param sourcePrintServiceEndpoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintServiceEndpoint sourcePrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback);
+    void patch(final PrintServiceEndpoint sourcePrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback);
 
     /**
      * Patches this PrintServiceEndpoint with a source
@@ -68,7 +68,7 @@ public interface IPrintServiceEndpointRequest extends IHttpRequest {
      * @param newPrintServiceEndpoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback);
+    void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback);
 
     /**
      * Posts a PrintServiceEndpoint with a new object
@@ -85,7 +85,7 @@ public interface IPrintServiceEndpointRequest extends IHttpRequest {
      * @param newPrintServiceEndpoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback);
+    void put(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback);
 
     /**
      * Posts a PrintServiceEndpoint with a new object

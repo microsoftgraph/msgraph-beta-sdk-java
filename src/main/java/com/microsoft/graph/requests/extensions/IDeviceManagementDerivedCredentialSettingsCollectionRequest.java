@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementDerivedCredentialSettingsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementDerivedCredentialSettingsCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementDerivedCredentialSettingsCollectionPage> callback);
 
     IDeviceManagementDerivedCredentialSettingsCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     DeviceManagementDerivedCredentialSettings post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementDerivedCredentialSettingsCollectionRequest ext
      * @return the updated request
      */
     IDeviceManagementDerivedCredentialSettingsCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementDerivedCredentialSettingsCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementDerivedCredentialSettingsCollectionRequest ext
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementDerivedCredentialSettingsCollectionRequest skipToken(String skipToken);
+	IDeviceManagementDerivedCredentialSettingsCollectionRequest skipToken(final String skipToken);
 }

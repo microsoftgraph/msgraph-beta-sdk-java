@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IExternalGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IExternalGroupCollectionPage> callback);
+    void get(final ICallback<? super IExternalGroupCollectionPage> callback);
 
     IExternalGroupCollectionPage get() throws ClientException;
 
-    void post(final ExternalGroup newExternalGroup, final ICallback<ExternalGroup> callback);
+    void post(final ExternalGroup newExternalGroup, final ICallback<? super ExternalGroup> callback);
 
     ExternalGroup post(final ExternalGroup newExternalGroup) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IExternalGroupCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IExternalGroupCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IExternalGroupCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IExternalGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IExternalGroupCollectionRequest skipToken(String skipToken);
+	IExternalGroupCollectionRequest skipToken(final String skipToken);
 }

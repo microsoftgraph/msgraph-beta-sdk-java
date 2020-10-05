@@ -21,7 +21,7 @@ public interface IWindowsPhoneXAPRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhoneXAP> callback);
+    void get(final ICallback<? super WindowsPhoneXAP> callback);
 
     /**
      * Gets the WindowsPhoneXAP from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhoneXAPRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhoneXAP> callback);
+    void delete(final ICallback<? super WindowsPhoneXAP> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhoneXAPRequest extends IHttpRequest {
      * @param sourceWindowsPhoneXAP the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhoneXAP sourceWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback);
+    void patch(final WindowsPhoneXAP sourceWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback);
 
     /**
      * Patches this WindowsPhoneXAP with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhoneXAPRequest extends IHttpRequest {
      * @param newWindowsPhoneXAP the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback);
+    void post(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback);
 
     /**
      * Posts a WindowsPhoneXAP with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhoneXAPRequest extends IHttpRequest {
      * @param newWindowsPhoneXAP the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback);
+    void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback);
 
     /**
      * Posts a WindowsPhoneXAP with a new object

@@ -26,7 +26,7 @@ public interface IAppLogCollectionRequestCreateDownloadUrlRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<AppLogCollectionDownloadDetails> callback);
+    void post(final ICallback<? super AppLogCollectionDownloadDetails> callback);
 
     /**
      * Creates the AppLogCollectionRequestCreateDownloadUrl

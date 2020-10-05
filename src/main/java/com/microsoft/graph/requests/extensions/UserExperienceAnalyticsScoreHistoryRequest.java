@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param sourceUserExperienceAnalyticsScoreHistory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+    public void patch(final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsScoreHistory);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param newUserExperienceAnalyticsScoreHistory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+    public void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param newUserExperienceAnalyticsScoreHistory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+    public void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      */
      public IUserExperienceAnalyticsScoreHistoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsScoreHistoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsScoreHistoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsScoreHistoryRequest)this;
      }
 

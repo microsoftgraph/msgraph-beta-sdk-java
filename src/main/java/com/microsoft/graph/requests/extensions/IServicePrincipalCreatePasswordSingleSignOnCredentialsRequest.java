@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest extends IHttpRequest {
 
-    void post(final ICallback<PasswordSingleSignOnCredentialSet> callback);
+    void post(final ICallback<? super PasswordSingleSignOnCredentialSet> callback);
 
     PasswordSingleSignOnCredentialSet post() throws ClientException;
 

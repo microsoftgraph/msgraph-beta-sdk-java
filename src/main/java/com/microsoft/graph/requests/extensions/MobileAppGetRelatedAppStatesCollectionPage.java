@@ -34,6 +34,6 @@ public class MobileAppGetRelatedAppStatesCollectionPage extends BaseCollectionPa
      * @param builder The request builder for the next collection page
      */
     public MobileAppGetRelatedAppStatesCollectionPage(final MobileAppGetRelatedAppStatesCollectionResponse response, final IMobileAppGetRelatedAppStatesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

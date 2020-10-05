@@ -36,7 +36,7 @@ public class IosVppAppRevokeUserLicenseRequest extends BaseRequest implements II
         body = new IosVppAppRevokeUserLicenseBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class IosVppAppRevokeUserLicenseRequest extends BaseRequest implements II
      */
     public IIosVppAppRevokeUserLicenseRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IosVppAppRevokeUserLicenseRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIosVppAppRevokeUserLicenseRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (IosVppAppRevokeUserLicenseRequest)this;
     }
 

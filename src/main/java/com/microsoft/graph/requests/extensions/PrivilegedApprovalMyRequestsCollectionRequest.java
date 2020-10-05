@@ -39,7 +39,7 @@ public class PrivilegedApprovalMyRequestsCollectionRequest extends BaseCollectio
     }
 
 
-    public void get(final ICallback<IPrivilegedApprovalMyRequestsCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedApprovalMyRequestsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class PrivilegedApprovalMyRequestsCollectionRequest extends BaseCollectio
      */
     public IPrivilegedApprovalMyRequestsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IPrivilegedApprovalMyRequestsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedApprovalMyRequestsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IPrivilegedApprovalMyRequestsCollectionRequest)this;
     }
 

@@ -23,6 +23,6 @@ public class PrintConnectorCollectionPage extends BaseCollectionPage<PrintConnec
      * @param builder  the request builder for the next collection page
      */
     public PrintConnectorCollectionPage(final PrintConnectorCollectionResponse response, final IPrintConnectorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

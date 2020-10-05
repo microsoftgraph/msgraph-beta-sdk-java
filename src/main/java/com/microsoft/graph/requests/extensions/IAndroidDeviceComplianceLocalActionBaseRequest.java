@@ -21,7 +21,7 @@ public interface IAndroidDeviceComplianceLocalActionBaseRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceComplianceLocalActionBase> callback);
+    void get(final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback);
 
     /**
      * Gets the AndroidDeviceComplianceLocalActionBase from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceComplianceLocalActionBaseRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceComplianceLocalActionBase> callback);
+    void delete(final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceComplianceLocalActionBaseRequest extends IHttpReq
      * @param sourceAndroidDeviceComplianceLocalActionBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback);
+    void patch(final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback);
 
     /**
      * Patches this AndroidDeviceComplianceLocalActionBase with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceComplianceLocalActionBaseRequest extends IHttpReq
      * @param newAndroidDeviceComplianceLocalActionBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback);
+    void post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback);
 
     /**
      * Posts a AndroidDeviceComplianceLocalActionBase with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceComplianceLocalActionBaseRequest extends IHttpReq
      * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback);
+    void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback);
 
     /**
      * Posts a AndroidDeviceComplianceLocalActionBase with a new object

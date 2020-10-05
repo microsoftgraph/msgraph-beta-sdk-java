@@ -21,7 +21,7 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequest extend
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
+    void get(final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Gets the ActiveDirectoryWindowsAutopilotDeploymentProfile from the service
@@ -36,7 +36,7 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequest extend
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
+    void delete(final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequest extend
      * @param sourceActiveDirectoryWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
+    void patch(final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Patches this ActiveDirectoryWindowsAutopilotDeploymentProfile with a source
@@ -68,7 +68,7 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequest extend
      * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
+    void post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Posts a ActiveDirectoryWindowsAutopilotDeploymentProfile with a new object
@@ -85,7 +85,7 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequest extend
      * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
+    void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Posts a ActiveDirectoryWindowsAutopilotDeploymentProfile with a new object

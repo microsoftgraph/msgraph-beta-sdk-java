@@ -39,7 +39,7 @@ public class ConnectorCollectionRequest extends BaseCollectionRequest<ConnectorC
         super(requestUrl, client, requestOptions, ConnectorCollectionResponse.class, IConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<IConnectorCollectionPage> callback) {
+    public void get(final ICallback<? super IConnectorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ConnectorCollectionRequest extends BaseCollectionRequest<ConnectorC
         return buildFromResponse(response);
     }
 
-    public void post(final Connector newConnector, final ICallback<Connector> callback) {
+    public void post(final Connector newConnector, final ICallback<? super Connector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ConnectorCollectionRequest extends BaseCollectionRequest<ConnectorC
      */
     public IConnectorCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectorCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IConnectorCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConnectorCollectionRequest)this;
     }
 

@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IImportedAppleDeviceIdentityCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IImportedAppleDeviceIdentityCollectionPage> callback);
+    void get(final ICallback<? super IImportedAppleDeviceIdentityCollectionPage> callback);
 
     IImportedAppleDeviceIdentityCollectionPage get() throws ClientException;
 
-    void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback);
+    void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<? super ImportedAppleDeviceIdentity> callback);
 
     ImportedAppleDeviceIdentity post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IImportedAppleDeviceIdentityCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IImportedAppleDeviceIdentityCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IImportedAppleDeviceIdentityCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IImportedAppleDeviceIdentityCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IImportedAppleDeviceIdentityCollectionRequest skipToken(String skipToken);
+	IImportedAppleDeviceIdentityCollectionRequest skipToken(final String skipToken);
 }

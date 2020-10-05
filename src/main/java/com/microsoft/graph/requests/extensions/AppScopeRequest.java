@@ -37,7 +37,7 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AppScope> callback) {
+    public void get(final ICallback<? super AppScope> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AppScope> callback) {
+    public void delete(final ICallback<? super AppScope> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
      * @param sourceAppScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppScope sourceAppScope, final ICallback<AppScope> callback) {
+    public void patch(final AppScope sourceAppScope, final ICallback<? super AppScope> callback) {
         send(HttpMethod.PATCH, callback, sourceAppScope);
     }
 
@@ -96,7 +96,7 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
      * @param newAppScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppScope newAppScope, final ICallback<AppScope> callback) {
+    public void post(final AppScope newAppScope, final ICallback<? super AppScope> callback) {
         send(HttpMethod.POST, callback, newAppScope);
     }
 
@@ -117,7 +117,7 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
      * @param newAppScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppScope newAppScope, final ICallback<AppScope> callback) {
+    public void put(final AppScope newAppScope, final ICallback<? super AppScope> callback) {
         send(HttpMethod.PUT, callback, newAppScope);
     }
 
@@ -151,17 +151,6 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
      */
      public IAppScopeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppScopeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAppScopeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AppScopeRequest)this;
      }
 

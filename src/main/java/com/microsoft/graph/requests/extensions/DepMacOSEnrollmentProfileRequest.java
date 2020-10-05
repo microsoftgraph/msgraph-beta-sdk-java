@@ -37,7 +37,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void get(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void delete(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param sourceDepMacOSEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceDepMacOSEnrollmentProfile);
     }
 
@@ -96,7 +96,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param newDepMacOSEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newDepMacOSEnrollmentProfile);
     }
 
@@ -117,7 +117,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param newDepMacOSEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newDepMacOSEnrollmentProfile);
     }
 
@@ -151,17 +151,6 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      */
      public IDepMacOSEnrollmentProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DepMacOSEnrollmentProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDepMacOSEnrollmentProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DepMacOSEnrollmentProfileRequest)this;
      }
 

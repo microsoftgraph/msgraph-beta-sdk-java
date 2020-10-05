@@ -21,7 +21,7 @@ public interface IOffice365ActiveUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365ActiveUserDetail> callback);
+    void get(final ICallback<? super Office365ActiveUserDetail> callback);
 
     /**
      * Gets the Office365ActiveUserDetail from the service
@@ -36,7 +36,7 @@ public interface IOffice365ActiveUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365ActiveUserDetail> callback);
+    void delete(final ICallback<? super Office365ActiveUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365ActiveUserDetailRequest extends IHttpRequest {
      * @param sourceOffice365ActiveUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365ActiveUserDetail sourceOffice365ActiveUserDetail, final ICallback<Office365ActiveUserDetail> callback);
+    void patch(final Office365ActiveUserDetail sourceOffice365ActiveUserDetail, final ICallback<? super Office365ActiveUserDetail> callback);
 
     /**
      * Patches this Office365ActiveUserDetail with a source
@@ -68,7 +68,7 @@ public interface IOffice365ActiveUserDetailRequest extends IHttpRequest {
      * @param newOffice365ActiveUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365ActiveUserDetail newOffice365ActiveUserDetail, final ICallback<Office365ActiveUserDetail> callback);
+    void post(final Office365ActiveUserDetail newOffice365ActiveUserDetail, final ICallback<? super Office365ActiveUserDetail> callback);
 
     /**
      * Posts a Office365ActiveUserDetail with a new object
@@ -85,7 +85,7 @@ public interface IOffice365ActiveUserDetailRequest extends IHttpRequest {
      * @param newOffice365ActiveUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365ActiveUserDetail newOffice365ActiveUserDetail, final ICallback<Office365ActiveUserDetail> callback);
+    void put(final Office365ActiveUserDetail newOffice365ActiveUserDetail, final ICallback<? super Office365ActiveUserDetail> callback);
 
     /**
      * Posts a Office365ActiveUserDetail with a new object

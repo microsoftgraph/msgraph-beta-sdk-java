@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrivilegedRoleSettingsReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PrivilegedRoleSettings> callback);
+    void delete(final ICallback<? super PrivilegedRoleSettings> callback);
 
     PrivilegedRoleSettings delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IPrivilegedRoleSettingsReferenceRequest extends IHttpRequest {
      * @param srcPrivilegedRoleSettings the PrivilegedRoleSettings to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PrivilegedRoleSettings srcPrivilegedRoleSettings, final ICallback<PrivilegedRoleSettings> callback);
+    void put(PrivilegedRoleSettings srcPrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback);
 
     /**
      * Puts the PrivilegedRoleSettings

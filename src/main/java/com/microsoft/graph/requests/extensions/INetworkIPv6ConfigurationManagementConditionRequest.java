@@ -21,7 +21,7 @@ public interface INetworkIPv6ConfigurationManagementConditionRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<NetworkIPv6ConfigurationManagementCondition> callback);
+    void get(final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback);
 
     /**
      * Gets the NetworkIPv6ConfigurationManagementCondition from the service
@@ -36,7 +36,7 @@ public interface INetworkIPv6ConfigurationManagementConditionRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<NetworkIPv6ConfigurationManagementCondition> callback);
+    void delete(final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INetworkIPv6ConfigurationManagementConditionRequest extends IHt
      * @param sourceNetworkIPv6ConfigurationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback);
+    void patch(final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback);
 
     /**
      * Patches this NetworkIPv6ConfigurationManagementCondition with a source
@@ -68,7 +68,7 @@ public interface INetworkIPv6ConfigurationManagementConditionRequest extends IHt
      * @param newNetworkIPv6ConfigurationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback);
+    void post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback);
 
     /**
      * Posts a NetworkIPv6ConfigurationManagementCondition with a new object
@@ -85,7 +85,7 @@ public interface INetworkIPv6ConfigurationManagementConditionRequest extends IHt
      * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback);
+    void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback);
 
     /**
      * Posts a NetworkIPv6ConfigurationManagementCondition with a new object

@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidTrustedRootCertificateReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AndroidTrustedRootCertificate> callback);
+    void delete(final ICallback<? super AndroidTrustedRootCertificate> callback);
 
     AndroidTrustedRootCertificate delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IAndroidTrustedRootCertificateReferenceRequest extends IHttpReq
      * @param srcAndroidTrustedRootCertificate the AndroidTrustedRootCertificate to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AndroidTrustedRootCertificate srcAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback);
+    void put(AndroidTrustedRootCertificate srcAndroidTrustedRootCertificate, final ICallback<? super AndroidTrustedRootCertificate> callback);
 
     /**
      * Puts the AndroidTrustedRootCertificate

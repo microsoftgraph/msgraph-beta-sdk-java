@@ -54,7 +54,7 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkEasEmailProfileBase> callback) {
+    public void get(final ICallback<? super AndroidForWorkEasEmailProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkEasEmailProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidForWorkEasEmailProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
      * @param sourceAndroidForWorkEasEmailProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkEasEmailProfileBase sourceAndroidForWorkEasEmailProfileBase, final ICallback<AndroidForWorkEasEmailProfileBase> callback) {
+    public void patch(final AndroidForWorkEasEmailProfileBase sourceAndroidForWorkEasEmailProfileBase, final ICallback<? super AndroidForWorkEasEmailProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkEasEmailProfileBase);
     }
 
@@ -113,7 +113,7 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
      * @param newAndroidForWorkEasEmailProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase, final ICallback<AndroidForWorkEasEmailProfileBase> callback) {
+    public void post(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase, final ICallback<? super AndroidForWorkEasEmailProfileBase> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkEasEmailProfileBase);
     }
 
@@ -134,7 +134,7 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
      * @param newAndroidForWorkEasEmailProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase, final ICallback<AndroidForWorkEasEmailProfileBase> callback) {
+    public void put(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase, final ICallback<? super AndroidForWorkEasEmailProfileBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkEasEmailProfileBase);
     }
 
@@ -168,17 +168,6 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
      */
      public IAndroidForWorkEasEmailProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkEasEmailProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkEasEmailProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkEasEmailProfileBaseRequest)this;
      }
 

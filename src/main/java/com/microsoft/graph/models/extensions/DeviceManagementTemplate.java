@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
 import com.microsoft.graph.models.generated.DeviceManagementTemplateSubtype;
@@ -15,11 +14,8 @@ import com.microsoft.graph.models.extensions.DeviceManagementTemplateSettingCate
 import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
 
 
@@ -172,51 +168,15 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
 
 
         if (json.has("categories")) {
-            final DeviceManagementTemplateSettingCategoryCollectionResponse response = new DeviceManagementTemplateSettingCategoryCollectionResponse();
-            if (json.has("categories@odata.nextLink")) {
-                response.nextLink = json.get("categories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
-            final DeviceManagementTemplateSettingCategory[] array = new DeviceManagementTemplateSettingCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTemplateSettingCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categories = new DeviceManagementTemplateSettingCategoryCollectionPage(response, null);
+            categories = serializer.deserializeObject(json.get("categories").toString(), DeviceManagementTemplateSettingCategoryCollectionPage.class);
         }
 
         if (json.has("migratableTo")) {
-            final DeviceManagementTemplateCollectionResponse response = new DeviceManagementTemplateCollectionResponse();
-            if (json.has("migratableTo@odata.nextLink")) {
-                response.nextLink = json.get("migratableTo@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("migratableTo").toString(), JsonObject[].class);
-            final DeviceManagementTemplate[] array = new DeviceManagementTemplate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTemplate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            migratableTo = new DeviceManagementTemplateCollectionPage(response, null);
+            migratableTo = serializer.deserializeObject(json.get("migratableTo").toString(), DeviceManagementTemplateCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
-            if (json.has("settings@odata.nextLink")) {
-                response.nextLink = json.get("settings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settings").toString(), JsonObject[].class);
-            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            settings = new DeviceManagementSettingInstanceCollectionPage(response, null);
+            settings = serializer.deserializeObject(json.get("settings").toString(), DeviceManagementSettingInstanceCollectionPage.class);
         }
     }
 }

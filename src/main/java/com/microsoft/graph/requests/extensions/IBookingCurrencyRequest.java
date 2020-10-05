@@ -21,7 +21,7 @@ public interface IBookingCurrencyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingCurrency> callback);
+    void get(final ICallback<? super BookingCurrency> callback);
 
     /**
      * Gets the BookingCurrency from the service
@@ -36,7 +36,7 @@ public interface IBookingCurrencyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingCurrency> callback);
+    void delete(final ICallback<? super BookingCurrency> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingCurrencyRequest extends IHttpRequest {
      * @param sourceBookingCurrency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingCurrency sourceBookingCurrency, final ICallback<BookingCurrency> callback);
+    void patch(final BookingCurrency sourceBookingCurrency, final ICallback<? super BookingCurrency> callback);
 
     /**
      * Patches this BookingCurrency with a source
@@ -68,7 +68,7 @@ public interface IBookingCurrencyRequest extends IHttpRequest {
      * @param newBookingCurrency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingCurrency newBookingCurrency, final ICallback<BookingCurrency> callback);
+    void post(final BookingCurrency newBookingCurrency, final ICallback<? super BookingCurrency> callback);
 
     /**
      * Posts a BookingCurrency with a new object
@@ -85,7 +85,7 @@ public interface IBookingCurrencyRequest extends IHttpRequest {
      * @param newBookingCurrency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingCurrency newBookingCurrency, final ICallback<BookingCurrency> callback);
+    void put(final BookingCurrency newBookingCurrency, final ICallback<? super BookingCurrency> callback);
 
     /**
      * Posts a BookingCurrency with a new object

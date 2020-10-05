@@ -35,7 +35,7 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequest exten
         super(requestUrl, client, requestOptions, DeviceManagementDerivedCredentialSettings.class);
     }
 
-    public void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final IJsonBackedObject payload, final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+    public void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final IJsonBackedObject payload, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequest exten
         return null;
     }
 
-    public void get(final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+    public void get(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequest exten
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+	public void delete(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequest exten
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+	public void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
 		send(HttpMethod.PATCH, callback, sourceDeviceManagementDerivedCredentialSettings);
 	}
 
@@ -91,16 +91,6 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequest exten
      */
     public IDeviceManagementDerivedCredentialSettingsWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementDerivedCredentialSettingsWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementDerivedCredentialSettingsWithReferenceRequest)this;
     }
 }

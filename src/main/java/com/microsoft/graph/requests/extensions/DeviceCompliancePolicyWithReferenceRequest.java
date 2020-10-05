@@ -66,7 +66,7 @@ public class DeviceCompliancePolicyWithReferenceRequest extends BaseRequest impl
         super(requestUrl, client, requestOptions, DeviceCompliancePolicy.class);
     }
 
-    public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final IJsonBackedObject payload, final ICallback<DeviceCompliancePolicy> callback) {
+    public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final IJsonBackedObject payload, final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -78,7 +78,7 @@ public class DeviceCompliancePolicyWithReferenceRequest extends BaseRequest impl
         return null;
     }
 
-    public void get(final ICallback<DeviceCompliancePolicy> callback) {
+    public void get(final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class DeviceCompliancePolicyWithReferenceRequest extends BaseRequest impl
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DeviceCompliancePolicy> callback) {
+	public void delete(final ICallback<? super DeviceCompliancePolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -94,7 +94,7 @@ public class DeviceCompliancePolicyWithReferenceRequest extends BaseRequest impl
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+	public void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicy);
 	}
 
@@ -122,16 +122,6 @@ public class DeviceCompliancePolicyWithReferenceRequest extends BaseRequest impl
      */
     public IDeviceCompliancePolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceCompliancePolicyWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCompliancePolicyWithReferenceRequest)this;
     }
 }

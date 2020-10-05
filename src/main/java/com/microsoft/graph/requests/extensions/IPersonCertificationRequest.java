@@ -21,7 +21,7 @@ public interface IPersonCertificationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonCertification> callback);
+    void get(final ICallback<? super PersonCertification> callback);
 
     /**
      * Gets the PersonCertification from the service
@@ -36,7 +36,7 @@ public interface IPersonCertificationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonCertification> callback);
+    void delete(final ICallback<? super PersonCertification> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonCertificationRequest extends IHttpRequest {
      * @param sourcePersonCertification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonCertification sourcePersonCertification, final ICallback<PersonCertification> callback);
+    void patch(final PersonCertification sourcePersonCertification, final ICallback<? super PersonCertification> callback);
 
     /**
      * Patches this PersonCertification with a source
@@ -68,7 +68,7 @@ public interface IPersonCertificationRequest extends IHttpRequest {
      * @param newPersonCertification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback);
+    void post(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback);
 
     /**
      * Posts a PersonCertification with a new object
@@ -85,7 +85,7 @@ public interface IPersonCertificationRequest extends IHttpRequest {
      * @param newPersonCertification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback);
+    void put(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback);
 
     /**
      * Posts a PersonCertification with a new object

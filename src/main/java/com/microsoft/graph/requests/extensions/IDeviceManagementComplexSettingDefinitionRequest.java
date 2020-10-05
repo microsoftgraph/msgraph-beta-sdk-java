@@ -21,7 +21,7 @@ public interface IDeviceManagementComplexSettingDefinitionRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementComplexSettingDefinition> callback);
+    void get(final ICallback<? super DeviceManagementComplexSettingDefinition> callback);
 
     /**
      * Gets the DeviceManagementComplexSettingDefinition from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementComplexSettingDefinitionRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementComplexSettingDefinition> callback);
+    void delete(final ICallback<? super DeviceManagementComplexSettingDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementComplexSettingDefinitionRequest extends IHttpR
      * @param sourceDeviceManagementComplexSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementComplexSettingDefinition sourceDeviceManagementComplexSettingDefinition, final ICallback<DeviceManagementComplexSettingDefinition> callback);
+    void patch(final DeviceManagementComplexSettingDefinition sourceDeviceManagementComplexSettingDefinition, final ICallback<? super DeviceManagementComplexSettingDefinition> callback);
 
     /**
      * Patches this DeviceManagementComplexSettingDefinition with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementComplexSettingDefinitionRequest extends IHttpR
      * @param newDeviceManagementComplexSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition, final ICallback<DeviceManagementComplexSettingDefinition> callback);
+    void post(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition, final ICallback<? super DeviceManagementComplexSettingDefinition> callback);
 
     /**
      * Posts a DeviceManagementComplexSettingDefinition with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementComplexSettingDefinitionRequest extends IHttpR
      * @param newDeviceManagementComplexSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition, final ICallback<DeviceManagementComplexSettingDefinition> callback);
+    void put(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition, final ICallback<? super DeviceManagementComplexSettingDefinition> callback);
 
     /**
      * Posts a DeviceManagementComplexSettingDefinition with a new object

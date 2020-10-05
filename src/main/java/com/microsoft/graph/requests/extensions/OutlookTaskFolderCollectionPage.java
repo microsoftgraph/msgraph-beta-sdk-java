@@ -23,6 +23,6 @@ public class OutlookTaskFolderCollectionPage extends BaseCollectionPage<OutlookT
      * @param builder  the request builder for the next collection page
      */
     public OutlookTaskFolderCollectionPage(final OutlookTaskFolderCollectionResponse response, final IOutlookTaskFolderCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

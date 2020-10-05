@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApprovalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IApprovalCollectionPage> callback);
+    void get(final ICallback<? super IApprovalCollectionPage> callback);
 
     IApprovalCollectionPage get() throws ClientException;
 
-    void post(final Approval newApproval, final ICallback<Approval> callback);
+    void post(final Approval newApproval, final ICallback<? super Approval> callback);
 
     Approval post(final Approval newApproval) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IApprovalCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IApprovalCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IApprovalCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IApprovalCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IApprovalCollectionRequest skipToken(String skipToken);
+	IApprovalCollectionRequest skipToken(final String skipToken);
 }

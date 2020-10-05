@@ -34,6 +34,6 @@ public class ImportedWindowsAutopilotDeviceIdentityImportCollectionPage extends 
      * @param builder The request builder for the next collection page
      */
     public ImportedWindowsAutopilotDeviceIdentityImportCollectionPage(final ImportedWindowsAutopilotDeviceIdentityImportCollectionResponse response, final IImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

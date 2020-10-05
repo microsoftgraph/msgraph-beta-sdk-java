@@ -34,6 +34,6 @@ public class EmbeddedSIMActivationCodePoolAssignCollectionPage extends BaseColle
      * @param builder The request builder for the next collection page
      */
     public EmbeddedSIMActivationCodePoolAssignCollectionPage(final EmbeddedSIMActivationCodePoolAssignCollectionResponse response, final IEmbeddedSIMActivationCodePoolAssignCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

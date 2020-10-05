@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IIosCertificateProfileBaseReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<IosCertificateProfileBase> callback);
+    void delete(final ICallback<? super IosCertificateProfileBase> callback);
 
     IosCertificateProfileBase delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IIosCertificateProfileBaseReferenceRequest extends IHttpRequest
      * @param srcIosCertificateProfileBase the IosCertificateProfileBase to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(IosCertificateProfileBase srcIosCertificateProfileBase, final ICallback<IosCertificateProfileBase> callback);
+    void put(IosCertificateProfileBase srcIosCertificateProfileBase, final ICallback<? super IosCertificateProfileBase> callback);
 
     /**
      * Puts the IosCertificateProfileBase

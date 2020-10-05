@@ -65,7 +65,7 @@ public class DeviceCompliancePolicyReferenceRequest extends BaseRequest implemen
         super(requestUrl, client, requestOptions, DeviceCompliancePolicy.class);
     }
 
-    public void delete(final ICallback<DeviceCompliancePolicy> callback) {
+    public void delete(final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,22 +95,12 @@ public class DeviceCompliancePolicyReferenceRequest extends BaseRequest implemen
         return (DeviceCompliancePolicyReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceCompliancePolicyReferenceRequest)this;
-    }
-    /**
      * Puts the DeviceCompliancePolicy
      *
      * @param srcDeviceCompliancePolicy the DeviceCompliancePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DeviceCompliancePolicy srcDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+    public void put(DeviceCompliancePolicy srcDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, srcDeviceCompliancePolicy);
     }
 

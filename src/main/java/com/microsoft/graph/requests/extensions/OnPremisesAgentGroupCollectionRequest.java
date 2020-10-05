@@ -40,7 +40,7 @@ public class OnPremisesAgentGroupCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, OnPremisesAgentGroupCollectionResponse.class, IOnPremisesAgentGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<IOnPremisesAgentGroupCollectionPage> callback) {
+    public void get(final ICallback<? super IOnPremisesAgentGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OnPremisesAgentGroupCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback) {
+    public void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnPremisesAgentGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class OnPremisesAgentGroupCollectionRequest extends BaseCollectionRequest
      */
     public IOnPremisesAgentGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OnPremisesAgentGroupCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOnPremisesAgentGroupCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OnPremisesAgentGroupCollectionRequest)this;
     }
 

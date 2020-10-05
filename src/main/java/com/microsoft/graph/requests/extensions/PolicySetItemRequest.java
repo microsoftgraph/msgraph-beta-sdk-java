@@ -52,7 +52,7 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PolicySetItem> callback) {
+    public void get(final ICallback<? super PolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PolicySetItem> callback) {
+    public void delete(final ICallback<? super PolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
      * @param sourcePolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicySetItem sourcePolicySetItem, final ICallback<PolicySetItem> callback) {
+    public void patch(final PolicySetItem sourcePolicySetItem, final ICallback<? super PolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicySetItem);
     }
 
@@ -111,7 +111,7 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
      * @param newPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback) {
+    public void post(final PolicySetItem newPolicySetItem, final ICallback<? super PolicySetItem> callback) {
         send(HttpMethod.POST, callback, newPolicySetItem);
     }
 
@@ -132,7 +132,7 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
      * @param newPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback) {
+    public void put(final PolicySetItem newPolicySetItem, final ICallback<? super PolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newPolicySetItem);
     }
 
@@ -166,17 +166,6 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
      */
      public IPolicySetItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicySetItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPolicySetItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PolicySetItemRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IDefaultDeviceCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DefaultDeviceCompliancePolicy> callback);
+    void get(final ICallback<? super DefaultDeviceCompliancePolicy> callback);
 
     /**
      * Gets the DefaultDeviceCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IDefaultDeviceCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DefaultDeviceCompliancePolicy> callback);
+    void delete(final ICallback<? super DefaultDeviceCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDefaultDeviceCompliancePolicyRequest extends IHttpRequest {
      * @param sourceDefaultDeviceCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DefaultDeviceCompliancePolicy sourceDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback);
+    void patch(final DefaultDeviceCompliancePolicy sourceDefaultDeviceCompliancePolicy, final ICallback<? super DefaultDeviceCompliancePolicy> callback);
 
     /**
      * Patches this DefaultDeviceCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IDefaultDeviceCompliancePolicyRequest extends IHttpRequest {
      * @param newDefaultDeviceCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback);
+    void post(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<? super DefaultDeviceCompliancePolicy> callback);
 
     /**
      * Posts a DefaultDeviceCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IDefaultDeviceCompliancePolicyRequest extends IHttpRequest {
      * @param newDefaultDeviceCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback);
+    void put(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<? super DefaultDeviceCompliancePolicy> callback);
 
     /**
      * Posts a DefaultDeviceCompliancePolicy with a new object

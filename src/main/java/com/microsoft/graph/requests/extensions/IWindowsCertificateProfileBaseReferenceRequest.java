@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsCertificateProfileBaseReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<WindowsCertificateProfileBase> callback);
+    void delete(final ICallback<? super WindowsCertificateProfileBase> callback);
 
     WindowsCertificateProfileBase delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IWindowsCertificateProfileBaseReferenceRequest extends IHttpReq
      * @param srcWindowsCertificateProfileBase the WindowsCertificateProfileBase to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WindowsCertificateProfileBase srcWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback);
+    void put(WindowsCertificateProfileBase srcWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback);
 
     /**
      * Puts the WindowsCertificateProfileBase

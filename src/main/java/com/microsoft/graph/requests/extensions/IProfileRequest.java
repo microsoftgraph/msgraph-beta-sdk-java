@@ -21,7 +21,7 @@ public interface IProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Profile> callback);
+    void get(final ICallback<? super Profile> callback);
 
     /**
      * Gets the Profile from the service
@@ -36,7 +36,7 @@ public interface IProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Profile> callback);
+    void delete(final ICallback<? super Profile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProfileRequest extends IHttpRequest {
      * @param sourceProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Profile sourceProfile, final ICallback<Profile> callback);
+    void patch(final Profile sourceProfile, final ICallback<? super Profile> callback);
 
     /**
      * Patches this Profile with a source
@@ -68,7 +68,7 @@ public interface IProfileRequest extends IHttpRequest {
      * @param newProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Profile newProfile, final ICallback<Profile> callback);
+    void post(final Profile newProfile, final ICallback<? super Profile> callback);
 
     /**
      * Posts a Profile with a new object
@@ -85,7 +85,7 @@ public interface IProfileRequest extends IHttpRequest {
      * @param newProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Profile newProfile, final ICallback<Profile> callback);
+    void put(final Profile newProfile, final ICallback<? super Profile> callback);
 
     /**
      * Posts a Profile with a new object

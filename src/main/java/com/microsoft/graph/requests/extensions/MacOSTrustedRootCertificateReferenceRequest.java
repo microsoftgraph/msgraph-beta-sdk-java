@@ -34,7 +34,7 @@ public class MacOSTrustedRootCertificateReferenceRequest extends BaseRequest imp
         super(requestUrl, client, requestOptions, MacOSTrustedRootCertificate.class);
     }
 
-    public void delete(final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class MacOSTrustedRootCertificateReferenceRequest extends BaseRequest imp
         return (MacOSTrustedRootCertificateReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IMacOSTrustedRootCertificateReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MacOSTrustedRootCertificateReferenceRequest)this;
-    }
-    /**
      * Puts the MacOSTrustedRootCertificate
      *
      * @param srcMacOSTrustedRootCertificate the MacOSTrustedRootCertificate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(MacOSTrustedRootCertificate srcMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void put(MacOSTrustedRootCertificate srcMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, srcMacOSTrustedRootCertificate);
     }
 

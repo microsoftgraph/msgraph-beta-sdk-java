@@ -21,7 +21,7 @@ public interface ISearchEntityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SearchEntity> callback);
+    void get(final ICallback<? super SearchEntity> callback);
 
     /**
      * Gets the SearchEntity from the service
@@ -36,7 +36,7 @@ public interface ISearchEntityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SearchEntity> callback);
+    void delete(final ICallback<? super SearchEntity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISearchEntityRequest extends IHttpRequest {
      * @param sourceSearchEntity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SearchEntity sourceSearchEntity, final ICallback<SearchEntity> callback);
+    void patch(final SearchEntity sourceSearchEntity, final ICallback<? super SearchEntity> callback);
 
     /**
      * Patches this SearchEntity with a source
@@ -68,7 +68,7 @@ public interface ISearchEntityRequest extends IHttpRequest {
      * @param newSearchEntity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SearchEntity newSearchEntity, final ICallback<SearchEntity> callback);
+    void post(final SearchEntity newSearchEntity, final ICallback<? super SearchEntity> callback);
 
     /**
      * Posts a SearchEntity with a new object
@@ -85,7 +85,7 @@ public interface ISearchEntityRequest extends IHttpRequest {
      * @param newSearchEntity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SearchEntity newSearchEntity, final ICallback<SearchEntity> callback);
+    void put(final SearchEntity newSearchEntity, final ICallback<? super SearchEntity> callback);
 
     /**
      * Posts a SearchEntity with a new object

@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerCompliancePolicyRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerCompliancePolicy> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerCompliancePolicy> callback);
 
     /**
      * Gets the AndroidDeviceOwnerCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerCompliancePolicyRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerCompliancePolicy> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerCompliancePolicyRequest extends IHttpRequest
      * @param sourceAndroidDeviceOwnerCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerCompliancePolicy sourceAndroidDeviceOwnerCompliancePolicy, final ICallback<AndroidDeviceOwnerCompliancePolicy> callback);
+    void patch(final AndroidDeviceOwnerCompliancePolicy sourceAndroidDeviceOwnerCompliancePolicy, final ICallback<? super AndroidDeviceOwnerCompliancePolicy> callback);
 
     /**
      * Patches this AndroidDeviceOwnerCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerCompliancePolicyRequest extends IHttpRequest
      * @param newAndroidDeviceOwnerCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy, final ICallback<AndroidDeviceOwnerCompliancePolicy> callback);
+    void post(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy, final ICallback<? super AndroidDeviceOwnerCompliancePolicy> callback);
 
     /**
      * Posts a AndroidDeviceOwnerCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerCompliancePolicyRequest extends IHttpRequest
      * @param newAndroidDeviceOwnerCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy, final ICallback<AndroidDeviceOwnerCompliancePolicy> callback);
+    void put(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy, final ICallback<? super AndroidDeviceOwnerCompliancePolicy> callback);
 
     /**
      * Posts a AndroidDeviceOwnerCompliancePolicy with a new object

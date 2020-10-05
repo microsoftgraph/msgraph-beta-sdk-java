@@ -23,6 +23,6 @@ public class ApprovalStepCollectionPage extends BaseCollectionPage<ApprovalStep,
      * @param builder  the request builder for the next collection page
      */
     public ApprovalStepCollectionPage(final ApprovalStepCollectionResponse response, final IApprovalStepCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

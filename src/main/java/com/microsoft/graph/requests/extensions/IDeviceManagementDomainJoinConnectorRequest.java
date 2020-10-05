@@ -21,7 +21,7 @@ public interface IDeviceManagementDomainJoinConnectorRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementDomainJoinConnector> callback);
+    void get(final ICallback<? super DeviceManagementDomainJoinConnector> callback);
 
     /**
      * Gets the DeviceManagementDomainJoinConnector from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementDomainJoinConnectorRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementDomainJoinConnector> callback);
+    void delete(final ICallback<? super DeviceManagementDomainJoinConnector> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementDomainJoinConnectorRequest extends IHttpReques
      * @param sourceDeviceManagementDomainJoinConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback);
+    void patch(final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback);
 
     /**
      * Patches this DeviceManagementDomainJoinConnector with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementDomainJoinConnectorRequest extends IHttpReques
      * @param newDeviceManagementDomainJoinConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback);
+    void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback);
 
     /**
      * Posts a DeviceManagementDomainJoinConnector with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementDomainJoinConnectorRequest extends IHttpReques
      * @param newDeviceManagementDomainJoinConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback);
+    void put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback);
 
     /**
      * Posts a DeviceManagementDomainJoinConnector with a new object

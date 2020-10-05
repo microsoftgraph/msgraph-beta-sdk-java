@@ -21,7 +21,7 @@ public interface IAccessReviewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReview> callback);
+    void get(final ICallback<? super AccessReview> callback);
 
     /**
      * Gets the AccessReview from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReview> callback);
+    void delete(final ICallback<? super AccessReview> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewRequest extends IHttpRequest {
      * @param sourceAccessReview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReview sourceAccessReview, final ICallback<AccessReview> callback);
+    void patch(final AccessReview sourceAccessReview, final ICallback<? super AccessReview> callback);
 
     /**
      * Patches this AccessReview with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewRequest extends IHttpRequest {
      * @param newAccessReview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReview newAccessReview, final ICallback<AccessReview> callback);
+    void post(final AccessReview newAccessReview, final ICallback<? super AccessReview> callback);
 
     /**
      * Posts a AccessReview with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewRequest extends IHttpRequest {
      * @param newAccessReview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReview newAccessReview, final ICallback<AccessReview> callback);
+    void put(final AccessReview newAccessReview, final ICallback<? super AccessReview> callback);
 
     /**
      * Posts a AccessReview with a new object

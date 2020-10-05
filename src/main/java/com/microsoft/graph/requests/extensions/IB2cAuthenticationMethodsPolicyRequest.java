@@ -21,7 +21,7 @@ public interface IB2cAuthenticationMethodsPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<B2cAuthenticationMethodsPolicy> callback);
+    void get(final ICallback<? super B2cAuthenticationMethodsPolicy> callback);
 
     /**
      * Gets the B2cAuthenticationMethodsPolicy from the service
@@ -36,7 +36,7 @@ public interface IB2cAuthenticationMethodsPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<B2cAuthenticationMethodsPolicy> callback);
+    void delete(final ICallback<? super B2cAuthenticationMethodsPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IB2cAuthenticationMethodsPolicyRequest extends IHttpRequest {
      * @param sourceB2cAuthenticationMethodsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy, final ICallback<B2cAuthenticationMethodsPolicy> callback);
+    void patch(final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback);
 
     /**
      * Patches this B2cAuthenticationMethodsPolicy with a source
@@ -68,7 +68,7 @@ public interface IB2cAuthenticationMethodsPolicyRequest extends IHttpRequest {
      * @param newB2cAuthenticationMethodsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<B2cAuthenticationMethodsPolicy> callback);
+    void post(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback);
 
     /**
      * Posts a B2cAuthenticationMethodsPolicy with a new object
@@ -85,7 +85,7 @@ public interface IB2cAuthenticationMethodsPolicyRequest extends IHttpRequest {
      * @param newB2cAuthenticationMethodsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<B2cAuthenticationMethodsPolicy> callback);
+    void put(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback);
 
     /**
      * Posts a B2cAuthenticationMethodsPolicy with a new object

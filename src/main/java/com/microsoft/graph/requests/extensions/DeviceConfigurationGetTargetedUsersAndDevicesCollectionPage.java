@@ -34,6 +34,6 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionPage extends
      * @param builder The request builder for the next collection page
      */
     public DeviceConfigurationGetTargetedUsersAndDevicesCollectionPage(final DeviceConfigurationGetTargetedUsersAndDevicesCollectionResponse response, final IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

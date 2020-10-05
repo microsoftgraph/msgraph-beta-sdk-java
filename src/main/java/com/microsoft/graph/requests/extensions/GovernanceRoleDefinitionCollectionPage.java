@@ -23,6 +23,6 @@ public class GovernanceRoleDefinitionCollectionPage extends BaseCollectionPage<G
      * @param builder  the request builder for the next collection page
      */
     public GovernanceRoleDefinitionCollectionPage(final GovernanceRoleDefinitionCollectionResponse response, final IGovernanceRoleDefinitionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

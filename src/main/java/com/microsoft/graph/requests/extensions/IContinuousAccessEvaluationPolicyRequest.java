@@ -21,7 +21,7 @@ public interface IContinuousAccessEvaluationPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ContinuousAccessEvaluationPolicy> callback);
+    void get(final ICallback<? super ContinuousAccessEvaluationPolicy> callback);
 
     /**
      * Gets the ContinuousAccessEvaluationPolicy from the service
@@ -36,7 +36,7 @@ public interface IContinuousAccessEvaluationPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ContinuousAccessEvaluationPolicy> callback);
+    void delete(final ICallback<? super ContinuousAccessEvaluationPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IContinuousAccessEvaluationPolicyRequest extends IHttpRequest {
      * @param sourceContinuousAccessEvaluationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy, final ICallback<ContinuousAccessEvaluationPolicy> callback);
+    void patch(final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback);
 
     /**
      * Patches this ContinuousAccessEvaluationPolicy with a source
@@ -68,7 +68,7 @@ public interface IContinuousAccessEvaluationPolicyRequest extends IHttpRequest {
      * @param newContinuousAccessEvaluationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<ContinuousAccessEvaluationPolicy> callback);
+    void post(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback);
 
     /**
      * Posts a ContinuousAccessEvaluationPolicy with a new object
@@ -85,7 +85,7 @@ public interface IContinuousAccessEvaluationPolicyRequest extends IHttpRequest {
      * @param newContinuousAccessEvaluationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<ContinuousAccessEvaluationPolicy> callback);
+    void put(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback);
 
     /**
      * Posts a ContinuousAccessEvaluationPolicy with a new object

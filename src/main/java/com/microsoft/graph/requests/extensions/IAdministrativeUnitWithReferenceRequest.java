@@ -29,19 +29,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAdministrativeUnitWithReferenceRequest extends IHttpRequest {
 
-    void post(final AdministrativeUnit newAdministrativeUnit, final IJsonBackedObject payload, final ICallback<AdministrativeUnit> callback);
+    void post(final AdministrativeUnit newAdministrativeUnit, final IJsonBackedObject payload, final ICallback<? super AdministrativeUnit> callback);
 
     AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AdministrativeUnit> callback);
+    void get(final ICallback<? super AdministrativeUnit> callback);
 
     AdministrativeUnit get() throws ClientException;
 
-	void delete(final ICallback<AdministrativeUnit> callback);
+	void delete(final ICallback<? super AdministrativeUnit> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+	void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
 	AdministrativeUnit patch(final AdministrativeUnit sourceAdministrativeUnit) throws ClientException;
 

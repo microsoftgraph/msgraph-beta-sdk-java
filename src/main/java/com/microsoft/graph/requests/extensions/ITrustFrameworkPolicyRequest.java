@@ -21,7 +21,7 @@ public interface ITrustFrameworkPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TrustFrameworkPolicy> callback);
+    void get(final ICallback<? super TrustFrameworkPolicy> callback);
 
     /**
      * Gets the TrustFrameworkPolicy from the service
@@ -36,7 +36,7 @@ public interface ITrustFrameworkPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TrustFrameworkPolicy> callback);
+    void delete(final ICallback<? super TrustFrameworkPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITrustFrameworkPolicyRequest extends IHttpRequest {
      * @param sourceTrustFrameworkPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TrustFrameworkPolicy sourceTrustFrameworkPolicy, final ICallback<TrustFrameworkPolicy> callback);
+    void patch(final TrustFrameworkPolicy sourceTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback);
 
     /**
      * Patches this TrustFrameworkPolicy with a source
@@ -68,7 +68,7 @@ public interface ITrustFrameworkPolicyRequest extends IHttpRequest {
      * @param newTrustFrameworkPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<TrustFrameworkPolicy> callback);
+    void post(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback);
 
     /**
      * Posts a TrustFrameworkPolicy with a new object
@@ -85,7 +85,7 @@ public interface ITrustFrameworkPolicyRequest extends IHttpRequest {
      * @param newTrustFrameworkPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<TrustFrameworkPolicy> callback);
+    void put(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback);
 
     /**
      * Posts a TrustFrameworkPolicy with a new object

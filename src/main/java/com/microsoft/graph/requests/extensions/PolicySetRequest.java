@@ -47,7 +47,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PolicySet> callback) {
+    public void get(final ICallback<? super PolicySet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PolicySet> callback) {
+    public void delete(final ICallback<? super PolicySet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param sourcePolicySet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicySet sourcePolicySet, final ICallback<PolicySet> callback) {
+    public void patch(final PolicySet sourcePolicySet, final ICallback<? super PolicySet> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicySet);
     }
 
@@ -106,7 +106,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param newPolicySet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicySet newPolicySet, final ICallback<PolicySet> callback) {
+    public void post(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback) {
         send(HttpMethod.POST, callback, newPolicySet);
     }
 
@@ -127,7 +127,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param newPolicySet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicySet newPolicySet, final ICallback<PolicySet> callback) {
+    public void put(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback) {
         send(HttpMethod.PUT, callback, newPolicySet);
     }
 
@@ -161,17 +161,6 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      */
      public IPolicySetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicySetRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPolicySetRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PolicySetRequest)this;
      }
 

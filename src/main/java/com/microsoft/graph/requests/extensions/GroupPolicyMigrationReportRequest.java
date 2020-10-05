@@ -46,7 +46,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyMigrationReport> callback) {
+    public void get(final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyMigrationReport> callback) {
+    public void delete(final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param sourceGroupPolicyMigrationReport the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback) {
+    public void patch(final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyMigrationReport);
     }
 
@@ -105,7 +105,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param newGroupPolicyMigrationReport the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback) {
+    public void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyMigrationReport);
     }
 
@@ -126,7 +126,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param newGroupPolicyMigrationReport the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback) {
+    public void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyMigrationReport);
     }
 
@@ -160,17 +160,6 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      */
      public IGroupPolicyMigrationReportRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyMigrationReportRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyMigrationReportRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyMigrationReportRequest)this;
      }
 

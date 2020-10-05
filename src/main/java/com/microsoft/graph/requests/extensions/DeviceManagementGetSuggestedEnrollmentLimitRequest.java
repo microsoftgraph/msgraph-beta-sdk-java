@@ -37,7 +37,7 @@ public class DeviceManagementGetSuggestedEnrollmentLimitRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SuggestedEnrollmentLimit> callback) {
+    public void get(final ICallback<? super SuggestedEnrollmentLimit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class DeviceManagementGetSuggestedEnrollmentLimitRequest extends BaseRequ
      */
     public IDeviceManagementGetSuggestedEnrollmentLimitRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementGetSuggestedEnrollmentLimitRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementGetSuggestedEnrollmentLimitRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementGetSuggestedEnrollmentLimitRequest)this;
     }
 

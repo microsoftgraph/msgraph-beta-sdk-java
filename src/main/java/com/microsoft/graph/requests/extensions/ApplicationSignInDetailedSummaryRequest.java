@@ -37,7 +37,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ApplicationSignInDetailedSummary> callback) {
+    public void get(final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ApplicationSignInDetailedSummary> callback) {
+    public void delete(final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param sourceApplicationSignInDetailedSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApplicationSignInDetailedSummary sourceApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback) {
+    public void patch(final ApplicationSignInDetailedSummary sourceApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceApplicationSignInDetailedSummary);
     }
 
@@ -96,7 +96,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param newApplicationSignInDetailedSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback) {
+    public void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.POST, callback, newApplicationSignInDetailedSummary);
     }
 
@@ -117,7 +117,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param newApplicationSignInDetailedSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback) {
+    public void put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.PUT, callback, newApplicationSignInDetailedSummary);
     }
 
@@ -151,17 +151,6 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      */
      public IApplicationSignInDetailedSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplicationSignInDetailedSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IApplicationSignInDetailedSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ApplicationSignInDetailedSummaryRequest)this;
      }
 

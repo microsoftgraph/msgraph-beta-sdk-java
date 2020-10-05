@@ -23,6 +23,6 @@ public class JobResponseBaseCollectionPage extends BaseCollectionPage<JobRespons
      * @param builder  the request builder for the next collection page
      */
     public JobResponseBaseCollectionPage(final JobResponseBaseCollectionResponse response, final IJobResponseBaseCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

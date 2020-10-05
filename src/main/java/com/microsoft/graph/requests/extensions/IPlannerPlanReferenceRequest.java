@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPlannerPlanReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PlannerPlan> callback);
+    void delete(final ICallback<? super PlannerPlan> callback);
 
     PlannerPlan delete() throws ClientException;
 
@@ -53,7 +53,7 @@ public interface IPlannerPlanReferenceRequest extends IHttpRequest {
      * @param srcPlannerPlan the PlannerPlan to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PlannerPlan srcPlannerPlan, final ICallback<PlannerPlan> callback);
+    void put(PlannerPlan srcPlannerPlan, final ICallback<? super PlannerPlan> callback);
 
     /**
      * Puts the PlannerPlan

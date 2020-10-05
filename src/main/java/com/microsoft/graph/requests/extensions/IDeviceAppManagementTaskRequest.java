@@ -21,7 +21,7 @@ public interface IDeviceAppManagementTaskRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAppManagementTask> callback);
+    void get(final ICallback<? super DeviceAppManagementTask> callback);
 
     /**
      * Gets the DeviceAppManagementTask from the service
@@ -36,7 +36,7 @@ public interface IDeviceAppManagementTaskRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceAppManagementTask> callback);
+    void delete(final ICallback<? super DeviceAppManagementTask> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceAppManagementTaskRequest extends IHttpRequest {
      * @param sourceDeviceAppManagementTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceAppManagementTask sourceDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback);
+    void patch(final DeviceAppManagementTask sourceDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback);
 
     /**
      * Patches this DeviceAppManagementTask with a source
@@ -68,7 +68,7 @@ public interface IDeviceAppManagementTaskRequest extends IHttpRequest {
      * @param newDeviceAppManagementTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback);
+    void post(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback);
 
     /**
      * Posts a DeviceAppManagementTask with a new object
@@ -85,7 +85,7 @@ public interface IDeviceAppManagementTaskRequest extends IHttpRequest {
      * @param newDeviceAppManagementTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback);
+    void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback);
 
     /**
      * Posts a DeviceAppManagementTask with a new object

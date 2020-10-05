@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPictureCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPictureCollectionPage> callback);
+    void get(final ICallback<? super IPictureCollectionPage> callback);
 
     IPictureCollectionPage get() throws ClientException;
 
-    void post(final Picture newPicture, final ICallback<Picture> callback);
+    void post(final Picture newPicture, final ICallback<? super Picture> callback);
 
     Picture post(final Picture newPicture) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPictureCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPictureCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPictureCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPictureCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPictureCollectionRequest skipToken(String skipToken);
+	IPictureCollectionRequest skipToken(final String skipToken);
 }

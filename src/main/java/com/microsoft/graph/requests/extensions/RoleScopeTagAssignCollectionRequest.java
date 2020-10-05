@@ -44,7 +44,7 @@ public class RoleScopeTagAssignCollectionRequest extends BaseCollectionRequest<R
     }
 
 
-    public void post(final ICallback<IRoleScopeTagAssignCollectionPage> callback) {
+    public void post(final ICallback<? super IRoleScopeTagAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class RoleScopeTagAssignCollectionRequest extends BaseCollectionRequest<R
      */
     public IRoleScopeTagAssignCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IRoleScopeTagAssignCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRoleScopeTagAssignCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IRoleScopeTagAssignCollectionRequest)this;
     }
 

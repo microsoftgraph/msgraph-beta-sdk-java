@@ -21,7 +21,7 @@ public interface IPhoneAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PhoneAuthenticationMethod> callback);
+    void get(final ICallback<? super PhoneAuthenticationMethod> callback);
 
     /**
      * Gets the PhoneAuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface IPhoneAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PhoneAuthenticationMethod> callback);
+    void delete(final ICallback<? super PhoneAuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPhoneAuthenticationMethodRequest extends IHttpRequest {
      * @param sourcePhoneAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PhoneAuthenticationMethod sourcePhoneAuthenticationMethod, final ICallback<PhoneAuthenticationMethod> callback);
+    void patch(final PhoneAuthenticationMethod sourcePhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback);
 
     /**
      * Patches this PhoneAuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface IPhoneAuthenticationMethodRequest extends IHttpRequest {
      * @param newPhoneAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<PhoneAuthenticationMethod> callback);
+    void post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback);
 
     /**
      * Posts a PhoneAuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface IPhoneAuthenticationMethodRequest extends IHttpRequest {
      * @param newPhoneAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<PhoneAuthenticationMethod> callback);
+    void put(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback);
 
     /**
      * Posts a PhoneAuthenticationMethod with a new object

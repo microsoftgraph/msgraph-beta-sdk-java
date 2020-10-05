@@ -42,7 +42,7 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
         super(requestUrl, client, requestOptions, SensitivityLabelCollectionResponse.class, ISensitivityLabelCollectionPage.class);
     }
 
-    public void get(final ICallback<ISensitivityLabelCollectionPage> callback) {
+    public void get(final ICallback<? super ISensitivityLabelCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
         return buildFromResponse(response);
     }
 
-    public void post(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback) {
+    public void post(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SensitivityLabelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,6 +94,17 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
      */
     public ISensitivityLabelCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SensitivityLabelCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISensitivityLabelCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SensitivityLabelCollectionRequest)this;
     }
 

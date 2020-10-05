@@ -40,7 +40,7 @@ public class JournalLineCollectionRequest extends BaseCollectionRequest<JournalL
         super(requestUrl, client, requestOptions, JournalLineCollectionResponse.class, IJournalLineCollectionPage.class);
     }
 
-    public void get(final ICallback<IJournalLineCollectionPage> callback) {
+    public void get(final ICallback<? super IJournalLineCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class JournalLineCollectionRequest extends BaseCollectionRequest<JournalL
         return buildFromResponse(response);
     }
 
-    public void post(final JournalLine newJournalLine, final ICallback<JournalLine> callback) {
+    public void post(final JournalLine newJournalLine, final ICallback<? super JournalLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new JournalLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class JournalLineCollectionRequest extends BaseCollectionRequest<JournalL
      */
     public IJournalLineCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (JournalLineCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IJournalLineCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (JournalLineCollectionRequest)this;
     }
 

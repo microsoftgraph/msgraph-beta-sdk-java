@@ -23,7 +23,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGroupPolicyPresentationReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<GroupPolicyPresentation> callback);
+    void delete(final ICallback<? super GroupPolicyPresentation> callback);
 
     GroupPolicyPresentation delete() throws ClientException;
 
@@ -49,7 +49,7 @@ public interface IGroupPolicyPresentationReferenceRequest extends IHttpRequest {
      * @param srcGroupPolicyPresentation the GroupPolicyPresentation to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(GroupPolicyPresentation srcGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback);
+    void put(GroupPolicyPresentation srcGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback);
 
     /**
      * Puts the GroupPolicyPresentation

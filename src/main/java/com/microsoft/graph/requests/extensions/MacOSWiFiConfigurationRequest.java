@@ -52,7 +52,7 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSWiFiConfiguration> callback) {
+    public void get(final ICallback<? super MacOSWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSWiFiConfiguration> callback) {
+    public void delete(final ICallback<? super MacOSWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
      * @param sourceMacOSWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSWiFiConfiguration sourceMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback) {
+    public void patch(final MacOSWiFiConfiguration sourceMacOSWiFiConfiguration, final ICallback<? super MacOSWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSWiFiConfiguration);
     }
 
@@ -111,7 +111,7 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
      * @param newMacOSWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback) {
+    public void post(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<? super MacOSWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSWiFiConfiguration);
     }
 
@@ -132,7 +132,7 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
      * @param newMacOSWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback) {
+    public void put(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<? super MacOSWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSWiFiConfiguration);
     }
 
@@ -166,17 +166,6 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
      */
      public IMacOSWiFiConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSWiFiConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSWiFiConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSWiFiConfigurationRequest)this;
      }
 

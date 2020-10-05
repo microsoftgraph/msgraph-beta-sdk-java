@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IFilterOperatorSchemaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IFilterOperatorSchemaCollectionPage> callback);
+    void get(final ICallback<? super IFilterOperatorSchemaCollectionPage> callback);
 
     IFilterOperatorSchemaCollectionPage get() throws ClientException;
 
-    void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback);
+    void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback);
 
     FilterOperatorSchema post(final FilterOperatorSchema newFilterOperatorSchema) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IFilterOperatorSchemaCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IFilterOperatorSchemaCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IFilterOperatorSchemaCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IFilterOperatorSchemaCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IFilterOperatorSchemaCollectionRequest skipToken(String skipToken);
+	IFilterOperatorSchemaCollectionRequest skipToken(final String skipToken);
 }

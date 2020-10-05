@@ -44,7 +44,7 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequest extends Ba
     }
 
 
-    public void post(final ICallback<ICloudCommunicationsGetPresencesByUserIdCollectionPage> callback) {
+    public void post(final ICallback<? super ICloudCommunicationsGetPresencesByUserIdCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequest extends Ba
      */
     public ICloudCommunicationsGetPresencesByUserIdCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ICloudCommunicationsGetPresencesByUserIdCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICloudCommunicationsGetPresencesByUserIdCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ICloudCommunicationsGetPresencesByUserIdCollectionRequest)this;
     }
 

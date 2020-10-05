@@ -21,7 +21,7 @@ public interface IPayloadResponseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PayloadResponse> callback);
+    void get(final ICallback<? super PayloadResponse> callback);
 
     /**
      * Gets the PayloadResponse from the service
@@ -36,7 +36,7 @@ public interface IPayloadResponseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PayloadResponse> callback);
+    void delete(final ICallback<? super PayloadResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPayloadResponseRequest extends IHttpRequest {
      * @param sourcePayloadResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PayloadResponse sourcePayloadResponse, final ICallback<PayloadResponse> callback);
+    void patch(final PayloadResponse sourcePayloadResponse, final ICallback<? super PayloadResponse> callback);
 
     /**
      * Patches this PayloadResponse with a source
@@ -68,7 +68,7 @@ public interface IPayloadResponseRequest extends IHttpRequest {
      * @param newPayloadResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback);
+    void post(final PayloadResponse newPayloadResponse, final ICallback<? super PayloadResponse> callback);
 
     /**
      * Posts a PayloadResponse with a new object
@@ -85,7 +85,7 @@ public interface IPayloadResponseRequest extends IHttpRequest {
      * @param newPayloadResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback);
+    void put(final PayloadResponse newPayloadResponse, final ICallback<? super PayloadResponse> callback);
 
     /**
      * Posts a PayloadResponse with a new object

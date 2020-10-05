@@ -21,7 +21,7 @@ public interface IWindowsAutopilotDeploymentProfileRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void get(final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Gets the WindowsAutopilotDeploymentProfile from the service
@@ -36,7 +36,7 @@ public interface IWindowsAutopilotDeploymentProfileRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsAutopilotDeploymentProfileRequest extends IHttpRequest 
      * @param sourceWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Patches this WindowsAutopilotDeploymentProfile with a source
@@ -68,7 +68,7 @@ public interface IWindowsAutopilotDeploymentProfileRequest extends IHttpRequest 
      * @param newWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Posts a WindowsAutopilotDeploymentProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindowsAutopilotDeploymentProfileRequest extends IHttpRequest 
      * @param newWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Posts a WindowsAutopilotDeploymentProfile with a new object

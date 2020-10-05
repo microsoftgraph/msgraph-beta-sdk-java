@@ -6,11 +6,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.BitlockerRecoveryKey;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyCollectionResponse;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyCollectionPage;
 
 
@@ -23,8 +20,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Bitlocker.
  */
-public class Bitlocker extends Entity implements IJsonBackedObject {
+public class Bitlocker implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Recovery Keys.
@@ -75,19 +82,7 @@ public class Bitlocker extends Entity implements IJsonBackedObject {
 
 
         if (json.has("recoveryKeys")) {
-            final BitlockerRecoveryKeyCollectionResponse response = new BitlockerRecoveryKeyCollectionResponse();
-            if (json.has("recoveryKeys@odata.nextLink")) {
-                response.nextLink = json.get("recoveryKeys@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("recoveryKeys").toString(), JsonObject[].class);
-            final BitlockerRecoveryKey[] array = new BitlockerRecoveryKey[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BitlockerRecoveryKey.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            recoveryKeys = new BitlockerRecoveryKeyCollectionPage(response, null);
+            recoveryKeys = serializer.deserializeObject(json.get("recoveryKeys").toString(), BitlockerRecoveryKeyCollectionPage.class);
         }
     }
 }

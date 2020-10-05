@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IExternalItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IExternalItemCollectionPage> callback);
+    void get(final ICallback<? super IExternalItemCollectionPage> callback);
 
     IExternalItemCollectionPage get() throws ClientException;
 
-    void post(final ExternalItem newExternalItem, final ICallback<ExternalItem> callback);
+    void post(final ExternalItem newExternalItem, final ICallback<? super ExternalItem> callback);
 
     ExternalItem post(final ExternalItem newExternalItem) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IExternalItemCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IExternalItemCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IExternalItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IExternalItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IExternalItemCollectionRequest skipToken(String skipToken);
+	IExternalItemCollectionRequest skipToken(final String skipToken);
 }

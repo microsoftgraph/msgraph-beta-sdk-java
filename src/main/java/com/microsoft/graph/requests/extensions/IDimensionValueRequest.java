@@ -21,7 +21,7 @@ public interface IDimensionValueRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DimensionValue> callback);
+    void get(final ICallback<? super DimensionValue> callback);
 
     /**
      * Gets the DimensionValue from the service
@@ -36,7 +36,7 @@ public interface IDimensionValueRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DimensionValue> callback);
+    void delete(final ICallback<? super DimensionValue> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDimensionValueRequest extends IHttpRequest {
      * @param sourceDimensionValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DimensionValue sourceDimensionValue, final ICallback<DimensionValue> callback);
+    void patch(final DimensionValue sourceDimensionValue, final ICallback<? super DimensionValue> callback);
 
     /**
      * Patches this DimensionValue with a source
@@ -68,7 +68,7 @@ public interface IDimensionValueRequest extends IHttpRequest {
      * @param newDimensionValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DimensionValue newDimensionValue, final ICallback<DimensionValue> callback);
+    void post(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback);
 
     /**
      * Posts a DimensionValue with a new object
@@ -85,7 +85,7 @@ public interface IDimensionValueRequest extends IHttpRequest {
      * @param newDimensionValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DimensionValue newDimensionValue, final ICallback<DimensionValue> callback);
+    void put(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback);
 
     /**
      * Posts a DimensionValue with a new object

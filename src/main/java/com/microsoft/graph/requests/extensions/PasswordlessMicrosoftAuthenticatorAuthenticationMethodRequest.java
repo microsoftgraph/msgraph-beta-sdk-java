@@ -37,7 +37,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void get(final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void delete(final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void patch(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -96,7 +96,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -117,7 +117,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -151,17 +151,6 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      */
      public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest)this;
      }
 

@@ -39,7 +39,7 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, PrintTaskDefinition.class);
     }
 
-    public void post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload, final ICallback<PrintTaskDefinition> callback) {
+    public void post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload, final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<PrintTaskDefinition> callback) {
+    public void get(final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<PrintTaskDefinition> callback) {
+	public void delete(final ICallback<? super PrintTaskDefinition> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<PrintTaskDefinition> callback) {
+	public void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
 		send(HttpMethod.PATCH, callback, sourcePrintTaskDefinition);
 	}
 
@@ -95,16 +95,6 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
      */
     public IPrintTaskDefinitionWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintTaskDefinitionWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintTaskDefinitionWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrintTaskDefinitionWithReferenceRequest)this;
     }
 }

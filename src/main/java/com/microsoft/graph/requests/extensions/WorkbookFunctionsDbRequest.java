@@ -37,7 +37,7 @@ public class WorkbookFunctionsDbRequest extends BaseRequest implements IWorkbook
         body = new WorkbookFunctionsDbBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class WorkbookFunctionsDbRequest extends BaseRequest implements IWorkbook
      */
     public IWorkbookFunctionsDbRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsDbRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsDbRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsDbRequest)this;
     }
 

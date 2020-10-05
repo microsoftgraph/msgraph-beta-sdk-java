@@ -23,6 +23,6 @@ public class ShipmentMethodCollectionPage extends BaseCollectionPage<ShipmentMet
      * @param builder  the request builder for the next collection page
      */
     public ShipmentMethodCollectionPage(final ShipmentMethodCollectionResponse response, final IShipmentMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

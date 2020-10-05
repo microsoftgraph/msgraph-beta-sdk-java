@@ -21,7 +21,7 @@ public interface IMacOSLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSLobApp> callback);
+    void get(final ICallback<? super MacOSLobApp> callback);
 
     /**
      * Gets the MacOSLobApp from the service
@@ -36,7 +36,7 @@ public interface IMacOSLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSLobApp> callback);
+    void delete(final ICallback<? super MacOSLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSLobAppRequest extends IHttpRequest {
      * @param sourceMacOSLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSLobApp sourceMacOSLobApp, final ICallback<MacOSLobApp> callback);
+    void patch(final MacOSLobApp sourceMacOSLobApp, final ICallback<? super MacOSLobApp> callback);
 
     /**
      * Patches this MacOSLobApp with a source
@@ -68,7 +68,7 @@ public interface IMacOSLobAppRequest extends IHttpRequest {
      * @param newMacOSLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSLobApp newMacOSLobApp, final ICallback<MacOSLobApp> callback);
+    void post(final MacOSLobApp newMacOSLobApp, final ICallback<? super MacOSLobApp> callback);
 
     /**
      * Posts a MacOSLobApp with a new object
@@ -85,7 +85,7 @@ public interface IMacOSLobAppRequest extends IHttpRequest {
      * @param newMacOSLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSLobApp newMacOSLobApp, final ICallback<MacOSLobApp> callback);
+    void put(final MacOSLobApp newMacOSLobApp, final ICallback<? super MacOSLobApp> callback);
 
     /**
      * Posts a MacOSLobApp with a new object

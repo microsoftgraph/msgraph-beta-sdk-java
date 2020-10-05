@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIdentityProviderCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IIdentityProviderCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IIdentityProviderCollectionWithReferencesPage> callback);
 
     IIdentityProviderCollectionWithReferencesPage get() throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ActivityStatistics> callback);
+    void get(final ICallback<? super ActivityStatistics> callback);
 
     /**
      * Gets the ActivityStatistics from the service
@@ -36,7 +36,7 @@ public interface IActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ActivityStatistics> callback);
+    void delete(final ICallback<? super ActivityStatistics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IActivityStatisticsRequest extends IHttpRequest {
      * @param sourceActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ActivityStatistics sourceActivityStatistics, final ICallback<ActivityStatistics> callback);
+    void patch(final ActivityStatistics sourceActivityStatistics, final ICallback<? super ActivityStatistics> callback);
 
     /**
      * Patches this ActivityStatistics with a source
@@ -68,7 +68,7 @@ public interface IActivityStatisticsRequest extends IHttpRequest {
      * @param newActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ActivityStatistics newActivityStatistics, final ICallback<ActivityStatistics> callback);
+    void post(final ActivityStatistics newActivityStatistics, final ICallback<? super ActivityStatistics> callback);
 
     /**
      * Posts a ActivityStatistics with a new object
@@ -85,7 +85,7 @@ public interface IActivityStatisticsRequest extends IHttpRequest {
      * @param newActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ActivityStatistics newActivityStatistics, final ICallback<ActivityStatistics> callback);
+    void put(final ActivityStatistics newActivityStatistics, final ICallback<? super ActivityStatistics> callback);
 
     /**
      * Posts a ActivityStatistics with a new object

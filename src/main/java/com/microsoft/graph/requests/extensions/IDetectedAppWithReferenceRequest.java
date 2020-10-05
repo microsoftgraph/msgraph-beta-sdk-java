@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDetectedAppWithReferenceRequest extends IHttpRequest {
 
-    void post(final DetectedApp newDetectedApp, final IJsonBackedObject payload, final ICallback<DetectedApp> callback);
+    void post(final DetectedApp newDetectedApp, final IJsonBackedObject payload, final ICallback<? super DetectedApp> callback);
 
     DetectedApp post(final DetectedApp newDetectedApp, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<DetectedApp> callback);
+    void get(final ICallback<? super DetectedApp> callback);
 
     DetectedApp get() throws ClientException;
 
-	void delete(final ICallback<DetectedApp> callback);
+	void delete(final ICallback<? super DetectedApp> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DetectedApp sourceDetectedApp, final ICallback<DetectedApp> callback);
+	void patch(final DetectedApp sourceDetectedApp, final ICallback<? super DetectedApp> callback);
 
 	DetectedApp patch(final DetectedApp sourceDetectedApp) throws ClientException;
 

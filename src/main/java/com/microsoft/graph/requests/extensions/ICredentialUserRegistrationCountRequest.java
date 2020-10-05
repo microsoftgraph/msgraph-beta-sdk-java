@@ -21,7 +21,7 @@ public interface ICredentialUserRegistrationCountRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CredentialUserRegistrationCount> callback);
+    void get(final ICallback<? super CredentialUserRegistrationCount> callback);
 
     /**
      * Gets the CredentialUserRegistrationCount from the service
@@ -36,7 +36,7 @@ public interface ICredentialUserRegistrationCountRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CredentialUserRegistrationCount> callback);
+    void delete(final ICallback<? super CredentialUserRegistrationCount> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICredentialUserRegistrationCountRequest extends IHttpRequest {
      * @param sourceCredentialUserRegistrationCount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback);
+    void patch(final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback);
 
     /**
      * Patches this CredentialUserRegistrationCount with a source
@@ -68,7 +68,7 @@ public interface ICredentialUserRegistrationCountRequest extends IHttpRequest {
      * @param newCredentialUserRegistrationCount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback);
+    void post(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback);
 
     /**
      * Posts a CredentialUserRegistrationCount with a new object
@@ -85,7 +85,7 @@ public interface ICredentialUserRegistrationCountRequest extends IHttpRequest {
      * @param newCredentialUserRegistrationCount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback);
+    void put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback);
 
     /**
      * Posts a CredentialUserRegistrationCount with a new object

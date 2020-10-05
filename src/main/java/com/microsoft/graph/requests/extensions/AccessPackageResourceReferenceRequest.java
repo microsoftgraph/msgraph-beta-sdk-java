@@ -42,7 +42,7 @@ public class AccessPackageResourceReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, AccessPackageResource.class);
     }
 
-    public void delete(final ICallback<AccessPackageResource> callback) {
+    public void delete(final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -72,22 +72,12 @@ public class AccessPackageResourceReferenceRequest extends BaseRequest implement
         return (AccessPackageResourceReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAccessPackageResourceReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AccessPackageResourceReferenceRequest)this;
-    }
-    /**
      * Puts the AccessPackageResource
      *
      * @param srcAccessPackageResource the AccessPackageResource reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AccessPackageResource srcAccessPackageResource, final ICallback<AccessPackageResource> callback) {
+    public void put(AccessPackageResource srcAccessPackageResource, final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.PUT, callback, srcAccessPackageResource);
     }
 

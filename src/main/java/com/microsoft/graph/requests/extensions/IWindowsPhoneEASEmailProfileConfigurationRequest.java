@@ -21,7 +21,7 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback);
+    void get(final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback);
 
     /**
      * Gets the WindowsPhoneEASEmailProfileConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback);
+    void delete(final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequest extends IHttpR
      * @param sourceWindowsPhoneEASEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback);
+    void patch(final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback);
 
     /**
      * Patches this WindowsPhoneEASEmailProfileConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequest extends IHttpR
      * @param newWindowsPhoneEASEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback);
+    void post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback);
 
     /**
      * Posts a WindowsPhoneEASEmailProfileConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequest extends IHttpR
      * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback);
+    void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback);
 
     /**
      * Posts a WindowsPhoneEASEmailProfileConfiguration with a new object

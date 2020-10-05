@@ -21,7 +21,7 @@ public interface ISkypeForBusinessPeerToPeerActivityCountsRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkypeForBusinessPeerToPeerActivityCounts> callback);
+    void get(final ICallback<? super SkypeForBusinessPeerToPeerActivityCounts> callback);
 
     /**
      * Gets the SkypeForBusinessPeerToPeerActivityCounts from the service
@@ -36,7 +36,7 @@ public interface ISkypeForBusinessPeerToPeerActivityCountsRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkypeForBusinessPeerToPeerActivityCounts> callback);
+    void delete(final ICallback<? super SkypeForBusinessPeerToPeerActivityCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkypeForBusinessPeerToPeerActivityCountsRequest extends IHttpR
      * @param sourceSkypeForBusinessPeerToPeerActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkypeForBusinessPeerToPeerActivityCounts sourceSkypeForBusinessPeerToPeerActivityCounts, final ICallback<SkypeForBusinessPeerToPeerActivityCounts> callback);
+    void patch(final SkypeForBusinessPeerToPeerActivityCounts sourceSkypeForBusinessPeerToPeerActivityCounts, final ICallback<? super SkypeForBusinessPeerToPeerActivityCounts> callback);
 
     /**
      * Patches this SkypeForBusinessPeerToPeerActivityCounts with a source
@@ -68,7 +68,7 @@ public interface ISkypeForBusinessPeerToPeerActivityCountsRequest extends IHttpR
      * @param newSkypeForBusinessPeerToPeerActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts, final ICallback<SkypeForBusinessPeerToPeerActivityCounts> callback);
+    void post(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts, final ICallback<? super SkypeForBusinessPeerToPeerActivityCounts> callback);
 
     /**
      * Posts a SkypeForBusinessPeerToPeerActivityCounts with a new object
@@ -85,7 +85,7 @@ public interface ISkypeForBusinessPeerToPeerActivityCountsRequest extends IHttpR
      * @param newSkypeForBusinessPeerToPeerActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts, final ICallback<SkypeForBusinessPeerToPeerActivityCounts> callback);
+    void put(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts, final ICallback<? super SkypeForBusinessPeerToPeerActivityCounts> callback);
 
     /**
      * Posts a SkypeForBusinessPeerToPeerActivityCounts with a new object

@@ -34,6 +34,6 @@ public class DeviceManagementGetRoleScopeTagsByIdsCollectionPage extends BaseCol
      * @param builder The request builder for the next collection page
      */
     public DeviceManagementGetRoleScopeTagsByIdsCollectionPage(final DeviceManagementGetRoleScopeTagsByIdsCollectionResponse response, final IDeviceManagementGetRoleScopeTagsByIdsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

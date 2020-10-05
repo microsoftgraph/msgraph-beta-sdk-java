@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WindowsManagementAppHealthState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionPage;
 
 
@@ -83,19 +81,7 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("healthStates")) {
-            final WindowsManagementAppHealthStateCollectionResponse response = new WindowsManagementAppHealthStateCollectionResponse();
-            if (json.has("healthStates@odata.nextLink")) {
-                response.nextLink = json.get("healthStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("healthStates").toString(), JsonObject[].class);
-            final WindowsManagementAppHealthState[] array = new WindowsManagementAppHealthState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsManagementAppHealthState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            healthStates = new WindowsManagementAppHealthStateCollectionPage(response, null);
+            healthStates = serializer.deserializeObject(json.get("healthStates").toString(), WindowsManagementAppHealthStateCollectionPage.class);
         }
     }
 }

@@ -39,7 +39,7 @@ public class DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest 
     }
 
 
-    public void post(final ICallback<IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage> callback) {
+    public void post(final ICallback<? super IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest 
      */
     public IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequest)this;
     }
 

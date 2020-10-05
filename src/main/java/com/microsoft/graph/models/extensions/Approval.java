@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ApprovalStep;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ApprovalStepCollectionResponse;
 import com.microsoft.graph.requests.extensions.ApprovalStepCollectionPage;
 
 
@@ -83,35 +81,11 @@ public class Approval extends Entity implements IJsonBackedObject {
 
 
         if (json.has("completedSteps")) {
-            final ApprovalStepCollectionResponse response = new ApprovalStepCollectionResponse();
-            if (json.has("completedSteps@odata.nextLink")) {
-                response.nextLink = json.get("completedSteps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("completedSteps").toString(), JsonObject[].class);
-            final ApprovalStep[] array = new ApprovalStep[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ApprovalStep.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            completedSteps = new ApprovalStepCollectionPage(response, null);
+            completedSteps = serializer.deserializeObject(json.get("completedSteps").toString(), ApprovalStepCollectionPage.class);
         }
 
         if (json.has("pendingSteps")) {
-            final ApprovalStepCollectionResponse response = new ApprovalStepCollectionResponse();
-            if (json.has("pendingSteps@odata.nextLink")) {
-                response.nextLink = json.get("pendingSteps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("pendingSteps").toString(), JsonObject[].class);
-            final ApprovalStep[] array = new ApprovalStep[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ApprovalStep.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            pendingSteps = new ApprovalStepCollectionPage(response, null);
+            pendingSteps = serializer.deserializeObject(json.get("pendingSteps").toString(), ApprovalStepCollectionPage.class);
         }
     }
 }

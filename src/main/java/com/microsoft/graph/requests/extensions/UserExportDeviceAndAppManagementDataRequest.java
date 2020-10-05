@@ -37,7 +37,7 @@ public class UserExportDeviceAndAppManagementDataRequest extends BaseRequest imp
      * @param srcDeviceAndAppManagementData the DeviceAndAppManagementData with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<DeviceAndAppManagementData> callback) {
+    public void patch(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<? super DeviceAndAppManagementData> callback) {
         send(HttpMethod.PATCH, callback, srcDeviceAndAppManagementData);
     }
 
@@ -58,7 +58,7 @@ public class UserExportDeviceAndAppManagementDataRequest extends BaseRequest imp
      * @param srcDeviceAndAppManagementData the DeviceAndAppManagementData to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<DeviceAndAppManagementData> callback) {
+    public void put(DeviceAndAppManagementData srcDeviceAndAppManagementData, final ICallback<? super DeviceAndAppManagementData> callback) {
         send(HttpMethod.PUT, callback, srcDeviceAndAppManagementData);
     }
 
@@ -77,7 +77,7 @@ public class UserExportDeviceAndAppManagementDataRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceAndAppManagementData> callback) {
+    public void get(final ICallback<? super DeviceAndAppManagementData> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,6 +121,17 @@ public class UserExportDeviceAndAppManagementDataRequest extends BaseRequest imp
      */
     public IUserExportDeviceAndAppManagementDataRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExportDeviceAndAppManagementDataRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExportDeviceAndAppManagementDataRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExportDeviceAndAppManagementDataRequest)this;
     }
 

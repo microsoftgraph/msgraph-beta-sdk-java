@@ -21,7 +21,7 @@ public interface IUserAnalyticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserAnalytics> callback);
+    void get(final ICallback<? super UserAnalytics> callback);
 
     /**
      * Gets the UserAnalytics from the service
@@ -36,7 +36,7 @@ public interface IUserAnalyticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserAnalytics> callback);
+    void delete(final ICallback<? super UserAnalytics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserAnalyticsRequest extends IHttpRequest {
      * @param sourceUserAnalytics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserAnalytics sourceUserAnalytics, final ICallback<UserAnalytics> callback);
+    void patch(final UserAnalytics sourceUserAnalytics, final ICallback<? super UserAnalytics> callback);
 
     /**
      * Patches this UserAnalytics with a source
@@ -68,7 +68,7 @@ public interface IUserAnalyticsRequest extends IHttpRequest {
      * @param newUserAnalytics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserAnalytics newUserAnalytics, final ICallback<UserAnalytics> callback);
+    void post(final UserAnalytics newUserAnalytics, final ICallback<? super UserAnalytics> callback);
 
     /**
      * Posts a UserAnalytics with a new object
@@ -85,7 +85,7 @@ public interface IUserAnalyticsRequest extends IHttpRequest {
      * @param newUserAnalytics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserAnalytics newUserAnalytics, final ICallback<UserAnalytics> callback);
+    void put(final UserAnalytics newUserAnalytics, final ICallback<? super UserAnalytics> callback);
 
     /**
      * Posts a UserAnalytics with a new object

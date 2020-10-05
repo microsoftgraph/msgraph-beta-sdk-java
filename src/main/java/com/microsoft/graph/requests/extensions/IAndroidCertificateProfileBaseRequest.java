@@ -21,7 +21,7 @@ public interface IAndroidCertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidCertificateProfileBase> callback);
+    void get(final ICallback<? super AndroidCertificateProfileBase> callback);
 
     /**
      * Gets the AndroidCertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IAndroidCertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidCertificateProfileBase> callback);
+    void delete(final ICallback<? super AndroidCertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidCertificateProfileBaseRequest extends IHttpRequest {
      * @param sourceAndroidCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback);
+    void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback);
 
     /**
      * Patches this AndroidCertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IAndroidCertificateProfileBaseRequest extends IHttpRequest {
      * @param newAndroidCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback);
+    void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback);
 
     /**
      * Posts a AndroidCertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IAndroidCertificateProfileBaseRequest extends IHttpRequest {
      * @param newAndroidCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback);
+    void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback);
 
     /**
      * Posts a AndroidCertificateProfileBase with a new object

@@ -21,7 +21,7 @@ public interface IEmailActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailActivityStatistics> callback);
+    void get(final ICallback<? super EmailActivityStatistics> callback);
 
     /**
      * Gets the EmailActivityStatistics from the service
@@ -36,7 +36,7 @@ public interface IEmailActivityStatisticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailActivityStatistics> callback);
+    void delete(final ICallback<? super EmailActivityStatistics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailActivityStatisticsRequest extends IHttpRequest {
      * @param sourceEmailActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailActivityStatistics sourceEmailActivityStatistics, final ICallback<EmailActivityStatistics> callback);
+    void patch(final EmailActivityStatistics sourceEmailActivityStatistics, final ICallback<? super EmailActivityStatistics> callback);
 
     /**
      * Patches this EmailActivityStatistics with a source
@@ -68,7 +68,7 @@ public interface IEmailActivityStatisticsRequest extends IHttpRequest {
      * @param newEmailActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailActivityStatistics newEmailActivityStatistics, final ICallback<EmailActivityStatistics> callback);
+    void post(final EmailActivityStatistics newEmailActivityStatistics, final ICallback<? super EmailActivityStatistics> callback);
 
     /**
      * Posts a EmailActivityStatistics with a new object
@@ -85,7 +85,7 @@ public interface IEmailActivityStatisticsRequest extends IHttpRequest {
      * @param newEmailActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailActivityStatistics newEmailActivityStatistics, final ICallback<EmailActivityStatistics> callback);
+    void put(final EmailActivityStatistics newEmailActivityStatistics, final ICallback<? super EmailActivityStatistics> callback);
 
     /**
      * Posts a EmailActivityStatistics with a new object

@@ -37,7 +37,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Schema> callback) {
+    public void get(final ICallback<? super Schema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Schema> callback) {
+    public void delete(final ICallback<? super Schema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param sourceSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Schema sourceSchema, final ICallback<Schema> callback) {
+    public void patch(final Schema sourceSchema, final ICallback<? super Schema> callback) {
         send(HttpMethod.PATCH, callback, sourceSchema);
     }
 
@@ -96,7 +96,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param newSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Schema newSchema, final ICallback<Schema> callback) {
+    public void post(final Schema newSchema, final ICallback<? super Schema> callback) {
         send(HttpMethod.POST, callback, newSchema);
     }
 
@@ -117,7 +117,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param newSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Schema newSchema, final ICallback<Schema> callback) {
+    public void put(final Schema newSchema, final ICallback<? super Schema> callback) {
         send(HttpMethod.PUT, callback, newSchema);
     }
 
@@ -151,17 +151,6 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      */
      public ISchemaRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SchemaRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISchemaRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SchemaRequest)this;
      }
 

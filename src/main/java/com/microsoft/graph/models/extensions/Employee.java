@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
 import com.microsoft.graph.models.extensions.Picture;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PictureCollectionResponse;
 import com.microsoft.graph.requests.extensions.PictureCollectionPage;
 
 
@@ -212,19 +210,7 @@ public class Employee extends Entity implements IJsonBackedObject {
 
 
         if (json.has("picture")) {
-            final PictureCollectionResponse response = new PictureCollectionResponse();
-            if (json.has("picture@odata.nextLink")) {
-                response.nextLink = json.get("picture@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("picture").toString(), JsonObject[].class);
-            final Picture[] array = new Picture[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Picture.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            picture = new PictureCollectionPage(response, null);
+            picture = serializer.deserializeObject(json.get("picture").toString(), PictureCollectionPage.class);
         }
     }
 }

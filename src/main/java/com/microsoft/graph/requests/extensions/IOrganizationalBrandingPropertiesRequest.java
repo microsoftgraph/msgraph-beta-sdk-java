@@ -21,7 +21,7 @@ public interface IOrganizationalBrandingPropertiesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OrganizationalBrandingProperties> callback);
+    void get(final ICallback<? super OrganizationalBrandingProperties> callback);
 
     /**
      * Gets the OrganizationalBrandingProperties from the service
@@ -36,7 +36,7 @@ public interface IOrganizationalBrandingPropertiesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OrganizationalBrandingProperties> callback);
+    void delete(final ICallback<? super OrganizationalBrandingProperties> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOrganizationalBrandingPropertiesRequest extends IHttpRequest {
      * @param sourceOrganizationalBrandingProperties the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OrganizationalBrandingProperties sourceOrganizationalBrandingProperties, final ICallback<OrganizationalBrandingProperties> callback);
+    void patch(final OrganizationalBrandingProperties sourceOrganizationalBrandingProperties, final ICallback<? super OrganizationalBrandingProperties> callback);
 
     /**
      * Patches this OrganizationalBrandingProperties with a source
@@ -68,7 +68,7 @@ public interface IOrganizationalBrandingPropertiesRequest extends IHttpRequest {
      * @param newOrganizationalBrandingProperties the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OrganizationalBrandingProperties newOrganizationalBrandingProperties, final ICallback<OrganizationalBrandingProperties> callback);
+    void post(final OrganizationalBrandingProperties newOrganizationalBrandingProperties, final ICallback<? super OrganizationalBrandingProperties> callback);
 
     /**
      * Posts a OrganizationalBrandingProperties with a new object
@@ -85,7 +85,7 @@ public interface IOrganizationalBrandingPropertiesRequest extends IHttpRequest {
      * @param newOrganizationalBrandingProperties the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OrganizationalBrandingProperties newOrganizationalBrandingProperties, final ICallback<OrganizationalBrandingProperties> callback);
+    void put(final OrganizationalBrandingProperties newOrganizationalBrandingProperties, final ICallback<? super OrganizationalBrandingProperties> callback);
 
     /**
      * Posts a OrganizationalBrandingProperties with a new object

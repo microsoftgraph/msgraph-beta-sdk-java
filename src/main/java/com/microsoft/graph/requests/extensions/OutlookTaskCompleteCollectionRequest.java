@@ -39,7 +39,7 @@ public class OutlookTaskCompleteCollectionRequest extends BaseCollectionRequest<
     }
 
 
-    public void post(final ICallback<IOutlookTaskCompleteCollectionPage> callback) {
+    public void post(final ICallback<? super IOutlookTaskCompleteCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class OutlookTaskCompleteCollectionRequest extends BaseCollectionRequest<
      */
     public IOutlookTaskCompleteCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IOutlookTaskCompleteCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOutlookTaskCompleteCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IOutlookTaskCompleteCollectionRequest)this;
     }
 

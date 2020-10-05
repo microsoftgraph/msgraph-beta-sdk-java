@@ -21,7 +21,7 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+    void get(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback);
 
     /**
      * Gets the EvaluateLabelsAndPoliciesJobResponse from the service
@@ -36,7 +36,7 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+    void delete(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequest extends IHttpReque
      * @param sourceEvaluateLabelsAndPoliciesJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+    void patch(final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback);
 
     /**
      * Patches this EvaluateLabelsAndPoliciesJobResponse with a source
@@ -68,7 +68,7 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequest extends IHttpReque
      * @param newEvaluateLabelsAndPoliciesJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+    void post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback);
 
     /**
      * Posts a EvaluateLabelsAndPoliciesJobResponse with a new object
@@ -85,7 +85,7 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequest extends IHttpReque
      * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+    void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback);
 
     /**
      * Posts a EvaluateLabelsAndPoliciesJobResponse with a new object

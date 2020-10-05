@@ -21,7 +21,7 @@ public interface ISecurityConfigurationTaskRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityConfigurationTask> callback);
+    void get(final ICallback<? super SecurityConfigurationTask> callback);
 
     /**
      * Gets the SecurityConfigurationTask from the service
@@ -36,7 +36,7 @@ public interface ISecurityConfigurationTaskRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityConfigurationTask> callback);
+    void delete(final ICallback<? super SecurityConfigurationTask> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityConfigurationTaskRequest extends IHttpRequest {
      * @param sourceSecurityConfigurationTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityConfigurationTask sourceSecurityConfigurationTask, final ICallback<SecurityConfigurationTask> callback);
+    void patch(final SecurityConfigurationTask sourceSecurityConfigurationTask, final ICallback<? super SecurityConfigurationTask> callback);
 
     /**
      * Patches this SecurityConfigurationTask with a source
@@ -68,7 +68,7 @@ public interface ISecurityConfigurationTaskRequest extends IHttpRequest {
      * @param newSecurityConfigurationTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<SecurityConfigurationTask> callback);
+    void post(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<? super SecurityConfigurationTask> callback);
 
     /**
      * Posts a SecurityConfigurationTask with a new object
@@ -85,7 +85,7 @@ public interface ISecurityConfigurationTaskRequest extends IHttpRequest {
      * @param newSecurityConfigurationTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<SecurityConfigurationTask> callback);
+    void put(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<? super SecurityConfigurationTask> callback);
 
     /**
      * Posts a SecurityConfigurationTask with a new object

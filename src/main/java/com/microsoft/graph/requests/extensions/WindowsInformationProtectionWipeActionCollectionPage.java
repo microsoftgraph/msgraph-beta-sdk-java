@@ -23,6 +23,6 @@ public class WindowsInformationProtectionWipeActionCollectionPage extends BaseCo
      * @param builder  the request builder for the next collection page
      */
     public WindowsInformationProtectionWipeActionCollectionPage(final WindowsInformationProtectionWipeActionCollectionResponse response, final IWindowsInformationProtectionWipeActionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

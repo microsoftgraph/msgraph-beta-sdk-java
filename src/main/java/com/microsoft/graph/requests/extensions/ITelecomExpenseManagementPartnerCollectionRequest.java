@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITelecomExpenseManagementPartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITelecomExpenseManagementPartnerCollectionPage> callback);
+    void get(final ICallback<? super ITelecomExpenseManagementPartnerCollectionPage> callback);
 
     ITelecomExpenseManagementPartnerCollectionPage get() throws ClientException;
 
-    void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback);
+    void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITelecomExpenseManagementPartnerCollectionRequest extends IHttp
      * @return the updated request
      */
     ITelecomExpenseManagementPartnerCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITelecomExpenseManagementPartnerCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITelecomExpenseManagementPartnerCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	ITelecomExpenseManagementPartnerCollectionRequest skipToken(String skipToken);
+	ITelecomExpenseManagementPartnerCollectionRequest skipToken(final String skipToken);
 }

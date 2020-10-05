@@ -23,6 +23,6 @@ public class SynchronizationTemplateCollectionPage extends BaseCollectionPage<Sy
      * @param builder  the request builder for the next collection page
      */
     public SynchronizationTemplateCollectionPage(final SynchronizationTemplateCollectionResponse response, final ISynchronizationTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

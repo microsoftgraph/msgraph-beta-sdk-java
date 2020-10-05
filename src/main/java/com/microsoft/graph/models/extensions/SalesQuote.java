@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
 import com.microsoft.graph.models.extensions.Currency;
@@ -15,7 +14,6 @@ import com.microsoft.graph.models.extensions.PaymentTerm;
 import com.microsoft.graph.models.extensions.SalesQuoteLine;
 import com.microsoft.graph.models.extensions.ShipmentMethod;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionResponse;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionPage;
 
 
@@ -360,19 +358,7 @@ public class SalesQuote extends Entity implements IJsonBackedObject {
 
 
         if (json.has("salesQuoteLines")) {
-            final SalesQuoteLineCollectionResponse response = new SalesQuoteLineCollectionResponse();
-            if (json.has("salesQuoteLines@odata.nextLink")) {
-                response.nextLink = json.get("salesQuoteLines@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("salesQuoteLines").toString(), JsonObject[].class);
-            final SalesQuoteLine[] array = new SalesQuoteLine[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SalesQuoteLine.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            salesQuoteLines = new SalesQuoteLineCollectionPage(response, null);
+            salesQuoteLines = serializer.deserializeObject(json.get("salesQuoteLines").toString(), SalesQuoteLineCollectionPage.class);
         }
     }
 }

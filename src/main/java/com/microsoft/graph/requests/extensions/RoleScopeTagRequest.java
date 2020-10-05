@@ -42,7 +42,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RoleScopeTag> callback) {
+    public void get(final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -61,7 +61,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RoleScopeTag> callback) {
+    public void delete(final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param sourceRoleScopeTag the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+    public void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleScopeTag);
     }
 
@@ -101,7 +101,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param newRoleScopeTag the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+    public void post(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.POST, callback, newRoleScopeTag);
     }
 
@@ -122,7 +122,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param newRoleScopeTag the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+    public void put(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.PUT, callback, newRoleScopeTag);
     }
 
@@ -156,17 +156,6 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      */
      public IRoleScopeTagRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleScopeTagRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IRoleScopeTagRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RoleScopeTagRequest)this;
      }
 

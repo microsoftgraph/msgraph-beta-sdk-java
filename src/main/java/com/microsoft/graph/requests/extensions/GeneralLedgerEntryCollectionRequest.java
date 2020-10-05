@@ -40,7 +40,7 @@ public class GeneralLedgerEntryCollectionRequest extends BaseCollectionRequest<G
         super(requestUrl, client, requestOptions, GeneralLedgerEntryCollectionResponse.class, IGeneralLedgerEntryCollectionPage.class);
     }
 
-    public void get(final ICallback<IGeneralLedgerEntryCollectionPage> callback) {
+    public void get(final ICallback<? super IGeneralLedgerEntryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GeneralLedgerEntryCollectionRequest extends BaseCollectionRequest<G
         return buildFromResponse(response);
     }
 
-    public void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback) {
+    public void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GeneralLedgerEntryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class GeneralLedgerEntryCollectionRequest extends BaseCollectionRequest<G
      */
     public IGeneralLedgerEntryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GeneralLedgerEntryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGeneralLedgerEntryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GeneralLedgerEntryCollectionRequest)this;
     }
 

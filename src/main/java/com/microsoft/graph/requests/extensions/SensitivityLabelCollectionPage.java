@@ -23,6 +23,6 @@ public class SensitivityLabelCollectionPage extends BaseCollectionPage<Sensitivi
      * @param builder  the request builder for the next collection page
      */
     public SensitivityLabelCollectionPage(final SensitivityLabelCollectionResponse response, final ISensitivityLabelCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

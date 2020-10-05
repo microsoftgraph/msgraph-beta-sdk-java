@@ -21,7 +21,7 @@ public interface IWindows10NetworkBoundaryConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10NetworkBoundaryConfiguration> callback);
+    void get(final ICallback<? super Windows10NetworkBoundaryConfiguration> callback);
 
     /**
      * Gets the Windows10NetworkBoundaryConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10NetworkBoundaryConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10NetworkBoundaryConfiguration> callback);
+    void delete(final ICallback<? super Windows10NetworkBoundaryConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10NetworkBoundaryConfigurationRequest extends IHttpRequ
      * @param sourceWindows10NetworkBoundaryConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10NetworkBoundaryConfiguration sourceWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback);
+    void patch(final Windows10NetworkBoundaryConfiguration sourceWindows10NetworkBoundaryConfiguration, final ICallback<? super Windows10NetworkBoundaryConfiguration> callback);
 
     /**
      * Patches this Windows10NetworkBoundaryConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10NetworkBoundaryConfigurationRequest extends IHttpRequ
      * @param newWindows10NetworkBoundaryConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback);
+    void post(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<? super Windows10NetworkBoundaryConfiguration> callback);
 
     /**
      * Posts a Windows10NetworkBoundaryConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10NetworkBoundaryConfigurationRequest extends IHttpRequ
      * @param newWindows10NetworkBoundaryConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback);
+    void put(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<? super Windows10NetworkBoundaryConfiguration> callback);
 
     /**
      * Posts a Windows10NetworkBoundaryConfiguration with a new object

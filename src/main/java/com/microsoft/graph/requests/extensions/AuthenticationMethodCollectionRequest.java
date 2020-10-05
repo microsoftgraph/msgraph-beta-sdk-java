@@ -41,7 +41,7 @@ public class AuthenticationMethodCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, AuthenticationMethodCollectionResponse.class, IAuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<IAuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super IAuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class AuthenticationMethodCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final AuthenticationMethod newAuthenticationMethod, final ICallback<AuthenticationMethod> callback) {
+    public void post(final AuthenticationMethod newAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class AuthenticationMethodCollectionRequest extends BaseCollectionRequest
      */
     public IAuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AuthenticationMethodCollectionRequest)this;
     }
 

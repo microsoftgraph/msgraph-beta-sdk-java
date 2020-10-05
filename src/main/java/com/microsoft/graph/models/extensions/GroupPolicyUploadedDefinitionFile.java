@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
 import com.microsoft.graph.models.generated.GroupPolicyUploadedDefinitionFileStatus;
 import com.microsoft.graph.models.extensions.GroupPolicyOperation;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
-import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionPage;
 
 
@@ -125,19 +123,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
 
         if (json.has("groupPolicyOperations")) {
-            final GroupPolicyOperationCollectionResponse response = new GroupPolicyOperationCollectionResponse();
-            if (json.has("groupPolicyOperations@odata.nextLink")) {
-                response.nextLink = json.get("groupPolicyOperations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupPolicyOperations").toString(), JsonObject[].class);
-            final GroupPolicyOperation[] array = new GroupPolicyOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicyOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupPolicyOperations = new GroupPolicyOperationCollectionPage(response, null);
+            groupPolicyOperations = serializer.deserializeObject(json.get("groupPolicyOperations").toString(), GroupPolicyOperationCollectionPage.class);
         }
     }
 }

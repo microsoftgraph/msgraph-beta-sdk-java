@@ -23,6 +23,6 @@ public class IntuneBrandingProfileCollectionPage extends BaseCollectionPage<Intu
      * @param builder  the request builder for the next collection page
      */
     public IntuneBrandingProfileCollectionPage(final IntuneBrandingProfileCollectionResponse response, final IIntuneBrandingProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

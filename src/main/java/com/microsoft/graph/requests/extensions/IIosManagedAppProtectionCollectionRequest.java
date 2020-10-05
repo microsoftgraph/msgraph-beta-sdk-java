@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIosManagedAppProtectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIosManagedAppProtectionCollectionPage> callback);
+    void get(final ICallback<? super IIosManagedAppProtectionCollectionPage> callback);
 
     IIosManagedAppProtectionCollectionPage get() throws ClientException;
 
-    void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<IosManagedAppProtection> callback);
+    void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback);
 
     IosManagedAppProtection post(final IosManagedAppProtection newIosManagedAppProtection) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IIosManagedAppProtectionCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     IIosManagedAppProtectionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IIosManagedAppProtectionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IIosManagedAppProtectionCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IIosManagedAppProtectionCollectionRequest skipToken(String skipToken);
+	IIosManagedAppProtectionCollectionRequest skipToken(final String skipToken);
 }

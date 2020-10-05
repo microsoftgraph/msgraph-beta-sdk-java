@@ -21,7 +21,7 @@ public interface ITeamsDeviceUsageDistributionUserCountsRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsDeviceUsageDistributionUserCounts> callback);
+    void get(final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Gets the TeamsDeviceUsageDistributionUserCounts from the service
@@ -36,7 +36,7 @@ public interface ITeamsDeviceUsageDistributionUserCountsRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsDeviceUsageDistributionUserCounts> callback);
+    void delete(final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsDeviceUsageDistributionUserCountsRequest extends IHttpReq
      * @param sourceTeamsDeviceUsageDistributionUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsDeviceUsageDistributionUserCounts sourceTeamsDeviceUsageDistributionUserCounts, final ICallback<TeamsDeviceUsageDistributionUserCounts> callback);
+    void patch(final TeamsDeviceUsageDistributionUserCounts sourceTeamsDeviceUsageDistributionUserCounts, final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Patches this TeamsDeviceUsageDistributionUserCounts with a source
@@ -68,7 +68,7 @@ public interface ITeamsDeviceUsageDistributionUserCountsRequest extends IHttpReq
      * @param newTeamsDeviceUsageDistributionUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, final ICallback<TeamsDeviceUsageDistributionUserCounts> callback);
+    void post(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Posts a TeamsDeviceUsageDistributionUserCounts with a new object
@@ -85,7 +85,7 @@ public interface ITeamsDeviceUsageDistributionUserCountsRequest extends IHttpReq
      * @param newTeamsDeviceUsageDistributionUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, final ICallback<TeamsDeviceUsageDistributionUserCounts> callback);
+    void put(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback);
 
     /**
      * Posts a TeamsDeviceUsageDistributionUserCounts with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDepOnboardingSettingCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDepOnboardingSettingCollectionPage> callback);
+    void get(final ICallback<? super IDepOnboardingSettingCollectionPage> callback);
 
     IDepOnboardingSettingCollectionPage get() throws ClientException;
 
-    void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback);
+    void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback);
 
     DepOnboardingSetting post(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDepOnboardingSettingCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDepOnboardingSettingCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDepOnboardingSettingCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDepOnboardingSettingCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDepOnboardingSettingCollectionRequest skipToken(String skipToken);
+	IDepOnboardingSettingCollectionRequest skipToken(final String skipToken);
 }

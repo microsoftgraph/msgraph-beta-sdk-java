@@ -23,6 +23,6 @@ public class CompanyInformationCollectionPage extends BaseCollectionPage<Company
      * @param builder  the request builder for the next collection page
      */
     public CompanyInformationCollectionPage(final CompanyInformationCollectionResponse response, final ICompanyInformationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

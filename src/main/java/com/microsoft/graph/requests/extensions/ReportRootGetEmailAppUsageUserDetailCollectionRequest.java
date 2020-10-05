@@ -39,7 +39,7 @@ public class ReportRootGetEmailAppUsageUserDetailCollectionRequest extends BaseC
     }
 
 
-    public void get(final ICallback<IReportRootGetEmailAppUsageUserDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetEmailAppUsageUserDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetEmailAppUsageUserDetailCollectionRequest extends BaseC
      */
     public IReportRootGetEmailAppUsageUserDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetEmailAppUsageUserDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetEmailAppUsageUserDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetEmailAppUsageUserDetailCollectionRequest)this;
     }
 

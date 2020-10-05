@@ -41,7 +41,7 @@ public class ExternalRequest extends BaseRequest implements IExternalRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<External> callback) {
+    public void get(final ICallback<? super External> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ExternalRequest extends BaseRequest implements IExternalRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<External> callback) {
+    public void delete(final ICallback<? super External> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ExternalRequest extends BaseRequest implements IExternalRequest {
      * @param sourceExternal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final External sourceExternal, final ICallback<External> callback) {
+    public void patch(final External sourceExternal, final ICallback<? super External> callback) {
         send(HttpMethod.PATCH, callback, sourceExternal);
     }
 
@@ -100,7 +100,7 @@ public class ExternalRequest extends BaseRequest implements IExternalRequest {
      * @param newExternal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final External newExternal, final ICallback<External> callback) {
+    public void post(final External newExternal, final ICallback<? super External> callback) {
         send(HttpMethod.POST, callback, newExternal);
     }
 
@@ -121,7 +121,7 @@ public class ExternalRequest extends BaseRequest implements IExternalRequest {
      * @param newExternal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final External newExternal, final ICallback<External> callback) {
+    public void put(final External newExternal, final ICallback<? super External> callback) {
         send(HttpMethod.PUT, callback, newExternal);
     }
 
@@ -155,17 +155,6 @@ public class ExternalRequest extends BaseRequest implements IExternalRequest {
      */
      public IExternalRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExternalRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IExternalRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ExternalRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIntuneBrandingProfileAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIntuneBrandingProfileAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IIntuneBrandingProfileAssignmentCollectionPage> callback);
 
     IIntuneBrandingProfileAssignmentCollectionPage get() throws ClientException;
 
-    void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback);
+    void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback);
 
     IntuneBrandingProfileAssignment post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IIntuneBrandingProfileAssignmentCollectionRequest extends IHttp
      * @return the updated request
      */
     IIntuneBrandingProfileAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IIntuneBrandingProfileAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IIntuneBrandingProfileAssignmentCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IIntuneBrandingProfileAssignmentCollectionRequest skipToken(String skipToken);
+	IIntuneBrandingProfileAssignmentCollectionRequest skipToken(final String skipToken);
 }

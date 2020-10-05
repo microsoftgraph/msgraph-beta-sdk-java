@@ -43,7 +43,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyDefinitionValue> callback) {
+    public void get(final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyDefinitionValue> callback) {
+    public void delete(final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param sourceGroupPolicyDefinitionValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback) {
+    public void patch(final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyDefinitionValue);
     }
 
@@ -102,7 +102,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param newGroupPolicyDefinitionValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback) {
+    public void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyDefinitionValue);
     }
 
@@ -123,7 +123,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param newGroupPolicyDefinitionValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback) {
+    public void put(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyDefinitionValue);
     }
 
@@ -157,17 +157,6 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      */
      public IGroupPolicyDefinitionValueRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyDefinitionValueRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyDefinitionValueRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyDefinitionValueRequest)this;
      }
 

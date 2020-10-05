@@ -21,7 +21,7 @@ public interface ISecurityQuestionAuthenticationMethodRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityQuestionAuthenticationMethod> callback);
+    void get(final ICallback<? super SecurityQuestionAuthenticationMethod> callback);
 
     /**
      * Gets the SecurityQuestionAuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface ISecurityQuestionAuthenticationMethodRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityQuestionAuthenticationMethod> callback);
+    void delete(final ICallback<? super SecurityQuestionAuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityQuestionAuthenticationMethodRequest extends IHttpReque
      * @param sourceSecurityQuestionAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityQuestionAuthenticationMethod sourceSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback);
+    void patch(final SecurityQuestionAuthenticationMethod sourceSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback);
 
     /**
      * Patches this SecurityQuestionAuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface ISecurityQuestionAuthenticationMethodRequest extends IHttpReque
      * @param newSecurityQuestionAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback);
+    void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback);
 
     /**
      * Posts a SecurityQuestionAuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface ISecurityQuestionAuthenticationMethodRequest extends IHttpReque
      * @param newSecurityQuestionAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback);
+    void put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<? super SecurityQuestionAuthenticationMethod> callback);
 
     /**
      * Posts a SecurityQuestionAuthenticationMethod with a new object

@@ -21,7 +21,7 @@ public interface IWindowsCertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsCertificateProfileBase> callback);
+    void get(final ICallback<? super WindowsCertificateProfileBase> callback);
 
     /**
      * Gets the WindowsCertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IWindowsCertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsCertificateProfileBase> callback);
+    void delete(final ICallback<? super WindowsCertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsCertificateProfileBaseRequest extends IHttpRequest {
      * @param sourceWindowsCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback);
+    void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback);
 
     /**
      * Patches this WindowsCertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IWindowsCertificateProfileBaseRequest extends IHttpRequest {
      * @param newWindowsCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback);
+    void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback);
 
     /**
      * Posts a WindowsCertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IWindowsCertificateProfileBaseRequest extends IHttpRequest {
      * @param newWindowsCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback);
+    void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback);
 
     /**
      * Posts a WindowsCertificateProfileBase with a new object

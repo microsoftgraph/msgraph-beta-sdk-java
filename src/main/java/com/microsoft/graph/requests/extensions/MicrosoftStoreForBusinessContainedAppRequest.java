@@ -37,7 +37,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MicrosoftStoreForBusinessContainedApp> callback) {
+    public void get(final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MicrosoftStoreForBusinessContainedApp> callback) {
+    public void delete(final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param sourceMicrosoftStoreForBusinessContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback) {
+    public void patch(final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -96,7 +96,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param newMicrosoftStoreForBusinessContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback) {
+    public void post(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.POST, callback, newMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -117,7 +117,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param newMicrosoftStoreForBusinessContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback) {
+    public void put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -151,17 +151,6 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      */
      public IMicrosoftStoreForBusinessContainedAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftStoreForBusinessContainedAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMicrosoftStoreForBusinessContainedAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MicrosoftStoreForBusinessContainedAppRequest)this;
      }
 

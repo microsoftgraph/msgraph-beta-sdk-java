@@ -21,7 +21,7 @@ public interface IMicrosoftStoreForBusinessContainedAppRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MicrosoftStoreForBusinessContainedApp> callback);
+    void get(final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback);
 
     /**
      * Gets the MicrosoftStoreForBusinessContainedApp from the service
@@ -36,7 +36,7 @@ public interface IMicrosoftStoreForBusinessContainedAppRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MicrosoftStoreForBusinessContainedApp> callback);
+    void delete(final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMicrosoftStoreForBusinessContainedAppRequest extends IHttpRequ
      * @param sourceMicrosoftStoreForBusinessContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback);
+    void patch(final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback);
 
     /**
      * Patches this MicrosoftStoreForBusinessContainedApp with a source
@@ -68,7 +68,7 @@ public interface IMicrosoftStoreForBusinessContainedAppRequest extends IHttpRequ
      * @param newMicrosoftStoreForBusinessContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback);
+    void post(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback);
 
     /**
      * Posts a MicrosoftStoreForBusinessContainedApp with a new object
@@ -85,7 +85,7 @@ public interface IMicrosoftStoreForBusinessContainedAppRequest extends IHttpRequ
      * @param newMicrosoftStoreForBusinessContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback);
+    void put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback);
 
     /**
      * Posts a MicrosoftStoreForBusinessContainedApp with a new object

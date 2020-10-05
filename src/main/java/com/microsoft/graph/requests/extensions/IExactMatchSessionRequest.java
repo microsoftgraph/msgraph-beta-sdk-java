@@ -21,7 +21,7 @@ public interface IExactMatchSessionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExactMatchSession> callback);
+    void get(final ICallback<? super ExactMatchSession> callback);
 
     /**
      * Gets the ExactMatchSession from the service
@@ -36,7 +36,7 @@ public interface IExactMatchSessionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExactMatchSession> callback);
+    void delete(final ICallback<? super ExactMatchSession> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExactMatchSessionRequest extends IHttpRequest {
      * @param sourceExactMatchSession the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExactMatchSession sourceExactMatchSession, final ICallback<ExactMatchSession> callback);
+    void patch(final ExactMatchSession sourceExactMatchSession, final ICallback<? super ExactMatchSession> callback);
 
     /**
      * Patches this ExactMatchSession with a source
@@ -68,7 +68,7 @@ public interface IExactMatchSessionRequest extends IHttpRequest {
      * @param newExactMatchSession the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback);
+    void post(final ExactMatchSession newExactMatchSession, final ICallback<? super ExactMatchSession> callback);
 
     /**
      * Posts a ExactMatchSession with a new object
@@ -85,7 +85,7 @@ public interface IExactMatchSessionRequest extends IHttpRequest {
      * @param newExactMatchSession the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback);
+    void put(final ExactMatchSession newExactMatchSession, final ICallback<? super ExactMatchSession> callback);
 
     /**
      * Posts a ExactMatchSession with a new object

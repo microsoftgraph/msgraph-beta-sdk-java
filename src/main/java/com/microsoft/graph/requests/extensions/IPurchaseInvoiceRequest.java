@@ -21,7 +21,7 @@ public interface IPurchaseInvoiceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PurchaseInvoice> callback);
+    void get(final ICallback<? super PurchaseInvoice> callback);
 
     /**
      * Gets the PurchaseInvoice from the service
@@ -36,7 +36,7 @@ public interface IPurchaseInvoiceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PurchaseInvoice> callback);
+    void delete(final ICallback<? super PurchaseInvoice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPurchaseInvoiceRequest extends IHttpRequest {
      * @param sourcePurchaseInvoice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PurchaseInvoice sourcePurchaseInvoice, final ICallback<PurchaseInvoice> callback);
+    void patch(final PurchaseInvoice sourcePurchaseInvoice, final ICallback<? super PurchaseInvoice> callback);
 
     /**
      * Patches this PurchaseInvoice with a source
@@ -68,7 +68,7 @@ public interface IPurchaseInvoiceRequest extends IHttpRequest {
      * @param newPurchaseInvoice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PurchaseInvoice newPurchaseInvoice, final ICallback<PurchaseInvoice> callback);
+    void post(final PurchaseInvoice newPurchaseInvoice, final ICallback<? super PurchaseInvoice> callback);
 
     /**
      * Posts a PurchaseInvoice with a new object
@@ -85,7 +85,7 @@ public interface IPurchaseInvoiceRequest extends IHttpRequest {
      * @param newPurchaseInvoice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PurchaseInvoice newPurchaseInvoice, final ICallback<PurchaseInvoice> callback);
+    void put(final PurchaseInvoice newPurchaseInvoice, final ICallback<? super PurchaseInvoice> callback);
 
     /**
      * Posts a PurchaseInvoice with a new object

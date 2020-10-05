@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.EndpointSecurityConfigurationApplicablePlatform;
 import com.microsoft.graph.models.generated.EndpointSecurityConfigurationType;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.generated.EndpointSecurityConfigurationProfile
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.VulnerableManagedDevice;
 import com.microsoft.graph.models.extensions.DeviceAppManagementTask;
-import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceCollectionPage;
 
 
@@ -127,19 +125,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
 
         if (json.has("managedDevices")) {
-            final VulnerableManagedDeviceCollectionResponse response = new VulnerableManagedDeviceCollectionResponse();
-            if (json.has("managedDevices@odata.nextLink")) {
-                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
-            final VulnerableManagedDevice[] array = new VulnerableManagedDevice[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), VulnerableManagedDevice.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedDevices = new VulnerableManagedDeviceCollectionPage(response, null);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), VulnerableManagedDeviceCollectionPage.class);
         }
     }
 }

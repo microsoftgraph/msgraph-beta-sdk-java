@@ -45,7 +45,7 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ConnectorGroup> callback) {
+    public void get(final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ConnectorGroup> callback) {
+    public void delete(final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      * @param sourceConnectorGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConnectorGroup sourceConnectorGroup, final ICallback<ConnectorGroup> callback) {
+    public void patch(final ConnectorGroup sourceConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceConnectorGroup);
     }
 
@@ -104,7 +104,7 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      * @param newConnectorGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback) {
+    public void post(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.POST, callback, newConnectorGroup);
     }
 
@@ -125,7 +125,7 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      * @param newConnectorGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback) {
+    public void put(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.PUT, callback, newConnectorGroup);
     }
 
@@ -159,17 +159,6 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      */
      public IConnectorGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConnectorGroupRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IConnectorGroupRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ConnectorGroupRequest)this;
      }
 

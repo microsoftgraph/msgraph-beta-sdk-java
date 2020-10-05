@@ -39,7 +39,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserScopeTeamsAppInstallation> callback) {
+    public void get(final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserScopeTeamsAppInstallation> callback) {
+    public void delete(final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
      * @param sourceUserScopeTeamsAppInstallation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback) {
+    public void patch(final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.PATCH, callback, sourceUserScopeTeamsAppInstallation);
     }
 
@@ -98,7 +98,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
      * @param newUserScopeTeamsAppInstallation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback) {
+    public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.POST, callback, newUserScopeTeamsAppInstallation);
     }
 
@@ -119,7 +119,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
      * @param newUserScopeTeamsAppInstallation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback) {
+    public void put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.PUT, callback, newUserScopeTeamsAppInstallation);
     }
 
@@ -153,17 +153,6 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
      */
      public IUserScopeTeamsAppInstallationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserScopeTeamsAppInstallationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserScopeTeamsAppInstallationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserScopeTeamsAppInstallationRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkEnrollmentProfile> callback) {
+    public void get(final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkEnrollmentProfile> callback) {
+    public void delete(final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param sourceAndroidForWorkEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback) {
+    public void patch(final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkEnrollmentProfile);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param newAndroidForWorkEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback) {
+    public void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkEnrollmentProfile);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param newAndroidForWorkEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback) {
+    public void put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkEnrollmentProfile);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      */
      public IAndroidForWorkEnrollmentProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkEnrollmentProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkEnrollmentProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkEnrollmentProfileRequest)this;
      }
 

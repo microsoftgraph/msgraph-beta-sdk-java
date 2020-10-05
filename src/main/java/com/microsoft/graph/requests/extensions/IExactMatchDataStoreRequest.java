@@ -21,7 +21,7 @@ public interface IExactMatchDataStoreRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExactMatchDataStore> callback);
+    void get(final ICallback<? super ExactMatchDataStore> callback);
 
     /**
      * Gets the ExactMatchDataStore from the service
@@ -36,7 +36,7 @@ public interface IExactMatchDataStoreRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExactMatchDataStore> callback);
+    void delete(final ICallback<? super ExactMatchDataStore> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExactMatchDataStoreRequest extends IHttpRequest {
      * @param sourceExactMatchDataStore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExactMatchDataStore sourceExactMatchDataStore, final ICallback<ExactMatchDataStore> callback);
+    void patch(final ExactMatchDataStore sourceExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback);
 
     /**
      * Patches this ExactMatchDataStore with a source
@@ -68,7 +68,7 @@ public interface IExactMatchDataStoreRequest extends IHttpRequest {
      * @param newExactMatchDataStore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback);
+    void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback);
 
     /**
      * Posts a ExactMatchDataStore with a new object
@@ -85,7 +85,7 @@ public interface IExactMatchDataStoreRequest extends IHttpRequest {
      * @param newExactMatchDataStore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback);
+    void put(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback);
 
     /**
      * Posts a ExactMatchDataStore with a new object

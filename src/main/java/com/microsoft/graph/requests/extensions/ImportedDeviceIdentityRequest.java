@@ -53,7 +53,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ImportedDeviceIdentity> callback) {
+    public void get(final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ImportedDeviceIdentity> callback) {
+    public void delete(final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param sourceImportedDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ImportedDeviceIdentity sourceImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback) {
+    public void patch(final ImportedDeviceIdentity sourceImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.PATCH, callback, sourceImportedDeviceIdentity);
     }
 
@@ -112,7 +112,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param newImportedDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback) {
+    public void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.POST, callback, newImportedDeviceIdentity);
     }
 
@@ -133,7 +133,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param newImportedDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback) {
+    public void put(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.PUT, callback, newImportedDeviceIdentity);
     }
 
@@ -167,17 +167,6 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      */
      public IImportedDeviceIdentityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ImportedDeviceIdentityRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IImportedDeviceIdentityRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ImportedDeviceIdentityRequest)this;
      }
 

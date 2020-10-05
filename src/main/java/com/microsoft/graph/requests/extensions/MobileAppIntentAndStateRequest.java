@@ -37,7 +37,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppIntentAndState> callback) {
+    public void get(final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppIntentAndState> callback) {
+    public void delete(final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param sourceMobileAppIntentAndState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppIntentAndState sourceMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback) {
+    public void patch(final MobileAppIntentAndState sourceMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppIntentAndState);
     }
 
@@ -96,7 +96,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param newMobileAppIntentAndState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback) {
+    public void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.POST, callback, newMobileAppIntentAndState);
     }
 
@@ -117,7 +117,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param newMobileAppIntentAndState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback) {
+    public void put(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.PUT, callback, newMobileAppIntentAndState);
     }
 
@@ -151,17 +151,6 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      */
      public IMobileAppIntentAndStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppIntentAndStateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppIntentAndStateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppIntentAndStateRequest)this;
      }
 

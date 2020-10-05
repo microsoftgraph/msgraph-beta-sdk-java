@@ -35,7 +35,7 @@ public class MacOSTrustedRootCertificateWithReferenceRequest extends BaseRequest
         super(requestUrl, client, requestOptions, MacOSTrustedRootCertificate.class);
     }
 
-    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class MacOSTrustedRootCertificateWithReferenceRequest extends BaseRequest
         return null;
     }
 
-    public void get(final ICallback<MacOSTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class MacOSTrustedRootCertificateWithReferenceRequest extends BaseRequest
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<MacOSTrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super MacOSTrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class MacOSTrustedRootCertificateWithReferenceRequest extends BaseRequest
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
+	public void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceMacOSTrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class MacOSTrustedRootCertificateWithReferenceRequest extends BaseRequest
      */
     public IMacOSTrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MacOSTrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IMacOSTrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MacOSTrustedRootCertificateWithReferenceRequest)this;
     }
 }

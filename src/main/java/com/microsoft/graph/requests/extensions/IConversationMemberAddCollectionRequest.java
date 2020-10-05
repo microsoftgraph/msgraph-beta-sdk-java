@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IConversationMemberAddCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IConversationMemberAddCollectionPage> callback);
+    void post(final ICallback<? super IConversationMemberAddCollectionPage> callback);
 
     IConversationMemberAddCollectionPage post() throws ClientException;
 

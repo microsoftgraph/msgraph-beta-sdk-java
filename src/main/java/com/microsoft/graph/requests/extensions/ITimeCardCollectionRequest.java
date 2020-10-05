@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITimeCardCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITimeCardCollectionPage> callback);
+    void get(final ICallback<? super ITimeCardCollectionPage> callback);
 
     ITimeCardCollectionPage get() throws ClientException;
 
-    void post(final TimeCard newTimeCard, final ICallback<TimeCard> callback);
+    void post(final TimeCard newTimeCard, final ICallback<? super TimeCard> callback);
 
     TimeCard post(final TimeCard newTimeCard) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface ITimeCardCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITimeCardCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITimeCardCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface ITimeCardCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITimeCardCollectionRequest skipToken(String skipToken);
+	ITimeCardCollectionRequest skipToken(final String skipToken);
 }

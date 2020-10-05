@@ -38,7 +38,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TiIndicator> callback) {
+    public void get(final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TiIndicator> callback) {
+    public void delete(final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param sourceTiIndicator the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TiIndicator sourceTiIndicator, final ICallback<TiIndicator> callback) {
+    public void patch(final TiIndicator sourceTiIndicator, final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.PATCH, callback, sourceTiIndicator);
     }
 
@@ -97,7 +97,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param newTiIndicator the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TiIndicator newTiIndicator, final ICallback<TiIndicator> callback) {
+    public void post(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.POST, callback, newTiIndicator);
     }
 
@@ -118,7 +118,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param newTiIndicator the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TiIndicator newTiIndicator, final ICallback<TiIndicator> callback) {
+    public void put(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.PUT, callback, newTiIndicator);
     }
 
@@ -152,17 +152,6 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      */
      public ITiIndicatorRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TiIndicatorRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITiIndicatorRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TiIndicatorRequest)this;
      }
 

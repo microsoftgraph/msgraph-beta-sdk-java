@@ -40,7 +40,7 @@ public class PrintTaskDefinitionCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, PrintTaskDefinitionCollectionResponse.class, IPrintTaskDefinitionCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintTaskDefinitionCollectionPage> callback) {
+    public void get(final ICallback<? super IPrintTaskDefinitionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrintTaskDefinitionCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<PrintTaskDefinition> callback) {
+    public void post(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintTaskDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrintTaskDefinitionCollectionRequest extends BaseCollectionRequest<
      */
     public IPrintTaskDefinitionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintTaskDefinitionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrintTaskDefinitionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintTaskDefinitionCollectionRequest)this;
     }
 

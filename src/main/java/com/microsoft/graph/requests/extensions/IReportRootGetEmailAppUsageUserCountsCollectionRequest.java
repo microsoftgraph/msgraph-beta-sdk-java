@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetEmailAppUsageUserCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetEmailAppUsageUserCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetEmailAppUsageUserCountsCollectionPage> callback);
 
     IReportRootGetEmailAppUsageUserCountsCollectionPage get() throws ClientException;
 

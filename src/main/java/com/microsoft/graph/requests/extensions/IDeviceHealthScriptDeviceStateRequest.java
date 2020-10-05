@@ -21,7 +21,7 @@ public interface IDeviceHealthScriptDeviceStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceHealthScriptDeviceState> callback);
+    void get(final ICallback<? super DeviceHealthScriptDeviceState> callback);
 
     /**
      * Gets the DeviceHealthScriptDeviceState from the service
@@ -36,7 +36,7 @@ public interface IDeviceHealthScriptDeviceStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceHealthScriptDeviceState> callback);
+    void delete(final ICallback<? super DeviceHealthScriptDeviceState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceHealthScriptDeviceStateRequest extends IHttpRequest {
      * @param sourceDeviceHealthScriptDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceHealthScriptDeviceState sourceDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback);
+    void patch(final DeviceHealthScriptDeviceState sourceDeviceHealthScriptDeviceState, final ICallback<? super DeviceHealthScriptDeviceState> callback);
 
     /**
      * Patches this DeviceHealthScriptDeviceState with a source
@@ -68,7 +68,7 @@ public interface IDeviceHealthScriptDeviceStateRequest extends IHttpRequest {
      * @param newDeviceHealthScriptDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback);
+    void post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<? super DeviceHealthScriptDeviceState> callback);
 
     /**
      * Posts a DeviceHealthScriptDeviceState with a new object
@@ -85,7 +85,7 @@ public interface IDeviceHealthScriptDeviceStateRequest extends IHttpRequest {
      * @param newDeviceHealthScriptDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback);
+    void put(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<? super DeviceHealthScriptDeviceState> callback);
 
     /**
      * Posts a DeviceHealthScriptDeviceState with a new object

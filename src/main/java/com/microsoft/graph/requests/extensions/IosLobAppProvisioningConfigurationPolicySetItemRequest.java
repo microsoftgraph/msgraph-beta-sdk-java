@@ -37,7 +37,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback) {
+    public void get(final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback) {
+    public void delete(final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
      * @param sourceIosLobAppProvisioningConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosLobAppProvisioningConfigurationPolicySetItem sourceIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback) {
+    public void patch(final IosLobAppProvisioningConfigurationPolicySetItem sourceIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceIosLobAppProvisioningConfigurationPolicySetItem);
     }
 
@@ -96,7 +96,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
      * @param newIosLobAppProvisioningConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback) {
+    public void post(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newIosLobAppProvisioningConfigurationPolicySetItem);
     }
 
@@ -117,7 +117,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
      * @param newIosLobAppProvisioningConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback) {
+    public void put(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<? super IosLobAppProvisioningConfigurationPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newIosLobAppProvisioningConfigurationPolicySetItem);
     }
 
@@ -151,17 +151,6 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
      */
      public IIosLobAppProvisioningConfigurationPolicySetItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosLobAppProvisioningConfigurationPolicySetItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosLobAppProvisioningConfigurationPolicySetItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosLobAppProvisioningConfigurationPolicySetItemRequest)this;
      }
 

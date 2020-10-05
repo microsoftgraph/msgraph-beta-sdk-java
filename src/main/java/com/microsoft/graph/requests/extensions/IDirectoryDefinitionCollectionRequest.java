@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryDefinitionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDirectoryDefinitionCollectionPage> callback);
+    void get(final ICallback<? super IDirectoryDefinitionCollectionPage> callback);
 
     IDirectoryDefinitionCollectionPage get() throws ClientException;
 
-    void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback);
+    void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback);
 
     DirectoryDefinition post(final DirectoryDefinition newDirectoryDefinition) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDirectoryDefinitionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDirectoryDefinitionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDirectoryDefinitionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDirectoryDefinitionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryDefinitionCollectionRequest skipToken(String skipToken);
+	IDirectoryDefinitionCollectionRequest skipToken(final String skipToken);
 }

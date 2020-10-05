@@ -21,7 +21,7 @@ public interface IAppleVppTokenTroubleshootingEventRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppleVppTokenTroubleshootingEvent> callback);
+    void get(final ICallback<? super AppleVppTokenTroubleshootingEvent> callback);
 
     /**
      * Gets the AppleVppTokenTroubleshootingEvent from the service
@@ -36,7 +36,7 @@ public interface IAppleVppTokenTroubleshootingEventRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppleVppTokenTroubleshootingEvent> callback);
+    void delete(final ICallback<? super AppleVppTokenTroubleshootingEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppleVppTokenTroubleshootingEventRequest extends IHttpRequest 
      * @param sourceAppleVppTokenTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppleVppTokenTroubleshootingEvent sourceAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback);
+    void patch(final AppleVppTokenTroubleshootingEvent sourceAppleVppTokenTroubleshootingEvent, final ICallback<? super AppleVppTokenTroubleshootingEvent> callback);
 
     /**
      * Patches this AppleVppTokenTroubleshootingEvent with a source
@@ -68,7 +68,7 @@ public interface IAppleVppTokenTroubleshootingEventRequest extends IHttpRequest 
      * @param newAppleVppTokenTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback);
+    void post(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<? super AppleVppTokenTroubleshootingEvent> callback);
 
     /**
      * Posts a AppleVppTokenTroubleshootingEvent with a new object
@@ -85,7 +85,7 @@ public interface IAppleVppTokenTroubleshootingEventRequest extends IHttpRequest 
      * @param newAppleVppTokenTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback);
+    void put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<? super AppleVppTokenTroubleshootingEvent> callback);
 
     /**
      * Posts a AppleVppTokenTroubleshootingEvent with a new object

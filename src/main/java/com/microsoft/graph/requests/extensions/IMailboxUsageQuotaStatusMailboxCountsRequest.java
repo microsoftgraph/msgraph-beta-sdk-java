@@ -21,7 +21,7 @@ public interface IMailboxUsageQuotaStatusMailboxCountsRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback);
+    void get(final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback);
 
     /**
      * Gets the MailboxUsageQuotaStatusMailboxCounts from the service
@@ -36,7 +36,7 @@ public interface IMailboxUsageQuotaStatusMailboxCountsRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback);
+    void delete(final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailboxUsageQuotaStatusMailboxCountsRequest extends IHttpReque
      * @param sourceMailboxUsageQuotaStatusMailboxCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailboxUsageQuotaStatusMailboxCounts sourceMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback);
+    void patch(final MailboxUsageQuotaStatusMailboxCounts sourceMailboxUsageQuotaStatusMailboxCounts, final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback);
 
     /**
      * Patches this MailboxUsageQuotaStatusMailboxCounts with a source
@@ -68,7 +68,7 @@ public interface IMailboxUsageQuotaStatusMailboxCountsRequest extends IHttpReque
      * @param newMailboxUsageQuotaStatusMailboxCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback);
+    void post(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback);
 
     /**
      * Posts a MailboxUsageQuotaStatusMailboxCounts with a new object
@@ -85,7 +85,7 @@ public interface IMailboxUsageQuotaStatusMailboxCountsRequest extends IHttpReque
      * @param newMailboxUsageQuotaStatusMailboxCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback);
+    void put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<? super MailboxUsageQuotaStatusMailboxCounts> callback);
 
     /**
      * Posts a MailboxUsageQuotaStatusMailboxCounts with a new object

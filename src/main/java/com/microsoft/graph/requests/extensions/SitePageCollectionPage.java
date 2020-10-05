@@ -23,6 +23,6 @@ public class SitePageCollectionPage extends BaseCollectionPage<SitePage, ISitePa
      * @param builder  the request builder for the next collection page
      */
     public SitePageCollectionPage(final SitePageCollectionResponse response, final ISitePageCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

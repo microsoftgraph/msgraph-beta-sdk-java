@@ -37,7 +37,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOsVppAppAssignedLicense> callback) {
+    public void get(final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOsVppAppAssignedLicense> callback) {
+    public void delete(final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param sourceMacOsVppAppAssignedLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback) {
+    public void patch(final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOsVppAppAssignedLicense);
     }
 
@@ -96,7 +96,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param newMacOsVppAppAssignedLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback) {
+    public void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.POST, callback, newMacOsVppAppAssignedLicense);
     }
 
@@ -117,7 +117,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param newMacOsVppAppAssignedLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback) {
+    public void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.PUT, callback, newMacOsVppAppAssignedLicense);
     }
 
@@ -151,17 +151,6 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      */
      public IMacOsVppAppAssignedLicenseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOsVppAppAssignedLicenseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOsVppAppAssignedLicenseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOsVppAppAssignedLicenseRequest)this;
      }
 

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITermCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITermCollectionPage> callback);
+    void get(final ICallback<? super ITermCollectionPage> callback);
 
     ITermCollectionPage get() throws ClientException;
 
-    void post(final Term newTerm, final ICallback<Term> callback);
+    void post(final Term newTerm, final ICallback<? super Term> callback);
 
     Term post(final Term newTerm) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface ITermCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITermCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITermCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface ITermCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITermCollectionRequest skipToken(String skipToken);
+	ITermCollectionRequest skipToken(final String skipToken);
 }

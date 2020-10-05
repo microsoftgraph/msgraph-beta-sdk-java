@@ -21,7 +21,7 @@ public interface IStoreRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Store> callback);
+    void get(final ICallback<? super Store> callback);
 
     /**
      * Gets the Store from the service
@@ -36,7 +36,7 @@ public interface IStoreRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Store> callback);
+    void delete(final ICallback<? super Store> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IStoreRequest extends IHttpRequest {
      * @param sourceStore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Store sourceStore, final ICallback<Store> callback);
+    void patch(final Store sourceStore, final ICallback<? super Store> callback);
 
     /**
      * Patches this Store with a source
@@ -68,7 +68,7 @@ public interface IStoreRequest extends IHttpRequest {
      * @param newStore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Store newStore, final ICallback<Store> callback);
+    void post(final Store newStore, final ICallback<? super Store> callback);
 
     /**
      * Posts a Store with a new object
@@ -85,7 +85,7 @@ public interface IStoreRequest extends IHttpRequest {
      * @param newStore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Store newStore, final ICallback<Store> callback);
+    void put(final Store newStore, final ICallback<? super Store> callback);
 
     /**
      * Posts a Store with a new object

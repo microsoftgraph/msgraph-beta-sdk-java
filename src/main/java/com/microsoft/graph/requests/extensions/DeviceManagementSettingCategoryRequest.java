@@ -56,7 +56,7 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementSettingCategory> callback) {
+    public void get(final ICallback<? super DeviceManagementSettingCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementSettingCategory> callback) {
+    public void delete(final ICallback<? super DeviceManagementSettingCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
      * @param sourceDeviceManagementSettingCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementSettingCategory sourceDeviceManagementSettingCategory, final ICallback<DeviceManagementSettingCategory> callback) {
+    public void patch(final DeviceManagementSettingCategory sourceDeviceManagementSettingCategory, final ICallback<? super DeviceManagementSettingCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementSettingCategory);
     }
 
@@ -115,7 +115,7 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
      * @param newDeviceManagementSettingCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementSettingCategory newDeviceManagementSettingCategory, final ICallback<DeviceManagementSettingCategory> callback) {
+    public void post(final DeviceManagementSettingCategory newDeviceManagementSettingCategory, final ICallback<? super DeviceManagementSettingCategory> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementSettingCategory);
     }
 
@@ -136,7 +136,7 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
      * @param newDeviceManagementSettingCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementSettingCategory newDeviceManagementSettingCategory, final ICallback<DeviceManagementSettingCategory> callback) {
+    public void put(final DeviceManagementSettingCategory newDeviceManagementSettingCategory, final ICallback<? super DeviceManagementSettingCategory> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementSettingCategory);
     }
 
@@ -170,17 +170,6 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
      */
      public IDeviceManagementSettingCategoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementSettingCategoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementSettingCategoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementSettingCategoryRequest)this;
      }
 

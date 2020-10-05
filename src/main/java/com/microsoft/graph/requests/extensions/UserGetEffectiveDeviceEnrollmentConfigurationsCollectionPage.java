@@ -34,6 +34,6 @@ public class UserGetEffectiveDeviceEnrollmentConfigurationsCollectionPage extend
      * @param builder The request builder for the next collection page
      */
     public UserGetEffectiveDeviceEnrollmentConfigurationsCollectionPage(final UserGetEffectiveDeviceEnrollmentConfigurationsCollectionResponse response, final IUserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

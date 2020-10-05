@@ -43,7 +43,7 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessPackageAssignmentRequest> callback) {
+    public void get(final ICallback<? super AccessPackageAssignmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessPackageAssignmentRequest> callback) {
+    public void delete(final ICallback<? super AccessPackageAssignmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
      * @param sourceAccessPackageAssignmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageAssignmentRequest sourceAccessPackageAssignmentRequest, final ICallback<AccessPackageAssignmentRequest> callback) {
+    public void patch(final AccessPackageAssignmentRequest sourceAccessPackageAssignmentRequest, final ICallback<? super AccessPackageAssignmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageAssignmentRequest);
     }
 
@@ -102,7 +102,7 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
      * @param newAccessPackageAssignmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<AccessPackageAssignmentRequest> callback) {
+    public void post(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<? super AccessPackageAssignmentRequest> callback) {
         send(HttpMethod.POST, callback, newAccessPackageAssignmentRequest);
     }
 
@@ -123,7 +123,7 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
      * @param newAccessPackageAssignmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<AccessPackageAssignmentRequest> callback) {
+    public void put(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<? super AccessPackageAssignmentRequest> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageAssignmentRequest);
     }
 
@@ -157,17 +157,6 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
      */
      public IAccessPackageAssignmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageAssignmentRequestRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessPackageAssignmentRequestRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessPackageAssignmentRequestRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IAccessReviewInstanceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReviewInstance> callback);
+    void get(final ICallback<? super AccessReviewInstance> callback);
 
     /**
      * Gets the AccessReviewInstance from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewInstanceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReviewInstance> callback);
+    void delete(final ICallback<? super AccessReviewInstance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewInstanceRequest extends IHttpRequest {
      * @param sourceAccessReviewInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReviewInstance sourceAccessReviewInstance, final ICallback<AccessReviewInstance> callback);
+    void patch(final AccessReviewInstance sourceAccessReviewInstance, final ICallback<? super AccessReviewInstance> callback);
 
     /**
      * Patches this AccessReviewInstance with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewInstanceRequest extends IHttpRequest {
      * @param newAccessReviewInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReviewInstance newAccessReviewInstance, final ICallback<AccessReviewInstance> callback);
+    void post(final AccessReviewInstance newAccessReviewInstance, final ICallback<? super AccessReviewInstance> callback);
 
     /**
      * Posts a AccessReviewInstance with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewInstanceRequest extends IHttpRequest {
      * @param newAccessReviewInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReviewInstance newAccessReviewInstance, final ICallback<AccessReviewInstance> callback);
+    void put(final AccessReviewInstance newAccessReviewInstance, final ICallback<? super AccessReviewInstance> callback);
 
     /**
      * Posts a AccessReviewInstance with a new object

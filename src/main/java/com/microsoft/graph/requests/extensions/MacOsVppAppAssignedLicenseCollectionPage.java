@@ -23,6 +23,6 @@ public class MacOsVppAppAssignedLicenseCollectionPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public MacOsVppAppAssignedLicenseCollectionPage(final MacOsVppAppAssignedLicenseCollectionResponse response, final IMacOsVppAppAssignedLicenseCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

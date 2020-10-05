@@ -21,7 +21,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+    void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
 
     /**
      * Gets the WindowsDefenderApplicationControlSupplementalPolicyAssignment from the service
@@ -36,7 +36,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+    void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentR
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+    void patch(final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
 
     /**
      * Patches this WindowsDefenderApplicationControlSupplementalPolicyAssignment with a source
@@ -68,7 +68,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentR
      * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
 
     /**
      * Posts a WindowsDefenderApplicationControlSupplementalPolicyAssignment with a new object
@@ -85,7 +85,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentR
      * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+    void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
 
     /**
      * Posts a WindowsDefenderApplicationControlSupplementalPolicyAssignment with a new object

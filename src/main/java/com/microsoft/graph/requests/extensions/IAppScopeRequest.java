@@ -21,7 +21,7 @@ public interface IAppScopeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppScope> callback);
+    void get(final ICallback<? super AppScope> callback);
 
     /**
      * Gets the AppScope from the service
@@ -36,7 +36,7 @@ public interface IAppScopeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppScope> callback);
+    void delete(final ICallback<? super AppScope> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppScopeRequest extends IHttpRequest {
      * @param sourceAppScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppScope sourceAppScope, final ICallback<AppScope> callback);
+    void patch(final AppScope sourceAppScope, final ICallback<? super AppScope> callback);
 
     /**
      * Patches this AppScope with a source
@@ -68,7 +68,7 @@ public interface IAppScopeRequest extends IHttpRequest {
      * @param newAppScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppScope newAppScope, final ICallback<AppScope> callback);
+    void post(final AppScope newAppScope, final ICallback<? super AppScope> callback);
 
     /**
      * Posts a AppScope with a new object
@@ -85,7 +85,7 @@ public interface IAppScopeRequest extends IHttpRequest {
      * @param newAppScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppScope newAppScope, final ICallback<AppScope> callback);
+    void put(final AppScope newAppScope, final ICallback<? super AppScope> callback);
 
     /**
      * Posts a AppScope with a new object

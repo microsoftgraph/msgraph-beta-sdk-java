@@ -40,7 +40,7 @@ public class ExactMatchDataStoreCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ExactMatchDataStoreCollectionResponse.class, IExactMatchDataStoreCollectionPage.class);
     }
 
-    public void get(final ICallback<IExactMatchDataStoreCollectionPage> callback) {
+    public void get(final ICallback<? super IExactMatchDataStoreCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ExactMatchDataStoreCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback) {
+    public void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExactMatchDataStoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ExactMatchDataStoreCollectionRequest extends BaseCollectionRequest<
      */
     public IExactMatchDataStoreCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ExactMatchDataStoreCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IExactMatchDataStoreCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ExactMatchDataStoreCollectionRequest)this;
     }
 

@@ -23,6 +23,6 @@ public class OrganizationalBrandingLocalizationCollectionPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public OrganizationalBrandingLocalizationCollectionPage(final OrganizationalBrandingLocalizationCollectionResponse response, final IOrganizationalBrandingLocalizationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

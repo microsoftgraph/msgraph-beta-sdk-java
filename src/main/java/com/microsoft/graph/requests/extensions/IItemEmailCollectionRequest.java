@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IItemEmailCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IItemEmailCollectionPage> callback);
+    void get(final ICallback<? super IItemEmailCollectionPage> callback);
 
     IItemEmailCollectionPage get() throws ClientException;
 
-    void post(final ItemEmail newItemEmail, final ICallback<ItemEmail> callback);
+    void post(final ItemEmail newItemEmail, final ICallback<? super ItemEmail> callback);
 
     ItemEmail post(final ItemEmail newItemEmail) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IItemEmailCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IItemEmailCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IItemEmailCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IItemEmailCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IItemEmailCollectionRequest skipToken(String skipToken);
+	IItemEmailCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SideLoadingKey> callback) {
+    public void get(final ICallback<? super SideLoadingKey> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SideLoadingKey> callback) {
+    public void delete(final ICallback<? super SideLoadingKey> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
      * @param sourceSideLoadingKey the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SideLoadingKey sourceSideLoadingKey, final ICallback<SideLoadingKey> callback) {
+    public void patch(final SideLoadingKey sourceSideLoadingKey, final ICallback<? super SideLoadingKey> callback) {
         send(HttpMethod.PATCH, callback, sourceSideLoadingKey);
     }
 
@@ -96,7 +96,7 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
      * @param newSideLoadingKey the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback) {
+    public void post(final SideLoadingKey newSideLoadingKey, final ICallback<? super SideLoadingKey> callback) {
         send(HttpMethod.POST, callback, newSideLoadingKey);
     }
 
@@ -117,7 +117,7 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
      * @param newSideLoadingKey the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback) {
+    public void put(final SideLoadingKey newSideLoadingKey, final ICallback<? super SideLoadingKey> callback) {
         send(HttpMethod.PUT, callback, newSideLoadingKey);
     }
 
@@ -151,17 +151,6 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
      */
      public ISideLoadingKeyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SideLoadingKeyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISideLoadingKeyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SideLoadingKeyRequest)this;
      }
 

@@ -34,7 +34,7 @@ public class DepMacOSEnrollmentProfileReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, DepMacOSEnrollmentProfile.class);
     }
 
-    public void delete(final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void delete(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class DepMacOSEnrollmentProfileReferenceRequest extends BaseRequest imple
         return (DepMacOSEnrollmentProfileReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDepMacOSEnrollmentProfileReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DepMacOSEnrollmentProfileReferenceRequest)this;
-    }
-    /**
      * Puts the DepMacOSEnrollmentProfile
      *
      * @param srcDepMacOSEnrollmentProfile the DepMacOSEnrollmentProfile reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DepMacOSEnrollmentProfile srcDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void put(DepMacOSEnrollmentProfile srcDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, srcDepMacOSEnrollmentProfile);
     }
 

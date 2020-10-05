@@ -45,7 +45,7 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RbacApplicationMultiple> callback) {
+    public void get(final ICallback<? super RbacApplicationMultiple> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RbacApplicationMultiple> callback) {
+    public void delete(final ICallback<? super RbacApplicationMultiple> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      * @param sourceRbacApplicationMultiple the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RbacApplicationMultiple sourceRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback) {
+    public void patch(final RbacApplicationMultiple sourceRbacApplicationMultiple, final ICallback<? super RbacApplicationMultiple> callback) {
         send(HttpMethod.PATCH, callback, sourceRbacApplicationMultiple);
     }
 
@@ -104,7 +104,7 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      * @param newRbacApplicationMultiple the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback) {
+    public void post(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<? super RbacApplicationMultiple> callback) {
         send(HttpMethod.POST, callback, newRbacApplicationMultiple);
     }
 
@@ -125,7 +125,7 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      * @param newRbacApplicationMultiple the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback) {
+    public void put(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<? super RbacApplicationMultiple> callback) {
         send(HttpMethod.PUT, callback, newRbacApplicationMultiple);
     }
 
@@ -159,17 +159,6 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      */
      public IRbacApplicationMultipleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RbacApplicationMultipleRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IRbacApplicationMultipleRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RbacApplicationMultipleRequest)this;
      }
 

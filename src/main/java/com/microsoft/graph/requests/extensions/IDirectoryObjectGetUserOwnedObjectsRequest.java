@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryObjectGetUserOwnedObjectsRequest extends IHttpRequest {
 
-    void post(final ICallback<DirectoryObject> callback);
+    void post(final ICallback<? super DirectoryObject> callback);
 
     DirectoryObject post() throws ClientException;
 

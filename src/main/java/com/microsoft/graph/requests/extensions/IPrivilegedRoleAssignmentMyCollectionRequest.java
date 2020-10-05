@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IPrivilegedRoleAssignmentMyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedRoleAssignmentMyCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedRoleAssignmentMyCollectionPage> callback);
 
     IPrivilegedRoleAssignmentMyCollectionPage get() throws ClientException;
 

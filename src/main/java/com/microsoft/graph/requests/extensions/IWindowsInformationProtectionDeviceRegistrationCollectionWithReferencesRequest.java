@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage> callback);
 
     IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage get() throws ClientException;
 

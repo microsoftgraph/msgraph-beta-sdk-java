@@ -21,7 +21,7 @@ public interface ICustomerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Customer> callback);
+    void get(final ICallback<? super Customer> callback);
 
     /**
      * Gets the Customer from the service
@@ -36,7 +36,7 @@ public interface ICustomerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Customer> callback);
+    void delete(final ICallback<? super Customer> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICustomerRequest extends IHttpRequest {
      * @param sourceCustomer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Customer sourceCustomer, final ICallback<Customer> callback);
+    void patch(final Customer sourceCustomer, final ICallback<? super Customer> callback);
 
     /**
      * Patches this Customer with a source
@@ -68,7 +68,7 @@ public interface ICustomerRequest extends IHttpRequest {
      * @param newCustomer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Customer newCustomer, final ICallback<Customer> callback);
+    void post(final Customer newCustomer, final ICallback<? super Customer> callback);
 
     /**
      * Posts a Customer with a new object
@@ -85,7 +85,7 @@ public interface ICustomerRequest extends IHttpRequest {
      * @param newCustomer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Customer newCustomer, final ICallback<Customer> callback);
+    void put(final Customer newCustomer, final ICallback<? super Customer> callback);
 
     /**
      * Posts a Customer with a new object

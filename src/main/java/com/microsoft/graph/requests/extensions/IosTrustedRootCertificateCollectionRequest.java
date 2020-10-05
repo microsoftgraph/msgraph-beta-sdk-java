@@ -40,7 +40,7 @@ public class IosTrustedRootCertificateCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, IosTrustedRootCertificateCollectionResponse.class, IIosTrustedRootCertificateCollectionPage.class);
     }
 
-    public void get(final ICallback<IIosTrustedRootCertificateCollectionPage> callback) {
+    public void get(final ICallback<? super IIosTrustedRootCertificateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class IosTrustedRootCertificateCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback) {
+    public void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosTrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class IosTrustedRootCertificateCollectionRequest extends BaseCollectionRe
      */
     public IIosTrustedRootCertificateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IosTrustedRootCertificateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIosTrustedRootCertificateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IosTrustedRootCertificateCollectionRequest)this;
     }
 

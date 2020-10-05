@@ -37,7 +37,7 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrivilegedOperationEvent> callback) {
+    public void get(final ICallback<? super PrivilegedOperationEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrivilegedOperationEvent> callback) {
+    public void delete(final ICallback<? super PrivilegedOperationEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
      * @param sourcePrivilegedOperationEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedOperationEvent sourcePrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback) {
+    public void patch(final PrivilegedOperationEvent sourcePrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedOperationEvent);
     }
 
@@ -96,7 +96,7 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
      * @param newPrivilegedOperationEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback) {
+    public void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback) {
         send(HttpMethod.POST, callback, newPrivilegedOperationEvent);
     }
 
@@ -117,7 +117,7 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
      * @param newPrivilegedOperationEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback) {
+    public void put(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedOperationEvent);
     }
 
@@ -151,17 +151,6 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
      */
      public IPrivilegedOperationEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedOperationEventRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrivilegedOperationEventRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrivilegedOperationEventRequest)this;
      }
 

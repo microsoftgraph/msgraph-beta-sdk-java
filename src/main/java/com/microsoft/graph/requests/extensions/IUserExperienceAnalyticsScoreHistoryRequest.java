@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsScoreHistoryRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsScoreHistory> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsScoreHistory> callback);
 
     /**
      * Gets the UserExperienceAnalyticsScoreHistory from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsScoreHistoryRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsScoreHistory> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsScoreHistory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsScoreHistoryRequest extends IHttpReques
      * @param sourceUserExperienceAnalyticsScoreHistory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback);
+    void patch(final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback);
 
     /**
      * Patches this UserExperienceAnalyticsScoreHistory with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsScoreHistoryRequest extends IHttpReques
      * @param newUserExperienceAnalyticsScoreHistory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback);
+    void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback);
 
     /**
      * Posts a UserExperienceAnalyticsScoreHistory with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsScoreHistoryRequest extends IHttpReques
      * @param newUserExperienceAnalyticsScoreHistory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback);
+    void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback);
 
     /**
      * Posts a UserExperienceAnalyticsScoreHistory with a new object

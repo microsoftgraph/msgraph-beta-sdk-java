@@ -21,7 +21,7 @@ public interface ITargetedManagedAppConfigurationPolicySetItemRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback);
+    void get(final ICallback<? super TargetedManagedAppConfigurationPolicySetItem> callback);
 
     /**
      * Gets the TargetedManagedAppConfigurationPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface ITargetedManagedAppConfigurationPolicySetItemRequest extends IH
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback);
+    void delete(final ICallback<? super TargetedManagedAppConfigurationPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITargetedManagedAppConfigurationPolicySetItemRequest extends IH
      * @param sourceTargetedManagedAppConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TargetedManagedAppConfigurationPolicySetItem sourceTargetedManagedAppConfigurationPolicySetItem, final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback);
+    void patch(final TargetedManagedAppConfigurationPolicySetItem sourceTargetedManagedAppConfigurationPolicySetItem, final ICallback<? super TargetedManagedAppConfigurationPolicySetItem> callback);
 
     /**
      * Patches this TargetedManagedAppConfigurationPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface ITargetedManagedAppConfigurationPolicySetItemRequest extends IH
      * @param newTargetedManagedAppConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem, final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback);
+    void post(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem, final ICallback<? super TargetedManagedAppConfigurationPolicySetItem> callback);
 
     /**
      * Posts a TargetedManagedAppConfigurationPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface ITargetedManagedAppConfigurationPolicySetItemRequest extends IH
      * @param newTargetedManagedAppConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem, final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback);
+    void put(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem, final ICallback<? super TargetedManagedAppConfigurationPolicySetItem> callback);
 
     /**
      * Posts a TargetedManagedAppConfigurationPolicySetItem with a new object

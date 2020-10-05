@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCode;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
 import com.microsoft.graph.models.extensions.EmbeddedSIMDeviceState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.EmbeddedSIMDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMDeviceStateCollectionPage;
 
 
@@ -127,35 +124,11 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
 
 
         if (json.has("assignments")) {
-            final EmbeddedSIMActivationCodePoolAssignmentCollectionResponse response = new EmbeddedSIMActivationCodePoolAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final EmbeddedSIMActivationCodePoolAssignment[] array = new EmbeddedSIMActivationCodePoolAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EmbeddedSIMActivationCodePoolAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new EmbeddedSIMActivationCodePoolAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), EmbeddedSIMActivationCodePoolAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            final EmbeddedSIMDeviceStateCollectionResponse response = new EmbeddedSIMDeviceStateCollectionResponse();
-            if (json.has("deviceStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStates").toString(), JsonObject[].class);
-            final EmbeddedSIMDeviceState[] array = new EmbeddedSIMDeviceState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EmbeddedSIMDeviceState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStates = new EmbeddedSIMDeviceStateCollectionPage(response, null);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), EmbeddedSIMDeviceStateCollectionPage.class);
         }
     }
 }

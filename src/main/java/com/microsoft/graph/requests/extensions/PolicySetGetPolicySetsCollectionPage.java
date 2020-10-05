@@ -34,6 +34,6 @@ public class PolicySetGetPolicySetsCollectionPage extends BaseCollectionPage<Pol
      * @param builder The request builder for the next collection page
      */
     public PolicySetGetPolicySetsCollectionPage(final PolicySetGetPolicySetsCollectionResponse response, final IPolicySetGetPolicySetsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

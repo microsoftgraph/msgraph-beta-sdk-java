@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDetectedAppCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDetectedAppCollectionPage> callback);
+    void get(final ICallback<? super IDetectedAppCollectionPage> callback);
 
     IDetectedAppCollectionPage get() throws ClientException;
 
-    void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback);
+    void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback);
 
     DetectedApp post(final DetectedApp newDetectedApp) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDetectedAppCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDetectedAppCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDetectedAppCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDetectedAppCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDetectedAppCollectionRequest skipToken(String skipToken);
+	IDetectedAppCollectionRequest skipToken(final String skipToken);
 }

@@ -21,7 +21,7 @@ public interface IWindows10ImportedPFXCertificateProfileRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10ImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super Windows10ImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the Windows10ImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IWindows10ImportedPFXCertificateProfileRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10ImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super Windows10ImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10ImportedPFXCertificateProfileRequest extends IHttpReq
      * @param sourceWindows10ImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10ImportedPFXCertificateProfile sourceWindows10ImportedPFXCertificateProfile, final ICallback<Windows10ImportedPFXCertificateProfile> callback);
+    void patch(final Windows10ImportedPFXCertificateProfile sourceWindows10ImportedPFXCertificateProfile, final ICallback<? super Windows10ImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this Windows10ImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IWindows10ImportedPFXCertificateProfileRequest extends IHttpReq
      * @param newWindows10ImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10ImportedPFXCertificateProfile newWindows10ImportedPFXCertificateProfile, final ICallback<Windows10ImportedPFXCertificateProfile> callback);
+    void post(final Windows10ImportedPFXCertificateProfile newWindows10ImportedPFXCertificateProfile, final ICallback<? super Windows10ImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a Windows10ImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindows10ImportedPFXCertificateProfileRequest extends IHttpReq
      * @param newWindows10ImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10ImportedPFXCertificateProfile newWindows10ImportedPFXCertificateProfile, final ICallback<Windows10ImportedPFXCertificateProfile> callback);
+    void put(final Windows10ImportedPFXCertificateProfile newWindows10ImportedPFXCertificateProfile, final ICallback<? super Windows10ImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a Windows10ImportedPFXCertificateProfile with a new object

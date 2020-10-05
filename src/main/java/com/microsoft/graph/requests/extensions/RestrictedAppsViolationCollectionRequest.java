@@ -40,7 +40,7 @@ public class RestrictedAppsViolationCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, RestrictedAppsViolationCollectionResponse.class, IRestrictedAppsViolationCollectionPage.class);
     }
 
-    public void get(final ICallback<IRestrictedAppsViolationCollectionPage> callback) {
+    public void get(final ICallback<? super IRestrictedAppsViolationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RestrictedAppsViolationCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback) {
+    public void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<? super RestrictedAppsViolation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedAppsViolationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class RestrictedAppsViolationCollectionRequest extends BaseCollectionRequ
      */
     public IRestrictedAppsViolationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RestrictedAppsViolationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRestrictedAppsViolationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RestrictedAppsViolationCollectionRequest)this;
     }
 

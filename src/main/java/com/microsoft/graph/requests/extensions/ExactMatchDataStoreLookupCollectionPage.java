@@ -34,6 +34,6 @@ public class ExactMatchDataStoreLookupCollectionPage extends BaseCollectionPage<
      * @param builder The request builder for the next collection page
      */
     public ExactMatchDataStoreLookupCollectionPage(final ExactMatchDataStoreLookupCollectionResponse response, final IExactMatchDataStoreLookupCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class Fido2AuthenticationMethodCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, Fido2AuthenticationMethodCollectionResponse.class, IFido2AuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<IFido2AuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super IFido2AuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class Fido2AuthenticationMethodCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback) {
+    public void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new Fido2AuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class Fido2AuthenticationMethodCollectionRequest extends BaseCollectionRe
      */
     public IFido2AuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (Fido2AuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IFido2AuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (Fido2AuthenticationMethodCollectionRequest)this;
     }
 

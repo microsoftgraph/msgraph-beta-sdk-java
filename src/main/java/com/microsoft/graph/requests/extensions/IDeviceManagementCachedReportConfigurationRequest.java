@@ -21,7 +21,7 @@ public interface IDeviceManagementCachedReportConfigurationRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementCachedReportConfiguration> callback);
+    void get(final ICallback<? super DeviceManagementCachedReportConfiguration> callback);
 
     /**
      * Gets the DeviceManagementCachedReportConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementCachedReportConfigurationRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementCachedReportConfiguration> callback);
+    void delete(final ICallback<? super DeviceManagementCachedReportConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementCachedReportConfigurationRequest extends IHttp
      * @param sourceDeviceManagementCachedReportConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementCachedReportConfiguration sourceDeviceManagementCachedReportConfiguration, final ICallback<DeviceManagementCachedReportConfiguration> callback);
+    void patch(final DeviceManagementCachedReportConfiguration sourceDeviceManagementCachedReportConfiguration, final ICallback<? super DeviceManagementCachedReportConfiguration> callback);
 
     /**
      * Patches this DeviceManagementCachedReportConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementCachedReportConfigurationRequest extends IHttp
      * @param newDeviceManagementCachedReportConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<DeviceManagementCachedReportConfiguration> callback);
+    void post(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<? super DeviceManagementCachedReportConfiguration> callback);
 
     /**
      * Posts a DeviceManagementCachedReportConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementCachedReportConfigurationRequest extends IHttp
      * @param newDeviceManagementCachedReportConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<DeviceManagementCachedReportConfiguration> callback);
+    void put(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<? super DeviceManagementCachedReportConfiguration> callback);
 
     /**
      * Posts a DeviceManagementCachedReportConfiguration with a new object

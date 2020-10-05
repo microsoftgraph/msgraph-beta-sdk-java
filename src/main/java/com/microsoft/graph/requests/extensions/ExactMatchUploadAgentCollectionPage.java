@@ -23,6 +23,6 @@ public class ExactMatchUploadAgentCollectionPage extends BaseCollectionPage<Exac
      * @param builder  the request builder for the next collection page
      */
     public ExactMatchUploadAgentCollectionPage(final ExactMatchUploadAgentCollectionResponse response, final IExactMatchUploadAgentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

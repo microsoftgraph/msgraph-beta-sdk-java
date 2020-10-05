@@ -37,7 +37,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void patch(final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -96,7 +96,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -117,7 +117,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -151,17 +151,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      */
      public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest)this;
      }
 

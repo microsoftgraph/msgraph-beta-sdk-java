@@ -34,6 +34,6 @@ public class UserGetManagedDevicesWithAppFailuresCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public UserGetManagedDevicesWithAppFailuresCollectionPage(final UserGetManagedDevicesWithAppFailuresCollectionResponse response, final IUserGetManagedDevicesWithAppFailuresCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

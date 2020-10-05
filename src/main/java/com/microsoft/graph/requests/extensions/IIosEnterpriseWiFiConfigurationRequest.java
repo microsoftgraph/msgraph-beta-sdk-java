@@ -21,7 +21,7 @@ public interface IIosEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosEnterpriseWiFiConfiguration> callback);
+    void get(final ICallback<? super IosEnterpriseWiFiConfiguration> callback);
 
     /**
      * Gets the IosEnterpriseWiFiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosEnterpriseWiFiConfiguration> callback);
+    void delete(final ICallback<? super IosEnterpriseWiFiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      * @param sourceIosEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosEnterpriseWiFiConfiguration sourceIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback);
+    void patch(final IosEnterpriseWiFiConfiguration sourceIosEnterpriseWiFiConfiguration, final ICallback<? super IosEnterpriseWiFiConfiguration> callback);
 
     /**
      * Patches this IosEnterpriseWiFiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      * @param newIosEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback);
+    void post(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<? super IosEnterpriseWiFiConfiguration> callback);
 
     /**
      * Posts a IosEnterpriseWiFiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosEnterpriseWiFiConfigurationRequest extends IHttpRequest {
      * @param newIosEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback);
+    void put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<? super IosEnterpriseWiFiConfiguration> callback);
 
     /**
      * Posts a IosEnterpriseWiFiConfiguration with a new object

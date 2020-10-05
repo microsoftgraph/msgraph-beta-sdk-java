@@ -35,7 +35,7 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectoryObjectCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IDirectoryObjectCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollecti
 
     public IDirectoryObjectCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDirectoryObjectCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IDirectoryObjectCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IDirectoryObjectCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDirectoryObjectCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IDirectoryObjectCollectionWithReferencesPage buildFromResponse(final DirectoryObjectCollectionResponse response) {

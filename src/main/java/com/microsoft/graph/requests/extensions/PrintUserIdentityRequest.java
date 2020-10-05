@@ -37,7 +37,7 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintUserIdentity> callback) {
+    public void get(final ICallback<? super PrintUserIdentity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintUserIdentity> callback) {
+    public void delete(final ICallback<? super PrintUserIdentity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
      * @param sourcePrintUserIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintUserIdentity sourcePrintUserIdentity, final ICallback<PrintUserIdentity> callback) {
+    public void patch(final PrintUserIdentity sourcePrintUserIdentity, final ICallback<? super PrintUserIdentity> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintUserIdentity);
     }
 
@@ -96,7 +96,7 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
      * @param newPrintUserIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback) {
+    public void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<? super PrintUserIdentity> callback) {
         send(HttpMethod.POST, callback, newPrintUserIdentity);
     }
 
@@ -117,7 +117,7 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
      * @param newPrintUserIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback) {
+    public void put(final PrintUserIdentity newPrintUserIdentity, final ICallback<? super PrintUserIdentity> callback) {
         send(HttpMethod.PUT, callback, newPrintUserIdentity);
     }
 
@@ -151,17 +151,6 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
      */
      public IPrintUserIdentityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintUserIdentityRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintUserIdentityRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintUserIdentityRequest)this;
      }
 

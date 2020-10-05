@@ -47,7 +47,7 @@ public class AdministrativeUnitWithReferenceRequest extends BaseRequest implemen
         super(requestUrl, client, requestOptions, AdministrativeUnit.class);
     }
 
-    public void post(final AdministrativeUnit newAdministrativeUnit, final IJsonBackedObject payload, final ICallback<AdministrativeUnit> callback) {
+    public void post(final AdministrativeUnit newAdministrativeUnit, final IJsonBackedObject payload, final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -59,7 +59,7 @@ public class AdministrativeUnitWithReferenceRequest extends BaseRequest implemen
         return null;
     }
 
-    public void get(final ICallback<AdministrativeUnit> callback) {
+    public void get(final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,7 +67,7 @@ public class AdministrativeUnitWithReferenceRequest extends BaseRequest implemen
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AdministrativeUnit> callback) {
+	public void delete(final ICallback<? super AdministrativeUnit> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -75,7 +75,7 @@ public class AdministrativeUnitWithReferenceRequest extends BaseRequest implemen
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+	public void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
 		send(HttpMethod.PATCH, callback, sourceAdministrativeUnit);
 	}
 
@@ -103,16 +103,6 @@ public class AdministrativeUnitWithReferenceRequest extends BaseRequest implemen
      */
     public IAdministrativeUnitWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AdministrativeUnitWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAdministrativeUnitWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AdministrativeUnitWithReferenceRequest)this;
     }
 }

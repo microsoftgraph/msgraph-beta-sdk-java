@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INotificationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<INotificationCollectionPage> callback);
+    void get(final ICallback<? super INotificationCollectionPage> callback);
 
     INotificationCollectionPage get() throws ClientException;
 
-    void post(final Notification newNotification, final ICallback<Notification> callback);
+    void post(final Notification newNotification, final ICallback<? super Notification> callback);
 
     Notification post(final Notification newNotification) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface INotificationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     INotificationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    INotificationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface INotificationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	INotificationCollectionRequest skipToken(String skipToken);
+	INotificationCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OfficeSuiteApp> callback) {
+    public void get(final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OfficeSuiteApp> callback) {
+    public void delete(final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param sourceOfficeSuiteApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfficeSuiteApp sourceOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback) {
+    public void patch(final OfficeSuiteApp sourceOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.PATCH, callback, sourceOfficeSuiteApp);
     }
 
@@ -96,7 +96,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param newOfficeSuiteApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback) {
+    public void post(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.POST, callback, newOfficeSuiteApp);
     }
 
@@ -117,7 +117,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param newOfficeSuiteApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback) {
+    public void put(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.PUT, callback, newOfficeSuiteApp);
     }
 
@@ -151,17 +151,6 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      */
      public IOfficeSuiteAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OfficeSuiteAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOfficeSuiteAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OfficeSuiteAppRequest)this;
      }
 

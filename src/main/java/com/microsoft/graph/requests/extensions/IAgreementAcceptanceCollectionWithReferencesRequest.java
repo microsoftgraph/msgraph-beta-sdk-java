@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAgreementAcceptanceCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IAgreementAcceptanceCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IAgreementAcceptanceCollectionWithReferencesPage> callback);
 
     IAgreementAcceptanceCollectionWithReferencesPage get() throws ClientException;
 

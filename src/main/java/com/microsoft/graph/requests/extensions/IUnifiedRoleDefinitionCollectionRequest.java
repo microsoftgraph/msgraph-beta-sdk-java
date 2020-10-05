@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUnifiedRoleDefinitionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUnifiedRoleDefinitionCollectionPage> callback);
+    void get(final ICallback<? super IUnifiedRoleDefinitionCollectionPage> callback);
 
     IUnifiedRoleDefinitionCollectionPage get() throws ClientException;
 
-    void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback);
+    void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<? super UnifiedRoleDefinition> callback);
 
     UnifiedRoleDefinition post(final UnifiedRoleDefinition newUnifiedRoleDefinition) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUnifiedRoleDefinitionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUnifiedRoleDefinitionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUnifiedRoleDefinitionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUnifiedRoleDefinitionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUnifiedRoleDefinitionCollectionRequest skipToken(String skipToken);
+	IUnifiedRoleDefinitionCollectionRequest skipToken(final String skipToken);
 }

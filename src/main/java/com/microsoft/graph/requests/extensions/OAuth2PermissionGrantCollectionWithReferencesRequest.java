@@ -35,7 +35,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
 
     public IOAuth2PermissionGrantCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IOAuth2PermissionGrantCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IOAuth2PermissionGrantCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IOAuth2PermissionGrantCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IOAuth2PermissionGrantCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IOAuth2PermissionGrantCollectionWithReferencesPage buildFromResponse(final OAuth2PermissionGrantCollectionResponse response) {

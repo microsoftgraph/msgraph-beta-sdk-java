@@ -37,7 +37,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void get(final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void delete(final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param sourceWindowsAutopilotDeploymentProfilePolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void patch(final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -96,7 +96,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param newWindowsAutopilotDeploymentProfilePolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.POST, callback, newWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -117,7 +117,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param newWindowsAutopilotDeploymentProfilePolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -151,17 +151,6 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      */
      public IWindowsAutopilotDeploymentProfilePolicySetItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAutopilotDeploymentProfilePolicySetItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsAutopilotDeploymentProfilePolicySetItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsAutopilotDeploymentProfilePolicySetItemRequest)this;
      }
 

@@ -40,7 +40,7 @@ public class UnifiedRoleAssignmentCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, UnifiedRoleAssignmentCollectionResponse.class, IUnifiedRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IUnifiedRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IUnifiedRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UnifiedRoleAssignmentCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback) {
+    public void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnifiedRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UnifiedRoleAssignmentCollectionRequest extends BaseCollectionReques
      */
     public IUnifiedRoleAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UnifiedRoleAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUnifiedRoleAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UnifiedRoleAssignmentCollectionRequest)this;
     }
 

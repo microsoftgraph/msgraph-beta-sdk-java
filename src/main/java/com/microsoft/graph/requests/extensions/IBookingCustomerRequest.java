@@ -21,7 +21,7 @@ public interface IBookingCustomerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingCustomer> callback);
+    void get(final ICallback<? super BookingCustomer> callback);
 
     /**
      * Gets the BookingCustomer from the service
@@ -36,7 +36,7 @@ public interface IBookingCustomerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingCustomer> callback);
+    void delete(final ICallback<? super BookingCustomer> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingCustomerRequest extends IHttpRequest {
      * @param sourceBookingCustomer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingCustomer sourceBookingCustomer, final ICallback<BookingCustomer> callback);
+    void patch(final BookingCustomer sourceBookingCustomer, final ICallback<? super BookingCustomer> callback);
 
     /**
      * Patches this BookingCustomer with a source
@@ -68,7 +68,7 @@ public interface IBookingCustomerRequest extends IHttpRequest {
      * @param newBookingCustomer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingCustomer newBookingCustomer, final ICallback<BookingCustomer> callback);
+    void post(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback);
 
     /**
      * Posts a BookingCustomer with a new object
@@ -85,7 +85,7 @@ public interface IBookingCustomerRequest extends IHttpRequest {
      * @param newBookingCustomer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingCustomer newBookingCustomer, final ICallback<BookingCustomer> callback);
+    void put(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback);
 
     /**
      * Posts a BookingCustomer with a new object

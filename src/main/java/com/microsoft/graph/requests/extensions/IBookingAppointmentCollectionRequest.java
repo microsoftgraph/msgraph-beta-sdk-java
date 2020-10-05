@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IBookingAppointmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IBookingAppointmentCollectionPage> callback);
+    void get(final ICallback<? super IBookingAppointmentCollectionPage> callback);
 
     IBookingAppointmentCollectionPage get() throws ClientException;
 
-    void post(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback);
+    void post(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback);
 
     BookingAppointment post(final BookingAppointment newBookingAppointment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IBookingAppointmentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IBookingAppointmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IBookingAppointmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IBookingAppointmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IBookingAppointmentCollectionRequest skipToken(String skipToken);
+	IBookingAppointmentCollectionRequest skipToken(final String skipToken);
 }

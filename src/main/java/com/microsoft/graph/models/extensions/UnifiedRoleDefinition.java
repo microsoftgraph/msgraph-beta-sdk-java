@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UnifiedRolePermission;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionPage;
 
 
@@ -140,19 +138,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("inheritsPermissionsFrom")) {
-            final UnifiedRoleDefinitionCollectionResponse response = new UnifiedRoleDefinitionCollectionResponse();
-            if (json.has("inheritsPermissionsFrom@odata.nextLink")) {
-                response.nextLink = json.get("inheritsPermissionsFrom@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("inheritsPermissionsFrom").toString(), JsonObject[].class);
-            final UnifiedRoleDefinition[] array = new UnifiedRoleDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UnifiedRoleDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            inheritsPermissionsFrom = new UnifiedRoleDefinitionCollectionPage(response, null);
+            inheritsPermissionsFrom = serializer.deserializeObject(json.get("inheritsPermissionsFrom").toString(), UnifiedRoleDefinitionCollectionPage.class);
         }
     }
 }

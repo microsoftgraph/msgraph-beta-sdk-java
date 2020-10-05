@@ -21,7 +21,7 @@ public interface ICurrencyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Currency> callback);
+    void get(final ICallback<? super Currency> callback);
 
     /**
      * Gets the Currency from the service
@@ -36,7 +36,7 @@ public interface ICurrencyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Currency> callback);
+    void delete(final ICallback<? super Currency> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICurrencyRequest extends IHttpRequest {
      * @param sourceCurrency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Currency sourceCurrency, final ICallback<Currency> callback);
+    void patch(final Currency sourceCurrency, final ICallback<? super Currency> callback);
 
     /**
      * Patches this Currency with a source
@@ -68,7 +68,7 @@ public interface ICurrencyRequest extends IHttpRequest {
      * @param newCurrency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Currency newCurrency, final ICallback<Currency> callback);
+    void post(final Currency newCurrency, final ICallback<? super Currency> callback);
 
     /**
      * Posts a Currency with a new object
@@ -85,7 +85,7 @@ public interface ICurrencyRequest extends IHttpRequest {
      * @param newCurrency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Currency newCurrency, final ICallback<Currency> callback);
+    void put(final Currency newCurrency, final ICallback<? super Currency> callback);
 
     /**
      * Posts a Currency with a new object

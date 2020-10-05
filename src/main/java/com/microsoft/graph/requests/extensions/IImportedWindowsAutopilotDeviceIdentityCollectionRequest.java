@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IImportedWindowsAutopilotDeviceIdentityCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IImportedWindowsAutopilotDeviceIdentityCollectionPage> callback);
+    void get(final ICallback<? super IImportedWindowsAutopilotDeviceIdentityCollectionPage> callback);
 
     IImportedWindowsAutopilotDeviceIdentityCollectionPage get() throws ClientException;
 
-    void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback);
+    void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback);
 
     ImportedWindowsAutopilotDeviceIdentity post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IImportedWindowsAutopilotDeviceIdentityCollectionRequest extend
      * @return the updated request
      */
     IImportedWindowsAutopilotDeviceIdentityCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IImportedWindowsAutopilotDeviceIdentityCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IImportedWindowsAutopilotDeviceIdentityCollectionRequest extend
      *
 	 * @return the updated request
 	 */
-	IImportedWindowsAutopilotDeviceIdentityCollectionRequest skipToken(String skipToken);
+	IImportedWindowsAutopilotDeviceIdentityCollectionRequest skipToken(final String skipToken);
 }

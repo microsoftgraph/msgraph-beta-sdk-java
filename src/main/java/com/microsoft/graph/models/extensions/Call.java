@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.ParticipantInfo;
@@ -29,11 +28,8 @@ import com.microsoft.graph.models.extensions.AudioRoutingGroup;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AudioRoutingGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.AudioRoutingGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.CommsOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.ParticipantCollectionResponse;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionPage;
 
 
@@ -322,51 +318,15 @@ public class Call extends Entity implements IJsonBackedObject {
 
 
         if (json.has("audioRoutingGroups")) {
-            final AudioRoutingGroupCollectionResponse response = new AudioRoutingGroupCollectionResponse();
-            if (json.has("audioRoutingGroups@odata.nextLink")) {
-                response.nextLink = json.get("audioRoutingGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("audioRoutingGroups").toString(), JsonObject[].class);
-            final AudioRoutingGroup[] array = new AudioRoutingGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AudioRoutingGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            audioRoutingGroups = new AudioRoutingGroupCollectionPage(response, null);
+            audioRoutingGroups = serializer.deserializeObject(json.get("audioRoutingGroups").toString(), AudioRoutingGroupCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            final CommsOperationCollectionResponse response = new CommsOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final CommsOperation[] array = new CommsOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CommsOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new CommsOperationCollectionPage(response, null);
+            operations = serializer.deserializeObject(json.get("operations").toString(), CommsOperationCollectionPage.class);
         }
 
         if (json.has("participants")) {
-            final ParticipantCollectionResponse response = new ParticipantCollectionResponse();
-            if (json.has("participants@odata.nextLink")) {
-                response.nextLink = json.get("participants@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("participants").toString(), JsonObject[].class);
-            final Participant[] array = new Participant[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Participant.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            participants = new ParticipantCollectionPage(response, null);
+            participants = serializer.deserializeObject(json.get("participants").toString(), ParticipantCollectionPage.class);
         }
     }
 }

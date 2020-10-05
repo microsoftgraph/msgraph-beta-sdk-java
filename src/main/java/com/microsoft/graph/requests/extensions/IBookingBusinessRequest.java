@@ -21,7 +21,7 @@ public interface IBookingBusinessRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingBusiness> callback);
+    void get(final ICallback<? super BookingBusiness> callback);
 
     /**
      * Gets the BookingBusiness from the service
@@ -36,7 +36,7 @@ public interface IBookingBusinessRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingBusiness> callback);
+    void delete(final ICallback<? super BookingBusiness> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingBusinessRequest extends IHttpRequest {
      * @param sourceBookingBusiness the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingBusiness sourceBookingBusiness, final ICallback<BookingBusiness> callback);
+    void patch(final BookingBusiness sourceBookingBusiness, final ICallback<? super BookingBusiness> callback);
 
     /**
      * Patches this BookingBusiness with a source
@@ -68,7 +68,7 @@ public interface IBookingBusinessRequest extends IHttpRequest {
      * @param newBookingBusiness the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingBusiness newBookingBusiness, final ICallback<BookingBusiness> callback);
+    void post(final BookingBusiness newBookingBusiness, final ICallback<? super BookingBusiness> callback);
 
     /**
      * Posts a BookingBusiness with a new object
@@ -85,7 +85,7 @@ public interface IBookingBusinessRequest extends IHttpRequest {
      * @param newBookingBusiness the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingBusiness newBookingBusiness, final ICallback<BookingBusiness> callback);
+    void put(final BookingBusiness newBookingBusiness, final ICallback<? super BookingBusiness> callback);
 
     /**
      * Posts a BookingBusiness with a new object

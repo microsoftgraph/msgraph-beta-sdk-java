@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAllowedDataLocationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAllowedDataLocationCollectionPage> callback);
+    void get(final ICallback<? super IAllowedDataLocationCollectionPage> callback);
 
     IAllowedDataLocationCollectionPage get() throws ClientException;
 
-    void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback);
+    void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback);
 
     AllowedDataLocation post(final AllowedDataLocation newAllowedDataLocation) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IAllowedDataLocationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAllowedDataLocationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAllowedDataLocationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IAllowedDataLocationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAllowedDataLocationCollectionRequest skipToken(String skipToken);
+	IAllowedDataLocationCollectionRequest skipToken(final String skipToken);
 }

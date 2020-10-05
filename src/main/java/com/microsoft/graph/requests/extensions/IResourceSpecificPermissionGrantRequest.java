@@ -21,7 +21,7 @@ public interface IResourceSpecificPermissionGrantRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ResourceSpecificPermissionGrant> callback);
+    void get(final ICallback<? super ResourceSpecificPermissionGrant> callback);
 
     /**
      * Gets the ResourceSpecificPermissionGrant from the service
@@ -36,7 +36,7 @@ public interface IResourceSpecificPermissionGrantRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ResourceSpecificPermissionGrant> callback);
+    void delete(final ICallback<? super ResourceSpecificPermissionGrant> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IResourceSpecificPermissionGrantRequest extends IHttpRequest {
      * @param sourceResourceSpecificPermissionGrant the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback);
+    void patch(final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback);
 
     /**
      * Patches this ResourceSpecificPermissionGrant with a source
@@ -68,7 +68,7 @@ public interface IResourceSpecificPermissionGrantRequest extends IHttpRequest {
      * @param newResourceSpecificPermissionGrant the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback);
+    void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback);
 
     /**
      * Posts a ResourceSpecificPermissionGrant with a new object
@@ -85,7 +85,7 @@ public interface IResourceSpecificPermissionGrantRequest extends IHttpRequest {
      * @param newResourceSpecificPermissionGrant the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback);
+    void put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback);
 
     /**
      * Posts a ResourceSpecificPermissionGrant with a new object

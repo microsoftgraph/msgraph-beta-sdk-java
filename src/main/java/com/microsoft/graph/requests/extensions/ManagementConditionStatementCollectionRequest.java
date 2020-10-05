@@ -42,7 +42,7 @@ public class ManagementConditionStatementCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, ManagementConditionStatementCollectionResponse.class, IManagementConditionStatementCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagementConditionStatementCollectionPage> callback) {
+    public void get(final ICallback<? super IManagementConditionStatementCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class ManagementConditionStatementCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
+    public void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<? super ManagementConditionStatement> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagementConditionStatementRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,6 +94,17 @@ public class ManagementConditionStatementCollectionRequest extends BaseCollectio
      */
     public IManagementConditionStatementCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagementConditionStatementCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagementConditionStatementCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagementConditionStatementCollectionRequest)this;
     }
 

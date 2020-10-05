@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAndroidManagedStoreAppConfigurationSchemaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAndroidManagedStoreAppConfigurationSchemaCollectionPage> callback);
+    void get(final ICallback<? super IAndroidManagedStoreAppConfigurationSchemaCollectionPage> callback);
 
     IAndroidManagedStoreAppConfigurationSchemaCollectionPage get() throws ClientException;
 
-    void post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+    void post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<? super AndroidManagedStoreAppConfigurationSchema> callback);
 
     AndroidManagedStoreAppConfigurationSchema post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAndroidManagedStoreAppConfigurationSchemaCollectionRequest ext
      * @return the updated request
      */
     IAndroidManagedStoreAppConfigurationSchemaCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAndroidManagedStoreAppConfigurationSchemaCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAndroidManagedStoreAppConfigurationSchemaCollectionRequest ext
      *
 	 * @return the updated request
 	 */
-	IAndroidManagedStoreAppConfigurationSchemaCollectionRequest skipToken(String skipToken);
+	IAndroidManagedStoreAppConfigurationSchemaCollectionRequest skipToken(final String skipToken);
 }

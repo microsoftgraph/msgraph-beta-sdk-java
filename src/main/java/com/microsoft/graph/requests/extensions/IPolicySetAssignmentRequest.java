@@ -21,7 +21,7 @@ public interface IPolicySetAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PolicySetAssignment> callback);
+    void get(final ICallback<? super PolicySetAssignment> callback);
 
     /**
      * Gets the PolicySetAssignment from the service
@@ -36,7 +36,7 @@ public interface IPolicySetAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PolicySetAssignment> callback);
+    void delete(final ICallback<? super PolicySetAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPolicySetAssignmentRequest extends IHttpRequest {
      * @param sourcePolicySetAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PolicySetAssignment sourcePolicySetAssignment, final ICallback<PolicySetAssignment> callback);
+    void patch(final PolicySetAssignment sourcePolicySetAssignment, final ICallback<? super PolicySetAssignment> callback);
 
     /**
      * Patches this PolicySetAssignment with a source
@@ -68,7 +68,7 @@ public interface IPolicySetAssignmentRequest extends IHttpRequest {
      * @param newPolicySetAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PolicySetAssignment newPolicySetAssignment, final ICallback<PolicySetAssignment> callback);
+    void post(final PolicySetAssignment newPolicySetAssignment, final ICallback<? super PolicySetAssignment> callback);
 
     /**
      * Posts a PolicySetAssignment with a new object
@@ -85,7 +85,7 @@ public interface IPolicySetAssignmentRequest extends IHttpRequest {
      * @param newPolicySetAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PolicySetAssignment newPolicySetAssignment, final ICallback<PolicySetAssignment> callback);
+    void put(final PolicySetAssignment newPolicySetAssignment, final ICallback<? super PolicySetAssignment> callback);
 
     /**
      * Posts a PolicySetAssignment with a new object

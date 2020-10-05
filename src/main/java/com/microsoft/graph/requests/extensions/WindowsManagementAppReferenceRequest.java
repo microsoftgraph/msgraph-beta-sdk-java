@@ -38,7 +38,7 @@ public class WindowsManagementAppReferenceRequest extends BaseRequest implements
         super(requestUrl, client, requestOptions, WindowsManagementApp.class);
     }
 
-    public void delete(final ICallback<WindowsManagementApp> callback) {
+    public void delete(final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class WindowsManagementAppReferenceRequest extends BaseRequest implements
         return (WindowsManagementAppReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsManagementAppReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsManagementAppReferenceRequest)this;
-    }
-    /**
      * Puts the WindowsManagementApp
      *
      * @param srcWindowsManagementApp the WindowsManagementApp reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WindowsManagementApp srcWindowsManagementApp, final ICallback<WindowsManagementApp> callback) {
+    public void put(WindowsManagementApp srcWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.PUT, callback, srcWindowsManagementApp);
     }
 

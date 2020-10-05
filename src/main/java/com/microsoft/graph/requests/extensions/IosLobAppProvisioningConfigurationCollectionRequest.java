@@ -43,7 +43,7 @@ public class IosLobAppProvisioningConfigurationCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, IosLobAppProvisioningConfigurationCollectionResponse.class, IIosLobAppProvisioningConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<IIosLobAppProvisioningConfigurationCollectionPage> callback) {
+    public void get(final ICallback<? super IIosLobAppProvisioningConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class IosLobAppProvisioningConfigurationCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback) {
+    public void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosLobAppProvisioningConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -95,6 +95,17 @@ public class IosLobAppProvisioningConfigurationCollectionRequest extends BaseCol
      */
     public IIosLobAppProvisioningConfigurationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IosLobAppProvisioningConfigurationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIosLobAppProvisioningConfigurationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IosLobAppProvisioningConfigurationCollectionRequest)this;
     }
 

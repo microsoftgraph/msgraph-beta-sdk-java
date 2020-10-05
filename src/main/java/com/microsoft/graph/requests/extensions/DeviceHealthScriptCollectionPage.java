@@ -23,6 +23,6 @@ public class DeviceHealthScriptCollectionPage extends BaseCollectionPage<DeviceH
      * @param builder  the request builder for the next collection page
      */
     public DeviceHealthScriptCollectionPage(final DeviceHealthScriptCollectionResponse response, final IDeviceHealthScriptCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsAppCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsAppCollectionPage> callback);
+    void get(final ICallback<? super ITeamsAppCollectionPage> callback);
 
     ITeamsAppCollectionPage get() throws ClientException;
 
-    void post(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback);
+    void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback);
 
     TeamsApp post(final TeamsApp newTeamsApp) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITeamsAppCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITeamsAppCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITeamsAppCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITeamsAppCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsAppCollectionRequest skipToken(String skipToken);
+	ITeamsAppCollectionRequest skipToken(final String skipToken);
 }

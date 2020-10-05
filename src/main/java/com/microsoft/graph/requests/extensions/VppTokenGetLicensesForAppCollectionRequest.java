@@ -39,7 +39,7 @@ public class VppTokenGetLicensesForAppCollectionRequest extends BaseCollectionRe
     }
 
 
-    public void get(final ICallback<IVppTokenGetLicensesForAppCollectionPage> callback) {
+    public void get(final ICallback<? super IVppTokenGetLicensesForAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class VppTokenGetLicensesForAppCollectionRequest extends BaseCollectionRe
      */
     public IVppTokenGetLicensesForAppCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IVppTokenGetLicensesForAppCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IVppTokenGetLicensesForAppCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IVppTokenGetLicensesForAppCollectionRequest)this;
     }
 

@@ -26,7 +26,7 @@ public interface IPrivilegedRoleAssignmentMakeEligibleRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<PrivilegedRoleAssignment> callback);
+    void post(final ICallback<? super PrivilegedRoleAssignment> callback);
 
     /**
      * Creates the PrivilegedRoleAssignmentMakeEligible

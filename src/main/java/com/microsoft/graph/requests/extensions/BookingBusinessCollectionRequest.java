@@ -39,7 +39,7 @@ public class BookingBusinessCollectionRequest extends BaseCollectionRequest<Book
         super(requestUrl, client, requestOptions, BookingBusinessCollectionResponse.class, IBookingBusinessCollectionPage.class);
     }
 
-    public void get(final ICallback<IBookingBusinessCollectionPage> callback) {
+    public void get(final ICallback<? super IBookingBusinessCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class BookingBusinessCollectionRequest extends BaseCollectionRequest<Book
         return buildFromResponse(response);
     }
 
-    public void post(final BookingBusiness newBookingBusiness, final ICallback<BookingBusiness> callback) {
+    public void post(final BookingBusiness newBookingBusiness, final ICallback<? super BookingBusiness> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingBusinessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class BookingBusinessCollectionRequest extends BaseCollectionRequest<Book
      */
     public IBookingBusinessCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (BookingBusinessCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IBookingBusinessCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (BookingBusinessCollectionRequest)this;
     }
 

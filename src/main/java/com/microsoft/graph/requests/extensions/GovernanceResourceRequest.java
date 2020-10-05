@@ -55,7 +55,7 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GovernanceResource> callback) {
+    public void get(final ICallback<? super GovernanceResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -74,7 +74,7 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GovernanceResource> callback) {
+    public void delete(final ICallback<? super GovernanceResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +93,7 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      * @param sourceGovernanceResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceResource sourceGovernanceResource, final ICallback<GovernanceResource> callback) {
+    public void patch(final GovernanceResource sourceGovernanceResource, final ICallback<? super GovernanceResource> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceResource);
     }
 
@@ -114,7 +114,7 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      * @param newGovernanceResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback) {
+    public void post(final GovernanceResource newGovernanceResource, final ICallback<? super GovernanceResource> callback) {
         send(HttpMethod.POST, callback, newGovernanceResource);
     }
 
@@ -135,7 +135,7 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      * @param newGovernanceResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback) {
+    public void put(final GovernanceResource newGovernanceResource, final ICallback<? super GovernanceResource> callback) {
         send(HttpMethod.PUT, callback, newGovernanceResource);
     }
 
@@ -169,17 +169,6 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      */
      public IGovernanceResourceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceResourceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGovernanceResourceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GovernanceResourceRequest)this;
      }
 

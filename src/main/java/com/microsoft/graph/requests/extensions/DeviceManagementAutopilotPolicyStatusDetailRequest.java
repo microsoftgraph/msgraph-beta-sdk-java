@@ -37,7 +37,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void get(final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void delete(final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param sourceDeviceManagementAutopilotPolicyStatusDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void patch(final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param newDeviceManagementAutopilotPolicyStatusDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param newDeviceManagementAutopilotPolicyStatusDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      */
      public IDeviceManagementAutopilotPolicyStatusDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementAutopilotPolicyStatusDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementAutopilotPolicyStatusDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementAutopilotPolicyStatusDetailRequest)this;
      }
 

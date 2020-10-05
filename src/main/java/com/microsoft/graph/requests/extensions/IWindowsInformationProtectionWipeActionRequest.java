@@ -21,7 +21,7 @@ public interface IWindowsInformationProtectionWipeActionRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsInformationProtectionWipeAction> callback);
+    void get(final ICallback<? super WindowsInformationProtectionWipeAction> callback);
 
     /**
      * Gets the WindowsInformationProtectionWipeAction from the service
@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionWipeActionRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsInformationProtectionWipeAction> callback);
+    void delete(final ICallback<? super WindowsInformationProtectionWipeAction> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsInformationProtectionWipeActionRequest extends IHttpReq
      * @param sourceWindowsInformationProtectionWipeAction the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsInformationProtectionWipeAction sourceWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback);
+    void patch(final WindowsInformationProtectionWipeAction sourceWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback);
 
     /**
      * Patches this WindowsInformationProtectionWipeAction with a source
@@ -68,7 +68,7 @@ public interface IWindowsInformationProtectionWipeActionRequest extends IHttpReq
      * @param newWindowsInformationProtectionWipeAction the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback);
+    void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback);
 
     /**
      * Posts a WindowsInformationProtectionWipeAction with a new object
@@ -85,7 +85,7 @@ public interface IWindowsInformationProtectionWipeActionRequest extends IHttpReq
      * @param newWindowsInformationProtectionWipeAction the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback);
+    void put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback);
 
     /**
      * Posts a WindowsInformationProtectionWipeAction with a new object

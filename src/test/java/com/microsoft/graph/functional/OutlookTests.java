@@ -2,6 +2,7 @@ package com.microsoft.graph.functional;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -12,6 +13,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
@@ -36,15 +38,19 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.AttachmentType;
 import com.microsoft.graph.models.generated.BodyType;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.IEventCollectionPage;
 
 @Ignore
 public class OutlookTests {
@@ -108,11 +114,8 @@ public class OutlookTests {
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
     	
-    	java.util.List<QueryOption> options = new ArrayList<QueryOption>();
-    	QueryOption o = new QueryOption("$filter", "subject eq '" + draftSubject + "'");
-    	options.add(o);
     	//Check that the sent message exists on the server
-    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest(options).get();
+    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
     	assertFalse(mcp.getCurrentPage().isEmpty());
     }
     private Message createDraftMessage(TestBase testBase, String draftSubject) {
@@ -313,5 +316,33 @@ public class OutlookTests {
 
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
-    }
+	}
+	@Test
+	public void testSingleValuesExtendedProperties() {
+    	final TestBase testBase = new TestBase();
+		final IEventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
+		final String eventId = arrangePage.getCurrentPage().get(0).id;
+		final Event updatedEvent = new Event();
+		final String uuid = UUID.randomUUID().toString();
+		final SingleValueLegacyExtendedProperty prop =  new SingleValueLegacyExtendedProperty();
+		prop.id = "String {"+uuid+"} Name fun";
+		prop.value = "some value";
+		final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
+		response.value = new ArrayList<SingleValueLegacyExtendedProperty>();
+		response.value.add(prop);
+		updatedEvent.singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
+
+		testBase.graphClient.me().events(eventId).buildRequest().patch(updatedEvent);
+		final IEventCollectionPage page = testBase.graphClient.me()
+										.events()
+										.buildRequest()
+										.expand("singleValueExtendedProperties")
+										.top(1)
+										// .filter("singleValueExtendedProperties/Any(ep: ep/id eq '"+prop.id+"' and ep/value eq '"+prop.value+"')")
+										.get();
+		assertNotNull(page);
+		final List<Event> events = page.getCurrentPage();
+		assertTrue(events.size() == 1);
+		assertNotNull(events.get(0).singleValueExtendedProperties);
+	}
 }

@@ -34,6 +34,6 @@ public class AccessPackageCatalogSearchCollectionPage extends BaseCollectionPage
      * @param builder The request builder for the next collection page
      */
     public AccessPackageCatalogSearchCollectionPage(final AccessPackageCatalogSearchCollectionResponse response, final IAccessPackageCatalogSearchCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

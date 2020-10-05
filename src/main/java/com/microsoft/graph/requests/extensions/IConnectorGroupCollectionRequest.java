@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IConnectorGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IConnectorGroupCollectionPage> callback);
+    void get(final ICallback<? super IConnectorGroupCollectionPage> callback);
 
     IConnectorGroupCollectionPage get() throws ClientException;
 
-    void post(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback);
+    void post(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback);
 
     ConnectorGroup post(final ConnectorGroup newConnectorGroup) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IConnectorGroupCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IConnectorGroupCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IConnectorGroupCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IConnectorGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IConnectorGroupCollectionRequest skipToken(String skipToken);
+	IConnectorGroupCollectionRequest skipToken(final String skipToken);
 }

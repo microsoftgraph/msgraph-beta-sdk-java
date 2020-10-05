@@ -23,6 +23,6 @@ public class LookupResultRowCollectionPage extends BaseCollectionPage<LookupResu
      * @param builder  the request builder for the next collection page
      */
     public LookupResultRowCollectionPage(final LookupResultRowCollectionResponse response, final ILookupResultRowCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

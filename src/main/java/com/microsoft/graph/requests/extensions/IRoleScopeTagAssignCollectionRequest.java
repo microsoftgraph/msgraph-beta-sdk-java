@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IRoleScopeTagAssignCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IRoleScopeTagAssignCollectionPage> callback);
+    void post(final ICallback<? super IRoleScopeTagAssignCollectionPage> callback);
 
     IRoleScopeTagAssignCollectionPage post() throws ClientException;
 

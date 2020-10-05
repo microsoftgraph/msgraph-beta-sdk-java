@@ -37,7 +37,7 @@ public class SynchronizationSchemaParseExpressionRequest extends BaseRequest imp
         body = new SynchronizationSchemaParseExpressionBody();
     }
 
-    public void post(final ICallback<ParseExpressionResponse> callback) {
+    public void post(final ICallback<? super ParseExpressionResponse> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class SynchronizationSchemaParseExpressionRequest extends BaseRequest imp
      */
     public ISynchronizationSchemaParseExpressionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SynchronizationSchemaParseExpressionRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISynchronizationSchemaParseExpressionRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SynchronizationSchemaParseExpressionRequest)this;
     }
 

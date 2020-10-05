@@ -39,7 +39,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidVpnConfiguration> callback) {
+    public void get(final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidVpnConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param sourceAndroidVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidVpnConfiguration sourceAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback) {
+    public void patch(final AndroidVpnConfiguration sourceAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidVpnConfiguration);
     }
 
@@ -98,7 +98,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param newAndroidVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback) {
+    public void post(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidVpnConfiguration);
     }
 
@@ -119,7 +119,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param newAndroidVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback) {
+    public void put(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidVpnConfiguration);
     }
 
@@ -153,17 +153,6 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      */
      public IAndroidVpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidVpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidVpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidVpnConfigurationRequest)this;
      }
 

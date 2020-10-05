@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.MicrosoftStoreForBusinessLicenseType;
 import com.microsoft.graph.models.extensions.VppLicensingType;
 import com.microsoft.graph.models.extensions.MobileContainedApp;
 import com.microsoft.graph.models.extensions.MobileApp;
-import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionPage;
 
 
@@ -125,19 +123,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
 
 
         if (json.has("containedApps")) {
-            final MobileContainedAppCollectionResponse response = new MobileContainedAppCollectionResponse();
-            if (json.has("containedApps@odata.nextLink")) {
-                response.nextLink = json.get("containedApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("containedApps").toString(), JsonObject[].class);
-            final MobileContainedApp[] array = new MobileContainedApp[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileContainedApp.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            containedApps = new MobileContainedAppCollectionPage(response, null);
+            containedApps = serializer.deserializeObject(json.get("containedApps").toString(), MobileContainedAppCollectionPage.class);
         }
     }
 }

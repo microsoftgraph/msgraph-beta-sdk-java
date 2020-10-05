@@ -23,6 +23,6 @@ public class SecurityActionCollectionPage extends BaseCollectionPage<SecurityAct
      * @param builder  the request builder for the next collection page
      */
     public SecurityActionCollectionPage(final SecurityActionCollectionResponse response, final ISecurityActionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

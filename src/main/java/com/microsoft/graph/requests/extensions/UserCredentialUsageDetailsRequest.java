@@ -37,7 +37,7 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserCredentialUsageDetails> callback) {
+    public void get(final ICallback<? super UserCredentialUsageDetails> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserCredentialUsageDetails> callback) {
+    public void delete(final ICallback<? super UserCredentialUsageDetails> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
      * @param sourceUserCredentialUsageDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserCredentialUsageDetails sourceUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback) {
+    public void patch(final UserCredentialUsageDetails sourceUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback) {
         send(HttpMethod.PATCH, callback, sourceUserCredentialUsageDetails);
     }
 
@@ -96,7 +96,7 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
      * @param newUserCredentialUsageDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback) {
+    public void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback) {
         send(HttpMethod.POST, callback, newUserCredentialUsageDetails);
     }
 
@@ -117,7 +117,7 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
      * @param newUserCredentialUsageDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback) {
+    public void put(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<? super UserCredentialUsageDetails> callback) {
         send(HttpMethod.PUT, callback, newUserCredentialUsageDetails);
     }
 
@@ -151,17 +151,6 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
      */
      public IUserCredentialUsageDetailsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserCredentialUsageDetailsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserCredentialUsageDetailsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserCredentialUsageDetailsRequest)this;
      }
 

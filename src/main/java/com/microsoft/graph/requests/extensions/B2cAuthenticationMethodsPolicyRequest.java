@@ -37,7 +37,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<B2cAuthenticationMethodsPolicy> callback) {
+    public void get(final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<B2cAuthenticationMethodsPolicy> callback) {
+    public void delete(final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param sourceB2cAuthenticationMethodsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy, final ICallback<B2cAuthenticationMethodsPolicy> callback) {
+    public void patch(final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceB2cAuthenticationMethodsPolicy);
     }
 
@@ -96,7 +96,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param newB2cAuthenticationMethodsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<B2cAuthenticationMethodsPolicy> callback) {
+    public void post(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.POST, callback, newB2cAuthenticationMethodsPolicy);
     }
 
@@ -117,7 +117,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param newB2cAuthenticationMethodsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<B2cAuthenticationMethodsPolicy> callback) {
+    public void put(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.PUT, callback, newB2cAuthenticationMethodsPolicy);
     }
 
@@ -151,17 +151,6 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      */
      public IB2cAuthenticationMethodsPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (B2cAuthenticationMethodsPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IB2cAuthenticationMethodsPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (B2cAuthenticationMethodsPolicyRequest)this;
      }
 

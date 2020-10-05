@@ -21,7 +21,7 @@ public interface ITermsAndConditionsGroupAssignmentRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TermsAndConditionsGroupAssignment> callback);
+    void get(final ICallback<? super TermsAndConditionsGroupAssignment> callback);
 
     /**
      * Gets the TermsAndConditionsGroupAssignment from the service
@@ -36,7 +36,7 @@ public interface ITermsAndConditionsGroupAssignmentRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TermsAndConditionsGroupAssignment> callback);
+    void delete(final ICallback<? super TermsAndConditionsGroupAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITermsAndConditionsGroupAssignmentRequest extends IHttpRequest 
      * @param sourceTermsAndConditionsGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback);
+    void patch(final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback);
 
     /**
      * Patches this TermsAndConditionsGroupAssignment with a source
@@ -68,7 +68,7 @@ public interface ITermsAndConditionsGroupAssignmentRequest extends IHttpRequest 
      * @param newTermsAndConditionsGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback);
+    void post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback);
 
     /**
      * Posts a TermsAndConditionsGroupAssignment with a new object
@@ -85,7 +85,7 @@ public interface ITermsAndConditionsGroupAssignmentRequest extends IHttpRequest 
      * @param newTermsAndConditionsGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback);
+    void put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback);
 
     /**
      * Posts a TermsAndConditionsGroupAssignment with a new object

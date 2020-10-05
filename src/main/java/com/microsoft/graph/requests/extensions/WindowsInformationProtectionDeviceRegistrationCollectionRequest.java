@@ -40,7 +40,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionRequest ext
         super(requestUrl, client, requestOptions, WindowsInformationProtectionDeviceRegistrationCollectionResponse.class, IWindowsInformationProtectionDeviceRegistrationCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsInformationProtectionDeviceRegistrationCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsInformationProtectionDeviceRegistrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionRequest ext
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
+    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionDeviceRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionRequest ext
      */
     public IWindowsInformationProtectionDeviceRegistrationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsInformationProtectionDeviceRegistrationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionDeviceRegistrationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsInformationProtectionDeviceRegistrationCollectionRequest)this;
     }
 

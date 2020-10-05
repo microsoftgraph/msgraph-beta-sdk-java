@@ -40,7 +40,7 @@ public class RiskyUserHistoryItemCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, RiskyUserHistoryItemCollectionResponse.class, IRiskyUserHistoryItemCollectionPage.class);
     }
 
-    public void get(final ICallback<IRiskyUserHistoryItemCollectionPage> callback) {
+    public void get(final ICallback<? super IRiskyUserHistoryItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RiskyUserHistoryItemCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback) {
+    public void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RiskyUserHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class RiskyUserHistoryItemCollectionRequest extends BaseCollectionRequest
      */
     public IRiskyUserHistoryItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RiskyUserHistoryItemCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRiskyUserHistoryItemCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RiskyUserHistoryItemCollectionRequest)this;
     }
 

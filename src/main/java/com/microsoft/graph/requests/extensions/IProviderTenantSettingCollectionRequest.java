@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProviderTenantSettingCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IProviderTenantSettingCollectionPage> callback);
+    void get(final ICallback<? super IProviderTenantSettingCollectionPage> callback);
 
     IProviderTenantSettingCollectionPage get() throws ClientException;
 
-    void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback);
+    void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback);
 
     ProviderTenantSetting post(final ProviderTenantSetting newProviderTenantSetting) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IProviderTenantSettingCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IProviderTenantSettingCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IProviderTenantSettingCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IProviderTenantSettingCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IProviderTenantSettingCollectionRequest skipToken(String skipToken);
+	IProviderTenantSettingCollectionRequest skipToken(final String skipToken);
 }

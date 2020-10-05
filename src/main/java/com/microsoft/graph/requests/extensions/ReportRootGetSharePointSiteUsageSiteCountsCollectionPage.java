@@ -34,6 +34,6 @@ public class ReportRootGetSharePointSiteUsageSiteCountsCollectionPage extends Ba
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSharePointSiteUsageSiteCountsCollectionPage(final ReportRootGetSharePointSiteUsageSiteCountsCollectionResponse response, final IReportRootGetSharePointSiteUsageSiteCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

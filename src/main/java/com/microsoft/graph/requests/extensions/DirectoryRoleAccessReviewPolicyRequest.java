@@ -37,7 +37,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectoryRoleAccessReviewPolicy> callback) {
+    public void get(final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectoryRoleAccessReviewPolicy> callback) {
+    public void delete(final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param sourceDirectoryRoleAccessReviewPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback) {
+    public void patch(final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryRoleAccessReviewPolicy);
     }
 
@@ -96,7 +96,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param newDirectoryRoleAccessReviewPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback) {
+    public void post(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.POST, callback, newDirectoryRoleAccessReviewPolicy);
     }
 
@@ -117,7 +117,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param newDirectoryRoleAccessReviewPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback) {
+    public void put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.PUT, callback, newDirectoryRoleAccessReviewPolicy);
     }
 
@@ -151,17 +151,6 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      */
      public IDirectoryRoleAccessReviewPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryRoleAccessReviewPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDirectoryRoleAccessReviewPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DirectoryRoleAccessReviewPolicyRequest)this;
      }
 

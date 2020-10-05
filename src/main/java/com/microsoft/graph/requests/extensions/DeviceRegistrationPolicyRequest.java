@@ -37,7 +37,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceRegistrationPolicy> callback) {
+    public void get(final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceRegistrationPolicy> callback) {
+    public void delete(final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param sourceDeviceRegistrationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback) {
+    public void patch(final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceRegistrationPolicy);
     }
 
@@ -96,7 +96,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param newDeviceRegistrationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback) {
+    public void post(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.POST, callback, newDeviceRegistrationPolicy);
     }
 
@@ -117,7 +117,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param newDeviceRegistrationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback) {
+    public void put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.PUT, callback, newDeviceRegistrationPolicy);
     }
 
@@ -151,17 +151,6 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      */
      public IDeviceRegistrationPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceRegistrationPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceRegistrationPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceRegistrationPolicyRequest)this;
      }
 

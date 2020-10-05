@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionPage> callback);
+    void get(final ICallback<? super IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionPage> callback);
 
     IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionPage get() throws ClientException;
 

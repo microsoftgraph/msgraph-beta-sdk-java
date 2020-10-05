@@ -21,7 +21,7 @@ public interface IConnectionOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConnectionOperation> callback);
+    void get(final ICallback<? super ConnectionOperation> callback);
 
     /**
      * Gets the ConnectionOperation from the service
@@ -36,7 +36,7 @@ public interface IConnectionOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConnectionOperation> callback);
+    void delete(final ICallback<? super ConnectionOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConnectionOperationRequest extends IHttpRequest {
      * @param sourceConnectionOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConnectionOperation sourceConnectionOperation, final ICallback<ConnectionOperation> callback);
+    void patch(final ConnectionOperation sourceConnectionOperation, final ICallback<? super ConnectionOperation> callback);
 
     /**
      * Patches this ConnectionOperation with a source
@@ -68,7 +68,7 @@ public interface IConnectionOperationRequest extends IHttpRequest {
      * @param newConnectionOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback);
+    void post(final ConnectionOperation newConnectionOperation, final ICallback<? super ConnectionOperation> callback);
 
     /**
      * Posts a ConnectionOperation with a new object
@@ -85,7 +85,7 @@ public interface IConnectionOperationRequest extends IHttpRequest {
      * @param newConnectionOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback);
+    void put(final ConnectionOperation newConnectionOperation, final ICallback<? super ConnectionOperation> callback);
 
     /**
      * Posts a ConnectionOperation with a new object

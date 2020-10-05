@@ -21,7 +21,7 @@ public interface IWindowsMicrosoftEdgeAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsMicrosoftEdgeApp> callback);
+    void get(final ICallback<? super WindowsMicrosoftEdgeApp> callback);
 
     /**
      * Gets the WindowsMicrosoftEdgeApp from the service
@@ -36,7 +36,7 @@ public interface IWindowsMicrosoftEdgeAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsMicrosoftEdgeApp> callback);
+    void delete(final ICallback<? super WindowsMicrosoftEdgeApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsMicrosoftEdgeAppRequest extends IHttpRequest {
      * @param sourceWindowsMicrosoftEdgeApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback);
+    void patch(final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback);
 
     /**
      * Patches this WindowsMicrosoftEdgeApp with a source
@@ -68,7 +68,7 @@ public interface IWindowsMicrosoftEdgeAppRequest extends IHttpRequest {
      * @param newWindowsMicrosoftEdgeApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback);
+    void post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback);
 
     /**
      * Posts a WindowsMicrosoftEdgeApp with a new object
@@ -85,7 +85,7 @@ public interface IWindowsMicrosoftEdgeAppRequest extends IHttpRequest {
      * @param newWindowsMicrosoftEdgeApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback);
+    void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback);
 
     /**
      * Posts a WindowsMicrosoftEdgeApp with a new object

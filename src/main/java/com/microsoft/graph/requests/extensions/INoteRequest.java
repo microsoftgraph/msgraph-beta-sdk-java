@@ -21,7 +21,7 @@ public interface INoteRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Note> callback);
+    void get(final ICallback<? super Note> callback);
 
     /**
      * Gets the Note from the service
@@ -36,7 +36,7 @@ public interface INoteRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Note> callback);
+    void delete(final ICallback<? super Note> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INoteRequest extends IHttpRequest {
      * @param sourceNote the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Note sourceNote, final ICallback<Note> callback);
+    void patch(final Note sourceNote, final ICallback<? super Note> callback);
 
     /**
      * Patches this Note with a source
@@ -68,7 +68,7 @@ public interface INoteRequest extends IHttpRequest {
      * @param newNote the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Note newNote, final ICallback<Note> callback);
+    void post(final Note newNote, final ICallback<? super Note> callback);
 
     /**
      * Posts a Note with a new object
@@ -85,7 +85,7 @@ public interface INoteRequest extends IHttpRequest {
      * @param newNote the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Note newNote, final ICallback<Note> callback);
+    void put(final Note newNote, final ICallback<? super Note> callback);
 
     /**
      * Posts a Note with a new object

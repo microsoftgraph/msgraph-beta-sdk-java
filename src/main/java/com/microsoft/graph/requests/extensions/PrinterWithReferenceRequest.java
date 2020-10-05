@@ -55,7 +55,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
         super(requestUrl, client, requestOptions, Printer.class);
     }
 
-    public void post(final Printer newPrinter, final IJsonBackedObject payload, final ICallback<Printer> callback) {
+    public void post(final Printer newPrinter, final IJsonBackedObject payload, final ICallback<? super Printer> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -67,7 +67,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
         return null;
     }
 
-    public void get(final ICallback<Printer> callback) {
+    public void get(final ICallback<? super Printer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Printer> callback) {
+	public void delete(final ICallback<? super Printer> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -83,7 +83,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Printer sourcePrinter, final ICallback<Printer> callback) {
+	public void patch(final Printer sourcePrinter, final ICallback<? super Printer> callback) {
 		send(HttpMethod.PATCH, callback, sourcePrinter);
 	}
 
@@ -111,16 +111,6 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
      */
     public IPrinterWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrinterWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrinterWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrinterWithReferenceRequest)this;
     }
 }

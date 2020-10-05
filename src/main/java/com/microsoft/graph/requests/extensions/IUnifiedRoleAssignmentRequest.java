@@ -21,7 +21,7 @@ public interface IUnifiedRoleAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UnifiedRoleAssignment> callback);
+    void get(final ICallback<? super UnifiedRoleAssignment> callback);
 
     /**
      * Gets the UnifiedRoleAssignment from the service
@@ -36,7 +36,7 @@ public interface IUnifiedRoleAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UnifiedRoleAssignment> callback);
+    void delete(final ICallback<? super UnifiedRoleAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUnifiedRoleAssignmentRequest extends IHttpRequest {
      * @param sourceUnifiedRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UnifiedRoleAssignment sourceUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback);
+    void patch(final UnifiedRoleAssignment sourceUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback);
 
     /**
      * Patches this UnifiedRoleAssignment with a source
@@ -68,7 +68,7 @@ public interface IUnifiedRoleAssignmentRequest extends IHttpRequest {
      * @param newUnifiedRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback);
+    void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback);
 
     /**
      * Posts a UnifiedRoleAssignment with a new object
@@ -85,7 +85,7 @@ public interface IUnifiedRoleAssignmentRequest extends IHttpRequest {
      * @param newUnifiedRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback);
+    void put(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback);
 
     /**
      * Posts a UnifiedRoleAssignment with a new object

@@ -21,7 +21,7 @@ public interface IHostSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<HostSecurityProfile> callback);
+    void get(final ICallback<? super HostSecurityProfile> callback);
 
     /**
      * Gets the HostSecurityProfile from the service
@@ -36,7 +36,7 @@ public interface IHostSecurityProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<HostSecurityProfile> callback);
+    void delete(final ICallback<? super HostSecurityProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IHostSecurityProfileRequest extends IHttpRequest {
      * @param sourceHostSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final HostSecurityProfile sourceHostSecurityProfile, final ICallback<HostSecurityProfile> callback);
+    void patch(final HostSecurityProfile sourceHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback);
 
     /**
      * Patches this HostSecurityProfile with a source
@@ -68,7 +68,7 @@ public interface IHostSecurityProfileRequest extends IHttpRequest {
      * @param newHostSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final HostSecurityProfile newHostSecurityProfile, final ICallback<HostSecurityProfile> callback);
+    void post(final HostSecurityProfile newHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback);
 
     /**
      * Posts a HostSecurityProfile with a new object
@@ -85,7 +85,7 @@ public interface IHostSecurityProfileRequest extends IHttpRequest {
      * @param newHostSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final HostSecurityProfile newHostSecurityProfile, final ICallback<HostSecurityProfile> callback);
+    void put(final HostSecurityProfile newHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback);
 
     /**
      * Posts a HostSecurityProfile with a new object

@@ -21,7 +21,7 @@ public interface IDeviceHealthScriptAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceHealthScriptAssignment> callback);
+    void get(final ICallback<? super DeviceHealthScriptAssignment> callback);
 
     /**
      * Gets the DeviceHealthScriptAssignment from the service
@@ -36,7 +36,7 @@ public interface IDeviceHealthScriptAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceHealthScriptAssignment> callback);
+    void delete(final ICallback<? super DeviceHealthScriptAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceHealthScriptAssignmentRequest extends IHttpRequest {
      * @param sourceDeviceHealthScriptAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceHealthScriptAssignment sourceDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback);
+    void patch(final DeviceHealthScriptAssignment sourceDeviceHealthScriptAssignment, final ICallback<? super DeviceHealthScriptAssignment> callback);
 
     /**
      * Patches this DeviceHealthScriptAssignment with a source
@@ -68,7 +68,7 @@ public interface IDeviceHealthScriptAssignmentRequest extends IHttpRequest {
      * @param newDeviceHealthScriptAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback);
+    void post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<? super DeviceHealthScriptAssignment> callback);
 
     /**
      * Posts a DeviceHealthScriptAssignment with a new object
@@ -85,7 +85,7 @@ public interface IDeviceHealthScriptAssignmentRequest extends IHttpRequest {
      * @param newDeviceHealthScriptAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback);
+    void put(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<? super DeviceHealthScriptAssignment> callback);
 
     /**
      * Posts a DeviceHealthScriptAssignment with a new object

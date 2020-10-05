@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IAuditEventGetAuditActivityTypesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAuditEventGetAuditActivityTypesCollectionPage> callback);
+    void get(final ICallback<? super IAuditEventGetAuditActivityTypesCollectionPage> callback);
 
     IAuditEventGetAuditActivityTypesCollectionPage get() throws ClientException;
 

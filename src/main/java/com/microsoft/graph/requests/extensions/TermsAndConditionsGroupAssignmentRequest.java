@@ -39,7 +39,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TermsAndConditionsGroupAssignment> callback) {
+    public void get(final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TermsAndConditionsGroupAssignment> callback) {
+    public void delete(final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param sourceTermsAndConditionsGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback) {
+    public void patch(final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsAndConditionsGroupAssignment);
     }
 
@@ -98,7 +98,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param newTermsAndConditionsGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback) {
+    public void post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newTermsAndConditionsGroupAssignment);
     }
 
@@ -119,7 +119,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param newTermsAndConditionsGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback) {
+    public void put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newTermsAndConditionsGroupAssignment);
     }
 
@@ -153,17 +153,6 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      */
      public ITermsAndConditionsGroupAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsAndConditionsGroupAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITermsAndConditionsGroupAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TermsAndConditionsGroupAssignmentRequest)this;
      }
 

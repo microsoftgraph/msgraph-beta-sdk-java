@@ -41,7 +41,7 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsDomainJoinConfiguration> callback) {
+    public void get(final ICallback<? super WindowsDomainJoinConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsDomainJoinConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsDomainJoinConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
      * @param sourceWindowsDomainJoinConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDomainJoinConfiguration sourceWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback) {
+    public void patch(final WindowsDomainJoinConfiguration sourceWindowsDomainJoinConfiguration, final ICallback<? super WindowsDomainJoinConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDomainJoinConfiguration);
     }
 
@@ -100,7 +100,7 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
      * @param newWindowsDomainJoinConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback) {
+    public void post(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<? super WindowsDomainJoinConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsDomainJoinConfiguration);
     }
 
@@ -121,7 +121,7 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
      * @param newWindowsDomainJoinConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback) {
+    public void put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<? super WindowsDomainJoinConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsDomainJoinConfiguration);
     }
 
@@ -155,17 +155,6 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
      */
      public IWindowsDomainJoinConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDomainJoinConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsDomainJoinConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsDomainJoinConfigurationRequest)this;
      }
 

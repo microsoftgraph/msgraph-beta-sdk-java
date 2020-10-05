@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsBaselineCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsBaselineCollectionPage(final UserExperienceAnalyticsBaselineCollectionResponse response, final IUserExperienceAnalyticsBaselineCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

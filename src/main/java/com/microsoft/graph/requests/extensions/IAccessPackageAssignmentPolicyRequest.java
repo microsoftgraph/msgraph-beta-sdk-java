@@ -21,7 +21,7 @@ public interface IAccessPackageAssignmentPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageAssignmentPolicy> callback);
+    void get(final ICallback<? super AccessPackageAssignmentPolicy> callback);
 
     /**
      * Gets the AccessPackageAssignmentPolicy from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageAssignmentPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageAssignmentPolicy> callback);
+    void delete(final ICallback<? super AccessPackageAssignmentPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageAssignmentPolicyRequest extends IHttpRequest {
      * @param sourceAccessPackageAssignmentPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageAssignmentPolicy sourceAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback);
+    void patch(final AccessPackageAssignmentPolicy sourceAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback);
 
     /**
      * Patches this AccessPackageAssignmentPolicy with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageAssignmentPolicyRequest extends IHttpRequest {
      * @param newAccessPackageAssignmentPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback);
+    void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback);
 
     /**
      * Posts a AccessPackageAssignmentPolicy with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageAssignmentPolicyRequest extends IHttpRequest {
      * @param newAccessPackageAssignmentPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback);
+    void put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback);
 
     /**
      * Posts a AccessPackageAssignmentPolicy with a new object

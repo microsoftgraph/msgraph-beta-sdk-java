@@ -40,7 +40,7 @@ public class ManagedDeviceEncryptionStateCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, ManagedDeviceEncryptionStateCollectionResponse.class, IManagedDeviceEncryptionStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceEncryptionStateCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceEncryptionStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedDeviceEncryptionStateCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback) {
+    public void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceEncryptionStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ManagedDeviceEncryptionStateCollectionRequest extends BaseCollectio
      */
     public IManagedDeviceEncryptionStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedDeviceEncryptionStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagedDeviceEncryptionStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceEncryptionStateCollectionRequest)this;
     }
 

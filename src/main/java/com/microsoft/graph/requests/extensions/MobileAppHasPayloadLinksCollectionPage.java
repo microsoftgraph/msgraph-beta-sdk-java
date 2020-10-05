@@ -34,6 +34,6 @@ public class MobileAppHasPayloadLinksCollectionPage extends BaseCollectionPage<H
      * @param builder The request builder for the next collection page
      */
     public MobileAppHasPayloadLinksCollectionPage(final MobileAppHasPayloadLinksCollectionResponse response, final IMobileAppHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

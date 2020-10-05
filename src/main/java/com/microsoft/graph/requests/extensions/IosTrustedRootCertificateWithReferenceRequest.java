@@ -35,7 +35,7 @@ public class IosTrustedRootCertificateWithReferenceRequest extends BaseRequest i
         super(requestUrl, client, requestOptions, IosTrustedRootCertificate.class);
     }
 
-    public void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<IosTrustedRootCertificate> callback) {
+    public void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class IosTrustedRootCertificateWithReferenceRequest extends BaseRequest i
         return null;
     }
 
-    public void get(final ICallback<IosTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class IosTrustedRootCertificateWithReferenceRequest extends BaseRequest i
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<IosTrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super IosTrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class IosTrustedRootCertificateWithReferenceRequest extends BaseRequest i
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback) {
+	public void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceIosTrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class IosTrustedRootCertificateWithReferenceRequest extends BaseRequest i
      */
     public IIosTrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IosTrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIosTrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (IosTrustedRootCertificateWithReferenceRequest)this;
     }
 }

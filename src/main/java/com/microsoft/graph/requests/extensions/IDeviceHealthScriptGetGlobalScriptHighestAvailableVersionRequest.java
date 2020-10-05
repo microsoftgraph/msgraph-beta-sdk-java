@@ -25,7 +25,7 @@ public interface IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<String> callback);
+    void post(final ICallback<? super String> callback);
 
     /**
      * Creates the DeviceHealthScriptGetGlobalScriptHighestAvailableVersion

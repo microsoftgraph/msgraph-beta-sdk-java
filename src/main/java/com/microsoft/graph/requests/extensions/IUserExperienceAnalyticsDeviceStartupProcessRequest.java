@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessRequest extends IHt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsDeviceStartupProcess> callback);
 
     /**
      * Gets the UserExperienceAnalyticsDeviceStartupProcess from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessRequest extends IHt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsDeviceStartupProcess> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessRequest extends IHt
      * @param sourceUserExperienceAnalyticsDeviceStartupProcess the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsDeviceStartupProcess sourceUserExperienceAnalyticsDeviceStartupProcess, final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback);
+    void patch(final UserExperienceAnalyticsDeviceStartupProcess sourceUserExperienceAnalyticsDeviceStartupProcess, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcess> callback);
 
     /**
      * Patches this UserExperienceAnalyticsDeviceStartupProcess with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessRequest extends IHt
      * @param newUserExperienceAnalyticsDeviceStartupProcess the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess, final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback);
+    void post(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcess> callback);
 
     /**
      * Posts a UserExperienceAnalyticsDeviceStartupProcess with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessRequest extends IHt
      * @param newUserExperienceAnalyticsDeviceStartupProcess the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess, final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback);
+    void put(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess, final ICallback<? super UserExperienceAnalyticsDeviceStartupProcess> callback);
 
     /**
      * Posts a UserExperienceAnalyticsDeviceStartupProcess with a new object

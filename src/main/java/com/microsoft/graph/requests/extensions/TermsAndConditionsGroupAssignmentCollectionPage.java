@@ -23,6 +23,6 @@ public class TermsAndConditionsGroupAssignmentCollectionPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public TermsAndConditionsGroupAssignmentCollectionPage(final TermsAndConditionsGroupAssignmentCollectionResponse response, final ITermsAndConditionsGroupAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

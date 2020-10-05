@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceExecuteActionRequest extends IHttpRequest {
 
-    void post(final ICallback<BulkManagedDeviceActionResult> callback);
+    void post(final ICallback<? super BulkManagedDeviceActionResult> callback);
 
     BulkManagedDeviceActionResult post() throws ClientException;
 

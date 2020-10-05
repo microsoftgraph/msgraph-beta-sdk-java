@@ -39,7 +39,7 @@ public class ActivityStatisticsCollectionRequest extends BaseCollectionRequest<A
         super(requestUrl, client, requestOptions, ActivityStatisticsCollectionResponse.class, IActivityStatisticsCollectionPage.class);
     }
 
-    public void get(final ICallback<IActivityStatisticsCollectionPage> callback) {
+    public void get(final ICallback<? super IActivityStatisticsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ActivityStatisticsCollectionRequest extends BaseCollectionRequest<A
         return buildFromResponse(response);
     }
 
-    public void post(final ActivityStatistics newActivityStatistics, final ICallback<ActivityStatistics> callback) {
+    public void post(final ActivityStatistics newActivityStatistics, final ICallback<? super ActivityStatistics> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityStatisticsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class ActivityStatisticsCollectionRequest extends BaseCollectionRequest<A
      */
     public IActivityStatisticsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ActivityStatisticsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IActivityStatisticsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ActivityStatisticsCollectionRequest)this;
     }
 

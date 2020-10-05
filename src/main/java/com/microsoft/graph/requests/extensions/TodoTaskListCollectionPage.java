@@ -23,6 +23,6 @@ public class TodoTaskListCollectionPage extends BaseCollectionPage<TodoTaskList,
      * @param builder  the request builder for the next collection page
      */
     public TodoTaskListCollectionPage(final TodoTaskListCollectionResponse response, final ITodoTaskListCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

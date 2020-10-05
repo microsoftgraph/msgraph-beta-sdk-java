@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProgramControlTypeCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IProgramControlTypeCollectionPage> callback);
+    void get(final ICallback<? super IProgramControlTypeCollectionPage> callback);
 
     IProgramControlTypeCollectionPage get() throws ClientException;
 
-    void post(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback);
+    void post(final ProgramControlType newProgramControlType, final ICallback<? super ProgramControlType> callback);
 
     ProgramControlType post(final ProgramControlType newProgramControlType) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IProgramControlTypeCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IProgramControlTypeCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IProgramControlTypeCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IProgramControlTypeCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IProgramControlTypeCollectionRequest skipToken(String skipToken);
+	IProgramControlTypeCollectionRequest skipToken(final String skipToken);
 }

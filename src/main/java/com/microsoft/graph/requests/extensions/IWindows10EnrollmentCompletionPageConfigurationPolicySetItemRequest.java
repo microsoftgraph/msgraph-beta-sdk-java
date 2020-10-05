@@ -21,7 +21,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationPolicySetItemReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
+    void get(final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
 
     /**
      * Gets the Windows10EnrollmentCompletionPageConfigurationPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationPolicySetItemReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
+    void delete(final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationPolicySetItemReq
      * @param sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
+    void patch(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
 
     /**
      * Patches this Windows10EnrollmentCompletionPageConfigurationPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationPolicySetItemReq
      * @param newWindows10EnrollmentCompletionPageConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
+    void post(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
 
     /**
      * Posts a Windows10EnrollmentCompletionPageConfigurationPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IWindows10EnrollmentCompletionPageConfigurationPolicySetItemReq
      * @param newWindows10EnrollmentCompletionPageConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
+    void put(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback);
 
     /**
      * Posts a Windows10EnrollmentCompletionPageConfigurationPolicySetItem with a new object

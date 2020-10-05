@@ -21,7 +21,7 @@ public interface IPrinterBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrinterBase> callback);
+    void get(final ICallback<? super PrinterBase> callback);
 
     /**
      * Gets the PrinterBase from the service
@@ -36,7 +36,7 @@ public interface IPrinterBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrinterBase> callback);
+    void delete(final ICallback<? super PrinterBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrinterBaseRequest extends IHttpRequest {
      * @param sourcePrinterBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrinterBase sourcePrinterBase, final ICallback<PrinterBase> callback);
+    void patch(final PrinterBase sourcePrinterBase, final ICallback<? super PrinterBase> callback);
 
     /**
      * Patches this PrinterBase with a source
@@ -68,7 +68,7 @@ public interface IPrinterBaseRequest extends IHttpRequest {
      * @param newPrinterBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrinterBase newPrinterBase, final ICallback<PrinterBase> callback);
+    void post(final PrinterBase newPrinterBase, final ICallback<? super PrinterBase> callback);
 
     /**
      * Posts a PrinterBase with a new object
@@ -85,7 +85,7 @@ public interface IPrinterBaseRequest extends IHttpRequest {
      * @param newPrinterBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrinterBase newPrinterBase, final ICallback<PrinterBase> callback);
+    void put(final PrinterBase newPrinterBase, final ICallback<? super PrinterBase> callback);
 
     /**
      * Posts a PrinterBase with a new object

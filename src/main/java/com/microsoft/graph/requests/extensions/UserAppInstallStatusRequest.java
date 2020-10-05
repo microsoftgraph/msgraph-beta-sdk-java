@@ -43,7 +43,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserAppInstallStatus> callback) {
+    public void get(final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserAppInstallStatus> callback) {
+    public void delete(final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param sourceUserAppInstallStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserAppInstallStatus sourceUserAppInstallStatus, final ICallback<UserAppInstallStatus> callback) {
+    public void patch(final UserAppInstallStatus sourceUserAppInstallStatus, final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceUserAppInstallStatus);
     }
 
@@ -102,7 +102,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param newUserAppInstallStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<UserAppInstallStatus> callback) {
+    public void post(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.POST, callback, newUserAppInstallStatus);
     }
 
@@ -123,7 +123,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param newUserAppInstallStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<UserAppInstallStatus> callback) {
+    public void put(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.PUT, callback, newUserAppInstallStatus);
     }
 
@@ -157,17 +157,6 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      */
      public IUserAppInstallStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserAppInstallStatusRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserAppInstallStatusRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserAppInstallStatusRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IDeviceManagementIntentSettingCategoryRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntentSettingCategory> callback);
+    void get(final ICallback<? super DeviceManagementIntentSettingCategory> callback);
 
     /**
      * Gets the DeviceManagementIntentSettingCategory from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntentSettingCategoryRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntentSettingCategory> callback);
+    void delete(final ICallback<? super DeviceManagementIntentSettingCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntentSettingCategoryRequest extends IHttpRequ
      * @param sourceDeviceManagementIntentSettingCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback);
+    void patch(final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback);
 
     /**
      * Patches this DeviceManagementIntentSettingCategory with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntentSettingCategoryRequest extends IHttpRequ
      * @param newDeviceManagementIntentSettingCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback);
+    void post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback);
 
     /**
      * Posts a DeviceManagementIntentSettingCategory with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntentSettingCategoryRequest extends IHttpRequ
      * @param newDeviceManagementIntentSettingCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback);
+    void put(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback);
 
     /**
      * Posts a DeviceManagementIntentSettingCategory with a new object

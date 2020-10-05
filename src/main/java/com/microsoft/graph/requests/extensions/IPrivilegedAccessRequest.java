@@ -21,7 +21,7 @@ public interface IPrivilegedAccessRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedAccess> callback);
+    void get(final ICallback<? super PrivilegedAccess> callback);
 
     /**
      * Gets the PrivilegedAccess from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedAccessRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedAccess> callback);
+    void delete(final ICallback<? super PrivilegedAccess> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedAccessRequest extends IHttpRequest {
      * @param sourcePrivilegedAccess the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedAccess sourcePrivilegedAccess, final ICallback<PrivilegedAccess> callback);
+    void patch(final PrivilegedAccess sourcePrivilegedAccess, final ICallback<? super PrivilegedAccess> callback);
 
     /**
      * Patches this PrivilegedAccess with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedAccessRequest extends IHttpRequest {
      * @param newPrivilegedAccess the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback);
+    void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback);
 
     /**
      * Posts a PrivilegedAccess with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedAccessRequest extends IHttpRequest {
      * @param newPrivilegedAccess the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback);
+    void put(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback);
 
     /**
      * Posts a PrivilegedAccess with a new object

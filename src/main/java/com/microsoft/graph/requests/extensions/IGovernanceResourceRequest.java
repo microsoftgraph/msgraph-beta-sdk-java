@@ -21,7 +21,7 @@ public interface IGovernanceResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GovernanceResource> callback);
+    void get(final ICallback<? super GovernanceResource> callback);
 
     /**
      * Gets the GovernanceResource from the service
@@ -36,7 +36,7 @@ public interface IGovernanceResourceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GovernanceResource> callback);
+    void delete(final ICallback<? super GovernanceResource> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGovernanceResourceRequest extends IHttpRequest {
      * @param sourceGovernanceResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GovernanceResource sourceGovernanceResource, final ICallback<GovernanceResource> callback);
+    void patch(final GovernanceResource sourceGovernanceResource, final ICallback<? super GovernanceResource> callback);
 
     /**
      * Patches this GovernanceResource with a source
@@ -68,7 +68,7 @@ public interface IGovernanceResourceRequest extends IHttpRequest {
      * @param newGovernanceResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback);
+    void post(final GovernanceResource newGovernanceResource, final ICallback<? super GovernanceResource> callback);
 
     /**
      * Posts a GovernanceResource with a new object
@@ -85,7 +85,7 @@ public interface IGovernanceResourceRequest extends IHttpRequest {
      * @param newGovernanceResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback);
+    void put(final GovernanceResource newGovernanceResource, final ICallback<? super GovernanceResource> callback);
 
     /**
      * Posts a GovernanceResource with a new object

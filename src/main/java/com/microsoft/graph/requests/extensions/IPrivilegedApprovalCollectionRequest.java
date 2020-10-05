@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedApprovalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedApprovalCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedApprovalCollectionPage> callback);
 
     IPrivilegedApprovalCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback);
+    void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<? super PrivilegedApproval> callback);
 
     PrivilegedApproval post(final PrivilegedApproval newPrivilegedApproval) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IPrivilegedApprovalCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrivilegedApprovalCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedApprovalCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IPrivilegedApprovalCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrivilegedApprovalCollectionRequest skipToken(String skipToken);
+	IPrivilegedApprovalCollectionRequest skipToken(final String skipToken);
 }

@@ -45,7 +45,7 @@ public class GroupPolicyCategoryWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, GroupPolicyCategory.class);
     }
 
-    public void post(final GroupPolicyCategory newGroupPolicyCategory, final IJsonBackedObject payload, final ICallback<GroupPolicyCategory> callback) {
+    public void post(final GroupPolicyCategory newGroupPolicyCategory, final IJsonBackedObject payload, final ICallback<? super GroupPolicyCategory> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -57,7 +57,7 @@ public class GroupPolicyCategoryWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<GroupPolicyCategory> callback) {
+    public void get(final ICallback<? super GroupPolicyCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class GroupPolicyCategoryWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<GroupPolicyCategory> callback) {
+	public void delete(final ICallback<? super GroupPolicyCategory> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -73,7 +73,7 @@ public class GroupPolicyCategoryWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final GroupPolicyCategory sourceGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback) {
+	public void patch(final GroupPolicyCategory sourceGroupPolicyCategory, final ICallback<? super GroupPolicyCategory> callback) {
 		send(HttpMethod.PATCH, callback, sourceGroupPolicyCategory);
 	}
 
@@ -101,16 +101,6 @@ public class GroupPolicyCategoryWithReferenceRequest extends BaseRequest impleme
      */
     public IGroupPolicyCategoryWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupPolicyCategoryWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupPolicyCategoryWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupPolicyCategoryWithReferenceRequest)this;
     }
 }

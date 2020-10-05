@@ -21,7 +21,7 @@ public interface IVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<VpnConfiguration> callback);
+    void get(final ICallback<? super VpnConfiguration> callback);
 
     /**
      * Gets the VpnConfiguration from the service
@@ -36,7 +36,7 @@ public interface IVpnConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<VpnConfiguration> callback);
+    void delete(final ICallback<? super VpnConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IVpnConfigurationRequest extends IHttpRequest {
      * @param sourceVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final VpnConfiguration sourceVpnConfiguration, final ICallback<VpnConfiguration> callback);
+    void patch(final VpnConfiguration sourceVpnConfiguration, final ICallback<? super VpnConfiguration> callback);
 
     /**
      * Patches this VpnConfiguration with a source
@@ -68,7 +68,7 @@ public interface IVpnConfigurationRequest extends IHttpRequest {
      * @param newVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final VpnConfiguration newVpnConfiguration, final ICallback<VpnConfiguration> callback);
+    void post(final VpnConfiguration newVpnConfiguration, final ICallback<? super VpnConfiguration> callback);
 
     /**
      * Posts a VpnConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IVpnConfigurationRequest extends IHttpRequest {
      * @param newVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final VpnConfiguration newVpnConfiguration, final ICallback<VpnConfiguration> callback);
+    void put(final VpnConfiguration newVpnConfiguration, final ICallback<? super VpnConfiguration> callback);
 
     /**
      * Posts a VpnConfiguration with a new object

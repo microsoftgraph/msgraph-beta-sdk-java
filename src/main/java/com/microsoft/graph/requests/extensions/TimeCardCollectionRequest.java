@@ -41,7 +41,7 @@ public class TimeCardCollectionRequest extends BaseCollectionRequest<TimeCardCol
         super(requestUrl, client, requestOptions, TimeCardCollectionResponse.class, ITimeCardCollectionPage.class);
     }
 
-    public void get(final ICallback<ITimeCardCollectionPage> callback) {
+    public void get(final ICallback<? super ITimeCardCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class TimeCardCollectionRequest extends BaseCollectionRequest<TimeCardCol
         return buildFromResponse(response);
     }
 
-    public void post(final TimeCard newTimeCard, final ICallback<TimeCard> callback) {
+    public void post(final TimeCard newTimeCard, final ICallback<? super TimeCard> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeCardRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class TimeCardCollectionRequest extends BaseCollectionRequest<TimeCardCol
      */
     public ITimeCardCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TimeCardCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITimeCardCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TimeCardCollectionRequest)this;
     }
 

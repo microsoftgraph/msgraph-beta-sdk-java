@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IImportedWindowsAutopilotDeviceIdentityImportCollectionPage> callback);
+    void post(final ICallback<? super IImportedWindowsAutopilotDeviceIdentityImportCollectionPage> callback);
 
     IImportedWindowsAutopilotDeviceIdentityImportCollectionPage post() throws ClientException;
 

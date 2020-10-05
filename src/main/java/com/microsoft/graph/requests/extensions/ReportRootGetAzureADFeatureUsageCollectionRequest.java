@@ -39,7 +39,7 @@ public class ReportRootGetAzureADFeatureUsageCollectionRequest extends BaseColle
     }
 
 
-    public void get(final ICallback<IReportRootGetAzureADFeatureUsageCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetAzureADFeatureUsageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetAzureADFeatureUsageCollectionRequest extends BaseColle
      */
     public IReportRootGetAzureADFeatureUsageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetAzureADFeatureUsageCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetAzureADFeatureUsageCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetAzureADFeatureUsageCollectionRequest)this;
     }
 

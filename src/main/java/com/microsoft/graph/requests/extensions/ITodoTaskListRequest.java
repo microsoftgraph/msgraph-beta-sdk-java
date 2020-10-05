@@ -21,7 +21,7 @@ public interface ITodoTaskListRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TodoTaskList> callback);
+    void get(final ICallback<? super TodoTaskList> callback);
 
     /**
      * Gets the TodoTaskList from the service
@@ -36,7 +36,7 @@ public interface ITodoTaskListRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TodoTaskList> callback);
+    void delete(final ICallback<? super TodoTaskList> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITodoTaskListRequest extends IHttpRequest {
      * @param sourceTodoTaskList the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TodoTaskList sourceTodoTaskList, final ICallback<TodoTaskList> callback);
+    void patch(final TodoTaskList sourceTodoTaskList, final ICallback<? super TodoTaskList> callback);
 
     /**
      * Patches this TodoTaskList with a source
@@ -68,7 +68,7 @@ public interface ITodoTaskListRequest extends IHttpRequest {
      * @param newTodoTaskList the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TodoTaskList newTodoTaskList, final ICallback<TodoTaskList> callback);
+    void post(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback);
 
     /**
      * Posts a TodoTaskList with a new object
@@ -85,7 +85,7 @@ public interface ITodoTaskListRequest extends IHttpRequest {
      * @param newTodoTaskList the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TodoTaskList newTodoTaskList, final ICallback<TodoTaskList> callback);
+    void put(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback);
 
     /**
      * Posts a TodoTaskList with a new object

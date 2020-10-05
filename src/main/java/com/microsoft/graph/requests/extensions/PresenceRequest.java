@@ -37,7 +37,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Presence> callback) {
+    public void get(final ICallback<? super Presence> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Presence> callback) {
+    public void delete(final ICallback<? super Presence> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param sourcePresence the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Presence sourcePresence, final ICallback<Presence> callback) {
+    public void patch(final Presence sourcePresence, final ICallback<? super Presence> callback) {
         send(HttpMethod.PATCH, callback, sourcePresence);
     }
 
@@ -96,7 +96,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param newPresence the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Presence newPresence, final ICallback<Presence> callback) {
+    public void post(final Presence newPresence, final ICallback<? super Presence> callback) {
         send(HttpMethod.POST, callback, newPresence);
     }
 
@@ -117,7 +117,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param newPresence the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Presence newPresence, final ICallback<Presence> callback) {
+    public void put(final Presence newPresence, final ICallback<? super Presence> callback) {
         send(HttpMethod.PUT, callback, newPresence);
     }
 
@@ -151,17 +151,6 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      */
      public IPresenceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PresenceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPresenceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PresenceRequest)this;
      }
 

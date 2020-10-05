@@ -23,6 +23,6 @@ public class MicrosoftTunnelSiteCollectionPage extends BaseCollectionPage<Micros
      * @param builder  the request builder for the next collection page
      */
     public MicrosoftTunnelSiteCollectionPage(final MicrosoftTunnelSiteCollectionResponse response, final IMicrosoftTunnelSiteCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

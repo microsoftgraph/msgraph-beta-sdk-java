@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetOffice365GroupsActivityCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetOffice365GroupsActivityCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetOffice365GroupsActivityCountsCollectionPage> callback);
 
     IReportRootGetOffice365GroupsActivityCountsCollectionPage get() throws ClientException;
 

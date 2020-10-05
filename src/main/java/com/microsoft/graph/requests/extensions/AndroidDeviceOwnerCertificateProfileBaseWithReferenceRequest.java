@@ -37,7 +37,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest extend
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerCertificateProfileBase.class);
     }
 
-    public void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -49,7 +49,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest extend
         return null;
     }
 
-    public void get(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest extend
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+	public void delete(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,7 +65,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest extend
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+	public void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerCertificateProfileBase);
 	}
 
@@ -93,16 +93,6 @@ public class AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest extend
      */
     public IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest)this;
     }
 }

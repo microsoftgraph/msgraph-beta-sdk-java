@@ -23,6 +23,6 @@ public class AppScopeCollectionPage extends BaseCollectionPage<AppScope, IAppSco
      * @param builder  the request builder for the next collection page
      */
     public AppScopeCollectionPage(final AppScopeCollectionResponse response, final IAppScopeCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

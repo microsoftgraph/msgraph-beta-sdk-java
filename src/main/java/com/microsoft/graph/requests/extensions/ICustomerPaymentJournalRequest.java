@@ -21,7 +21,7 @@ public interface ICustomerPaymentJournalRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CustomerPaymentJournal> callback);
+    void get(final ICallback<? super CustomerPaymentJournal> callback);
 
     /**
      * Gets the CustomerPaymentJournal from the service
@@ -36,7 +36,7 @@ public interface ICustomerPaymentJournalRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CustomerPaymentJournal> callback);
+    void delete(final ICallback<? super CustomerPaymentJournal> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICustomerPaymentJournalRequest extends IHttpRequest {
      * @param sourceCustomerPaymentJournal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CustomerPaymentJournal sourceCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback);
+    void patch(final CustomerPaymentJournal sourceCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback);
 
     /**
      * Patches this CustomerPaymentJournal with a source
@@ -68,7 +68,7 @@ public interface ICustomerPaymentJournalRequest extends IHttpRequest {
      * @param newCustomerPaymentJournal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback);
+    void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback);
 
     /**
      * Posts a CustomerPaymentJournal with a new object
@@ -85,7 +85,7 @@ public interface ICustomerPaymentJournalRequest extends IHttpRequest {
      * @param newCustomerPaymentJournal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback);
+    void put(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback);
 
     /**
      * Posts a CustomerPaymentJournal with a new object

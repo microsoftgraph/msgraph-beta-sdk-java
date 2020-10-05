@@ -56,7 +56,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosLobAppProvisioningConfiguration> callback) {
+    public void get(final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosLobAppProvisioningConfiguration> callback) {
+    public void delete(final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param sourceIosLobAppProvisioningConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback) {
+    public void patch(final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosLobAppProvisioningConfiguration);
     }
 
@@ -115,7 +115,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param newIosLobAppProvisioningConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback) {
+    public void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosLobAppProvisioningConfiguration);
     }
 
@@ -136,7 +136,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param newIosLobAppProvisioningConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback) {
+    public void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosLobAppProvisioningConfiguration);
     }
 
@@ -170,17 +170,6 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      */
      public IIosLobAppProvisioningConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosLobAppProvisioningConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosLobAppProvisioningConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosLobAppProvisioningConfigurationRequest)this;
      }
 

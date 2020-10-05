@@ -36,7 +36,7 @@ public class DeviceHealthScriptAssignRequest extends BaseRequest implements IDev
         body = new DeviceHealthScriptAssignBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class DeviceHealthScriptAssignRequest extends BaseRequest implements IDev
      */
     public IDeviceHealthScriptAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceHealthScriptAssignRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceHealthScriptAssignRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceHealthScriptAssignRequest)this;
     }
 

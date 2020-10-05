@@ -23,6 +23,6 @@ public class UserExperienceAnalyticsDeviceStartupHistoryCollectionPage extends B
      * @param builder  the request builder for the next collection page
      */
     public UserExperienceAnalyticsDeviceStartupHistoryCollectionPage(final UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse response, final IUserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

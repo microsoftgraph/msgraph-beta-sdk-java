@@ -35,7 +35,7 @@ public class UserExperienceAnalyticsMetricWithReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsMetric.class);
     }
 
-    public void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final IJsonBackedObject payload, final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final IJsonBackedObject payload, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class UserExperienceAnalyticsMetricWithReferenceRequest extends BaseReque
         return null;
     }
 
-    public void get(final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsMetricWithReferenceRequest extends BaseReque
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<UserExperienceAnalyticsMetric> callback) {
+	public void delete(final ICallback<? super UserExperienceAnalyticsMetric> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsMetricWithReferenceRequest extends BaseReque
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback) {
+	public void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
 		send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsMetric);
 	}
 
@@ -91,16 +91,6 @@ public class UserExperienceAnalyticsMetricWithReferenceRequest extends BaseReque
      */
     public IUserExperienceAnalyticsMetricWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserExperienceAnalyticsMetricWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IUserExperienceAnalyticsMetricWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserExperienceAnalyticsMetricWithReferenceRequest)this;
     }
 }

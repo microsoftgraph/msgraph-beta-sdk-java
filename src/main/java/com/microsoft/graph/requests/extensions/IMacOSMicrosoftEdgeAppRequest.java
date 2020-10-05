@@ -21,7 +21,7 @@ public interface IMacOSMicrosoftEdgeAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSMicrosoftEdgeApp> callback);
+    void get(final ICallback<? super MacOSMicrosoftEdgeApp> callback);
 
     /**
      * Gets the MacOSMicrosoftEdgeApp from the service
@@ -36,7 +36,7 @@ public interface IMacOSMicrosoftEdgeAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSMicrosoftEdgeApp> callback);
+    void delete(final ICallback<? super MacOSMicrosoftEdgeApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSMicrosoftEdgeAppRequest extends IHttpRequest {
      * @param sourceMacOSMicrosoftEdgeApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSMicrosoftEdgeApp sourceMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback);
+    void patch(final MacOSMicrosoftEdgeApp sourceMacOSMicrosoftEdgeApp, final ICallback<? super MacOSMicrosoftEdgeApp> callback);
 
     /**
      * Patches this MacOSMicrosoftEdgeApp with a source
@@ -68,7 +68,7 @@ public interface IMacOSMicrosoftEdgeAppRequest extends IHttpRequest {
      * @param newMacOSMicrosoftEdgeApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback);
+    void post(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<? super MacOSMicrosoftEdgeApp> callback);
 
     /**
      * Posts a MacOSMicrosoftEdgeApp with a new object
@@ -85,7 +85,7 @@ public interface IMacOSMicrosoftEdgeAppRequest extends IHttpRequest {
      * @param newMacOSMicrosoftEdgeApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback);
+    void put(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<? super MacOSMicrosoftEdgeApp> callback);
 
     /**
      * Posts a MacOSMicrosoftEdgeApp with a new object

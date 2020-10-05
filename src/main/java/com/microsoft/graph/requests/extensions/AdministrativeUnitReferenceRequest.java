@@ -46,7 +46,7 @@ public class AdministrativeUnitReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, AdministrativeUnit.class);
     }
 
-    public void delete(final ICallback<AdministrativeUnit> callback) {
+    public void delete(final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,22 +76,12 @@ public class AdministrativeUnitReferenceRequest extends BaseRequest implements I
         return (AdministrativeUnitReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAdministrativeUnitReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AdministrativeUnitReferenceRequest)this;
-    }
-    /**
      * Puts the AdministrativeUnit
      *
      * @param srcAdministrativeUnit the AdministrativeUnit reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AdministrativeUnit srcAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+    public void put(AdministrativeUnit srcAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.PUT, callback, srcAdministrativeUnit);
     }
 

@@ -26,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IConnectorGroupReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ConnectorGroup> callback);
+    void delete(final ICallback<? super ConnectorGroup> callback);
 
     ConnectorGroup delete() throws ClientException;
 
@@ -52,7 +52,7 @@ public interface IConnectorGroupReferenceRequest extends IHttpRequest {
      * @param srcConnectorGroup the ConnectorGroup to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ConnectorGroup srcConnectorGroup, final ICallback<ConnectorGroup> callback);
+    void put(ConnectorGroup srcConnectorGroup, final ICallback<? super ConnectorGroup> callback);
 
     /**
      * Puts the ConnectorGroup

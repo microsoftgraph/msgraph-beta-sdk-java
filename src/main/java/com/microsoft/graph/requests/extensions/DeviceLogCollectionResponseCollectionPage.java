@@ -23,6 +23,6 @@ public class DeviceLogCollectionResponseCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public DeviceLogCollectionResponseCollectionPage(final DeviceLogCollectionResponseCollectionResponse response, final IDeviceLogCollectionResponseCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

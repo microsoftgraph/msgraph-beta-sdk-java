@@ -40,7 +40,7 @@ public class DeviceManagementIntentAssignmentCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, DeviceManagementIntentAssignmentCollectionResponse.class, IDeviceManagementIntentAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementIntentAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementIntentAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementIntentAssignmentCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<DeviceManagementIntentAssignment> callback) {
+    public void post(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<? super DeviceManagementIntentAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementIntentAssignmentCollectionRequest extends BaseColle
      */
     public IDeviceManagementIntentAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementIntentAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementIntentAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementIntentAssignmentCollectionRequest)this;
     }
 

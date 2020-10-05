@@ -40,7 +40,7 @@ public class IdentityUserFlowCollectionRequest extends BaseCollectionRequest<Ide
         super(requestUrl, client, requestOptions, IdentityUserFlowCollectionResponse.class, IIdentityUserFlowCollectionPage.class);
     }
 
-    public void get(final ICallback<IIdentityUserFlowCollectionPage> callback) {
+    public void get(final ICallback<? super IIdentityUserFlowCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class IdentityUserFlowCollectionRequest extends BaseCollectionRequest<Ide
         return buildFromResponse(response);
     }
 
-    public void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback) {
+    public void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityUserFlowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class IdentityUserFlowCollectionRequest extends BaseCollectionRequest<Ide
      */
     public IIdentityUserFlowCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IdentityUserFlowCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIdentityUserFlowCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IdentityUserFlowCollectionRequest)this;
     }
 

@@ -34,6 +34,6 @@ public class AuditEventGetAuditCategoriesCollectionPage extends BaseCollectionPa
      * @param builder The request builder for the next collection page
      */
     public AuditEventGetAuditCategoriesCollectionPage(final AuditEventGetAuditCategoriesCollectionResponse response, final IAuditEventGetAuditCategoriesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

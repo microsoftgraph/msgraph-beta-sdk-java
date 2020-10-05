@@ -44,7 +44,7 @@ public class DeviceHealthScriptCollectionRequest extends BaseCollectionRequest<D
         super(requestUrl, client, requestOptions, DeviceHealthScriptCollectionResponse.class, IDeviceHealthScriptCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceHealthScriptCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceHealthScriptCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -63,7 +63,7 @@ public class DeviceHealthScriptCollectionRequest extends BaseCollectionRequest<D
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<DeviceHealthScript> callback) {
+    public void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceHealthScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -96,6 +96,17 @@ public class DeviceHealthScriptCollectionRequest extends BaseCollectionRequest<D
      */
     public IDeviceHealthScriptCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceHealthScriptCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceHealthScriptCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceHealthScriptCollectionRequest)this;
     }
 

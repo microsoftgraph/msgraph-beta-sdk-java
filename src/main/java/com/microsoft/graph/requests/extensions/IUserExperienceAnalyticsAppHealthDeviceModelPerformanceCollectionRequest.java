@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage> callback);
 
     IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsAppHealthDeviceModelPerformance newUserExperienceAnalyticsAppHealthDeviceModelPerformance, final ICallback<UserExperienceAnalyticsAppHealthDeviceModelPerformance> callback);
+    void post(final UserExperienceAnalyticsAppHealthDeviceModelPerformance newUserExperienceAnalyticsAppHealthDeviceModelPerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDeviceModelPerformance> callback);
 
     UserExperienceAnalyticsAppHealthDeviceModelPerformance post(final UserExperienceAnalyticsAppHealthDeviceModelPerformance newUserExperienceAnalyticsAppHealthDeviceModelPerformance) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollecti
      * @return the updated request
      */
     IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollecti
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequest skipToken(final String skipToken);
 }

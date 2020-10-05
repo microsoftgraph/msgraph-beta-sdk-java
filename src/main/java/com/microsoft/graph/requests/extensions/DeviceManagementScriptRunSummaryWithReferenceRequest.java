@@ -35,7 +35,7 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
         super(requestUrl, client, requestOptions, DeviceManagementScriptRunSummary.class);
     }
 
-    public void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload, final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
         return null;
     }
 
-    public void get(final ICallback<DeviceManagementScriptRunSummary> callback) {
+    public void get(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DeviceManagementScriptRunSummary> callback) {
+	public void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback) {
+	public void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
 		send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptRunSummary);
 	}
 
@@ -91,16 +91,6 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
      */
     public IDeviceManagementScriptRunSummaryWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementScriptRunSummaryWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementScriptRunSummaryWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementScriptRunSummaryWithReferenceRequest)this;
     }
 }

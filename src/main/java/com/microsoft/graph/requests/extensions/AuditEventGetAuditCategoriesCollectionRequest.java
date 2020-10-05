@@ -39,7 +39,7 @@ public class AuditEventGetAuditCategoriesCollectionRequest extends BaseCollectio
     }
 
 
-    public void get(final ICallback<IAuditEventGetAuditCategoriesCollectionPage> callback) {
+    public void get(final ICallback<? super IAuditEventGetAuditCategoriesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class AuditEventGetAuditCategoriesCollectionRequest extends BaseCollectio
      */
     public IAuditEventGetAuditCategoriesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IAuditEventGetAuditCategoriesCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAuditEventGetAuditCategoriesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IAuditEventGetAuditCategoriesCollectionRequest)this;
     }
 

@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionDeviceR
  */
 public interface IWindowsInformationProtectionDeviceRegistrationCollectionReferenceRequest {
 
-    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     WindowsInformationProtectionDeviceRegistration post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException;
 

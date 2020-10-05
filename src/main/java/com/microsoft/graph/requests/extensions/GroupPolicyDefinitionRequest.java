@@ -45,7 +45,7 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyDefinition> callback) {
+    public void get(final ICallback<? super GroupPolicyDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyDefinition> callback) {
+    public void delete(final ICallback<? super GroupPolicyDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      * @param sourceGroupPolicyDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyDefinition sourceGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback) {
+    public void patch(final GroupPolicyDefinition sourceGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyDefinition);
     }
 
@@ -104,7 +104,7 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      * @param newGroupPolicyDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback) {
+    public void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyDefinition);
     }
 
@@ -125,7 +125,7 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      * @param newGroupPolicyDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback) {
+    public void put(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<? super GroupPolicyDefinition> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyDefinition);
     }
 
@@ -159,17 +159,6 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      */
      public IGroupPolicyDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyDefinitionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyDefinitionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyDefinitionRequest)this;
      }
 

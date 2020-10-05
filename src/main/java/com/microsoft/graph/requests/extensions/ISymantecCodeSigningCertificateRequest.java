@@ -21,7 +21,7 @@ public interface ISymantecCodeSigningCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SymantecCodeSigningCertificate> callback);
+    void get(final ICallback<? super SymantecCodeSigningCertificate> callback);
 
     /**
      * Gets the SymantecCodeSigningCertificate from the service
@@ -36,7 +36,7 @@ public interface ISymantecCodeSigningCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SymantecCodeSigningCertificate> callback);
+    void delete(final ICallback<? super SymantecCodeSigningCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISymantecCodeSigningCertificateRequest extends IHttpRequest {
      * @param sourceSymantecCodeSigningCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SymantecCodeSigningCertificate sourceSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback);
+    void patch(final SymantecCodeSigningCertificate sourceSymantecCodeSigningCertificate, final ICallback<? super SymantecCodeSigningCertificate> callback);
 
     /**
      * Patches this SymantecCodeSigningCertificate with a source
@@ -68,7 +68,7 @@ public interface ISymantecCodeSigningCertificateRequest extends IHttpRequest {
      * @param newSymantecCodeSigningCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback);
+    void post(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<? super SymantecCodeSigningCertificate> callback);
 
     /**
      * Posts a SymantecCodeSigningCertificate with a new object
@@ -85,7 +85,7 @@ public interface ISymantecCodeSigningCertificateRequest extends IHttpRequest {
      * @param newSymantecCodeSigningCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback);
+    void put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<? super SymantecCodeSigningCertificate> callback);
 
     /**
      * Posts a SymantecCodeSigningCertificate with a new object

@@ -34,6 +34,6 @@ public class EducationSynchronizationProfileStartCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public EducationSynchronizationProfileStartCollectionPage(final EducationSynchronizationProfileStartCollectionResponse response, final IEducationSynchronizationProfileStartCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

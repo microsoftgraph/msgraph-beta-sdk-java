@@ -23,6 +23,6 @@ public class ConnectedOrganizationCollectionPage extends BaseCollectionPage<Conn
      * @param builder  the request builder for the next collection page
      */
     public ConnectedOrganizationCollectionPage(final ConnectedOrganizationCollectionResponse response, final IConnectedOrganizationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

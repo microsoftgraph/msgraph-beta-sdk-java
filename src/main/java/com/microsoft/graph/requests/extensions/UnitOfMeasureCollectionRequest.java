@@ -40,7 +40,7 @@ public class UnitOfMeasureCollectionRequest extends BaseCollectionRequest<UnitOf
         super(requestUrl, client, requestOptions, UnitOfMeasureCollectionResponse.class, IUnitOfMeasureCollectionPage.class);
     }
 
-    public void get(final ICallback<IUnitOfMeasureCollectionPage> callback) {
+    public void get(final ICallback<? super IUnitOfMeasureCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UnitOfMeasureCollectionRequest extends BaseCollectionRequest<UnitOf
         return buildFromResponse(response);
     }
 
-    public void post(final UnitOfMeasure newUnitOfMeasure, final ICallback<UnitOfMeasure> callback) {
+    public void post(final UnitOfMeasure newUnitOfMeasure, final ICallback<? super UnitOfMeasure> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnitOfMeasureRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UnitOfMeasureCollectionRequest extends BaseCollectionRequest<UnitOf
      */
     public IUnitOfMeasureCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UnitOfMeasureCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUnitOfMeasureCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UnitOfMeasureCollectionRequest)this;
     }
 

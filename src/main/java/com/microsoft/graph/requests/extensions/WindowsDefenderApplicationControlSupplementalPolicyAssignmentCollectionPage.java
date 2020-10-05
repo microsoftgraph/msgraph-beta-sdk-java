@@ -23,6 +23,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollec
      * @param builder  the request builder for the next collection page
      */
     public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage(final WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse response, final IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

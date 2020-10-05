@@ -37,7 +37,7 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MailboxUsageStorage> callback) {
+    public void get(final ICallback<? super MailboxUsageStorage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MailboxUsageStorage> callback) {
+    public void delete(final ICallback<? super MailboxUsageStorage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
      * @param sourceMailboxUsageStorage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MailboxUsageStorage sourceMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback) {
+    public void patch(final MailboxUsageStorage sourceMailboxUsageStorage, final ICallback<? super MailboxUsageStorage> callback) {
         send(HttpMethod.PATCH, callback, sourceMailboxUsageStorage);
     }
 
@@ -96,7 +96,7 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
      * @param newMailboxUsageStorage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback) {
+    public void post(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<? super MailboxUsageStorage> callback) {
         send(HttpMethod.POST, callback, newMailboxUsageStorage);
     }
 
@@ -117,7 +117,7 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
      * @param newMailboxUsageStorage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback) {
+    public void put(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<? super MailboxUsageStorage> callback) {
         send(HttpMethod.PUT, callback, newMailboxUsageStorage);
     }
 
@@ -151,17 +151,6 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
      */
      public IMailboxUsageStorageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MailboxUsageStorageRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMailboxUsageStorageRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MailboxUsageStorageRequest)this;
      }
 

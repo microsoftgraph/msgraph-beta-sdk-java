@@ -23,6 +23,6 @@ public class VulnerableManagedDeviceCollectionPage extends BaseCollectionPage<Vu
      * @param builder  the request builder for the next collection page
      */
     public VulnerableManagedDeviceCollectionPage(final VulnerableManagedDeviceCollectionResponse response, final IVulnerableManagedDeviceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

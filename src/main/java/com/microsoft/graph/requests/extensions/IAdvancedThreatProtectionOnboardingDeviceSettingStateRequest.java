@@ -21,7 +21,7 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest ex
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
+    void get(final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
 
     /**
      * Gets the AdvancedThreatProtectionOnboardingDeviceSettingState from the service
@@ -36,7 +36,7 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest ex
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
+    void delete(final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest ex
      * @param sourceAdvancedThreatProtectionOnboardingDeviceSettingState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AdvancedThreatProtectionOnboardingDeviceSettingState sourceAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
+    void patch(final AdvancedThreatProtectionOnboardingDeviceSettingState sourceAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
 
     /**
      * Patches this AdvancedThreatProtectionOnboardingDeviceSettingState with a source
@@ -68,7 +68,7 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest ex
      * @param newAdvancedThreatProtectionOnboardingDeviceSettingState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
+    void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
 
     /**
      * Posts a AdvancedThreatProtectionOnboardingDeviceSettingState with a new object
@@ -85,7 +85,7 @@ public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest ex
      * @param newAdvancedThreatProtectionOnboardingDeviceSettingState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
+    void put(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback);
 
     /**
      * Posts a AdvancedThreatProtectionOnboardingDeviceSettingState with a new object

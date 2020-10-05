@@ -40,7 +40,7 @@ public class NoteDeltaCollectionPage extends BaseCollectionPage<Note, INoteDelta
      * @param builder The request builder for the next collection page
      */
     public NoteDeltaCollectionPage(final NoteDeltaCollectionResponse response, final INoteDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

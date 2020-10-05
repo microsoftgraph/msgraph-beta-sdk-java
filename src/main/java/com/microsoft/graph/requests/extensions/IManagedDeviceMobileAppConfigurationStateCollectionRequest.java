@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceMobileAppConfigurationStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedDeviceMobileAppConfigurationStateCollectionPage> callback);
+    void get(final ICallback<? super IManagedDeviceMobileAppConfigurationStateCollectionPage> callback);
 
     IManagedDeviceMobileAppConfigurationStateCollectionPage get() throws ClientException;
 
-    void post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState, final ICallback<ManagedDeviceMobileAppConfigurationState> callback);
+    void post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState, final ICallback<? super ManagedDeviceMobileAppConfigurationState> callback);
 
     ManagedDeviceMobileAppConfigurationState post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IManagedDeviceMobileAppConfigurationStateCollectionRequest exte
      * @return the updated request
      */
     IManagedDeviceMobileAppConfigurationStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagedDeviceMobileAppConfigurationStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IManagedDeviceMobileAppConfigurationStateCollectionRequest exte
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceMobileAppConfigurationStateCollectionRequest skipToken(String skipToken);
+	IManagedDeviceMobileAppConfigurationStateCollectionRequest skipToken(final String skipToken);
 }

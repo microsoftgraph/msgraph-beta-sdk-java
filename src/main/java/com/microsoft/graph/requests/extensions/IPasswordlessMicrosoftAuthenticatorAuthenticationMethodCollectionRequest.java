@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback);
 
     IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback);
+    void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback);
 
     PasswordlessMicrosoftAuthenticatorAuthenticationMethod post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollecti
      * @return the updated request
      */
     IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollecti
      *
 	 * @return the updated request
 	 */
-	IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

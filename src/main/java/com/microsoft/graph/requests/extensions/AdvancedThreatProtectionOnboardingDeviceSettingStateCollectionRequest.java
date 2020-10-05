@@ -40,7 +40,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionReque
         super(requestUrl, client, requestOptions, AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse.class, IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage> callback) {
+    public void get(final ICallback<? super IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+    public void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionReque
      */
     public IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest)this;
     }
 

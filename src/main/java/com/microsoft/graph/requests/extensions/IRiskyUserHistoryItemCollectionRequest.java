@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRiskyUserHistoryItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRiskyUserHistoryItemCollectionPage> callback);
+    void get(final ICallback<? super IRiskyUserHistoryItemCollectionPage> callback);
 
     IRiskyUserHistoryItemCollectionPage get() throws ClientException;
 
-    void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback);
+    void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback);
 
     RiskyUserHistoryItem post(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IRiskyUserHistoryItemCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRiskyUserHistoryItemCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRiskyUserHistoryItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IRiskyUserHistoryItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRiskyUserHistoryItemCollectionRequest skipToken(String skipToken);
+	IRiskyUserHistoryItemCollectionRequest skipToken(final String skipToken);
 }

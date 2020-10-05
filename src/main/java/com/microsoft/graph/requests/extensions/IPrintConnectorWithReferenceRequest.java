@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrintConnectorWithReferenceRequest extends IHttpRequest {
 
-    void post(final PrintConnector newPrintConnector, final IJsonBackedObject payload, final ICallback<PrintConnector> callback);
+    void post(final PrintConnector newPrintConnector, final IJsonBackedObject payload, final ICallback<? super PrintConnector> callback);
 
     PrintConnector post(final PrintConnector newPrintConnector, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<PrintConnector> callback);
+    void get(final ICallback<? super PrintConnector> callback);
 
     PrintConnector get() throws ClientException;
 
-	void delete(final ICallback<PrintConnector> callback);
+	void delete(final ICallback<? super PrintConnector> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final PrintConnector sourcePrintConnector, final ICallback<PrintConnector> callback);
+	void patch(final PrintConnector sourcePrintConnector, final ICallback<? super PrintConnector> callback);
 
 	PrintConnector patch(final PrintConnector sourcePrintConnector) throws ClientException;
 

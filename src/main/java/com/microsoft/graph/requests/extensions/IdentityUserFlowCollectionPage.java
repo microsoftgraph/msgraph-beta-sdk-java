@@ -23,6 +23,6 @@ public class IdentityUserFlowCollectionPage extends BaseCollectionPage<IdentityU
      * @param builder  the request builder for the next collection page
      */
     public IdentityUserFlowCollectionPage(final IdentityUserFlowCollectionResponse response, final IIdentityUserFlowCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

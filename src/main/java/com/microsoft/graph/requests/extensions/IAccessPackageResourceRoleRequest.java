@@ -21,7 +21,7 @@ public interface IAccessPackageResourceRoleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageResourceRole> callback);
+    void get(final ICallback<? super AccessPackageResourceRole> callback);
 
     /**
      * Gets the AccessPackageResourceRole from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageResourceRoleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageResourceRole> callback);
+    void delete(final ICallback<? super AccessPackageResourceRole> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageResourceRoleRequest extends IHttpRequest {
      * @param sourceAccessPackageResourceRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageResourceRole sourceAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback);
+    void patch(final AccessPackageResourceRole sourceAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback);
 
     /**
      * Patches this AccessPackageResourceRole with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageResourceRoleRequest extends IHttpRequest {
      * @param newAccessPackageResourceRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback);
+    void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback);
 
     /**
      * Posts a AccessPackageResourceRole with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageResourceRoleRequest extends IHttpRequest {
      * @param newAccessPackageResourceRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback);
+    void put(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback);
 
     /**
      * Posts a AccessPackageResourceRole with a new object

@@ -21,7 +21,7 @@ public interface IAdminConsentRequestPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AdminConsentRequestPolicy> callback);
+    void get(final ICallback<? super AdminConsentRequestPolicy> callback);
 
     /**
      * Gets the AdminConsentRequestPolicy from the service
@@ -36,7 +36,7 @@ public interface IAdminConsentRequestPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AdminConsentRequestPolicy> callback);
+    void delete(final ICallback<? super AdminConsentRequestPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAdminConsentRequestPolicyRequest extends IHttpRequest {
      * @param sourceAdminConsentRequestPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback);
+    void patch(final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback);
 
     /**
      * Patches this AdminConsentRequestPolicy with a source
@@ -68,7 +68,7 @@ public interface IAdminConsentRequestPolicyRequest extends IHttpRequest {
      * @param newAdminConsentRequestPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback);
+    void post(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback);
 
     /**
      * Posts a AdminConsentRequestPolicy with a new object
@@ -85,7 +85,7 @@ public interface IAdminConsentRequestPolicyRequest extends IHttpRequest {
      * @param newAdminConsentRequestPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback);
+    void put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback);
 
     /**
      * Posts a AdminConsentRequestPolicy with a new object

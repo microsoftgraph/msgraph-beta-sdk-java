@@ -23,6 +23,6 @@ public class DeviceManagementDomainJoinConnectorCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementDomainJoinConnectorCollectionPage(final DeviceManagementDomainJoinConnectorCollectionResponse response, final IDeviceManagementDomainJoinConnectorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

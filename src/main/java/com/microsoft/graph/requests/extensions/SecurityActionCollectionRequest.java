@@ -40,7 +40,7 @@ public class SecurityActionCollectionRequest extends BaseCollectionRequest<Secur
         super(requestUrl, client, requestOptions, SecurityActionCollectionResponse.class, ISecurityActionCollectionPage.class);
     }
 
-    public void get(final ICallback<ISecurityActionCollectionPage> callback) {
+    public void get(final ICallback<? super ISecurityActionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecurityActionCollectionRequest extends BaseCollectionRequest<Secur
         return buildFromResponse(response);
     }
 
-    public void post(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback) {
+    public void post(final SecurityAction newSecurityAction, final ICallback<? super SecurityAction> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityActionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SecurityActionCollectionRequest extends BaseCollectionRequest<Secur
      */
     public ISecurityActionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SecurityActionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISecurityActionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SecurityActionCollectionRequest)this;
     }
 

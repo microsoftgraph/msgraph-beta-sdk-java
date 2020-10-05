@@ -37,7 +37,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AttributeMappingFunctionSchema> callback) {
+    public void get(final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AttributeMappingFunctionSchema> callback) {
+    public void delete(final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param sourceAttributeMappingFunctionSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback) {
+    public void patch(final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.PATCH, callback, sourceAttributeMappingFunctionSchema);
     }
 
@@ -96,7 +96,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param newAttributeMappingFunctionSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback) {
+    public void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.POST, callback, newAttributeMappingFunctionSchema);
     }
 
@@ -117,7 +117,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param newAttributeMappingFunctionSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback) {
+    public void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.PUT, callback, newAttributeMappingFunctionSchema);
     }
 
@@ -151,17 +151,6 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      */
      public IAttributeMappingFunctionSchemaRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AttributeMappingFunctionSchemaRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAttributeMappingFunctionSchemaRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AttributeMappingFunctionSchemaRequest)this;
      }
 

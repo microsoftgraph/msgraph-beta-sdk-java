@@ -35,6 +35,6 @@ public class PrivilegedRoleAssignmentCollectionWithReferencesPage extends BaseCo
      * @param builder  the request builder for the next collection page
      */
     public PrivilegedRoleAssignmentCollectionWithReferencesPage(final PrivilegedRoleAssignmentCollectionResponse response, final IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

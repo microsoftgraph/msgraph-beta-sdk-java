@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WindowsAutopilotDeviceType;
 import com.microsoft.graph.models.extensions.WindowsEnrollmentStatusScreenSettings;
@@ -14,9 +13,7 @@ import com.microsoft.graph.models.extensions.OutOfBoxExperienceSettings;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfileAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentCollectionPage;
 
 
@@ -185,35 +182,11 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
 
 
         if (json.has("assignedDevices")) {
-            final WindowsAutopilotDeviceIdentityCollectionResponse response = new WindowsAutopilotDeviceIdentityCollectionResponse();
-            if (json.has("assignedDevices@odata.nextLink")) {
-                response.nextLink = json.get("assignedDevices@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignedDevices").toString(), JsonObject[].class);
-            final WindowsAutopilotDeviceIdentity[] array = new WindowsAutopilotDeviceIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsAutopilotDeviceIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignedDevices = new WindowsAutopilotDeviceIdentityCollectionPage(response, null);
+            assignedDevices = serializer.deserializeObject(json.get("assignedDevices").toString(), WindowsAutopilotDeviceIdentityCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            final WindowsAutopilotDeploymentProfileAssignmentCollectionResponse response = new WindowsAutopilotDeploymentProfileAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final WindowsAutopilotDeploymentProfileAssignment[] array = new WindowsAutopilotDeploymentProfileAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsAutopilotDeploymentProfileAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new WindowsAutopilotDeploymentProfileAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), WindowsAutopilotDeploymentProfileAssignmentCollectionPage.class);
         }
     }
 }

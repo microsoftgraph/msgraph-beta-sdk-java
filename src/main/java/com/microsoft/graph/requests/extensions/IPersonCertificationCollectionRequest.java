@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPersonCertificationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPersonCertificationCollectionPage> callback);
+    void get(final ICallback<? super IPersonCertificationCollectionPage> callback);
 
     IPersonCertificationCollectionPage get() throws ClientException;
 
-    void post(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback);
+    void post(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback);
 
     PersonCertification post(final PersonCertification newPersonCertification) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPersonCertificationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPersonCertificationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPersonCertificationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPersonCertificationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPersonCertificationCollectionRequest skipToken(String skipToken);
+	IPersonCertificationCollectionRequest skipToken(final String skipToken);
 }

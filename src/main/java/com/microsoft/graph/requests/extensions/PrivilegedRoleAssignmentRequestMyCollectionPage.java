@@ -34,6 +34,6 @@ public class PrivilegedRoleAssignmentRequestMyCollectionPage extends BaseCollect
      * @param builder The request builder for the next collection page
      */
     public PrivilegedRoleAssignmentRequestMyCollectionPage(final PrivilegedRoleAssignmentRequestMyCollectionResponse response, final IPrivilegedRoleAssignmentRequestMyCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

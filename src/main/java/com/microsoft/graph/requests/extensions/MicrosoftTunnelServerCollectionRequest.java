@@ -40,7 +40,7 @@ public class MicrosoftTunnelServerCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, MicrosoftTunnelServerCollectionResponse.class, IMicrosoftTunnelServerCollectionPage.class);
     }
 
-    public void get(final ICallback<IMicrosoftTunnelServerCollectionPage> callback) {
+    public void get(final ICallback<? super IMicrosoftTunnelServerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MicrosoftTunnelServerCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<MicrosoftTunnelServer> callback) {
+    public void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MicrosoftTunnelServerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MicrosoftTunnelServerCollectionRequest extends BaseCollectionReques
      */
     public IMicrosoftTunnelServerCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MicrosoftTunnelServerCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMicrosoftTunnelServerCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MicrosoftTunnelServerCollectionRequest)this;
     }
 

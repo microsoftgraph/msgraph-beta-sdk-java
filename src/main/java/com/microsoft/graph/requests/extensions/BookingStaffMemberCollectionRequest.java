@@ -40,7 +40,7 @@ public class BookingStaffMemberCollectionRequest extends BaseCollectionRequest<B
         super(requestUrl, client, requestOptions, BookingStaffMemberCollectionResponse.class, IBookingStaffMemberCollectionPage.class);
     }
 
-    public void get(final ICallback<IBookingStaffMemberCollectionPage> callback) {
+    public void get(final ICallback<? super IBookingStaffMemberCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class BookingStaffMemberCollectionRequest extends BaseCollectionRequest<B
         return buildFromResponse(response);
     }
 
-    public void post(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback) {
+    public void post(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingStaffMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class BookingStaffMemberCollectionRequest extends BaseCollectionRequest<B
      */
     public IBookingStaffMemberCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (BookingStaffMemberCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IBookingStaffMemberCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (BookingStaffMemberCollectionRequest)this;
     }
 

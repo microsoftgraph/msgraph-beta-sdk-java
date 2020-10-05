@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IosDeviceType;
 import com.microsoft.graph.models.extensions.VppLicensingType;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.extensions.IosVppAppRevokeLicensesActionResult
 import com.microsoft.graph.models.generated.VppTokenAccountType;
 import com.microsoft.graph.models.extensions.IosVppAppAssignedLicense;
 import com.microsoft.graph.models.extensions.MobileApp;
-import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionPage;
 
 
@@ -175,19 +173,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
 
 
         if (json.has("assignedLicenses")) {
-            final IosVppAppAssignedLicenseCollectionResponse response = new IosVppAppAssignedLicenseCollectionResponse();
-            if (json.has("assignedLicenses@odata.nextLink")) {
-                response.nextLink = json.get("assignedLicenses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignedLicenses").toString(), JsonObject[].class);
-            final IosVppAppAssignedLicense[] array = new IosVppAppAssignedLicense[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosVppAppAssignedLicense.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignedLicenses = new IosVppAppAssignedLicenseCollectionPage(response, null);
+            assignedLicenses = serializer.deserializeObject(json.get("assignedLicenses").toString(), IosVppAppAssignedLicenseCollectionPage.class);
         }
     }
 }

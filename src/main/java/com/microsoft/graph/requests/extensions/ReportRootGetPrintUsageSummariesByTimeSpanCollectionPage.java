@@ -34,6 +34,6 @@ public class ReportRootGetPrintUsageSummariesByTimeSpanCollectionPage extends Ba
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetPrintUsageSummariesByTimeSpanCollectionPage(final ReportRootGetPrintUsageSummariesByTimeSpanCollectionResponse response, final IReportRootGetPrintUsageSummariesByTimeSpanCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

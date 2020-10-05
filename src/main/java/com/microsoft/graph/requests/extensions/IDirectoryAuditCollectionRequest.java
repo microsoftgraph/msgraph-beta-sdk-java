@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryAuditCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDirectoryAuditCollectionPage> callback);
+    void get(final ICallback<? super IDirectoryAuditCollectionPage> callback);
 
     IDirectoryAuditCollectionPage get() throws ClientException;
 
-    void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback);
+    void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback);
 
     DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDirectoryAuditCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDirectoryAuditCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDirectoryAuditCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDirectoryAuditCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryAuditCollectionRequest skipToken(String skipToken);
+	IDirectoryAuditCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class ChatActivityStatisticsRequest extends BaseRequest implements IChatA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ChatActivityStatistics> callback) {
+    public void get(final ICallback<? super ChatActivityStatistics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ChatActivityStatisticsRequest extends BaseRequest implements IChatA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ChatActivityStatistics> callback) {
+    public void delete(final ICallback<? super ChatActivityStatistics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ChatActivityStatisticsRequest extends BaseRequest implements IChatA
      * @param sourceChatActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChatActivityStatistics sourceChatActivityStatistics, final ICallback<ChatActivityStatistics> callback) {
+    public void patch(final ChatActivityStatistics sourceChatActivityStatistics, final ICallback<? super ChatActivityStatistics> callback) {
         send(HttpMethod.PATCH, callback, sourceChatActivityStatistics);
     }
 
@@ -96,7 +96,7 @@ public class ChatActivityStatisticsRequest extends BaseRequest implements IChatA
      * @param newChatActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChatActivityStatistics newChatActivityStatistics, final ICallback<ChatActivityStatistics> callback) {
+    public void post(final ChatActivityStatistics newChatActivityStatistics, final ICallback<? super ChatActivityStatistics> callback) {
         send(HttpMethod.POST, callback, newChatActivityStatistics);
     }
 
@@ -117,7 +117,7 @@ public class ChatActivityStatisticsRequest extends BaseRequest implements IChatA
      * @param newChatActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChatActivityStatistics newChatActivityStatistics, final ICallback<ChatActivityStatistics> callback) {
+    public void put(final ChatActivityStatistics newChatActivityStatistics, final ICallback<? super ChatActivityStatistics> callback) {
         send(HttpMethod.PUT, callback, newChatActivityStatistics);
     }
 
@@ -151,17 +151,6 @@ public class ChatActivityStatisticsRequest extends BaseRequest implements IChatA
      */
      public IChatActivityStatisticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ChatActivityStatisticsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IChatActivityStatisticsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ChatActivityStatisticsRequest)this;
      }
 

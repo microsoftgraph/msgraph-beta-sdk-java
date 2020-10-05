@@ -23,6 +23,6 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionPage extends Bas
      * @param builder  the request builder for the next collection page
      */
     public AndroidManagedStoreAppConfigurationSchemaCollectionPage(final AndroidManagedStoreAppConfigurationSchemaCollectionResponse response, final IAndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

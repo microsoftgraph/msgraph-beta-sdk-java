@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IExactMatchDataStoreLookupCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IExactMatchDataStoreLookupCollectionPage> callback);
+    void post(final ICallback<? super IExactMatchDataStoreLookupCollectionPage> callback);
 
     IExactMatchDataStoreLookupCollectionPage post() throws ClientException;
 

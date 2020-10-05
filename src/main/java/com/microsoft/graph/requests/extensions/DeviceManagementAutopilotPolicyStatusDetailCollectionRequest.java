@@ -40,7 +40,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionRequest extend
         super(requestUrl, client, requestOptions, DeviceManagementAutopilotPolicyStatusDetailCollectionResponse.class, IDeviceManagementAutopilotPolicyStatusDetailCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementAutopilotPolicyStatusDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementAutopilotPolicyStatusDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionRequest extend
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementAutopilotPolicyStatusDetailRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionRequest extend
      */
     public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementAutopilotPolicyStatusDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementAutopilotPolicyStatusDetailCollectionRequest)this;
     }
 

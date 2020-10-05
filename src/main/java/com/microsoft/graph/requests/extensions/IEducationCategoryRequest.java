@@ -21,7 +21,7 @@ public interface IEducationCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationCategory> callback);
+    void get(final ICallback<? super EducationCategory> callback);
 
     /**
      * Gets the EducationCategory from the service
@@ -36,7 +36,7 @@ public interface IEducationCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationCategory> callback);
+    void delete(final ICallback<? super EducationCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationCategoryRequest extends IHttpRequest {
      * @param sourceEducationCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationCategory sourceEducationCategory, final ICallback<EducationCategory> callback);
+    void patch(final EducationCategory sourceEducationCategory, final ICallback<? super EducationCategory> callback);
 
     /**
      * Patches this EducationCategory with a source
@@ -68,7 +68,7 @@ public interface IEducationCategoryRequest extends IHttpRequest {
      * @param newEducationCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationCategory newEducationCategory, final ICallback<EducationCategory> callback);
+    void post(final EducationCategory newEducationCategory, final ICallback<? super EducationCategory> callback);
 
     /**
      * Posts a EducationCategory with a new object
@@ -85,7 +85,7 @@ public interface IEducationCategoryRequest extends IHttpRequest {
      * @param newEducationCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationCategory newEducationCategory, final ICallback<EducationCategory> callback);
+    void put(final EducationCategory newEducationCategory, final ICallback<? super EducationCategory> callback);
 
     /**
      * Posts a EducationCategory with a new object

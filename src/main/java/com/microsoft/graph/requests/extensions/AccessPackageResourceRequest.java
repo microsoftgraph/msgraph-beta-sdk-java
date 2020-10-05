@@ -45,7 +45,7 @@ public class AccessPackageResourceRequest extends BaseRequest implements IAccess
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessPackageResource> callback) {
+    public void get(final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class AccessPackageResourceRequest extends BaseRequest implements IAccess
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessPackageResource> callback) {
+    public void delete(final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class AccessPackageResourceRequest extends BaseRequest implements IAccess
      * @param sourceAccessPackageResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResource sourceAccessPackageResource, final ICallback<AccessPackageResource> callback) {
+    public void patch(final AccessPackageResource sourceAccessPackageResource, final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResource);
     }
 
@@ -104,7 +104,7 @@ public class AccessPackageResourceRequest extends BaseRequest implements IAccess
      * @param newAccessPackageResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResource newAccessPackageResource, final ICallback<AccessPackageResource> callback) {
+    public void post(final AccessPackageResource newAccessPackageResource, final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResource);
     }
 
@@ -125,7 +125,7 @@ public class AccessPackageResourceRequest extends BaseRequest implements IAccess
      * @param newAccessPackageResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResource newAccessPackageResource, final ICallback<AccessPackageResource> callback) {
+    public void put(final AccessPackageResource newAccessPackageResource, final ICallback<? super AccessPackageResource> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResource);
     }
 
@@ -159,17 +159,6 @@ public class AccessPackageResourceRequest extends BaseRequest implements IAccess
      */
      public IAccessPackageResourceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessPackageResourceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessPackageResourceRequest)this;
      }
 

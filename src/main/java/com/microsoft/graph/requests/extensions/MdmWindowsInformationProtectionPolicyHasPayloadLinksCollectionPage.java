@@ -34,6 +34,6 @@ public class MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage 
      * @param builder The request builder for the next collection page
      */
     public MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage(final MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionResponse response, final IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IFileClassificationRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FileClassificationRequest> callback);
+    void get(final ICallback<? super FileClassificationRequest> callback);
 
     /**
      * Gets the FileClassificationRequest from the service
@@ -36,7 +36,7 @@ public interface IFileClassificationRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FileClassificationRequest> callback);
+    void delete(final ICallback<? super FileClassificationRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFileClassificationRequestRequest extends IHttpRequest {
      * @param sourceFileClassificationRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FileClassificationRequest sourceFileClassificationRequest, final ICallback<FileClassificationRequest> callback);
+    void patch(final FileClassificationRequest sourceFileClassificationRequest, final ICallback<? super FileClassificationRequest> callback);
 
     /**
      * Patches this FileClassificationRequest with a source
@@ -68,7 +68,7 @@ public interface IFileClassificationRequestRequest extends IHttpRequest {
      * @param newFileClassificationRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FileClassificationRequest newFileClassificationRequest, final ICallback<FileClassificationRequest> callback);
+    void post(final FileClassificationRequest newFileClassificationRequest, final ICallback<? super FileClassificationRequest> callback);
 
     /**
      * Posts a FileClassificationRequest with a new object
@@ -85,7 +85,7 @@ public interface IFileClassificationRequestRequest extends IHttpRequest {
      * @param newFileClassificationRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FileClassificationRequest newFileClassificationRequest, final ICallback<FileClassificationRequest> callback);
+    void put(final FileClassificationRequest newFileClassificationRequest, final ICallback<? super FileClassificationRequest> callback);
 
     /**
      * Posts a FileClassificationRequest with a new object

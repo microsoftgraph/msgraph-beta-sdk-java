@@ -37,7 +37,7 @@ public class PrintJobStartPrintJobRequest extends BaseRequest implements IPrintJ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<PrintJobStatus> callback) {
+    public void post(final ICallback<? super PrintJobStatus> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class PrintJobStartPrintJobRequest extends BaseRequest implements IPrintJ
      */
     public IPrintJobStartPrintJobRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintJobStartPrintJobRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintJobStartPrintJobRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrintJobStartPrintJobRequest)this;
     }
 

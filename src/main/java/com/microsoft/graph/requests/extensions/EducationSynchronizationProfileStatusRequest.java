@@ -37,7 +37,7 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationSynchronizationProfileStatus> callback) {
+    public void get(final ICallback<? super EducationSynchronizationProfileStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationSynchronizationProfileStatus> callback) {
+    public void delete(final ICallback<? super EducationSynchronizationProfileStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
      * @param sourceEducationSynchronizationProfileStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationSynchronizationProfileStatus sourceEducationSynchronizationProfileStatus, final ICallback<EducationSynchronizationProfileStatus> callback) {
+    public void patch(final EducationSynchronizationProfileStatus sourceEducationSynchronizationProfileStatus, final ICallback<? super EducationSynchronizationProfileStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationSynchronizationProfileStatus);
     }
 
@@ -96,7 +96,7 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
      * @param newEducationSynchronizationProfileStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus, final ICallback<EducationSynchronizationProfileStatus> callback) {
+    public void post(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus, final ICallback<? super EducationSynchronizationProfileStatus> callback) {
         send(HttpMethod.POST, callback, newEducationSynchronizationProfileStatus);
     }
 
@@ -117,7 +117,7 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
      * @param newEducationSynchronizationProfileStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus, final ICallback<EducationSynchronizationProfileStatus> callback) {
+    public void put(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus, final ICallback<? super EducationSynchronizationProfileStatus> callback) {
         send(HttpMethod.PUT, callback, newEducationSynchronizationProfileStatus);
     }
 
@@ -151,17 +151,6 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
      */
      public IEducationSynchronizationProfileStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationSynchronizationProfileStatusRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationSynchronizationProfileStatusRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationSynchronizationProfileStatusRequest)this;
      }
 

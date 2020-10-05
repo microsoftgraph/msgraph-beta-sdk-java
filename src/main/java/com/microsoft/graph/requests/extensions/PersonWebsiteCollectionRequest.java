@@ -40,7 +40,7 @@ public class PersonWebsiteCollectionRequest extends BaseCollectionRequest<Person
         super(requestUrl, client, requestOptions, PersonWebsiteCollectionResponse.class, IPersonWebsiteCollectionPage.class);
     }
 
-    public void get(final ICallback<IPersonWebsiteCollectionPage> callback) {
+    public void get(final ICallback<? super IPersonWebsiteCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PersonWebsiteCollectionRequest extends BaseCollectionRequest<Person
         return buildFromResponse(response);
     }
 
-    public void post(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback) {
+    public void post(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonWebsiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PersonWebsiteCollectionRequest extends BaseCollectionRequest<Person
      */
     public IPersonWebsiteCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PersonWebsiteCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPersonWebsiteCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PersonWebsiteCollectionRequest)this;
     }
 

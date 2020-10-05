@@ -23,6 +23,6 @@ public class IosLobAppProvisioningConfigurationCollectionPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public IosLobAppProvisioningConfigurationCollectionPage(final IosLobAppProvisioningConfigurationCollectionResponse response, final IIosLobAppProvisioningConfigurationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -37,7 +37,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EmailAuthenticationMethod> callback) {
+    public void get(final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EmailAuthenticationMethod> callback) {
+    public void delete(final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param sourceEmailAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailAuthenticationMethod sourceEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback) {
+    public void patch(final EmailAuthenticationMethod sourceEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailAuthenticationMethod);
     }
 
@@ -96,7 +96,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param newEmailAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback) {
+    public void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newEmailAuthenticationMethod);
     }
 
@@ -117,7 +117,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param newEmailAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback) {
+    public void put(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newEmailAuthenticationMethod);
     }
 
@@ -151,17 +151,6 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      */
      public IEmailAuthenticationMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailAuthenticationMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEmailAuthenticationMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmailAuthenticationMethodRequest)this;
      }
 

@@ -39,7 +39,7 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81VpnConfiguration> callback) {
+    public void get(final ICallback<? super WindowsPhone81VpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81VpnConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsPhone81VpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
      * @param sourceWindowsPhone81VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81VpnConfiguration sourceWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback) {
+    public void patch(final WindowsPhone81VpnConfiguration sourceWindowsPhone81VpnConfiguration, final ICallback<? super WindowsPhone81VpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81VpnConfiguration);
     }
 
@@ -98,7 +98,7 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
      * @param newWindowsPhone81VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback) {
+    public void post(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<? super WindowsPhone81VpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81VpnConfiguration);
     }
 
@@ -119,7 +119,7 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
      * @param newWindowsPhone81VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback) {
+    public void put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<? super WindowsPhone81VpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81VpnConfiguration);
     }
 
@@ -153,17 +153,6 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
      */
      public IWindowsPhone81VpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81VpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhone81VpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81VpnConfigurationRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IWindowsPhone81AppXRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81AppX> callback);
+    void get(final ICallback<? super WindowsPhone81AppX> callback);
 
     /**
      * Gets the WindowsPhone81AppX from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81AppXRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81AppX> callback);
+    void delete(final ICallback<? super WindowsPhone81AppX> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81AppXRequest extends IHttpRequest {
      * @param sourceWindowsPhone81AppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81AppX sourceWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback);
+    void patch(final WindowsPhone81AppX sourceWindowsPhone81AppX, final ICallback<? super WindowsPhone81AppX> callback);
 
     /**
      * Patches this WindowsPhone81AppX with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81AppXRequest extends IHttpRequest {
      * @param newWindowsPhone81AppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback);
+    void post(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<? super WindowsPhone81AppX> callback);
 
     /**
      * Posts a WindowsPhone81AppX with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81AppXRequest extends IHttpRequest {
      * @param newWindowsPhone81AppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback);
+    void put(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<? super WindowsPhone81AppX> callback);
 
     /**
      * Posts a WindowsPhone81AppX with a new object

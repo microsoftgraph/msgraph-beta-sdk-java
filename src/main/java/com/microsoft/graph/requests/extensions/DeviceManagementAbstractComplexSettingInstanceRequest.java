@@ -41,7 +41,7 @@ public class DeviceManagementAbstractComplexSettingInstanceRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementAbstractComplexSettingInstance> callback) {
+    public void get(final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DeviceManagementAbstractComplexSettingInstanceRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementAbstractComplexSettingInstance> callback) {
+    public void delete(final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DeviceManagementAbstractComplexSettingInstanceRequest extends BaseR
      * @param sourceDeviceManagementAbstractComplexSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementAbstractComplexSettingInstance sourceDeviceManagementAbstractComplexSettingInstance, final ICallback<DeviceManagementAbstractComplexSettingInstance> callback) {
+    public void patch(final DeviceManagementAbstractComplexSettingInstance sourceDeviceManagementAbstractComplexSettingInstance, final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementAbstractComplexSettingInstance);
     }
 
@@ -100,7 +100,7 @@ public class DeviceManagementAbstractComplexSettingInstanceRequest extends BaseR
      * @param newDeviceManagementAbstractComplexSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<DeviceManagementAbstractComplexSettingInstance> callback) {
+    public void post(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementAbstractComplexSettingInstance);
     }
 
@@ -121,7 +121,7 @@ public class DeviceManagementAbstractComplexSettingInstanceRequest extends BaseR
      * @param newDeviceManagementAbstractComplexSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<DeviceManagementAbstractComplexSettingInstance> callback) {
+    public void put(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementAbstractComplexSettingInstance);
     }
 
@@ -155,17 +155,6 @@ public class DeviceManagementAbstractComplexSettingInstanceRequest extends BaseR
      */
      public IDeviceManagementAbstractComplexSettingInstanceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementAbstractComplexSettingInstanceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementAbstractComplexSettingInstanceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementAbstractComplexSettingInstanceRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ContinuousAccessEvaluationPolicy> callback) {
+    public void get(final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ContinuousAccessEvaluationPolicy> callback) {
+    public void delete(final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param sourceContinuousAccessEvaluationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy, final ICallback<ContinuousAccessEvaluationPolicy> callback) {
+    public void patch(final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceContinuousAccessEvaluationPolicy);
     }
 
@@ -96,7 +96,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param newContinuousAccessEvaluationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<ContinuousAccessEvaluationPolicy> callback) {
+    public void post(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.POST, callback, newContinuousAccessEvaluationPolicy);
     }
 
@@ -117,7 +117,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param newContinuousAccessEvaluationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<ContinuousAccessEvaluationPolicy> callback) {
+    public void put(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.PUT, callback, newContinuousAccessEvaluationPolicy);
     }
 
@@ -151,17 +151,6 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      */
      public IContinuousAccessEvaluationPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContinuousAccessEvaluationPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IContinuousAccessEvaluationPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ContinuousAccessEvaluationPolicyRequest)this;
      }
 

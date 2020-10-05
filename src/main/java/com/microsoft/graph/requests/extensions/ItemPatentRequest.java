@@ -37,7 +37,7 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemPatent> callback) {
+    public void get(final ICallback<? super ItemPatent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemPatent> callback) {
+    public void delete(final ICallback<? super ItemPatent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
      * @param sourceItemPatent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemPatent sourceItemPatent, final ICallback<ItemPatent> callback) {
+    public void patch(final ItemPatent sourceItemPatent, final ICallback<? super ItemPatent> callback) {
         send(HttpMethod.PATCH, callback, sourceItemPatent);
     }
 
@@ -96,7 +96,7 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
      * @param newItemPatent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback) {
+    public void post(final ItemPatent newItemPatent, final ICallback<? super ItemPatent> callback) {
         send(HttpMethod.POST, callback, newItemPatent);
     }
 
@@ -117,7 +117,7 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
      * @param newItemPatent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback) {
+    public void put(final ItemPatent newItemPatent, final ICallback<? super ItemPatent> callback) {
         send(HttpMethod.PUT, callback, newItemPatent);
     }
 
@@ -151,17 +151,6 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
      */
      public IItemPatentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemPatentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemPatentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemPatentRequest)this;
      }
 

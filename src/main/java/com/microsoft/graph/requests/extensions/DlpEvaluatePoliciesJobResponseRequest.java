@@ -37,7 +37,7 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DlpEvaluatePoliciesJobResponse> callback) {
+    public void get(final ICallback<? super DlpEvaluatePoliciesJobResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DlpEvaluatePoliciesJobResponse> callback) {
+    public void delete(final ICallback<? super DlpEvaluatePoliciesJobResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
      * @param sourceDlpEvaluatePoliciesJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DlpEvaluatePoliciesJobResponse sourceDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback) {
+    public void patch(final DlpEvaluatePoliciesJobResponse sourceDlpEvaluatePoliciesJobResponse, final ICallback<? super DlpEvaluatePoliciesJobResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceDlpEvaluatePoliciesJobResponse);
     }
 
@@ -96,7 +96,7 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
      * @param newDlpEvaluatePoliciesJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback) {
+    public void post(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<? super DlpEvaluatePoliciesJobResponse> callback) {
         send(HttpMethod.POST, callback, newDlpEvaluatePoliciesJobResponse);
     }
 
@@ -117,7 +117,7 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
      * @param newDlpEvaluatePoliciesJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback) {
+    public void put(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<? super DlpEvaluatePoliciesJobResponse> callback) {
         send(HttpMethod.PUT, callback, newDlpEvaluatePoliciesJobResponse);
     }
 
@@ -151,17 +151,6 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
      */
      public IDlpEvaluatePoliciesJobResponseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DlpEvaluatePoliciesJobResponseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDlpEvaluatePoliciesJobResponseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DlpEvaluatePoliciesJobResponseRequest)this;
      }
 

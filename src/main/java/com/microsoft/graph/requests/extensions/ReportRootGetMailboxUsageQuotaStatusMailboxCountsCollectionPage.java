@@ -34,6 +34,6 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionPage ext
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionPage(final ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionResponse response, final IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

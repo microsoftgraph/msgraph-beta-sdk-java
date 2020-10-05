@@ -21,7 +21,7 @@ public interface IMobileAppSupersedenceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppSupersedence> callback);
+    void get(final ICallback<? super MobileAppSupersedence> callback);
 
     /**
      * Gets the MobileAppSupersedence from the service
@@ -36,7 +36,7 @@ public interface IMobileAppSupersedenceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppSupersedence> callback);
+    void delete(final ICallback<? super MobileAppSupersedence> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppSupersedenceRequest extends IHttpRequest {
      * @param sourceMobileAppSupersedence the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppSupersedence sourceMobileAppSupersedence, final ICallback<MobileAppSupersedence> callback);
+    void patch(final MobileAppSupersedence sourceMobileAppSupersedence, final ICallback<? super MobileAppSupersedence> callback);
 
     /**
      * Patches this MobileAppSupersedence with a source
@@ -68,7 +68,7 @@ public interface IMobileAppSupersedenceRequest extends IHttpRequest {
      * @param newMobileAppSupersedence the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppSupersedence newMobileAppSupersedence, final ICallback<MobileAppSupersedence> callback);
+    void post(final MobileAppSupersedence newMobileAppSupersedence, final ICallback<? super MobileAppSupersedence> callback);
 
     /**
      * Posts a MobileAppSupersedence with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppSupersedenceRequest extends IHttpRequest {
      * @param newMobileAppSupersedence the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppSupersedence newMobileAppSupersedence, final ICallback<MobileAppSupersedence> callback);
+    void put(final MobileAppSupersedence newMobileAppSupersedence, final ICallback<? super MobileAppSupersedence> callback);
 
     /**
      * Posts a MobileAppSupersedence with a new object

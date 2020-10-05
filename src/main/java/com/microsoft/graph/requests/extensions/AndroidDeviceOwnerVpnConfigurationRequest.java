@@ -41,7 +41,7 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceOwnerVpnConfiguration> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceOwnerVpnConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      * @param sourceAndroidDeviceOwnerVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerVpnConfiguration sourceAndroidDeviceOwnerVpnConfiguration, final ICallback<AndroidDeviceOwnerVpnConfiguration> callback) {
+    public void patch(final AndroidDeviceOwnerVpnConfiguration sourceAndroidDeviceOwnerVpnConfiguration, final ICallback<? super AndroidDeviceOwnerVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerVpnConfiguration);
     }
 
@@ -100,7 +100,7 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      * @param newAndroidDeviceOwnerVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration, final ICallback<AndroidDeviceOwnerVpnConfiguration> callback) {
+    public void post(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration, final ICallback<? super AndroidDeviceOwnerVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerVpnConfiguration);
     }
 
@@ -121,7 +121,7 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      * @param newAndroidDeviceOwnerVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration, final ICallback<AndroidDeviceOwnerVpnConfiguration> callback) {
+    public void put(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration, final ICallback<? super AndroidDeviceOwnerVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerVpnConfiguration);
     }
 
@@ -155,17 +155,6 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      */
      public IAndroidDeviceOwnerVpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerVpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceOwnerVpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceOwnerVpnConfigurationRequest)this;
      }
 

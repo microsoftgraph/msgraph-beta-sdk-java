@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IItemActivityStatCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IItemActivityStatCollectionPage> callback);
+    void get(final ICallback<? super IItemActivityStatCollectionPage> callback);
 
     IItemActivityStatCollectionPage get() throws ClientException;
 
-    void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback);
+    void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
     ItemActivityStat post(final ItemActivityStat newItemActivityStat) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IItemActivityStatCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IItemActivityStatCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IItemActivityStatCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IItemActivityStatCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IItemActivityStatCollectionRequest skipToken(String skipToken);
+	IItemActivityStatCollectionRequest skipToken(final String skipToken);
 }

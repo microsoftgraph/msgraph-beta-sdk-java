@@ -41,7 +41,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidEnterpriseWiFiConfiguration> callback) {
+    public void get(final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidEnterpriseWiFiConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param sourceAndroidEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidEnterpriseWiFiConfiguration sourceAndroidEnterpriseWiFiConfiguration, final ICallback<AndroidEnterpriseWiFiConfiguration> callback) {
+    public void patch(final AndroidEnterpriseWiFiConfiguration sourceAndroidEnterpriseWiFiConfiguration, final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -100,7 +100,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param newAndroidEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<AndroidEnterpriseWiFiConfiguration> callback) {
+    public void post(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -121,7 +121,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param newAndroidEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<AndroidEnterpriseWiFiConfiguration> callback) {
+    public void put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -155,17 +155,6 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      */
      public IAndroidEnterpriseWiFiConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidEnterpriseWiFiConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidEnterpriseWiFiConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidEnterpriseWiFiConfigurationRequest)this;
      }
 

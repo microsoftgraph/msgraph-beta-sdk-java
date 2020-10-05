@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOfficeClientConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOfficeClientConfigurationCollectionPage> callback);
+    void get(final ICallback<? super IOfficeClientConfigurationCollectionPage> callback);
 
     IOfficeClientConfigurationCollectionPage get() throws ClientException;
 
-    void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback);
+    void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback);
 
     OfficeClientConfiguration post(final OfficeClientConfiguration newOfficeClientConfiguration) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IOfficeClientConfigurationCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IOfficeClientConfigurationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOfficeClientConfigurationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IOfficeClientConfigurationCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IOfficeClientConfigurationCollectionRequest skipToken(String skipToken);
+	IOfficeClientConfigurationCollectionRequest skipToken(final String skipToken);
 }

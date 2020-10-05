@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequest extends BaseRequest
      * @param sourceAndroidDeviceOwnerCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void patch(final AndroidDeviceOwnerCertificateProfileBase sourceAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerCertificateProfileBase);
     }
 
@@ -113,7 +113,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequest extends BaseRequest
      * @param newAndroidDeviceOwnerCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void post(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerCertificateProfileBase);
     }
 
@@ -134,7 +134,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequest extends BaseRequest
      * @param newAndroidDeviceOwnerCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback) {
+    public void put(final AndroidDeviceOwnerCertificateProfileBase newAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerCertificateProfileBase);
     }
 
@@ -168,17 +168,6 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequest extends BaseRequest
      */
      public IAndroidDeviceOwnerCertificateProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerCertificateProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceOwnerCertificateProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceOwnerCertificateProfileBaseRequest)this;
      }
 

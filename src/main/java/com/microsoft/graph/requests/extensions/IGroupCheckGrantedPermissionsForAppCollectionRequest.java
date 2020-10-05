@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IGroupCheckGrantedPermissionsForAppCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IGroupCheckGrantedPermissionsForAppCollectionPage> callback);
+    void post(final ICallback<? super IGroupCheckGrantedPermissionsForAppCollectionPage> callback);
 
     IGroupCheckGrantedPermissionsForAppCollectionPage post() throws ClientException;
 

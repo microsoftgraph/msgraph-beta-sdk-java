@@ -21,7 +21,7 @@ public interface IAndroidForWorkWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkWiFiConfiguration> callback);
+    void get(final ICallback<? super AndroidForWorkWiFiConfiguration> callback);
 
     /**
      * Gets the AndroidForWorkWiFiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkWiFiConfiguration> callback);
+    void delete(final ICallback<? super AndroidForWorkWiFiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkWiFiConfigurationRequest extends IHttpRequest {
      * @param sourceAndroidForWorkWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkWiFiConfiguration sourceAndroidForWorkWiFiConfiguration, final ICallback<AndroidForWorkWiFiConfiguration> callback);
+    void patch(final AndroidForWorkWiFiConfiguration sourceAndroidForWorkWiFiConfiguration, final ICallback<? super AndroidForWorkWiFiConfiguration> callback);
 
     /**
      * Patches this AndroidForWorkWiFiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkWiFiConfigurationRequest extends IHttpRequest {
      * @param newAndroidForWorkWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkWiFiConfiguration newAndroidForWorkWiFiConfiguration, final ICallback<AndroidForWorkWiFiConfiguration> callback);
+    void post(final AndroidForWorkWiFiConfiguration newAndroidForWorkWiFiConfiguration, final ICallback<? super AndroidForWorkWiFiConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkWiFiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkWiFiConfigurationRequest extends IHttpRequest {
      * @param newAndroidForWorkWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkWiFiConfiguration newAndroidForWorkWiFiConfiguration, final ICallback<AndroidForWorkWiFiConfiguration> callback);
+    void put(final AndroidForWorkWiFiConfiguration newAndroidForWorkWiFiConfiguration, final ICallback<? super AndroidForWorkWiFiConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkWiFiConfiguration with a new object

@@ -21,7 +21,7 @@ public interface IAuditEventRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AuditEvent> callback);
+    void get(final ICallback<? super AuditEvent> callback);
 
     /**
      * Gets the AuditEvent from the service
@@ -36,7 +36,7 @@ public interface IAuditEventRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AuditEvent> callback);
+    void delete(final ICallback<? super AuditEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAuditEventRequest extends IHttpRequest {
      * @param sourceAuditEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AuditEvent sourceAuditEvent, final ICallback<AuditEvent> callback);
+    void patch(final AuditEvent sourceAuditEvent, final ICallback<? super AuditEvent> callback);
 
     /**
      * Patches this AuditEvent with a source
@@ -68,7 +68,7 @@ public interface IAuditEventRequest extends IHttpRequest {
      * @param newAuditEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback);
+    void post(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback);
 
     /**
      * Posts a AuditEvent with a new object
@@ -85,7 +85,7 @@ public interface IAuditEventRequest extends IHttpRequest {
      * @param newAuditEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback);
+    void put(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback);
 
     /**
      * Posts a AuditEvent with a new object

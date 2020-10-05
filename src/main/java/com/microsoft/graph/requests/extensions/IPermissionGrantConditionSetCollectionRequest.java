@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPermissionGrantConditionSetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPermissionGrantConditionSetCollectionPage> callback);
+    void get(final ICallback<? super IPermissionGrantConditionSetCollectionPage> callback);
 
     IPermissionGrantConditionSetCollectionPage get() throws ClientException;
 
-    void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback);
+    void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback);
 
     PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPermissionGrantConditionSetCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IPermissionGrantConditionSetCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPermissionGrantConditionSetCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPermissionGrantConditionSetCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IPermissionGrantConditionSetCollectionRequest skipToken(String skipToken);
+	IPermissionGrantConditionSetCollectionRequest skipToken(final String skipToken);
 }

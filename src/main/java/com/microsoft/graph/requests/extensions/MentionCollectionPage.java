@@ -23,6 +23,6 @@ public class MentionCollectionPage extends BaseCollectionPage<Mention, IMentionC
      * @param builder  the request builder for the next collection page
      */
     public MentionCollectionPage(final MentionCollectionResponse response, final IMentionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

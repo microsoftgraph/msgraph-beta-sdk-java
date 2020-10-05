@@ -40,7 +40,7 @@ public class MacOsVppAppAssignedLicenseCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, MacOsVppAppAssignedLicenseCollectionResponse.class, IMacOsVppAppAssignedLicenseCollectionPage.class);
     }
 
-    public void get(final ICallback<IMacOsVppAppAssignedLicenseCollectionPage> callback) {
+    public void get(final ICallback<? super IMacOsVppAppAssignedLicenseCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MacOsVppAppAssignedLicenseCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback) {
+    public void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MacOsVppAppAssignedLicenseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MacOsVppAppAssignedLicenseCollectionRequest extends BaseCollectionR
      */
     public IMacOsVppAppAssignedLicenseCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MacOsVppAppAssignedLicenseCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMacOsVppAppAssignedLicenseCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MacOsVppAppAssignedLicenseCollectionRequest)this;
     }
 

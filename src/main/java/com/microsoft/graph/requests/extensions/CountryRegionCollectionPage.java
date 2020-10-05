@@ -23,6 +23,6 @@ public class CountryRegionCollectionPage extends BaseCollectionPage<CountryRegio
      * @param builder  the request builder for the next collection page
      */
     public CountryRegionCollectionPage(final CountryRegionCollectionResponse response, final ICountryRegionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

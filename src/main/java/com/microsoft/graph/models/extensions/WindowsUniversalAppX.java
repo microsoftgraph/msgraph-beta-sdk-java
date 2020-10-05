@@ -6,14 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WindowsArchitecture;
 import com.microsoft.graph.models.generated.WindowsDeviceType;
 import com.microsoft.graph.models.extensions.WindowsMinimumOperatingSystem;
 import com.microsoft.graph.models.extensions.MobileContainedApp;
 import com.microsoft.graph.models.extensions.MobileLobApp;
-import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionPage;
 
 
@@ -142,19 +140,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
 
         if (json.has("committedContainedApps")) {
-            final MobileContainedAppCollectionResponse response = new MobileContainedAppCollectionResponse();
-            if (json.has("committedContainedApps@odata.nextLink")) {
-                response.nextLink = json.get("committedContainedApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("committedContainedApps").toString(), JsonObject[].class);
-            final MobileContainedApp[] array = new MobileContainedApp[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileContainedApp.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            committedContainedApps = new MobileContainedAppCollectionPage(response, null);
+            committedContainedApps = serializer.deserializeObject(json.get("committedContainedApps").toString(), MobileContainedAppCollectionPage.class);
         }
     }
 }

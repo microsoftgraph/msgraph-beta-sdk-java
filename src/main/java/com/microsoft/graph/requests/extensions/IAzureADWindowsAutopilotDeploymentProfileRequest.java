@@ -21,7 +21,7 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AzureADWindowsAutopilotDeploymentProfile> callback);
+    void get(final ICallback<? super AzureADWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Gets the AzureADWindowsAutopilotDeploymentProfile from the service
@@ -36,7 +36,7 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AzureADWindowsAutopilotDeploymentProfile> callback);
+    void delete(final ICallback<? super AzureADWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequest extends IHttpR
      * @param sourceAzureADWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AzureADWindowsAutopilotDeploymentProfile sourceAzureADWindowsAutopilotDeploymentProfile, final ICallback<AzureADWindowsAutopilotDeploymentProfile> callback);
+    void patch(final AzureADWindowsAutopilotDeploymentProfile sourceAzureADWindowsAutopilotDeploymentProfile, final ICallback<? super AzureADWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Patches this AzureADWindowsAutopilotDeploymentProfile with a source
@@ -68,7 +68,7 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequest extends IHttpR
      * @param newAzureADWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AzureADWindowsAutopilotDeploymentProfile newAzureADWindowsAutopilotDeploymentProfile, final ICallback<AzureADWindowsAutopilotDeploymentProfile> callback);
+    void post(final AzureADWindowsAutopilotDeploymentProfile newAzureADWindowsAutopilotDeploymentProfile, final ICallback<? super AzureADWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Posts a AzureADWindowsAutopilotDeploymentProfile with a new object
@@ -85,7 +85,7 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequest extends IHttpR
      * @param newAzureADWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AzureADWindowsAutopilotDeploymentProfile newAzureADWindowsAutopilotDeploymentProfile, final ICallback<AzureADWindowsAutopilotDeploymentProfile> callback);
+    void put(final AzureADWindowsAutopilotDeploymentProfile newAzureADWindowsAutopilotDeploymentProfile, final ICallback<? super AzureADWindowsAutopilotDeploymentProfile> callback);
 
     /**
      * Posts a AzureADWindowsAutopilotDeploymentProfile with a new object

@@ -21,7 +21,7 @@ public interface IJournalRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Journal> callback);
+    void get(final ICallback<? super Journal> callback);
 
     /**
      * Gets the Journal from the service
@@ -36,7 +36,7 @@ public interface IJournalRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Journal> callback);
+    void delete(final ICallback<? super Journal> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IJournalRequest extends IHttpRequest {
      * @param sourceJournal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Journal sourceJournal, final ICallback<Journal> callback);
+    void patch(final Journal sourceJournal, final ICallback<? super Journal> callback);
 
     /**
      * Patches this Journal with a source
@@ -68,7 +68,7 @@ public interface IJournalRequest extends IHttpRequest {
      * @param newJournal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Journal newJournal, final ICallback<Journal> callback);
+    void post(final Journal newJournal, final ICallback<? super Journal> callback);
 
     /**
      * Posts a Journal with a new object
@@ -85,7 +85,7 @@ public interface IJournalRequest extends IHttpRequest {
      * @param newJournal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Journal newJournal, final ICallback<Journal> callback);
+    void put(final Journal newJournal, final ICallback<? super Journal> callback);
 
     /**
      * Posts a Journal with a new object

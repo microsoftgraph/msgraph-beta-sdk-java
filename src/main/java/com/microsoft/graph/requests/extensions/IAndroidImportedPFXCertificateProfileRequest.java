@@ -21,7 +21,7 @@ public interface IAndroidImportedPFXCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super AndroidImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the AndroidImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IAndroidImportedPFXCertificateProfileRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super AndroidImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidImportedPFXCertificateProfileRequest extends IHttpReque
      * @param sourceAndroidImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidImportedPFXCertificateProfile sourceAndroidImportedPFXCertificateProfile, final ICallback<AndroidImportedPFXCertificateProfile> callback);
+    void patch(final AndroidImportedPFXCertificateProfile sourceAndroidImportedPFXCertificateProfile, final ICallback<? super AndroidImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this AndroidImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IAndroidImportedPFXCertificateProfileRequest extends IHttpReque
      * @param newAndroidImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidImportedPFXCertificateProfile newAndroidImportedPFXCertificateProfile, final ICallback<AndroidImportedPFXCertificateProfile> callback);
+    void post(final AndroidImportedPFXCertificateProfile newAndroidImportedPFXCertificateProfile, final ICallback<? super AndroidImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a AndroidImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IAndroidImportedPFXCertificateProfileRequest extends IHttpReque
      * @param newAndroidImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidImportedPFXCertificateProfile newAndroidImportedPFXCertificateProfile, final ICallback<AndroidImportedPFXCertificateProfile> callback);
+    void put(final AndroidImportedPFXCertificateProfile newAndroidImportedPFXCertificateProfile, final ICallback<? super AndroidImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a AndroidImportedPFXCertificateProfile with a new object

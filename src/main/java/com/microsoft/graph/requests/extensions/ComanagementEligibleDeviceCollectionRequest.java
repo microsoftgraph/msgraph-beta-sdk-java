@@ -40,7 +40,7 @@ public class ComanagementEligibleDeviceCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, ComanagementEligibleDeviceCollectionResponse.class, IComanagementEligibleDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<IComanagementEligibleDeviceCollectionPage> callback) {
+    public void get(final ICallback<? super IComanagementEligibleDeviceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ComanagementEligibleDeviceCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback) {
+    public void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ComanagementEligibleDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ComanagementEligibleDeviceCollectionRequest extends BaseCollectionR
      */
     public IComanagementEligibleDeviceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ComanagementEligibleDeviceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IComanagementEligibleDeviceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ComanagementEligibleDeviceCollectionRequest)this;
     }
 

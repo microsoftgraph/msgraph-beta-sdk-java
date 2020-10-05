@@ -23,6 +23,6 @@ public class PrivilegedAccessCollectionPage extends BaseCollectionPage<Privilege
      * @param builder  the request builder for the next collection page
      */
     public PrivilegedAccessCollectionPage(final PrivilegedAccessCollectionResponse response, final IPrivilegedAccessCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

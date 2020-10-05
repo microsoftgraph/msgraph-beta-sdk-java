@@ -21,7 +21,7 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentRequest extends IHttpRe
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmbeddedSIMActivationCodePoolAssignment> callback);
+    void get(final ICallback<? super EmbeddedSIMActivationCodePoolAssignment> callback);
 
     /**
      * Gets the EmbeddedSIMActivationCodePoolAssignment from the service
@@ -36,7 +36,7 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentRequest extends IHttpRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmbeddedSIMActivationCodePoolAssignment> callback);
+    void delete(final ICallback<? super EmbeddedSIMActivationCodePoolAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentRequest extends IHttpRe
      * @param sourceEmbeddedSIMActivationCodePoolAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmbeddedSIMActivationCodePoolAssignment sourceEmbeddedSIMActivationCodePoolAssignment, final ICallback<EmbeddedSIMActivationCodePoolAssignment> callback);
+    void patch(final EmbeddedSIMActivationCodePoolAssignment sourceEmbeddedSIMActivationCodePoolAssignment, final ICallback<? super EmbeddedSIMActivationCodePoolAssignment> callback);
 
     /**
      * Patches this EmbeddedSIMActivationCodePoolAssignment with a source
@@ -68,7 +68,7 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentRequest extends IHttpRe
      * @param newEmbeddedSIMActivationCodePoolAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment, final ICallback<EmbeddedSIMActivationCodePoolAssignment> callback);
+    void post(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment, final ICallback<? super EmbeddedSIMActivationCodePoolAssignment> callback);
 
     /**
      * Posts a EmbeddedSIMActivationCodePoolAssignment with a new object
@@ -85,7 +85,7 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentRequest extends IHttpRe
      * @param newEmbeddedSIMActivationCodePoolAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment, final ICallback<EmbeddedSIMActivationCodePoolAssignment> callback);
+    void put(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment, final ICallback<? super EmbeddedSIMActivationCodePoolAssignment> callback);
 
     /**
      * Posts a EmbeddedSIMActivationCodePoolAssignment with a new object

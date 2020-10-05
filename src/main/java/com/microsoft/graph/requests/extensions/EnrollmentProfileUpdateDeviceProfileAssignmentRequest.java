@@ -36,7 +36,7 @@ public class EnrollmentProfileUpdateDeviceProfileAssignmentRequest extends BaseR
         body = new EnrollmentProfileUpdateDeviceProfileAssignmentBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class EnrollmentProfileUpdateDeviceProfileAssignmentRequest extends BaseR
      */
     public IEnrollmentProfileUpdateDeviceProfileAssignmentRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EnrollmentProfileUpdateDeviceProfileAssignmentRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEnrollmentProfileUpdateDeviceProfileAssignmentRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EnrollmentProfileUpdateDeviceProfileAssignmentRequest)this;
     }
 

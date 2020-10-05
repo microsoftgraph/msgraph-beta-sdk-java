@@ -21,7 +21,7 @@ public interface ISensitiveTypeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SensitiveType> callback);
+    void get(final ICallback<? super SensitiveType> callback);
 
     /**
      * Gets the SensitiveType from the service
@@ -36,7 +36,7 @@ public interface ISensitiveTypeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SensitiveType> callback);
+    void delete(final ICallback<? super SensitiveType> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISensitiveTypeRequest extends IHttpRequest {
      * @param sourceSensitiveType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SensitiveType sourceSensitiveType, final ICallback<SensitiveType> callback);
+    void patch(final SensitiveType sourceSensitiveType, final ICallback<? super SensitiveType> callback);
 
     /**
      * Patches this SensitiveType with a source
@@ -68,7 +68,7 @@ public interface ISensitiveTypeRequest extends IHttpRequest {
      * @param newSensitiveType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback);
+    void post(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback);
 
     /**
      * Posts a SensitiveType with a new object
@@ -85,7 +85,7 @@ public interface ISensitiveTypeRequest extends IHttpRequest {
      * @param newSensitiveType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback);
+    void put(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback);
 
     /**
      * Posts a SensitiveType with a new object

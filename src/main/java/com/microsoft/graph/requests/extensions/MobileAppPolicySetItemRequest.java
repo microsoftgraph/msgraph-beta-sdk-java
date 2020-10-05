@@ -37,7 +37,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppPolicySetItem> callback) {
+    public void get(final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppPolicySetItem> callback) {
+    public void delete(final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param sourceMobileAppPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppPolicySetItem sourceMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback) {
+    public void patch(final MobileAppPolicySetItem sourceMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppPolicySetItem);
     }
 
@@ -96,7 +96,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param newMobileAppPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback) {
+    public void post(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newMobileAppPolicySetItem);
     }
 
@@ -117,7 +117,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param newMobileAppPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback) {
+    public void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newMobileAppPolicySetItem);
     }
 
@@ -151,17 +151,6 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      */
      public IMobileAppPolicySetItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppPolicySetItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppPolicySetItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppPolicySetItemRequest)this;
      }
 

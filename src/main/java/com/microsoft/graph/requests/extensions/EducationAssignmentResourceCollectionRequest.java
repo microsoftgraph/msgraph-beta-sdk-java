@@ -40,7 +40,7 @@ public class EducationAssignmentResourceCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, EducationAssignmentResourceCollectionResponse.class, IEducationAssignmentResourceCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationAssignmentResourceCollectionPage> callback) {
+    public void get(final ICallback<? super IEducationAssignmentResourceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EducationAssignmentResourceCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<EducationAssignmentResource> callback) {
+    public void post(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationAssignmentResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EducationAssignmentResourceCollectionRequest extends BaseCollection
      */
     public IEducationAssignmentResourceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationAssignmentResourceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEducationAssignmentResourceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationAssignmentResourceCollectionRequest)this;
     }
 

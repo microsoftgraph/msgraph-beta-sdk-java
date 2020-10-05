@@ -21,7 +21,7 @@ public interface IManagedDeviceCertificateStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceCertificateState> callback);
+    void get(final ICallback<? super ManagedDeviceCertificateState> callback);
 
     /**
      * Gets the ManagedDeviceCertificateState from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceCertificateStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceCertificateState> callback);
+    void delete(final ICallback<? super ManagedDeviceCertificateState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceCertificateStateRequest extends IHttpRequest {
      * @param sourceManagedDeviceCertificateState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceCertificateState sourceManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback);
+    void patch(final ManagedDeviceCertificateState sourceManagedDeviceCertificateState, final ICallback<? super ManagedDeviceCertificateState> callback);
 
     /**
      * Patches this ManagedDeviceCertificateState with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceCertificateStateRequest extends IHttpRequest {
      * @param newManagedDeviceCertificateState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback);
+    void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<? super ManagedDeviceCertificateState> callback);
 
     /**
      * Posts a ManagedDeviceCertificateState with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceCertificateStateRequest extends IHttpRequest {
      * @param newManagedDeviceCertificateState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback);
+    void put(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<? super ManagedDeviceCertificateState> callback);
 
     /**
      * Posts a ManagedDeviceCertificateState with a new object

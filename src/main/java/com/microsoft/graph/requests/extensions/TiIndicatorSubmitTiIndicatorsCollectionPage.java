@@ -34,6 +34,6 @@ public class TiIndicatorSubmitTiIndicatorsCollectionPage extends BaseCollectionP
      * @param builder The request builder for the next collection page
      */
     public TiIndicatorSubmitTiIndicatorsCollectionPage(final TiIndicatorSubmitTiIndicatorsCollectionResponse response, final ITiIndicatorSubmitTiIndicatorsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

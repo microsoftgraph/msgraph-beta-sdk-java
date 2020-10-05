@@ -21,7 +21,7 @@ public interface IWindowsFeatureUpdateProfileAssignmentRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsFeatureUpdateProfileAssignment> callback);
+    void get(final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback);
 
     /**
      * Gets the WindowsFeatureUpdateProfileAssignment from the service
@@ -36,7 +36,7 @@ public interface IWindowsFeatureUpdateProfileAssignmentRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsFeatureUpdateProfileAssignment> callback);
+    void delete(final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsFeatureUpdateProfileAssignmentRequest extends IHttpRequ
      * @param sourceWindowsFeatureUpdateProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsFeatureUpdateProfileAssignment sourceWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback);
+    void patch(final WindowsFeatureUpdateProfileAssignment sourceWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback);
 
     /**
      * Patches this WindowsFeatureUpdateProfileAssignment with a source
@@ -68,7 +68,7 @@ public interface IWindowsFeatureUpdateProfileAssignmentRequest extends IHttpRequ
      * @param newWindowsFeatureUpdateProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback);
+    void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback);
 
     /**
      * Posts a WindowsFeatureUpdateProfileAssignment with a new object
@@ -85,7 +85,7 @@ public interface IWindowsFeatureUpdateProfileAssignmentRequest extends IHttpRequ
      * @param newWindowsFeatureUpdateProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback);
+    void put(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<? super WindowsFeatureUpdateProfileAssignment> callback);
 
     /**
      * Posts a WindowsFeatureUpdateProfileAssignment with a new object

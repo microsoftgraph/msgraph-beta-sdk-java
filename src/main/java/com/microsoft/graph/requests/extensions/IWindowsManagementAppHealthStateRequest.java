@@ -21,7 +21,7 @@ public interface IWindowsManagementAppHealthStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsManagementAppHealthState> callback);
+    void get(final ICallback<? super WindowsManagementAppHealthState> callback);
 
     /**
      * Gets the WindowsManagementAppHealthState from the service
@@ -36,7 +36,7 @@ public interface IWindowsManagementAppHealthStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsManagementAppHealthState> callback);
+    void delete(final ICallback<? super WindowsManagementAppHealthState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsManagementAppHealthStateRequest extends IHttpRequest {
      * @param sourceWindowsManagementAppHealthState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback);
+    void patch(final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback);
 
     /**
      * Patches this WindowsManagementAppHealthState with a source
@@ -68,7 +68,7 @@ public interface IWindowsManagementAppHealthStateRequest extends IHttpRequest {
      * @param newWindowsManagementAppHealthState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback);
+    void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback);
 
     /**
      * Posts a WindowsManagementAppHealthState with a new object
@@ -85,7 +85,7 @@ public interface IWindowsManagementAppHealthStateRequest extends IHttpRequest {
      * @param newWindowsManagementAppHealthState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback);
+    void put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback);
 
     /**
      * Posts a WindowsManagementAppHealthState with a new object

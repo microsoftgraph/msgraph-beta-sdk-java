@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.GroupPolicyConfigurationType;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationValue;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueCollectionPage;
 
 
@@ -117,19 +115,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
 
 
         if (json.has("presentationValues")) {
-            final GroupPolicyPresentationValueCollectionResponse response = new GroupPolicyPresentationValueCollectionResponse();
-            if (json.has("presentationValues@odata.nextLink")) {
-                response.nextLink = json.get("presentationValues@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("presentationValues").toString(), JsonObject[].class);
-            final GroupPolicyPresentationValue[] array = new GroupPolicyPresentationValue[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicyPresentationValue.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            presentationValues = new GroupPolicyPresentationValueCollectionPage(response, null);
+            presentationValues = serializer.deserializeObject(json.get("presentationValues").toString(), GroupPolicyPresentationValueCollectionPage.class);
         }
     }
 }

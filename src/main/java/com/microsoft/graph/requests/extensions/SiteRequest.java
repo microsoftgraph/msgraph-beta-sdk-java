@@ -70,7 +70,7 @@ public class SiteRequest extends BaseRequest implements ISiteRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Site> callback) {
+    public void get(final ICallback<? super Site> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -89,7 +89,7 @@ public class SiteRequest extends BaseRequest implements ISiteRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Site> callback) {
+    public void delete(final ICallback<? super Site> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -108,7 +108,7 @@ public class SiteRequest extends BaseRequest implements ISiteRequest {
      * @param sourceSite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Site sourceSite, final ICallback<Site> callback) {
+    public void patch(final Site sourceSite, final ICallback<? super Site> callback) {
         send(HttpMethod.PATCH, callback, sourceSite);
     }
 
@@ -129,7 +129,7 @@ public class SiteRequest extends BaseRequest implements ISiteRequest {
      * @param newSite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Site newSite, final ICallback<Site> callback) {
+    public void post(final Site newSite, final ICallback<? super Site> callback) {
         send(HttpMethod.POST, callback, newSite);
     }
 
@@ -150,7 +150,7 @@ public class SiteRequest extends BaseRequest implements ISiteRequest {
      * @param newSite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Site newSite, final ICallback<Site> callback) {
+    public void put(final Site newSite, final ICallback<? super Site> callback) {
         send(HttpMethod.PUT, callback, newSite);
     }
 
@@ -184,17 +184,6 @@ public class SiteRequest extends BaseRequest implements ISiteRequest {
      */
      public ISiteRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SiteRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISiteRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SiteRequest)this;
      }
 

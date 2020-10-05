@@ -40,7 +40,7 @@ public class AndroidForWorkEnrollmentProfileCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, AndroidForWorkEnrollmentProfileCollectionResponse.class, IAndroidForWorkEnrollmentProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IAndroidForWorkEnrollmentProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IAndroidForWorkEnrollmentProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AndroidForWorkEnrollmentProfileCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback) {
+    public void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidForWorkEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AndroidForWorkEnrollmentProfileCollectionRequest extends BaseCollec
      */
     public IAndroidForWorkEnrollmentProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidForWorkEnrollmentProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAndroidForWorkEnrollmentProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AndroidForWorkEnrollmentProfileCollectionRequest)this;
     }
 

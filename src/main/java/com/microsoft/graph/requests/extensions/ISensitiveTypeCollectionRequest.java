@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISensitiveTypeCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISensitiveTypeCollectionPage> callback);
+    void get(final ICallback<? super ISensitiveTypeCollectionPage> callback);
 
     ISensitiveTypeCollectionPage get() throws ClientException;
 
-    void post(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback);
+    void post(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback);
 
     SensitiveType post(final SensitiveType newSensitiveType) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISensitiveTypeCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISensitiveTypeCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISensitiveTypeCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISensitiveTypeCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISensitiveTypeCollectionRequest skipToken(String skipToken);
+	ISensitiveTypeCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest e
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest e
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest e
      * @param sourceUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion sourceUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
+    public void patch(final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion sourceUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest e
      * @param newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
+    public void post(final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest e
      * @param newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion, final ICallback<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
+    public void put(final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion, final ICallback<? super UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsAppHealthAppPerformanceByAppVersion);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest e
      */
      public IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest)this;
      }
 

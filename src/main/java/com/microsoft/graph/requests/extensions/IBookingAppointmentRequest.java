@@ -21,7 +21,7 @@ public interface IBookingAppointmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingAppointment> callback);
+    void get(final ICallback<? super BookingAppointment> callback);
 
     /**
      * Gets the BookingAppointment from the service
@@ -36,7 +36,7 @@ public interface IBookingAppointmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingAppointment> callback);
+    void delete(final ICallback<? super BookingAppointment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingAppointmentRequest extends IHttpRequest {
      * @param sourceBookingAppointment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingAppointment sourceBookingAppointment, final ICallback<BookingAppointment> callback);
+    void patch(final BookingAppointment sourceBookingAppointment, final ICallback<? super BookingAppointment> callback);
 
     /**
      * Patches this BookingAppointment with a source
@@ -68,7 +68,7 @@ public interface IBookingAppointmentRequest extends IHttpRequest {
      * @param newBookingAppointment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback);
+    void post(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback);
 
     /**
      * Posts a BookingAppointment with a new object
@@ -85,7 +85,7 @@ public interface IBookingAppointmentRequest extends IHttpRequest {
      * @param newBookingAppointment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback);
+    void put(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback);
 
     /**
      * Posts a BookingAppointment with a new object

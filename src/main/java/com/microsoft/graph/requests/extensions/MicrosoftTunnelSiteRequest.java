@@ -43,7 +43,7 @@ public class MicrosoftTunnelSiteRequest extends BaseRequest implements IMicrosof
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MicrosoftTunnelSite> callback) {
+    public void get(final ICallback<? super MicrosoftTunnelSite> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class MicrosoftTunnelSiteRequest extends BaseRequest implements IMicrosof
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MicrosoftTunnelSite> callback) {
+    public void delete(final ICallback<? super MicrosoftTunnelSite> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class MicrosoftTunnelSiteRequest extends BaseRequest implements IMicrosof
      * @param sourceMicrosoftTunnelSite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftTunnelSite sourceMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback) {
+    public void patch(final MicrosoftTunnelSite sourceMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftTunnelSite);
     }
 
@@ -102,7 +102,7 @@ public class MicrosoftTunnelSiteRequest extends BaseRequest implements IMicrosof
      * @param newMicrosoftTunnelSite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback) {
+    public void post(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback) {
         send(HttpMethod.POST, callback, newMicrosoftTunnelSite);
     }
 
@@ -123,7 +123,7 @@ public class MicrosoftTunnelSiteRequest extends BaseRequest implements IMicrosof
      * @param newMicrosoftTunnelSite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<MicrosoftTunnelSite> callback) {
+    public void put(final MicrosoftTunnelSite newMicrosoftTunnelSite, final ICallback<? super MicrosoftTunnelSite> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftTunnelSite);
     }
 
@@ -157,17 +157,6 @@ public class MicrosoftTunnelSiteRequest extends BaseRequest implements IMicrosof
      */
      public IMicrosoftTunnelSiteRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftTunnelSiteRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMicrosoftTunnelSiteRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MicrosoftTunnelSiteRequest)this;
      }
 

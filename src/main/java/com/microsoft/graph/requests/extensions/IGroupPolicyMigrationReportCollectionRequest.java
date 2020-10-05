@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupPolicyMigrationReportCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupPolicyMigrationReportCollectionPage> callback);
+    void get(final ICallback<? super IGroupPolicyMigrationReportCollectionPage> callback);
 
     IGroupPolicyMigrationReportCollectionPage get() throws ClientException;
 
-    void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback);
+    void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback);
 
     GroupPolicyMigrationReport post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IGroupPolicyMigrationReportCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IGroupPolicyMigrationReportCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGroupPolicyMigrationReportCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IGroupPolicyMigrationReportCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IGroupPolicyMigrationReportCollectionRequest skipToken(String skipToken);
+	IGroupPolicyMigrationReportCollectionRequest skipToken(final String skipToken);
 }

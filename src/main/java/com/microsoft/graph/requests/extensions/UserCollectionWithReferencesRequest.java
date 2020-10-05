@@ -54,7 +54,7 @@ public class UserCollectionWithReferencesRequest extends BaseCollectionRequest<U
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, IUserCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IUserCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -75,22 +75,27 @@ public class UserCollectionWithReferencesRequest extends BaseCollectionRequest<U
 
     public IUserCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IUserCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IUserCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IUserCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IUserCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (UserCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IUserCollectionWithReferencesPage buildFromResponse(final UserCollectionResponse response) {

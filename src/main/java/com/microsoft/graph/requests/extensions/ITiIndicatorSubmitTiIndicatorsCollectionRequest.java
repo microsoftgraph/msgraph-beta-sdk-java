@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ITiIndicatorSubmitTiIndicatorsCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ITiIndicatorSubmitTiIndicatorsCollectionPage> callback);
+    void post(final ICallback<? super ITiIndicatorSubmitTiIndicatorsCollectionPage> callback);
 
     ITiIndicatorSubmitTiIndicatorsCollectionPage post() throws ClientException;
 

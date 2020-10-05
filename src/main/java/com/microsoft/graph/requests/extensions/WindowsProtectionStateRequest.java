@@ -41,7 +41,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsProtectionState> callback) {
+    public void get(final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsProtectionState> callback) {
+    public void delete(final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param sourceWindowsProtectionState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsProtectionState sourceWindowsProtectionState, final ICallback<WindowsProtectionState> callback) {
+    public void patch(final WindowsProtectionState sourceWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsProtectionState);
     }
 
@@ -100,7 +100,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param newWindowsProtectionState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsProtectionState newWindowsProtectionState, final ICallback<WindowsProtectionState> callback) {
+    public void post(final WindowsProtectionState newWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.POST, callback, newWindowsProtectionState);
     }
 
@@ -121,7 +121,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param newWindowsProtectionState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsProtectionState newWindowsProtectionState, final ICallback<WindowsProtectionState> callback) {
+    public void put(final WindowsProtectionState newWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.PUT, callback, newWindowsProtectionState);
     }
 
@@ -155,17 +155,6 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      */
      public IWindowsProtectionStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsProtectionStateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsProtectionStateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsProtectionStateRequest)this;
      }
 

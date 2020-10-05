@@ -40,7 +40,7 @@ public class GroupPolicySettingMappingCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, GroupPolicySettingMappingCollectionResponse.class, IGroupPolicySettingMappingCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupPolicySettingMappingCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupPolicySettingMappingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GroupPolicySettingMappingCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback) {
+    public void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicySettingMappingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class GroupPolicySettingMappingCollectionRequest extends BaseCollectionRe
      */
     public IGroupPolicySettingMappingCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicySettingMappingCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupPolicySettingMappingCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicySettingMappingCollectionRequest)this;
     }
 

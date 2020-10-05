@@ -21,7 +21,7 @@ public interface IEducationPointsOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationPointsOutcome> callback);
+    void get(final ICallback<? super EducationPointsOutcome> callback);
 
     /**
      * Gets the EducationPointsOutcome from the service
@@ -36,7 +36,7 @@ public interface IEducationPointsOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationPointsOutcome> callback);
+    void delete(final ICallback<? super EducationPointsOutcome> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationPointsOutcomeRequest extends IHttpRequest {
      * @param sourceEducationPointsOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationPointsOutcome sourceEducationPointsOutcome, final ICallback<EducationPointsOutcome> callback);
+    void patch(final EducationPointsOutcome sourceEducationPointsOutcome, final ICallback<? super EducationPointsOutcome> callback);
 
     /**
      * Patches this EducationPointsOutcome with a source
@@ -68,7 +68,7 @@ public interface IEducationPointsOutcomeRequest extends IHttpRequest {
      * @param newEducationPointsOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<EducationPointsOutcome> callback);
+    void post(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<? super EducationPointsOutcome> callback);
 
     /**
      * Posts a EducationPointsOutcome with a new object
@@ -85,7 +85,7 @@ public interface IEducationPointsOutcomeRequest extends IHttpRequest {
      * @param newEducationPointsOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<EducationPointsOutcome> callback);
+    void put(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<? super EducationPointsOutcome> callback);
 
     /**
      * Posts a EducationPointsOutcome with a new object

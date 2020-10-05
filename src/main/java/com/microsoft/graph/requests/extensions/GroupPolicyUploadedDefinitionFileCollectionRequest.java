@@ -41,7 +41,7 @@ public class GroupPolicyUploadedDefinitionFileCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, GroupPolicyUploadedDefinitionFileCollectionResponse.class, IGroupPolicyUploadedDefinitionFileCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupPolicyUploadedDefinitionFileCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupPolicyUploadedDefinitionFileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class GroupPolicyUploadedDefinitionFileCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback) {
+    public void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyUploadedDefinitionFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class GroupPolicyUploadedDefinitionFileCollectionRequest extends BaseColl
      */
     public IGroupPolicyUploadedDefinitionFileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyUploadedDefinitionFileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupPolicyUploadedDefinitionFileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicyUploadedDefinitionFileCollectionRequest)this;
     }
 

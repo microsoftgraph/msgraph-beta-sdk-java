@@ -28,11 +28,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IInformationProtectionLabelCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IInformationProtectionLabelCollectionPage> callback);
+    void get(final ICallback<? super IInformationProtectionLabelCollectionPage> callback);
 
     IInformationProtectionLabelCollectionPage get() throws ClientException;
 
-    void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback);
+    void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback);
 
     InformationProtectionLabel post(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException;
 
@@ -51,6 +51,14 @@ public interface IInformationProtectionLabelCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IInformationProtectionLabelCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IInformationProtectionLabelCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -83,5 +91,5 @@ public interface IInformationProtectionLabelCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IInformationProtectionLabelCollectionRequest skipToken(String skipToken);
+	IInformationProtectionLabelCollectionRequest skipToken(final String skipToken);
 }

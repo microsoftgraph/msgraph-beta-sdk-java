@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsTemplateCollectionPage> callback);
+    void get(final ICallback<? super ITeamsTemplateCollectionPage> callback);
 
     ITeamsTemplateCollectionPage get() throws ClientException;
 
-    void post(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback);
+    void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
     TeamsTemplate post(final TeamsTemplate newTeamsTemplate) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITeamsTemplateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITeamsTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsTemplateCollectionRequest skipToken(String skipToken);
+	ITeamsTemplateCollectionRequest skipToken(final String skipToken);
 }

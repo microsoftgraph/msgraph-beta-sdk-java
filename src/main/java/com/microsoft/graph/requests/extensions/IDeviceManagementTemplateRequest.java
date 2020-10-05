@@ -21,7 +21,7 @@ public interface IDeviceManagementTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementTemplate> callback);
+    void get(final ICallback<? super DeviceManagementTemplate> callback);
 
     /**
      * Gets the DeviceManagementTemplate from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementTemplate> callback);
+    void delete(final ICallback<? super DeviceManagementTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementTemplateRequest extends IHttpRequest {
      * @param sourceDeviceManagementTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementTemplate sourceDeviceManagementTemplate, final ICallback<DeviceManagementTemplate> callback);
+    void patch(final DeviceManagementTemplate sourceDeviceManagementTemplate, final ICallback<? super DeviceManagementTemplate> callback);
 
     /**
      * Patches this DeviceManagementTemplate with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementTemplateRequest extends IHttpRequest {
      * @param newDeviceManagementTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<DeviceManagementTemplate> callback);
+    void post(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<? super DeviceManagementTemplate> callback);
 
     /**
      * Posts a DeviceManagementTemplate with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementTemplateRequest extends IHttpRequest {
      * @param newDeviceManagementTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<DeviceManagementTemplate> callback);
+    void put(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<? super DeviceManagementTemplate> callback);
 
     /**
      * Posts a DeviceManagementTemplate with a new object

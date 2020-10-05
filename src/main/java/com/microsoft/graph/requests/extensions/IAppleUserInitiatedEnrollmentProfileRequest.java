@@ -21,7 +21,7 @@ public interface IAppleUserInitiatedEnrollmentProfileRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+    void get(final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback);
 
     /**
      * Gets the AppleUserInitiatedEnrollmentProfile from the service
@@ -36,7 +36,7 @@ public interface IAppleUserInitiatedEnrollmentProfileRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+    void delete(final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppleUserInitiatedEnrollmentProfileRequest extends IHttpReques
      * @param sourceAppleUserInitiatedEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+    void patch(final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback);
 
     /**
      * Patches this AppleUserInitiatedEnrollmentProfile with a source
@@ -68,7 +68,7 @@ public interface IAppleUserInitiatedEnrollmentProfileRequest extends IHttpReques
      * @param newAppleUserInitiatedEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+    void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback);
 
     /**
      * Posts a AppleUserInitiatedEnrollmentProfile with a new object
@@ -85,7 +85,7 @@ public interface IAppleUserInitiatedEnrollmentProfileRequest extends IHttpReques
      * @param newAppleUserInitiatedEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+    void put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback);
 
     /**
      * Posts a AppleUserInitiatedEnrollmentProfile with a new object

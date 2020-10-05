@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsInsight;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetric;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionPage;
 
 
@@ -84,19 +82,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements IJsonBack
 
 
         if (json.has("metricValues")) {
-            final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
-            if (json.has("metricValues@odata.nextLink")) {
-                response.nextLink = json.get("metricValues@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("metricValues").toString(), JsonObject[].class);
-            final UserExperienceAnalyticsMetric[] array = new UserExperienceAnalyticsMetric[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsMetric.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            metricValues = new UserExperienceAnalyticsMetricCollectionPage(response, null);
+            metricValues = serializer.deserializeObject(json.get("metricValues").toString(), UserExperienceAnalyticsMetricCollectionPage.class);
         }
     }
 }

@@ -37,7 +37,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AuthenticationFlowsPolicy> callback) {
+    public void get(final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AuthenticationFlowsPolicy> callback) {
+    public void delete(final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param sourceAuthenticationFlowsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthenticationFlowsPolicy sourceAuthenticationFlowsPolicy, final ICallback<AuthenticationFlowsPolicy> callback) {
+    public void patch(final AuthenticationFlowsPolicy sourceAuthenticationFlowsPolicy, final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthenticationFlowsPolicy);
     }
 
@@ -96,7 +96,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param newAuthenticationFlowsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<AuthenticationFlowsPolicy> callback) {
+    public void post(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.POST, callback, newAuthenticationFlowsPolicy);
     }
 
@@ -117,7 +117,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param newAuthenticationFlowsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<AuthenticationFlowsPolicy> callback) {
+    public void put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.PUT, callback, newAuthenticationFlowsPolicy);
     }
 
@@ -151,17 +151,6 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      */
      public IAuthenticationFlowsPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationFlowsPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAuthenticationFlowsPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AuthenticationFlowsPolicyRequest)this;
      }
 

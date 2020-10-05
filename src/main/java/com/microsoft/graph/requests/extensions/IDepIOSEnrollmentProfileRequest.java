@@ -21,7 +21,7 @@ public interface IDepIOSEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DepIOSEnrollmentProfile> callback);
+    void get(final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     /**
      * Gets the DepIOSEnrollmentProfile from the service
@@ -36,7 +36,7 @@ public interface IDepIOSEnrollmentProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DepIOSEnrollmentProfile> callback);
+    void delete(final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDepIOSEnrollmentProfileRequest extends IHttpRequest {
      * @param sourceDepIOSEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback);
+    void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     /**
      * Patches this DepIOSEnrollmentProfile with a source
@@ -68,7 +68,7 @@ public interface IDepIOSEnrollmentProfileRequest extends IHttpRequest {
      * @param newDepIOSEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback);
+    void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     /**
      * Posts a DepIOSEnrollmentProfile with a new object
@@ -85,7 +85,7 @@ public interface IDepIOSEnrollmentProfileRequest extends IHttpRequest {
      * @param newDepIOSEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback);
+    void put(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     /**
      * Posts a DepIOSEnrollmentProfile with a new object

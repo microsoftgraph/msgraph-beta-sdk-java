@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage> callback);
 
     IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage get() throws ClientException;
 
-    void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
 
     WindowsDefenderApplicationControlSupplementalPolicyAssignment post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentC
      * @return the updated request
      */
     IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentC
      *
 	 * @return the updated request
 	 */
-	IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest skipToken(String skipToken);
+	IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest skipToken(final String skipToken);
 }

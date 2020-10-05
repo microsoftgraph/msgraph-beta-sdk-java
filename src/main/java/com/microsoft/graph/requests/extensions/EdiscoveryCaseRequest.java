@@ -41,7 +41,7 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EdiscoveryCase> callback) {
+    public void get(final ICallback<? super EdiscoveryCase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EdiscoveryCase> callback) {
+    public void delete(final ICallback<? super EdiscoveryCase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
      * @param sourceEdiscoveryCase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EdiscoveryCase sourceEdiscoveryCase, final ICallback<EdiscoveryCase> callback) {
+    public void patch(final EdiscoveryCase sourceEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback) {
         send(HttpMethod.PATCH, callback, sourceEdiscoveryCase);
     }
 
@@ -100,7 +100,7 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
      * @param newEdiscoveryCase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback) {
+    public void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback) {
         send(HttpMethod.POST, callback, newEdiscoveryCase);
     }
 
@@ -121,7 +121,7 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
      * @param newEdiscoveryCase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback) {
+    public void put(final EdiscoveryCase newEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback) {
         send(HttpMethod.PUT, callback, newEdiscoveryCase);
     }
 
@@ -155,17 +155,6 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
      */
      public IEdiscoveryCaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EdiscoveryCaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEdiscoveryCaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EdiscoveryCaseRequest)this;
      }
 

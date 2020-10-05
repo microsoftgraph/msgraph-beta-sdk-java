@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGovernanceRoleAssignmentRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGovernanceRoleAssignmentRequestCollectionPage> callback);
+    void get(final ICallback<? super IGovernanceRoleAssignmentRequestCollectionPage> callback);
 
     IGovernanceRoleAssignmentRequestCollectionPage get() throws ClientException;
 
-    void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     GovernanceRoleAssignmentRequest post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IGovernanceRoleAssignmentRequestCollectionRequest extends IHttp
      * @return the updated request
      */
     IGovernanceRoleAssignmentRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGovernanceRoleAssignmentRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IGovernanceRoleAssignmentRequestCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IGovernanceRoleAssignmentRequestCollectionRequest skipToken(String skipToken);
+	IGovernanceRoleAssignmentRequestCollectionRequest skipToken(final String skipToken);
 }

@@ -23,6 +23,6 @@ public class ExternalItemCollectionPage extends BaseCollectionPage<ExternalItem,
      * @param builder  the request builder for the next collection page
      */
     public ExternalItemCollectionPage(final ExternalItemCollectionResponse response, final IExternalItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

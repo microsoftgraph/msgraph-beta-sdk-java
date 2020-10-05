@@ -36,7 +36,7 @@ public class ManagedDeviceOverrideComplianceStateRequest extends BaseRequest imp
         body = new ManagedDeviceOverrideComplianceStateBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class ManagedDeviceOverrideComplianceStateRequest extends BaseRequest imp
      */
     public IManagedDeviceOverrideComplianceStateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceOverrideComplianceStateRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagedDeviceOverrideComplianceStateRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedDeviceOverrideComplianceStateRequest)this;
     }
 

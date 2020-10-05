@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsBaselineRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsBaseline> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsBaseline> callback);
 
     /**
      * Gets the UserExperienceAnalyticsBaseline from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsBaselineRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsBaseline> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsBaseline> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsBaselineRequest extends IHttpRequest {
      * @param sourceUserExperienceAnalyticsBaseline the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsBaseline sourceUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback);
+    void patch(final UserExperienceAnalyticsBaseline sourceUserExperienceAnalyticsBaseline, final ICallback<? super UserExperienceAnalyticsBaseline> callback);
 
     /**
      * Patches this UserExperienceAnalyticsBaseline with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsBaselineRequest extends IHttpRequest {
      * @param newUserExperienceAnalyticsBaseline the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback);
+    void post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<? super UserExperienceAnalyticsBaseline> callback);
 
     /**
      * Posts a UserExperienceAnalyticsBaseline with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsBaselineRequest extends IHttpRequest {
      * @param newUserExperienceAnalyticsBaseline the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback);
+    void put(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<? super UserExperienceAnalyticsBaseline> callback);
 
     /**
      * Posts a UserExperienceAnalyticsBaseline with a new object

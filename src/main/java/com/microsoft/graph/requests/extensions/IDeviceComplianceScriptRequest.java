@@ -21,7 +21,7 @@ public interface IDeviceComplianceScriptRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceComplianceScript> callback);
+    void get(final ICallback<? super DeviceComplianceScript> callback);
 
     /**
      * Gets the DeviceComplianceScript from the service
@@ -36,7 +36,7 @@ public interface IDeviceComplianceScriptRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceComplianceScript> callback);
+    void delete(final ICallback<? super DeviceComplianceScript> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceComplianceScriptRequest extends IHttpRequest {
      * @param sourceDeviceComplianceScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceComplianceScript sourceDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback);
+    void patch(final DeviceComplianceScript sourceDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback);
 
     /**
      * Patches this DeviceComplianceScript with a source
@@ -68,7 +68,7 @@ public interface IDeviceComplianceScriptRequest extends IHttpRequest {
      * @param newDeviceComplianceScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback);
+    void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback);
 
     /**
      * Posts a DeviceComplianceScript with a new object
@@ -85,7 +85,7 @@ public interface IDeviceComplianceScriptRequest extends IHttpRequest {
      * @param newDeviceComplianceScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback);
+    void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback);
 
     /**
      * Posts a DeviceComplianceScript with a new object

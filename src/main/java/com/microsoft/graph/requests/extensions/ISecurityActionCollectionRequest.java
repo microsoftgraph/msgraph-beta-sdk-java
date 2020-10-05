@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISecurityActionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISecurityActionCollectionPage> callback);
+    void get(final ICallback<? super ISecurityActionCollectionPage> callback);
 
     ISecurityActionCollectionPage get() throws ClientException;
 
-    void post(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback);
+    void post(final SecurityAction newSecurityAction, final ICallback<? super SecurityAction> callback);
 
     SecurityAction post(final SecurityAction newSecurityAction) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISecurityActionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISecurityActionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISecurityActionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISecurityActionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISecurityActionCollectionRequest skipToken(String skipToken);
+	ISecurityActionCollectionRequest skipToken(final String skipToken);
 }

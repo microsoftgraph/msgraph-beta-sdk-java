@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationValueTextRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationValueText> callback);
+    void get(final ICallback<? super GroupPolicyPresentationValueText> callback);
 
     /**
      * Gets the GroupPolicyPresentationValueText from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationValueTextRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationValueText> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationValueText> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationValueTextRequest extends IHttpRequest {
      * @param sourceGroupPolicyPresentationValueText the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationValueText sourceGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback);
+    void patch(final GroupPolicyPresentationValueText sourceGroupPolicyPresentationValueText, final ICallback<? super GroupPolicyPresentationValueText> callback);
 
     /**
      * Patches this GroupPolicyPresentationValueText with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationValueTextRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationValueText the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback);
+    void post(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<? super GroupPolicyPresentationValueText> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueText with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationValueTextRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationValueText the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback);
+    void put(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<? super GroupPolicyPresentationValueText> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueText with a new object

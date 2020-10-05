@@ -35,7 +35,7 @@ public class GroupPolicyCategoryCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, GroupPolicyCategoryCollectionResponse.class, IGroupPolicyCategoryCollectionPage.class);
     }
 
-    public void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback) {
+    public void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<? super GroupPolicyCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/children/" + newGroupPolicyCategory.id);
         new GroupPolicyCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -69,6 +69,17 @@ public class GroupPolicyCategoryCollectionReferenceRequest extends BaseCollectio
      */
     public IGroupPolicyCategoryCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyCategoryCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IGroupPolicyCategoryCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupPolicyCategoryCollectionReferenceRequest)this;
     }
 

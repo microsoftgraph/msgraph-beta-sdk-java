@@ -21,7 +21,7 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback);
+    void get(final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback);
 
     /**
      * Gets the AdvancedThreatProtectionOnboardingStateSummary from the service
@@ -36,7 +36,7 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback);
+    void delete(final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequest extends 
      * @param sourceAdvancedThreatProtectionOnboardingStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AdvancedThreatProtectionOnboardingStateSummary sourceAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback);
+    void patch(final AdvancedThreatProtectionOnboardingStateSummary sourceAdvancedThreatProtectionOnboardingStateSummary, final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback);
 
     /**
      * Patches this AdvancedThreatProtectionOnboardingStateSummary with a source
@@ -68,7 +68,7 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequest extends 
      * @param newAdvancedThreatProtectionOnboardingStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback);
+    void post(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback);
 
     /**
      * Posts a AdvancedThreatProtectionOnboardingStateSummary with a new object
@@ -85,7 +85,7 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequest extends 
      * @param newAdvancedThreatProtectionOnboardingStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback);
+    void put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<? super AdvancedThreatProtectionOnboardingStateSummary> callback);
 
     /**
      * Posts a AdvancedThreatProtectionOnboardingStateSummary with a new object

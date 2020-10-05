@@ -44,7 +44,7 @@ public class IosManagedAppProtectionHasPayloadLinksCollectionRequest extends Bas
     }
 
 
-    public void post(final ICallback<IIosManagedAppProtectionHasPayloadLinksCollectionPage> callback) {
+    public void post(final ICallback<? super IIosManagedAppProtectionHasPayloadLinksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class IosManagedAppProtectionHasPayloadLinksCollectionRequest extends Bas
      */
     public IIosManagedAppProtectionHasPayloadLinksCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IIosManagedAppProtectionHasPayloadLinksCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIosManagedAppProtectionHasPayloadLinksCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IIosManagedAppProtectionHasPayloadLinksCollectionRequest)this;
     }
 

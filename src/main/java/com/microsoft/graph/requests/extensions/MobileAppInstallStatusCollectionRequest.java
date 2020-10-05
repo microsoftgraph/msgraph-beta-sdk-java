@@ -40,7 +40,7 @@ public class MobileAppInstallStatusCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, MobileAppInstallStatusCollectionResponse.class, IMobileAppInstallStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppInstallStatusCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppInstallStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppInstallStatusCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback) {
+    public void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<? super MobileAppInstallStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppInstallStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class MobileAppInstallStatusCollectionRequest extends BaseCollectionReque
      */
     public IMobileAppInstallStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppInstallStatusCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppInstallStatusCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppInstallStatusCollectionRequest)this;
     }
 

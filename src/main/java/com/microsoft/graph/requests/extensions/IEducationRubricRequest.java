@@ -21,7 +21,7 @@ public interface IEducationRubricRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationRubric> callback);
+    void get(final ICallback<? super EducationRubric> callback);
 
     /**
      * Gets the EducationRubric from the service
@@ -36,7 +36,7 @@ public interface IEducationRubricRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationRubric> callback);
+    void delete(final ICallback<? super EducationRubric> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationRubricRequest extends IHttpRequest {
      * @param sourceEducationRubric the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationRubric sourceEducationRubric, final ICallback<EducationRubric> callback);
+    void patch(final EducationRubric sourceEducationRubric, final ICallback<? super EducationRubric> callback);
 
     /**
      * Patches this EducationRubric with a source
@@ -68,7 +68,7 @@ public interface IEducationRubricRequest extends IHttpRequest {
      * @param newEducationRubric the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback);
+    void post(final EducationRubric newEducationRubric, final ICallback<? super EducationRubric> callback);
 
     /**
      * Posts a EducationRubric with a new object
@@ -85,7 +85,7 @@ public interface IEducationRubricRequest extends IHttpRequest {
      * @param newEducationRubric the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback);
+    void put(final EducationRubric newEducationRubric, final ICallback<? super EducationRubric> callback);
 
     /**
      * Posts a EducationRubric with a new object

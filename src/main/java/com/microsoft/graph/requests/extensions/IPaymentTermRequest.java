@@ -21,7 +21,7 @@ public interface IPaymentTermRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PaymentTerm> callback);
+    void get(final ICallback<? super PaymentTerm> callback);
 
     /**
      * Gets the PaymentTerm from the service
@@ -36,7 +36,7 @@ public interface IPaymentTermRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PaymentTerm> callback);
+    void delete(final ICallback<? super PaymentTerm> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPaymentTermRequest extends IHttpRequest {
      * @param sourcePaymentTerm the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PaymentTerm sourcePaymentTerm, final ICallback<PaymentTerm> callback);
+    void patch(final PaymentTerm sourcePaymentTerm, final ICallback<? super PaymentTerm> callback);
 
     /**
      * Patches this PaymentTerm with a source
@@ -68,7 +68,7 @@ public interface IPaymentTermRequest extends IHttpRequest {
      * @param newPaymentTerm the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback);
+    void post(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback);
 
     /**
      * Posts a PaymentTerm with a new object
@@ -85,7 +85,7 @@ public interface IPaymentTermRequest extends IHttpRequest {
      * @param newPaymentTerm the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback);
+    void put(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback);
 
     /**
      * Posts a PaymentTerm with a new object

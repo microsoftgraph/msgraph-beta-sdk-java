@@ -40,7 +40,7 @@ public class DeviceHealthScriptDeviceStateCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceHealthScriptDeviceStateCollectionResponse.class, IDeviceHealthScriptDeviceStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceHealthScriptDeviceStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceHealthScriptDeviceStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceHealthScriptDeviceStateCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback) {
+    public void post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<? super DeviceHealthScriptDeviceState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceHealthScriptDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceHealthScriptDeviceStateCollectionRequest extends BaseCollecti
      */
     public IDeviceHealthScriptDeviceStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceHealthScriptDeviceStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceHealthScriptDeviceStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceHealthScriptDeviceStateCollectionRequest)this;
     }
 

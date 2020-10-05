@@ -21,7 +21,7 @@ public interface IWindowsPhone81TrustedRootCertificateRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void get(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     /**
      * Gets the WindowsPhone81TrustedRootCertificate from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81TrustedRootCertificateRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void delete(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81TrustedRootCertificateRequest extends IHttpReque
      * @param sourceWindowsPhone81TrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     /**
      * Patches this WindowsPhone81TrustedRootCertificate with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81TrustedRootCertificateRequest extends IHttpReque
      * @param newWindowsPhone81TrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     /**
      * Posts a WindowsPhone81TrustedRootCertificate with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81TrustedRootCertificateRequest extends IHttpReque
      * @param newWindowsPhone81TrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<WindowsPhone81TrustedRootCertificate> callback);
+    void put(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback);
 
     /**
      * Posts a WindowsPhone81TrustedRootCertificate with a new object

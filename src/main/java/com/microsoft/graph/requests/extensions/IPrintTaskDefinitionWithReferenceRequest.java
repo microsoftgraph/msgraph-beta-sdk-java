@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrintTaskDefinitionWithReferenceRequest extends IHttpRequest {
 
-    void post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload, final ICallback<PrintTaskDefinition> callback);
+    void post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload, final ICallback<? super PrintTaskDefinition> callback);
 
     PrintTaskDefinition post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<PrintTaskDefinition> callback);
+    void get(final ICallback<? super PrintTaskDefinition> callback);
 
     PrintTaskDefinition get() throws ClientException;
 
-	void delete(final ICallback<PrintTaskDefinition> callback);
+	void delete(final ICallback<? super PrintTaskDefinition> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<PrintTaskDefinition> callback);
+	void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback);
 
 	PrintTaskDefinition patch(final PrintTaskDefinition sourcePrintTaskDefinition) throws ClientException;
 

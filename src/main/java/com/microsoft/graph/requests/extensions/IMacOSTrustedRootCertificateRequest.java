@@ -21,7 +21,7 @@ public interface IMacOSTrustedRootCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSTrustedRootCertificate> callback);
+    void get(final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     /**
      * Gets the MacOSTrustedRootCertificate from the service
@@ -36,7 +36,7 @@ public interface IMacOSTrustedRootCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSTrustedRootCertificate> callback);
+    void delete(final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSTrustedRootCertificateRequest extends IHttpRequest {
      * @param sourceMacOSTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+    void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     /**
      * Patches this MacOSTrustedRootCertificate with a source
@@ -68,7 +68,7 @@ public interface IMacOSTrustedRootCertificateRequest extends IHttpRequest {
      * @param newMacOSTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+    void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     /**
      * Posts a MacOSTrustedRootCertificate with a new object
@@ -85,7 +85,7 @@ public interface IMacOSTrustedRootCertificateRequest extends IHttpRequest {
      * @param newMacOSTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+    void put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     /**
      * Posts a MacOSTrustedRootCertificate with a new object

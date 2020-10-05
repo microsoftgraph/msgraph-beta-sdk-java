@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICartToClassAssociationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICartToClassAssociationCollectionPage> callback);
+    void get(final ICallback<? super ICartToClassAssociationCollectionPage> callback);
 
     ICartToClassAssociationCollectionPage get() throws ClientException;
 
-    void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<CartToClassAssociation> callback);
+    void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback);
 
     CartToClassAssociation post(final CartToClassAssociation newCartToClassAssociation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ICartToClassAssociationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ICartToClassAssociationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICartToClassAssociationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ICartToClassAssociationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICartToClassAssociationCollectionRequest skipToken(String skipToken);
+	ICartToClassAssociationCollectionRequest skipToken(final String skipToken);
 }

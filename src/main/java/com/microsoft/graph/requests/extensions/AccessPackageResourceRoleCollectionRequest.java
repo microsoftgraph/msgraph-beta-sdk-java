@@ -40,7 +40,7 @@ public class AccessPackageResourceRoleCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, AccessPackageResourceRoleCollectionResponse.class, IAccessPackageResourceRoleCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageResourceRoleCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageResourceRoleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessPackageResourceRoleCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback) {
+    public void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageResourceRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessPackageResourceRoleCollectionRequest extends BaseCollectionRe
      */
     public IAccessPackageResourceRoleCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageResourceRoleCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageResourceRoleCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageResourceRoleCollectionRequest)this;
     }
 

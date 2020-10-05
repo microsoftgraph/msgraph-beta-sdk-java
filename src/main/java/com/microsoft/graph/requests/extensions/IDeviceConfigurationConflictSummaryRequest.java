@@ -21,7 +21,7 @@ public interface IDeviceConfigurationConflictSummaryRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfigurationConflictSummary> callback);
+    void get(final ICallback<? super DeviceConfigurationConflictSummary> callback);
 
     /**
      * Gets the DeviceConfigurationConflictSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationConflictSummaryRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfigurationConflictSummary> callback);
+    void delete(final ICallback<? super DeviceConfigurationConflictSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationConflictSummaryRequest extends IHttpRequest
      * @param sourceDeviceConfigurationConflictSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfigurationConflictSummary sourceDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback);
+    void patch(final DeviceConfigurationConflictSummary sourceDeviceConfigurationConflictSummary, final ICallback<? super DeviceConfigurationConflictSummary> callback);
 
     /**
      * Patches this DeviceConfigurationConflictSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationConflictSummaryRequest extends IHttpRequest
      * @param newDeviceConfigurationConflictSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback);
+    void post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<? super DeviceConfigurationConflictSummary> callback);
 
     /**
      * Posts a DeviceConfigurationConflictSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationConflictSummaryRequest extends IHttpRequest
      * @param newDeviceConfigurationConflictSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback);
+    void put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<? super DeviceConfigurationConflictSummary> callback);
 
     /**
      * Posts a DeviceConfigurationConflictSummary with a new object

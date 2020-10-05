@@ -27,19 +27,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGovernanceRoleAssignmentWithReferenceRequest extends IHttpRequest {
 
-    void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final IJsonBackedObject payload, final ICallback<GovernanceRoleAssignment> callback);
+    void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final IJsonBackedObject payload, final ICallback<? super GovernanceRoleAssignment> callback);
 
     GovernanceRoleAssignment post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<GovernanceRoleAssignment> callback);
+    void get(final ICallback<? super GovernanceRoleAssignment> callback);
 
     GovernanceRoleAssignment get() throws ClientException;
 
-	void delete(final ICallback<GovernanceRoleAssignment> callback);
+	void delete(final ICallback<? super GovernanceRoleAssignment> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback);
+	void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback);
 
 	GovernanceRoleAssignment patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment) throws ClientException;
 

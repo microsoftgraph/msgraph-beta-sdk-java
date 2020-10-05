@@ -21,7 +21,7 @@ public interface IDirectorySettingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectorySetting> callback);
+    void get(final ICallback<? super DirectorySetting> callback);
 
     /**
      * Gets the DirectorySetting from the service
@@ -36,7 +36,7 @@ public interface IDirectorySettingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectorySetting> callback);
+    void delete(final ICallback<? super DirectorySetting> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectorySettingRequest extends IHttpRequest {
      * @param sourceDirectorySetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectorySetting sourceDirectorySetting, final ICallback<DirectorySetting> callback);
+    void patch(final DirectorySetting sourceDirectorySetting, final ICallback<? super DirectorySetting> callback);
 
     /**
      * Patches this DirectorySetting with a source
@@ -68,7 +68,7 @@ public interface IDirectorySettingRequest extends IHttpRequest {
      * @param newDirectorySetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback);
+    void post(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback);
 
     /**
      * Posts a DirectorySetting with a new object
@@ -85,7 +85,7 @@ public interface IDirectorySettingRequest extends IHttpRequest {
      * @param newDirectorySetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback);
+    void put(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback);
 
     /**
      * Posts a DirectorySetting with a new object

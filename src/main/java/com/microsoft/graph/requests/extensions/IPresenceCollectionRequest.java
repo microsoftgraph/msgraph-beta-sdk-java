@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPresenceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPresenceCollectionPage> callback);
+    void get(final ICallback<? super IPresenceCollectionPage> callback);
 
     IPresenceCollectionPage get() throws ClientException;
 
-    void post(final Presence newPresence, final ICallback<Presence> callback);
+    void post(final Presence newPresence, final ICallback<? super Presence> callback);
 
     Presence post(final Presence newPresence) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPresenceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPresenceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPresenceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPresenceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPresenceCollectionRequest skipToken(String skipToken);
+	IPresenceCollectionRequest skipToken(final String skipToken);
 }

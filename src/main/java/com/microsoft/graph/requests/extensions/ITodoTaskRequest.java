@@ -21,7 +21,7 @@ public interface ITodoTaskRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TodoTask> callback);
+    void get(final ICallback<? super TodoTask> callback);
 
     /**
      * Gets the TodoTask from the service
@@ -36,7 +36,7 @@ public interface ITodoTaskRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TodoTask> callback);
+    void delete(final ICallback<? super TodoTask> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITodoTaskRequest extends IHttpRequest {
      * @param sourceTodoTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TodoTask sourceTodoTask, final ICallback<TodoTask> callback);
+    void patch(final TodoTask sourceTodoTask, final ICallback<? super TodoTask> callback);
 
     /**
      * Patches this TodoTask with a source
@@ -68,7 +68,7 @@ public interface ITodoTaskRequest extends IHttpRequest {
      * @param newTodoTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TodoTask newTodoTask, final ICallback<TodoTask> callback);
+    void post(final TodoTask newTodoTask, final ICallback<? super TodoTask> callback);
 
     /**
      * Posts a TodoTask with a new object
@@ -85,7 +85,7 @@ public interface ITodoTaskRequest extends IHttpRequest {
      * @param newTodoTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TodoTask newTodoTask, final ICallback<TodoTask> callback);
+    void put(final TodoTask newTodoTask, final ICallback<? super TodoTask> callback);
 
     /**
      * Posts a TodoTask with a new object

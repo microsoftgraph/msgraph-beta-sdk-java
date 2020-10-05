@@ -34,7 +34,7 @@ public class IdentityProviderReferenceRequest extends BaseRequest implements IId
         super(requestUrl, client, requestOptions, IdentityProvider.class);
     }
 
-    public void delete(final ICallback<IdentityProvider> callback) {
+    public void delete(final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class IdentityProviderReferenceRequest extends BaseRequest implements IId
         return (IdentityProviderReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIdentityProviderReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IdentityProviderReferenceRequest)this;
-    }
-    /**
      * Puts the IdentityProvider
      *
      * @param srcIdentityProvider the IdentityProvider reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(IdentityProvider srcIdentityProvider, final ICallback<IdentityProvider> callback) {
+    public void put(IdentityProvider srcIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.PUT, callback, srcIdentityProvider);
     }
 

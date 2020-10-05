@@ -37,7 +37,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void get(final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param sourceAndroidForWorkNineWorkEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void patch(final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param newAndroidForWorkNineWorkEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      */
      public IAndroidForWorkNineWorkEasConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkNineWorkEasConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkNineWorkEasConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkNineWorkEasConfigurationRequest)this;
      }
 

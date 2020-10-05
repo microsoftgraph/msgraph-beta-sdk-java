@@ -23,6 +23,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionPage extends Ba
      * @param builder  the request builder for the next collection page
      */
     public MicrosoftAuthenticatorAuthenticationMethodCollectionPage(final MicrosoftAuthenticatorAuthenticationMethodCollectionResponse response, final IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

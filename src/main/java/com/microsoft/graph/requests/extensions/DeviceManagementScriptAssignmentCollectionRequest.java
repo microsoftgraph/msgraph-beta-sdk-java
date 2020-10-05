@@ -40,7 +40,7 @@ public class DeviceManagementScriptAssignmentCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, DeviceManagementScriptAssignmentCollectionResponse.class, IDeviceManagementScriptAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementScriptAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementScriptAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementScriptAssignmentCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<DeviceManagementScriptAssignment> callback) {
+    public void post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<? super DeviceManagementScriptAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementScriptAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementScriptAssignmentCollectionRequest extends BaseColle
      */
     public IDeviceManagementScriptAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementScriptAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementScriptAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementScriptAssignmentCollectionRequest)this;
     }
 

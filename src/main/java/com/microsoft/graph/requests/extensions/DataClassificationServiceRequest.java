@@ -67,7 +67,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DataClassificationService> callback) {
+    public void get(final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DataClassificationService> callback) {
+    public void delete(final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -105,7 +105,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param sourceDataClassificationService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataClassificationService sourceDataClassificationService, final ICallback<DataClassificationService> callback) {
+    public void patch(final DataClassificationService sourceDataClassificationService, final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.PATCH, callback, sourceDataClassificationService);
     }
 
@@ -126,7 +126,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param newDataClassificationService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataClassificationService newDataClassificationService, final ICallback<DataClassificationService> callback) {
+    public void post(final DataClassificationService newDataClassificationService, final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.POST, callback, newDataClassificationService);
     }
 
@@ -147,7 +147,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param newDataClassificationService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataClassificationService newDataClassificationService, final ICallback<DataClassificationService> callback) {
+    public void put(final DataClassificationService newDataClassificationService, final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.PUT, callback, newDataClassificationService);
     }
 
@@ -181,17 +181,6 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      */
      public IDataClassificationServiceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataClassificationServiceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDataClassificationServiceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DataClassificationServiceRequest)this;
      }
 

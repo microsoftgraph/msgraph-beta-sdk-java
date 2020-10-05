@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.IdentityProvider;
  */
 public interface IIdentityProviderCollectionReferenceRequest {
 
-    void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback);
+    void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException;
 

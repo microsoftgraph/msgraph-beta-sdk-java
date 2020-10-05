@@ -44,7 +44,7 @@ public class PlannerPlanReferenceRequest extends BaseRequest implements IPlanner
         super(requestUrl, client, requestOptions, PlannerPlan.class);
     }
 
-    public void delete(final ICallback<PlannerPlan> callback) {
+    public void delete(final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -74,22 +74,12 @@ public class PlannerPlanReferenceRequest extends BaseRequest implements IPlanner
         return (PlannerPlanReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPlannerPlanReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PlannerPlanReferenceRequest)this;
-    }
-    /**
      * Puts the PlannerPlan
      *
      * @param srcPlannerPlan the PlannerPlan reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PlannerPlan srcPlannerPlan, final ICallback<PlannerPlan> callback) {
+    public void put(PlannerPlan srcPlannerPlan, final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.PUT, callback, srcPlannerPlan);
     }
 

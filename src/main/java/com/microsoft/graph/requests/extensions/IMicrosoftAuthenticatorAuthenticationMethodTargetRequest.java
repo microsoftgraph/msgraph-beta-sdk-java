@@ -21,7 +21,7 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodTargetRequest extend
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void get(final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Gets the MicrosoftAuthenticatorAuthenticationMethodTarget from the service
@@ -36,7 +36,7 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodTargetRequest extend
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void delete(final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodTargetRequest extend
      * @param sourceMicrosoftAuthenticatorAuthenticationMethodTarget the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MicrosoftAuthenticatorAuthenticationMethodTarget sourceMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void patch(final MicrosoftAuthenticatorAuthenticationMethodTarget sourceMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Patches this MicrosoftAuthenticatorAuthenticationMethodTarget with a source
@@ -68,7 +68,7 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodTargetRequest extend
      * @param newMicrosoftAuthenticatorAuthenticationMethodTarget the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void post(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Posts a MicrosoftAuthenticatorAuthenticationMethodTarget with a new object
@@ -85,7 +85,7 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodTargetRequest extend
      * @param newMicrosoftAuthenticatorAuthenticationMethodTarget the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
+    void put(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback);
 
     /**
      * Posts a MicrosoftAuthenticatorAuthenticationMethodTarget with a new object

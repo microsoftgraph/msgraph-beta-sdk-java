@@ -40,7 +40,7 @@ public class EmployeeCollectionRequest extends BaseCollectionRequest<EmployeeCol
         super(requestUrl, client, requestOptions, EmployeeCollectionResponse.class, IEmployeeCollectionPage.class);
     }
 
-    public void get(final ICallback<IEmployeeCollectionPage> callback) {
+    public void get(final ICallback<? super IEmployeeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EmployeeCollectionRequest extends BaseCollectionRequest<EmployeeCol
         return buildFromResponse(response);
     }
 
-    public void post(final Employee newEmployee, final ICallback<Employee> callback) {
+    public void post(final Employee newEmployee, final ICallback<? super Employee> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EmployeeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class EmployeeCollectionRequest extends BaseCollectionRequest<EmployeeCol
      */
     public IEmployeeCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EmployeeCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEmployeeCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EmployeeCollectionRequest)this;
     }
 

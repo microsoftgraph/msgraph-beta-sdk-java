@@ -40,7 +40,7 @@ public class WindowsAutopilotDeploymentProfileAssignmentCollectionRequest extend
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfileAssignmentCollectionResponse.class, IWindowsAutopilotDeploymentProfileAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsAutopilotDeploymentProfileAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsAutopilotDeploymentProfileAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsAutopilotDeploymentProfileAssignmentCollectionRequest extend
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback) {
+    public void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsAutopilotDeploymentProfileAssignmentCollectionRequest extend
      */
     public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsAutopilotDeploymentProfileAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsAutopilotDeploymentProfileAssignmentCollectionRequest)this;
     }
 

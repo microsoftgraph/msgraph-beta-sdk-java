@@ -37,7 +37,7 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidManagedStoreWebApp> callback) {
+    public void get(final ICallback<? super AndroidManagedStoreWebApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidManagedStoreWebApp> callback) {
+    public void delete(final ICallback<? super AndroidManagedStoreWebApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
      * @param sourceAndroidManagedStoreWebApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedStoreWebApp sourceAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback) {
+    public void patch(final AndroidManagedStoreWebApp sourceAndroidManagedStoreWebApp, final ICallback<? super AndroidManagedStoreWebApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedStoreWebApp);
     }
 
@@ -96,7 +96,7 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
      * @param newAndroidManagedStoreWebApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback) {
+    public void post(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<? super AndroidManagedStoreWebApp> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedStoreWebApp);
     }
 
@@ -117,7 +117,7 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
      * @param newAndroidManagedStoreWebApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback) {
+    public void put(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<? super AndroidManagedStoreWebApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedStoreWebApp);
     }
 
@@ -151,17 +151,6 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
      */
      public IAndroidManagedStoreWebAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedStoreWebAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidManagedStoreWebAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidManagedStoreWebAppRequest)this;
      }
 

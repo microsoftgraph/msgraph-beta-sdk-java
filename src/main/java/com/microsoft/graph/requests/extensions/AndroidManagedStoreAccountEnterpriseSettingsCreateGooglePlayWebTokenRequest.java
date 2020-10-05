@@ -36,7 +36,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebToke
         body = new AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenBody();
     }
 
-    public void post(final ICallback<String> callback) {
+    public void post(final ICallback<? super String> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebToke
      */
     public IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest)this;
     }
 

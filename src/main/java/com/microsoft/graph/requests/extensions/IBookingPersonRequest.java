@@ -21,7 +21,7 @@ public interface IBookingPersonRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingPerson> callback);
+    void get(final ICallback<? super BookingPerson> callback);
 
     /**
      * Gets the BookingPerson from the service
@@ -36,7 +36,7 @@ public interface IBookingPersonRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingPerson> callback);
+    void delete(final ICallback<? super BookingPerson> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingPersonRequest extends IHttpRequest {
      * @param sourceBookingPerson the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingPerson sourceBookingPerson, final ICallback<BookingPerson> callback);
+    void patch(final BookingPerson sourceBookingPerson, final ICallback<? super BookingPerson> callback);
 
     /**
      * Patches this BookingPerson with a source
@@ -68,7 +68,7 @@ public interface IBookingPersonRequest extends IHttpRequest {
      * @param newBookingPerson the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingPerson newBookingPerson, final ICallback<BookingPerson> callback);
+    void post(final BookingPerson newBookingPerson, final ICallback<? super BookingPerson> callback);
 
     /**
      * Posts a BookingPerson with a new object
@@ -85,7 +85,7 @@ public interface IBookingPersonRequest extends IHttpRequest {
      * @param newBookingPerson the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingPerson newBookingPerson, final ICallback<BookingPerson> callback);
+    void put(final BookingPerson newBookingPerson, final ICallback<? super BookingPerson> callback);
 
     /**
      * Posts a BookingPerson with a new object

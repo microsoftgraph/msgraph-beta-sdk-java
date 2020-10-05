@@ -35,7 +35,7 @@ public class DepIOSEnrollmentProfileWithReferenceRequest extends BaseRequest imp
         super(requestUrl, client, requestOptions, DepIOSEnrollmentProfile.class);
     }
 
-    public void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final IJsonBackedObject payload, final ICallback<DepIOSEnrollmentProfile> callback) {
+    public void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final IJsonBackedObject payload, final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class DepIOSEnrollmentProfileWithReferenceRequest extends BaseRequest imp
         return null;
     }
 
-    public void get(final ICallback<DepIOSEnrollmentProfile> callback) {
+    public void get(final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class DepIOSEnrollmentProfileWithReferenceRequest extends BaseRequest imp
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DepIOSEnrollmentProfile> callback) {
+	public void delete(final ICallback<? super DepIOSEnrollmentProfile> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class DepIOSEnrollmentProfileWithReferenceRequest extends BaseRequest imp
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback) {
+	public void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback) {
 		send(HttpMethod.PATCH, callback, sourceDepIOSEnrollmentProfile);
 	}
 
@@ -91,16 +91,6 @@ public class DepIOSEnrollmentProfileWithReferenceRequest extends BaseRequest imp
      */
     public IDepIOSEnrollmentProfileWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DepIOSEnrollmentProfileWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDepIOSEnrollmentProfileWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DepIOSEnrollmentProfileWithReferenceRequest)this;
     }
 }

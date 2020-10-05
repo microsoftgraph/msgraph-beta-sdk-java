@@ -21,7 +21,7 @@ public interface IGovernanceRoleDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GovernanceRoleDefinition> callback);
+    void get(final ICallback<? super GovernanceRoleDefinition> callback);
 
     /**
      * Gets the GovernanceRoleDefinition from the service
@@ -36,7 +36,7 @@ public interface IGovernanceRoleDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GovernanceRoleDefinition> callback);
+    void delete(final ICallback<? super GovernanceRoleDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGovernanceRoleDefinitionRequest extends IHttpRequest {
      * @param sourceGovernanceRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GovernanceRoleDefinition sourceGovernanceRoleDefinition, final ICallback<GovernanceRoleDefinition> callback);
+    void patch(final GovernanceRoleDefinition sourceGovernanceRoleDefinition, final ICallback<? super GovernanceRoleDefinition> callback);
 
     /**
      * Patches this GovernanceRoleDefinition with a source
@@ -68,7 +68,7 @@ public interface IGovernanceRoleDefinitionRequest extends IHttpRequest {
      * @param newGovernanceRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<GovernanceRoleDefinition> callback);
+    void post(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<? super GovernanceRoleDefinition> callback);
 
     /**
      * Posts a GovernanceRoleDefinition with a new object
@@ -85,7 +85,7 @@ public interface IGovernanceRoleDefinitionRequest extends IHttpRequest {
      * @param newGovernanceRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<GovernanceRoleDefinition> callback);
+    void put(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<? super GovernanceRoleDefinition> callback);
 
     /**
      * Posts a GovernanceRoleDefinition with a new object

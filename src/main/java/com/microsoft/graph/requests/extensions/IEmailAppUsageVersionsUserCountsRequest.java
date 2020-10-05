@@ -21,7 +21,7 @@ public interface IEmailAppUsageVersionsUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailAppUsageVersionsUserCounts> callback);
+    void get(final ICallback<? super EmailAppUsageVersionsUserCounts> callback);
 
     /**
      * Gets the EmailAppUsageVersionsUserCounts from the service
@@ -36,7 +36,7 @@ public interface IEmailAppUsageVersionsUserCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailAppUsageVersionsUserCounts> callback);
+    void delete(final ICallback<? super EmailAppUsageVersionsUserCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailAppUsageVersionsUserCountsRequest extends IHttpRequest {
      * @param sourceEmailAppUsageVersionsUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailAppUsageVersionsUserCounts sourceEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback);
+    void patch(final EmailAppUsageVersionsUserCounts sourceEmailAppUsageVersionsUserCounts, final ICallback<? super EmailAppUsageVersionsUserCounts> callback);
 
     /**
      * Patches this EmailAppUsageVersionsUserCounts with a source
@@ -68,7 +68,7 @@ public interface IEmailAppUsageVersionsUserCountsRequest extends IHttpRequest {
      * @param newEmailAppUsageVersionsUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback);
+    void post(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<? super EmailAppUsageVersionsUserCounts> callback);
 
     /**
      * Posts a EmailAppUsageVersionsUserCounts with a new object
@@ -85,7 +85,7 @@ public interface IEmailAppUsageVersionsUserCountsRequest extends IHttpRequest {
      * @param newEmailAppUsageVersionsUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback);
+    void put(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<? super EmailAppUsageVersionsUserCounts> callback);
 
     /**
      * Posts a EmailAppUsageVersionsUserCounts with a new object

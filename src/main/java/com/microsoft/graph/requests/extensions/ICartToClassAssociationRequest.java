@@ -21,7 +21,7 @@ public interface ICartToClassAssociationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CartToClassAssociation> callback);
+    void get(final ICallback<? super CartToClassAssociation> callback);
 
     /**
      * Gets the CartToClassAssociation from the service
@@ -36,7 +36,7 @@ public interface ICartToClassAssociationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CartToClassAssociation> callback);
+    void delete(final ICallback<? super CartToClassAssociation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICartToClassAssociationRequest extends IHttpRequest {
      * @param sourceCartToClassAssociation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CartToClassAssociation sourceCartToClassAssociation, final ICallback<CartToClassAssociation> callback);
+    void patch(final CartToClassAssociation sourceCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback);
 
     /**
      * Patches this CartToClassAssociation with a source
@@ -68,7 +68,7 @@ public interface ICartToClassAssociationRequest extends IHttpRequest {
      * @param newCartToClassAssociation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<CartToClassAssociation> callback);
+    void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback);
 
     /**
      * Posts a CartToClassAssociation with a new object
@@ -85,7 +85,7 @@ public interface ICartToClassAssociationRequest extends IHttpRequest {
      * @param newCartToClassAssociation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CartToClassAssociation newCartToClassAssociation, final ICallback<CartToClassAssociation> callback);
+    void put(final CartToClassAssociation newCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback);
 
     /**
      * Posts a CartToClassAssociation with a new object

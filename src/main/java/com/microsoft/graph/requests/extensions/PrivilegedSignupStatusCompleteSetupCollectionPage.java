@@ -35,6 +35,6 @@ public class PrivilegedSignupStatusCompleteSetupCollectionPage extends BaseColle
      * @param builder The request builder for the next collection page
      */
     public PrivilegedSignupStatusCompleteSetupCollectionPage(final PrivilegedSignupStatusCompleteSetupCollectionResponse response, final IPrivilegedSignupStatusCompleteSetupCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

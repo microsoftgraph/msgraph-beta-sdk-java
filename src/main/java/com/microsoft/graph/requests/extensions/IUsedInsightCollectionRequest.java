@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUsedInsightCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUsedInsightCollectionPage> callback);
+    void get(final ICallback<? super IUsedInsightCollectionPage> callback);
 
     IUsedInsightCollectionPage get() throws ClientException;
 
-    void post(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback);
+    void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback);
 
     UsedInsight post(final UsedInsight newUsedInsight) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUsedInsightCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUsedInsightCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUsedInsightCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUsedInsightCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUsedInsightCollectionRequest skipToken(String skipToken);
+	IUsedInsightCollectionRequest skipToken(final String skipToken);
 }

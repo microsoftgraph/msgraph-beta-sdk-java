@@ -45,7 +45,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GovernanceRoleAssignment> callback) {
+    public void get(final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GovernanceRoleAssignment> callback) {
+    public void delete(final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param sourceGovernanceRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+    public void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceRoleAssignment);
     }
 
@@ -104,7 +104,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param newGovernanceRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newGovernanceRoleAssignment);
     }
 
@@ -125,7 +125,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param newGovernanceRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+    public void put(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newGovernanceRoleAssignment);
     }
 
@@ -159,17 +159,6 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      */
      public IGovernanceRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceRoleAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGovernanceRoleAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GovernanceRoleAssignmentRequest)this;
      }
 

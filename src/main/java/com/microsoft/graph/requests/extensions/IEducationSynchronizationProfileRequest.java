@@ -21,7 +21,7 @@ public interface IEducationSynchronizationProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationSynchronizationProfile> callback);
+    void get(final ICallback<? super EducationSynchronizationProfile> callback);
 
     /**
      * Gets the EducationSynchronizationProfile from the service
@@ -36,7 +36,7 @@ public interface IEducationSynchronizationProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationSynchronizationProfile> callback);
+    void delete(final ICallback<? super EducationSynchronizationProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationSynchronizationProfileRequest extends IHttpRequest {
      * @param sourceEducationSynchronizationProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationSynchronizationProfile sourceEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback);
+    void patch(final EducationSynchronizationProfile sourceEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback);
 
     /**
      * Patches this EducationSynchronizationProfile with a source
@@ -68,7 +68,7 @@ public interface IEducationSynchronizationProfileRequest extends IHttpRequest {
      * @param newEducationSynchronizationProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback);
+    void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback);
 
     /**
      * Posts a EducationSynchronizationProfile with a new object
@@ -85,7 +85,7 @@ public interface IEducationSynchronizationProfileRequest extends IHttpRequest {
      * @param newEducationSynchronizationProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback);
+    void put(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<? super EducationSynchronizationProfile> callback);
 
     /**
      * Posts a EducationSynchronizationProfile with a new object

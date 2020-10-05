@@ -39,7 +39,7 @@ public class AccessReviewCollectionRequest extends BaseCollectionRequest<AccessR
         super(requestUrl, client, requestOptions, AccessReviewCollectionResponse.class, IAccessReviewCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessReviewCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessReviewCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AccessReviewCollectionRequest extends BaseCollectionRequest<AccessR
         return buildFromResponse(response);
     }
 
-    public void post(final AccessReview newAccessReview, final ICallback<AccessReview> callback) {
+    public void post(final AccessReview newAccessReview, final ICallback<? super AccessReview> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessReviewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AccessReviewCollectionRequest extends BaseCollectionRequest<AccessR
      */
     public IAccessReviewCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessReviewCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessReviewCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessReviewCollectionRequest)this;
     }
 

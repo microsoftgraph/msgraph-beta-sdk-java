@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedSignupStatusCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedSignupStatusCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedSignupStatusCollectionPage> callback);
 
     IPrivilegedSignupStatusCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback);
+    void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback);
 
     PrivilegedSignupStatus post(final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IPrivilegedSignupStatusCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPrivilegedSignupStatusCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedSignupStatusCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IPrivilegedSignupStatusCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPrivilegedSignupStatusCollectionRequest skipToken(String skipToken);
+	IPrivilegedSignupStatusCollectionRequest skipToken(final String skipToken);
 }

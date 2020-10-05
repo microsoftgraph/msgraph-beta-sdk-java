@@ -23,6 +23,6 @@ public class Fido2AuthenticationMethodCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public Fido2AuthenticationMethodCollectionPage(final Fido2AuthenticationMethodCollectionResponse response, final IFido2AuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class BookingServiceCollectionRequest extends BaseCollectionRequest<Booki
         super(requestUrl, client, requestOptions, BookingServiceCollectionResponse.class, IBookingServiceCollectionPage.class);
     }
 
-    public void get(final ICallback<IBookingServiceCollectionPage> callback) {
+    public void get(final ICallback<? super IBookingServiceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class BookingServiceCollectionRequest extends BaseCollectionRequest<Booki
         return buildFromResponse(response);
     }
 
-    public void post(final BookingService newBookingService, final ICallback<BookingService> callback) {
+    public void post(final BookingService newBookingService, final ICallback<? super BookingService> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingServiceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class BookingServiceCollectionRequest extends BaseCollectionRequest<Booki
      */
     public IBookingServiceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (BookingServiceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IBookingServiceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (BookingServiceCollectionRequest)this;
     }
 

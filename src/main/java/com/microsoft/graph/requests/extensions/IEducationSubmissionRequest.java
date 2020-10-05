@@ -21,7 +21,7 @@ public interface IEducationSubmissionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationSubmission> callback);
+    void get(final ICallback<? super EducationSubmission> callback);
 
     /**
      * Gets the EducationSubmission from the service
@@ -36,7 +36,7 @@ public interface IEducationSubmissionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationSubmission> callback);
+    void delete(final ICallback<? super EducationSubmission> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationSubmissionRequest extends IHttpRequest {
      * @param sourceEducationSubmission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationSubmission sourceEducationSubmission, final ICallback<EducationSubmission> callback);
+    void patch(final EducationSubmission sourceEducationSubmission, final ICallback<? super EducationSubmission> callback);
 
     /**
      * Patches this EducationSubmission with a source
@@ -68,7 +68,7 @@ public interface IEducationSubmissionRequest extends IHttpRequest {
      * @param newEducationSubmission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationSubmission newEducationSubmission, final ICallback<EducationSubmission> callback);
+    void post(final EducationSubmission newEducationSubmission, final ICallback<? super EducationSubmission> callback);
 
     /**
      * Posts a EducationSubmission with a new object
@@ -85,7 +85,7 @@ public interface IEducationSubmissionRequest extends IHttpRequest {
      * @param newEducationSubmission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationSubmission newEducationSubmission, final ICallback<EducationSubmission> callback);
+    void put(final EducationSubmission newEducationSubmission, final ICallback<? super EducationSubmission> callback);
 
     /**
      * Posts a EducationSubmission with a new object

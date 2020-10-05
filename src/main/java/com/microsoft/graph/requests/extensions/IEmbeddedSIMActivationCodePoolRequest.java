@@ -21,7 +21,7 @@ public interface IEmbeddedSIMActivationCodePoolRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmbeddedSIMActivationCodePool> callback);
+    void get(final ICallback<? super EmbeddedSIMActivationCodePool> callback);
 
     /**
      * Gets the EmbeddedSIMActivationCodePool from the service
@@ -36,7 +36,7 @@ public interface IEmbeddedSIMActivationCodePoolRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmbeddedSIMActivationCodePool> callback);
+    void delete(final ICallback<? super EmbeddedSIMActivationCodePool> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmbeddedSIMActivationCodePoolRequest extends IHttpRequest {
      * @param sourceEmbeddedSIMActivationCodePool the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback);
+    void patch(final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback);
 
     /**
      * Patches this EmbeddedSIMActivationCodePool with a source
@@ -68,7 +68,7 @@ public interface IEmbeddedSIMActivationCodePoolRequest extends IHttpRequest {
      * @param newEmbeddedSIMActivationCodePool the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback);
+    void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback);
 
     /**
      * Posts a EmbeddedSIMActivationCodePool with a new object
@@ -85,7 +85,7 @@ public interface IEmbeddedSIMActivationCodePoolRequest extends IHttpRequest {
      * @param newEmbeddedSIMActivationCodePool the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback);
+    void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback);
 
     /**
      * Posts a EmbeddedSIMActivationCodePool with a new object

@@ -23,6 +23,6 @@ public class EducationSynchronizationProfileCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public EducationSynchronizationProfileCollectionPage(final EducationSynchronizationProfileCollectionResponse response, final IEducationSynchronizationProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

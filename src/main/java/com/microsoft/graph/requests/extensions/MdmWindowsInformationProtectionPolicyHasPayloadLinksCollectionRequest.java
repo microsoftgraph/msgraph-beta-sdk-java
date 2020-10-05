@@ -44,7 +44,7 @@ public class MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionReque
     }
 
 
-    public void post(final ICallback<IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage> callback) {
+    public void post(final ICallback<? super IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionReque
      */
     public IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest)this;
     }
 

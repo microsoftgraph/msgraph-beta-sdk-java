@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param sourceUserExperienceAnalyticsAppHealthDevicePerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void patch(final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param newUserExperienceAnalyticsAppHealthDevicePerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param newUserExperienceAnalyticsAppHealthDevicePerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void put(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      */
      public IUserExperienceAnalyticsAppHealthDevicePerformanceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsAppHealthDevicePerformanceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsAppHealthDevicePerformanceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsAppHealthDevicePerformanceRequest)this;
      }
 

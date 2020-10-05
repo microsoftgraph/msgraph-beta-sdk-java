@@ -40,7 +40,7 @@ public class PersonAnnotationCollectionRequest extends BaseCollectionRequest<Per
         super(requestUrl, client, requestOptions, PersonAnnotationCollectionResponse.class, IPersonAnnotationCollectionPage.class);
     }
 
-    public void get(final ICallback<IPersonAnnotationCollectionPage> callback) {
+    public void get(final ICallback<? super IPersonAnnotationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PersonAnnotationCollectionRequest extends BaseCollectionRequest<Per
         return buildFromResponse(response);
     }
 
-    public void post(final PersonAnnotation newPersonAnnotation, final ICallback<PersonAnnotation> callback) {
+    public void post(final PersonAnnotation newPersonAnnotation, final ICallback<? super PersonAnnotation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonAnnotationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PersonAnnotationCollectionRequest extends BaseCollectionRequest<Per
      */
     public IPersonAnnotationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PersonAnnotationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPersonAnnotationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PersonAnnotationCollectionRequest)this;
     }
 

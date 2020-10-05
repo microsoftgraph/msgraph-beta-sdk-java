@@ -34,6 +34,6 @@ public class ReportRootGetTeamsDeviceUsageUserDetailCollectionPage extends BaseC
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetTeamsDeviceUsageUserDetailCollectionPage(final ReportRootGetTeamsDeviceUsageUserDetailCollectionResponse response, final IReportRootGetTeamsDeviceUsageUserDetailCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

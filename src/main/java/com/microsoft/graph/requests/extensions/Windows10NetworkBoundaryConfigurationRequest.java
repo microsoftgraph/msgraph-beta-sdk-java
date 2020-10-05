@@ -37,7 +37,7 @@ public class Windows10NetworkBoundaryConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows10NetworkBoundaryConfiguration> callback) {
+    public void get(final ICallback<? super Windows10NetworkBoundaryConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10NetworkBoundaryConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows10NetworkBoundaryConfiguration> callback) {
+    public void delete(final ICallback<? super Windows10NetworkBoundaryConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10NetworkBoundaryConfigurationRequest extends BaseRequest im
      * @param sourceWindows10NetworkBoundaryConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10NetworkBoundaryConfiguration sourceWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback) {
+    public void patch(final Windows10NetworkBoundaryConfiguration sourceWindows10NetworkBoundaryConfiguration, final ICallback<? super Windows10NetworkBoundaryConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10NetworkBoundaryConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows10NetworkBoundaryConfigurationRequest extends BaseRequest im
      * @param newWindows10NetworkBoundaryConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback) {
+    public void post(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<? super Windows10NetworkBoundaryConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10NetworkBoundaryConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows10NetworkBoundaryConfigurationRequest extends BaseRequest im
      * @param newWindows10NetworkBoundaryConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback) {
+    public void put(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<? super Windows10NetworkBoundaryConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10NetworkBoundaryConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class Windows10NetworkBoundaryConfigurationRequest extends BaseRequest im
      */
      public IWindows10NetworkBoundaryConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10NetworkBoundaryConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindows10NetworkBoundaryConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows10NetworkBoundaryConfigurationRequest)this;
      }
 

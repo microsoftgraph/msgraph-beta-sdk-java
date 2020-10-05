@@ -6,12 +6,10 @@ package com.microsoft.graph.termstore.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.termstore.models.generated.TermGroupScope;
 import com.microsoft.graph.termstore.models.extensions.Set;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.termstore.requests.extensions.SetCollectionResponse;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionPage;
 
 
@@ -108,19 +106,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sets")) {
-            final SetCollectionResponse response = new SetCollectionResponse();
-            if (json.has("sets@odata.nextLink")) {
-                response.nextLink = json.get("sets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sets").toString(), JsonObject[].class);
-            final Set[] array = new Set[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Set.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sets = new SetCollectionPage(response, null);
+            sets = serializer.deserializeObject(json.get("sets").toString(), SetCollectionPage.class);
         }
     }
 }

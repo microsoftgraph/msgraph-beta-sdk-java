@@ -37,7 +37,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AgedAccountsPayable> callback) {
+    public void get(final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AgedAccountsPayable> callback) {
+    public void delete(final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param sourceAgedAccountsPayable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgedAccountsPayable sourceAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback) {
+    public void patch(final AgedAccountsPayable sourceAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.PATCH, callback, sourceAgedAccountsPayable);
     }
 
@@ -96,7 +96,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param newAgedAccountsPayable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback) {
+    public void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.POST, callback, newAgedAccountsPayable);
     }
 
@@ -117,7 +117,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param newAgedAccountsPayable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback) {
+    public void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.PUT, callback, newAgedAccountsPayable);
     }
 
@@ -151,17 +151,6 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      */
      public IAgedAccountsPayableRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgedAccountsPayableRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAgedAccountsPayableRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AgedAccountsPayableRequest)this;
      }
 

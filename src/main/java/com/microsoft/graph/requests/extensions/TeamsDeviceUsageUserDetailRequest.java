@@ -37,7 +37,7 @@ public class TeamsDeviceUsageUserDetailRequest extends BaseRequest implements IT
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsDeviceUsageUserDetail> callback) {
+    public void get(final ICallback<? super TeamsDeviceUsageUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TeamsDeviceUsageUserDetailRequest extends BaseRequest implements IT
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsDeviceUsageUserDetail> callback) {
+    public void delete(final ICallback<? super TeamsDeviceUsageUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TeamsDeviceUsageUserDetailRequest extends BaseRequest implements IT
      * @param sourceTeamsDeviceUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsDeviceUsageUserDetail sourceTeamsDeviceUsageUserDetail, final ICallback<TeamsDeviceUsageUserDetail> callback) {
+    public void patch(final TeamsDeviceUsageUserDetail sourceTeamsDeviceUsageUserDetail, final ICallback<? super TeamsDeviceUsageUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsDeviceUsageUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class TeamsDeviceUsageUserDetailRequest extends BaseRequest implements IT
      * @param newTeamsDeviceUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<TeamsDeviceUsageUserDetail> callback) {
+    public void post(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<? super TeamsDeviceUsageUserDetail> callback) {
         send(HttpMethod.POST, callback, newTeamsDeviceUsageUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class TeamsDeviceUsageUserDetailRequest extends BaseRequest implements IT
      * @param newTeamsDeviceUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<TeamsDeviceUsageUserDetail> callback) {
+    public void put(final TeamsDeviceUsageUserDetail newTeamsDeviceUsageUserDetail, final ICallback<? super TeamsDeviceUsageUserDetail> callback) {
         send(HttpMethod.PUT, callback, newTeamsDeviceUsageUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class TeamsDeviceUsageUserDetailRequest extends BaseRequest implements IT
      */
      public ITeamsDeviceUsageUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsDeviceUsageUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITeamsDeviceUsageUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TeamsDeviceUsageUserDetailRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IGroupPolicyDefinitionValueRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyDefinitionValue> callback);
+    void get(final ICallback<? super GroupPolicyDefinitionValue> callback);
 
     /**
      * Gets the GroupPolicyDefinitionValue from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyDefinitionValueRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyDefinitionValue> callback);
+    void delete(final ICallback<? super GroupPolicyDefinitionValue> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyDefinitionValueRequest extends IHttpRequest {
      * @param sourceGroupPolicyDefinitionValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback);
+    void patch(final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback);
 
     /**
      * Patches this GroupPolicyDefinitionValue with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyDefinitionValueRequest extends IHttpRequest {
      * @param newGroupPolicyDefinitionValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback);
+    void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback);
 
     /**
      * Posts a GroupPolicyDefinitionValue with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyDefinitionValueRequest extends IHttpRequest {
      * @param newGroupPolicyDefinitionValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback);
+    void put(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback);
 
     /**
      * Posts a GroupPolicyDefinitionValue with a new object

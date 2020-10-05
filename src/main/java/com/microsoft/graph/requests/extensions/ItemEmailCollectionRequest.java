@@ -40,7 +40,7 @@ public class ItemEmailCollectionRequest extends BaseCollectionRequest<ItemEmailC
         super(requestUrl, client, requestOptions, ItemEmailCollectionResponse.class, IItemEmailCollectionPage.class);
     }
 
-    public void get(final ICallback<IItemEmailCollectionPage> callback) {
+    public void get(final ICallback<? super IItemEmailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ItemEmailCollectionRequest extends BaseCollectionRequest<ItemEmailC
         return buildFromResponse(response);
     }
 
-    public void post(final ItemEmail newItemEmail, final ICallback<ItemEmail> callback) {
+    public void post(final ItemEmail newItemEmail, final ICallback<? super ItemEmail> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemEmailRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ItemEmailCollectionRequest extends BaseCollectionRequest<ItemEmailC
      */
     public IItemEmailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ItemEmailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IItemEmailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemEmailCollectionRequest)this;
     }
 

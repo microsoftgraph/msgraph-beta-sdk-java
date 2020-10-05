@@ -34,6 +34,6 @@ public class ReportRootGetYammerGroupsActivityCountsCollectionPage extends BaseC
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetYammerGroupsActivityCountsCollectionPage(final ReportRootGetYammerGroupsActivityCountsCollectionResponse response, final IReportRootGetYammerGroupsActivityCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

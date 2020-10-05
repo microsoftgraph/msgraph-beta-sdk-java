@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionResponse;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class InformationProtectionPolicy extends Entity implements IJsonBackedOb
 
 
         if (json.has("labels")) {
-            final InformationProtectionLabelCollectionResponse response = new InformationProtectionLabelCollectionResponse();
-            if (json.has("labels@odata.nextLink")) {
-                response.nextLink = json.get("labels@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("labels").toString(), JsonObject[].class);
-            final InformationProtectionLabel[] array = new InformationProtectionLabel[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), InformationProtectionLabel.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            labels = new InformationProtectionLabelCollectionPage(response, null);
+            labels = serializer.deserializeObject(json.get("labels").toString(), InformationProtectionLabelCollectionPage.class);
         }
     }
 }

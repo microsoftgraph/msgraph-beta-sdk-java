@@ -21,7 +21,7 @@ public interface ICredentialUsageSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CredentialUsageSummary> callback);
+    void get(final ICallback<? super CredentialUsageSummary> callback);
 
     /**
      * Gets the CredentialUsageSummary from the service
@@ -36,7 +36,7 @@ public interface ICredentialUsageSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CredentialUsageSummary> callback);
+    void delete(final ICallback<? super CredentialUsageSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICredentialUsageSummaryRequest extends IHttpRequest {
      * @param sourceCredentialUsageSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CredentialUsageSummary sourceCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback);
+    void patch(final CredentialUsageSummary sourceCredentialUsageSummary, final ICallback<? super CredentialUsageSummary> callback);
 
     /**
      * Patches this CredentialUsageSummary with a source
@@ -68,7 +68,7 @@ public interface ICredentialUsageSummaryRequest extends IHttpRequest {
      * @param newCredentialUsageSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback);
+    void post(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<? super CredentialUsageSummary> callback);
 
     /**
      * Posts a CredentialUsageSummary with a new object
@@ -85,7 +85,7 @@ public interface ICredentialUsageSummaryRequest extends IHttpRequest {
      * @param newCredentialUsageSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback);
+    void put(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<? super CredentialUsageSummary> callback);
 
     /**
      * Posts a CredentialUsageSummary with a new object

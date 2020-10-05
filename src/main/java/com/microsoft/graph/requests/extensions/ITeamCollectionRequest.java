@@ -29,11 +29,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamCollectionPage> callback);
+    void get(final ICallback<? super ITeamCollectionPage> callback);
 
     ITeamCollectionPage get() throws ClientException;
 
-    void post(final Team newTeam, final ICallback<Team> callback);
+    void post(final Team newTeam, final ICallback<? super Team> callback);
 
     Team post(final Team newTeam) throws ClientException;
 
@@ -52,6 +52,14 @@ public interface ITeamCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITeamCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITeamCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -84,5 +92,5 @@ public interface ITeamCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamCollectionRequest skipToken(String skipToken);
+	ITeamCollectionRequest skipToken(final String skipToken);
 }

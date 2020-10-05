@@ -23,6 +23,6 @@ public class PurchaseInvoiceCollectionPage extends BaseCollectionPage<PurchaseIn
      * @param builder  the request builder for the next collection page
      */
     public PurchaseInvoiceCollectionPage(final PurchaseInvoiceCollectionResponse response, final IPurchaseInvoiceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

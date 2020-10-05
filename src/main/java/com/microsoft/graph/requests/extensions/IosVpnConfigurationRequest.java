@@ -56,7 +56,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosVpnConfiguration> callback) {
+    public void get(final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosVpnConfiguration> callback) {
+    public void delete(final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param sourceIosVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVpnConfiguration sourceIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback) {
+    public void patch(final IosVpnConfiguration sourceIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVpnConfiguration);
     }
 
@@ -115,7 +115,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param newIosVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback) {
+    public void post(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosVpnConfiguration);
     }
 
@@ -136,7 +136,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param newIosVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback) {
+    public void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosVpnConfiguration);
     }
 
@@ -170,17 +170,6 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      */
      public IIosVpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosVpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosVpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosVpnConfigurationRequest)this;
      }
 

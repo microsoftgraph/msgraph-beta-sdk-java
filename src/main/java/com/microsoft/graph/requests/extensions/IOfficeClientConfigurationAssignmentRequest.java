@@ -21,7 +21,7 @@ public interface IOfficeClientConfigurationAssignmentRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OfficeClientConfigurationAssignment> callback);
+    void get(final ICallback<? super OfficeClientConfigurationAssignment> callback);
 
     /**
      * Gets the OfficeClientConfigurationAssignment from the service
@@ -36,7 +36,7 @@ public interface IOfficeClientConfigurationAssignmentRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OfficeClientConfigurationAssignment> callback);
+    void delete(final ICallback<? super OfficeClientConfigurationAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOfficeClientConfigurationAssignmentRequest extends IHttpReques
      * @param sourceOfficeClientConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OfficeClientConfigurationAssignment sourceOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback);
+    void patch(final OfficeClientConfigurationAssignment sourceOfficeClientConfigurationAssignment, final ICallback<? super OfficeClientConfigurationAssignment> callback);
 
     /**
      * Patches this OfficeClientConfigurationAssignment with a source
@@ -68,7 +68,7 @@ public interface IOfficeClientConfigurationAssignmentRequest extends IHttpReques
      * @param newOfficeClientConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback);
+    void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<? super OfficeClientConfigurationAssignment> callback);
 
     /**
      * Posts a OfficeClientConfigurationAssignment with a new object
@@ -85,7 +85,7 @@ public interface IOfficeClientConfigurationAssignmentRequest extends IHttpReques
      * @param newOfficeClientConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback);
+    void put(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<? super OfficeClientConfigurationAssignment> callback);
 
     /**
      * Posts a OfficeClientConfigurationAssignment with a new object

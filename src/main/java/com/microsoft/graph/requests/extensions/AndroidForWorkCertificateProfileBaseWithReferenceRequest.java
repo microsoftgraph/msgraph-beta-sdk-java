@@ -37,7 +37,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, AndroidForWorkCertificateProfileBase.class);
     }
 
-    public void post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidForWorkCertificateProfileBase> callback) {
+    public void post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -49,7 +49,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
         return null;
     }
 
-    public void get(final ICallback<AndroidForWorkCertificateProfileBase> callback) {
+    public void get(final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidForWorkCertificateProfileBase> callback) {
+	public void delete(final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,7 +65,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase, final ICallback<AndroidForWorkCertificateProfileBase> callback) {
+	public void patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase, final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidForWorkCertificateProfileBase);
 	}
 
@@ -93,16 +93,6 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      */
     public IAndroidForWorkCertificateProfileBaseWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidForWorkCertificateProfileBaseWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidForWorkCertificateProfileBaseWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidForWorkCertificateProfileBaseWithReferenceRequest)this;
     }
 }

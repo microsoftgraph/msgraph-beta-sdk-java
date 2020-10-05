@@ -21,7 +21,7 @@ public interface IAccessReviewReviewerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessReviewReviewer> callback);
+    void get(final ICallback<? super AccessReviewReviewer> callback);
 
     /**
      * Gets the AccessReviewReviewer from the service
@@ -36,7 +36,7 @@ public interface IAccessReviewReviewerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessReviewReviewer> callback);
+    void delete(final ICallback<? super AccessReviewReviewer> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessReviewReviewerRequest extends IHttpRequest {
      * @param sourceAccessReviewReviewer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessReviewReviewer sourceAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback);
+    void patch(final AccessReviewReviewer sourceAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback);
 
     /**
      * Patches this AccessReviewReviewer with a source
@@ -68,7 +68,7 @@ public interface IAccessReviewReviewerRequest extends IHttpRequest {
      * @param newAccessReviewReviewer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback);
+    void post(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback);
 
     /**
      * Posts a AccessReviewReviewer with a new object
@@ -85,7 +85,7 @@ public interface IAccessReviewReviewerRequest extends IHttpRequest {
      * @param newAccessReviewReviewer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback);
+    void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback);
 
     /**
      * Posts a AccessReviewReviewer with a new object

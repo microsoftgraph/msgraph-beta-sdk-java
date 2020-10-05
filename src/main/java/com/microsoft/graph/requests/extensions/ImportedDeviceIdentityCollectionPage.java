@@ -23,6 +23,6 @@ public class ImportedDeviceIdentityCollectionPage extends BaseCollectionPage<Imp
      * @param builder  the request builder for the next collection page
      */
     public ImportedDeviceIdentityCollectionPage(final ImportedDeviceIdentityCollectionResponse response, final IImportedDeviceIdentityCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

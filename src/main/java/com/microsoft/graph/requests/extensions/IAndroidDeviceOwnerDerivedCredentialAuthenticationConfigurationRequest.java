@@ -21,7 +21,7 @@ public interface IAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Gets the AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration
      * @param sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
+    void patch(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Patches this AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration
      * @param newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
+    void post(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Posts a AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration
      * @param newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
+    void put(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Posts a AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration with a new object

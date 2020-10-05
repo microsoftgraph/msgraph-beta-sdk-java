@@ -21,7 +21,7 @@ public interface IDeviceManagementBooleanSettingInstanceRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementBooleanSettingInstance> callback);
+    void get(final ICallback<? super DeviceManagementBooleanSettingInstance> callback);
 
     /**
      * Gets the DeviceManagementBooleanSettingInstance from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementBooleanSettingInstanceRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementBooleanSettingInstance> callback);
+    void delete(final ICallback<? super DeviceManagementBooleanSettingInstance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementBooleanSettingInstanceRequest extends IHttpReq
      * @param sourceDeviceManagementBooleanSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementBooleanSettingInstance sourceDeviceManagementBooleanSettingInstance, final ICallback<DeviceManagementBooleanSettingInstance> callback);
+    void patch(final DeviceManagementBooleanSettingInstance sourceDeviceManagementBooleanSettingInstance, final ICallback<? super DeviceManagementBooleanSettingInstance> callback);
 
     /**
      * Patches this DeviceManagementBooleanSettingInstance with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementBooleanSettingInstanceRequest extends IHttpReq
      * @param newDeviceManagementBooleanSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<DeviceManagementBooleanSettingInstance> callback);
+    void post(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<? super DeviceManagementBooleanSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementBooleanSettingInstance with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementBooleanSettingInstanceRequest extends IHttpReq
      * @param newDeviceManagementBooleanSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<DeviceManagementBooleanSettingInstance> callback);
+    void put(final DeviceManagementBooleanSettingInstance newDeviceManagementBooleanSettingInstance, final ICallback<? super DeviceManagementBooleanSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementBooleanSettingInstance with a new object

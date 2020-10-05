@@ -23,7 +23,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrintTaskTriggerReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PrintTaskTrigger> callback);
+    void delete(final ICallback<? super PrintTaskTrigger> callback);
 
     PrintTaskTrigger delete() throws ClientException;
 
@@ -49,7 +49,7 @@ public interface IPrintTaskTriggerReferenceRequest extends IHttpRequest {
      * @param srcPrintTaskTrigger the PrintTaskTrigger to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PrintTaskTrigger srcPrintTaskTrigger, final ICallback<PrintTaskTrigger> callback);
+    void put(PrintTaskTrigger srcPrintTaskTrigger, final ICallback<? super PrintTaskTrigger> callback);
 
     /**
      * Puts the PrintTaskTrigger

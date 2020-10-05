@@ -23,6 +23,6 @@ public class WindowsFeatureUpdateProfileAssignmentCollectionPage extends BaseCol
      * @param builder  the request builder for the next collection page
      */
     public WindowsFeatureUpdateProfileAssignmentCollectionPage(final WindowsFeatureUpdateProfileAssignmentCollectionResponse response, final IWindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

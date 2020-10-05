@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationValueDecimalRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationValueDecimal> callback);
+    void get(final ICallback<? super GroupPolicyPresentationValueDecimal> callback);
 
     /**
      * Gets the GroupPolicyPresentationValueDecimal from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationValueDecimalRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationValueDecimal> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationValueDecimal> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationValueDecimalRequest extends IHttpReques
      * @param sourceGroupPolicyPresentationValueDecimal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationValueDecimal sourceGroupPolicyPresentationValueDecimal, final ICallback<GroupPolicyPresentationValueDecimal> callback);
+    void patch(final GroupPolicyPresentationValueDecimal sourceGroupPolicyPresentationValueDecimal, final ICallback<? super GroupPolicyPresentationValueDecimal> callback);
 
     /**
      * Patches this GroupPolicyPresentationValueDecimal with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationValueDecimalRequest extends IHttpReques
      * @param newGroupPolicyPresentationValueDecimal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal, final ICallback<GroupPolicyPresentationValueDecimal> callback);
+    void post(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal, final ICallback<? super GroupPolicyPresentationValueDecimal> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueDecimal with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationValueDecimalRequest extends IHttpReques
      * @param newGroupPolicyPresentationValueDecimal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal, final ICallback<GroupPolicyPresentationValueDecimal> callback);
+    void put(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal, final ICallback<? super GroupPolicyPresentationValueDecimal> callback);
 
     /**
      * Posts a GroupPolicyPresentationValueDecimal with a new object

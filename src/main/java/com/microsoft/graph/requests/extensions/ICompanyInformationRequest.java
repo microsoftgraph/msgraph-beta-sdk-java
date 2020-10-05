@@ -21,7 +21,7 @@ public interface ICompanyInformationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CompanyInformation> callback);
+    void get(final ICallback<? super CompanyInformation> callback);
 
     /**
      * Gets the CompanyInformation from the service
@@ -36,7 +36,7 @@ public interface ICompanyInformationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CompanyInformation> callback);
+    void delete(final ICallback<? super CompanyInformation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICompanyInformationRequest extends IHttpRequest {
      * @param sourceCompanyInformation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CompanyInformation sourceCompanyInformation, final ICallback<CompanyInformation> callback);
+    void patch(final CompanyInformation sourceCompanyInformation, final ICallback<? super CompanyInformation> callback);
 
     /**
      * Patches this CompanyInformation with a source
@@ -68,7 +68,7 @@ public interface ICompanyInformationRequest extends IHttpRequest {
      * @param newCompanyInformation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CompanyInformation newCompanyInformation, final ICallback<CompanyInformation> callback);
+    void post(final CompanyInformation newCompanyInformation, final ICallback<? super CompanyInformation> callback);
 
     /**
      * Posts a CompanyInformation with a new object
@@ -85,7 +85,7 @@ public interface ICompanyInformationRequest extends IHttpRequest {
      * @param newCompanyInformation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CompanyInformation newCompanyInformation, final ICallback<CompanyInformation> callback);
+    void put(final CompanyInformation newCompanyInformation, final ICallback<? super CompanyInformation> callback);
 
     /**
      * Posts a CompanyInformation with a new object

@@ -35,7 +35,7 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, IEducationSchoolCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationSchoolCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IEducationSchoolCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
 
     public IEducationSchoolCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationSchoolCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IEducationSchoolCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EducationSchoolCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IEducationSchoolCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IEducationSchoolCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EducationSchoolCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IEducationSchoolCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (EducationSchoolCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IEducationSchoolCollectionWithReferencesPage buildFromResponse(final EducationSchoolCollectionResponse response) {

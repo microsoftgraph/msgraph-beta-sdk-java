@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IChannelCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChannelCollectionPage> callback);
+    void get(final ICallback<? super IChannelCollectionPage> callback);
 
     IChannelCollectionPage get() throws ClientException;
 
-    void post(final Channel newChannel, final ICallback<Channel> callback);
+    void post(final Channel newChannel, final ICallback<? super Channel> callback);
 
     Channel post(final Channel newChannel) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IChannelCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IChannelCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IChannelCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IChannelCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IChannelCollectionRequest skipToken(String skipToken);
+	IChannelCollectionRequest skipToken(final String skipToken);
 }

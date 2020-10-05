@@ -23,6 +23,6 @@ public class PolicySetItemCollectionPage extends BaseCollectionPage<PolicySetIte
      * @param builder  the request builder for the next collection page
      */
     public PolicySetItemCollectionPage(final PolicySetItemCollectionResponse response, final IPolicySetItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

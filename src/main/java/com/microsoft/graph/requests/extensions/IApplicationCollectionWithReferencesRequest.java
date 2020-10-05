@@ -23,7 +23,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApplicationCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IApplicationCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IApplicationCollectionWithReferencesPage> callback);
 
     IApplicationCollectionWithReferencesPage get() throws ClientException;
 

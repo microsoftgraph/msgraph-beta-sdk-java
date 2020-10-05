@@ -21,7 +21,7 @@ public interface IMdmWindowsInformationProtectionPolicyPolicySetItemRequest exte
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
+    void get(final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
 
     /**
      * Gets the MdmWindowsInformationProtectionPolicyPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IMdmWindowsInformationProtectionPolicyPolicySetItemRequest exte
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
+    void delete(final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMdmWindowsInformationProtectionPolicyPolicySetItemRequest exte
      * @param sourceMdmWindowsInformationProtectionPolicyPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MdmWindowsInformationProtectionPolicyPolicySetItem sourceMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
+    void patch(final MdmWindowsInformationProtectionPolicyPolicySetItem sourceMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
 
     /**
      * Patches this MdmWindowsInformationProtectionPolicyPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IMdmWindowsInformationProtectionPolicyPolicySetItemRequest exte
      * @param newMdmWindowsInformationProtectionPolicyPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
+    void post(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
 
     /**
      * Posts a MdmWindowsInformationProtectionPolicyPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IMdmWindowsInformationProtectionPolicyPolicySetItemRequest exte
      * @param newMdmWindowsInformationProtectionPolicyPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
+    void put(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback);
 
     /**
      * Posts a MdmWindowsInformationProtectionPolicyPolicySetItem with a new object

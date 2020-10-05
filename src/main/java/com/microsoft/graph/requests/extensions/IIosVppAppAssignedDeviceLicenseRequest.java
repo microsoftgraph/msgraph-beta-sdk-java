@@ -21,7 +21,7 @@ public interface IIosVppAppAssignedDeviceLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVppAppAssignedDeviceLicense> callback);
+    void get(final ICallback<? super IosVppAppAssignedDeviceLicense> callback);
 
     /**
      * Gets the IosVppAppAssignedDeviceLicense from the service
@@ -36,7 +36,7 @@ public interface IIosVppAppAssignedDeviceLicenseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVppAppAssignedDeviceLicense> callback);
+    void delete(final ICallback<? super IosVppAppAssignedDeviceLicense> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVppAppAssignedDeviceLicenseRequest extends IHttpRequest {
      * @param sourceIosVppAppAssignedDeviceLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVppAppAssignedDeviceLicense sourceIosVppAppAssignedDeviceLicense, final ICallback<IosVppAppAssignedDeviceLicense> callback);
+    void patch(final IosVppAppAssignedDeviceLicense sourceIosVppAppAssignedDeviceLicense, final ICallback<? super IosVppAppAssignedDeviceLicense> callback);
 
     /**
      * Patches this IosVppAppAssignedDeviceLicense with a source
@@ -68,7 +68,7 @@ public interface IIosVppAppAssignedDeviceLicenseRequest extends IHttpRequest {
      * @param newIosVppAppAssignedDeviceLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVppAppAssignedDeviceLicense newIosVppAppAssignedDeviceLicense, final ICallback<IosVppAppAssignedDeviceLicense> callback);
+    void post(final IosVppAppAssignedDeviceLicense newIosVppAppAssignedDeviceLicense, final ICallback<? super IosVppAppAssignedDeviceLicense> callback);
 
     /**
      * Posts a IosVppAppAssignedDeviceLicense with a new object
@@ -85,7 +85,7 @@ public interface IIosVppAppAssignedDeviceLicenseRequest extends IHttpRequest {
      * @param newIosVppAppAssignedDeviceLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVppAppAssignedDeviceLicense newIosVppAppAssignedDeviceLicense, final ICallback<IosVppAppAssignedDeviceLicense> callback);
+    void put(final IosVppAppAssignedDeviceLicense newIosVppAppAssignedDeviceLicense, final ICallback<? super IosVppAppAssignedDeviceLicense> callback);
 
     /**
      * Posts a IosVppAppAssignedDeviceLicense with a new object

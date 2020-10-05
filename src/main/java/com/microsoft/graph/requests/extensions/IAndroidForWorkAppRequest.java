@@ -21,7 +21,7 @@ public interface IAndroidForWorkAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkApp> callback);
+    void get(final ICallback<? super AndroidForWorkApp> callback);
 
     /**
      * Gets the AndroidForWorkApp from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkApp> callback);
+    void delete(final ICallback<? super AndroidForWorkApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkAppRequest extends IHttpRequest {
      * @param sourceAndroidForWorkApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkApp sourceAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback);
+    void patch(final AndroidForWorkApp sourceAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback);
 
     /**
      * Patches this AndroidForWorkApp with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkAppRequest extends IHttpRequest {
      * @param newAndroidForWorkApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback);
+    void post(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback);
 
     /**
      * Posts a AndroidForWorkApp with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkAppRequest extends IHttpRequest {
      * @param newAndroidForWorkApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback);
+    void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback);
 
     /**
      * Posts a AndroidForWorkApp with a new object

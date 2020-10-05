@@ -21,7 +21,7 @@ public interface IMailboxUsageMailboxCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailboxUsageMailboxCounts> callback);
+    void get(final ICallback<? super MailboxUsageMailboxCounts> callback);
 
     /**
      * Gets the MailboxUsageMailboxCounts from the service
@@ -36,7 +36,7 @@ public interface IMailboxUsageMailboxCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailboxUsageMailboxCounts> callback);
+    void delete(final ICallback<? super MailboxUsageMailboxCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailboxUsageMailboxCountsRequest extends IHttpRequest {
      * @param sourceMailboxUsageMailboxCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailboxUsageMailboxCounts sourceMailboxUsageMailboxCounts, final ICallback<MailboxUsageMailboxCounts> callback);
+    void patch(final MailboxUsageMailboxCounts sourceMailboxUsageMailboxCounts, final ICallback<? super MailboxUsageMailboxCounts> callback);
 
     /**
      * Patches this MailboxUsageMailboxCounts with a source
@@ -68,7 +68,7 @@ public interface IMailboxUsageMailboxCountsRequest extends IHttpRequest {
      * @param newMailboxUsageMailboxCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<MailboxUsageMailboxCounts> callback);
+    void post(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<? super MailboxUsageMailboxCounts> callback);
 
     /**
      * Posts a MailboxUsageMailboxCounts with a new object
@@ -85,7 +85,7 @@ public interface IMailboxUsageMailboxCountsRequest extends IHttpRequest {
      * @param newMailboxUsageMailboxCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<MailboxUsageMailboxCounts> callback);
+    void put(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<? super MailboxUsageMailboxCounts> callback);
 
     /**
      * Posts a MailboxUsageMailboxCounts with a new object

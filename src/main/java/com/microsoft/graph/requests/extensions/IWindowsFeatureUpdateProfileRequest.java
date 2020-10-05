@@ -21,7 +21,7 @@ public interface IWindowsFeatureUpdateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsFeatureUpdateProfile> callback);
+    void get(final ICallback<? super WindowsFeatureUpdateProfile> callback);
 
     /**
      * Gets the WindowsFeatureUpdateProfile from the service
@@ -36,7 +36,7 @@ public interface IWindowsFeatureUpdateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsFeatureUpdateProfile> callback);
+    void delete(final ICallback<? super WindowsFeatureUpdateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsFeatureUpdateProfileRequest extends IHttpRequest {
      * @param sourceWindowsFeatureUpdateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsFeatureUpdateProfile sourceWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback);
+    void patch(final WindowsFeatureUpdateProfile sourceWindowsFeatureUpdateProfile, final ICallback<? super WindowsFeatureUpdateProfile> callback);
 
     /**
      * Patches this WindowsFeatureUpdateProfile with a source
@@ -68,7 +68,7 @@ public interface IWindowsFeatureUpdateProfileRequest extends IHttpRequest {
      * @param newWindowsFeatureUpdateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback);
+    void post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<? super WindowsFeatureUpdateProfile> callback);
 
     /**
      * Posts a WindowsFeatureUpdateProfile with a new object
@@ -85,7 +85,7 @@ public interface IWindowsFeatureUpdateProfileRequest extends IHttpRequest {
      * @param newWindowsFeatureUpdateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback);
+    void put(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<? super WindowsFeatureUpdateProfile> callback);
 
     /**
      * Posts a WindowsFeatureUpdateProfile with a new object

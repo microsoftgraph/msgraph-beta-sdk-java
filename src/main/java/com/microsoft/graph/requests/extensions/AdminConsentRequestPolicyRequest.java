@@ -37,7 +37,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AdminConsentRequestPolicy> callback) {
+    public void get(final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AdminConsentRequestPolicy> callback) {
+    public void delete(final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param sourceAdminConsentRequestPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback) {
+    public void patch(final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAdminConsentRequestPolicy);
     }
 
@@ -96,7 +96,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param newAdminConsentRequestPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback) {
+    public void post(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.POST, callback, newAdminConsentRequestPolicy);
     }
 
@@ -117,7 +117,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param newAdminConsentRequestPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback) {
+    public void put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.PUT, callback, newAdminConsentRequestPolicy);
     }
 
@@ -151,17 +151,6 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      */
      public IAdminConsentRequestPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AdminConsentRequestPolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAdminConsentRequestPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AdminConsentRequestPolicyRequest)this;
      }
 

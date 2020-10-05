@@ -37,7 +37,7 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsHealthMonitoringConfiguration> callback) {
+    public void get(final ICallback<? super WindowsHealthMonitoringConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsHealthMonitoringConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsHealthMonitoringConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
      * @param sourceWindowsHealthMonitoringConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsHealthMonitoringConfiguration sourceWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback) {
+    public void patch(final WindowsHealthMonitoringConfiguration sourceWindowsHealthMonitoringConfiguration, final ICallback<? super WindowsHealthMonitoringConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsHealthMonitoringConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
      * @param newWindowsHealthMonitoringConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback) {
+    public void post(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<? super WindowsHealthMonitoringConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsHealthMonitoringConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
      * @param newWindowsHealthMonitoringConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback) {
+    public void put(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<? super WindowsHealthMonitoringConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsHealthMonitoringConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
      */
      public IWindowsHealthMonitoringConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsHealthMonitoringConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsHealthMonitoringConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsHealthMonitoringConfigurationRequest)this;
      }
 

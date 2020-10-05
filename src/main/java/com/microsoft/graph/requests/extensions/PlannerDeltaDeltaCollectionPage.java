@@ -40,7 +40,7 @@ public class PlannerDeltaDeltaCollectionPage extends BaseCollectionPage<PlannerD
      * @param builder The request builder for the next collection page
      */
     public PlannerDeltaDeltaCollectionPage(final PlannerDeltaDeltaCollectionResponse response, final IPlannerDeltaDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

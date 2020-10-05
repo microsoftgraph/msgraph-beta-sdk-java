@@ -37,7 +37,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ProviderTenantSetting> callback) {
+    public void get(final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ProviderTenantSetting> callback) {
+    public void delete(final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param sourceProviderTenantSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProviderTenantSetting sourceProviderTenantSetting, final ICallback<ProviderTenantSetting> callback) {
+    public void patch(final ProviderTenantSetting sourceProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.PATCH, callback, sourceProviderTenantSetting);
     }
 
@@ -96,7 +96,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param newProviderTenantSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback) {
+    public void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.POST, callback, newProviderTenantSetting);
     }
 
@@ -117,7 +117,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param newProviderTenantSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback) {
+    public void put(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.PUT, callback, newProviderTenantSetting);
     }
 
@@ -151,17 +151,6 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      */
      public IProviderTenantSettingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProviderTenantSettingRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IProviderTenantSettingRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ProviderTenantSettingRequest)this;
      }
 

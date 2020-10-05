@@ -34,6 +34,6 @@ public class ReportRootGetPrintUsageSummariesByUserCollectionPage extends BaseCo
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetPrintUsageSummariesByUserCollectionPage(final ReportRootGetPrintUsageSummariesByUserCollectionResponse response, final IReportRootGetPrintUsageSummariesByUserCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

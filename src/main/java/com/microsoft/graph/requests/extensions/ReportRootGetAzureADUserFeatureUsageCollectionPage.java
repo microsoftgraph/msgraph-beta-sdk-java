@@ -34,6 +34,6 @@ public class ReportRootGetAzureADUserFeatureUsageCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetAzureADUserFeatureUsageCollectionPage(final ReportRootGetAzureADUserFeatureUsageCollectionResponse response, final IReportRootGetAzureADUserFeatureUsageCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

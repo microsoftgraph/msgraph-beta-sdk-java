@@ -37,7 +37,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81StoreApp> callback) {
+    public void get(final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81StoreApp> callback) {
+    public void delete(final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param sourceWindowsPhone81StoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback) {
+    public void patch(final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81StoreApp);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param newWindowsPhone81StoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback) {
+    public void post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81StoreApp);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param newWindowsPhone81StoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback) {
+    public void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81StoreApp);
     }
 
@@ -151,17 +151,6 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      */
      public IWindowsPhone81StoreAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81StoreAppRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhone81StoreAppRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81StoreAppRequest)this;
      }
 

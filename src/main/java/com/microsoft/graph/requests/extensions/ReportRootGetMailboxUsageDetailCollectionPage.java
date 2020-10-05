@@ -34,6 +34,6 @@ public class ReportRootGetMailboxUsageDetailCollectionPage extends BaseCollectio
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetMailboxUsageDetailCollectionPage(final ReportRootGetMailboxUsageDetailCollectionResponse response, final IReportRootGetMailboxUsageDetailCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

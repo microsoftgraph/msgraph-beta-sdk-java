@@ -23,6 +23,6 @@ public class PrintUsageSummaryByPrinterCollectionPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public PrintUsageSummaryByPrinterCollectionPage(final PrintUsageSummaryByPrinterCollectionResponse response, final IPrintUsageSummaryByPrinterCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

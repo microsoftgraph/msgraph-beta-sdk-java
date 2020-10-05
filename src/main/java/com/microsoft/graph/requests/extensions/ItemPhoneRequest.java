@@ -37,7 +37,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemPhone> callback) {
+    public void get(final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemPhone> callback) {
+    public void delete(final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param sourceItemPhone the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemPhone sourceItemPhone, final ICallback<ItemPhone> callback) {
+    public void patch(final ItemPhone sourceItemPhone, final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.PATCH, callback, sourceItemPhone);
     }
 
@@ -96,7 +96,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param newItemPhone the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback) {
+    public void post(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.POST, callback, newItemPhone);
     }
 
@@ -117,7 +117,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param newItemPhone the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback) {
+    public void put(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.PUT, callback, newItemPhone);
     }
 
@@ -151,17 +151,6 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      */
      public IItemPhoneRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemPhoneRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemPhoneRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemPhoneRequest)this;
      }
 

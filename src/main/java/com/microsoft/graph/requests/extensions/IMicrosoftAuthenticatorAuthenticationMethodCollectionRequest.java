@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback);
+    void get(final ICallback<? super IMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback);
 
     IMicrosoftAuthenticatorAuthenticationMethodCollectionPage get() throws ClientException;
 
-    void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback);
+    void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback);
 
     MicrosoftAuthenticatorAuthenticationMethod post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest ex
      * @return the updated request
      */
     IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest ex
      *
 	 * @return the updated request
 	 */
-	IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skipToken(String skipToken);
+	IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skipToken(final String skipToken);
 }

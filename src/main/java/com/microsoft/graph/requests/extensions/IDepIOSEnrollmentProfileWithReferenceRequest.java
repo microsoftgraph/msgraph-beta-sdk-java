@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDepIOSEnrollmentProfileWithReferenceRequest extends IHttpRequest {
 
-    void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final IJsonBackedObject payload, final ICallback<DepIOSEnrollmentProfile> callback);
+    void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final IJsonBackedObject payload, final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     DepIOSEnrollmentProfile post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<DepIOSEnrollmentProfile> callback);
+    void get(final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     DepIOSEnrollmentProfile get() throws ClientException;
 
-	void delete(final ICallback<DepIOSEnrollmentProfile> callback);
+	void delete(final ICallback<? super DepIOSEnrollmentProfile> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback);
+	void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback);
 
 	DepIOSEnrollmentProfile patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile) throws ClientException;
 

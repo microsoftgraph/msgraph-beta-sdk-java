@@ -21,7 +21,7 @@ public interface IUnifiedRoleAssignmentMultipleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UnifiedRoleAssignmentMultiple> callback);
+    void get(final ICallback<? super UnifiedRoleAssignmentMultiple> callback);
 
     /**
      * Gets the UnifiedRoleAssignmentMultiple from the service
@@ -36,7 +36,7 @@ public interface IUnifiedRoleAssignmentMultipleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UnifiedRoleAssignmentMultiple> callback);
+    void delete(final ICallback<? super UnifiedRoleAssignmentMultiple> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUnifiedRoleAssignmentMultipleRequest extends IHttpRequest {
      * @param sourceUnifiedRoleAssignmentMultiple the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UnifiedRoleAssignmentMultiple sourceUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback);
+    void patch(final UnifiedRoleAssignmentMultiple sourceUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback);
 
     /**
      * Patches this UnifiedRoleAssignmentMultiple with a source
@@ -68,7 +68,7 @@ public interface IUnifiedRoleAssignmentMultipleRequest extends IHttpRequest {
      * @param newUnifiedRoleAssignmentMultiple the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback);
+    void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback);
 
     /**
      * Posts a UnifiedRoleAssignmentMultiple with a new object
@@ -85,7 +85,7 @@ public interface IUnifiedRoleAssignmentMultipleRequest extends IHttpRequest {
      * @param newUnifiedRoleAssignmentMultiple the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback);
+    void put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback);
 
     /**
      * Posts a UnifiedRoleAssignmentMultiple with a new object

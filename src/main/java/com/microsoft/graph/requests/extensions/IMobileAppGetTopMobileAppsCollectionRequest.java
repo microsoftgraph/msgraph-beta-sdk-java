@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IMobileAppGetTopMobileAppsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileAppGetTopMobileAppsCollectionPage> callback);
+    void get(final ICallback<? super IMobileAppGetTopMobileAppsCollectionPage> callback);
 
     IMobileAppGetTopMobileAppsCollectionPage get() throws ClientException;
 

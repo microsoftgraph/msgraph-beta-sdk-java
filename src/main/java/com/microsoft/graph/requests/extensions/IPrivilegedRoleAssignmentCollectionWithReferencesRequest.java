@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedRoleAssignmentCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedRoleAssignmentCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IPrivilegedRoleAssignmentCollectionWithReferencesPage> callback);
 
     IPrivilegedRoleAssignmentCollectionWithReferencesPage get() throws ClientException;
 

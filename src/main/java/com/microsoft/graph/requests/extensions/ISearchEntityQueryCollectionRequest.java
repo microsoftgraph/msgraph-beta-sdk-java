@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ISearchEntityQueryCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ISearchEntityQueryCollectionPage> callback);
+    void post(final ICallback<? super ISearchEntityQueryCollectionPage> callback);
 
     ISearchEntityQueryCollectionPage post() throws ClientException;
 

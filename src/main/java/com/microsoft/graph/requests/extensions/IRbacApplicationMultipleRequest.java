@@ -21,7 +21,7 @@ public interface IRbacApplicationMultipleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RbacApplicationMultiple> callback);
+    void get(final ICallback<? super RbacApplicationMultiple> callback);
 
     /**
      * Gets the RbacApplicationMultiple from the service
@@ -36,7 +36,7 @@ public interface IRbacApplicationMultipleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RbacApplicationMultiple> callback);
+    void delete(final ICallback<? super RbacApplicationMultiple> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRbacApplicationMultipleRequest extends IHttpRequest {
      * @param sourceRbacApplicationMultiple the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RbacApplicationMultiple sourceRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback);
+    void patch(final RbacApplicationMultiple sourceRbacApplicationMultiple, final ICallback<? super RbacApplicationMultiple> callback);
 
     /**
      * Patches this RbacApplicationMultiple with a source
@@ -68,7 +68,7 @@ public interface IRbacApplicationMultipleRequest extends IHttpRequest {
      * @param newRbacApplicationMultiple the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback);
+    void post(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<? super RbacApplicationMultiple> callback);
 
     /**
      * Posts a RbacApplicationMultiple with a new object
@@ -85,7 +85,7 @@ public interface IRbacApplicationMultipleRequest extends IHttpRequest {
      * @param newRbacApplicationMultiple the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback);
+    void put(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<? super RbacApplicationMultiple> callback);
 
     /**
      * Posts a RbacApplicationMultiple with a new object

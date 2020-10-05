@@ -21,7 +21,7 @@ public interface IOnPremisesAgentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnPremisesAgent> callback);
+    void get(final ICallback<? super OnPremisesAgent> callback);
 
     /**
      * Gets the OnPremisesAgent from the service
@@ -36,7 +36,7 @@ public interface IOnPremisesAgentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnPremisesAgent> callback);
+    void delete(final ICallback<? super OnPremisesAgent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnPremisesAgentRequest extends IHttpRequest {
      * @param sourceOnPremisesAgent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnPremisesAgent sourceOnPremisesAgent, final ICallback<OnPremisesAgent> callback);
+    void patch(final OnPremisesAgent sourceOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback);
 
     /**
      * Patches this OnPremisesAgent with a source
@@ -68,7 +68,7 @@ public interface IOnPremisesAgentRequest extends IHttpRequest {
      * @param newOnPremisesAgent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback);
+    void post(final OnPremisesAgent newOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback);
 
     /**
      * Posts a OnPremisesAgent with a new object
@@ -85,7 +85,7 @@ public interface IOnPremisesAgentRequest extends IHttpRequest {
      * @param newOnPremisesAgent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback);
+    void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback);
 
     /**
      * Posts a OnPremisesAgent with a new object

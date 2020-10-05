@@ -23,6 +23,6 @@ public class RestrictedAppsViolationCollectionPage extends BaseCollectionPage<Re
      * @param builder  the request builder for the next collection page
      */
     public RestrictedAppsViolationCollectionPage(final RestrictedAppsViolationCollectionResponse response, final IRestrictedAppsViolationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

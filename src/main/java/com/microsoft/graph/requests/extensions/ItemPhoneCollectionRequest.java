@@ -40,7 +40,7 @@ public class ItemPhoneCollectionRequest extends BaseCollectionRequest<ItemPhoneC
         super(requestUrl, client, requestOptions, ItemPhoneCollectionResponse.class, IItemPhoneCollectionPage.class);
     }
 
-    public void get(final ICallback<IItemPhoneCollectionPage> callback) {
+    public void get(final ICallback<? super IItemPhoneCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ItemPhoneCollectionRequest extends BaseCollectionRequest<ItemPhoneC
         return buildFromResponse(response);
     }
 
-    public void post(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback) {
+    public void post(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemPhoneRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ItemPhoneCollectionRequest extends BaseCollectionRequest<ItemPhoneC
      */
     public IItemPhoneCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ItemPhoneCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IItemPhoneCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemPhoneCollectionRequest)this;
     }
 

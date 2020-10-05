@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementIntentUserStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementIntentUserStateCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementIntentUserStateCollectionPage> callback);
 
     IDeviceManagementIntentUserStateCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState, final ICallback<DeviceManagementIntentUserState> callback);
+    void post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState, final ICallback<? super DeviceManagementIntentUserState> callback);
 
     DeviceManagementIntentUserState post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementIntentUserStateCollectionRequest extends IHttp
      * @return the updated request
      */
     IDeviceManagementIntentUserStateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementIntentUserStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementIntentUserStateCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementIntentUserStateCollectionRequest skipToken(String skipToken);
+	IDeviceManagementIntentUserStateCollectionRequest skipToken(final String skipToken);
 }

@@ -38,7 +38,7 @@ public class DetectedAppReferenceRequest extends BaseRequest implements IDetecte
         super(requestUrl, client, requestOptions, DetectedApp.class);
     }
 
-    public void delete(final ICallback<DetectedApp> callback) {
+    public void delete(final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class DetectedAppReferenceRequest extends BaseRequest implements IDetecte
         return (DetectedAppReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDetectedAppReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DetectedAppReferenceRequest)this;
-    }
-    /**
      * Puts the DetectedApp
      *
      * @param srcDetectedApp the DetectedApp reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DetectedApp srcDetectedApp, final ICallback<DetectedApp> callback) {
+    public void put(DetectedApp srcDetectedApp, final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.PUT, callback, srcDetectedApp);
     }
 

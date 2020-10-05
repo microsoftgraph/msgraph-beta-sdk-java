@@ -21,7 +21,7 @@ public interface IRoleManagementRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RoleManagement> callback);
+    void get(final ICallback<? super RoleManagement> callback);
 
     /**
      * Gets the RoleManagement from the service
@@ -36,7 +36,7 @@ public interface IRoleManagementRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RoleManagement> callback);
+    void delete(final ICallback<? super RoleManagement> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRoleManagementRequest extends IHttpRequest {
      * @param sourceRoleManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RoleManagement sourceRoleManagement, final ICallback<RoleManagement> callback);
+    void patch(final RoleManagement sourceRoleManagement, final ICallback<? super RoleManagement> callback);
 
     /**
      * Patches this RoleManagement with a source
@@ -68,7 +68,7 @@ public interface IRoleManagementRequest extends IHttpRequest {
      * @param newRoleManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RoleManagement newRoleManagement, final ICallback<RoleManagement> callback);
+    void post(final RoleManagement newRoleManagement, final ICallback<? super RoleManagement> callback);
 
     /**
      * Posts a RoleManagement with a new object
@@ -85,7 +85,7 @@ public interface IRoleManagementRequest extends IHttpRequest {
      * @param newRoleManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RoleManagement newRoleManagement, final ICallback<RoleManagement> callback);
+    void put(final RoleManagement newRoleManagement, final ICallback<? super RoleManagement> callback);
 
     /**
      * Posts a RoleManagement with a new object

@@ -21,7 +21,7 @@ public interface IPersonAnnotationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonAnnotation> callback);
+    void get(final ICallback<? super PersonAnnotation> callback);
 
     /**
      * Gets the PersonAnnotation from the service
@@ -36,7 +36,7 @@ public interface IPersonAnnotationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonAnnotation> callback);
+    void delete(final ICallback<? super PersonAnnotation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonAnnotationRequest extends IHttpRequest {
      * @param sourcePersonAnnotation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonAnnotation sourcePersonAnnotation, final ICallback<PersonAnnotation> callback);
+    void patch(final PersonAnnotation sourcePersonAnnotation, final ICallback<? super PersonAnnotation> callback);
 
     /**
      * Patches this PersonAnnotation with a source
@@ -68,7 +68,7 @@ public interface IPersonAnnotationRequest extends IHttpRequest {
      * @param newPersonAnnotation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonAnnotation newPersonAnnotation, final ICallback<PersonAnnotation> callback);
+    void post(final PersonAnnotation newPersonAnnotation, final ICallback<? super PersonAnnotation> callback);
 
     /**
      * Posts a PersonAnnotation with a new object
@@ -85,7 +85,7 @@ public interface IPersonAnnotationRequest extends IHttpRequest {
      * @param newPersonAnnotation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonAnnotation newPersonAnnotation, final ICallback<PersonAnnotation> callback);
+    void put(final PersonAnnotation newPersonAnnotation, final ICallback<? super PersonAnnotation> callback);
 
     /**
      * Posts a PersonAnnotation with a new object

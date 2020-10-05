@@ -34,6 +34,6 @@ public class ReportRootGetOneDriveUsageFileCountsCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOneDriveUsageFileCountsCollectionPage(final ReportRootGetOneDriveUsageFileCountsCollectionResponse response, final IReportRootGetOneDriveUsageFileCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

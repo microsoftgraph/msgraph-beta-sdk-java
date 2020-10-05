@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IVppTokenCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IVppTokenCollectionPage> callback);
+    void get(final ICallback<? super IVppTokenCollectionPage> callback);
 
     IVppTokenCollectionPage get() throws ClientException;
 
-    void post(final VppToken newVppToken, final ICallback<VppToken> callback);
+    void post(final VppToken newVppToken, final ICallback<? super VppToken> callback);
 
     VppToken post(final VppToken newVppToken) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IVppTokenCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IVppTokenCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IVppTokenCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IVppTokenCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IVppTokenCollectionRequest skipToken(String skipToken);
+	IVppTokenCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintServiceEndpoint> callback) {
+    public void get(final ICallback<? super PrintServiceEndpoint> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintServiceEndpoint> callback) {
+    public void delete(final ICallback<? super PrintServiceEndpoint> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
      * @param sourcePrintServiceEndpoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintServiceEndpoint sourcePrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback) {
+    public void patch(final PrintServiceEndpoint sourcePrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintServiceEndpoint);
     }
 
@@ -96,7 +96,7 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
      * @param newPrintServiceEndpoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback) {
+    public void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback) {
         send(HttpMethod.POST, callback, newPrintServiceEndpoint);
     }
 
@@ -117,7 +117,7 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
      * @param newPrintServiceEndpoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback) {
+    public void put(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<? super PrintServiceEndpoint> callback) {
         send(HttpMethod.PUT, callback, newPrintServiceEndpoint);
     }
 
@@ -151,17 +151,6 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
      */
      public IPrintServiceEndpointRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintServiceEndpointRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintServiceEndpointRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintServiceEndpointRequest)this;
      }
 

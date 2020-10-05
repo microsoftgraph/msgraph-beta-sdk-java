@@ -21,7 +21,7 @@ public interface IDepEnrollmentBaseProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DepEnrollmentBaseProfile> callback);
+    void get(final ICallback<? super DepEnrollmentBaseProfile> callback);
 
     /**
      * Gets the DepEnrollmentBaseProfile from the service
@@ -36,7 +36,7 @@ public interface IDepEnrollmentBaseProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DepEnrollmentBaseProfile> callback);
+    void delete(final ICallback<? super DepEnrollmentBaseProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDepEnrollmentBaseProfileRequest extends IHttpRequest {
      * @param sourceDepEnrollmentBaseProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DepEnrollmentBaseProfile sourceDepEnrollmentBaseProfile, final ICallback<DepEnrollmentBaseProfile> callback);
+    void patch(final DepEnrollmentBaseProfile sourceDepEnrollmentBaseProfile, final ICallback<? super DepEnrollmentBaseProfile> callback);
 
     /**
      * Patches this DepEnrollmentBaseProfile with a source
@@ -68,7 +68,7 @@ public interface IDepEnrollmentBaseProfileRequest extends IHttpRequest {
      * @param newDepEnrollmentBaseProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<DepEnrollmentBaseProfile> callback);
+    void post(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<? super DepEnrollmentBaseProfile> callback);
 
     /**
      * Posts a DepEnrollmentBaseProfile with a new object
@@ -85,7 +85,7 @@ public interface IDepEnrollmentBaseProfileRequest extends IHttpRequest {
      * @param newDepEnrollmentBaseProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<DepEnrollmentBaseProfile> callback);
+    void put(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<? super DepEnrollmentBaseProfile> callback);
 
     /**
      * Posts a DepEnrollmentBaseProfile with a new object

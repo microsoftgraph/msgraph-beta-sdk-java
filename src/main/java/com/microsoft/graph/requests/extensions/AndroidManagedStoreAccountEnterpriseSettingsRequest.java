@@ -37,7 +37,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void get(final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void delete(final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param sourceAndroidManagedStoreAccountEnterpriseSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void patch(final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -96,7 +96,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param newAndroidManagedStoreAccountEnterpriseSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -117,7 +117,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -151,17 +151,6 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      */
      public IAndroidManagedStoreAccountEnterpriseSettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedStoreAccountEnterpriseSettingsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidManagedStoreAccountEnterpriseSettingsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidManagedStoreAccountEnterpriseSettingsRequest)this;
      }
 

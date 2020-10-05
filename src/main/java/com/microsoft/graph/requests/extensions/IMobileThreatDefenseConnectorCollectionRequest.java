@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileThreatDefenseConnectorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileThreatDefenseConnectorCollectionPage> callback);
+    void get(final ICallback<? super IMobileThreatDefenseConnectorCollectionPage> callback);
 
     IMobileThreatDefenseConnectorCollectionPage get() throws ClientException;
 
-    void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback);
+    void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback);
 
     MobileThreatDefenseConnector post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IMobileThreatDefenseConnectorCollectionRequest extends IHttpReq
      * @return the updated request
      */
     IMobileThreatDefenseConnectorCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMobileThreatDefenseConnectorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IMobileThreatDefenseConnectorCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	IMobileThreatDefenseConnectorCollectionRequest skipToken(String skipToken);
+	IMobileThreatDefenseConnectorCollectionRequest skipToken(final String skipToken);
 }

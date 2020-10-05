@@ -52,7 +52,7 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosVppAppAssignedLicense> callback) {
+    public void get(final ICallback<? super IosVppAppAssignedLicense> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosVppAppAssignedLicense> callback) {
+    public void delete(final ICallback<? super IosVppAppAssignedLicense> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
      * @param sourceIosVppAppAssignedLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVppAppAssignedLicense sourceIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback) {
+    public void patch(final IosVppAppAssignedLicense sourceIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVppAppAssignedLicense);
     }
 
@@ -111,7 +111,7 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
      * @param newIosVppAppAssignedLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback) {
+    public void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback) {
         send(HttpMethod.POST, callback, newIosVppAppAssignedLicense);
     }
 
@@ -132,7 +132,7 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
      * @param newIosVppAppAssignedLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback) {
+    public void put(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback) {
         send(HttpMethod.PUT, callback, newIosVppAppAssignedLicense);
     }
 
@@ -166,17 +166,6 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
      */
      public IIosVppAppAssignedLicenseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosVppAppAssignedLicenseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosVppAppAssignedLicenseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosVppAppAssignedLicenseRequest)this;
      }
 

@@ -34,6 +34,6 @@ public class ReportRootGetSkypeForBusinessActivityUserCountsCollectionPage exten
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetSkypeForBusinessActivityUserCountsCollectionPage(final ReportRootGetSkypeForBusinessActivityUserCountsCollectionResponse response, final IReportRootGetSkypeForBusinessActivityUserCountsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class FeatureRolloutPolicyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, FeatureRolloutPolicyCollectionResponse.class, IFeatureRolloutPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IFeatureRolloutPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IFeatureRolloutPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class FeatureRolloutPolicyCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback) {
+    public void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<? super FeatureRolloutPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new FeatureRolloutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class FeatureRolloutPolicyCollectionRequest extends BaseCollectionRequest
      */
     public IFeatureRolloutPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (FeatureRolloutPolicyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IFeatureRolloutPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (FeatureRolloutPolicyCollectionRequest)this;
     }
 

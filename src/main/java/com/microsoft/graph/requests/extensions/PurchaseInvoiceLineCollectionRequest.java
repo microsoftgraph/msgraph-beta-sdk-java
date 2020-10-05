@@ -40,7 +40,7 @@ public class PurchaseInvoiceLineCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, PurchaseInvoiceLineCollectionResponse.class, IPurchaseInvoiceLineCollectionPage.class);
     }
 
-    public void get(final ICallback<IPurchaseInvoiceLineCollectionPage> callback) {
+    public void get(final ICallback<? super IPurchaseInvoiceLineCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PurchaseInvoiceLineCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback) {
+    public void post(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PurchaseInvoiceLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PurchaseInvoiceLineCollectionRequest extends BaseCollectionRequest<
      */
     public IPurchaseInvoiceLineCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PurchaseInvoiceLineCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPurchaseInvoiceLineCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PurchaseInvoiceLineCollectionRequest)this;
     }
 

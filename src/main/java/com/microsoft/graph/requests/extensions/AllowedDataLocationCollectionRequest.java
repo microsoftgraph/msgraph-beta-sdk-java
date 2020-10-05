@@ -39,7 +39,7 @@ public class AllowedDataLocationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, AllowedDataLocationCollectionResponse.class, IAllowedDataLocationCollectionPage.class);
     }
 
-    public void get(final ICallback<IAllowedDataLocationCollectionPage> callback) {
+    public void get(final ICallback<? super IAllowedDataLocationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AllowedDataLocationCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback) {
+    public void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AllowedDataLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AllowedDataLocationCollectionRequest extends BaseCollectionRequest<
      */
     public IAllowedDataLocationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AllowedDataLocationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAllowedDataLocationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AllowedDataLocationCollectionRequest)this;
     }
 

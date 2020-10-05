@@ -39,7 +39,7 @@ public class UserGetLoggedOnManagedDevicesCollectionRequest extends BaseCollecti
     }
 
 
-    public void get(final ICallback<IUserGetLoggedOnManagedDevicesCollectionPage> callback) {
+    public void get(final ICallback<? super IUserGetLoggedOnManagedDevicesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class UserGetLoggedOnManagedDevicesCollectionRequest extends BaseCollecti
      */
     public IUserGetLoggedOnManagedDevicesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IUserGetLoggedOnManagedDevicesCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserGetLoggedOnManagedDevicesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserGetLoggedOnManagedDevicesCollectionRequest)this;
     }
 

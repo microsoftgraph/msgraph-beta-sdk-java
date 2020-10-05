@@ -21,7 +21,7 @@ public interface IItemInsightsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemInsights> callback);
+    void get(final ICallback<? super ItemInsights> callback);
 
     /**
      * Gets the ItemInsights from the service
@@ -36,7 +36,7 @@ public interface IItemInsightsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemInsights> callback);
+    void delete(final ICallback<? super ItemInsights> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemInsightsRequest extends IHttpRequest {
      * @param sourceItemInsights the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemInsights sourceItemInsights, final ICallback<ItemInsights> callback);
+    void patch(final ItemInsights sourceItemInsights, final ICallback<? super ItemInsights> callback);
 
     /**
      * Patches this ItemInsights with a source
@@ -68,7 +68,7 @@ public interface IItemInsightsRequest extends IHttpRequest {
      * @param newItemInsights the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemInsights newItemInsights, final ICallback<ItemInsights> callback);
+    void post(final ItemInsights newItemInsights, final ICallback<? super ItemInsights> callback);
 
     /**
      * Posts a ItemInsights with a new object
@@ -85,7 +85,7 @@ public interface IItemInsightsRequest extends IHttpRequest {
      * @param newItemInsights the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemInsights newItemInsights, final ICallback<ItemInsights> callback);
+    void put(final ItemInsights newItemInsights, final ICallback<? super ItemInsights> callback);
 
     /**
      * Posts a ItemInsights with a new object

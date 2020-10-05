@@ -40,7 +40,7 @@ public class LinkedResourceCollectionRequest extends BaseCollectionRequest<Linke
         super(requestUrl, client, requestOptions, LinkedResourceCollectionResponse.class, ILinkedResourceCollectionPage.class);
     }
 
-    public void get(final ICallback<ILinkedResourceCollectionPage> callback) {
+    public void get(final ICallback<? super ILinkedResourceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LinkedResourceCollectionRequest extends BaseCollectionRequest<Linke
         return buildFromResponse(response);
     }
 
-    public void post(final LinkedResource newLinkedResource, final ICallback<LinkedResource> callback) {
+    public void post(final LinkedResource newLinkedResource, final ICallback<? super LinkedResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LinkedResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class LinkedResourceCollectionRequest extends BaseCollectionRequest<Linke
      */
     public ILinkedResourceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (LinkedResourceCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ILinkedResourceCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LinkedResourceCollectionRequest)this;
     }
 

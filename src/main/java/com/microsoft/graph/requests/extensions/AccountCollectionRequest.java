@@ -40,7 +40,7 @@ public class AccountCollectionRequest extends BaseCollectionRequest<AccountColle
         super(requestUrl, client, requestOptions, AccountCollectionResponse.class, IAccountCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccountCollectionPage> callback) {
+    public void get(final ICallback<? super IAccountCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccountCollectionRequest extends BaseCollectionRequest<AccountColle
         return buildFromResponse(response);
     }
 
-    public void post(final Account newAccount, final ICallback<Account> callback) {
+    public void post(final Account newAccount, final ICallback<? super Account> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccountRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccountCollectionRequest extends BaseCollectionRequest<AccountColle
      */
     public IAccountCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccountCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccountCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccountCollectionRequest)this;
     }
 

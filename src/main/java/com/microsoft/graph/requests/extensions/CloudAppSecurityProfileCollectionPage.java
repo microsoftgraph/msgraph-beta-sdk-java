@@ -23,6 +23,6 @@ public class CloudAppSecurityProfileCollectionPage extends BaseCollectionPage<Cl
      * @param builder  the request builder for the next collection page
      */
     public CloudAppSecurityProfileCollectionPage(final CloudAppSecurityProfileCollectionResponse response, final ICloudAppSecurityProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

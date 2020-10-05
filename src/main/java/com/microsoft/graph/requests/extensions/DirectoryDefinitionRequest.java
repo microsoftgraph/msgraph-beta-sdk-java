@@ -37,7 +37,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectoryDefinition> callback) {
+    public void get(final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectoryDefinition> callback) {
+    public void delete(final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param sourceDirectoryDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryDefinition sourceDirectoryDefinition, final ICallback<DirectoryDefinition> callback) {
+    public void patch(final DirectoryDefinition sourceDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryDefinition);
     }
 
@@ -96,7 +96,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param newDirectoryDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback) {
+    public void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.POST, callback, newDirectoryDefinition);
     }
 
@@ -117,7 +117,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param newDirectoryDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback) {
+    public void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.PUT, callback, newDirectoryDefinition);
     }
 
@@ -151,17 +151,6 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      */
      public IDirectoryDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryDefinitionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDirectoryDefinitionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DirectoryDefinitionRequest)this;
      }
 

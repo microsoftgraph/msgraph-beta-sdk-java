@@ -41,7 +41,7 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Approval> callback) {
+    public void get(final ICallback<? super Approval> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Approval> callback) {
+    public void delete(final ICallback<? super Approval> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
      * @param sourceApproval the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Approval sourceApproval, final ICallback<Approval> callback) {
+    public void patch(final Approval sourceApproval, final ICallback<? super Approval> callback) {
         send(HttpMethod.PATCH, callback, sourceApproval);
     }
 
@@ -100,7 +100,7 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
      * @param newApproval the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Approval newApproval, final ICallback<Approval> callback) {
+    public void post(final Approval newApproval, final ICallback<? super Approval> callback) {
         send(HttpMethod.POST, callback, newApproval);
     }
 
@@ -121,7 +121,7 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
      * @param newApproval the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Approval newApproval, final ICallback<Approval> callback) {
+    public void put(final Approval newApproval, final ICallback<? super Approval> callback) {
         send(HttpMethod.PUT, callback, newApproval);
     }
 
@@ -155,17 +155,6 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
      */
      public IApprovalRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApprovalRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IApprovalRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ApprovalRequest)this;
      }
 

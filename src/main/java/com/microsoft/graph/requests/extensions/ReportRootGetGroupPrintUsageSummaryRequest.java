@@ -37,7 +37,7 @@ public class ReportRootGetGroupPrintUsageSummaryRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPrintUsageSummary> callback) {
+    public void get(final ICallback<? super GroupPrintUsageSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class ReportRootGetGroupPrintUsageSummaryRequest extends BaseRequest impl
      */
     public IReportRootGetGroupPrintUsageSummaryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetGroupPrintUsageSummaryRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetGroupPrintUsageSummaryRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetGroupPrintUsageSummaryRequest)this;
     }
 

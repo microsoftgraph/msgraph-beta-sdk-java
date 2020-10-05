@@ -21,7 +21,7 @@ public interface IDocumentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Document> callback);
+    void get(final ICallback<? super Document> callback);
 
     /**
      * Gets the Document from the service
@@ -36,7 +36,7 @@ public interface IDocumentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Document> callback);
+    void delete(final ICallback<? super Document> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDocumentRequest extends IHttpRequest {
      * @param sourceDocument the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Document sourceDocument, final ICallback<Document> callback);
+    void patch(final Document sourceDocument, final ICallback<? super Document> callback);
 
     /**
      * Patches this Document with a source
@@ -68,7 +68,7 @@ public interface IDocumentRequest extends IHttpRequest {
      * @param newDocument the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Document newDocument, final ICallback<Document> callback);
+    void post(final Document newDocument, final ICallback<? super Document> callback);
 
     /**
      * Posts a Document with a new object
@@ -85,7 +85,7 @@ public interface IDocumentRequest extends IHttpRequest {
      * @param newDocument the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Document newDocument, final ICallback<Document> callback);
+    void put(final Document newDocument, final ICallback<? super Document> callback);
 
     /**
      * Posts a Document with a new object

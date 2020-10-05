@@ -21,7 +21,7 @@ public interface IAccessPackageAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageAssignment> callback);
+    void get(final ICallback<? super AccessPackageAssignment> callback);
 
     /**
      * Gets the AccessPackageAssignment from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageAssignment> callback);
+    void delete(final ICallback<? super AccessPackageAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageAssignmentRequest extends IHttpRequest {
      * @param sourceAccessPackageAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageAssignment sourceAccessPackageAssignment, final ICallback<AccessPackageAssignment> callback);
+    void patch(final AccessPackageAssignment sourceAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback);
 
     /**
      * Patches this AccessPackageAssignment with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageAssignmentRequest extends IHttpRequest {
      * @param newAccessPackageAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<AccessPackageAssignment> callback);
+    void post(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback);
 
     /**
      * Posts a AccessPackageAssignment with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageAssignmentRequest extends IHttpRequest {
      * @param newAccessPackageAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<AccessPackageAssignment> callback);
+    void put(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback);
 
     /**
      * Posts a AccessPackageAssignment with a new object

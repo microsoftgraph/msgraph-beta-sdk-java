@@ -37,7 +37,7 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PaymentMethod> callback) {
+    public void get(final ICallback<? super PaymentMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PaymentMethod> callback) {
+    public void delete(final ICallback<? super PaymentMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
      * @param sourcePaymentMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PaymentMethod sourcePaymentMethod, final ICallback<PaymentMethod> callback) {
+    public void patch(final PaymentMethod sourcePaymentMethod, final ICallback<? super PaymentMethod> callback) {
         send(HttpMethod.PATCH, callback, sourcePaymentMethod);
     }
 
@@ -96,7 +96,7 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
      * @param newPaymentMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PaymentMethod newPaymentMethod, final ICallback<PaymentMethod> callback) {
+    public void post(final PaymentMethod newPaymentMethod, final ICallback<? super PaymentMethod> callback) {
         send(HttpMethod.POST, callback, newPaymentMethod);
     }
 
@@ -117,7 +117,7 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
      * @param newPaymentMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PaymentMethod newPaymentMethod, final ICallback<PaymentMethod> callback) {
+    public void put(final PaymentMethod newPaymentMethod, final ICallback<? super PaymentMethod> callback) {
         send(HttpMethod.PUT, callback, newPaymentMethod);
     }
 
@@ -151,17 +151,6 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
      */
      public IPaymentMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PaymentMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPaymentMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PaymentMethodRequest)this;
      }
 

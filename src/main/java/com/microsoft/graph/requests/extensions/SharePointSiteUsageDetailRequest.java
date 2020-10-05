@@ -37,7 +37,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SharePointSiteUsageDetail> callback) {
+    public void get(final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SharePointSiteUsageDetail> callback) {
+    public void delete(final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param sourceSharePointSiteUsageDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback) {
+    public void patch(final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointSiteUsageDetail);
     }
 
@@ -96,7 +96,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param newSharePointSiteUsageDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback) {
+    public void post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.POST, callback, newSharePointSiteUsageDetail);
     }
 
@@ -117,7 +117,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param newSharePointSiteUsageDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback) {
+    public void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.PUT, callback, newSharePointSiteUsageDetail);
     }
 
@@ -151,17 +151,6 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      */
      public ISharePointSiteUsageDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointSiteUsageDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISharePointSiteUsageDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SharePointSiteUsageDetailRequest)this;
      }
 

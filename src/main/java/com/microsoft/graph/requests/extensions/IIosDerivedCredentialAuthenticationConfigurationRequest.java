@@ -21,7 +21,7 @@ public interface IIosDerivedCredentialAuthenticationConfigurationRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosDerivedCredentialAuthenticationConfiguration> callback);
+    void get(final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Gets the IosDerivedCredentialAuthenticationConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosDerivedCredentialAuthenticationConfigurationRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosDerivedCredentialAuthenticationConfiguration> callback);
+    void delete(final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosDerivedCredentialAuthenticationConfigurationRequest extends
      * @param sourceIosDerivedCredentialAuthenticationConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosDerivedCredentialAuthenticationConfiguration sourceIosDerivedCredentialAuthenticationConfiguration, final ICallback<IosDerivedCredentialAuthenticationConfiguration> callback);
+    void patch(final IosDerivedCredentialAuthenticationConfiguration sourceIosDerivedCredentialAuthenticationConfiguration, final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Patches this IosDerivedCredentialAuthenticationConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosDerivedCredentialAuthenticationConfigurationRequest extends
      * @param newIosDerivedCredentialAuthenticationConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<IosDerivedCredentialAuthenticationConfiguration> callback);
+    void post(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Posts a IosDerivedCredentialAuthenticationConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosDerivedCredentialAuthenticationConfigurationRequest extends
      * @param newIosDerivedCredentialAuthenticationConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<IosDerivedCredentialAuthenticationConfiguration> callback);
+    void put(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback);
 
     /**
      * Posts a IosDerivedCredentialAuthenticationConfiguration with a new object

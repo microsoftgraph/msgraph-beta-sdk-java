@@ -23,6 +23,6 @@ public class UnitOfMeasureCollectionPage extends BaseCollectionPage<UnitOfMeasur
      * @param builder  the request builder for the next collection page
      */
     public UnitOfMeasureCollectionPage(final UnitOfMeasureCollectionResponse response, final IUnitOfMeasureCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

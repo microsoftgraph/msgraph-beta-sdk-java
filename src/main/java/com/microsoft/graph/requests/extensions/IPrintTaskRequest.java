@@ -21,7 +21,7 @@ public interface IPrintTaskRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintTask> callback);
+    void get(final ICallback<? super PrintTask> callback);
 
     /**
      * Gets the PrintTask from the service
@@ -36,7 +36,7 @@ public interface IPrintTaskRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintTask> callback);
+    void delete(final ICallback<? super PrintTask> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintTaskRequest extends IHttpRequest {
      * @param sourcePrintTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintTask sourcePrintTask, final ICallback<PrintTask> callback);
+    void patch(final PrintTask sourcePrintTask, final ICallback<? super PrintTask> callback);
 
     /**
      * Patches this PrintTask with a source
@@ -68,7 +68,7 @@ public interface IPrintTaskRequest extends IHttpRequest {
      * @param newPrintTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintTask newPrintTask, final ICallback<PrintTask> callback);
+    void post(final PrintTask newPrintTask, final ICallback<? super PrintTask> callback);
 
     /**
      * Posts a PrintTask with a new object
@@ -85,7 +85,7 @@ public interface IPrintTaskRequest extends IHttpRequest {
      * @param newPrintTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintTask newPrintTask, final ICallback<PrintTask> callback);
+    void put(final PrintTask newPrintTask, final ICallback<? super PrintTask> callback);
 
     /**
      * Posts a PrintTask with a new object

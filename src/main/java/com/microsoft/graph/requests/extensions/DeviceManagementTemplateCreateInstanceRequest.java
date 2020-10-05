@@ -37,7 +37,7 @@ public class DeviceManagementTemplateCreateInstanceRequest extends BaseRequest i
         body = new DeviceManagementTemplateCreateInstanceBody();
     }
 
-    public void post(final ICallback<DeviceManagementIntent> callback) {
+    public void post(final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class DeviceManagementTemplateCreateInstanceRequest extends BaseRequest i
      */
     public IDeviceManagementTemplateCreateInstanceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementTemplateCreateInstanceRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceManagementTemplateCreateInstanceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementTemplateCreateInstanceRequest)this;
     }
 

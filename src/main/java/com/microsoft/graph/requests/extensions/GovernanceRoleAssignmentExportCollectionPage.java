@@ -34,6 +34,6 @@ public class GovernanceRoleAssignmentExportCollectionPage extends BaseCollection
      * @param builder The request builder for the next collection page
      */
     public GovernanceRoleAssignmentExportCollectionPage(final GovernanceRoleAssignmentExportCollectionResponse response, final IGovernanceRoleAssignmentExportCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

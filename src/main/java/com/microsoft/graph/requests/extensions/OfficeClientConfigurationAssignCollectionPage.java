@@ -34,6 +34,6 @@ public class OfficeClientConfigurationAssignCollectionPage extends BaseCollectio
      * @param builder The request builder for the next collection page
      */
     public OfficeClientConfigurationAssignCollectionPage(final OfficeClientConfigurationAssignCollectionResponse response, final IOfficeClientConfigurationAssignCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

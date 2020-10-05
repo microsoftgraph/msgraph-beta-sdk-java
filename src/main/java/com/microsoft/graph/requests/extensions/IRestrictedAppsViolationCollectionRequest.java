@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRestrictedAppsViolationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRestrictedAppsViolationCollectionPage> callback);
+    void get(final ICallback<? super IRestrictedAppsViolationCollectionPage> callback);
 
     IRestrictedAppsViolationCollectionPage get() throws ClientException;
 
-    void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback);
+    void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<? super RestrictedAppsViolation> callback);
 
     RestrictedAppsViolation post(final RestrictedAppsViolation newRestrictedAppsViolation) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IRestrictedAppsViolationCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     IRestrictedAppsViolationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRestrictedAppsViolationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IRestrictedAppsViolationCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IRestrictedAppsViolationCollectionRequest skipToken(String skipToken);
+	IRestrictedAppsViolationCollectionRequest skipToken(final String skipToken);
 }

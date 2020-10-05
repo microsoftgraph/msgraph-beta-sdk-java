@@ -40,7 +40,7 @@ public class AppScopeCollectionRequest extends BaseCollectionRequest<AppScopeCol
         super(requestUrl, client, requestOptions, AppScopeCollectionResponse.class, IAppScopeCollectionPage.class);
     }
 
-    public void get(final ICallback<IAppScopeCollectionPage> callback) {
+    public void get(final ICallback<? super IAppScopeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AppScopeCollectionRequest extends BaseCollectionRequest<AppScopeCol
         return buildFromResponse(response);
     }
 
-    public void post(final AppScope newAppScope, final ICallback<AppScope> callback) {
+    public void post(final AppScope newAppScope, final ICallback<? super AppScope> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppScopeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AppScopeCollectionRequest extends BaseCollectionRequest<AppScopeCol
      */
     public IAppScopeCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AppScopeCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAppScopeCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppScopeCollectionRequest)this;
     }
 

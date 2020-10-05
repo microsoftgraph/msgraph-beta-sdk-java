@@ -38,19 +38,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IMobileAppWithReferenceRequest extends IHttpRequest {
 
-    void post(final MobileApp newMobileApp, final IJsonBackedObject payload, final ICallback<MobileApp> callback);
+    void post(final MobileApp newMobileApp, final IJsonBackedObject payload, final ICallback<? super MobileApp> callback);
 
     MobileApp post(final MobileApp newMobileApp, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<MobileApp> callback);
+    void get(final ICallback<? super MobileApp> callback);
 
     MobileApp get() throws ClientException;
 
-	void delete(final ICallback<MobileApp> callback);
+	void delete(final ICallback<? super MobileApp> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final MobileApp sourceMobileApp, final ICallback<MobileApp> callback);
+	void patch(final MobileApp sourceMobileApp, final ICallback<? super MobileApp> callback);
 
 	MobileApp patch(final MobileApp sourceMobileApp) throws ClientException;
 

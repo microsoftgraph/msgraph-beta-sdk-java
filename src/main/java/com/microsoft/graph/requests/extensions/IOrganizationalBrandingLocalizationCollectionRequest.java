@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOrganizationalBrandingLocalizationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOrganizationalBrandingLocalizationCollectionPage> callback);
+    void get(final ICallback<? super IOrganizationalBrandingLocalizationCollectionPage> callback);
 
     IOrganizationalBrandingLocalizationCollectionPage get() throws ClientException;
 
-    void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback);
+    void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback);
 
     OrganizationalBrandingLocalization post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IOrganizationalBrandingLocalizationCollectionRequest extends IH
      * @return the updated request
      */
     IOrganizationalBrandingLocalizationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOrganizationalBrandingLocalizationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IOrganizationalBrandingLocalizationCollectionRequest extends IH
      *
 	 * @return the updated request
 	 */
-	IOrganizationalBrandingLocalizationCollectionRequest skipToken(String skipToken);
+	IOrganizationalBrandingLocalizationCollectionRequest skipToken(final String skipToken);
 }

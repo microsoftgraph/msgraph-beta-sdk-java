@@ -23,6 +23,6 @@ public class BookingStaffMemberCollectionPage extends BaseCollectionPage<Booking
      * @param builder  the request builder for the next collection page
      */
     public BookingStaffMemberCollectionPage(final BookingStaffMemberCollectionResponse response, final IBookingStaffMemberCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

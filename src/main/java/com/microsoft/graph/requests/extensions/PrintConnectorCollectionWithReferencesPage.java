@@ -35,6 +35,6 @@ public class PrintConnectorCollectionWithReferencesPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public PrintConnectorCollectionWithReferencesPage(final PrintConnectorCollectionResponse response, final IPrintConnectorCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

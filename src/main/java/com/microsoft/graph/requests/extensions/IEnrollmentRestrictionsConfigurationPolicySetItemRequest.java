@@ -21,7 +21,7 @@ public interface IEnrollmentRestrictionsConfigurationPolicySetItemRequest extend
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback);
+    void get(final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback);
 
     /**
      * Gets the EnrollmentRestrictionsConfigurationPolicySetItem from the service
@@ -36,7 +36,7 @@ public interface IEnrollmentRestrictionsConfigurationPolicySetItemRequest extend
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback);
+    void delete(final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEnrollmentRestrictionsConfigurationPolicySetItemRequest extend
      * @param sourceEnrollmentRestrictionsConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback);
+    void patch(final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback);
 
     /**
      * Patches this EnrollmentRestrictionsConfigurationPolicySetItem with a source
@@ -68,7 +68,7 @@ public interface IEnrollmentRestrictionsConfigurationPolicySetItemRequest extend
      * @param newEnrollmentRestrictionsConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback);
+    void post(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback);
 
     /**
      * Posts a EnrollmentRestrictionsConfigurationPolicySetItem with a new object
@@ -85,7 +85,7 @@ public interface IEnrollmentRestrictionsConfigurationPolicySetItemRequest extend
      * @param newEnrollmentRestrictionsConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback);
+    void put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback);
 
     /**
      * Posts a EnrollmentRestrictionsConfigurationPolicySetItem with a new object

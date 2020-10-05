@@ -36,7 +36,7 @@ public class AndroidForWorkCertificateProfileBaseReferenceRequest extends BaseRe
         super(requestUrl, client, requestOptions, AndroidForWorkCertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<AndroidForWorkCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -66,22 +66,12 @@ public class AndroidForWorkCertificateProfileBaseReferenceRequest extends BaseRe
         return (AndroidForWorkCertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidForWorkCertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AndroidForWorkCertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the AndroidForWorkCertificateProfileBase
      *
      * @param srcAndroidForWorkCertificateProfileBase the AndroidForWorkCertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AndroidForWorkCertificateProfileBase srcAndroidForWorkCertificateProfileBase, final ICallback<AndroidForWorkCertificateProfileBase> callback) {
+    public void put(AndroidForWorkCertificateProfileBase srcAndroidForWorkCertificateProfileBase, final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcAndroidForWorkCertificateProfileBase);
     }
 

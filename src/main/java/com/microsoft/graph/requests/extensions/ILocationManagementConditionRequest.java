@@ -21,7 +21,7 @@ public interface ILocationManagementConditionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LocationManagementCondition> callback);
+    void get(final ICallback<? super LocationManagementCondition> callback);
 
     /**
      * Gets the LocationManagementCondition from the service
@@ -36,7 +36,7 @@ public interface ILocationManagementConditionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LocationManagementCondition> callback);
+    void delete(final ICallback<? super LocationManagementCondition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILocationManagementConditionRequest extends IHttpRequest {
      * @param sourceLocationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LocationManagementCondition sourceLocationManagementCondition, final ICallback<LocationManagementCondition> callback);
+    void patch(final LocationManagementCondition sourceLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback);
 
     /**
      * Patches this LocationManagementCondition with a source
@@ -68,7 +68,7 @@ public interface ILocationManagementConditionRequest extends IHttpRequest {
      * @param newLocationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LocationManagementCondition newLocationManagementCondition, final ICallback<LocationManagementCondition> callback);
+    void post(final LocationManagementCondition newLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback);
 
     /**
      * Posts a LocationManagementCondition with a new object
@@ -85,7 +85,7 @@ public interface ILocationManagementConditionRequest extends IHttpRequest {
      * @param newLocationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LocationManagementCondition newLocationManagementCondition, final ICallback<LocationManagementCondition> callback);
+    void put(final LocationManagementCondition newLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback);
 
     /**
      * Posts a LocationManagementCondition with a new object

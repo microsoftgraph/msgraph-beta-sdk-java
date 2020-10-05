@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IManagedDeviceGetNonCompliantSettingsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedDeviceGetNonCompliantSettingsCollectionPage> callback);
+    void get(final ICallback<? super IManagedDeviceGetNonCompliantSettingsCollectionPage> callback);
 
     IManagedDeviceGetNonCompliantSettingsCollectionPage get() throws ClientException;
 

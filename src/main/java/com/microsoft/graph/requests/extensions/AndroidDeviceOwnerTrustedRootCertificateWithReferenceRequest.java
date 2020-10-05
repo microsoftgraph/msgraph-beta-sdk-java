@@ -35,7 +35,7 @@ public class AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest extend
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerTrustedRootCertificate.class);
     }
 
-    public void post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+    public void post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest extend
         return null;
     }
 
-    public void get(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest extend
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest extend
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+	public void patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerTrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest extend
      */
     public IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest)this;
     }
 }

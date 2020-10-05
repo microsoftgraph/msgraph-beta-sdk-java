@@ -36,7 +36,7 @@ public class ManagedEBookCategoryCollectionReferenceRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, ManagedEBookCategoryCollectionResponse.class, IManagedEBookCategoryCollectionPage.class);
     }
 
-    public void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
+    public void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newManagedEBookCategory.id);
         new ManagedEBookCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class ManagedEBookCategoryCollectionReferenceRequest extends BaseCollecti
      */
     public IManagedEBookCategoryCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedEBookCategoryCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IManagedEBookCategoryCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedEBookCategoryCollectionReferenceRequest)this;
     }
 

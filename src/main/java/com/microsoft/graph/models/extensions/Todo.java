@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.TodoTaskListCollectionResponse;
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class Todo extends Entity implements IJsonBackedObject {
 
 
         if (json.has("lists")) {
-            final TodoTaskListCollectionResponse response = new TodoTaskListCollectionResponse();
-            if (json.has("lists@odata.nextLink")) {
-                response.nextLink = json.get("lists@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("lists").toString(), JsonObject[].class);
-            final TodoTaskList[] array = new TodoTaskList[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TodoTaskList.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            lists = new TodoTaskListCollectionPage(response, null);
+            lists = serializer.deserializeObject(json.get("lists").toString(), TodoTaskListCollectionPage.class);
         }
     }
 }

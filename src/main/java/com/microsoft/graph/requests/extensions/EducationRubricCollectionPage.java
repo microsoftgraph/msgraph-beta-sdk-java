@@ -23,6 +23,6 @@ public class EducationRubricCollectionPage extends BaseCollectionPage<EducationR
      * @param builder  the request builder for the next collection page
      */
     public EducationRubricCollectionPage(final EducationRubricCollectionResponse response, final IEducationRubricCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface ISharePointSiteUsageFileCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointSiteUsageFileCounts> callback);
+    void get(final ICallback<? super SharePointSiteUsageFileCounts> callback);
 
     /**
      * Gets the SharePointSiteUsageFileCounts from the service
@@ -36,7 +36,7 @@ public interface ISharePointSiteUsageFileCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointSiteUsageFileCounts> callback);
+    void delete(final ICallback<? super SharePointSiteUsageFileCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointSiteUsageFileCountsRequest extends IHttpRequest {
      * @param sourceSharePointSiteUsageFileCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointSiteUsageFileCounts sourceSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback);
+    void patch(final SharePointSiteUsageFileCounts sourceSharePointSiteUsageFileCounts, final ICallback<? super SharePointSiteUsageFileCounts> callback);
 
     /**
      * Patches this SharePointSiteUsageFileCounts with a source
@@ -68,7 +68,7 @@ public interface ISharePointSiteUsageFileCountsRequest extends IHttpRequest {
      * @param newSharePointSiteUsageFileCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback);
+    void post(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<? super SharePointSiteUsageFileCounts> callback);
 
     /**
      * Posts a SharePointSiteUsageFileCounts with a new object
@@ -85,7 +85,7 @@ public interface ISharePointSiteUsageFileCountsRequest extends IHttpRequest {
      * @param newSharePointSiteUsageFileCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback);
+    void put(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<? super SharePointSiteUsageFileCounts> callback);
 
     /**
      * Posts a SharePointSiteUsageFileCounts with a new object

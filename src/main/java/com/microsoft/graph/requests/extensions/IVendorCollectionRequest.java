@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IVendorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IVendorCollectionPage> callback);
+    void get(final ICallback<? super IVendorCollectionPage> callback);
 
     IVendorCollectionPage get() throws ClientException;
 
-    void post(final Vendor newVendor, final ICallback<Vendor> callback);
+    void post(final Vendor newVendor, final ICallback<? super Vendor> callback);
 
     Vendor post(final Vendor newVendor) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IVendorCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IVendorCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IVendorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IVendorCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IVendorCollectionRequest skipToken(String skipToken);
+	IVendorCollectionRequest skipToken(final String skipToken);
 }

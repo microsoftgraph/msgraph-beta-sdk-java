@@ -23,6 +23,6 @@ public class PrintUsageSummaryByUserCollectionPage extends BaseCollectionPage<Pr
      * @param builder  the request builder for the next collection page
      */
     public PrintUsageSummaryByUserCollectionPage(final PrintUsageSummaryByUserCollectionResponse response, final IPrintUsageSummaryByUserCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

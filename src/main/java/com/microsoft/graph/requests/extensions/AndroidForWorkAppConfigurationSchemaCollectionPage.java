@@ -23,6 +23,6 @@ public class AndroidForWorkAppConfigurationSchemaCollectionPage extends BaseColl
      * @param builder  the request builder for the next collection page
      */
     public AndroidForWorkAppConfigurationSchemaCollectionPage(final AndroidForWorkAppConfigurationSchemaCollectionResponse response, final IAndroidForWorkAppConfigurationSchemaCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

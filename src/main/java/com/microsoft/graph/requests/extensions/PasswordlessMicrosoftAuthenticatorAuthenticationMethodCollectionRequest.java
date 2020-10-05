@@ -40,7 +40,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionReq
         super(requestUrl, client, requestOptions, PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse.class, IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
     }
 
-    public void get(final ICallback<IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback) {
+    public void get(final ICallback<? super IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionReq
      */
     public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
     }
 

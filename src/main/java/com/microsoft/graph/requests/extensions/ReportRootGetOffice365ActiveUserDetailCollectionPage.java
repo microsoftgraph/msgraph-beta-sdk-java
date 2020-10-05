@@ -34,6 +34,6 @@ public class ReportRootGetOffice365ActiveUserDetailCollectionPage extends BaseCo
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOffice365ActiveUserDetailCollectionPage(final ReportRootGetOffice365ActiveUserDetailCollectionResponse response, final IReportRootGetOffice365ActiveUserDetailCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

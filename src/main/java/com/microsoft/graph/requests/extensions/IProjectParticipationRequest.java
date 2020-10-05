@@ -21,7 +21,7 @@ public interface IProjectParticipationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProjectParticipation> callback);
+    void get(final ICallback<? super ProjectParticipation> callback);
 
     /**
      * Gets the ProjectParticipation from the service
@@ -36,7 +36,7 @@ public interface IProjectParticipationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProjectParticipation> callback);
+    void delete(final ICallback<? super ProjectParticipation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProjectParticipationRequest extends IHttpRequest {
      * @param sourceProjectParticipation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProjectParticipation sourceProjectParticipation, final ICallback<ProjectParticipation> callback);
+    void patch(final ProjectParticipation sourceProjectParticipation, final ICallback<? super ProjectParticipation> callback);
 
     /**
      * Patches this ProjectParticipation with a source
@@ -68,7 +68,7 @@ public interface IProjectParticipationRequest extends IHttpRequest {
      * @param newProjectParticipation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback);
+    void post(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback);
 
     /**
      * Posts a ProjectParticipation with a new object
@@ -85,7 +85,7 @@ public interface IProjectParticipationRequest extends IHttpRequest {
      * @param newProjectParticipation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback);
+    void put(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback);
 
     /**
      * Posts a ProjectParticipation with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsAutopilotDeploymentProfileAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IWindowsAutopilotDeploymentProfileAssignmentCollectionPage> callback);
 
     IWindowsAutopilotDeploymentProfileAssignmentCollectionPage get() throws ClientException;
 
-    void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+    void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<? super WindowsAutopilotDeploymentProfileAssignment> callback);
 
     WindowsAutopilotDeploymentProfileAssignment post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest e
      * @return the updated request
      */
     IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest e
      *
 	 * @return the updated request
 	 */
-	IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest skipToken(String skipToken);
+	IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest skipToken(final String skipToken);
 }

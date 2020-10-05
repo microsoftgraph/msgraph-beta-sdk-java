@@ -37,7 +37,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WebAccount> callback) {
+    public void get(final ICallback<? super WebAccount> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WebAccount> callback) {
+    public void delete(final ICallback<? super WebAccount> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param sourceWebAccount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WebAccount sourceWebAccount, final ICallback<WebAccount> callback) {
+    public void patch(final WebAccount sourceWebAccount, final ICallback<? super WebAccount> callback) {
         send(HttpMethod.PATCH, callback, sourceWebAccount);
     }
 
@@ -96,7 +96,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param newWebAccount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WebAccount newWebAccount, final ICallback<WebAccount> callback) {
+    public void post(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback) {
         send(HttpMethod.POST, callback, newWebAccount);
     }
 
@@ -117,7 +117,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param newWebAccount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WebAccount newWebAccount, final ICallback<WebAccount> callback) {
+    public void put(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback) {
         send(HttpMethod.PUT, callback, newWebAccount);
     }
 
@@ -151,17 +151,6 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      */
      public IWebAccountRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WebAccountRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWebAccountRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WebAccountRequest)this;
      }
 

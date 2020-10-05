@@ -34,7 +34,7 @@ public class ManagedEBookCategoryReferenceRequest extends BaseRequest implements
         super(requestUrl, client, requestOptions, ManagedEBookCategory.class);
     }
 
-    public void delete(final ICallback<ManagedEBookCategory> callback) {
+    public void delete(final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class ManagedEBookCategoryReferenceRequest extends BaseRequest implements
         return (ManagedEBookCategoryReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagedEBookCategoryReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedEBookCategoryReferenceRequest)this;
-    }
-    /**
      * Puts the ManagedEBookCategory
      *
      * @param srcManagedEBookCategory the ManagedEBookCategory reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagedEBookCategory srcManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
+    public void put(ManagedEBookCategory srcManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.PUT, callback, srcManagedEBookCategory);
     }
 

@@ -39,7 +39,7 @@ public class ResourceOperationGetScopesForUserCollectionRequest extends BaseColl
     }
 
 
-    public void get(final ICallback<IResourceOperationGetScopesForUserCollectionPage> callback) {
+    public void get(final ICallback<? super IResourceOperationGetScopesForUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ResourceOperationGetScopesForUserCollectionRequest extends BaseColl
      */
     public IResourceOperationGetScopesForUserCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IResourceOperationGetScopesForUserCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IResourceOperationGetScopesForUserCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IResourceOperationGetScopesForUserCollectionRequest)this;
     }
 

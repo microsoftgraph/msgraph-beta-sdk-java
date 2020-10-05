@@ -23,6 +23,6 @@ public class AccessReviewCollectionPage extends BaseCollectionPage<AccessReview,
      * @param builder  the request builder for the next collection page
      */
     public AccessReviewCollectionPage(final AccessReviewCollectionResponse response, final IAccessReviewCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class RemoteActionAuditCollectionRequest extends BaseCollectionRequest<Re
         super(requestUrl, client, requestOptions, RemoteActionAuditCollectionResponse.class, IRemoteActionAuditCollectionPage.class);
     }
 
-    public void get(final ICallback<IRemoteActionAuditCollectionPage> callback) {
+    public void get(final ICallback<? super IRemoteActionAuditCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RemoteActionAuditCollectionRequest extends BaseCollectionRequest<Re
         return buildFromResponse(response);
     }
 
-    public void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback) {
+    public void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteActionAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class RemoteActionAuditCollectionRequest extends BaseCollectionRequest<Re
      */
     public IRemoteActionAuditCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RemoteActionAuditCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRemoteActionAuditCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RemoteActionAuditCollectionRequest)this;
     }
 

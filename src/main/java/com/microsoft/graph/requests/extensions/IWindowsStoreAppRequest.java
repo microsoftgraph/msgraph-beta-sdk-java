@@ -21,7 +21,7 @@ public interface IWindowsStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsStoreApp> callback);
+    void get(final ICallback<? super WindowsStoreApp> callback);
 
     /**
      * Gets the WindowsStoreApp from the service
@@ -36,7 +36,7 @@ public interface IWindowsStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsStoreApp> callback);
+    void delete(final ICallback<? super WindowsStoreApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsStoreAppRequest extends IHttpRequest {
      * @param sourceWindowsStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsStoreApp sourceWindowsStoreApp, final ICallback<WindowsStoreApp> callback);
+    void patch(final WindowsStoreApp sourceWindowsStoreApp, final ICallback<? super WindowsStoreApp> callback);
 
     /**
      * Patches this WindowsStoreApp with a source
@@ -68,7 +68,7 @@ public interface IWindowsStoreAppRequest extends IHttpRequest {
      * @param newWindowsStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsStoreApp newWindowsStoreApp, final ICallback<WindowsStoreApp> callback);
+    void post(final WindowsStoreApp newWindowsStoreApp, final ICallback<? super WindowsStoreApp> callback);
 
     /**
      * Posts a WindowsStoreApp with a new object
@@ -85,7 +85,7 @@ public interface IWindowsStoreAppRequest extends IHttpRequest {
      * @param newWindowsStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsStoreApp newWindowsStoreApp, final ICallback<WindowsStoreApp> callback);
+    void put(final WindowsStoreApp newWindowsStoreApp, final ICallback<? super WindowsStoreApp> callback);
 
     /**
      * Posts a WindowsStoreApp with a new object

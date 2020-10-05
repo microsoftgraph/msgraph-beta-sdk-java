@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.ManagedEBookCategory;
  */
 public interface IManagedEBookCategoryCollectionReferenceRequest {
 
-    void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback);
+    void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback);
 
     ManagedEBookCategory post(final ManagedEBookCategory newManagedEBookCategory) throws ClientException;
 

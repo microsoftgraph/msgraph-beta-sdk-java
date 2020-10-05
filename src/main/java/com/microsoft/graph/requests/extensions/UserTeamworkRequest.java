@@ -44,7 +44,7 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserTeamwork> callback) {
+    public void get(final ICallback<? super UserTeamwork> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserTeamwork> callback) {
+    public void delete(final ICallback<? super UserTeamwork> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
      * @param sourceUserTeamwork the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserTeamwork sourceUserTeamwork, final ICallback<UserTeamwork> callback) {
+    public void patch(final UserTeamwork sourceUserTeamwork, final ICallback<? super UserTeamwork> callback) {
         send(HttpMethod.PATCH, callback, sourceUserTeamwork);
     }
 
@@ -103,7 +103,7 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
      * @param newUserTeamwork the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserTeamwork newUserTeamwork, final ICallback<UserTeamwork> callback) {
+    public void post(final UserTeamwork newUserTeamwork, final ICallback<? super UserTeamwork> callback) {
         send(HttpMethod.POST, callback, newUserTeamwork);
     }
 
@@ -124,7 +124,7 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
      * @param newUserTeamwork the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserTeamwork newUserTeamwork, final ICallback<UserTeamwork> callback) {
+    public void put(final UserTeamwork newUserTeamwork, final ICallback<? super UserTeamwork> callback) {
         send(HttpMethod.PUT, callback, newUserTeamwork);
     }
 
@@ -158,17 +158,6 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
      */
      public IUserTeamworkRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserTeamworkRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserTeamworkRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserTeamworkRequest)this;
      }
 

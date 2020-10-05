@@ -34,7 +34,7 @@ public class MacOSCertificateProfileBaseReferenceRequest extends BaseRequest imp
         super(requestUrl, client, requestOptions, MacOSCertificateProfileBase.class);
     }
 
-    public void delete(final ICallback<MacOSCertificateProfileBase> callback) {
+    public void delete(final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class MacOSCertificateProfileBaseReferenceRequest extends BaseRequest imp
         return (MacOSCertificateProfileBaseReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IMacOSCertificateProfileBaseReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MacOSCertificateProfileBaseReferenceRequest)this;
-    }
-    /**
      * Puts the MacOSCertificateProfileBase
      *
      * @param srcMacOSCertificateProfileBase the MacOSCertificateProfileBase reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(MacOSCertificateProfileBase srcMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback) {
+    public void put(MacOSCertificateProfileBase srcMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, srcMacOSCertificateProfileBase);
     }
 

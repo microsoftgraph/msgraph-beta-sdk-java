@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
 import com.microsoft.graph.models.extensions.PrinterDefaults;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.extensions.PrinterLocation;
 import com.microsoft.graph.models.extensions.PrinterStatus;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PrintJobCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintJobCollectionPage;
 
 
@@ -143,19 +141,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
 
         if (json.has("jobs")) {
-            final PrintJobCollectionResponse response = new PrintJobCollectionResponse();
-            if (json.has("jobs@odata.nextLink")) {
-                response.nextLink = json.get("jobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("jobs").toString(), JsonObject[].class);
-            final PrintJob[] array = new PrintJob[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintJob.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            jobs = new PrintJobCollectionPage(response, null);
+            jobs = serializer.deserializeObject(json.get("jobs").toString(), PrintJobCollectionPage.class);
         }
     }
 }

@@ -37,7 +37,7 @@ public class OneDriveUsageFileCountsRequest extends BaseRequest implements IOneD
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OneDriveUsageFileCounts> callback) {
+    public void get(final ICallback<? super OneDriveUsageFileCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OneDriveUsageFileCountsRequest extends BaseRequest implements IOneD
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OneDriveUsageFileCounts> callback) {
+    public void delete(final ICallback<? super OneDriveUsageFileCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OneDriveUsageFileCountsRequest extends BaseRequest implements IOneD
      * @param sourceOneDriveUsageFileCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OneDriveUsageFileCounts sourceOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback) {
+    public void patch(final OneDriveUsageFileCounts sourceOneDriveUsageFileCounts, final ICallback<? super OneDriveUsageFileCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOneDriveUsageFileCounts);
     }
 
@@ -96,7 +96,7 @@ public class OneDriveUsageFileCountsRequest extends BaseRequest implements IOneD
      * @param newOneDriveUsageFileCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback) {
+    public void post(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<? super OneDriveUsageFileCounts> callback) {
         send(HttpMethod.POST, callback, newOneDriveUsageFileCounts);
     }
 
@@ -117,7 +117,7 @@ public class OneDriveUsageFileCountsRequest extends BaseRequest implements IOneD
      * @param newOneDriveUsageFileCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback) {
+    public void put(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<? super OneDriveUsageFileCounts> callback) {
         send(HttpMethod.PUT, callback, newOneDriveUsageFileCounts);
     }
 
@@ -151,17 +151,6 @@ public class OneDriveUsageFileCountsRequest extends BaseRequest implements IOneD
      */
      public IOneDriveUsageFileCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OneDriveUsageFileCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOneDriveUsageFileCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OneDriveUsageFileCountsRequest)this;
      }
 

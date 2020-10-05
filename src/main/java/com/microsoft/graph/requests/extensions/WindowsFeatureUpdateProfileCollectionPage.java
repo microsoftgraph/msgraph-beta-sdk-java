@@ -23,6 +23,6 @@ public class WindowsFeatureUpdateProfileCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public WindowsFeatureUpdateProfileCollectionPage(final WindowsFeatureUpdateProfileCollectionResponse response, final IWindowsFeatureUpdateProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

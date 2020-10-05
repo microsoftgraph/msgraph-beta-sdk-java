@@ -23,6 +23,6 @@ public class BookingCustomerCollectionPage extends BaseCollectionPage<BookingCus
      * @param builder  the request builder for the next collection page
      */
     public BookingCustomerCollectionPage(final BookingCustomerCollectionResponse response, final IBookingCustomerCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

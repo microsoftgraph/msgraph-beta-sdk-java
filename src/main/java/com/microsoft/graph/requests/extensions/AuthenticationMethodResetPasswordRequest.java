@@ -37,7 +37,7 @@ public class AuthenticationMethodResetPasswordRequest extends BaseRequest implem
         body = new AuthenticationMethodResetPasswordBody();
     }
 
-    public void post(final ICallback<PasswordResetResponse> callback) {
+    public void post(final ICallback<? super PasswordResetResponse> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class AuthenticationMethodResetPasswordRequest extends BaseRequest implem
      */
     public IAuthenticationMethodResetPasswordRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AuthenticationMethodResetPasswordRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAuthenticationMethodResetPasswordRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AuthenticationMethodResetPasswordRequest)this;
     }
 

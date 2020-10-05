@@ -21,7 +21,7 @@ public interface IAccessPackageResourceScopeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AccessPackageResourceScope> callback);
+    void get(final ICallback<? super AccessPackageResourceScope> callback);
 
     /**
      * Gets the AccessPackageResourceScope from the service
@@ -36,7 +36,7 @@ public interface IAccessPackageResourceScopeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AccessPackageResourceScope> callback);
+    void delete(final ICallback<? super AccessPackageResourceScope> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAccessPackageResourceScopeRequest extends IHttpRequest {
      * @param sourceAccessPackageResourceScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AccessPackageResourceScope sourceAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback);
+    void patch(final AccessPackageResourceScope sourceAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback);
 
     /**
      * Patches this AccessPackageResourceScope with a source
@@ -68,7 +68,7 @@ public interface IAccessPackageResourceScopeRequest extends IHttpRequest {
      * @param newAccessPackageResourceScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback);
+    void post(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback);
 
     /**
      * Posts a AccessPackageResourceScope with a new object
@@ -85,7 +85,7 @@ public interface IAccessPackageResourceScopeRequest extends IHttpRequest {
      * @param newAccessPackageResourceScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback);
+    void put(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<? super AccessPackageResourceScope> callback);
 
     /**
      * Posts a AccessPackageResourceScope with a new object

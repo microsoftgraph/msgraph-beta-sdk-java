@@ -21,7 +21,7 @@ public interface IPrivilegedSignupStatusRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrivilegedSignupStatus> callback);
+    void get(final ICallback<? super PrivilegedSignupStatus> callback);
 
     /**
      * Gets the PrivilegedSignupStatus from the service
@@ -36,7 +36,7 @@ public interface IPrivilegedSignupStatusRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrivilegedSignupStatus> callback);
+    void delete(final ICallback<? super PrivilegedSignupStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrivilegedSignupStatusRequest extends IHttpRequest {
      * @param sourcePrivilegedSignupStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrivilegedSignupStatus sourcePrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback);
+    void patch(final PrivilegedSignupStatus sourcePrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback);
 
     /**
      * Patches this PrivilegedSignupStatus with a source
@@ -68,7 +68,7 @@ public interface IPrivilegedSignupStatusRequest extends IHttpRequest {
      * @param newPrivilegedSignupStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback);
+    void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback);
 
     /**
      * Posts a PrivilegedSignupStatus with a new object
@@ -85,7 +85,7 @@ public interface IPrivilegedSignupStatusRequest extends IHttpRequest {
      * @param newPrivilegedSignupStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback);
+    void put(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback);
 
     /**
      * Posts a PrivilegedSignupStatus with a new object

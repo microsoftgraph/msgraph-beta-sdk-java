@@ -37,7 +37,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void get(final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void delete(final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param sourceAndroidDeviceComplianceLocalActionLockDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void patch(final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -96,7 +96,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param newAndroidDeviceComplianceLocalActionLockDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -117,7 +117,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -151,17 +151,6 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      */
      public IAndroidDeviceComplianceLocalActionLockDeviceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceComplianceLocalActionLockDeviceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceComplianceLocalActionLockDeviceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceComplianceLocalActionLockDeviceRequest)this;
      }
 

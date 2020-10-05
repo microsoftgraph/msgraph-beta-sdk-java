@@ -37,7 +37,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ConnectionOperation> callback) {
+    public void get(final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ConnectionOperation> callback) {
+    public void delete(final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param sourceConnectionOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConnectionOperation sourceConnectionOperation, final ICallback<ConnectionOperation> callback) {
+    public void patch(final ConnectionOperation sourceConnectionOperation, final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceConnectionOperation);
     }
 
@@ -96,7 +96,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param newConnectionOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback) {
+    public void post(final ConnectionOperation newConnectionOperation, final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.POST, callback, newConnectionOperation);
     }
 
@@ -117,7 +117,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param newConnectionOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback) {
+    public void put(final ConnectionOperation newConnectionOperation, final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.PUT, callback, newConnectionOperation);
     }
 
@@ -151,17 +151,6 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      */
      public IConnectionOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConnectionOperationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IConnectionOperationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ConnectionOperationRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface ISharePointActivityPagesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointActivityPages> callback);
+    void get(final ICallback<? super SharePointActivityPages> callback);
 
     /**
      * Gets the SharePointActivityPages from the service
@@ -36,7 +36,7 @@ public interface ISharePointActivityPagesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointActivityPages> callback);
+    void delete(final ICallback<? super SharePointActivityPages> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointActivityPagesRequest extends IHttpRequest {
      * @param sourceSharePointActivityPages the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointActivityPages sourceSharePointActivityPages, final ICallback<SharePointActivityPages> callback);
+    void patch(final SharePointActivityPages sourceSharePointActivityPages, final ICallback<? super SharePointActivityPages> callback);
 
     /**
      * Patches this SharePointActivityPages with a source
@@ -68,7 +68,7 @@ public interface ISharePointActivityPagesRequest extends IHttpRequest {
      * @param newSharePointActivityPages the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointActivityPages newSharePointActivityPages, final ICallback<SharePointActivityPages> callback);
+    void post(final SharePointActivityPages newSharePointActivityPages, final ICallback<? super SharePointActivityPages> callback);
 
     /**
      * Posts a SharePointActivityPages with a new object
@@ -85,7 +85,7 @@ public interface ISharePointActivityPagesRequest extends IHttpRequest {
      * @param newSharePointActivityPages the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointActivityPages newSharePointActivityPages, final ICallback<SharePointActivityPages> callback);
+    void put(final SharePointActivityPages newSharePointActivityPages, final ICallback<? super SharePointActivityPages> callback);
 
     /**
      * Posts a SharePointActivityPages with a new object

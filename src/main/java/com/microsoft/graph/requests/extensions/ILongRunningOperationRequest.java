@@ -21,7 +21,7 @@ public interface ILongRunningOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LongRunningOperation> callback);
+    void get(final ICallback<? super LongRunningOperation> callback);
 
     /**
      * Gets the LongRunningOperation from the service
@@ -36,7 +36,7 @@ public interface ILongRunningOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LongRunningOperation> callback);
+    void delete(final ICallback<? super LongRunningOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILongRunningOperationRequest extends IHttpRequest {
      * @param sourceLongRunningOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LongRunningOperation sourceLongRunningOperation, final ICallback<LongRunningOperation> callback);
+    void patch(final LongRunningOperation sourceLongRunningOperation, final ICallback<? super LongRunningOperation> callback);
 
     /**
      * Patches this LongRunningOperation with a source
@@ -68,7 +68,7 @@ public interface ILongRunningOperationRequest extends IHttpRequest {
      * @param newLongRunningOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback);
+    void post(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback);
 
     /**
      * Posts a LongRunningOperation with a new object
@@ -85,7 +85,7 @@ public interface ILongRunningOperationRequest extends IHttpRequest {
      * @param newLongRunningOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback);
+    void put(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback);
 
     /**
      * Posts a LongRunningOperation with a new object

@@ -54,7 +54,7 @@ public class GroupPolicyPresentationRequest extends BaseRequest implements IGrou
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupPolicyPresentation> callback) {
+    public void get(final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class GroupPolicyPresentationRequest extends BaseRequest implements IGrou
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupPolicyPresentation> callback) {
+    public void delete(final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class GroupPolicyPresentationRequest extends BaseRequest implements IGrou
      * @param sourceGroupPolicyPresentation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentation sourceGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback) {
+    public void patch(final GroupPolicyPresentation sourceGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentation);
     }
 
@@ -113,7 +113,7 @@ public class GroupPolicyPresentationRequest extends BaseRequest implements IGrou
      * @param newGroupPolicyPresentation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback) {
+    public void post(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentation);
     }
 
@@ -134,7 +134,7 @@ public class GroupPolicyPresentationRequest extends BaseRequest implements IGrou
      * @param newGroupPolicyPresentation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback) {
+    public void put(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentation);
     }
 
@@ -168,17 +168,6 @@ public class GroupPolicyPresentationRequest extends BaseRequest implements IGrou
      */
      public IGroupPolicyPresentationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IGroupPolicyPresentationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (GroupPolicyPresentationRequest)this;
      }
 

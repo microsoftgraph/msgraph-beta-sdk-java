@@ -23,6 +23,6 @@ public class IpSecurityProfileCollectionPage extends BaseCollectionPage<IpSecuri
      * @param builder  the request builder for the next collection page
      */
     public IpSecurityProfileCollectionPage(final IpSecurityProfileCollectionResponse response, final IIpSecurityProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

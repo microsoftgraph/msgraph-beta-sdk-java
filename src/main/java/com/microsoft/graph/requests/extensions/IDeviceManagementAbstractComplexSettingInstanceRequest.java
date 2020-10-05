@@ -21,7 +21,7 @@ public interface IDeviceManagementAbstractComplexSettingInstanceRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementAbstractComplexSettingInstance> callback);
+    void get(final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback);
 
     /**
      * Gets the DeviceManagementAbstractComplexSettingInstance from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementAbstractComplexSettingInstanceRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementAbstractComplexSettingInstance> callback);
+    void delete(final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementAbstractComplexSettingInstanceRequest extends 
      * @param sourceDeviceManagementAbstractComplexSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementAbstractComplexSettingInstance sourceDeviceManagementAbstractComplexSettingInstance, final ICallback<DeviceManagementAbstractComplexSettingInstance> callback);
+    void patch(final DeviceManagementAbstractComplexSettingInstance sourceDeviceManagementAbstractComplexSettingInstance, final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback);
 
     /**
      * Patches this DeviceManagementAbstractComplexSettingInstance with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementAbstractComplexSettingInstanceRequest extends 
      * @param newDeviceManagementAbstractComplexSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<DeviceManagementAbstractComplexSettingInstance> callback);
+    void post(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementAbstractComplexSettingInstance with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementAbstractComplexSettingInstanceRequest extends 
      * @param newDeviceManagementAbstractComplexSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<DeviceManagementAbstractComplexSettingInstance> callback);
+    void put(final DeviceManagementAbstractComplexSettingInstance newDeviceManagementAbstractComplexSettingInstance, final ICallback<? super DeviceManagementAbstractComplexSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementAbstractComplexSettingInstance with a new object

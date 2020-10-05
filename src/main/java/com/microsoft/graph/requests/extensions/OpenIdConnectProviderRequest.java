@@ -37,7 +37,7 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OpenIdConnectProvider> callback) {
+    public void get(final ICallback<? super OpenIdConnectProvider> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OpenIdConnectProvider> callback) {
+    public void delete(final ICallback<? super OpenIdConnectProvider> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
      * @param sourceOpenIdConnectProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OpenIdConnectProvider sourceOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback) {
+    public void patch(final OpenIdConnectProvider sourceOpenIdConnectProvider, final ICallback<? super OpenIdConnectProvider> callback) {
         send(HttpMethod.PATCH, callback, sourceOpenIdConnectProvider);
     }
 
@@ -96,7 +96,7 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
      * @param newOpenIdConnectProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback) {
+    public void post(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<? super OpenIdConnectProvider> callback) {
         send(HttpMethod.POST, callback, newOpenIdConnectProvider);
     }
 
@@ -117,7 +117,7 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
      * @param newOpenIdConnectProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback) {
+    public void put(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<? super OpenIdConnectProvider> callback) {
         send(HttpMethod.PUT, callback, newOpenIdConnectProvider);
     }
 
@@ -151,17 +151,6 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
      */
      public IOpenIdConnectProviderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OpenIdConnectProviderRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOpenIdConnectProviderRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OpenIdConnectProviderRequest)this;
      }
 

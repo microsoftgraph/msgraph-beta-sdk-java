@@ -23,6 +23,6 @@ public class UserConfigurationCollectionPage extends BaseCollectionPage<UserConf
      * @param builder  the request builder for the next collection page
      */
     public UserConfigurationCollectionPage(final UserConfigurationCollectionResponse response, final IUserConfigurationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

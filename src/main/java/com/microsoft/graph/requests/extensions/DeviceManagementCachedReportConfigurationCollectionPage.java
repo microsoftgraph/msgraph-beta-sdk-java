@@ -23,6 +23,6 @@ public class DeviceManagementCachedReportConfigurationCollectionPage extends Bas
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementCachedReportConfigurationCollectionPage(final DeviceManagementCachedReportConfigurationCollectionResponse response, final IDeviceManagementCachedReportConfigurationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

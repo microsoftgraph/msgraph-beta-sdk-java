@@ -21,7 +21,7 @@ public interface ISetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Set> callback);
+    void get(final ICallback<? super Set> callback);
 
     /**
      * Gets the Set from the service
@@ -36,7 +36,7 @@ public interface ISetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Set> callback);
+    void delete(final ICallback<? super Set> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISetRequest extends IHttpRequest {
      * @param sourceSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Set sourceSet, final ICallback<Set> callback);
+    void patch(final Set sourceSet, final ICallback<? super Set> callback);
 
     /**
      * Patches this Set with a source
@@ -68,7 +68,7 @@ public interface ISetRequest extends IHttpRequest {
      * @param newSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Set newSet, final ICallback<Set> callback);
+    void post(final Set newSet, final ICallback<? super Set> callback);
 
     /**
      * Posts a Set with a new object
@@ -85,7 +85,7 @@ public interface ISetRequest extends IHttpRequest {
      * @param newSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Set newSet, final ICallback<Set> callback);
+    void put(final Set newSet, final ICallback<? super Set> callback);
 
     /**
      * Posts a Set with a new object

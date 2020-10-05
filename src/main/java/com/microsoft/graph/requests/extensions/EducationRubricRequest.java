@@ -37,7 +37,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationRubric> callback) {
+    public void get(final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationRubric> callback) {
+    public void delete(final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param sourceEducationRubric the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationRubric sourceEducationRubric, final ICallback<EducationRubric> callback) {
+    public void patch(final EducationRubric sourceEducationRubric, final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationRubric);
     }
 
@@ -96,7 +96,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param newEducationRubric the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback) {
+    public void post(final EducationRubric newEducationRubric, final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.POST, callback, newEducationRubric);
     }
 
@@ -117,7 +117,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param newEducationRubric the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback) {
+    public void put(final EducationRubric newEducationRubric, final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.PUT, callback, newEducationRubric);
     }
 
@@ -151,17 +151,6 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      */
      public IEducationRubricRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationRubricRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationRubricRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationRubricRequest)this;
      }
 

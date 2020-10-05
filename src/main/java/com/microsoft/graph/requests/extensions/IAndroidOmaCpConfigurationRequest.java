@@ -21,7 +21,7 @@ public interface IAndroidOmaCpConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidOmaCpConfiguration> callback);
+    void get(final ICallback<? super AndroidOmaCpConfiguration> callback);
 
     /**
      * Gets the AndroidOmaCpConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidOmaCpConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidOmaCpConfiguration> callback);
+    void delete(final ICallback<? super AndroidOmaCpConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidOmaCpConfigurationRequest extends IHttpRequest {
      * @param sourceAndroidOmaCpConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidOmaCpConfiguration sourceAndroidOmaCpConfiguration, final ICallback<AndroidOmaCpConfiguration> callback);
+    void patch(final AndroidOmaCpConfiguration sourceAndroidOmaCpConfiguration, final ICallback<? super AndroidOmaCpConfiguration> callback);
 
     /**
      * Patches this AndroidOmaCpConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidOmaCpConfigurationRequest extends IHttpRequest {
      * @param newAndroidOmaCpConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<AndroidOmaCpConfiguration> callback);
+    void post(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<? super AndroidOmaCpConfiguration> callback);
 
     /**
      * Posts a AndroidOmaCpConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidOmaCpConfigurationRequest extends IHttpRequest {
      * @param newAndroidOmaCpConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<AndroidOmaCpConfiguration> callback);
+    void put(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<? super AndroidOmaCpConfiguration> callback);
 
     /**
      * Posts a AndroidOmaCpConfiguration with a new object

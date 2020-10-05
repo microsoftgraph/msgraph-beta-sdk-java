@@ -21,7 +21,7 @@ public interface IGovernanceRoleAssignmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void get(final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     /**
      * Gets the GovernanceRoleAssignmentRequest from the service
@@ -36,7 +36,7 @@ public interface IGovernanceRoleAssignmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void delete(final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGovernanceRoleAssignmentRequestRequest extends IHttpRequest {
      * @param sourceGovernanceRoleAssignmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GovernanceRoleAssignmentRequest sourceGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void patch(final GovernanceRoleAssignmentRequest sourceGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     /**
      * Patches this GovernanceRoleAssignmentRequest with a source
@@ -68,7 +68,7 @@ public interface IGovernanceRoleAssignmentRequestRequest extends IHttpRequest {
      * @param newGovernanceRoleAssignmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     /**
      * Posts a GovernanceRoleAssignmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IGovernanceRoleAssignmentRequestRequest extends IHttpRequest {
      * @param newGovernanceRoleAssignmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback);
+    void put(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback);
 
     /**
      * Posts a GovernanceRoleAssignmentRequest with a new object

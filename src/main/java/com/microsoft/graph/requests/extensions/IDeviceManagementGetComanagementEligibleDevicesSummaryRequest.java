@@ -26,7 +26,7 @@ public interface IDeviceManagementGetComanagementEligibleDevicesSummaryRequest e
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ComanagementEligibleDevicesSummary> callback);
+    void get(final ICallback<? super ComanagementEligibleDevicesSummary> callback);
 
     /**
      * Gets the ComanagementEligibleDevicesSummary

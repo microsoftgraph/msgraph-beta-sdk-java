@@ -40,7 +40,7 @@ public class ProjectParticipationCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, ProjectParticipationCollectionResponse.class, IProjectParticipationCollectionPage.class);
     }
 
-    public void get(final ICallback<IProjectParticipationCollectionPage> callback) {
+    public void get(final ICallback<? super IProjectParticipationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ProjectParticipationCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback) {
+    public void post(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProjectParticipationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ProjectParticipationCollectionRequest extends BaseCollectionRequest
      */
     public IProjectParticipationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ProjectParticipationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IProjectParticipationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ProjectParticipationCollectionRequest)this;
     }
 

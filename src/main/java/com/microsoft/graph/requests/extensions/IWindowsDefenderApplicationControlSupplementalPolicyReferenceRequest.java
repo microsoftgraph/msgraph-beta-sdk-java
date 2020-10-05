@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsDefenderApplicationControlSupplementalPolicyReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     WindowsDefenderApplicationControlSupplementalPolicy delete() throws ClientException;
 
@@ -54,7 +54,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyReferenceRe
      * @param srcWindowsDefenderApplicationControlSupplementalPolicy the WindowsDefenderApplicationControlSupplementalPolicy to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WindowsDefenderApplicationControlSupplementalPolicy srcWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void put(WindowsDefenderApplicationControlSupplementalPolicy srcWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     /**
      * Puts the WindowsDefenderApplicationControlSupplementalPolicy

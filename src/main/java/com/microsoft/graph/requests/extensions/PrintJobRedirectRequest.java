@@ -37,7 +37,7 @@ public class PrintJobRedirectRequest extends BaseRequest implements IPrintJobRed
         body = new PrintJobRedirectBody();
     }
 
-    public void post(final ICallback<PrintJob> callback) {
+    public void post(final ICallback<? super PrintJob> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class PrintJobRedirectRequest extends BaseRequest implements IPrintJobRed
      */
     public IPrintJobRedirectRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintJobRedirectRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintJobRedirectRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PrintJobRedirectRequest)this;
     }
 

@@ -21,7 +21,7 @@ public interface IBookingNamedEntityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BookingNamedEntity> callback);
+    void get(final ICallback<? super BookingNamedEntity> callback);
 
     /**
      * Gets the BookingNamedEntity from the service
@@ -36,7 +36,7 @@ public interface IBookingNamedEntityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BookingNamedEntity> callback);
+    void delete(final ICallback<? super BookingNamedEntity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBookingNamedEntityRequest extends IHttpRequest {
      * @param sourceBookingNamedEntity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BookingNamedEntity sourceBookingNamedEntity, final ICallback<BookingNamedEntity> callback);
+    void patch(final BookingNamedEntity sourceBookingNamedEntity, final ICallback<? super BookingNamedEntity> callback);
 
     /**
      * Patches this BookingNamedEntity with a source
@@ -68,7 +68,7 @@ public interface IBookingNamedEntityRequest extends IHttpRequest {
      * @param newBookingNamedEntity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BookingNamedEntity newBookingNamedEntity, final ICallback<BookingNamedEntity> callback);
+    void post(final BookingNamedEntity newBookingNamedEntity, final ICallback<? super BookingNamedEntity> callback);
 
     /**
      * Posts a BookingNamedEntity with a new object
@@ -85,7 +85,7 @@ public interface IBookingNamedEntityRequest extends IHttpRequest {
      * @param newBookingNamedEntity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BookingNamedEntity newBookingNamedEntity, final ICallback<BookingNamedEntity> callback);
+    void put(final BookingNamedEntity newBookingNamedEntity, final ICallback<? super BookingNamedEntity> callback);
 
     /**
      * Posts a BookingNamedEntity with a new object

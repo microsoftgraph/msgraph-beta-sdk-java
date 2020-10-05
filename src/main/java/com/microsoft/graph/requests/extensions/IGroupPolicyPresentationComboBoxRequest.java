@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationComboBoxRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationComboBox> callback);
+    void get(final ICallback<? super GroupPolicyPresentationComboBox> callback);
 
     /**
      * Gets the GroupPolicyPresentationComboBox from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationComboBoxRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationComboBox> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationComboBox> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationComboBoxRequest extends IHttpRequest {
      * @param sourceGroupPolicyPresentationComboBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationComboBox sourceGroupPolicyPresentationComboBox, final ICallback<GroupPolicyPresentationComboBox> callback);
+    void patch(final GroupPolicyPresentationComboBox sourceGroupPolicyPresentationComboBox, final ICallback<? super GroupPolicyPresentationComboBox> callback);
 
     /**
      * Patches this GroupPolicyPresentationComboBox with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationComboBoxRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationComboBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<GroupPolicyPresentationComboBox> callback);
+    void post(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<? super GroupPolicyPresentationComboBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationComboBox with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationComboBoxRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationComboBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<GroupPolicyPresentationComboBox> callback);
+    void put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<? super GroupPolicyPresentationComboBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationComboBox with a new object

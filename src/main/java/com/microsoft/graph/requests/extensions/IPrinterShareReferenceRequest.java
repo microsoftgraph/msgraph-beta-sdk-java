@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPrinterShareReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PrinterShare> callback);
+    void delete(final ICallback<? super PrinterShare> callback);
 
     PrinterShare delete() throws ClientException;
 
@@ -53,7 +53,7 @@ public interface IPrinterShareReferenceRequest extends IHttpRequest {
      * @param srcPrinterShare the PrinterShare to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PrinterShare srcPrinterShare, final ICallback<PrinterShare> callback);
+    void put(PrinterShare srcPrinterShare, final ICallback<? super PrinterShare> callback);
 
     /**
      * Puts the PrinterShare

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAndroidForWorkAppConfigurationSchemaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAndroidForWorkAppConfigurationSchemaCollectionPage> callback);
+    void get(final ICallback<? super IAndroidForWorkAppConfigurationSchemaCollectionPage> callback);
 
     IAndroidForWorkAppConfigurationSchemaCollectionPage get() throws ClientException;
 
-    void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+    void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<? super AndroidForWorkAppConfigurationSchema> callback);
 
     AndroidForWorkAppConfigurationSchema post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAndroidForWorkAppConfigurationSchemaCollectionRequest extends 
      * @return the updated request
      */
     IAndroidForWorkAppConfigurationSchemaCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAndroidForWorkAppConfigurationSchemaCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAndroidForWorkAppConfigurationSchemaCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	IAndroidForWorkAppConfigurationSchemaCollectionRequest skipToken(String skipToken);
+	IAndroidForWorkAppConfigurationSchemaCollectionRequest skipToken(final String skipToken);
 }

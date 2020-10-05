@@ -66,7 +66,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, DeviceConfiguration.class);
     }
 
-    public void post(final DeviceConfiguration newDeviceConfiguration, final IJsonBackedObject payload, final ICallback<DeviceConfiguration> callback) {
+    public void post(final DeviceConfiguration newDeviceConfiguration, final IJsonBackedObject payload, final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -78,7 +78,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<DeviceConfiguration> callback) {
+    public void get(final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DeviceConfiguration> callback) {
+	public void delete(final ICallback<? super DeviceConfiguration> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -94,7 +94,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+	public void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
 		send(HttpMethod.PATCH, callback, sourceDeviceConfiguration);
 	}
 
@@ -122,16 +122,6 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
      */
     public IDeviceConfigurationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceConfigurationWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceConfigurationWithReferenceRequest)this;
     }
 }

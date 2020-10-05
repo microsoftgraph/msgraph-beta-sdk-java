@@ -35,7 +35,7 @@ public class ManagedEBookCategoryCollectionWithReferencesRequest extends BaseCol
         super(requestUrl, client, requestOptions, ManagedEBookCategoryCollectionResponse.class, IManagedEBookCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedEBookCategoryCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IManagedEBookCategoryCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class ManagedEBookCategoryCollectionWithReferencesRequest extends BaseCol
 
     public IManagedEBookCategoryCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedEBookCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedEBookCategoryCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedEBookCategoryCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IManagedEBookCategoryCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IManagedEBookCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedEBookCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedEBookCategoryCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ManagedEBookCategoryCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedEBookCategoryCollectionWithReferencesPage buildFromResponse(final ManagedEBookCategoryCollectionResponse response) {

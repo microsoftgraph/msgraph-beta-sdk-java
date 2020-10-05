@@ -41,7 +41,7 @@ public class GovernanceRoleAssignmentRequestCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, GovernanceRoleAssignmentRequestCollectionResponse.class, IGovernanceRoleAssignmentRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<IGovernanceRoleAssignmentRequestCollectionPage> callback) {
+    public void get(final ICallback<? super IGovernanceRoleAssignmentRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class GovernanceRoleAssignmentRequestCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback) {
+    public void post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<? super GovernanceRoleAssignmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceRoleAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class GovernanceRoleAssignmentRequestCollectionRequest extends BaseCollec
      */
     public IGovernanceRoleAssignmentRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GovernanceRoleAssignmentRequestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGovernanceRoleAssignmentRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GovernanceRoleAssignmentRequestCollectionRequest)this;
     }
 

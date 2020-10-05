@@ -23,6 +23,6 @@ public class UnifiedRoleAssignmentCollectionPage extends BaseCollectionPage<Unif
      * @param builder  the request builder for the next collection page
      */
     public UnifiedRoleAssignmentCollectionPage(final UnifiedRoleAssignmentCollectionResponse response, final IUnifiedRoleAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

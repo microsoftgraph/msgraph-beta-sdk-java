@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrivilegedOperationEventCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPrivilegedOperationEventCollectionPage> callback);
+    void get(final ICallback<? super IPrivilegedOperationEventCollectionPage> callback);
 
     IPrivilegedOperationEventCollectionPage get() throws ClientException;
 
-    void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback);
+    void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<? super PrivilegedOperationEvent> callback);
 
     PrivilegedOperationEvent post(final PrivilegedOperationEvent newPrivilegedOperationEvent) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IPrivilegedOperationEventCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IPrivilegedOperationEventCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPrivilegedOperationEventCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IPrivilegedOperationEventCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IPrivilegedOperationEventCollectionRequest skipToken(String skipToken);
+	IPrivilegedOperationEventCollectionRequest skipToken(final String skipToken);
 }

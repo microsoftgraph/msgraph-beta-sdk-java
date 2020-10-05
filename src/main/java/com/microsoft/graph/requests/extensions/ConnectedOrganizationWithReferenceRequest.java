@@ -39,7 +39,7 @@ public class ConnectedOrganizationWithReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, ConnectedOrganization.class);
     }
 
-    public void post(final ConnectedOrganization newConnectedOrganization, final IJsonBackedObject payload, final ICallback<ConnectedOrganization> callback) {
+    public void post(final ConnectedOrganization newConnectedOrganization, final IJsonBackedObject payload, final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class ConnectedOrganizationWithReferenceRequest extends BaseRequest imple
         return null;
     }
 
-    public void get(final ICallback<ConnectedOrganization> callback) {
+    public void get(final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class ConnectedOrganizationWithReferenceRequest extends BaseRequest imple
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ConnectedOrganization> callback) {
+	public void delete(final ICallback<? super ConnectedOrganization> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class ConnectedOrganizationWithReferenceRequest extends BaseRequest imple
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+	public void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
 		send(HttpMethod.PATCH, callback, sourceConnectedOrganization);
 	}
 
@@ -95,16 +95,6 @@ public class ConnectedOrganizationWithReferenceRequest extends BaseRequest imple
      */
     public IConnectedOrganizationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ConnectedOrganizationWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IConnectedOrganizationWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ConnectedOrganizationWithReferenceRequest)this;
     }
 }

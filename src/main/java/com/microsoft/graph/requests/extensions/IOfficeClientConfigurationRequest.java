@@ -21,7 +21,7 @@ public interface IOfficeClientConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OfficeClientConfiguration> callback);
+    void get(final ICallback<? super OfficeClientConfiguration> callback);
 
     /**
      * Gets the OfficeClientConfiguration from the service
@@ -36,7 +36,7 @@ public interface IOfficeClientConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OfficeClientConfiguration> callback);
+    void delete(final ICallback<? super OfficeClientConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOfficeClientConfigurationRequest extends IHttpRequest {
      * @param sourceOfficeClientConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OfficeClientConfiguration sourceOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback);
+    void patch(final OfficeClientConfiguration sourceOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback);
 
     /**
      * Patches this OfficeClientConfiguration with a source
@@ -68,7 +68,7 @@ public interface IOfficeClientConfigurationRequest extends IHttpRequest {
      * @param newOfficeClientConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback);
+    void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback);
 
     /**
      * Posts a OfficeClientConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IOfficeClientConfigurationRequest extends IHttpRequest {
      * @param newOfficeClientConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback);
+    void put(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<? super OfficeClientConfiguration> callback);
 
     /**
      * Posts a OfficeClientConfiguration with a new object

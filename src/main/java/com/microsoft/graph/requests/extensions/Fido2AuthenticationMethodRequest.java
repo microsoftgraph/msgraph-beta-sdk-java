@@ -37,7 +37,7 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Fido2AuthenticationMethod> callback) {
+    public void get(final ICallback<? super Fido2AuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Fido2AuthenticationMethod> callback) {
+    public void delete(final ICallback<? super Fido2AuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
      * @param sourceFido2AuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Fido2AuthenticationMethod sourceFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback) {
+    public void patch(final Fido2AuthenticationMethod sourceFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceFido2AuthenticationMethod);
     }
 
@@ -96,7 +96,7 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
      * @param newFido2AuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback) {
+    public void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newFido2AuthenticationMethod);
     }
 
@@ -117,7 +117,7 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
      * @param newFido2AuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback) {
+    public void put(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<? super Fido2AuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newFido2AuthenticationMethod);
     }
 
@@ -151,17 +151,6 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
      */
      public IFido2AuthenticationMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Fido2AuthenticationMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IFido2AuthenticationMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Fido2AuthenticationMethodRequest)this;
      }
 

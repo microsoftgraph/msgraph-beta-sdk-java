@@ -23,6 +23,6 @@ public class ConnectionOperationCollectionPage extends BaseCollectionPage<Connec
      * @param builder  the request builder for the next collection page
      */
     public ConnectionOperationCollectionPage(final ConnectionOperationCollectionResponse response, final IConnectionOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

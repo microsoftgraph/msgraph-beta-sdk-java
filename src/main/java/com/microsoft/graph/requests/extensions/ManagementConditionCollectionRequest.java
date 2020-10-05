@@ -41,7 +41,7 @@ public class ManagementConditionCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ManagementConditionCollectionResponse.class, IManagementConditionCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagementConditionCollectionPage> callback) {
+    public void get(final ICallback<? super IManagementConditionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ManagementConditionCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback) {
+    public void post(final ManagementCondition newManagementCondition, final ICallback<? super ManagementCondition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagementConditionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class ManagementConditionCollectionRequest extends BaseCollectionRequest<
      */
     public IManagementConditionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagementConditionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagementConditionCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagementConditionCollectionRequest)this;
     }
 

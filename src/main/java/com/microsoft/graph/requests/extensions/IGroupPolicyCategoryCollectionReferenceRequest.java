@@ -21,7 +21,7 @@ import com.microsoft.graph.models.extensions.GroupPolicyCategory;
  */
 public interface IGroupPolicyCategoryCollectionReferenceRequest {
 
-    void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback);
+    void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<? super GroupPolicyCategory> callback);
 
     GroupPolicyCategory post(final GroupPolicyCategory newGroupPolicyCategory) throws ClientException;
 

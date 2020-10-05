@@ -21,7 +21,7 @@ public interface IApplicationTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ApplicationTemplate> callback);
+    void get(final ICallback<? super ApplicationTemplate> callback);
 
     /**
      * Gets the ApplicationTemplate from the service
@@ -36,7 +36,7 @@ public interface IApplicationTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ApplicationTemplate> callback);
+    void delete(final ICallback<? super ApplicationTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApplicationTemplateRequest extends IHttpRequest {
      * @param sourceApplicationTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ApplicationTemplate sourceApplicationTemplate, final ICallback<ApplicationTemplate> callback);
+    void patch(final ApplicationTemplate sourceApplicationTemplate, final ICallback<? super ApplicationTemplate> callback);
 
     /**
      * Patches this ApplicationTemplate with a source
@@ -68,7 +68,7 @@ public interface IApplicationTemplateRequest extends IHttpRequest {
      * @param newApplicationTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ApplicationTemplate newApplicationTemplate, final ICallback<ApplicationTemplate> callback);
+    void post(final ApplicationTemplate newApplicationTemplate, final ICallback<? super ApplicationTemplate> callback);
 
     /**
      * Posts a ApplicationTemplate with a new object
@@ -85,7 +85,7 @@ public interface IApplicationTemplateRequest extends IHttpRequest {
      * @param newApplicationTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ApplicationTemplate newApplicationTemplate, final ICallback<ApplicationTemplate> callback);
+    void put(final ApplicationTemplate newApplicationTemplate, final ICallback<? super ApplicationTemplate> callback);
 
     /**
      * Posts a ApplicationTemplate with a new object

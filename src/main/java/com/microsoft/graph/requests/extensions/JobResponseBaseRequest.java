@@ -52,7 +52,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<JobResponseBase> callback) {
+    public void get(final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<JobResponseBase> callback) {
+    public void delete(final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param sourceJobResponseBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final JobResponseBase sourceJobResponseBase, final ICallback<JobResponseBase> callback) {
+    public void patch(final JobResponseBase sourceJobResponseBase, final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.PATCH, callback, sourceJobResponseBase);
     }
 
@@ -111,7 +111,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param newJobResponseBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final JobResponseBase newJobResponseBase, final ICallback<JobResponseBase> callback) {
+    public void post(final JobResponseBase newJobResponseBase, final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.POST, callback, newJobResponseBase);
     }
 
@@ -132,7 +132,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param newJobResponseBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final JobResponseBase newJobResponseBase, final ICallback<JobResponseBase> callback) {
+    public void put(final JobResponseBase newJobResponseBase, final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.PUT, callback, newJobResponseBase);
     }
 
@@ -166,17 +166,6 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      */
      public IJobResponseBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (JobResponseBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IJobResponseBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (JobResponseBaseRequest)this;
      }
 

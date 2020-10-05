@@ -39,7 +39,7 @@ public class GovernanceRoleAssignmentCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, GovernanceRoleAssignmentCollectionResponse.class, IGovernanceRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IGovernanceRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IGovernanceRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class GovernanceRoleAssignmentCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class GovernanceRoleAssignmentCollectionRequest extends BaseCollectionReq
      */
     public IGovernanceRoleAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GovernanceRoleAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGovernanceRoleAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GovernanceRoleAssignmentCollectionRequest)this;
     }
 

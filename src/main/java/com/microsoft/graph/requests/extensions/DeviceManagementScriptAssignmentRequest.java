@@ -37,7 +37,7 @@ public class DeviceManagementScriptAssignmentRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementScriptAssignment> callback) {
+    public void get(final ICallback<? super DeviceManagementScriptAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementScriptAssignmentRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementScriptAssignment> callback) {
+    public void delete(final ICallback<? super DeviceManagementScriptAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementScriptAssignmentRequest extends BaseRequest impleme
      * @param sourceDeviceManagementScriptAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScriptAssignment sourceDeviceManagementScriptAssignment, final ICallback<DeviceManagementScriptAssignment> callback) {
+    public void patch(final DeviceManagementScriptAssignment sourceDeviceManagementScriptAssignment, final ICallback<? super DeviceManagementScriptAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptAssignment);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementScriptAssignmentRequest extends BaseRequest impleme
      * @param newDeviceManagementScriptAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<DeviceManagementScriptAssignment> callback) {
+    public void post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<? super DeviceManagementScriptAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScriptAssignment);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementScriptAssignmentRequest extends BaseRequest impleme
      * @param newDeviceManagementScriptAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<DeviceManagementScriptAssignment> callback) {
+    public void put(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<? super DeviceManagementScriptAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScriptAssignment);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementScriptAssignmentRequest extends BaseRequest impleme
      */
      public IDeviceManagementScriptAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementScriptAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementScriptAssignmentRequest)this;
      }
 

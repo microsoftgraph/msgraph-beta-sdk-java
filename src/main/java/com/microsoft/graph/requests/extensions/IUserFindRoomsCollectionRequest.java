@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserFindRoomsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserFindRoomsCollectionPage> callback);
+    void get(final ICallback<? super IUserFindRoomsCollectionPage> callback);
 
     IUserFindRoomsCollectionPage get() throws ClientException;
 

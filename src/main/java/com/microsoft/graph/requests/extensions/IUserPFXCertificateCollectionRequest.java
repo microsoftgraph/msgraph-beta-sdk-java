@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserPFXCertificateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserPFXCertificateCollectionPage> callback);
+    void get(final ICallback<? super IUserPFXCertificateCollectionPage> callback);
 
     IUserPFXCertificateCollectionPage get() throws ClientException;
 
-    void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<UserPFXCertificate> callback);
+    void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback);
 
     UserPFXCertificate post(final UserPFXCertificate newUserPFXCertificate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserPFXCertificateCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUserPFXCertificateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserPFXCertificateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserPFXCertificateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUserPFXCertificateCollectionRequest skipToken(String skipToken);
+	IUserPFXCertificateCollectionRequest skipToken(final String skipToken);
 }

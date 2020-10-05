@@ -21,7 +21,7 @@ public interface IPublishedResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PublishedResource> callback);
+    void get(final ICallback<? super PublishedResource> callback);
 
     /**
      * Gets the PublishedResource from the service
@@ -36,7 +36,7 @@ public interface IPublishedResourceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PublishedResource> callback);
+    void delete(final ICallback<? super PublishedResource> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPublishedResourceRequest extends IHttpRequest {
      * @param sourcePublishedResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PublishedResource sourcePublishedResource, final ICallback<PublishedResource> callback);
+    void patch(final PublishedResource sourcePublishedResource, final ICallback<? super PublishedResource> callback);
 
     /**
      * Patches this PublishedResource with a source
@@ -68,7 +68,7 @@ public interface IPublishedResourceRequest extends IHttpRequest {
      * @param newPublishedResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback);
+    void post(final PublishedResource newPublishedResource, final ICallback<? super PublishedResource> callback);
 
     /**
      * Posts a PublishedResource with a new object
@@ -85,7 +85,7 @@ public interface IPublishedResourceRequest extends IHttpRequest {
      * @param newPublishedResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback);
+    void put(final PublishedResource newPublishedResource, final ICallback<? super PublishedResource> callback);
 
     /**
      * Posts a PublishedResource with a new object

@@ -37,7 +37,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void get(final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void delete(final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param sourceSkypeForBusinessDeviceUsageDistributionUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void patch(final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -96,7 +96,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -117,7 +117,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -151,17 +151,6 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      */
      public ISkypeForBusinessDeviceUsageDistributionUserCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISkypeForBusinessDeviceUsageDistributionUserCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
      }
 

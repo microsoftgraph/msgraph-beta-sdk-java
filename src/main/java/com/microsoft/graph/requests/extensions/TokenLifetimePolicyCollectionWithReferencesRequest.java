@@ -35,7 +35,7 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,22 +56,27 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
 
     public ITokenLifetimePolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenLifetimePolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public ITokenLifetimePolicyCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public ITokenLifetimePolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenLifetimePolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenLifetimePolicyCollectionWithReferencesPage buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {

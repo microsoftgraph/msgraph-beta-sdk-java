@@ -26,7 +26,7 @@ public interface IExactMatchSessionRenewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<ExactMatchSession> callback);
+    void post(final ICallback<? super ExactMatchSession> callback);
 
     /**
      * Creates the ExactMatchSessionRenew

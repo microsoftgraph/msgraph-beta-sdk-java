@@ -26,7 +26,7 @@ public interface ITimeCardConfirmRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<TimeCard> callback);
+    void post(final ICallback<? super TimeCard> callback);
 
     /**
      * Creates the TimeCardConfirm

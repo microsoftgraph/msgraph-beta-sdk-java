@@ -21,7 +21,7 @@ public interface IMacOSWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSWiFiConfiguration> callback);
+    void get(final ICallback<? super MacOSWiFiConfiguration> callback);
 
     /**
      * Gets the MacOSWiFiConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSWiFiConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSWiFiConfiguration> callback);
+    void delete(final ICallback<? super MacOSWiFiConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSWiFiConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSWiFiConfiguration sourceMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback);
+    void patch(final MacOSWiFiConfiguration sourceMacOSWiFiConfiguration, final ICallback<? super MacOSWiFiConfiguration> callback);
 
     /**
      * Patches this MacOSWiFiConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSWiFiConfigurationRequest extends IHttpRequest {
      * @param newMacOSWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback);
+    void post(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<? super MacOSWiFiConfiguration> callback);
 
     /**
      * Posts a MacOSWiFiConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSWiFiConfigurationRequest extends IHttpRequest {
      * @param newMacOSWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback);
+    void put(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<? super MacOSWiFiConfiguration> callback);
 
     /**
      * Posts a MacOSWiFiConfiguration with a new object

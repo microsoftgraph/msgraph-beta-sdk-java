@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationCheckBoxRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentationCheckBox> callback);
+    void get(final ICallback<? super GroupPolicyPresentationCheckBox> callback);
 
     /**
      * Gets the GroupPolicyPresentationCheckBox from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationCheckBoxRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentationCheckBox> callback);
+    void delete(final ICallback<? super GroupPolicyPresentationCheckBox> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationCheckBoxRequest extends IHttpRequest {
      * @param sourceGroupPolicyPresentationCheckBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback);
+    void patch(final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback);
 
     /**
      * Patches this GroupPolicyPresentationCheckBox with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationCheckBoxRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationCheckBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback);
+    void post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationCheckBox with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationCheckBoxRequest extends IHttpRequest {
      * @param newGroupPolicyPresentationCheckBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback);
+    void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback);
 
     /**
      * Posts a GroupPolicyPresentationCheckBox with a new object

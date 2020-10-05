@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProfileCardPropertyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IProfileCardPropertyCollectionPage> callback);
+    void get(final ICallback<? super IProfileCardPropertyCollectionPage> callback);
 
     IProfileCardPropertyCollectionPage get() throws ClientException;
 
-    void post(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback);
+    void post(final ProfileCardProperty newProfileCardProperty, final ICallback<? super ProfileCardProperty> callback);
 
     ProfileCardProperty post(final ProfileCardProperty newProfileCardProperty) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IProfileCardPropertyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IProfileCardPropertyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IProfileCardPropertyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IProfileCardPropertyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IProfileCardPropertyCollectionRequest skipToken(String skipToken);
+	IProfileCardPropertyCollectionRequest skipToken(final String skipToken);
 }

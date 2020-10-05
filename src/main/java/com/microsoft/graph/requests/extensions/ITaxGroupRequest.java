@@ -21,7 +21,7 @@ public interface ITaxGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TaxGroup> callback);
+    void get(final ICallback<? super TaxGroup> callback);
 
     /**
      * Gets the TaxGroup from the service
@@ -36,7 +36,7 @@ public interface ITaxGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TaxGroup> callback);
+    void delete(final ICallback<? super TaxGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITaxGroupRequest extends IHttpRequest {
      * @param sourceTaxGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TaxGroup sourceTaxGroup, final ICallback<TaxGroup> callback);
+    void patch(final TaxGroup sourceTaxGroup, final ICallback<? super TaxGroup> callback);
 
     /**
      * Patches this TaxGroup with a source
@@ -68,7 +68,7 @@ public interface ITaxGroupRequest extends IHttpRequest {
      * @param newTaxGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TaxGroup newTaxGroup, final ICallback<TaxGroup> callback);
+    void post(final TaxGroup newTaxGroup, final ICallback<? super TaxGroup> callback);
 
     /**
      * Posts a TaxGroup with a new object
@@ -85,7 +85,7 @@ public interface ITaxGroupRequest extends IHttpRequest {
      * @param newTaxGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TaxGroup newTaxGroup, final ICallback<TaxGroup> callback);
+    void put(final TaxGroup newTaxGroup, final ICallback<? super TaxGroup> callback);
 
     /**
      * Posts a TaxGroup with a new object

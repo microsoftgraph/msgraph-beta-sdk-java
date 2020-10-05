@@ -21,7 +21,7 @@ public interface ISecurityBaselineTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityBaselineTemplate> callback);
+    void get(final ICallback<? super SecurityBaselineTemplate> callback);
 
     /**
      * Gets the SecurityBaselineTemplate from the service
@@ -36,7 +36,7 @@ public interface ISecurityBaselineTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityBaselineTemplate> callback);
+    void delete(final ICallback<? super SecurityBaselineTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityBaselineTemplateRequest extends IHttpRequest {
      * @param sourceSecurityBaselineTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityBaselineTemplate sourceSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback);
+    void patch(final SecurityBaselineTemplate sourceSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback);
 
     /**
      * Patches this SecurityBaselineTemplate with a source
@@ -68,7 +68,7 @@ public interface ISecurityBaselineTemplateRequest extends IHttpRequest {
      * @param newSecurityBaselineTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback);
+    void post(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback);
 
     /**
      * Posts a SecurityBaselineTemplate with a new object
@@ -85,7 +85,7 @@ public interface ISecurityBaselineTemplateRequest extends IHttpRequest {
      * @param newSecurityBaselineTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback);
+    void put(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback);
 
     /**
      * Posts a SecurityBaselineTemplate with a new object

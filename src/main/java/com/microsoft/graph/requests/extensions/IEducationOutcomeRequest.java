@@ -21,7 +21,7 @@ public interface IEducationOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationOutcome> callback);
+    void get(final ICallback<? super EducationOutcome> callback);
 
     /**
      * Gets the EducationOutcome from the service
@@ -36,7 +36,7 @@ public interface IEducationOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationOutcome> callback);
+    void delete(final ICallback<? super EducationOutcome> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationOutcomeRequest extends IHttpRequest {
      * @param sourceEducationOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationOutcome sourceEducationOutcome, final ICallback<EducationOutcome> callback);
+    void patch(final EducationOutcome sourceEducationOutcome, final ICallback<? super EducationOutcome> callback);
 
     /**
      * Patches this EducationOutcome with a source
@@ -68,7 +68,7 @@ public interface IEducationOutcomeRequest extends IHttpRequest {
      * @param newEducationOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationOutcome newEducationOutcome, final ICallback<EducationOutcome> callback);
+    void post(final EducationOutcome newEducationOutcome, final ICallback<? super EducationOutcome> callback);
 
     /**
      * Posts a EducationOutcome with a new object
@@ -85,7 +85,7 @@ public interface IEducationOutcomeRequest extends IHttpRequest {
      * @param newEducationOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationOutcome newEducationOutcome, final ICallback<EducationOutcome> callback);
+    void put(final EducationOutcome newEducationOutcome, final ICallback<? super EducationOutcome> callback);
 
     /**
      * Posts a EducationOutcome with a new object

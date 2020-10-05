@@ -68,7 +68,7 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementIntent> callback) {
+    public void get(final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementIntent> callback) {
+    public void delete(final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -106,7 +106,7 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      * @param sourceDeviceManagementIntent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntent sourceDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback) {
+    public void patch(final DeviceManagementIntent sourceDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntent);
     }
 
@@ -127,7 +127,7 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      * @param newDeviceManagementIntent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback) {
+    public void post(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntent);
     }
 
@@ -148,7 +148,7 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      * @param newDeviceManagementIntent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback) {
+    public void put(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<? super DeviceManagementIntent> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntent);
     }
 
@@ -182,17 +182,6 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      */
      public IDeviceManagementIntentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementIntentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementIntentRequest)this;
      }
 

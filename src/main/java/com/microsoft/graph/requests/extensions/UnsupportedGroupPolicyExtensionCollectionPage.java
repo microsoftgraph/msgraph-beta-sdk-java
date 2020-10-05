@@ -23,6 +23,6 @@ public class UnsupportedGroupPolicyExtensionCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public UnsupportedGroupPolicyExtensionCollectionPage(final UnsupportedGroupPolicyExtensionCollectionResponse response, final IUnsupportedGroupPolicyExtensionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

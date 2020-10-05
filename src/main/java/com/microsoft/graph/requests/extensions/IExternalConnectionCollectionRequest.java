@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IExternalConnectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IExternalConnectionCollectionPage> callback);
+    void get(final ICallback<? super IExternalConnectionCollectionPage> callback);
 
     IExternalConnectionCollectionPage get() throws ClientException;
 
-    void post(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback);
+    void post(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback);
 
     ExternalConnection post(final ExternalConnection newExternalConnection) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IExternalConnectionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IExternalConnectionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IExternalConnectionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IExternalConnectionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IExternalConnectionCollectionRequest skipToken(String skipToken);
+	IExternalConnectionCollectionRequest skipToken(final String skipToken);
 }

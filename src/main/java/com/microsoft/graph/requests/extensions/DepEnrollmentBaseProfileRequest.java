@@ -52,7 +52,7 @@ public class DepEnrollmentBaseProfileRequest extends BaseRequest implements IDep
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DepEnrollmentBaseProfile> callback) {
+    public void get(final ICallback<? super DepEnrollmentBaseProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class DepEnrollmentBaseProfileRequest extends BaseRequest implements IDep
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DepEnrollmentBaseProfile> callback) {
+    public void delete(final ICallback<? super DepEnrollmentBaseProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class DepEnrollmentBaseProfileRequest extends BaseRequest implements IDep
      * @param sourceDepEnrollmentBaseProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DepEnrollmentBaseProfile sourceDepEnrollmentBaseProfile, final ICallback<DepEnrollmentBaseProfile> callback) {
+    public void patch(final DepEnrollmentBaseProfile sourceDepEnrollmentBaseProfile, final ICallback<? super DepEnrollmentBaseProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceDepEnrollmentBaseProfile);
     }
 
@@ -111,7 +111,7 @@ public class DepEnrollmentBaseProfileRequest extends BaseRequest implements IDep
      * @param newDepEnrollmentBaseProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<DepEnrollmentBaseProfile> callback) {
+    public void post(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<? super DepEnrollmentBaseProfile> callback) {
         send(HttpMethod.POST, callback, newDepEnrollmentBaseProfile);
     }
 
@@ -132,7 +132,7 @@ public class DepEnrollmentBaseProfileRequest extends BaseRequest implements IDep
      * @param newDepEnrollmentBaseProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<DepEnrollmentBaseProfile> callback) {
+    public void put(final DepEnrollmentBaseProfile newDepEnrollmentBaseProfile, final ICallback<? super DepEnrollmentBaseProfile> callback) {
         send(HttpMethod.PUT, callback, newDepEnrollmentBaseProfile);
     }
 
@@ -166,17 +166,6 @@ public class DepEnrollmentBaseProfileRequest extends BaseRequest implements IDep
      */
      public IDepEnrollmentBaseProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DepEnrollmentBaseProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDepEnrollmentBaseProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DepEnrollmentBaseProfileRequest)this;
      }
 

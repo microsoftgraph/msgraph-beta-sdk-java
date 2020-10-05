@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetSharePointSiteUsageSiteCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetSharePointSiteUsageSiteCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetSharePointSiteUsageSiteCountsCollectionPage> callback);
 
     IReportRootGetSharePointSiteUsageSiteCountsCollectionPage get() throws ClientException;
 

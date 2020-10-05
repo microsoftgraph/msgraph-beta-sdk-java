@@ -37,7 +37,7 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectorySettingTemplate> callback) {
+    public void get(final ICallback<? super DirectorySettingTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectorySettingTemplate> callback) {
+    public void delete(final ICallback<? super DirectorySettingTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
      * @param sourceDirectorySettingTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectorySettingTemplate sourceDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback) {
+    public void patch(final DirectorySettingTemplate sourceDirectorySettingTemplate, final ICallback<? super DirectorySettingTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectorySettingTemplate);
     }
 
@@ -96,7 +96,7 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
      * @param newDirectorySettingTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback) {
+    public void post(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<? super DirectorySettingTemplate> callback) {
         send(HttpMethod.POST, callback, newDirectorySettingTemplate);
     }
 
@@ -117,7 +117,7 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
      * @param newDirectorySettingTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback) {
+    public void put(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<? super DirectorySettingTemplate> callback) {
         send(HttpMethod.PUT, callback, newDirectorySettingTemplate);
     }
 
@@ -151,17 +151,6 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
      */
      public IDirectorySettingTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectorySettingTemplateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDirectorySettingTemplateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DirectorySettingTemplateRequest)this;
      }
 

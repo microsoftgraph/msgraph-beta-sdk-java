@@ -35,7 +35,7 @@ public class DepMacOSEnrollmentProfileWithReferenceRequest extends BaseRequest i
         super(requestUrl, client, requestOptions, DepMacOSEnrollmentProfile.class);
     }
 
-    public void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final IJsonBackedObject payload, final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final IJsonBackedObject payload, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class DepMacOSEnrollmentProfileWithReferenceRequest extends BaseRequest i
         return null;
     }
 
-    public void get(final ICallback<DepMacOSEnrollmentProfile> callback) {
+    public void get(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class DepMacOSEnrollmentProfileWithReferenceRequest extends BaseRequest i
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DepMacOSEnrollmentProfile> callback) {
+	public void delete(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class DepMacOSEnrollmentProfileWithReferenceRequest extends BaseRequest i
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback) {
+	public void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
 		send(HttpMethod.PATCH, callback, sourceDepMacOSEnrollmentProfile);
 	}
 
@@ -91,16 +91,6 @@ public class DepMacOSEnrollmentProfileWithReferenceRequest extends BaseRequest i
      */
     public IDepMacOSEnrollmentProfileWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DepMacOSEnrollmentProfileWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDepMacOSEnrollmentProfileWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DepMacOSEnrollmentProfileWithReferenceRequest)this;
     }
 }

@@ -37,7 +37,7 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CredentialUsageSummary> callback) {
+    public void get(final ICallback<? super CredentialUsageSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CredentialUsageSummary> callback) {
+    public void delete(final ICallback<? super CredentialUsageSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
      * @param sourceCredentialUsageSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CredentialUsageSummary sourceCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback) {
+    public void patch(final CredentialUsageSummary sourceCredentialUsageSummary, final ICallback<? super CredentialUsageSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceCredentialUsageSummary);
     }
 
@@ -96,7 +96,7 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
      * @param newCredentialUsageSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback) {
+    public void post(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<? super CredentialUsageSummary> callback) {
         send(HttpMethod.POST, callback, newCredentialUsageSummary);
     }
 
@@ -117,7 +117,7 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
      * @param newCredentialUsageSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback) {
+    public void put(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<? super CredentialUsageSummary> callback) {
         send(HttpMethod.PUT, callback, newCredentialUsageSummary);
     }
 
@@ -151,17 +151,6 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
      */
      public ICredentialUsageSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CredentialUsageSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICredentialUsageSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CredentialUsageSummaryRequest)this;
      }
 

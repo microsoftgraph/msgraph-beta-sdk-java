@@ -21,7 +21,7 @@ public interface IEducationRubricOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationRubricOutcome> callback);
+    void get(final ICallback<? super EducationRubricOutcome> callback);
 
     /**
      * Gets the EducationRubricOutcome from the service
@@ -36,7 +36,7 @@ public interface IEducationRubricOutcomeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationRubricOutcome> callback);
+    void delete(final ICallback<? super EducationRubricOutcome> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationRubricOutcomeRequest extends IHttpRequest {
      * @param sourceEducationRubricOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationRubricOutcome sourceEducationRubricOutcome, final ICallback<EducationRubricOutcome> callback);
+    void patch(final EducationRubricOutcome sourceEducationRubricOutcome, final ICallback<? super EducationRubricOutcome> callback);
 
     /**
      * Patches this EducationRubricOutcome with a source
@@ -68,7 +68,7 @@ public interface IEducationRubricOutcomeRequest extends IHttpRequest {
      * @param newEducationRubricOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationRubricOutcome newEducationRubricOutcome, final ICallback<EducationRubricOutcome> callback);
+    void post(final EducationRubricOutcome newEducationRubricOutcome, final ICallback<? super EducationRubricOutcome> callback);
 
     /**
      * Posts a EducationRubricOutcome with a new object
@@ -85,7 +85,7 @@ public interface IEducationRubricOutcomeRequest extends IHttpRequest {
      * @param newEducationRubricOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationRubricOutcome newEducationRubricOutcome, final ICallback<EducationRubricOutcome> callback);
+    void put(final EducationRubricOutcome newEducationRubricOutcome, final ICallback<? super EducationRubricOutcome> callback);
 
     /**
      * Posts a EducationRubricOutcome with a new object

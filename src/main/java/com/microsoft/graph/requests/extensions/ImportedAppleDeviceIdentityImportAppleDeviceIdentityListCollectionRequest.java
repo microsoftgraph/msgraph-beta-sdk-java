@@ -45,7 +45,7 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionR
     }
 
 
-    public void post(final ICallback<IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionPage> callback) {
+    public void post(final ICallback<? super IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,6 +118,17 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionR
      */
     public IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest)this;
     }
 

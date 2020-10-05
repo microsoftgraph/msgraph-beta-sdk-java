@@ -40,7 +40,7 @@ public class RelationCollectionRequest extends BaseCollectionRequest<RelationCol
         super(requestUrl, client, requestOptions, RelationCollectionResponse.class, IRelationCollectionPage.class);
     }
 
-    public void get(final ICallback<IRelationCollectionPage> callback) {
+    public void get(final ICallback<? super IRelationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RelationCollectionRequest extends BaseCollectionRequest<RelationCol
         return buildFromResponse(response);
     }
 
-    public void post(final Relation newRelation, final ICallback<Relation> callback) {
+    public void post(final Relation newRelation, final ICallback<? super Relation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RelationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class RelationCollectionRequest extends BaseCollectionRequest<RelationCol
      */
     public IRelationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RelationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IRelationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RelationCollectionRequest)this;
     }
 

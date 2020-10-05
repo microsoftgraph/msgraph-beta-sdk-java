@@ -37,7 +37,7 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AgreementAcceptance> callback) {
+    public void get(final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AgreementAcceptance> callback) {
+    public void delete(final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
      * @param sourceAgreementAcceptance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+    public void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreementAcceptance);
     }
 
@@ -96,7 +96,7 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
      * @param newAgreementAcceptance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+    public void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.POST, callback, newAgreementAcceptance);
     }
 
@@ -117,7 +117,7 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
      * @param newAgreementAcceptance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+    public void put(final AgreementAcceptance newAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.PUT, callback, newAgreementAcceptance);
     }
 
@@ -151,17 +151,6 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
      */
      public IAgreementAcceptanceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementAcceptanceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAgreementAcceptanceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AgreementAcceptanceRequest)this;
      }
 

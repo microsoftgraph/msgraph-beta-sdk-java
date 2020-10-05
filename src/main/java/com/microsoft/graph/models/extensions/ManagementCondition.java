@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.DevicePlatformType;
 import com.microsoft.graph.models.extensions.ManagementConditionStatement;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionPage;
 
 
@@ -130,19 +128,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managementConditionStatements")) {
-            final ManagementConditionStatementCollectionResponse response = new ManagementConditionStatementCollectionResponse();
-            if (json.has("managementConditionStatements@odata.nextLink")) {
-                response.nextLink = json.get("managementConditionStatements@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managementConditionStatements").toString(), JsonObject[].class);
-            final ManagementConditionStatement[] array = new ManagementConditionStatement[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagementConditionStatement.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managementConditionStatements = new ManagementConditionStatementCollectionPage(response, null);
+            managementConditionStatements = serializer.deserializeObject(json.get("managementConditionStatements").toString(), ManagementConditionStatementCollectionPage.class);
         }
     }
 }

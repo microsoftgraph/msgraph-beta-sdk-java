@@ -41,7 +41,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidScepCertificateProfile> callback) {
+    public void get(final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidScepCertificateProfile> callback) {
+    public void delete(final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param sourceAndroidScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback) {
+    public void patch(final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidScepCertificateProfile);
     }
 
@@ -100,7 +100,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param newAndroidScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback) {
+    public void post(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidScepCertificateProfile);
     }
 
@@ -121,7 +121,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param newAndroidScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback) {
+    public void put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidScepCertificateProfile);
     }
 
@@ -155,17 +155,6 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      */
      public IAndroidScepCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidScepCertificateProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidScepCertificateProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidScepCertificateProfileRequest)this;
      }
 

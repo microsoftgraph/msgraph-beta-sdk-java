@@ -21,7 +21,7 @@ public interface IMobileAppDependencyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppDependency> callback);
+    void get(final ICallback<? super MobileAppDependency> callback);
 
     /**
      * Gets the MobileAppDependency from the service
@@ -36,7 +36,7 @@ public interface IMobileAppDependencyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppDependency> callback);
+    void delete(final ICallback<? super MobileAppDependency> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppDependencyRequest extends IHttpRequest {
      * @param sourceMobileAppDependency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppDependency sourceMobileAppDependency, final ICallback<MobileAppDependency> callback);
+    void patch(final MobileAppDependency sourceMobileAppDependency, final ICallback<? super MobileAppDependency> callback);
 
     /**
      * Patches this MobileAppDependency with a source
@@ -68,7 +68,7 @@ public interface IMobileAppDependencyRequest extends IHttpRequest {
      * @param newMobileAppDependency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppDependency newMobileAppDependency, final ICallback<MobileAppDependency> callback);
+    void post(final MobileAppDependency newMobileAppDependency, final ICallback<? super MobileAppDependency> callback);
 
     /**
      * Posts a MobileAppDependency with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppDependencyRequest extends IHttpRequest {
      * @param newMobileAppDependency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppDependency newMobileAppDependency, final ICallback<MobileAppDependency> callback);
+    void put(final MobileAppDependency newMobileAppDependency, final ICallback<? super MobileAppDependency> callback);
 
     /**
      * Posts a MobileAppDependency with a new object

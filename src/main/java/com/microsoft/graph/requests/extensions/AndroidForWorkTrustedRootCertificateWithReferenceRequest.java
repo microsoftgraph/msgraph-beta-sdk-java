@@ -35,7 +35,7 @@ public class AndroidForWorkTrustedRootCertificateWithReferenceRequest extends Ba
         super(requestUrl, client, requestOptions, AndroidForWorkTrustedRootCertificate.class);
     }
 
-    public void post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidForWorkTrustedRootCertificate> callback) {
+    public void post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class AndroidForWorkTrustedRootCertificateWithReferenceRequest extends Ba
         return null;
     }
 
-    public void get(final ICallback<AndroidForWorkTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super AndroidForWorkTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class AndroidForWorkTrustedRootCertificateWithReferenceRequest extends Ba
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AndroidForWorkTrustedRootCertificate> callback) {
+	public void delete(final ICallback<? super AndroidForWorkTrustedRootCertificate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class AndroidForWorkTrustedRootCertificateWithReferenceRequest extends Ba
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate, final ICallback<AndroidForWorkTrustedRootCertificate> callback) {
+	public void patch(final AndroidForWorkTrustedRootCertificate sourceAndroidForWorkTrustedRootCertificate, final ICallback<? super AndroidForWorkTrustedRootCertificate> callback) {
 		send(HttpMethod.PATCH, callback, sourceAndroidForWorkTrustedRootCertificate);
 	}
 
@@ -91,16 +91,6 @@ public class AndroidForWorkTrustedRootCertificateWithReferenceRequest extends Ba
      */
     public IAndroidForWorkTrustedRootCertificateWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidForWorkTrustedRootCertificateWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAndroidForWorkTrustedRootCertificateWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AndroidForWorkTrustedRootCertificateWithReferenceRequest)this;
     }
 }

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("definitions")) {
-            final AccessReviewScheduleDefinitionCollectionResponse response = new AccessReviewScheduleDefinitionCollectionResponse();
-            if (json.has("definitions@odata.nextLink")) {
-                response.nextLink = json.get("definitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("definitions").toString(), JsonObject[].class);
-            final AccessReviewScheduleDefinition[] array = new AccessReviewScheduleDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewScheduleDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            definitions = new AccessReviewScheduleDefinitionCollectionPage(response, null);
+            definitions = serializer.deserializeObject(json.get("definitions").toString(), AccessReviewScheduleDefinitionCollectionPage.class);
         }
     }
 }

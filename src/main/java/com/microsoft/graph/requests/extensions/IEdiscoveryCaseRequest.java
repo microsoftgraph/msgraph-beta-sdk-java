@@ -21,7 +21,7 @@ public interface IEdiscoveryCaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EdiscoveryCase> callback);
+    void get(final ICallback<? super EdiscoveryCase> callback);
 
     /**
      * Gets the EdiscoveryCase from the service
@@ -36,7 +36,7 @@ public interface IEdiscoveryCaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EdiscoveryCase> callback);
+    void delete(final ICallback<? super EdiscoveryCase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEdiscoveryCaseRequest extends IHttpRequest {
      * @param sourceEdiscoveryCase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EdiscoveryCase sourceEdiscoveryCase, final ICallback<EdiscoveryCase> callback);
+    void patch(final EdiscoveryCase sourceEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback);
 
     /**
      * Patches this EdiscoveryCase with a source
@@ -68,7 +68,7 @@ public interface IEdiscoveryCaseRequest extends IHttpRequest {
      * @param newEdiscoveryCase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback);
+    void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback);
 
     /**
      * Posts a EdiscoveryCase with a new object
@@ -85,7 +85,7 @@ public interface IEdiscoveryCaseRequest extends IHttpRequest {
      * @param newEdiscoveryCase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback);
+    void put(final EdiscoveryCase newEdiscoveryCase, final ICallback<? super EdiscoveryCase> callback);
 
     /**
      * Posts a EdiscoveryCase with a new object

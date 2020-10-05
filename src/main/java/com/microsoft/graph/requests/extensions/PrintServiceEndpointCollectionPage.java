@@ -23,6 +23,6 @@ public class PrintServiceEndpointCollectionPage extends BaseCollectionPage<Print
      * @param builder  the request builder for the next collection page
      */
     public PrintServiceEndpointCollectionPage(final PrintServiceEndpointCollectionResponse response, final IPrintServiceEndpointCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

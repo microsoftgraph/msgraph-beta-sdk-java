@@ -21,7 +21,7 @@ public interface ISensitivityLabelRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SensitivityLabel> callback);
+    void get(final ICallback<? super SensitivityLabel> callback);
 
     /**
      * Gets the SensitivityLabel from the service
@@ -36,7 +36,7 @@ public interface ISensitivityLabelRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SensitivityLabel> callback);
+    void delete(final ICallback<? super SensitivityLabel> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISensitivityLabelRequest extends IHttpRequest {
      * @param sourceSensitivityLabel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SensitivityLabel sourceSensitivityLabel, final ICallback<SensitivityLabel> callback);
+    void patch(final SensitivityLabel sourceSensitivityLabel, final ICallback<? super SensitivityLabel> callback);
 
     /**
      * Patches this SensitivityLabel with a source
@@ -68,7 +68,7 @@ public interface ISensitivityLabelRequest extends IHttpRequest {
      * @param newSensitivityLabel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback);
+    void post(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback);
 
     /**
      * Posts a SensitivityLabel with a new object
@@ -85,7 +85,7 @@ public interface ISensitivityLabelRequest extends IHttpRequest {
      * @param newSensitivityLabel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback);
+    void put(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback);
 
     /**
      * Posts a SensitivityLabel with a new object

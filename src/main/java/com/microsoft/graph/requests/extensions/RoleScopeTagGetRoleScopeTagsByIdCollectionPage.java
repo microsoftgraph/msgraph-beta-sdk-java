@@ -34,6 +34,6 @@ public class RoleScopeTagGetRoleScopeTagsByIdCollectionPage extends BaseCollecti
      * @param builder The request builder for the next collection page
      */
     public RoleScopeTagGetRoleScopeTagsByIdCollectionPage(final RoleScopeTagGetRoleScopeTagsByIdCollectionResponse response, final IRoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -52,7 +52,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AppleVpnConfiguration> callback) {
+    public void get(final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AppleVpnConfiguration> callback) {
+    public void delete(final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param sourceAppleVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleVpnConfiguration sourceAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback) {
+    public void patch(final AppleVpnConfiguration sourceAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleVpnConfiguration);
     }
 
@@ -111,7 +111,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param newAppleVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback) {
+    public void post(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAppleVpnConfiguration);
     }
 
@@ -132,7 +132,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param newAppleVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback) {
+    public void put(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAppleVpnConfiguration);
     }
 
@@ -166,17 +166,6 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      */
      public IAppleVpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppleVpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAppleVpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AppleVpnConfigurationRequest)this;
      }
 

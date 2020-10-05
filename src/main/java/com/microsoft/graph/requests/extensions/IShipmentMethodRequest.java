@@ -21,7 +21,7 @@ public interface IShipmentMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ShipmentMethod> callback);
+    void get(final ICallback<? super ShipmentMethod> callback);
 
     /**
      * Gets the ShipmentMethod from the service
@@ -36,7 +36,7 @@ public interface IShipmentMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ShipmentMethod> callback);
+    void delete(final ICallback<? super ShipmentMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IShipmentMethodRequest extends IHttpRequest {
      * @param sourceShipmentMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ShipmentMethod sourceShipmentMethod, final ICallback<ShipmentMethod> callback);
+    void patch(final ShipmentMethod sourceShipmentMethod, final ICallback<? super ShipmentMethod> callback);
 
     /**
      * Patches this ShipmentMethod with a source
@@ -68,7 +68,7 @@ public interface IShipmentMethodRequest extends IHttpRequest {
      * @param newShipmentMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback);
+    void post(final ShipmentMethod newShipmentMethod, final ICallback<? super ShipmentMethod> callback);
 
     /**
      * Posts a ShipmentMethod with a new object
@@ -85,7 +85,7 @@ public interface IShipmentMethodRequest extends IHttpRequest {
      * @param newShipmentMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback);
+    void put(final ShipmentMethod newShipmentMethod, final ICallback<? super ShipmentMethod> callback);
 
     /**
      * Posts a ShipmentMethod with a new object

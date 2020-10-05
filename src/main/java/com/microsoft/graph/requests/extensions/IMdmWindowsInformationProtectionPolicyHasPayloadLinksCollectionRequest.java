@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage> callback);
+    void post(final ICallback<? super IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage> callback);
 
     IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionPage post() throws ClientException;
 

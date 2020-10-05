@@ -37,7 +37,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IMobileAppReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<MobileApp> callback);
+    void delete(final ICallback<? super MobileApp> callback);
 
     MobileApp delete() throws ClientException;
 
@@ -63,7 +63,7 @@ public interface IMobileAppReferenceRequest extends IHttpRequest {
      * @param srcMobileApp the MobileApp to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(MobileApp srcMobileApp, final ICallback<MobileApp> callback);
+    void put(MobileApp srcMobileApp, final ICallback<? super MobileApp> callback);
 
     /**
      * Puts the MobileApp

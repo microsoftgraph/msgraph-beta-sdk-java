@@ -37,7 +37,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemInsights> callback) {
+    public void get(final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemInsights> callback) {
+    public void delete(final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param sourceItemInsights the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemInsights sourceItemInsights, final ICallback<ItemInsights> callback) {
+    public void patch(final ItemInsights sourceItemInsights, final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.PATCH, callback, sourceItemInsights);
     }
 
@@ -96,7 +96,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param newItemInsights the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemInsights newItemInsights, final ICallback<ItemInsights> callback) {
+    public void post(final ItemInsights newItemInsights, final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.POST, callback, newItemInsights);
     }
 
@@ -117,7 +117,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param newItemInsights the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemInsights newItemInsights, final ICallback<ItemInsights> callback) {
+    public void put(final ItemInsights newItemInsights, final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.PUT, callback, newItemInsights);
     }
 
@@ -151,17 +151,6 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      */
      public IItemInsightsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemInsightsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemInsightsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemInsightsRequest)this;
      }
 

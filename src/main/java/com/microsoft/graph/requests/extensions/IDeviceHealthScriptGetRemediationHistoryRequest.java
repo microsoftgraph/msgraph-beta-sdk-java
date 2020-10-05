@@ -26,7 +26,7 @@ public interface IDeviceHealthScriptGetRemediationHistoryRequest extends IHttpRe
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceHealthScriptRemediationHistory> callback);
+    void get(final ICallback<? super DeviceHealthScriptRemediationHistory> callback);
 
     /**
      * Gets the DeviceHealthScriptRemediationHistory

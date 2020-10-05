@@ -23,6 +23,6 @@ public class AppLogCollectionRequestCollectionPage extends BaseCollectionPage<Ap
      * @param builder  the request builder for the next collection page
      */
     public AppLogCollectionRequestCollectionPage(final AppLogCollectionRequestCollectionResponse response, final IAppLogCollectionRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IPersonNameRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PersonName> callback);
+    void get(final ICallback<? super PersonName> callback);
 
     /**
      * Gets the PersonName from the service
@@ -36,7 +36,7 @@ public interface IPersonNameRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PersonName> callback);
+    void delete(final ICallback<? super PersonName> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonNameRequest extends IHttpRequest {
      * @param sourcePersonName the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PersonName sourcePersonName, final ICallback<PersonName> callback);
+    void patch(final PersonName sourcePersonName, final ICallback<? super PersonName> callback);
 
     /**
      * Patches this PersonName with a source
@@ -68,7 +68,7 @@ public interface IPersonNameRequest extends IHttpRequest {
      * @param newPersonName the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PersonName newPersonName, final ICallback<PersonName> callback);
+    void post(final PersonName newPersonName, final ICallback<? super PersonName> callback);
 
     /**
      * Posts a PersonName with a new object
@@ -85,7 +85,7 @@ public interface IPersonNameRequest extends IHttpRequest {
      * @param newPersonName the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PersonName newPersonName, final ICallback<PersonName> callback);
+    void put(final PersonName newPersonName, final ICallback<? super PersonName> callback);
 
     /**
      * Posts a PersonName with a new object

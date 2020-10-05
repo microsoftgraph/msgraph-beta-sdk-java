@@ -21,7 +21,7 @@ public interface IMobileAppProvisioningConfigGroupAssignmentRequest extends IHtt
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppProvisioningConfigGroupAssignment> callback);
+    void get(final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback);
 
     /**
      * Gets the MobileAppProvisioningConfigGroupAssignment from the service
@@ -36,7 +36,7 @@ public interface IMobileAppProvisioningConfigGroupAssignmentRequest extends IHtt
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppProvisioningConfigGroupAssignment> callback);
+    void delete(final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppProvisioningConfigGroupAssignmentRequest extends IHtt
      * @param sourceMobileAppProvisioningConfigGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback);
+    void patch(final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback);
 
     /**
      * Patches this MobileAppProvisioningConfigGroupAssignment with a source
@@ -68,7 +68,7 @@ public interface IMobileAppProvisioningConfigGroupAssignmentRequest extends IHtt
      * @param newMobileAppProvisioningConfigGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback);
+    void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback);
 
     /**
      * Posts a MobileAppProvisioningConfigGroupAssignment with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppProvisioningConfigGroupAssignmentRequest extends IHtt
      * @param newMobileAppProvisioningConfigGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback);
+    void put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback);
 
     /**
      * Posts a MobileAppProvisioningConfigGroupAssignment with a new object

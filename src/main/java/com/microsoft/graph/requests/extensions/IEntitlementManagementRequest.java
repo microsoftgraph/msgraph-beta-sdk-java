@@ -21,7 +21,7 @@ public interface IEntitlementManagementRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EntitlementManagement> callback);
+    void get(final ICallback<? super EntitlementManagement> callback);
 
     /**
      * Gets the EntitlementManagement from the service
@@ -36,7 +36,7 @@ public interface IEntitlementManagementRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EntitlementManagement> callback);
+    void delete(final ICallback<? super EntitlementManagement> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEntitlementManagementRequest extends IHttpRequest {
      * @param sourceEntitlementManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EntitlementManagement sourceEntitlementManagement, final ICallback<EntitlementManagement> callback);
+    void patch(final EntitlementManagement sourceEntitlementManagement, final ICallback<? super EntitlementManagement> callback);
 
     /**
      * Patches this EntitlementManagement with a source
@@ -68,7 +68,7 @@ public interface IEntitlementManagementRequest extends IHttpRequest {
      * @param newEntitlementManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EntitlementManagement newEntitlementManagement, final ICallback<EntitlementManagement> callback);
+    void post(final EntitlementManagement newEntitlementManagement, final ICallback<? super EntitlementManagement> callback);
 
     /**
      * Posts a EntitlementManagement with a new object
@@ -85,7 +85,7 @@ public interface IEntitlementManagementRequest extends IHttpRequest {
      * @param newEntitlementManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EntitlementManagement newEntitlementManagement, final ICallback<EntitlementManagement> callback);
+    void put(final EntitlementManagement newEntitlementManagement, final ICallback<? super EntitlementManagement> callback);
 
     /**
      * Posts a EntitlementManagement with a new object

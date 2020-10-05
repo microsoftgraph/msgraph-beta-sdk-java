@@ -23,6 +23,6 @@ public class JournalCollectionPage extends BaseCollectionPage<Journal, IJournalC
      * @param builder  the request builder for the next collection page
      */
     public JournalCollectionPage(final JournalCollectionResponse response, final IJournalCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

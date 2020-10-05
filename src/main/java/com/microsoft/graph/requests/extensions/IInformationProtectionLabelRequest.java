@@ -21,7 +21,7 @@ public interface IInformationProtectionLabelRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<InformationProtectionLabel> callback);
+    void get(final ICallback<? super InformationProtectionLabel> callback);
 
     /**
      * Gets the InformationProtectionLabel from the service
@@ -36,7 +36,7 @@ public interface IInformationProtectionLabelRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<InformationProtectionLabel> callback);
+    void delete(final ICallback<? super InformationProtectionLabel> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInformationProtectionLabelRequest extends IHttpRequest {
      * @param sourceInformationProtectionLabel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final InformationProtectionLabel sourceInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback);
+    void patch(final InformationProtectionLabel sourceInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback);
 
     /**
      * Patches this InformationProtectionLabel with a source
@@ -68,7 +68,7 @@ public interface IInformationProtectionLabelRequest extends IHttpRequest {
      * @param newInformationProtectionLabel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback);
+    void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback);
 
     /**
      * Posts a InformationProtectionLabel with a new object
@@ -85,7 +85,7 @@ public interface IInformationProtectionLabelRequest extends IHttpRequest {
      * @param newInformationProtectionLabel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback);
+    void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback);
 
     /**
      * Posts a InformationProtectionLabel with a new object

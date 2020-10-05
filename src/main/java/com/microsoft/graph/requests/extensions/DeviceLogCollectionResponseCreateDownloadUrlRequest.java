@@ -36,7 +36,7 @@ public class DeviceLogCollectionResponseCreateDownloadUrlRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<String> callback) {
+    public void post(final ICallback<? super String> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -69,17 +69,6 @@ public class DeviceLogCollectionResponseCreateDownloadUrlRequest extends BaseReq
      */
     public IDeviceLogCollectionResponseCreateDownloadUrlRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceLogCollectionResponseCreateDownloadUrlRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDeviceLogCollectionResponseCreateDownloadUrlRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceLogCollectionResponseCreateDownloadUrlRequest)this;
     }
 

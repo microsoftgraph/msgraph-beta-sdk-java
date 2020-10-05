@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICustomerPaymentJournalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICustomerPaymentJournalCollectionPage> callback);
+    void get(final ICallback<? super ICustomerPaymentJournalCollectionPage> callback);
 
     ICustomerPaymentJournalCollectionPage get() throws ClientException;
 
-    void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback);
+    void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback);
 
     CustomerPaymentJournal post(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ICustomerPaymentJournalCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ICustomerPaymentJournalCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICustomerPaymentJournalCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ICustomerPaymentJournalCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICustomerPaymentJournalCollectionRequest skipToken(String skipToken);
+	ICustomerPaymentJournalCollectionRequest skipToken(final String skipToken);
 }

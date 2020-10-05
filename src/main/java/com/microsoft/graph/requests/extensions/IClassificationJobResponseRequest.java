@@ -21,7 +21,7 @@ public interface IClassificationJobResponseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ClassificationJobResponse> callback);
+    void get(final ICallback<? super ClassificationJobResponse> callback);
 
     /**
      * Gets the ClassificationJobResponse from the service
@@ -36,7 +36,7 @@ public interface IClassificationJobResponseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ClassificationJobResponse> callback);
+    void delete(final ICallback<? super ClassificationJobResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IClassificationJobResponseRequest extends IHttpRequest {
      * @param sourceClassificationJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ClassificationJobResponse sourceClassificationJobResponse, final ICallback<ClassificationJobResponse> callback);
+    void patch(final ClassificationJobResponse sourceClassificationJobResponse, final ICallback<? super ClassificationJobResponse> callback);
 
     /**
      * Patches this ClassificationJobResponse with a source
@@ -68,7 +68,7 @@ public interface IClassificationJobResponseRequest extends IHttpRequest {
      * @param newClassificationJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ClassificationJobResponse newClassificationJobResponse, final ICallback<ClassificationJobResponse> callback);
+    void post(final ClassificationJobResponse newClassificationJobResponse, final ICallback<? super ClassificationJobResponse> callback);
 
     /**
      * Posts a ClassificationJobResponse with a new object
@@ -85,7 +85,7 @@ public interface IClassificationJobResponseRequest extends IHttpRequest {
      * @param newClassificationJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ClassificationJobResponse newClassificationJobResponse, final ICallback<ClassificationJobResponse> callback);
+    void put(final ClassificationJobResponse newClassificationJobResponse, final ICallback<? super ClassificationJobResponse> callback);
 
     /**
      * Posts a ClassificationJobResponse with a new object

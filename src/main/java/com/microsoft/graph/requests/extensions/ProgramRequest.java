@@ -41,7 +41,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Program> callback) {
+    public void get(final ICallback<? super Program> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Program> callback) {
+    public void delete(final ICallback<? super Program> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param sourceProgram the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Program sourceProgram, final ICallback<Program> callback) {
+    public void patch(final Program sourceProgram, final ICallback<? super Program> callback) {
         send(HttpMethod.PATCH, callback, sourceProgram);
     }
 
@@ -100,7 +100,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param newProgram the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Program newProgram, final ICallback<Program> callback) {
+    public void post(final Program newProgram, final ICallback<? super Program> callback) {
         send(HttpMethod.POST, callback, newProgram);
     }
 
@@ -121,7 +121,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param newProgram the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Program newProgram, final ICallback<Program> callback) {
+    public void put(final Program newProgram, final ICallback<? super Program> callback) {
         send(HttpMethod.PUT, callback, newProgram);
     }
 
@@ -155,17 +155,6 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      */
      public IProgramRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProgramRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IProgramRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ProgramRequest)this;
      }
 

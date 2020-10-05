@@ -23,6 +23,6 @@ public class MobileAppProvisioningConfigGroupAssignmentCollectionPage extends Ba
      * @param builder  the request builder for the next collection page
      */
     public MobileAppProvisioningConfigGroupAssignmentCollectionPage(final MobileAppProvisioningConfigGroupAssignmentCollectionResponse response, final IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

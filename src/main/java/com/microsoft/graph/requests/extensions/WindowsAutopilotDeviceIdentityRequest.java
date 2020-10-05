@@ -39,7 +39,7 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+    public void get(final ICallback<? super WindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+    public void delete(final ICallback<? super WindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
      * @param sourceWindowsAutopilotDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAutopilotDeviceIdentity sourceWindowsAutopilotDeviceIdentity, final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+    public void patch(final WindowsAutopilotDeviceIdentity sourceWindowsAutopilotDeviceIdentity, final ICallback<? super WindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAutopilotDeviceIdentity);
     }
 
@@ -98,7 +98,7 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
      * @param newWindowsAutopilotDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+    public void post(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<? super WindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.POST, callback, newWindowsAutopilotDeviceIdentity);
     }
 
@@ -119,7 +119,7 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
      * @param newWindowsAutopilotDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+    public void put(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<? super WindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.PUT, callback, newWindowsAutopilotDeviceIdentity);
     }
 
@@ -153,17 +153,6 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
      */
      public IWindowsAutopilotDeviceIdentityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAutopilotDeviceIdentityRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsAutopilotDeviceIdentityRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsAutopilotDeviceIdentityRequest)this;
      }
 

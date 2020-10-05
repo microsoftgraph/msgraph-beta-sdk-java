@@ -52,7 +52,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementSettingDefinition> callback) {
+    public void get(final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementSettingDefinition> callback) {
+    public void delete(final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param sourceDeviceManagementSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback) {
+    public void patch(final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementSettingDefinition);
     }
 
@@ -111,7 +111,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param newDeviceManagementSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback) {
+    public void post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementSettingDefinition);
     }
 
@@ -132,7 +132,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param newDeviceManagementSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback) {
+    public void put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementSettingDefinition);
     }
 
@@ -166,17 +166,6 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      */
      public IDeviceManagementSettingDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementSettingDefinitionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementSettingDefinitionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementSettingDefinitionRequest)this;
      }
 

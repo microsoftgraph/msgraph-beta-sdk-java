@@ -35,7 +35,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
         super(requestUrl, client, requestOptions, ManagedEBookCategory.class);
     }
 
-    public void post(final ManagedEBookCategory newManagedEBookCategory, final IJsonBackedObject payload, final ICallback<ManagedEBookCategory> callback) {
+    public void post(final ManagedEBookCategory newManagedEBookCategory, final IJsonBackedObject payload, final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
         return null;
     }
 
-    public void get(final ICallback<ManagedEBookCategory> callback) {
+    public void get(final ICallback<? super ManagedEBookCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ManagedEBookCategory> callback) {
+	public void delete(final ICallback<? super ManagedEBookCategory> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
+	public void patch(final ManagedEBookCategory sourceManagedEBookCategory, final ICallback<? super ManagedEBookCategory> callback) {
 		send(HttpMethod.PATCH, callback, sourceManagedEBookCategory);
 	}
 
@@ -91,16 +91,6 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
      */
     public IManagedEBookCategoryWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedEBookCategoryWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagedEBookCategoryWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedEBookCategoryWithReferenceRequest)this;
     }
 }

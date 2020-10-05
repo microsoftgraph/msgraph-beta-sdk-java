@@ -40,7 +40,7 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerEnrollmentProfileCollectionResponse.class, IAndroidDeviceOwnerEnrollmentProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<IAndroidDeviceOwnerEnrollmentProfileCollectionPage> callback) {
+    public void get(final ICallback<? super IAndroidDeviceOwnerEnrollmentProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback) {
+    public void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidDeviceOwnerEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionRequest extends BaseCo
      */
     public IAndroidDeviceOwnerEnrollmentProfileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidDeviceOwnerEnrollmentProfileCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAndroidDeviceOwnerEnrollmentProfileCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AndroidDeviceOwnerEnrollmentProfileCollectionRequest)this;
     }
 

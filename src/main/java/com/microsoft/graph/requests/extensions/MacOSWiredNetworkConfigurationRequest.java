@@ -41,7 +41,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSWiredNetworkConfiguration> callback) {
+    public void get(final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSWiredNetworkConfiguration> callback) {
+    public void delete(final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param sourceMacOSWiredNetworkConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration, final ICallback<MacOSWiredNetworkConfiguration> callback) {
+    public void patch(final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSWiredNetworkConfiguration);
     }
 
@@ -100,7 +100,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param newMacOSWiredNetworkConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<MacOSWiredNetworkConfiguration> callback) {
+    public void post(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSWiredNetworkConfiguration);
     }
 
@@ -121,7 +121,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param newMacOSWiredNetworkConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<MacOSWiredNetworkConfiguration> callback) {
+    public void put(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSWiredNetworkConfiguration);
     }
 
@@ -155,17 +155,6 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      */
      public IMacOSWiredNetworkConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSWiredNetworkConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSWiredNetworkConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSWiredNetworkConfigurationRequest)this;
      }
 

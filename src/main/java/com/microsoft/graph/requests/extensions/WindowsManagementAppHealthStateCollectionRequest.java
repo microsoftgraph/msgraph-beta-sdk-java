@@ -40,7 +40,7 @@ public class WindowsManagementAppHealthStateCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, WindowsManagementAppHealthStateCollectionResponse.class, IWindowsManagementAppHealthStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsManagementAppHealthStateCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsManagementAppHealthStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsManagementAppHealthStateCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback) {
+    public void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsManagementAppHealthStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class WindowsManagementAppHealthStateCollectionRequest extends BaseCollec
      */
     public IWindowsManagementAppHealthStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsManagementAppHealthStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsManagementAppHealthStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsManagementAppHealthStateCollectionRequest)this;
     }
 

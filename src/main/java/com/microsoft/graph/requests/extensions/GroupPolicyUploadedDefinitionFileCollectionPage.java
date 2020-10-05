@@ -23,6 +23,6 @@ public class GroupPolicyUploadedDefinitionFileCollectionPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public GroupPolicyUploadedDefinitionFileCollectionPage(final GroupPolicyUploadedDefinitionFileCollectionResponse response, final IGroupPolicyUploadedDefinitionFileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

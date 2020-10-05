@@ -39,7 +39,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkVpnConfiguration> callback) {
+    public void get(final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkVpnConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param sourceAndroidForWorkVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkVpnConfiguration sourceAndroidForWorkVpnConfiguration, final ICallback<AndroidForWorkVpnConfiguration> callback) {
+    public void patch(final AndroidForWorkVpnConfiguration sourceAndroidForWorkVpnConfiguration, final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkVpnConfiguration);
     }
 
@@ -98,7 +98,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param newAndroidForWorkVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<AndroidForWorkVpnConfiguration> callback) {
+    public void post(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkVpnConfiguration);
     }
 
@@ -119,7 +119,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param newAndroidForWorkVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<AndroidForWorkVpnConfiguration> callback) {
+    public void put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkVpnConfiguration);
     }
 
@@ -153,17 +153,6 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      */
      public IAndroidForWorkVpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkVpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkVpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkVpnConfigurationRequest)this;
      }
 

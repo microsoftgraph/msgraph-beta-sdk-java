@@ -21,7 +21,7 @@ public interface IMacOSCertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSCertificateProfileBase> callback);
+    void get(final ICallback<? super MacOSCertificateProfileBase> callback);
 
     /**
      * Gets the MacOSCertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IMacOSCertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSCertificateProfileBase> callback);
+    void delete(final ICallback<? super MacOSCertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSCertificateProfileBaseRequest extends IHttpRequest {
      * @param sourceMacOSCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback);
+    void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback);
 
     /**
      * Patches this MacOSCertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IMacOSCertificateProfileBaseRequest extends IHttpRequest {
      * @param newMacOSCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback);
+    void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback);
 
     /**
      * Posts a MacOSCertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IMacOSCertificateProfileBaseRequest extends IHttpRequest {
      * @param newMacOSCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback);
+    void put(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback);
 
     /**
      * Posts a MacOSCertificateProfileBase with a new object

@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAccessPackageWithReferenceRequest extends IHttpRequest {
 
-    void post(final AccessPackage newAccessPackage, final IJsonBackedObject payload, final ICallback<AccessPackage> callback);
+    void post(final AccessPackage newAccessPackage, final IJsonBackedObject payload, final ICallback<? super AccessPackage> callback);
 
     AccessPackage post(final AccessPackage newAccessPackage, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AccessPackage> callback);
+    void get(final ICallback<? super AccessPackage> callback);
 
     AccessPackage get() throws ClientException;
 
-	void delete(final ICallback<AccessPackage> callback);
+	void delete(final ICallback<? super AccessPackage> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AccessPackage sourceAccessPackage, final ICallback<AccessPackage> callback);
+	void patch(final AccessPackage sourceAccessPackage, final ICallback<? super AccessPackage> callback);
 
 	AccessPackage patch(final AccessPackage sourceAccessPackage) throws ClientException;
 

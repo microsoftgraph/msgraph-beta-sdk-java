@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceManagementIntentCompareCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementIntentCompareCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementIntentCompareCollectionPage> callback);
 
     IDeviceManagementIntentCompareCollectionPage get() throws ClientException;
 

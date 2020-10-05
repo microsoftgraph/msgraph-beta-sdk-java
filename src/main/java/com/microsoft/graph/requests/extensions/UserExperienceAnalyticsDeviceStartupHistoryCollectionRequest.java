@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryCollectionRequest extend
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse.class, IUserExperienceAnalyticsDeviceStartupHistoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserExperienceAnalyticsDeviceStartupHistoryCollectionPage> callback) {
+    public void get(final ICallback<? super IUserExperienceAnalyticsDeviceStartupHistoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryCollectionRequest extend
         return buildFromResponse(response);
     }
 
-    public void post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class UserExperienceAnalyticsDeviceStartupHistoryCollectionRequest extend
      */
     public IUserExperienceAnalyticsDeviceStartupHistoryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserExperienceAnalyticsDeviceStartupHistoryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDeviceStartupHistoryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserExperienceAnalyticsDeviceStartupHistoryCollectionRequest)this;
     }
 

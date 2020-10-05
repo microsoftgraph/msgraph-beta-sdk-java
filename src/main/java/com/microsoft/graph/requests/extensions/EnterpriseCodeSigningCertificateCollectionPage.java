@@ -23,6 +23,6 @@ public class EnterpriseCodeSigningCertificateCollectionPage extends BaseCollecti
      * @param builder  the request builder for the next collection page
      */
     public EnterpriseCodeSigningCertificateCollectionPage(final EnterpriseCodeSigningCertificateCollectionResponse response, final IEnterpriseCodeSigningCertificateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

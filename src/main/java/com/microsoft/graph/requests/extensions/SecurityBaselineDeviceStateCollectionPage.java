@@ -23,6 +23,6 @@ public class SecurityBaselineDeviceStateCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public SecurityBaselineDeviceStateCollectionPage(final SecurityBaselineDeviceStateCollectionResponse response, final ISecurityBaselineDeviceStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

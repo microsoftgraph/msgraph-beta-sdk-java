@@ -39,7 +39,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrivilegedSignupStatus> callback) {
+    public void get(final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrivilegedSignupStatus> callback) {
+    public void delete(final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param sourcePrivilegedSignupStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedSignupStatus sourcePrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback) {
+    public void patch(final PrivilegedSignupStatus sourcePrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedSignupStatus);
     }
 
@@ -98,7 +98,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param newPrivilegedSignupStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback) {
+    public void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.POST, callback, newPrivilegedSignupStatus);
     }
 
@@ -119,7 +119,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param newPrivilegedSignupStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback) {
+    public void put(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedSignupStatus);
     }
 
@@ -153,17 +153,6 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      */
      public IPrivilegedSignupStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedSignupStatusRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrivilegedSignupStatusRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrivilegedSignupStatusRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IRegionalAndLanguageSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RegionalAndLanguageSettings> callback);
+    void get(final ICallback<? super RegionalAndLanguageSettings> callback);
 
     /**
      * Gets the RegionalAndLanguageSettings from the service
@@ -36,7 +36,7 @@ public interface IRegionalAndLanguageSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RegionalAndLanguageSettings> callback);
+    void delete(final ICallback<? super RegionalAndLanguageSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRegionalAndLanguageSettingsRequest extends IHttpRequest {
      * @param sourceRegionalAndLanguageSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RegionalAndLanguageSettings sourceRegionalAndLanguageSettings, final ICallback<RegionalAndLanguageSettings> callback);
+    void patch(final RegionalAndLanguageSettings sourceRegionalAndLanguageSettings, final ICallback<? super RegionalAndLanguageSettings> callback);
 
     /**
      * Patches this RegionalAndLanguageSettings with a source
@@ -68,7 +68,7 @@ public interface IRegionalAndLanguageSettingsRequest extends IHttpRequest {
      * @param newRegionalAndLanguageSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<RegionalAndLanguageSettings> callback);
+    void post(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<? super RegionalAndLanguageSettings> callback);
 
     /**
      * Posts a RegionalAndLanguageSettings with a new object
@@ -85,7 +85,7 @@ public interface IRegionalAndLanguageSettingsRequest extends IHttpRequest {
      * @param newRegionalAndLanguageSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<RegionalAndLanguageSettings> callback);
+    void put(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<? super RegionalAndLanguageSettings> callback);
 
     /**
      * Posts a RegionalAndLanguageSettings with a new object

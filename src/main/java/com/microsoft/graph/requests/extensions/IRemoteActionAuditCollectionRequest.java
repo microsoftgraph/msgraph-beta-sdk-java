@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRemoteActionAuditCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRemoteActionAuditCollectionPage> callback);
+    void get(final ICallback<? super IRemoteActionAuditCollectionPage> callback);
 
     IRemoteActionAuditCollectionPage get() throws ClientException;
 
-    void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback);
+    void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback);
 
     RemoteActionAudit post(final RemoteActionAudit newRemoteActionAudit) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IRemoteActionAuditCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRemoteActionAuditCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRemoteActionAuditCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IRemoteActionAuditCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRemoteActionAuditCollectionRequest skipToken(String skipToken);
+	IRemoteActionAuditCollectionRequest skipToken(final String skipToken);
 }

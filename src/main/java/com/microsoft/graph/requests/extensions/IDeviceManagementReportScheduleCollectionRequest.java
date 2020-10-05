@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementReportScheduleCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementReportScheduleCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementReportScheduleCollectionPage> callback);
 
     IDeviceManagementReportScheduleCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<DeviceManagementReportSchedule> callback);
+    void post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<? super DeviceManagementReportSchedule> callback);
 
     DeviceManagementReportSchedule post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IDeviceManagementReportScheduleCollectionRequest extends IHttpR
      * @return the updated request
      */
     IDeviceManagementReportScheduleCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceManagementReportScheduleCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IDeviceManagementReportScheduleCollectionRequest extends IHttpR
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementReportScheduleCollectionRequest skipToken(String skipToken);
+	IDeviceManagementReportScheduleCollectionRequest skipToken(final String skipToken);
 }

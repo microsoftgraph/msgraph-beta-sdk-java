@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindows81TrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<Windows81TrustedRootCertificate> callback);
+    void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     Windows81TrustedRootCertificate post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<Windows81TrustedRootCertificate> callback);
+    void get(final ICallback<? super Windows81TrustedRootCertificate> callback);
 
     Windows81TrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<Windows81TrustedRootCertificate> callback);
+	void delete(final ICallback<? super Windows81TrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+	void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback);
 
 	Windows81TrustedRootCertificate patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate) throws ClientException;
 

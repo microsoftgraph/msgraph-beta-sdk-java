@@ -37,7 +37,7 @@ public class BusinessFlowTemplateRequest extends BaseRequest implements IBusines
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<BusinessFlowTemplate> callback) {
+    public void get(final ICallback<? super BusinessFlowTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class BusinessFlowTemplateRequest extends BaseRequest implements IBusines
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<BusinessFlowTemplate> callback) {
+    public void delete(final ICallback<? super BusinessFlowTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class BusinessFlowTemplateRequest extends BaseRequest implements IBusines
      * @param sourceBusinessFlowTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BusinessFlowTemplate sourceBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback) {
+    public void patch(final BusinessFlowTemplate sourceBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceBusinessFlowTemplate);
     }
 
@@ -96,7 +96,7 @@ public class BusinessFlowTemplateRequest extends BaseRequest implements IBusines
      * @param newBusinessFlowTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback) {
+    public void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback) {
         send(HttpMethod.POST, callback, newBusinessFlowTemplate);
     }
 
@@ -117,7 +117,7 @@ public class BusinessFlowTemplateRequest extends BaseRequest implements IBusines
      * @param newBusinessFlowTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback) {
+    public void put(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<? super BusinessFlowTemplate> callback) {
         send(HttpMethod.PUT, callback, newBusinessFlowTemplate);
     }
 
@@ -151,17 +151,6 @@ public class BusinessFlowTemplateRequest extends BaseRequest implements IBusines
      */
      public IBusinessFlowTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BusinessFlowTemplateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IBusinessFlowTemplateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BusinessFlowTemplateRequest)this;
      }
 

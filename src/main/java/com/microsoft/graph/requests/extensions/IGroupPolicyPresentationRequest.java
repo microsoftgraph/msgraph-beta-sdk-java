@@ -21,7 +21,7 @@ public interface IGroupPolicyPresentationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyPresentation> callback);
+    void get(final ICallback<? super GroupPolicyPresentation> callback);
 
     /**
      * Gets the GroupPolicyPresentation from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyPresentationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyPresentation> callback);
+    void delete(final ICallback<? super GroupPolicyPresentation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyPresentationRequest extends IHttpRequest {
      * @param sourceGroupPolicyPresentation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyPresentation sourceGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback);
+    void patch(final GroupPolicyPresentation sourceGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback);
 
     /**
      * Patches this GroupPolicyPresentation with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyPresentationRequest extends IHttpRequest {
      * @param newGroupPolicyPresentation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback);
+    void post(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback);
 
     /**
      * Posts a GroupPolicyPresentation with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyPresentationRequest extends IHttpRequest {
      * @param newGroupPolicyPresentation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback);
+    void put(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<? super GroupPolicyPresentation> callback);
 
     /**
      * Posts a GroupPolicyPresentation with a new object

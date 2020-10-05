@@ -21,7 +21,7 @@ public interface IOffice365GroupsActivityStorageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365GroupsActivityStorage> callback);
+    void get(final ICallback<? super Office365GroupsActivityStorage> callback);
 
     /**
      * Gets the Office365GroupsActivityStorage from the service
@@ -36,7 +36,7 @@ public interface IOffice365GroupsActivityStorageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365GroupsActivityStorage> callback);
+    void delete(final ICallback<? super Office365GroupsActivityStorage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365GroupsActivityStorageRequest extends IHttpRequest {
      * @param sourceOffice365GroupsActivityStorage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365GroupsActivityStorage sourceOffice365GroupsActivityStorage, final ICallback<Office365GroupsActivityStorage> callback);
+    void patch(final Office365GroupsActivityStorage sourceOffice365GroupsActivityStorage, final ICallback<? super Office365GroupsActivityStorage> callback);
 
     /**
      * Patches this Office365GroupsActivityStorage with a source
@@ -68,7 +68,7 @@ public interface IOffice365GroupsActivityStorageRequest extends IHttpRequest {
      * @param newOffice365GroupsActivityStorage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365GroupsActivityStorage newOffice365GroupsActivityStorage, final ICallback<Office365GroupsActivityStorage> callback);
+    void post(final Office365GroupsActivityStorage newOffice365GroupsActivityStorage, final ICallback<? super Office365GroupsActivityStorage> callback);
 
     /**
      * Posts a Office365GroupsActivityStorage with a new object
@@ -85,7 +85,7 @@ public interface IOffice365GroupsActivityStorageRequest extends IHttpRequest {
      * @param newOffice365GroupsActivityStorage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365GroupsActivityStorage newOffice365GroupsActivityStorage, final ICallback<Office365GroupsActivityStorage> callback);
+    void put(final Office365GroupsActivityStorage newOffice365GroupsActivityStorage, final ICallback<? super Office365GroupsActivityStorage> callback);
 
     /**
      * Posts a Office365GroupsActivityStorage with a new object

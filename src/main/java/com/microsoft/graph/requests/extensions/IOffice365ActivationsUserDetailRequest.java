@@ -21,7 +21,7 @@ public interface IOffice365ActivationsUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Office365ActivationsUserDetail> callback);
+    void get(final ICallback<? super Office365ActivationsUserDetail> callback);
 
     /**
      * Gets the Office365ActivationsUserDetail from the service
@@ -36,7 +36,7 @@ public interface IOffice365ActivationsUserDetailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Office365ActivationsUserDetail> callback);
+    void delete(final ICallback<? super Office365ActivationsUserDetail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOffice365ActivationsUserDetailRequest extends IHttpRequest {
      * @param sourceOffice365ActivationsUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Office365ActivationsUserDetail sourceOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback);
+    void patch(final Office365ActivationsUserDetail sourceOffice365ActivationsUserDetail, final ICallback<? super Office365ActivationsUserDetail> callback);
 
     /**
      * Patches this Office365ActivationsUserDetail with a source
@@ -68,7 +68,7 @@ public interface IOffice365ActivationsUserDetailRequest extends IHttpRequest {
      * @param newOffice365ActivationsUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback);
+    void post(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<? super Office365ActivationsUserDetail> callback);
 
     /**
      * Posts a Office365ActivationsUserDetail with a new object
@@ -85,7 +85,7 @@ public interface IOffice365ActivationsUserDetailRequest extends IHttpRequest {
      * @param newOffice365ActivationsUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback);
+    void put(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<? super Office365ActivationsUserDetail> callback);
 
     /**
      * Posts a Office365ActivationsUserDetail with a new object

@@ -6,16 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ErrorCode;
 import com.microsoft.graph.models.generated.PolicySetStatus;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
 import com.microsoft.graph.models.extensions.PolicySetItem;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PolicySetAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.PolicySetAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.PolicySetItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.PolicySetItemCollectionPage;
 
 
@@ -152,35 +149,11 @@ public class PolicySet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final PolicySetAssignmentCollectionResponse response = new PolicySetAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final PolicySetAssignment[] array = new PolicySetAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PolicySetAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new PolicySetAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), PolicySetAssignmentCollectionPage.class);
         }
 
         if (json.has("items")) {
-            final PolicySetItemCollectionResponse response = new PolicySetItemCollectionResponse();
-            if (json.has("items@odata.nextLink")) {
-                response.nextLink = json.get("items@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
-            final PolicySetItem[] array = new PolicySetItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PolicySetItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            items = new PolicySetItemCollectionPage(response, null);
+            items = serializer.deserializeObject(json.get("items").toString(), PolicySetItemCollectionPage.class);
         }
     }
 }

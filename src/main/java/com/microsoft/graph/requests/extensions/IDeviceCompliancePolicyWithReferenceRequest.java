@@ -42,19 +42,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceCompliancePolicyWithReferenceRequest extends IHttpRequest {
 
-    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final IJsonBackedObject payload, final ICallback<DeviceCompliancePolicy> callback);
+    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final IJsonBackedObject payload, final ICallback<? super DeviceCompliancePolicy> callback);
 
     DeviceCompliancePolicy post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<DeviceCompliancePolicy> callback);
+    void get(final ICallback<? super DeviceCompliancePolicy> callback);
 
     DeviceCompliancePolicy get() throws ClientException;
 
-	void delete(final ICallback<DeviceCompliancePolicy> callback);
+	void delete(final ICallback<? super DeviceCompliancePolicy> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
+	void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
 
 	DeviceCompliancePolicy patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy) throws ClientException;
 

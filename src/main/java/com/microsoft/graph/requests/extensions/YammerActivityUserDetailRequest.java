@@ -37,7 +37,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<YammerActivityUserDetail> callback) {
+    public void get(final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<YammerActivityUserDetail> callback) {
+    public void delete(final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param sourceYammerActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerActivityUserDetail sourceYammerActivityUserDetail, final ICallback<YammerActivityUserDetail> callback) {
+    public void patch(final YammerActivityUserDetail sourceYammerActivityUserDetail, final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerActivityUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param newYammerActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<YammerActivityUserDetail> callback) {
+    public void post(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newYammerActivityUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param newYammerActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<YammerActivityUserDetail> callback) {
+    public void put(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newYammerActivityUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      */
      public IYammerActivityUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerActivityUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IYammerActivityUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (YammerActivityUserDetailRequest)this;
      }
 

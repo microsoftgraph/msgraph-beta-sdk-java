@@ -21,7 +21,7 @@ public interface IAppLogCollectionRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppLogCollectionRequest> callback);
+    void get(final ICallback<? super AppLogCollectionRequest> callback);
 
     /**
      * Gets the AppLogCollectionRequest from the service
@@ -36,7 +36,7 @@ public interface IAppLogCollectionRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppLogCollectionRequest> callback);
+    void delete(final ICallback<? super AppLogCollectionRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppLogCollectionRequestRequest extends IHttpRequest {
      * @param sourceAppLogCollectionRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppLogCollectionRequest sourceAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback);
+    void patch(final AppLogCollectionRequest sourceAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback);
 
     /**
      * Patches this AppLogCollectionRequest with a source
@@ -68,7 +68,7 @@ public interface IAppLogCollectionRequestRequest extends IHttpRequest {
      * @param newAppLogCollectionRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback);
+    void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback);
 
     /**
      * Posts a AppLogCollectionRequest with a new object
@@ -85,7 +85,7 @@ public interface IAppLogCollectionRequestRequest extends IHttpRequest {
      * @param newAppLogCollectionRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback);
+    void put(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback);
 
     /**
      * Posts a AppLogCollectionRequest with a new object

@@ -37,7 +37,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IntuneBrandingProfileAssignment> callback) {
+    public void get(final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IntuneBrandingProfileAssignment> callback) {
+    public void delete(final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param sourceIntuneBrandingProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback) {
+    public void patch(final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceIntuneBrandingProfileAssignment);
     }
 
@@ -96,7 +96,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param newIntuneBrandingProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback) {
+    public void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.POST, callback, newIntuneBrandingProfileAssignment);
     }
 
@@ -117,7 +117,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param newIntuneBrandingProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback) {
+    public void put(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.PUT, callback, newIntuneBrandingProfileAssignment);
     }
 
@@ -151,17 +151,6 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      */
      public IIntuneBrandingProfileAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IntuneBrandingProfileAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIntuneBrandingProfileAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IntuneBrandingProfileAssignmentRequest)this;
      }
 

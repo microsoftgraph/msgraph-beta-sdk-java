@@ -21,7 +21,7 @@ public interface IDeviceManagementExchangeOnPremisesPolicyRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+    void get(final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback);
 
     /**
      * Gets the DeviceManagementExchangeOnPremisesPolicy from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementExchangeOnPremisesPolicyRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+    void delete(final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementExchangeOnPremisesPolicyRequest extends IHttpR
      * @param sourceDeviceManagementExchangeOnPremisesPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementExchangeOnPremisesPolicy sourceDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+    void patch(final DeviceManagementExchangeOnPremisesPolicy sourceDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback);
 
     /**
      * Patches this DeviceManagementExchangeOnPremisesPolicy with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementExchangeOnPremisesPolicyRequest extends IHttpR
      * @param newDeviceManagementExchangeOnPremisesPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+    void post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback);
 
     /**
      * Posts a DeviceManagementExchangeOnPremisesPolicy with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementExchangeOnPremisesPolicyRequest extends IHttpR
      * @param newDeviceManagementExchangeOnPremisesPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+    void put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback);
 
     /**
      * Posts a DeviceManagementExchangeOnPremisesPolicy with a new object

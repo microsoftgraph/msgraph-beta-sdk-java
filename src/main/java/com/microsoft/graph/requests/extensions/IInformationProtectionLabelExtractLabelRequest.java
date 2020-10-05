@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IInformationProtectionLabelExtractLabelRequest extends IHttpRequest {
 
-    void post(final ICallback<InformationProtectionContentLabel> callback);
+    void post(final ICallback<? super InformationProtectionContentLabel> callback);
 
     InformationProtectionContentLabel post() throws ClientException;
 

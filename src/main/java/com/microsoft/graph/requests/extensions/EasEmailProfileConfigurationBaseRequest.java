@@ -52,7 +52,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EasEmailProfileConfigurationBase> callback) {
+    public void get(final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EasEmailProfileConfigurationBase> callback) {
+    public void delete(final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param sourceEasEmailProfileConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback) {
+    public void patch(final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.PATCH, callback, sourceEasEmailProfileConfigurationBase);
     }
 
@@ -111,7 +111,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param newEasEmailProfileConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback) {
+    public void post(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.POST, callback, newEasEmailProfileConfigurationBase);
     }
 
@@ -132,7 +132,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param newEasEmailProfileConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback) {
+    public void put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.PUT, callback, newEasEmailProfileConfigurationBase);
     }
 
@@ -166,17 +166,6 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      */
      public IEasEmailProfileConfigurationBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EasEmailProfileConfigurationBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEasEmailProfileConfigurationBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EasEmailProfileConfigurationBaseRequest)this;
      }
 

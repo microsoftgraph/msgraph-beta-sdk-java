@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDataClassificationServiceClassifyExactMatchesRequest extends IHttpRequest {
 
-    void post(final ICallback<ExactMatchClassificationResult> callback);
+    void post(final ICallback<? super ExactMatchClassificationResult> callback);
 
     ExactMatchClassificationResult post() throws ClientException;
 

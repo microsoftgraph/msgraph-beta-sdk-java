@@ -34,6 +34,6 @@ public class MobileAppGetTopMobileAppsCollectionPage extends BaseCollectionPage<
      * @param builder The request builder for the next collection page
      */
     public MobileAppGetTopMobileAppsCollectionPage(final MobileAppGetTopMobileAppsCollectionResponse response, final IMobileAppGetTopMobileAppsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

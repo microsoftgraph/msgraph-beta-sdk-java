@@ -23,6 +23,6 @@ public class AccessPackageAssignmentPolicyCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public AccessPackageAssignmentPolicyCollectionPage(final AccessPackageAssignmentPolicyCollectionResponse response, final IAccessPackageAssignmentPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

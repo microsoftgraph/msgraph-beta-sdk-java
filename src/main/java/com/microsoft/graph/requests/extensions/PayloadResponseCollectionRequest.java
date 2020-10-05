@@ -39,7 +39,7 @@ public class PayloadResponseCollectionRequest extends BaseCollectionRequest<Payl
         super(requestUrl, client, requestOptions, PayloadResponseCollectionResponse.class, IPayloadResponseCollectionPage.class);
     }
 
-    public void get(final ICallback<IPayloadResponseCollectionPage> callback) {
+    public void get(final ICallback<? super IPayloadResponseCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class PayloadResponseCollectionRequest extends BaseCollectionRequest<Payl
         return buildFromResponse(response);
     }
 
-    public void post(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback) {
+    public void post(final PayloadResponse newPayloadResponse, final ICallback<? super PayloadResponse> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PayloadResponseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class PayloadResponseCollectionRequest extends BaseCollectionRequest<Payl
      */
     public IPayloadResponseCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PayloadResponseCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPayloadResponseCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PayloadResponseCollectionRequest)this;
     }
 

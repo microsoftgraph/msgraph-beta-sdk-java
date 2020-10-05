@@ -23,6 +23,6 @@ public class UnifiedRoleAssignmentMultipleCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public UnifiedRoleAssignmentMultipleCollectionPage(final UnifiedRoleAssignmentMultipleCollectionResponse response, final IUnifiedRoleAssignmentMultipleCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

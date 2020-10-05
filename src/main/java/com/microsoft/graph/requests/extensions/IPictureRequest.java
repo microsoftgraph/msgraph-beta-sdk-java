@@ -21,7 +21,7 @@ public interface IPictureRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Picture> callback);
+    void get(final ICallback<? super Picture> callback);
 
     /**
      * Gets the Picture from the service
@@ -36,7 +36,7 @@ public interface IPictureRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Picture> callback);
+    void delete(final ICallback<? super Picture> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPictureRequest extends IHttpRequest {
      * @param sourcePicture the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Picture sourcePicture, final ICallback<Picture> callback);
+    void patch(final Picture sourcePicture, final ICallback<? super Picture> callback);
 
     /**
      * Patches this Picture with a source
@@ -68,7 +68,7 @@ public interface IPictureRequest extends IHttpRequest {
      * @param newPicture the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Picture newPicture, final ICallback<Picture> callback);
+    void post(final Picture newPicture, final ICallback<? super Picture> callback);
 
     /**
      * Posts a Picture with a new object
@@ -85,7 +85,7 @@ public interface IPictureRequest extends IHttpRequest {
      * @param newPicture the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Picture newPicture, final ICallback<Picture> callback);
+    void put(final Picture newPicture, final ICallback<? super Picture> callback);
 
     /**
      * Posts a Picture with a new object

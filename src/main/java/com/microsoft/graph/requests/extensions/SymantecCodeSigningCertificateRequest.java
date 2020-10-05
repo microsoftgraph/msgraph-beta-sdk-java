@@ -37,7 +37,7 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SymantecCodeSigningCertificate> callback) {
+    public void get(final ICallback<? super SymantecCodeSigningCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SymantecCodeSigningCertificate> callback) {
+    public void delete(final ICallback<? super SymantecCodeSigningCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
      * @param sourceSymantecCodeSigningCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SymantecCodeSigningCertificate sourceSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback) {
+    public void patch(final SymantecCodeSigningCertificate sourceSymantecCodeSigningCertificate, final ICallback<? super SymantecCodeSigningCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceSymantecCodeSigningCertificate);
     }
 
@@ -96,7 +96,7 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
      * @param newSymantecCodeSigningCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback) {
+    public void post(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<? super SymantecCodeSigningCertificate> callback) {
         send(HttpMethod.POST, callback, newSymantecCodeSigningCertificate);
     }
 
@@ -117,7 +117,7 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
      * @param newSymantecCodeSigningCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback) {
+    public void put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<? super SymantecCodeSigningCertificate> callback) {
         send(HttpMethod.PUT, callback, newSymantecCodeSigningCertificate);
     }
 
@@ -151,17 +151,6 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
      */
      public ISymantecCodeSigningCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SymantecCodeSigningCertificateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISymantecCodeSigningCertificateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SymantecCodeSigningCertificateRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Request> callback);
+    void get(final ICallback<? super Request> callback);
 
     /**
      * Gets the Request from the service
@@ -36,7 +36,7 @@ public interface IRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Request> callback);
+    void delete(final ICallback<? super Request> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRequestRequest extends IHttpRequest {
      * @param sourceRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Request sourceRequest, final ICallback<Request> callback);
+    void patch(final Request sourceRequest, final ICallback<? super Request> callback);
 
     /**
      * Patches this Request with a source
@@ -68,7 +68,7 @@ public interface IRequestRequest extends IHttpRequest {
      * @param newRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Request newRequest, final ICallback<Request> callback);
+    void post(final Request newRequest, final ICallback<? super Request> callback);
 
     /**
      * Posts a Request with a new object
@@ -85,7 +85,7 @@ public interface IRequestRequest extends IHttpRequest {
      * @param newRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Request newRequest, final ICallback<Request> callback);
+    void put(final Request newRequest, final ICallback<? super Request> callback);
 
     /**
      * Posts a Request with a new object

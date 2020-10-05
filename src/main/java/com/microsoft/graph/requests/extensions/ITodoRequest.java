@@ -21,7 +21,7 @@ public interface ITodoRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Todo> callback);
+    void get(final ICallback<? super Todo> callback);
 
     /**
      * Gets the Todo from the service
@@ -36,7 +36,7 @@ public interface ITodoRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Todo> callback);
+    void delete(final ICallback<? super Todo> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITodoRequest extends IHttpRequest {
      * @param sourceTodo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Todo sourceTodo, final ICallback<Todo> callback);
+    void patch(final Todo sourceTodo, final ICallback<? super Todo> callback);
 
     /**
      * Patches this Todo with a source
@@ -68,7 +68,7 @@ public interface ITodoRequest extends IHttpRequest {
      * @param newTodo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Todo newTodo, final ICallback<Todo> callback);
+    void post(final Todo newTodo, final ICallback<? super Todo> callback);
 
     /**
      * Posts a Todo with a new object
@@ -85,7 +85,7 @@ public interface ITodoRequest extends IHttpRequest {
      * @param newTodo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Todo newTodo, final ICallback<Todo> callback);
+    void put(final Todo newTodo, final ICallback<? super Todo> callback);
 
     /**
      * Posts a Todo with a new object

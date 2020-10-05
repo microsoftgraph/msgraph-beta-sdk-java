@@ -21,7 +21,7 @@ public interface IOutlookTaskFolderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OutlookTaskFolder> callback);
+    void get(final ICallback<? super OutlookTaskFolder> callback);
 
     /**
      * Gets the OutlookTaskFolder from the service
@@ -36,7 +36,7 @@ public interface IOutlookTaskFolderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OutlookTaskFolder> callback);
+    void delete(final ICallback<? super OutlookTaskFolder> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOutlookTaskFolderRequest extends IHttpRequest {
      * @param sourceOutlookTaskFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OutlookTaskFolder sourceOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback);
+    void patch(final OutlookTaskFolder sourceOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback);
 
     /**
      * Patches this OutlookTaskFolder with a source
@@ -68,7 +68,7 @@ public interface IOutlookTaskFolderRequest extends IHttpRequest {
      * @param newOutlookTaskFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback);
+    void post(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback);
 
     /**
      * Posts a OutlookTaskFolder with a new object
@@ -85,7 +85,7 @@ public interface IOutlookTaskFolderRequest extends IHttpRequest {
      * @param newOutlookTaskFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback);
+    void put(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback);
 
     /**
      * Posts a OutlookTaskFolder with a new object

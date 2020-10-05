@@ -40,7 +40,7 @@ public class EducationSchoolDeltaCollectionPage extends BaseCollectionPage<Educa
      * @param builder The request builder for the next collection page
      */
     public EducationSchoolDeltaCollectionPage(final EducationSchoolDeltaCollectionResponse response, final IEducationSchoolDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

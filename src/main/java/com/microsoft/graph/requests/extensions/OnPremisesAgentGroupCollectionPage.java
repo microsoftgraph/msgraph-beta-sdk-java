@@ -23,6 +23,6 @@ public class OnPremisesAgentGroupCollectionPage extends BaseCollectionPage<OnPre
      * @param builder  the request builder for the next collection page
      */
     public OnPremisesAgentGroupCollectionPage(final OnPremisesAgentGroupCollectionResponse response, final IOnPremisesAgentGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

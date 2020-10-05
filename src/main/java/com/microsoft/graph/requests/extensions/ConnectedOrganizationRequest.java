@@ -41,7 +41,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ConnectedOrganization> callback) {
+    public void get(final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ConnectedOrganization> callback) {
+    public void delete(final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param sourceConnectedOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+    public void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.PATCH, callback, sourceConnectedOrganization);
     }
 
@@ -100,7 +100,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param newConnectedOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+    public void post(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.POST, callback, newConnectedOrganization);
     }
 
@@ -121,7 +121,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param newConnectedOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+    public void put(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.PUT, callback, newConnectedOrganization);
     }
 
@@ -155,17 +155,6 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      */
      public IConnectedOrganizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConnectedOrganizationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IConnectedOrganizationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ConnectedOrganizationRequest)this;
      }
 

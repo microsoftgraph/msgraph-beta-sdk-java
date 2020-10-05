@@ -37,7 +37,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<HostSecurityProfile> callback) {
+    public void get(final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<HostSecurityProfile> callback) {
+    public void delete(final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param sourceHostSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final HostSecurityProfile sourceHostSecurityProfile, final ICallback<HostSecurityProfile> callback) {
+    public void patch(final HostSecurityProfile sourceHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceHostSecurityProfile);
     }
 
@@ -96,7 +96,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param newHostSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final HostSecurityProfile newHostSecurityProfile, final ICallback<HostSecurityProfile> callback) {
+    public void post(final HostSecurityProfile newHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newHostSecurityProfile);
     }
 
@@ -117,7 +117,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param newHostSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final HostSecurityProfile newHostSecurityProfile, final ICallback<HostSecurityProfile> callback) {
+    public void put(final HostSecurityProfile newHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newHostSecurityProfile);
     }
 
@@ -151,17 +151,6 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      */
      public IHostSecurityProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (HostSecurityProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IHostSecurityProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (HostSecurityProfileRequest)this;
      }
 

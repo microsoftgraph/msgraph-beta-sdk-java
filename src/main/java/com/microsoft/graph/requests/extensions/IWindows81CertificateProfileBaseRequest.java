@@ -21,7 +21,7 @@ public interface IWindows81CertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81CertificateProfileBase> callback);
+    void get(final ICallback<? super Windows81CertificateProfileBase> callback);
 
     /**
      * Gets the Windows81CertificateProfileBase from the service
@@ -36,7 +36,7 @@ public interface IWindows81CertificateProfileBaseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81CertificateProfileBase> callback);
+    void delete(final ICallback<? super Windows81CertificateProfileBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81CertificateProfileBaseRequest extends IHttpRequest {
      * @param sourceWindows81CertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81CertificateProfileBase sourceWindows81CertificateProfileBase, final ICallback<Windows81CertificateProfileBase> callback);
+    void patch(final Windows81CertificateProfileBase sourceWindows81CertificateProfileBase, final ICallback<? super Windows81CertificateProfileBase> callback);
 
     /**
      * Patches this Windows81CertificateProfileBase with a source
@@ -68,7 +68,7 @@ public interface IWindows81CertificateProfileBaseRequest extends IHttpRequest {
      * @param newWindows81CertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81CertificateProfileBase newWindows81CertificateProfileBase, final ICallback<Windows81CertificateProfileBase> callback);
+    void post(final Windows81CertificateProfileBase newWindows81CertificateProfileBase, final ICallback<? super Windows81CertificateProfileBase> callback);
 
     /**
      * Posts a Windows81CertificateProfileBase with a new object
@@ -85,7 +85,7 @@ public interface IWindows81CertificateProfileBaseRequest extends IHttpRequest {
      * @param newWindows81CertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81CertificateProfileBase newWindows81CertificateProfileBase, final ICallback<Windows81CertificateProfileBase> callback);
+    void put(final Windows81CertificateProfileBase newWindows81CertificateProfileBase, final ICallback<? super Windows81CertificateProfileBase> callback);
 
     /**
      * Posts a Windows81CertificateProfileBase with a new object

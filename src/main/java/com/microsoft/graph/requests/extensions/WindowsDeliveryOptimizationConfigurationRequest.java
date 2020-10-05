@@ -37,7 +37,7 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsDeliveryOptimizationConfiguration> callback) {
+    public void get(final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsDeliveryOptimizationConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
      * @param sourceWindowsDeliveryOptimizationConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDeliveryOptimizationConfiguration sourceWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback) {
+    public void patch(final WindowsDeliveryOptimizationConfiguration sourceWindowsDeliveryOptimizationConfiguration, final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDeliveryOptimizationConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
      * @param newWindowsDeliveryOptimizationConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback) {
+    public void post(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsDeliveryOptimizationConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
      * @param newWindowsDeliveryOptimizationConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback) {
+    public void put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<? super WindowsDeliveryOptimizationConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsDeliveryOptimizationConfiguration);
     }
 
@@ -151,17 +151,6 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
      */
      public IWindowsDeliveryOptimizationConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDeliveryOptimizationConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsDeliveryOptimizationConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsDeliveryOptimizationConfigurationRequest)this;
      }
 

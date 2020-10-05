@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISensitivityLabelCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISensitivityLabelCollectionPage> callback);
+    void get(final ICallback<? super ISensitivityLabelCollectionPage> callback);
 
     ISensitivityLabelCollectionPage get() throws ClientException;
 
-    void post(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback);
+    void post(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback);
 
     SensitivityLabel post(final SensitivityLabel newSensitivityLabel) throws ClientException;
 
@@ -47,6 +47,14 @@ public interface ISensitivityLabelCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISensitivityLabelCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISensitivityLabelCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -79,5 +87,5 @@ public interface ISensitivityLabelCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISensitivityLabelCollectionRequest skipToken(String skipToken);
+	ISensitivityLabelCollectionRequest skipToken(final String skipToken);
 }

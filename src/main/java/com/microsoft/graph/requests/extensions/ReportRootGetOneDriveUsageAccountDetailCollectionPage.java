@@ -34,6 +34,6 @@ public class ReportRootGetOneDriveUsageAccountDetailCollectionPage extends BaseC
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetOneDriveUsageAccountDetailCollectionPage(final ReportRootGetOneDriveUsageAccountDetailCollectionResponse response, final IReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

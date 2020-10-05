@@ -34,7 +34,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
-    public void delete(final ICallback<DirectoryObject> callback) {
+    public void delete(final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,22 +64,12 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
         return (DirectoryObjectReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDirectoryObjectReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectReferenceRequest)this;
-    }
-    /**
      * Puts the DirectoryObject
      *
      * @param srcDirectoryObject the DirectoryObject reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void put(DirectoryObject srcDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.PUT, callback, srcDirectoryObject);
     }
 

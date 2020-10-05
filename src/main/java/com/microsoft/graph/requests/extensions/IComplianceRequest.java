@@ -21,7 +21,7 @@ public interface IComplianceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Compliance> callback);
+    void get(final ICallback<? super Compliance> callback);
 
     /**
      * Gets the Compliance from the service
@@ -36,7 +36,7 @@ public interface IComplianceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Compliance> callback);
+    void delete(final ICallback<? super Compliance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IComplianceRequest extends IHttpRequest {
      * @param sourceCompliance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Compliance sourceCompliance, final ICallback<Compliance> callback);
+    void patch(final Compliance sourceCompliance, final ICallback<? super Compliance> callback);
 
     /**
      * Patches this Compliance with a source
@@ -68,7 +68,7 @@ public interface IComplianceRequest extends IHttpRequest {
      * @param newCompliance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Compliance newCompliance, final ICallback<Compliance> callback);
+    void post(final Compliance newCompliance, final ICallback<? super Compliance> callback);
 
     /**
      * Posts a Compliance with a new object
@@ -85,7 +85,7 @@ public interface IComplianceRequest extends IHttpRequest {
      * @param newCompliance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Compliance newCompliance, final ICallback<Compliance> callback);
+    void put(final Compliance newCompliance, final ICallback<? super Compliance> callback);
 
     /**
      * Posts a Compliance with a new object

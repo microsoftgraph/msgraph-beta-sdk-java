@@ -21,7 +21,7 @@ public interface IPolicySetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PolicySet> callback);
+    void get(final ICallback<? super PolicySet> callback);
 
     /**
      * Gets the PolicySet from the service
@@ -36,7 +36,7 @@ public interface IPolicySetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PolicySet> callback);
+    void delete(final ICallback<? super PolicySet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPolicySetRequest extends IHttpRequest {
      * @param sourcePolicySet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PolicySet sourcePolicySet, final ICallback<PolicySet> callback);
+    void patch(final PolicySet sourcePolicySet, final ICallback<? super PolicySet> callback);
 
     /**
      * Patches this PolicySet with a source
@@ -68,7 +68,7 @@ public interface IPolicySetRequest extends IHttpRequest {
      * @param newPolicySet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PolicySet newPolicySet, final ICallback<PolicySet> callback);
+    void post(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback);
 
     /**
      * Posts a PolicySet with a new object
@@ -85,7 +85,7 @@ public interface IPolicySetRequest extends IHttpRequest {
      * @param newPolicySet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PolicySet newPolicySet, final ICallback<PolicySet> callback);
+    void put(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback);
 
     /**
      * Posts a PolicySet with a new object

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIdentityProviderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIdentityProviderCollectionPage> callback);
+    void get(final ICallback<? super IIdentityProviderCollectionPage> callback);
 
     IIdentityProviderCollectionPage get() throws ClientException;
 
-    void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback);
+    void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IIdentityProviderCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IIdentityProviderCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IIdentityProviderCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IIdentityProviderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IIdentityProviderCollectionRequest skipToken(String skipToken);
+	IIdentityProviderCollectionRequest skipToken(final String skipToken);
 }

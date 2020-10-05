@@ -37,7 +37,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TaxArea> callback) {
+    public void get(final ICallback<? super TaxArea> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TaxArea> callback) {
+    public void delete(final ICallback<? super TaxArea> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param sourceTaxArea the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TaxArea sourceTaxArea, final ICallback<TaxArea> callback) {
+    public void patch(final TaxArea sourceTaxArea, final ICallback<? super TaxArea> callback) {
         send(HttpMethod.PATCH, callback, sourceTaxArea);
     }
 
@@ -96,7 +96,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param newTaxArea the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TaxArea newTaxArea, final ICallback<TaxArea> callback) {
+    public void post(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback) {
         send(HttpMethod.POST, callback, newTaxArea);
     }
 
@@ -117,7 +117,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param newTaxArea the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TaxArea newTaxArea, final ICallback<TaxArea> callback) {
+    public void put(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback) {
         send(HttpMethod.PUT, callback, newTaxArea);
     }
 
@@ -151,17 +151,6 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      */
      public ITaxAreaRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TaxAreaRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITaxAreaRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TaxAreaRequest)this;
      }
 

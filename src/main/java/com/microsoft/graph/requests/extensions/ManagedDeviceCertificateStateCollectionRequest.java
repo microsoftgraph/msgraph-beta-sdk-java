@@ -40,7 +40,7 @@ public class ManagedDeviceCertificateStateCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, ManagedDeviceCertificateStateCollectionResponse.class, IManagedDeviceCertificateStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceCertificateStateCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceCertificateStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedDeviceCertificateStateCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback) {
+    public void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<? super ManagedDeviceCertificateState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceCertificateStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ManagedDeviceCertificateStateCollectionRequest extends BaseCollecti
      */
     public IManagedDeviceCertificateStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedDeviceCertificateStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagedDeviceCertificateStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceCertificateStateCollectionRequest)this;
     }
 

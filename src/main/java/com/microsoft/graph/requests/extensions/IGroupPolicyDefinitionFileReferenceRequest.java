@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGroupPolicyDefinitionFileReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<GroupPolicyDefinitionFile> callback);
+    void delete(final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     GroupPolicyDefinitionFile delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IGroupPolicyDefinitionFileReferenceRequest extends IHttpRequest
      * @param srcGroupPolicyDefinitionFile the GroupPolicyDefinitionFile to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(GroupPolicyDefinitionFile srcGroupPolicyDefinitionFile, final ICallback<GroupPolicyDefinitionFile> callback);
+    void put(GroupPolicyDefinitionFile srcGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback);
 
     /**
      * Puts the GroupPolicyDefinitionFile

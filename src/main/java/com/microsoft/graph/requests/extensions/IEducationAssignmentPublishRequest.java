@@ -26,7 +26,7 @@ public interface IEducationAssignmentPublishRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<EducationAssignment> callback);
+    void post(final ICallback<? super EducationAssignment> callback);
 
     /**
      * Creates the EducationAssignmentPublish

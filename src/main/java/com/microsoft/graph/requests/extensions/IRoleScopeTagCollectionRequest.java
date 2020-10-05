@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoleScopeTagCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRoleScopeTagCollectionPage> callback);
+    void get(final ICallback<? super IRoleScopeTagCollectionPage> callback);
 
     IRoleScopeTagCollectionPage get() throws ClientException;
 
-    void post(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback);
+    void post(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
     RoleScopeTag post(final RoleScopeTag newRoleScopeTag) throws ClientException;
 
@@ -46,6 +46,14 @@ public interface IRoleScopeTagCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRoleScopeTagCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRoleScopeTagCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -78,5 +86,5 @@ public interface IRoleScopeTagCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoleScopeTagCollectionRequest skipToken(String skipToken);
+	IRoleScopeTagCollectionRequest skipToken(final String skipToken);
 }

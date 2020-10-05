@@ -37,7 +37,7 @@ public class DeviceManagementAbstractComplexSettingDefinitionRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementAbstractComplexSettingDefinition> callback) {
+    public void get(final ICallback<? super DeviceManagementAbstractComplexSettingDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementAbstractComplexSettingDefinitionRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementAbstractComplexSettingDefinition> callback) {
+    public void delete(final ICallback<? super DeviceManagementAbstractComplexSettingDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementAbstractComplexSettingDefinitionRequest extends Bas
      * @param sourceDeviceManagementAbstractComplexSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementAbstractComplexSettingDefinition sourceDeviceManagementAbstractComplexSettingDefinition, final ICallback<DeviceManagementAbstractComplexSettingDefinition> callback) {
+    public void patch(final DeviceManagementAbstractComplexSettingDefinition sourceDeviceManagementAbstractComplexSettingDefinition, final ICallback<? super DeviceManagementAbstractComplexSettingDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementAbstractComplexSettingDefinition);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementAbstractComplexSettingDefinitionRequest extends Bas
      * @param newDeviceManagementAbstractComplexSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition, final ICallback<DeviceManagementAbstractComplexSettingDefinition> callback) {
+    public void post(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition, final ICallback<? super DeviceManagementAbstractComplexSettingDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementAbstractComplexSettingDefinition);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementAbstractComplexSettingDefinitionRequest extends Bas
      * @param newDeviceManagementAbstractComplexSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition, final ICallback<DeviceManagementAbstractComplexSettingDefinition> callback) {
+    public void put(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition, final ICallback<? super DeviceManagementAbstractComplexSettingDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementAbstractComplexSettingDefinition);
     }
 
@@ -151,17 +151,6 @@ public class DeviceManagementAbstractComplexSettingDefinitionRequest extends Bas
      */
      public IDeviceManagementAbstractComplexSettingDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementAbstractComplexSettingDefinitionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceManagementAbstractComplexSettingDefinitionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementAbstractComplexSettingDefinitionRequest)this;
      }
 

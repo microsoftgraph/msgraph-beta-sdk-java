@@ -21,7 +21,7 @@ public interface ISharePointSiteUsagePagesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointSiteUsagePages> callback);
+    void get(final ICallback<? super SharePointSiteUsagePages> callback);
 
     /**
      * Gets the SharePointSiteUsagePages from the service
@@ -36,7 +36,7 @@ public interface ISharePointSiteUsagePagesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointSiteUsagePages> callback);
+    void delete(final ICallback<? super SharePointSiteUsagePages> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointSiteUsagePagesRequest extends IHttpRequest {
      * @param sourceSharePointSiteUsagePages the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointSiteUsagePages sourceSharePointSiteUsagePages, final ICallback<SharePointSiteUsagePages> callback);
+    void patch(final SharePointSiteUsagePages sourceSharePointSiteUsagePages, final ICallback<? super SharePointSiteUsagePages> callback);
 
     /**
      * Patches this SharePointSiteUsagePages with a source
@@ -68,7 +68,7 @@ public interface ISharePointSiteUsagePagesRequest extends IHttpRequest {
      * @param newSharePointSiteUsagePages the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<SharePointSiteUsagePages> callback);
+    void post(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<? super SharePointSiteUsagePages> callback);
 
     /**
      * Posts a SharePointSiteUsagePages with a new object
@@ -85,7 +85,7 @@ public interface ISharePointSiteUsagePagesRequest extends IHttpRequest {
      * @param newSharePointSiteUsagePages the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<SharePointSiteUsagePages> callback);
+    void put(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<? super SharePointSiteUsagePages> callback);
 
     /**
      * Posts a SharePointSiteUsagePages with a new object

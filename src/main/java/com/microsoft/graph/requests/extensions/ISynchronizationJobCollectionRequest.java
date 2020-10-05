@@ -26,11 +26,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISynchronizationJobCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISynchronizationJobCollectionPage> callback);
+    void get(final ICallback<? super ISynchronizationJobCollectionPage> callback);
 
     ISynchronizationJobCollectionPage get() throws ClientException;
 
-    void post(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback);
+    void post(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback);
 
     SynchronizationJob post(final SynchronizationJob newSynchronizationJob) throws ClientException;
 
@@ -49,6 +49,14 @@ public interface ISynchronizationJobCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISynchronizationJobCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISynchronizationJobCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -81,5 +89,5 @@ public interface ISynchronizationJobCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISynchronizationJobCollectionRequest skipToken(String skipToken);
+	ISynchronizationJobCollectionRequest skipToken(final String skipToken);
 }

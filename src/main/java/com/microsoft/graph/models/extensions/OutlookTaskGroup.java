@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.OutlookTaskFolder;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionPage;
 
 
@@ -107,19 +105,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("taskFolders")) {
-            final OutlookTaskFolderCollectionResponse response = new OutlookTaskFolderCollectionResponse();
-            if (json.has("taskFolders@odata.nextLink")) {
-                response.nextLink = json.get("taskFolders@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("taskFolders").toString(), JsonObject[].class);
-            final OutlookTaskFolder[] array = new OutlookTaskFolder[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OutlookTaskFolder.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            taskFolders = new OutlookTaskFolderCollectionPage(response, null);
+            taskFolders = serializer.deserializeObject(json.get("taskFolders").toString(), OutlookTaskFolderCollectionPage.class);
         }
     }
 }

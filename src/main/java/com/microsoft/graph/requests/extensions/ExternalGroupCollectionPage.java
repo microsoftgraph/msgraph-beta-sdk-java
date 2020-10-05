@@ -23,6 +23,6 @@ public class ExternalGroupCollectionPage extends BaseCollectionPage<ExternalGrou
      * @param builder  the request builder for the next collection page
      */
     public ExternalGroupCollectionPage(final ExternalGroupCollectionResponse response, final IExternalGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

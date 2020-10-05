@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
 import com.microsoft.graph.models.extensions.SynchronizationJob;
 import com.microsoft.graph.models.extensions.SynchronizationTemplate;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SynchronizationJobCollectionResponse;
 import com.microsoft.graph.requests.extensions.SynchronizationJobCollectionPage;
-import com.microsoft.graph.requests.extensions.SynchronizationTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.SynchronizationTemplateCollectionPage;
 
 
@@ -95,35 +92,11 @@ public class Synchronization extends Entity implements IJsonBackedObject {
 
 
         if (json.has("jobs")) {
-            final SynchronizationJobCollectionResponse response = new SynchronizationJobCollectionResponse();
-            if (json.has("jobs@odata.nextLink")) {
-                response.nextLink = json.get("jobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("jobs").toString(), JsonObject[].class);
-            final SynchronizationJob[] array = new SynchronizationJob[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SynchronizationJob.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            jobs = new SynchronizationJobCollectionPage(response, null);
+            jobs = serializer.deserializeObject(json.get("jobs").toString(), SynchronizationJobCollectionPage.class);
         }
 
         if (json.has("templates")) {
-            final SynchronizationTemplateCollectionResponse response = new SynchronizationTemplateCollectionResponse();
-            if (json.has("templates@odata.nextLink")) {
-                response.nextLink = json.get("templates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("templates").toString(), JsonObject[].class);
-            final SynchronizationTemplate[] array = new SynchronizationTemplate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SynchronizationTemplate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            templates = new SynchronizationTemplateCollectionPage(response, null);
+            templates = serializer.deserializeObject(json.get("templates").toString(), SynchronizationTemplateCollectionPage.class);
         }
     }
 }

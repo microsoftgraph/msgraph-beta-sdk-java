@@ -36,6 +36,6 @@ public class RoleScopeTagCollectionWithReferencesPage extends BaseCollectionPage
      * @param builder  the request builder for the next collection page
      */
     public RoleScopeTagCollectionWithReferencesPage(final RoleScopeTagCollectionResponse response, final IRoleScopeTagCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

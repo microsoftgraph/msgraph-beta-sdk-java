@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITargetedManagedAppConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITargetedManagedAppConfigurationCollectionPage> callback);
+    void get(final ICallback<? super ITargetedManagedAppConfigurationCollectionPage> callback);
 
     ITargetedManagedAppConfigurationCollectionPage get() throws ClientException;
 
-    void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback);
+    void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     TargetedManagedAppConfiguration post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException;
 
@@ -48,6 +48,14 @@ public interface ITargetedManagedAppConfigurationCollectionRequest extends IHttp
      * @return the updated request
      */
     ITargetedManagedAppConfigurationCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITargetedManagedAppConfigurationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -80,5 +88,5 @@ public interface ITargetedManagedAppConfigurationCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	ITargetedManagedAppConfigurationCollectionRequest skipToken(String skipToken);
+	ITargetedManagedAppConfigurationCollectionRequest skipToken(final String skipToken);
 }

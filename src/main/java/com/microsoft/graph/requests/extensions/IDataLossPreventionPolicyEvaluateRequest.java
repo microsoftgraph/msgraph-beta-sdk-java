@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDataLossPreventionPolicyEvaluateRequest extends IHttpRequest {
 
-    void post(final ICallback<DlpEvaluatePoliciesJobResponse> callback);
+    void post(final ICallback<? super DlpEvaluatePoliciesJobResponse> callback);
 
     DlpEvaluatePoliciesJobResponse post() throws ClientException;
 

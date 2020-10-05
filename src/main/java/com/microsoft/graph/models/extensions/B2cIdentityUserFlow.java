@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
-import com.microsoft.graph.requests.extensions.IdentityProviderCollectionResponse;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionPage;
 
 
@@ -73,19 +71,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
 
         if (json.has("identityProviders")) {
-            final IdentityProviderCollectionResponse response = new IdentityProviderCollectionResponse();
-            if (json.has("identityProviders@odata.nextLink")) {
-                response.nextLink = json.get("identityProviders@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("identityProviders").toString(), JsonObject[].class);
-            final IdentityProvider[] array = new IdentityProvider[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IdentityProvider.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            identityProviders = new IdentityProviderCollectionPage(response, null);
+            identityProviders = serializer.deserializeObject(json.get("identityProviders").toString(), IdentityProviderCollectionPage.class);
         }
     }
 }

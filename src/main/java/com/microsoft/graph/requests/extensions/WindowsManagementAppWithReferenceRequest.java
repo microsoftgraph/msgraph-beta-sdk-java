@@ -39,7 +39,7 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
         super(requestUrl, client, requestOptions, WindowsManagementApp.class);
     }
 
-    public void post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload, final ICallback<WindowsManagementApp> callback) {
+    public void post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload, final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
         return null;
     }
 
-    public void get(final ICallback<WindowsManagementApp> callback) {
+    public void get(final ICallback<? super WindowsManagementApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsManagementApp> callback) {
+	public void delete(final ICallback<? super WindowsManagementApp> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<WindowsManagementApp> callback) {
+	public void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsManagementApp);
 	}
 
@@ -95,16 +95,6 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
      */
     public IWindowsManagementAppWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsManagementAppWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsManagementAppWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsManagementAppWithReferenceRequest)this;
     }
 }

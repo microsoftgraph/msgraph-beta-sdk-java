@@ -26,19 +26,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IRoleScopeTagWithReferenceRequest extends IHttpRequest {
 
-    void post(final RoleScopeTag newRoleScopeTag, final IJsonBackedObject payload, final ICallback<RoleScopeTag> callback);
+    void post(final RoleScopeTag newRoleScopeTag, final IJsonBackedObject payload, final ICallback<? super RoleScopeTag> callback);
 
     RoleScopeTag post(final RoleScopeTag newRoleScopeTag, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<RoleScopeTag> callback);
+    void get(final ICallback<? super RoleScopeTag> callback);
 
     RoleScopeTag get() throws ClientException;
 
-	void delete(final ICallback<RoleScopeTag> callback);
+	void delete(final ICallback<? super RoleScopeTag> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<RoleScopeTag> callback);
+	void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
 	RoleScopeTag patch(final RoleScopeTag sourceRoleScopeTag) throws ClientException;
 

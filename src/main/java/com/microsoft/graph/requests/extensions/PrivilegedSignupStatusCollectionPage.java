@@ -23,6 +23,6 @@ public class PrivilegedSignupStatusCollectionPage extends BaseCollectionPage<Pri
      * @param builder  the request builder for the next collection page
      */
     public PrivilegedSignupStatusCollectionPage(final PrivilegedSignupStatusCollectionResponse response, final IPrivilegedSignupStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

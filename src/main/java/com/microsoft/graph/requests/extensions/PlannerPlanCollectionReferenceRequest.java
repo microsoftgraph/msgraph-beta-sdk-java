@@ -36,7 +36,7 @@ public class PlannerPlanCollectionReferenceRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, PlannerPlanCollectionResponse.class, IPlannerPlanCollectionPage.class);
     }
 
-    public void post(final PlannerPlan newPlannerPlan, final ICallback<PlannerPlan> callback) {
+    public void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/recentPlans/" + newPlannerPlan.id);
         new PlannerPlanWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class PlannerPlanCollectionReferenceRequest extends BaseCollectionRequest
      */
     public IPlannerPlanCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PlannerPlanCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IPlannerPlanCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PlannerPlanCollectionReferenceRequest)this;
     }
 

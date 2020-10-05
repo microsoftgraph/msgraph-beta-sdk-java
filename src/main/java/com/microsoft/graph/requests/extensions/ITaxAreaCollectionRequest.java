@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITaxAreaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITaxAreaCollectionPage> callback);
+    void get(final ICallback<? super ITaxAreaCollectionPage> callback);
 
     ITaxAreaCollectionPage get() throws ClientException;
 
-    void post(final TaxArea newTaxArea, final ICallback<TaxArea> callback);
+    void post(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback);
 
     TaxArea post(final TaxArea newTaxArea) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ITaxAreaCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITaxAreaCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITaxAreaCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ITaxAreaCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITaxAreaCollectionRequest skipToken(String skipToken);
+	ITaxAreaCollectionRequest skipToken(final String skipToken);
 }

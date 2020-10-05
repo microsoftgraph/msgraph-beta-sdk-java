@@ -36,7 +36,7 @@ public class PrivilegedRoleAssignmentRequestReferenceRequest extends BaseRequest
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignmentRequest.class);
     }
 
-    public void delete(final ICallback<PrivilegedRoleAssignmentRequest> callback) {
+    public void delete(final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -66,22 +66,12 @@ public class PrivilegedRoleAssignmentRequestReferenceRequest extends BaseRequest
         return (PrivilegedRoleAssignmentRequestReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrivilegedRoleAssignmentRequestReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrivilegedRoleAssignmentRequestReferenceRequest)this;
-    }
-    /**
      * Puts the PrivilegedRoleAssignmentRequest
      *
      * @param srcPrivilegedRoleAssignmentRequest the PrivilegedRoleAssignmentRequest reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PrivilegedRoleAssignmentRequest srcPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback) {
+    public void put(PrivilegedRoleAssignmentRequest srcPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.PUT, callback, srcPrivilegedRoleAssignmentRequest);
     }
 

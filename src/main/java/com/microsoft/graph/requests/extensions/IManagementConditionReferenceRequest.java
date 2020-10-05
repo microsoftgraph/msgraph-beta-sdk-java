@@ -25,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagementConditionReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ManagementCondition> callback);
+    void delete(final ICallback<? super ManagementCondition> callback);
 
     ManagementCondition delete() throws ClientException;
 
@@ -51,7 +51,7 @@ public interface IManagementConditionReferenceRequest extends IHttpRequest {
      * @param srcManagementCondition the ManagementCondition to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ManagementCondition srcManagementCondition, final ICallback<ManagementCondition> callback);
+    void put(ManagementCondition srcManagementCondition, final ICallback<? super ManagementCondition> callback);
 
     /**
      * Puts the ManagementCondition

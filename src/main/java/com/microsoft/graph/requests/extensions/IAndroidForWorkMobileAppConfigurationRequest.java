@@ -21,7 +21,7 @@ public interface IAndroidForWorkMobileAppConfigurationRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidForWorkMobileAppConfiguration> callback);
+    void get(final ICallback<? super AndroidForWorkMobileAppConfiguration> callback);
 
     /**
      * Gets the AndroidForWorkMobileAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidForWorkMobileAppConfigurationRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidForWorkMobileAppConfiguration> callback);
+    void delete(final ICallback<? super AndroidForWorkMobileAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidForWorkMobileAppConfigurationRequest extends IHttpReque
      * @param sourceAndroidForWorkMobileAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidForWorkMobileAppConfiguration sourceAndroidForWorkMobileAppConfiguration, final ICallback<AndroidForWorkMobileAppConfiguration> callback);
+    void patch(final AndroidForWorkMobileAppConfiguration sourceAndroidForWorkMobileAppConfiguration, final ICallback<? super AndroidForWorkMobileAppConfiguration> callback);
 
     /**
      * Patches this AndroidForWorkMobileAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidForWorkMobileAppConfigurationRequest extends IHttpReque
      * @param newAndroidForWorkMobileAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidForWorkMobileAppConfiguration newAndroidForWorkMobileAppConfiguration, final ICallback<AndroidForWorkMobileAppConfiguration> callback);
+    void post(final AndroidForWorkMobileAppConfiguration newAndroidForWorkMobileAppConfiguration, final ICallback<? super AndroidForWorkMobileAppConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkMobileAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidForWorkMobileAppConfigurationRequest extends IHttpReque
      * @param newAndroidForWorkMobileAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidForWorkMobileAppConfiguration newAndroidForWorkMobileAppConfiguration, final ICallback<AndroidForWorkMobileAppConfiguration> callback);
+    void put(final AndroidForWorkMobileAppConfiguration newAndroidForWorkMobileAppConfiguration, final ICallback<? super AndroidForWorkMobileAppConfiguration> callback);
 
     /**
      * Posts a AndroidForWorkMobileAppConfiguration with a new object

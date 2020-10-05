@@ -21,7 +21,7 @@ public interface IManagedDeviceEncryptionStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceEncryptionState> callback);
+    void get(final ICallback<? super ManagedDeviceEncryptionState> callback);
 
     /**
      * Gets the ManagedDeviceEncryptionState from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceEncryptionStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceEncryptionState> callback);
+    void delete(final ICallback<? super ManagedDeviceEncryptionState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceEncryptionStateRequest extends IHttpRequest {
      * @param sourceManagedDeviceEncryptionState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceEncryptionState sourceManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback);
+    void patch(final ManagedDeviceEncryptionState sourceManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback);
 
     /**
      * Patches this ManagedDeviceEncryptionState with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceEncryptionStateRequest extends IHttpRequest {
      * @param newManagedDeviceEncryptionState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback);
+    void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback);
 
     /**
      * Posts a ManagedDeviceEncryptionState with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceEncryptionStateRequest extends IHttpRequest {
      * @param newManagedDeviceEncryptionState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback);
+    void put(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback);
 
     /**
      * Posts a ManagedDeviceEncryptionState with a new object

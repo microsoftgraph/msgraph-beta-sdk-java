@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingDefinitionCollectionPage;
 
 
@@ -91,19 +89,7 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
 
 
         if (json.has("settingDefinitions")) {
-            final DeviceManagementSettingDefinitionCollectionResponse response = new DeviceManagementSettingDefinitionCollectionResponse();
-            if (json.has("settingDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("settingDefinitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settingDefinitions").toString(), JsonObject[].class);
-            final DeviceManagementSettingDefinition[] array = new DeviceManagementSettingDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            settingDefinitions = new DeviceManagementSettingDefinitionCollectionPage(response, null);
+            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions").toString(), DeviceManagementSettingDefinitionCollectionPage.class);
         }
     }
 }

@@ -37,7 +37,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequest extends B
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
+    public void get(final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequest extends B
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
+    public void delete(final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequest extends B
      * @param sourceMdmWindowsInformationProtectionPolicyPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MdmWindowsInformationProtectionPolicyPolicySetItem sourceMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
+    public void patch(final MdmWindowsInformationProtectionPolicyPolicySetItem sourceMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceMdmWindowsInformationProtectionPolicyPolicySetItem);
     }
 
@@ -96,7 +96,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequest extends B
      * @param newMdmWindowsInformationProtectionPolicyPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
+    public void post(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newMdmWindowsInformationProtectionPolicyPolicySetItem);
     }
 
@@ -117,7 +117,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequest extends B
      * @param newMdmWindowsInformationProtectionPolicyPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
+    public void put(final MdmWindowsInformationProtectionPolicyPolicySetItem newMdmWindowsInformationProtectionPolicyPolicySetItem, final ICallback<? super MdmWindowsInformationProtectionPolicyPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newMdmWindowsInformationProtectionPolicyPolicySetItem);
     }
 
@@ -151,17 +151,6 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequest extends B
      */
      public IMdmWindowsInformationProtectionPolicyPolicySetItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MdmWindowsInformationProtectionPolicyPolicySetItemRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMdmWindowsInformationProtectionPolicyPolicySetItemRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MdmWindowsInformationProtectionPolicyPolicySetItemRequest)this;
      }
 

@@ -40,7 +40,7 @@ public class DeviceManagementIntentUserStateCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, DeviceManagementIntentUserStateCollectionResponse.class, IDeviceManagementIntentUserStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementIntentUserStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementIntentUserStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementIntentUserStateCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState, final ICallback<DeviceManagementIntentUserState> callback) {
+    public void post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState, final ICallback<? super DeviceManagementIntentUserState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentUserStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DeviceManagementIntentUserStateCollectionRequest extends BaseCollec
      */
     public IDeviceManagementIntentUserStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementIntentUserStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementIntentUserStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementIntentUserStateCollectionRequest)this;
     }
 

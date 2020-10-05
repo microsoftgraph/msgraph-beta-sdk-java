@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetric;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionPage;
 
 
@@ -91,51 +89,15 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
 
 
         if (json.has("manufacturerRegression")) {
-            final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
-            if (json.has("manufacturerRegression@odata.nextLink")) {
-                response.nextLink = json.get("manufacturerRegression@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("manufacturerRegression").toString(), JsonObject[].class);
-            final UserExperienceAnalyticsMetric[] array = new UserExperienceAnalyticsMetric[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsMetric.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            manufacturerRegression = new UserExperienceAnalyticsMetricCollectionPage(response, null);
+            manufacturerRegression = serializer.deserializeObject(json.get("manufacturerRegression").toString(), UserExperienceAnalyticsMetricCollectionPage.class);
         }
 
         if (json.has("modelRegression")) {
-            final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
-            if (json.has("modelRegression@odata.nextLink")) {
-                response.nextLink = json.get("modelRegression@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("modelRegression").toString(), JsonObject[].class);
-            final UserExperienceAnalyticsMetric[] array = new UserExperienceAnalyticsMetric[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsMetric.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            modelRegression = new UserExperienceAnalyticsMetricCollectionPage(response, null);
+            modelRegression = serializer.deserializeObject(json.get("modelRegression").toString(), UserExperienceAnalyticsMetricCollectionPage.class);
         }
 
         if (json.has("operatingSystemRegression")) {
-            final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
-            if (json.has("operatingSystemRegression@odata.nextLink")) {
-                response.nextLink = json.get("operatingSystemRegression@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operatingSystemRegression").toString(), JsonObject[].class);
-            final UserExperienceAnalyticsMetric[] array = new UserExperienceAnalyticsMetric[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsMetric.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operatingSystemRegression = new UserExperienceAnalyticsMetricCollectionPage(response, null);
+            operatingSystemRegression = serializer.deserializeObject(json.get("operatingSystemRegression").toString(), UserExperienceAnalyticsMetricCollectionPage.class);
         }
     }
 }

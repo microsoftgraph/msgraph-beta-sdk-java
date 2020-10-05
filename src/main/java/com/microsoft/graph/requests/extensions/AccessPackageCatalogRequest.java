@@ -53,7 +53,7 @@ public class AccessPackageCatalogRequest extends BaseRequest implements IAccessP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessPackageCatalog> callback) {
+    public void get(final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class AccessPackageCatalogRequest extends BaseRequest implements IAccessP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessPackageCatalog> callback) {
+    public void delete(final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class AccessPackageCatalogRequest extends BaseRequest implements IAccessP
      * @param sourceAccessPackageCatalog the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageCatalog sourceAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback) {
+    public void patch(final AccessPackageCatalog sourceAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageCatalog);
     }
 
@@ -112,7 +112,7 @@ public class AccessPackageCatalogRequest extends BaseRequest implements IAccessP
      * @param newAccessPackageCatalog the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback) {
+    public void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.POST, callback, newAccessPackageCatalog);
     }
 
@@ -133,7 +133,7 @@ public class AccessPackageCatalogRequest extends BaseRequest implements IAccessP
      * @param newAccessPackageCatalog the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback) {
+    public void put(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageCatalog);
     }
 
@@ -167,17 +167,6 @@ public class AccessPackageCatalogRequest extends BaseRequest implements IAccessP
      */
      public IAccessPackageCatalogRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageCatalogRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessPackageCatalogRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessPackageCatalogRequest)this;
      }
 

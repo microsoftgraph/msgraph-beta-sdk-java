@@ -35,7 +35,7 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, AgreementAcceptance.class);
     }
 
-    public void post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload, final ICallback<AgreementAcceptance> callback) {
+    public void post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload, final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<AgreementAcceptance> callback) {
+    public void get(final ICallback<? super AgreementAcceptance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<AgreementAcceptance> callback) {
+	public void delete(final ICallback<? super AgreementAcceptance> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+	public void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
 		send(HttpMethod.PATCH, callback, sourceAgreementAcceptance);
 	}
 
@@ -91,16 +91,6 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
      */
     public IAgreementAcceptanceWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AgreementAcceptanceWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IAgreementAcceptanceWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AgreementAcceptanceWithReferenceRequest)this;
     }
 }

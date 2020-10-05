@@ -41,7 +41,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AccessPackageResourceRoleScope> callback) {
+    public void get(final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AccessPackageResourceRoleScope> callback) {
+    public void delete(final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param sourceAccessPackageResourceRoleScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback) {
+    public void patch(final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResourceRoleScope);
     }
 
@@ -100,7 +100,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param newAccessPackageResourceRoleScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback) {
+    public void post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResourceRoleScope);
     }
 
@@ -121,7 +121,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param newAccessPackageResourceRoleScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback) {
+    public void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResourceRoleScope);
     }
 
@@ -155,17 +155,6 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      */
      public IAccessPackageResourceRoleScopeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceRoleScopeRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAccessPackageResourceRoleScopeRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AccessPackageResourceRoleScopeRequest)this;
      }
 

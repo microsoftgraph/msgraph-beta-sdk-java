@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IExactMatchUploadAgentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IExactMatchUploadAgentCollectionPage> callback);
+    void get(final ICallback<? super IExactMatchUploadAgentCollectionPage> callback);
 
     IExactMatchUploadAgentCollectionPage get() throws ClientException;
 
-    void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<ExactMatchUploadAgent> callback);
+    void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback);
 
     ExactMatchUploadAgent post(final ExactMatchUploadAgent newExactMatchUploadAgent) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IExactMatchUploadAgentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IExactMatchUploadAgentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IExactMatchUploadAgentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IExactMatchUploadAgentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IExactMatchUploadAgentCollectionRequest skipToken(String skipToken);
+	IExactMatchUploadAgentCollectionRequest skipToken(final String skipToken);
 }

@@ -39,7 +39,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void get(final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void delete(final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param sourceActiveDirectoryWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void patch(final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -98,7 +98,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.POST, callback, newActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -119,7 +119,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PUT, callback, newActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -153,17 +153,6 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      */
      public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ActiveDirectoryWindowsAutopilotDeploymentProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ActiveDirectoryWindowsAutopilotDeploymentProfileRequest)this;
      }
 

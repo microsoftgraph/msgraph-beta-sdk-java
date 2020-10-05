@@ -40,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationStateCollectionRequest extends B
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationStateCollectionResponse.class, IManagedDeviceMobileAppConfigurationStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceMobileAppConfigurationStateCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceMobileAppConfigurationStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationStateCollectionRequest extends B
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState, final ICallback<ManagedDeviceMobileAppConfigurationState> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState, final ICallback<? super ManagedDeviceMobileAppConfigurationState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ManagedDeviceMobileAppConfigurationStateCollectionRequest extends B
      */
     public IManagedDeviceMobileAppConfigurationStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedDeviceMobileAppConfigurationStateCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationStateCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceMobileAppConfigurationStateCollectionRequest)this;
     }
 

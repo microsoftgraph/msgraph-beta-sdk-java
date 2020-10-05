@@ -34,6 +34,6 @@ public class SynchronizationSchemaFilterOperatorsCollectionPage extends BaseColl
      * @param builder The request builder for the next collection page
      */
     public SynchronizationSchemaFilterOperatorsCollectionPage(final SynchronizationSchemaFilterOperatorsCollectionResponse response, final ISynchronizationSchemaFilterOperatorsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

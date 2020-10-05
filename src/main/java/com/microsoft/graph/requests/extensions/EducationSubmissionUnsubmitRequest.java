@@ -37,7 +37,7 @@ public class EducationSubmissionUnsubmitRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<EducationSubmission> callback) {
+    public void post(final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,17 +70,6 @@ public class EducationSubmissionUnsubmitRequest extends BaseRequest implements I
      */
     public IEducationSubmissionUnsubmitRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationSubmissionUnsubmitRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEducationSubmissionUnsubmitRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EducationSubmissionUnsubmitRequest)this;
     }
 

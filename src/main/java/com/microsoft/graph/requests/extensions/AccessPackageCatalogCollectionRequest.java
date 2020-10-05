@@ -40,7 +40,7 @@ public class AccessPackageCatalogCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, AccessPackageCatalogCollectionResponse.class, IAccessPackageCatalogCollectionPage.class);
     }
 
-    public void get(final ICallback<IAccessPackageCatalogCollectionPage> callback) {
+    public void get(final ICallback<? super IAccessPackageCatalogCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AccessPackageCatalogCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback) {
+    public void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<? super AccessPackageCatalog> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageCatalogRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class AccessPackageCatalogCollectionRequest extends BaseCollectionRequest
      */
     public IAccessPackageCatalogCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageCatalogCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAccessPackageCatalogCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AccessPackageCatalogCollectionRequest)this;
     }
 

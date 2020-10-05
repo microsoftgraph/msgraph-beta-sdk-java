@@ -37,7 +37,7 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AgedAccountsReceivable> callback) {
+    public void get(final ICallback<? super AgedAccountsReceivable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AgedAccountsReceivable> callback) {
+    public void delete(final ICallback<? super AgedAccountsReceivable> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
      * @param sourceAgedAccountsReceivable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgedAccountsReceivable sourceAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback) {
+    public void patch(final AgedAccountsReceivable sourceAgedAccountsReceivable, final ICallback<? super AgedAccountsReceivable> callback) {
         send(HttpMethod.PATCH, callback, sourceAgedAccountsReceivable);
     }
 
@@ -96,7 +96,7 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
      * @param newAgedAccountsReceivable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback) {
+    public void post(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<? super AgedAccountsReceivable> callback) {
         send(HttpMethod.POST, callback, newAgedAccountsReceivable);
     }
 
@@ -117,7 +117,7 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
      * @param newAgedAccountsReceivable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback) {
+    public void put(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<? super AgedAccountsReceivable> callback) {
         send(HttpMethod.PUT, callback, newAgedAccountsReceivable);
     }
 
@@ -151,17 +151,6 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
      */
      public IAgedAccountsReceivableRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgedAccountsReceivableRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAgedAccountsReceivableRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AgedAccountsReceivableRequest)this;
      }
 

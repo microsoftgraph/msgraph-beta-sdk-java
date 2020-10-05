@@ -42,7 +42,7 @@ public class ConnectorGroupReferenceRequest extends BaseRequest implements IConn
         super(requestUrl, client, requestOptions, ConnectorGroup.class);
     }
 
-    public void delete(final ICallback<ConnectorGroup> callback) {
+    public void delete(final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -72,22 +72,12 @@ public class ConnectorGroupReferenceRequest extends BaseRequest implements IConn
         return (ConnectorGroupReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IConnectorGroupReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConnectorGroupReferenceRequest)this;
-    }
-    /**
      * Puts the ConnectorGroup
      *
      * @param srcConnectorGroup the ConnectorGroup reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ConnectorGroup srcConnectorGroup, final ICallback<ConnectorGroup> callback) {
+    public void put(ConnectorGroup srcConnectorGroup, final ICallback<? super ConnectorGroup> callback) {
         send(HttpMethod.PUT, callback, srcConnectorGroup);
     }
 

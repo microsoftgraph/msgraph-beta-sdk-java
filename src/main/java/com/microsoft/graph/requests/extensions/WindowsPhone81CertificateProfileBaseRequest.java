@@ -52,7 +52,7 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void get(final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void delete(final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
      * @param sourceWindowsPhone81CertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void patch(final WindowsPhone81CertificateProfileBase sourceWindowsPhone81CertificateProfileBase, final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81CertificateProfileBase);
     }
 
@@ -111,7 +111,7 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
      * @param newWindowsPhone81CertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81CertificateProfileBase);
     }
 
@@ -132,7 +132,7 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
      * @param newWindowsPhone81CertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+    public void put(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final ICallback<? super WindowsPhone81CertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81CertificateProfileBase);
     }
 
@@ -166,17 +166,6 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
      */
      public IWindowsPhone81CertificateProfileBaseRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81CertificateProfileBaseRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhone81CertificateProfileBaseRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81CertificateProfileBaseRequest)this;
      }
 

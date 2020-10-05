@@ -40,7 +40,7 @@ public class ApplicationSignInDetailedSummaryCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, ApplicationSignInDetailedSummaryCollectionResponse.class, IApplicationSignInDetailedSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<IApplicationSignInDetailedSummaryCollectionPage> callback) {
+    public void get(final ICallback<? super IApplicationSignInDetailedSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ApplicationSignInDetailedSummaryCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback) {
+    public void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationSignInDetailedSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class ApplicationSignInDetailedSummaryCollectionRequest extends BaseColle
      */
     public IApplicationSignInDetailedSummaryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApplicationSignInDetailedSummaryCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IApplicationSignInDetailedSummaryCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ApplicationSignInDetailedSummaryCollectionRequest)this;
     }
 

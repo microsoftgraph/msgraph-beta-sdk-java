@@ -23,6 +23,6 @@ public class TrustFrameworkPolicyCollectionPage extends BaseCollectionPage<Trust
      * @param builder  the request builder for the next collection page
      */
     public TrustFrameworkPolicyCollectionPage(final TrustFrameworkPolicyCollectionResponse response, final ITrustFrameworkPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

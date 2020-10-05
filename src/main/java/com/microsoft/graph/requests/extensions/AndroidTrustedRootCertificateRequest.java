@@ -37,7 +37,7 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void get(final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void delete(final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
      * @param sourceAndroidTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void patch(final AndroidTrustedRootCertificate sourceAndroidTrustedRootCertificate, final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidTrustedRootCertificate);
     }
 
@@ -96,7 +96,7 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
      * @param newAndroidTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newAndroidTrustedRootCertificate);
     }
 
@@ -117,7 +117,7 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
      * @param newAndroidTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback) {
+    public void put(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final ICallback<? super AndroidTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newAndroidTrustedRootCertificate);
     }
 
@@ -151,17 +151,6 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
      */
      public IAndroidTrustedRootCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidTrustedRootCertificateRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidTrustedRootCertificateRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidTrustedRootCertificateRequest)this;
      }
 

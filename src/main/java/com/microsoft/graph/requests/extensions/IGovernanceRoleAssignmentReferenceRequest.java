@@ -26,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGovernanceRoleAssignmentReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<GovernanceRoleAssignment> callback);
+    void delete(final ICallback<? super GovernanceRoleAssignment> callback);
 
     GovernanceRoleAssignment delete() throws ClientException;
 
@@ -52,7 +52,7 @@ public interface IGovernanceRoleAssignmentReferenceRequest extends IHttpRequest 
      * @param srcGovernanceRoleAssignment the GovernanceRoleAssignment to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(GovernanceRoleAssignment srcGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback);
+    void put(GovernanceRoleAssignment srcGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback);
 
     /**
      * Puts the GovernanceRoleAssignment

@@ -43,7 +43,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<InformationProtectionLabel> callback) {
+    public void get(final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<InformationProtectionLabel> callback) {
+    public void delete(final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param sourceInformationProtectionLabel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InformationProtectionLabel sourceInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback) {
+    public void patch(final InformationProtectionLabel sourceInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.PATCH, callback, sourceInformationProtectionLabel);
     }
 
@@ -102,7 +102,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param newInformationProtectionLabel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback) {
+    public void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.POST, callback, newInformationProtectionLabel);
     }
 
@@ -123,7 +123,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param newInformationProtectionLabel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback) {
+    public void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.PUT, callback, newInformationProtectionLabel);
     }
 
@@ -157,17 +157,6 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      */
      public IInformationProtectionLabelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InformationProtectionLabelRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IInformationProtectionLabelRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (InformationProtectionLabelRequest)this;
      }
 

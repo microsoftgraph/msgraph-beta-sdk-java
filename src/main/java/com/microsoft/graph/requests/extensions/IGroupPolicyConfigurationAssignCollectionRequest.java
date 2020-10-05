@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IGroupPolicyConfigurationAssignCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IGroupPolicyConfigurationAssignCollectionPage> callback);
+    void post(final ICallback<? super IGroupPolicyConfigurationAssignCollectionPage> callback);
 
     IGroupPolicyConfigurationAssignCollectionPage post() throws ClientException;
 

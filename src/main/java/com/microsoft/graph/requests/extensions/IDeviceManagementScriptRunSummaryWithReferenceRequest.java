@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceManagementScriptRunSummaryWithReferenceRequest extends IHttpRequest {
 
-    void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload, final ICallback<DeviceManagementScriptRunSummary> callback);
+    void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload, final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     DeviceManagementScriptRunSummary post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<DeviceManagementScriptRunSummary> callback);
+    void get(final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
     DeviceManagementScriptRunSummary get() throws ClientException;
 
-	void delete(final ICallback<DeviceManagementScriptRunSummary> callback);
+	void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<DeviceManagementScriptRunSummary> callback);
+	void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback);
 
 	DeviceManagementScriptRunSummary patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary) throws ClientException;
 

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IChatAllMessagesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChatAllMessagesCollectionPage> callback);
+    void get(final ICallback<? super IChatAllMessagesCollectionPage> callback);
 
     IChatAllMessagesCollectionPage get() throws ClientException;
 

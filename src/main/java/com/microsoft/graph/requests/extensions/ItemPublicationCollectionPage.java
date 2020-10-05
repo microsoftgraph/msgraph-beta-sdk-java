@@ -23,6 +23,6 @@ public class ItemPublicationCollectionPage extends BaseCollectionPage<ItemPublic
      * @param builder  the request builder for the next collection page
      */
     public ItemPublicationCollectionPage(final ItemPublicationCollectionResponse response, final IItemPublicationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

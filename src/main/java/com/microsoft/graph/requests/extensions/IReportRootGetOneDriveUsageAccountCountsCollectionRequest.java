@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetOneDriveUsageAccountCountsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetOneDriveUsageAccountCountsCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetOneDriveUsageAccountCountsCollectionPage> callback);
 
     IReportRootGetOneDriveUsageAccountCountsCollectionPage get() throws ClientException;
 

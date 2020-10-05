@@ -23,6 +23,6 @@ public class DepOnboardingSettingCollectionPage extends BaseCollectionPage<DepOn
      * @param builder  the request builder for the next collection page
      */
     public DepOnboardingSettingCollectionPage(final DepOnboardingSettingCollectionResponse response, final IDepOnboardingSettingCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

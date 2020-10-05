@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserSecurityProfileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserSecurityProfileCollectionPage> callback);
+    void get(final ICallback<? super IUserSecurityProfileCollectionPage> callback);
 
     IUserSecurityProfileCollectionPage get() throws ClientException;
 
-    void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<UserSecurityProfile> callback);
+    void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<? super UserSecurityProfile> callback);
 
     UserSecurityProfile post(final UserSecurityProfile newUserSecurityProfile) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserSecurityProfileCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUserSecurityProfileCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserSecurityProfileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserSecurityProfileCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUserSecurityProfileCollectionRequest skipToken(String skipToken);
+	IUserSecurityProfileCollectionRequest skipToken(final String skipToken);
 }

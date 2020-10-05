@@ -40,7 +40,7 @@ public class ChatMessageDeltaCollectionPage extends BaseCollectionPage<ChatMessa
      * @param builder The request builder for the next collection page
      */
     public ChatMessageDeltaCollectionPage(final ChatMessageDeltaCollectionResponse response, final IChatMessageDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

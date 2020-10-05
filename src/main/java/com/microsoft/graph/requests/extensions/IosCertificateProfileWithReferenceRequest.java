@@ -35,7 +35,7 @@ public class IosCertificateProfileWithReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, IosCertificateProfile.class);
     }
 
-    public void post(final IosCertificateProfile newIosCertificateProfile, final IJsonBackedObject payload, final ICallback<IosCertificateProfile> callback) {
+    public void post(final IosCertificateProfile newIosCertificateProfile, final IJsonBackedObject payload, final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class IosCertificateProfileWithReferenceRequest extends BaseRequest imple
         return null;
     }
 
-    public void get(final ICallback<IosCertificateProfile> callback) {
+    public void get(final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class IosCertificateProfileWithReferenceRequest extends BaseRequest imple
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<IosCertificateProfile> callback) {
+	public void delete(final ICallback<? super IosCertificateProfile> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class IosCertificateProfileWithReferenceRequest extends BaseRequest imple
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<IosCertificateProfile> callback) {
+	public void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
 		send(HttpMethod.PATCH, callback, sourceIosCertificateProfile);
 	}
 
@@ -91,16 +91,6 @@ public class IosCertificateProfileWithReferenceRequest extends BaseRequest imple
      */
     public IIosCertificateProfileWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IosCertificateProfileWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IIosCertificateProfileWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (IosCertificateProfileWithReferenceRequest)this;
     }
 }

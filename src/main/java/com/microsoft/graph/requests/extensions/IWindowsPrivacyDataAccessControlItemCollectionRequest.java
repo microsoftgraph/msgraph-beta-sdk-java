@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsPrivacyDataAccessControlItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsPrivacyDataAccessControlItemCollectionPage> callback);
+    void get(final ICallback<? super IWindowsPrivacyDataAccessControlItemCollectionPage> callback);
 
     IWindowsPrivacyDataAccessControlItemCollectionPage get() throws ClientException;
 
-    void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+    void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<? super WindowsPrivacyDataAccessControlItem> callback);
 
     WindowsPrivacyDataAccessControlItem post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IWindowsPrivacyDataAccessControlItemCollectionRequest extends I
      * @return the updated request
      */
     IWindowsPrivacyDataAccessControlItemCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsPrivacyDataAccessControlItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IWindowsPrivacyDataAccessControlItemCollectionRequest extends I
      *
 	 * @return the updated request
 	 */
-	IWindowsPrivacyDataAccessControlItemCollectionRequest skipToken(String skipToken);
+	IWindowsPrivacyDataAccessControlItemCollectionRequest skipToken(final String skipToken);
 }

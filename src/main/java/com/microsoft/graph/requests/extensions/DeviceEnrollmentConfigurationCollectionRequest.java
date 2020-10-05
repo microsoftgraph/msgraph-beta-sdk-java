@@ -42,7 +42,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationCollectionResponse.class, IDeviceEnrollmentConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceEnrollmentConfigurationCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceEnrollmentConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
+    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,6 +94,17 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      */
     public IDeviceEnrollmentConfigurationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceEnrollmentConfigurationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceEnrollmentConfigurationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
 

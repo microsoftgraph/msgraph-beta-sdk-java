@@ -39,7 +39,7 @@ public class DeviceManagementGetRoleScopeTagsByIdsCollectionRequest extends Base
     }
 
 
-    public void get(final ICallback<IDeviceManagementGetRoleScopeTagsByIdsCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementGetRoleScopeTagsByIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class DeviceManagementGetRoleScopeTagsByIdsCollectionRequest extends Base
      */
     public IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest)this;
     }
 

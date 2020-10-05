@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     AndroidDeviceOwnerTrustedRootCertificate post(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+    void get(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
     AndroidDeviceOwnerTrustedRootCertificate get() throws ClientException;
 
-	void delete(final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+	void delete(final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback);
+	void patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate, final ICallback<? super AndroidDeviceOwnerTrustedRootCertificate> callback);
 
 	AndroidDeviceOwnerTrustedRootCertificate patch(final AndroidDeviceOwnerTrustedRootCertificate sourceAndroidDeviceOwnerTrustedRootCertificate) throws ClientException;
 

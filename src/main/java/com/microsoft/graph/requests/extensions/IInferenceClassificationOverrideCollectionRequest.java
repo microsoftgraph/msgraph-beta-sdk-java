@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IInferenceClassificationOverrideCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IInferenceClassificationOverrideCollectionPage> callback);
+    void get(final ICallback<? super IInferenceClassificationOverrideCollectionPage> callback);
 
     IInferenceClassificationOverrideCollectionPage get() throws ClientException;
 
-    void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback);
+    void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback);
 
     InferenceClassificationOverride post(final InferenceClassificationOverride newInferenceClassificationOverride) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IInferenceClassificationOverrideCollectionRequest extends IHttp
      * @return the updated request
      */
     IInferenceClassificationOverrideCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IInferenceClassificationOverrideCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IInferenceClassificationOverrideCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IInferenceClassificationOverrideCollectionRequest skipToken(String skipToken);
+	IInferenceClassificationOverrideCollectionRequest skipToken(final String skipToken);
 }

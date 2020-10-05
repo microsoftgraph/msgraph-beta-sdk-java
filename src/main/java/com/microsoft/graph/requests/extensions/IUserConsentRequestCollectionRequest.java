@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserConsentRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserConsentRequestCollectionPage> callback);
+    void get(final ICallback<? super IUserConsentRequestCollectionPage> callback);
 
     IUserConsentRequestCollectionPage get() throws ClientException;
 
-    void post(final UserConsentRequest newUserConsentRequest, final ICallback<UserConsentRequest> callback);
+    void post(final UserConsentRequest newUserConsentRequest, final ICallback<? super UserConsentRequest> callback);
 
     UserConsentRequest post(final UserConsentRequest newUserConsentRequest) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserConsentRequestCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUserConsentRequestCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserConsentRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserConsentRequestCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUserConsentRequestCollectionRequest skipToken(String skipToken);
+	IUserConsentRequestCollectionRequest skipToken(final String skipToken);
 }

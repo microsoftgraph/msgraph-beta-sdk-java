@@ -21,7 +21,7 @@ public interface IPasswordAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PasswordAuthenticationMethod> callback);
+    void get(final ICallback<? super PasswordAuthenticationMethod> callback);
 
     /**
      * Gets the PasswordAuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface IPasswordAuthenticationMethodRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PasswordAuthenticationMethod> callback);
+    void delete(final ICallback<? super PasswordAuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPasswordAuthenticationMethodRequest extends IHttpRequest {
      * @param sourcePasswordAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PasswordAuthenticationMethod sourcePasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback);
+    void patch(final PasswordAuthenticationMethod sourcePasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback);
 
     /**
      * Patches this PasswordAuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface IPasswordAuthenticationMethodRequest extends IHttpRequest {
      * @param newPasswordAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback);
+    void post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback);
 
     /**
      * Posts a PasswordAuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface IPasswordAuthenticationMethodRequest extends IHttpRequest {
      * @param newPasswordAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback);
+    void put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback);
 
     /**
      * Posts a PasswordAuthenticationMethod with a new object

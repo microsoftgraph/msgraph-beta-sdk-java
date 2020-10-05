@@ -61,7 +61,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void get(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -99,7 +99,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param sourceWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAutopilotDeploymentProfile);
     }
 
@@ -120,7 +120,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param newWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.POST, callback, newWindowsAutopilotDeploymentProfile);
     }
 
@@ -141,7 +141,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param newWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+    public void put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PUT, callback, newWindowsAutopilotDeploymentProfile);
     }
 
@@ -175,17 +175,6 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      */
      public IWindowsAutopilotDeploymentProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAutopilotDeploymentProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsAutopilotDeploymentProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsAutopilotDeploymentProfileRequest)this;
      }
 

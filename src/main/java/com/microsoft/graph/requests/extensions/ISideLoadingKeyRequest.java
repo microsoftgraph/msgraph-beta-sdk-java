@@ -21,7 +21,7 @@ public interface ISideLoadingKeyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SideLoadingKey> callback);
+    void get(final ICallback<? super SideLoadingKey> callback);
 
     /**
      * Gets the SideLoadingKey from the service
@@ -36,7 +36,7 @@ public interface ISideLoadingKeyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SideLoadingKey> callback);
+    void delete(final ICallback<? super SideLoadingKey> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISideLoadingKeyRequest extends IHttpRequest {
      * @param sourceSideLoadingKey the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SideLoadingKey sourceSideLoadingKey, final ICallback<SideLoadingKey> callback);
+    void patch(final SideLoadingKey sourceSideLoadingKey, final ICallback<? super SideLoadingKey> callback);
 
     /**
      * Patches this SideLoadingKey with a source
@@ -68,7 +68,7 @@ public interface ISideLoadingKeyRequest extends IHttpRequest {
      * @param newSideLoadingKey the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback);
+    void post(final SideLoadingKey newSideLoadingKey, final ICallback<? super SideLoadingKey> callback);
 
     /**
      * Posts a SideLoadingKey with a new object
@@ -85,7 +85,7 @@ public interface ISideLoadingKeyRequest extends IHttpRequest {
      * @param newSideLoadingKey the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback);
+    void put(final SideLoadingKey newSideLoadingKey, final ICallback<? super SideLoadingKey> callback);
 
     /**
      * Posts a SideLoadingKey with a new object

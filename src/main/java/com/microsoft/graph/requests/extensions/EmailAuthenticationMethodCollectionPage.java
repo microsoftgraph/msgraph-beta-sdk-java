@@ -23,6 +23,6 @@ public class EmailAuthenticationMethodCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public EmailAuthenticationMethodCollectionPage(final EmailAuthenticationMethodCollectionResponse response, final IEmailAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

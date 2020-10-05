@@ -21,7 +21,7 @@ public interface IMacOSImportedPFXCertificateProfileRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSImportedPFXCertificateProfile> callback);
+    void get(final ICallback<? super MacOSImportedPFXCertificateProfile> callback);
 
     /**
      * Gets the MacOSImportedPFXCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IMacOSImportedPFXCertificateProfileRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSImportedPFXCertificateProfile> callback);
+    void delete(final ICallback<? super MacOSImportedPFXCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSImportedPFXCertificateProfileRequest extends IHttpRequest
      * @param sourceMacOSImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback);
+    void patch(final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback);
 
     /**
      * Patches this MacOSImportedPFXCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IMacOSImportedPFXCertificateProfileRequest extends IHttpRequest
      * @param newMacOSImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback);
+    void post(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a MacOSImportedPFXCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IMacOSImportedPFXCertificateProfileRequest extends IHttpRequest
      * @param newMacOSImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback);
+    void put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback);
 
     /**
      * Posts a MacOSImportedPFXCertificateProfile with a new object

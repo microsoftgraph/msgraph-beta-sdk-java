@@ -6,14 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WindowsFeatureUpdateProfileAssignment;
 import com.microsoft.graph.models.extensions.WindowsUpdateState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WindowsFeatureUpdateProfileAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsFeatureUpdateProfileAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsUpdateStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsUpdateStateCollectionPage;
 
 
@@ -134,35 +131,11 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
 
 
         if (json.has("assignments")) {
-            final WindowsFeatureUpdateProfileAssignmentCollectionResponse response = new WindowsFeatureUpdateProfileAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final WindowsFeatureUpdateProfileAssignment[] array = new WindowsFeatureUpdateProfileAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsFeatureUpdateProfileAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new WindowsFeatureUpdateProfileAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), WindowsFeatureUpdateProfileAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceUpdateStates")) {
-            final WindowsUpdateStateCollectionResponse response = new WindowsUpdateStateCollectionResponse();
-            if (json.has("deviceUpdateStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceUpdateStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceUpdateStates").toString(), JsonObject[].class);
-            final WindowsUpdateState[] array = new WindowsUpdateState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsUpdateState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceUpdateStates = new WindowsUpdateStateCollectionPage(response, null);
+            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates").toString(), WindowsUpdateStateCollectionPage.class);
         }
     }
 }

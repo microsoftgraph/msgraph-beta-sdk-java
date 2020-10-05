@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISalesCreditMemoCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISalesCreditMemoCollectionPage> callback);
+    void get(final ICallback<? super ISalesCreditMemoCollectionPage> callback);
 
     ISalesCreditMemoCollectionPage get() throws ClientException;
 
-    void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback);
+    void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback);
 
     SalesCreditMemo post(final SalesCreditMemo newSalesCreditMemo) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISalesCreditMemoCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISalesCreditMemoCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISalesCreditMemoCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISalesCreditMemoCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISalesCreditMemoCollectionRequest skipToken(String skipToken);
+	ISalesCreditMemoCollectionRequest skipToken(final String skipToken);
 }

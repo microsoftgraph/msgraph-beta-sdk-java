@@ -46,7 +46,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrintJob> callback) {
+    public void get(final ICallback<? super PrintJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrintJob> callback) {
+    public void delete(final ICallback<? super PrintJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param sourcePrintJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintJob sourcePrintJob, final ICallback<PrintJob> callback) {
+    public void patch(final PrintJob sourcePrintJob, final ICallback<? super PrintJob> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintJob);
     }
 
@@ -105,7 +105,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param newPrintJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintJob newPrintJob, final ICallback<PrintJob> callback) {
+    public void post(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback) {
         send(HttpMethod.POST, callback, newPrintJob);
     }
 
@@ -126,7 +126,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param newPrintJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintJob newPrintJob, final ICallback<PrintJob> callback) {
+    public void put(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback) {
         send(HttpMethod.PUT, callback, newPrintJob);
     }
 
@@ -160,17 +160,6 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      */
      public IPrintJobRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintJobRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrintJobRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrintJobRequest)this;
      }
 

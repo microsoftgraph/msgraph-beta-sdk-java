@@ -21,7 +21,7 @@ public interface IDeviceManagementScriptRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementScript> callback);
+    void get(final ICallback<? super DeviceManagementScript> callback);
 
     /**
      * Gets the DeviceManagementScript from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementScriptRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementScript> callback);
+    void delete(final ICallback<? super DeviceManagementScript> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementScriptRequest extends IHttpRequest {
      * @param sourceDeviceManagementScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementScript sourceDeviceManagementScript, final ICallback<DeviceManagementScript> callback);
+    void patch(final DeviceManagementScript sourceDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback);
 
     /**
      * Patches this DeviceManagementScript with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementScriptRequest extends IHttpRequest {
      * @param newDeviceManagementScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementScript newDeviceManagementScript, final ICallback<DeviceManagementScript> callback);
+    void post(final DeviceManagementScript newDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback);
 
     /**
      * Posts a DeviceManagementScript with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementScriptRequest extends IHttpRequest {
      * @param newDeviceManagementScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementScript newDeviceManagementScript, final ICallback<DeviceManagementScript> callback);
+    void put(final DeviceManagementScript newDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback);
 
     /**
      * Posts a DeviceManagementScript with a new object

@@ -40,7 +40,7 @@ public class OrganizationalBrandingLocalizationCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, OrganizationalBrandingLocalizationCollectionResponse.class, IOrganizationalBrandingLocalizationCollectionPage.class);
     }
 
-    public void get(final ICallback<IOrganizationalBrandingLocalizationCollectionPage> callback) {
+    public void get(final ICallback<? super IOrganizationalBrandingLocalizationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OrganizationalBrandingLocalizationCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback) {
+    public void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrganizationalBrandingLocalizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class OrganizationalBrandingLocalizationCollectionRequest extends BaseCol
      */
     public IOrganizationalBrandingLocalizationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OrganizationalBrandingLocalizationCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOrganizationalBrandingLocalizationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OrganizationalBrandingLocalizationCollectionRequest)this;
     }
 

@@ -39,7 +39,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
+    public void get(final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
      * @param sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
+    public void patch(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -98,7 +98,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
      * @param newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
+    public void post(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -119,7 +119,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
      * @param newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
+    public void put(final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration, final ICallback<? super AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -153,17 +153,6 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
      */
      public IAndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest)this;
      }
 

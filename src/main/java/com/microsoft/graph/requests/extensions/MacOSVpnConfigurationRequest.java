@@ -39,7 +39,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSVpnConfiguration> callback) {
+    public void get(final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSVpnConfiguration> callback) {
+    public void delete(final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param sourceMacOSVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSVpnConfiguration sourceMacOSVpnConfiguration, final ICallback<MacOSVpnConfiguration> callback) {
+    public void patch(final MacOSVpnConfiguration sourceMacOSVpnConfiguration, final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSVpnConfiguration);
     }
 
@@ -98,7 +98,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param newMacOSVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<MacOSVpnConfiguration> callback) {
+    public void post(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSVpnConfiguration);
     }
 
@@ -119,7 +119,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param newMacOSVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<MacOSVpnConfiguration> callback) {
+    public void put(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSVpnConfiguration);
     }
 
@@ -153,17 +153,6 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      */
      public IMacOSVpnConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSVpnConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMacOSVpnConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSVpnConfigurationRequest)this;
      }
 

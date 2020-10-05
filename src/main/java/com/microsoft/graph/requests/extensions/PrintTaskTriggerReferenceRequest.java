@@ -36,7 +36,7 @@ public class PrintTaskTriggerReferenceRequest extends BaseRequest implements IPr
         super(requestUrl, client, requestOptions, PrintTaskTrigger.class);
     }
 
-    public void delete(final ICallback<PrintTaskTrigger> callback) {
+    public void delete(final ICallback<? super PrintTaskTrigger> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -66,22 +66,12 @@ public class PrintTaskTriggerReferenceRequest extends BaseRequest implements IPr
         return (PrintTaskTriggerReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrintTaskTriggerReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrintTaskTriggerReferenceRequest)this;
-    }
-    /**
      * Puts the PrintTaskTrigger
      *
      * @param srcPrintTaskTrigger the PrintTaskTrigger reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(PrintTaskTrigger srcPrintTaskTrigger, final ICallback<PrintTaskTrigger> callback) {
+    public void put(PrintTaskTrigger srcPrintTaskTrigger, final ICallback<? super PrintTaskTrigger> callback) {
         send(HttpMethod.PUT, callback, srcPrintTaskTrigger);
     }
 

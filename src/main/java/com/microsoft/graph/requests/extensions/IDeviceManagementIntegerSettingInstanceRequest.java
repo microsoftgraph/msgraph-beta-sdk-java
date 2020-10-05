@@ -21,7 +21,7 @@ public interface IDeviceManagementIntegerSettingInstanceRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementIntegerSettingInstance> callback);
+    void get(final ICallback<? super DeviceManagementIntegerSettingInstance> callback);
 
     /**
      * Gets the DeviceManagementIntegerSettingInstance from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementIntegerSettingInstanceRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementIntegerSettingInstance> callback);
+    void delete(final ICallback<? super DeviceManagementIntegerSettingInstance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementIntegerSettingInstanceRequest extends IHttpReq
      * @param sourceDeviceManagementIntegerSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementIntegerSettingInstance sourceDeviceManagementIntegerSettingInstance, final ICallback<DeviceManagementIntegerSettingInstance> callback);
+    void patch(final DeviceManagementIntegerSettingInstance sourceDeviceManagementIntegerSettingInstance, final ICallback<? super DeviceManagementIntegerSettingInstance> callback);
 
     /**
      * Patches this DeviceManagementIntegerSettingInstance with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementIntegerSettingInstanceRequest extends IHttpReq
      * @param newDeviceManagementIntegerSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<DeviceManagementIntegerSettingInstance> callback);
+    void post(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<? super DeviceManagementIntegerSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementIntegerSettingInstance with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementIntegerSettingInstanceRequest extends IHttpReq
      * @param newDeviceManagementIntegerSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<DeviceManagementIntegerSettingInstance> callback);
+    void put(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<? super DeviceManagementIntegerSettingInstance> callback);
 
     /**
      * Posts a DeviceManagementIntegerSettingInstance with a new object

@@ -23,6 +23,6 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public AndroidDeviceOwnerEnrollmentProfileCollectionPage(final AndroidDeviceOwnerEnrollmentProfileCollectionResponse response, final IAndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

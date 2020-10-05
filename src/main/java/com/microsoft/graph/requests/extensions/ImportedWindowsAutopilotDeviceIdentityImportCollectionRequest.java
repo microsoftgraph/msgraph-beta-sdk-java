@@ -44,7 +44,7 @@ public class ImportedWindowsAutopilotDeviceIdentityImportCollectionRequest exten
     }
 
 
-    public void post(final ICallback<IImportedWindowsAutopilotDeviceIdentityImportCollectionPage> callback) {
+    public void post(final ICallback<? super IImportedWindowsAutopilotDeviceIdentityImportCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,6 +117,17 @@ public class ImportedWindowsAutopilotDeviceIdentityImportCollectionRequest exten
      */
     public IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest)this;
     }
 

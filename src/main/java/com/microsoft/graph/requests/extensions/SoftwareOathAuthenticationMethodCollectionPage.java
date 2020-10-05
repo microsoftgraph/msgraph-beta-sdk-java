@@ -23,6 +23,6 @@ public class SoftwareOathAuthenticationMethodCollectionPage extends BaseCollecti
      * @param builder  the request builder for the next collection page
      */
     public SoftwareOathAuthenticationMethodCollectionPage(final SoftwareOathAuthenticationMethodCollectionResponse response, final ISoftwareOathAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

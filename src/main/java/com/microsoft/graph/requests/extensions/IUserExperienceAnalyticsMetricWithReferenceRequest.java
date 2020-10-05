@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserExperienceAnalyticsMetricWithReferenceRequest extends IHttpRequest {
 
-    void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final IJsonBackedObject payload, final ICallback<UserExperienceAnalyticsMetric> callback);
+    void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final IJsonBackedObject payload, final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     UserExperienceAnalyticsMetric post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<UserExperienceAnalyticsMetric> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
     UserExperienceAnalyticsMetric get() throws ClientException;
 
-	void delete(final ICallback<UserExperienceAnalyticsMetric> callback);
+	void delete(final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback);
+	void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback);
 
 	UserExperienceAnalyticsMetric patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric) throws ClientException;
 

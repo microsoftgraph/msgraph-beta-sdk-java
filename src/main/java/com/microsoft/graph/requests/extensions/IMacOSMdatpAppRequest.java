@@ -21,7 +21,7 @@ public interface IMacOSMdatpAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSMdatpApp> callback);
+    void get(final ICallback<? super MacOSMdatpApp> callback);
 
     /**
      * Gets the MacOSMdatpApp from the service
@@ -36,7 +36,7 @@ public interface IMacOSMdatpAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSMdatpApp> callback);
+    void delete(final ICallback<? super MacOSMdatpApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSMdatpAppRequest extends IHttpRequest {
      * @param sourceMacOSMdatpApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSMdatpApp sourceMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback);
+    void patch(final MacOSMdatpApp sourceMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback);
 
     /**
      * Patches this MacOSMdatpApp with a source
@@ -68,7 +68,7 @@ public interface IMacOSMdatpAppRequest extends IHttpRequest {
      * @param newMacOSMdatpApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback);
+    void post(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback);
 
     /**
      * Posts a MacOSMdatpApp with a new object
@@ -85,7 +85,7 @@ public interface IMacOSMdatpAppRequest extends IHttpRequest {
      * @param newMacOSMdatpApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback);
+    void put(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback);
 
     /**
      * Posts a MacOSMdatpApp with a new object

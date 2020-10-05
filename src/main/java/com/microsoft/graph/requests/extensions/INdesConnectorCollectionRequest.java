@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INdesConnectorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<INdesConnectorCollectionPage> callback);
+    void get(final ICallback<? super INdesConnectorCollectionPage> callback);
 
     INdesConnectorCollectionPage get() throws ClientException;
 
-    void post(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback);
+    void post(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback);
 
     NdesConnector post(final NdesConnector newNdesConnector) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface INdesConnectorCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     INdesConnectorCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    INdesConnectorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface INdesConnectorCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	INdesConnectorCollectionRequest skipToken(String skipToken);
+	INdesConnectorCollectionRequest skipToken(final String skipToken);
 }

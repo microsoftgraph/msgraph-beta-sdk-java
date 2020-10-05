@@ -40,7 +40,7 @@ public class PrivilegedRoleAssignmentRequestCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignmentRequestCollectionResponse.class, IPrivilegedRoleAssignmentRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrivilegedRoleAssignmentRequestCollectionPage> callback) {
+    public void get(final ICallback<? super IPrivilegedRoleAssignmentRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PrivilegedRoleAssignmentRequestCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback) {
+    public void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedRoleAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class PrivilegedRoleAssignmentRequestCollectionRequest extends BaseCollec
      */
     public IPrivilegedRoleAssignmentRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedRoleAssignmentRequestCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrivilegedRoleAssignmentRequestCollectionRequest)this;
     }
 

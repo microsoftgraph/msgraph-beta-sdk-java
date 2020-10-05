@@ -37,7 +37,7 @@ public class WindowsPhone81AppXBundleRequest extends BaseRequest implements IWin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81AppXBundle> callback) {
+    public void get(final ICallback<? super WindowsPhone81AppXBundle> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhone81AppXBundleRequest extends BaseRequest implements IWin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81AppXBundle> callback) {
+    public void delete(final ICallback<? super WindowsPhone81AppXBundle> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhone81AppXBundleRequest extends BaseRequest implements IWin
      * @param sourceWindowsPhone81AppXBundle the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81AppXBundle sourceWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback) {
+    public void patch(final WindowsPhone81AppXBundle sourceWindowsPhone81AppXBundle, final ICallback<? super WindowsPhone81AppXBundle> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81AppXBundle);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhone81AppXBundleRequest extends BaseRequest implements IWin
      * @param newWindowsPhone81AppXBundle the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback) {
+    public void post(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<? super WindowsPhone81AppXBundle> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81AppXBundle);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhone81AppXBundleRequest extends BaseRequest implements IWin
      * @param newWindowsPhone81AppXBundle the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback) {
+    public void put(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<? super WindowsPhone81AppXBundle> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81AppXBundle);
     }
 
@@ -151,17 +151,6 @@ public class WindowsPhone81AppXBundleRequest extends BaseRequest implements IWin
      */
      public IWindowsPhone81AppXBundleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81AppXBundleRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsPhone81AppXBundleRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81AppXBundleRequest)this;
      }
 

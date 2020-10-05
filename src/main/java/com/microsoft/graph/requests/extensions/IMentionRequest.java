@@ -21,7 +21,7 @@ public interface IMentionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Mention> callback);
+    void get(final ICallback<? super Mention> callback);
 
     /**
      * Gets the Mention from the service
@@ -36,7 +36,7 @@ public interface IMentionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Mention> callback);
+    void delete(final ICallback<? super Mention> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMentionRequest extends IHttpRequest {
      * @param sourceMention the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Mention sourceMention, final ICallback<Mention> callback);
+    void patch(final Mention sourceMention, final ICallback<? super Mention> callback);
 
     /**
      * Patches this Mention with a source
@@ -68,7 +68,7 @@ public interface IMentionRequest extends IHttpRequest {
      * @param newMention the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Mention newMention, final ICallback<Mention> callback);
+    void post(final Mention newMention, final ICallback<? super Mention> callback);
 
     /**
      * Posts a Mention with a new object
@@ -85,7 +85,7 @@ public interface IMentionRequest extends IHttpRequest {
      * @param newMention the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Mention newMention, final ICallback<Mention> callback);
+    void put(final Mention newMention, final ICallback<? super Mention> callback);
 
     /**
      * Posts a Mention with a new object

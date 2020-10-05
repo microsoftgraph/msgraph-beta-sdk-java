@@ -23,6 +23,6 @@ public class RiskyUserHistoryItemCollectionPage extends BaseCollectionPage<Risky
      * @param builder  the request builder for the next collection page
      */
     public RiskyUserHistoryItemCollectionPage(final RiskyUserHistoryItemCollectionResponse response, final IRiskyUserHistoryItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -37,7 +37,7 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<YammerDeviceUsageUserDetail> callback) {
+    public void get(final ICallback<? super YammerDeviceUsageUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<YammerDeviceUsageUserDetail> callback) {
+    public void delete(final ICallback<? super YammerDeviceUsageUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
      * @param sourceYammerDeviceUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerDeviceUsageUserDetail sourceYammerDeviceUsageUserDetail, final ICallback<YammerDeviceUsageUserDetail> callback) {
+    public void patch(final YammerDeviceUsageUserDetail sourceYammerDeviceUsageUserDetail, final ICallback<? super YammerDeviceUsageUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerDeviceUsageUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
      * @param newYammerDeviceUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerDeviceUsageUserDetail newYammerDeviceUsageUserDetail, final ICallback<YammerDeviceUsageUserDetail> callback) {
+    public void post(final YammerDeviceUsageUserDetail newYammerDeviceUsageUserDetail, final ICallback<? super YammerDeviceUsageUserDetail> callback) {
         send(HttpMethod.POST, callback, newYammerDeviceUsageUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
      * @param newYammerDeviceUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerDeviceUsageUserDetail newYammerDeviceUsageUserDetail, final ICallback<YammerDeviceUsageUserDetail> callback) {
+    public void put(final YammerDeviceUsageUserDetail newYammerDeviceUsageUserDetail, final ICallback<? super YammerDeviceUsageUserDetail> callback) {
         send(HttpMethod.PUT, callback, newYammerDeviceUsageUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
      */
      public IYammerDeviceUsageUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerDeviceUsageUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IYammerDeviceUsageUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (YammerDeviceUsageUserDetailRequest)this;
      }
 

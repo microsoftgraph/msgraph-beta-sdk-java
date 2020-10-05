@@ -21,7 +21,7 @@ public interface ISkillProficiencyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SkillProficiency> callback);
+    void get(final ICallback<? super SkillProficiency> callback);
 
     /**
      * Gets the SkillProficiency from the service
@@ -36,7 +36,7 @@ public interface ISkillProficiencyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SkillProficiency> callback);
+    void delete(final ICallback<? super SkillProficiency> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISkillProficiencyRequest extends IHttpRequest {
      * @param sourceSkillProficiency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SkillProficiency sourceSkillProficiency, final ICallback<SkillProficiency> callback);
+    void patch(final SkillProficiency sourceSkillProficiency, final ICallback<? super SkillProficiency> callback);
 
     /**
      * Patches this SkillProficiency with a source
@@ -68,7 +68,7 @@ public interface ISkillProficiencyRequest extends IHttpRequest {
      * @param newSkillProficiency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback);
+    void post(final SkillProficiency newSkillProficiency, final ICallback<? super SkillProficiency> callback);
 
     /**
      * Posts a SkillProficiency with a new object
@@ -85,7 +85,7 @@ public interface ISkillProficiencyRequest extends IHttpRequest {
      * @param newSkillProficiency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback);
+    void put(final SkillProficiency newSkillProficiency, final ICallback<? super SkillProficiency> callback);
 
     /**
      * Posts a SkillProficiency with a new object

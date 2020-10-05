@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
 import com.microsoft.graph.models.generated.EapFastConfiguration;
@@ -15,7 +14,6 @@ import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtls
 import com.microsoft.graph.models.extensions.MacOSCertificateProfileBase;
 import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.MacOSWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionPage;
 
 
@@ -144,19 +142,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            final MacOSTrustedRootCertificateCollectionResponse response = new MacOSTrustedRootCertificateCollectionResponse();
-            if (json.has("rootCertificatesForServerValidation@odata.nextLink")) {
-                response.nextLink = json.get("rootCertificatesForServerValidation@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("rootCertificatesForServerValidation").toString(), JsonObject[].class);
-            final MacOSTrustedRootCertificate[] array = new MacOSTrustedRootCertificate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MacOSTrustedRootCertificate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            rootCertificatesForServerValidation = new MacOSTrustedRootCertificateCollectionPage(response, null);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation").toString(), MacOSTrustedRootCertificateCollectionPage.class);
         }
     }
 }

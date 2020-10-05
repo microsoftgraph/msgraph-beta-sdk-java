@@ -34,6 +34,6 @@ public class DeviceEnrollmentConfigurationHasPayloadLinksCollectionPage extends 
      * @param builder The request builder for the next collection page
      */
     public DeviceEnrollmentConfigurationHasPayloadLinksCollectionPage(final DeviceEnrollmentConfigurationHasPayloadLinksCollectionResponse response, final IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

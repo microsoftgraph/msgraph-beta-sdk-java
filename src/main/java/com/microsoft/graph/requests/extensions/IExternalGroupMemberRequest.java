@@ -21,7 +21,7 @@ public interface IExternalGroupMemberRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExternalGroupMember> callback);
+    void get(final ICallback<? super ExternalGroupMember> callback);
 
     /**
      * Gets the ExternalGroupMember from the service
@@ -36,7 +36,7 @@ public interface IExternalGroupMemberRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExternalGroupMember> callback);
+    void delete(final ICallback<? super ExternalGroupMember> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExternalGroupMemberRequest extends IHttpRequest {
      * @param sourceExternalGroupMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExternalGroupMember sourceExternalGroupMember, final ICallback<ExternalGroupMember> callback);
+    void patch(final ExternalGroupMember sourceExternalGroupMember, final ICallback<? super ExternalGroupMember> callback);
 
     /**
      * Patches this ExternalGroupMember with a source
@@ -68,7 +68,7 @@ public interface IExternalGroupMemberRequest extends IHttpRequest {
      * @param newExternalGroupMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExternalGroupMember newExternalGroupMember, final ICallback<ExternalGroupMember> callback);
+    void post(final ExternalGroupMember newExternalGroupMember, final ICallback<? super ExternalGroupMember> callback);
 
     /**
      * Posts a ExternalGroupMember with a new object
@@ -85,7 +85,7 @@ public interface IExternalGroupMemberRequest extends IHttpRequest {
      * @param newExternalGroupMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExternalGroupMember newExternalGroupMember, final ICallback<ExternalGroupMember> callback);
+    void put(final ExternalGroupMember newExternalGroupMember, final ICallback<? super ExternalGroupMember> callback);
 
     /**
      * Posts a ExternalGroupMember with a new object

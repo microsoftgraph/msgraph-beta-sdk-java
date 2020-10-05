@@ -21,7 +21,7 @@ public interface IRoleScopeTagRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RoleScopeTag> callback);
+    void get(final ICallback<? super RoleScopeTag> callback);
 
     /**
      * Gets the RoleScopeTag from the service
@@ -36,7 +36,7 @@ public interface IRoleScopeTagRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RoleScopeTag> callback);
+    void delete(final ICallback<? super RoleScopeTag> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRoleScopeTagRequest extends IHttpRequest {
      * @param sourceRoleScopeTag the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<RoleScopeTag> callback);
+    void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
     /**
      * Patches this RoleScopeTag with a source
@@ -68,7 +68,7 @@ public interface IRoleScopeTagRequest extends IHttpRequest {
      * @param newRoleScopeTag the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback);
+    void post(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
     /**
      * Posts a RoleScopeTag with a new object
@@ -85,7 +85,7 @@ public interface IRoleScopeTagRequest extends IHttpRequest {
      * @param newRoleScopeTag the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback);
+    void put(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback);
 
     /**
      * Posts a RoleScopeTag with a new object

@@ -21,7 +21,7 @@ public interface IDeviceManagementAutopilotEventRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementAutopilotEvent> callback);
+    void get(final ICallback<? super DeviceManagementAutopilotEvent> callback);
 
     /**
      * Gets the DeviceManagementAutopilotEvent from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementAutopilotEventRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementAutopilotEvent> callback);
+    void delete(final ICallback<? super DeviceManagementAutopilotEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementAutopilotEventRequest extends IHttpRequest {
      * @param sourceDeviceManagementAutopilotEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementAutopilotEvent sourceDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback);
+    void patch(final DeviceManagementAutopilotEvent sourceDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback);
 
     /**
      * Patches this DeviceManagementAutopilotEvent with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementAutopilotEventRequest extends IHttpRequest {
      * @param newDeviceManagementAutopilotEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback);
+    void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback);
 
     /**
      * Posts a DeviceManagementAutopilotEvent with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementAutopilotEventRequest extends IHttpRequest {
      * @param newDeviceManagementAutopilotEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback);
+    void put(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<? super DeviceManagementAutopilotEvent> callback);
 
     /**
      * Posts a DeviceManagementAutopilotEvent with a new object

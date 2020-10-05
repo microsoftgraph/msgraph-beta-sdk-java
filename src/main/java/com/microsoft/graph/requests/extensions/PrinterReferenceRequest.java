@@ -54,7 +54,7 @@ public class PrinterReferenceRequest extends BaseRequest implements IPrinterRefe
         super(requestUrl, client, requestOptions, Printer.class);
     }
 
-    public void delete(final ICallback<Printer> callback) {
+    public void delete(final ICallback<? super Printer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,22 +84,12 @@ public class PrinterReferenceRequest extends BaseRequest implements IPrinterRefe
         return (PrinterReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IPrinterReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PrinterReferenceRequest)this;
-    }
-    /**
      * Puts the Printer
      *
      * @param srcPrinter the Printer reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Printer srcPrinter, final ICallback<Printer> callback) {
+    public void put(Printer srcPrinter, final ICallback<? super Printer> callback) {
         send(HttpMethod.PUT, callback, srcPrinter);
     }
 

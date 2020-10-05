@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUnsupportedGroupPolicyExtensionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUnsupportedGroupPolicyExtensionCollectionPage> callback);
+    void get(final ICallback<? super IUnsupportedGroupPolicyExtensionCollectionPage> callback);
 
     IUnsupportedGroupPolicyExtensionCollectionPage get() throws ClientException;
 
-    void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback);
+    void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback);
 
     UnsupportedGroupPolicyExtension post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUnsupportedGroupPolicyExtensionCollectionRequest extends IHttp
      * @return the updated request
      */
     IUnsupportedGroupPolicyExtensionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUnsupportedGroupPolicyExtensionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUnsupportedGroupPolicyExtensionCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IUnsupportedGroupPolicyExtensionCollectionRequest skipToken(String skipToken);
+	IUnsupportedGroupPolicyExtensionCollectionRequest skipToken(final String skipToken);
 }

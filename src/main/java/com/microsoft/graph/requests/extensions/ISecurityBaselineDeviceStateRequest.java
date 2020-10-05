@@ -21,7 +21,7 @@ public interface ISecurityBaselineDeviceStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecurityBaselineDeviceState> callback);
+    void get(final ICallback<? super SecurityBaselineDeviceState> callback);
 
     /**
      * Gets the SecurityBaselineDeviceState from the service
@@ -36,7 +36,7 @@ public interface ISecurityBaselineDeviceStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecurityBaselineDeviceState> callback);
+    void delete(final ICallback<? super SecurityBaselineDeviceState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityBaselineDeviceStateRequest extends IHttpRequest {
      * @param sourceSecurityBaselineDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecurityBaselineDeviceState sourceSecurityBaselineDeviceState, final ICallback<SecurityBaselineDeviceState> callback);
+    void patch(final SecurityBaselineDeviceState sourceSecurityBaselineDeviceState, final ICallback<? super SecurityBaselineDeviceState> callback);
 
     /**
      * Patches this SecurityBaselineDeviceState with a source
@@ -68,7 +68,7 @@ public interface ISecurityBaselineDeviceStateRequest extends IHttpRequest {
      * @param newSecurityBaselineDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecurityBaselineDeviceState newSecurityBaselineDeviceState, final ICallback<SecurityBaselineDeviceState> callback);
+    void post(final SecurityBaselineDeviceState newSecurityBaselineDeviceState, final ICallback<? super SecurityBaselineDeviceState> callback);
 
     /**
      * Posts a SecurityBaselineDeviceState with a new object
@@ -85,7 +85,7 @@ public interface ISecurityBaselineDeviceStateRequest extends IHttpRequest {
      * @param newSecurityBaselineDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecurityBaselineDeviceState newSecurityBaselineDeviceState, final ICallback<SecurityBaselineDeviceState> callback);
+    void put(final SecurityBaselineDeviceState newSecurityBaselineDeviceState, final ICallback<? super SecurityBaselineDeviceState> callback);
 
     /**
      * Posts a SecurityBaselineDeviceState with a new object

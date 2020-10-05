@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccessReviewDecisionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessReviewDecisionCollectionPage> callback);
+    void get(final ICallback<? super IAccessReviewDecisionCollectionPage> callback);
 
     IAccessReviewDecisionCollectionPage get() throws ClientException;
 
-    void post(final AccessReviewDecision newAccessReviewDecision, final ICallback<AccessReviewDecision> callback);
+    void post(final AccessReviewDecision newAccessReviewDecision, final ICallback<? super AccessReviewDecision> callback);
 
     AccessReviewDecision post(final AccessReviewDecision newAccessReviewDecision) throws ClientException;
 
@@ -44,6 +44,14 @@ public interface IAccessReviewDecisionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAccessReviewDecisionCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccessReviewDecisionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -76,5 +84,5 @@ public interface IAccessReviewDecisionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAccessReviewDecisionCollectionRequest skipToken(String skipToken);
+	IAccessReviewDecisionCollectionRequest skipToken(final String skipToken);
 }

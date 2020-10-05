@@ -37,7 +37,7 @@ public class EmailAppUsageVersionsUserCountsRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EmailAppUsageVersionsUserCounts> callback) {
+    public void get(final ICallback<? super EmailAppUsageVersionsUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EmailAppUsageVersionsUserCountsRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EmailAppUsageVersionsUserCounts> callback) {
+    public void delete(final ICallback<? super EmailAppUsageVersionsUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EmailAppUsageVersionsUserCountsRequest extends BaseRequest implemen
      * @param sourceEmailAppUsageVersionsUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailAppUsageVersionsUserCounts sourceEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback) {
+    public void patch(final EmailAppUsageVersionsUserCounts sourceEmailAppUsageVersionsUserCounts, final ICallback<? super EmailAppUsageVersionsUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailAppUsageVersionsUserCounts);
     }
 
@@ -96,7 +96,7 @@ public class EmailAppUsageVersionsUserCountsRequest extends BaseRequest implemen
      * @param newEmailAppUsageVersionsUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback) {
+    public void post(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<? super EmailAppUsageVersionsUserCounts> callback) {
         send(HttpMethod.POST, callback, newEmailAppUsageVersionsUserCounts);
     }
 
@@ -117,7 +117,7 @@ public class EmailAppUsageVersionsUserCountsRequest extends BaseRequest implemen
      * @param newEmailAppUsageVersionsUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback) {
+    public void put(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<? super EmailAppUsageVersionsUserCounts> callback) {
         send(HttpMethod.PUT, callback, newEmailAppUsageVersionsUserCounts);
     }
 
@@ -151,17 +151,6 @@ public class EmailAppUsageVersionsUserCountsRequest extends BaseRequest implemen
      */
      public IEmailAppUsageVersionsUserCountsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailAppUsageVersionsUserCountsRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEmailAppUsageVersionsUserCountsRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmailAppUsageVersionsUserCountsRequest)this;
      }
 

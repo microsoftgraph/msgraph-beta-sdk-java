@@ -23,6 +23,6 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse response, final IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

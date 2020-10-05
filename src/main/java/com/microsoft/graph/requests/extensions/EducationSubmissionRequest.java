@@ -45,7 +45,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationSubmission> callback) {
+    public void get(final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationSubmission> callback) {
+    public void delete(final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param sourceEducationSubmission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationSubmission sourceEducationSubmission, final ICallback<EducationSubmission> callback) {
+    public void patch(final EducationSubmission sourceEducationSubmission, final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationSubmission);
     }
 
@@ -104,7 +104,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param newEducationSubmission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationSubmission newEducationSubmission, final ICallback<EducationSubmission> callback) {
+    public void post(final EducationSubmission newEducationSubmission, final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.POST, callback, newEducationSubmission);
     }
 
@@ -125,7 +125,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param newEducationSubmission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationSubmission newEducationSubmission, final ICallback<EducationSubmission> callback) {
+    public void put(final EducationSubmission newEducationSubmission, final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.PUT, callback, newEducationSubmission);
     }
 
@@ -159,17 +159,6 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      */
      public IEducationSubmissionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationSubmissionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationSubmissionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationSubmissionRequest)this;
      }
 

@@ -46,7 +46,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicy.class);
     }
 
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final IJsonBackedObject payload, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final IJsonBackedObject payload, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -58,7 +58,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
         return null;
     }
 
-    public void get(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+	public void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -74,7 +74,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+	public void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceWindowsDefenderApplicationControlSupplementalPolicy);
 	}
 
@@ -102,16 +102,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
      */
     public IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest)this;
     }
 }

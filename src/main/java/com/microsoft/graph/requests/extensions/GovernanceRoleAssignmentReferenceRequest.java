@@ -42,7 +42,7 @@ public class GovernanceRoleAssignmentReferenceRequest extends BaseRequest implem
         super(requestUrl, client, requestOptions, GovernanceRoleAssignment.class);
     }
 
-    public void delete(final ICallback<GovernanceRoleAssignment> callback) {
+    public void delete(final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -72,22 +72,12 @@ public class GovernanceRoleAssignmentReferenceRequest extends BaseRequest implem
         return (GovernanceRoleAssignmentReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGovernanceRoleAssignmentReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GovernanceRoleAssignmentReferenceRequest)this;
-    }
-    /**
      * Puts the GovernanceRoleAssignment
      *
      * @param srcGovernanceRoleAssignment the GovernanceRoleAssignment reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(GovernanceRoleAssignment srcGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+    public void put(GovernanceRoleAssignment srcGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, srcGovernanceRoleAssignment);
     }
 

@@ -38,7 +38,7 @@ public class ConnectedOrganizationReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, ConnectedOrganization.class);
     }
 
-    public void delete(final ICallback<ConnectedOrganization> callback) {
+    public void delete(final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,22 +68,12 @@ public class ConnectedOrganizationReferenceRequest extends BaseRequest implement
         return (ConnectedOrganizationReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IConnectedOrganizationReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConnectedOrganizationReferenceRequest)this;
-    }
-    /**
      * Puts the ConnectedOrganization
      *
      * @param srcConnectedOrganization the ConnectedOrganization reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ConnectedOrganization srcConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+    public void put(ConnectedOrganization srcConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.PUT, callback, srcConnectedOrganization);
     }
 

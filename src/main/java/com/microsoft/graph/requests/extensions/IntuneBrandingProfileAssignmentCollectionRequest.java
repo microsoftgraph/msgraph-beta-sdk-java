@@ -40,7 +40,7 @@ public class IntuneBrandingProfileAssignmentCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, IntuneBrandingProfileAssignmentCollectionResponse.class, IIntuneBrandingProfileAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IIntuneBrandingProfileAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IIntuneBrandingProfileAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class IntuneBrandingProfileAssignmentCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback) {
+    public void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IntuneBrandingProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class IntuneBrandingProfileAssignmentCollectionRequest extends BaseCollec
      */
     public IIntuneBrandingProfileAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IntuneBrandingProfileAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIntuneBrandingProfileAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IntuneBrandingProfileAssignmentCollectionRequest)this;
     }
 

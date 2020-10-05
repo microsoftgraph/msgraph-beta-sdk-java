@@ -21,7 +21,7 @@ public interface ILinkedResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LinkedResource> callback);
+    void get(final ICallback<? super LinkedResource> callback);
 
     /**
      * Gets the LinkedResource from the service
@@ -36,7 +36,7 @@ public interface ILinkedResourceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LinkedResource> callback);
+    void delete(final ICallback<? super LinkedResource> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILinkedResourceRequest extends IHttpRequest {
      * @param sourceLinkedResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LinkedResource sourceLinkedResource, final ICallback<LinkedResource> callback);
+    void patch(final LinkedResource sourceLinkedResource, final ICallback<? super LinkedResource> callback);
 
     /**
      * Patches this LinkedResource with a source
@@ -68,7 +68,7 @@ public interface ILinkedResourceRequest extends IHttpRequest {
      * @param newLinkedResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LinkedResource newLinkedResource, final ICallback<LinkedResource> callback);
+    void post(final LinkedResource newLinkedResource, final ICallback<? super LinkedResource> callback);
 
     /**
      * Posts a LinkedResource with a new object
@@ -85,7 +85,7 @@ public interface ILinkedResourceRequest extends IHttpRequest {
      * @param newLinkedResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LinkedResource newLinkedResource, final ICallback<LinkedResource> callback);
+    void put(final LinkedResource newLinkedResource, final ICallback<? super LinkedResource> callback);
 
     /**
      * Posts a LinkedResource with a new object

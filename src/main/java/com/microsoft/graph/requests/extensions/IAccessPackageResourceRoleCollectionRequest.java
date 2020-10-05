@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccessPackageResourceRoleCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessPackageResourceRoleCollectionPage> callback);
+    void get(final ICallback<? super IAccessPackageResourceRoleCollectionPage> callback);
 
     IAccessPackageResourceRoleCollectionPage get() throws ClientException;
 
-    void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback);
+    void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback);
 
     AccessPackageResourceRole post(final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAccessPackageResourceRoleCollectionRequest extends IHttpReques
      * @return the updated request
      */
     IAccessPackageResourceRoleCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccessPackageResourceRoleCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAccessPackageResourceRoleCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	IAccessPackageResourceRoleCollectionRequest skipToken(String skipToken);
+	IAccessPackageResourceRoleCollectionRequest skipToken(final String skipToken);
 }

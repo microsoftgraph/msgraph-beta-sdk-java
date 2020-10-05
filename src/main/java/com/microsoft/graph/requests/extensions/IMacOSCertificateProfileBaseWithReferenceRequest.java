@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IMacOSCertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final IJsonBackedObject payload, final ICallback<MacOSCertificateProfileBase> callback);
+    void post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super MacOSCertificateProfileBase> callback);
 
     MacOSCertificateProfileBase post(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<MacOSCertificateProfileBase> callback);
+    void get(final ICallback<? super MacOSCertificateProfileBase> callback);
 
     MacOSCertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<MacOSCertificateProfileBase> callback);
+	void delete(final ICallback<? super MacOSCertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback);
+	void patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase, final ICallback<? super MacOSCertificateProfileBase> callback);
 
 	MacOSCertificateProfileBase patch(final MacOSCertificateProfileBase sourceMacOSCertificateProfileBase) throws ClientException;
 

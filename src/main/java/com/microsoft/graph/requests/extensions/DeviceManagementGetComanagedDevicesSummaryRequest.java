@@ -37,7 +37,7 @@ public class DeviceManagementGetComanagedDevicesSummaryRequest extends BaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ComanagedDevicesSummary> callback) {
+    public void get(final ICallback<? super ComanagedDevicesSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,6 +81,17 @@ public class DeviceManagementGetComanagedDevicesSummaryRequest extends BaseReque
      */
     public IDeviceManagementGetComanagedDevicesSummaryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementGetComanagedDevicesSummaryRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceManagementGetComanagedDevicesSummaryRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementGetComanagedDevicesSummaryRequest)this;
     }
 

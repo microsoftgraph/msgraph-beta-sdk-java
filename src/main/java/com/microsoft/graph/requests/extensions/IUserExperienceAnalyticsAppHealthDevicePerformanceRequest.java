@@ -21,7 +21,7 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback);
+    void get(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback);
 
     /**
      * Gets the UserExperienceAnalyticsAppHealthDevicePerformance from the service
@@ -36,7 +36,7 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceRequest exten
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback);
+    void delete(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceRequest exten
      * @param sourceUserExperienceAnalyticsAppHealthDevicePerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback);
+    void patch(final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback);
 
     /**
      * Patches this UserExperienceAnalyticsAppHealthDevicePerformance with a source
@@ -68,7 +68,7 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceRequest exten
      * @param newUserExperienceAnalyticsAppHealthDevicePerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback);
+    void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback);
 
     /**
      * Posts a UserExperienceAnalyticsAppHealthDevicePerformance with a new object
@@ -85,7 +85,7 @@ public interface IUserExperienceAnalyticsAppHealthDevicePerformanceRequest exten
      * @param newUserExperienceAnalyticsAppHealthDevicePerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<UserExperienceAnalyticsAppHealthDevicePerformance> callback);
+    void put(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback);
 
     /**
      * Posts a UserExperienceAnalyticsAppHealthDevicePerformance with a new object

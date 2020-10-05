@@ -21,7 +21,7 @@ public interface IDeviceSetupConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceSetupConfiguration> callback);
+    void get(final ICallback<? super DeviceSetupConfiguration> callback);
 
     /**
      * Gets the DeviceSetupConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceSetupConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceSetupConfiguration> callback);
+    void delete(final ICallback<? super DeviceSetupConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceSetupConfigurationRequest extends IHttpRequest {
      * @param sourceDeviceSetupConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceSetupConfiguration sourceDeviceSetupConfiguration, final ICallback<DeviceSetupConfiguration> callback);
+    void patch(final DeviceSetupConfiguration sourceDeviceSetupConfiguration, final ICallback<? super DeviceSetupConfiguration> callback);
 
     /**
      * Patches this DeviceSetupConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceSetupConfigurationRequest extends IHttpRequest {
      * @param newDeviceSetupConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceSetupConfiguration newDeviceSetupConfiguration, final ICallback<DeviceSetupConfiguration> callback);
+    void post(final DeviceSetupConfiguration newDeviceSetupConfiguration, final ICallback<? super DeviceSetupConfiguration> callback);
 
     /**
      * Posts a DeviceSetupConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceSetupConfigurationRequest extends IHttpRequest {
      * @param newDeviceSetupConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceSetupConfiguration newDeviceSetupConfiguration, final ICallback<DeviceSetupConfiguration> callback);
+    void put(final DeviceSetupConfiguration newDeviceSetupConfiguration, final ICallback<? super DeviceSetupConfiguration> callback);
 
     /**
      * Posts a DeviceSetupConfiguration with a new object

@@ -23,6 +23,6 @@ public class TiIndicatorCollectionPage extends BaseCollectionPage<TiIndicator, I
      * @param builder  the request builder for the next collection page
      */
     public TiIndicatorCollectionPage(final TiIndicatorCollectionResponse response, final ITiIndicatorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

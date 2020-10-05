@@ -23,6 +23,6 @@ public class WindowsManagementAppHealthStateCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public WindowsManagementAppHealthStateCollectionPage(final WindowsManagementAppHealthStateCollectionResponse response, final IWindowsManagementAppHealthStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

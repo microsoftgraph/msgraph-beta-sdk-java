@@ -39,7 +39,7 @@ public class SynchronizationSchemaFilterOperatorsCollectionRequest extends BaseC
     }
 
 
-    public void get(final ICallback<ISynchronizationSchemaFilterOperatorsCollectionPage> callback) {
+    public void get(final ICallback<? super ISynchronizationSchemaFilterOperatorsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class SynchronizationSchemaFilterOperatorsCollectionRequest extends BaseC
      */
     public ISynchronizationSchemaFilterOperatorsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ISynchronizationSchemaFilterOperatorsCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISynchronizationSchemaFilterOperatorsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ISynchronizationSchemaFilterOperatorsCollectionRequest)this;
     }
 

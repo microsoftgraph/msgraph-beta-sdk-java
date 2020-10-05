@@ -37,7 +37,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ProjectParticipation> callback) {
+    public void get(final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ProjectParticipation> callback) {
+    public void delete(final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param sourceProjectParticipation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProjectParticipation sourceProjectParticipation, final ICallback<ProjectParticipation> callback) {
+    public void patch(final ProjectParticipation sourceProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.PATCH, callback, sourceProjectParticipation);
     }
 
@@ -96,7 +96,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param newProjectParticipation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback) {
+    public void post(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.POST, callback, newProjectParticipation);
     }
 
@@ -117,7 +117,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param newProjectParticipation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback) {
+    public void put(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.PUT, callback, newProjectParticipation);
     }
 
@@ -151,17 +151,6 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      */
      public IProjectParticipationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProjectParticipationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IProjectParticipationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ProjectParticipationRequest)this;
      }
 

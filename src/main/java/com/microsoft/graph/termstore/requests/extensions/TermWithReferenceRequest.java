@@ -45,7 +45,7 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
         super(requestUrl, client, requestOptions, Term.class);
     }
 
-    public void post(final Term newTerm, final IJsonBackedObject payload, final ICallback<Term> callback) {
+    public void post(final Term newTerm, final IJsonBackedObject payload, final ICallback<? super Term> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -57,7 +57,7 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
         return null;
     }
 
-    public void get(final ICallback<Term> callback) {
+    public void get(final ICallback<? super Term> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Term> callback) {
+	public void delete(final ICallback<? super Term> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -73,7 +73,7 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Term sourceTerm, final ICallback<Term> callback) {
+	public void patch(final Term sourceTerm, final ICallback<? super Term> callback) {
 		send(HttpMethod.PATCH, callback, sourceTerm);
 	}
 
@@ -101,16 +101,6 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
      */
     public ITermWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TermWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITermWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TermWithReferenceRequest)this;
     }
 }

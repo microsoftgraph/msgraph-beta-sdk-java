@@ -37,7 +37,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CloudAppSecurityProfile> callback) {
+    public void get(final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CloudAppSecurityProfile> callback) {
+    public void delete(final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param sourceCloudAppSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudAppSecurityProfile sourceCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback) {
+    public void patch(final CloudAppSecurityProfile sourceCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudAppSecurityProfile);
     }
 
@@ -96,7 +96,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param newCloudAppSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback) {
+    public void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newCloudAppSecurityProfile);
     }
 
@@ -117,7 +117,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param newCloudAppSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback) {
+    public void put(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newCloudAppSecurityProfile);
     }
 
@@ -151,17 +151,6 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      */
      public ICloudAppSecurityProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CloudAppSecurityProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ICloudAppSecurityProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CloudAppSecurityProfileRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IAndroidManagedStoreWebAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidManagedStoreWebApp> callback);
+    void get(final ICallback<? super AndroidManagedStoreWebApp> callback);
 
     /**
      * Gets the AndroidManagedStoreWebApp from the service
@@ -36,7 +36,7 @@ public interface IAndroidManagedStoreWebAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidManagedStoreWebApp> callback);
+    void delete(final ICallback<? super AndroidManagedStoreWebApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidManagedStoreWebAppRequest extends IHttpRequest {
      * @param sourceAndroidManagedStoreWebApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidManagedStoreWebApp sourceAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback);
+    void patch(final AndroidManagedStoreWebApp sourceAndroidManagedStoreWebApp, final ICallback<? super AndroidManagedStoreWebApp> callback);
 
     /**
      * Patches this AndroidManagedStoreWebApp with a source
@@ -68,7 +68,7 @@ public interface IAndroidManagedStoreWebAppRequest extends IHttpRequest {
      * @param newAndroidManagedStoreWebApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback);
+    void post(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<? super AndroidManagedStoreWebApp> callback);
 
     /**
      * Posts a AndroidManagedStoreWebApp with a new object
@@ -85,7 +85,7 @@ public interface IAndroidManagedStoreWebAppRequest extends IHttpRequest {
      * @param newAndroidManagedStoreWebApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback);
+    void put(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<? super AndroidManagedStoreWebApp> callback);
 
     /**
      * Posts a AndroidManagedStoreWebApp with a new object

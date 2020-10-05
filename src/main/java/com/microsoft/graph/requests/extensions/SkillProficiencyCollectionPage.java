@@ -23,6 +23,6 @@ public class SkillProficiencyCollectionPage extends BaseCollectionPage<SkillProf
      * @param builder  the request builder for the next collection page
      */
     public SkillProficiencyCollectionPage(final SkillProficiencyCollectionResponse response, final ISkillProficiencyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

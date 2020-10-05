@@ -53,7 +53,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceAppManagementTask> callback) {
+    public void get(final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceAppManagementTask> callback) {
+    public void delete(final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param sourceDeviceAppManagementTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAppManagementTask sourceDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback) {
+    public void patch(final DeviceAppManagementTask sourceDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAppManagementTask);
     }
 
@@ -112,7 +112,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param newDeviceAppManagementTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback) {
+    public void post(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.POST, callback, newDeviceAppManagementTask);
     }
 
@@ -133,7 +133,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param newDeviceAppManagementTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback) {
+    public void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.PUT, callback, newDeviceAppManagementTask);
     }
 
@@ -167,17 +167,6 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      */
      public IDeviceAppManagementTaskRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAppManagementTaskRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceAppManagementTaskRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceAppManagementTaskRequest)this;
      }
 

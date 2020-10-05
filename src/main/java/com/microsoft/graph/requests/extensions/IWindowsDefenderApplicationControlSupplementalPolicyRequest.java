@@ -21,7 +21,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyRequest ext
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     /**
      * Gets the WindowsDefenderApplicationControlSupplementalPolicy from the service
@@ -36,7 +36,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyRequest ext
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyRequest ext
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     /**
      * Patches this WindowsDefenderApplicationControlSupplementalPolicy with a source
@@ -68,7 +68,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyRequest ext
      * @param newWindowsDefenderApplicationControlSupplementalPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     /**
      * Posts a WindowsDefenderApplicationControlSupplementalPolicy with a new object
@@ -85,7 +85,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyRequest ext
      * @param newWindowsDefenderApplicationControlSupplementalPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback);
+    void put(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback);
 
     /**
      * Posts a WindowsDefenderApplicationControlSupplementalPolicy with a new object

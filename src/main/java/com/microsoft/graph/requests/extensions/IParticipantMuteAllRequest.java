@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IParticipantMuteAllRequest extends IHttpRequest {
 
-    void post(final ICallback<MuteParticipantsOperation> callback);
+    void post(final ICallback<? super MuteParticipantsOperation> callback);
 
     MuteParticipantsOperation post() throws ClientException;
 

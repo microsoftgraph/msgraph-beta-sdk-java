@@ -21,7 +21,7 @@ public interface IIntuneBrandingProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IntuneBrandingProfile> callback);
+    void get(final ICallback<? super IntuneBrandingProfile> callback);
 
     /**
      * Gets the IntuneBrandingProfile from the service
@@ -36,7 +36,7 @@ public interface IIntuneBrandingProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IntuneBrandingProfile> callback);
+    void delete(final ICallback<? super IntuneBrandingProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIntuneBrandingProfileRequest extends IHttpRequest {
      * @param sourceIntuneBrandingProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IntuneBrandingProfile sourceIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback);
+    void patch(final IntuneBrandingProfile sourceIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback);
 
     /**
      * Patches this IntuneBrandingProfile with a source
@@ -68,7 +68,7 @@ public interface IIntuneBrandingProfileRequest extends IHttpRequest {
      * @param newIntuneBrandingProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback);
+    void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback);
 
     /**
      * Posts a IntuneBrandingProfile with a new object
@@ -85,7 +85,7 @@ public interface IIntuneBrandingProfileRequest extends IHttpRequest {
      * @param newIntuneBrandingProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback);
+    void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback);
 
     /**
      * Posts a IntuneBrandingProfile with a new object

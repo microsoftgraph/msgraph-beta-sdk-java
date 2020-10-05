@@ -21,7 +21,7 @@ public interface IPrintJobRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintJob> callback);
+    void get(final ICallback<? super PrintJob> callback);
 
     /**
      * Gets the PrintJob from the service
@@ -36,7 +36,7 @@ public interface IPrintJobRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintJob> callback);
+    void delete(final ICallback<? super PrintJob> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintJobRequest extends IHttpRequest {
      * @param sourcePrintJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintJob sourcePrintJob, final ICallback<PrintJob> callback);
+    void patch(final PrintJob sourcePrintJob, final ICallback<? super PrintJob> callback);
 
     /**
      * Patches this PrintJob with a source
@@ -68,7 +68,7 @@ public interface IPrintJobRequest extends IHttpRequest {
      * @param newPrintJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintJob newPrintJob, final ICallback<PrintJob> callback);
+    void post(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback);
 
     /**
      * Posts a PrintJob with a new object
@@ -85,7 +85,7 @@ public interface IPrintJobRequest extends IHttpRequest {
      * @param newPrintJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintJob newPrintJob, final ICallback<PrintJob> callback);
+    void put(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback);
 
     /**
      * Posts a PrintJob with a new object

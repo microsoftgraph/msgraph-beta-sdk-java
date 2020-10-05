@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDepIOSEnrollmentProfileReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<DepIOSEnrollmentProfile> callback);
+    void delete(final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     DepIOSEnrollmentProfile delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IDepIOSEnrollmentProfileReferenceRequest extends IHttpRequest {
      * @param srcDepIOSEnrollmentProfile the DepIOSEnrollmentProfile to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DepIOSEnrollmentProfile srcDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback);
+    void put(DepIOSEnrollmentProfile srcDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback);
 
     /**
      * Puts the DepIOSEnrollmentProfile

@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EducationSubmissionRecipient;
 import com.microsoft.graph.models.extensions.IdentitySet;
@@ -14,9 +13,7 @@ import com.microsoft.graph.models.generated.EducationSubmissionStatus;
 import com.microsoft.graph.models.extensions.EducationOutcome;
 import com.microsoft.graph.models.extensions.EducationSubmissionResource;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionPage;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionPage;
 
 
@@ -185,51 +182,15 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
 
         if (json.has("outcomes")) {
-            final EducationOutcomeCollectionResponse response = new EducationOutcomeCollectionResponse();
-            if (json.has("outcomes@odata.nextLink")) {
-                response.nextLink = json.get("outcomes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("outcomes").toString(), JsonObject[].class);
-            final EducationOutcome[] array = new EducationOutcome[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationOutcome.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            outcomes = new EducationOutcomeCollectionPage(response, null);
+            outcomes = serializer.deserializeObject(json.get("outcomes").toString(), EducationOutcomeCollectionPage.class);
         }
 
         if (json.has("resources")) {
-            final EducationSubmissionResourceCollectionResponse response = new EducationSubmissionResourceCollectionResponse();
-            if (json.has("resources@odata.nextLink")) {
-                response.nextLink = json.get("resources@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("resources").toString(), JsonObject[].class);
-            final EducationSubmissionResource[] array = new EducationSubmissionResource[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationSubmissionResource.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            resources = new EducationSubmissionResourceCollectionPage(response, null);
+            resources = serializer.deserializeObject(json.get("resources").toString(), EducationSubmissionResourceCollectionPage.class);
         }
 
         if (json.has("submittedResources")) {
-            final EducationSubmissionResourceCollectionResponse response = new EducationSubmissionResourceCollectionResponse();
-            if (json.has("submittedResources@odata.nextLink")) {
-                response.nextLink = json.get("submittedResources@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("submittedResources").toString(), JsonObject[].class);
-            final EducationSubmissionResource[] array = new EducationSubmissionResource[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationSubmissionResource.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            submittedResources = new EducationSubmissionResourceCollectionPage(response, null);
+            submittedResources = serializer.deserializeObject(json.get("submittedResources").toString(), EducationSubmissionResourceCollectionPage.class);
         }
     }
 }

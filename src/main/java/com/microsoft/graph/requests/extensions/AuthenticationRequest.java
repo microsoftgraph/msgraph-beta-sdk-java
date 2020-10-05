@@ -81,7 +81,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Authentication> callback) {
+    public void get(final ICallback<? super Authentication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -100,7 +100,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Authentication> callback) {
+    public void delete(final ICallback<? super Authentication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -119,7 +119,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param sourceAuthentication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Authentication sourceAuthentication, final ICallback<Authentication> callback) {
+    public void patch(final Authentication sourceAuthentication, final ICallback<? super Authentication> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthentication);
     }
 
@@ -140,7 +140,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param newAuthentication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Authentication newAuthentication, final ICallback<Authentication> callback) {
+    public void post(final Authentication newAuthentication, final ICallback<? super Authentication> callback) {
         send(HttpMethod.POST, callback, newAuthentication);
     }
 
@@ -161,7 +161,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param newAuthentication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Authentication newAuthentication, final ICallback<Authentication> callback) {
+    public void put(final Authentication newAuthentication, final ICallback<? super Authentication> callback) {
         send(HttpMethod.PUT, callback, newAuthentication);
     }
 
@@ -195,17 +195,6 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      */
      public IAuthenticationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAuthenticationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AuthenticationRequest)this;
      }
 

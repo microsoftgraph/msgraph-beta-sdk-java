@@ -21,7 +21,7 @@ public interface ISharePointSiteUsageSiteCountsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharePointSiteUsageSiteCounts> callback);
+    void get(final ICallback<? super SharePointSiteUsageSiteCounts> callback);
 
     /**
      * Gets the SharePointSiteUsageSiteCounts from the service
@@ -36,7 +36,7 @@ public interface ISharePointSiteUsageSiteCountsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharePointSiteUsageSiteCounts> callback);
+    void delete(final ICallback<? super SharePointSiteUsageSiteCounts> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharePointSiteUsageSiteCountsRequest extends IHttpRequest {
      * @param sourceSharePointSiteUsageSiteCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharePointSiteUsageSiteCounts sourceSharePointSiteUsageSiteCounts, final ICallback<SharePointSiteUsageSiteCounts> callback);
+    void patch(final SharePointSiteUsageSiteCounts sourceSharePointSiteUsageSiteCounts, final ICallback<? super SharePointSiteUsageSiteCounts> callback);
 
     /**
      * Patches this SharePointSiteUsageSiteCounts with a source
@@ -68,7 +68,7 @@ public interface ISharePointSiteUsageSiteCountsRequest extends IHttpRequest {
      * @param newSharePointSiteUsageSiteCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<SharePointSiteUsageSiteCounts> callback);
+    void post(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<? super SharePointSiteUsageSiteCounts> callback);
 
     /**
      * Posts a SharePointSiteUsageSiteCounts with a new object
@@ -85,7 +85,7 @@ public interface ISharePointSiteUsageSiteCountsRequest extends IHttpRequest {
      * @param newSharePointSiteUsageSiteCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<SharePointSiteUsageSiteCounts> callback);
+    void put(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<? super SharePointSiteUsageSiteCounts> callback);
 
     /**
      * Posts a SharePointSiteUsageSiteCounts with a new object

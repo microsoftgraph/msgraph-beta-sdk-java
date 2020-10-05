@@ -176,7 +176,7 @@ public class GraphServiceClientTest {
             }
 
             @Override
-            public <Result, BodyType> void send(IHttpRequest request, ICallback<Result> callback,
+            public <Result, BodyType> void send(IHttpRequest request, ICallback<? super Result> callback,
                     Class<Result> resultClass, BodyType serializable) {
                 // do nothing
             }
@@ -207,7 +207,7 @@ public class GraphServiceClientTest {
 
 			@Override
 			public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
-					BodyType serializable, IProgressCallback<Result> progress) throws ClientException {
+					BodyType serializable, IProgressCallback<? super Result> progress) throws ClientException {
 				return null;
 			}
         };

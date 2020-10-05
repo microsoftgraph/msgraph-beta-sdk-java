@@ -21,7 +21,7 @@ public interface IUnsupportedGroupPolicyExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UnsupportedGroupPolicyExtension> callback);
+    void get(final ICallback<? super UnsupportedGroupPolicyExtension> callback);
 
     /**
      * Gets the UnsupportedGroupPolicyExtension from the service
@@ -36,7 +36,7 @@ public interface IUnsupportedGroupPolicyExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UnsupportedGroupPolicyExtension> callback);
+    void delete(final ICallback<? super UnsupportedGroupPolicyExtension> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUnsupportedGroupPolicyExtensionRequest extends IHttpRequest {
      * @param sourceUnsupportedGroupPolicyExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback);
+    void patch(final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback);
 
     /**
      * Patches this UnsupportedGroupPolicyExtension with a source
@@ -68,7 +68,7 @@ public interface IUnsupportedGroupPolicyExtensionRequest extends IHttpRequest {
      * @param newUnsupportedGroupPolicyExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback);
+    void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback);
 
     /**
      * Posts a UnsupportedGroupPolicyExtension with a new object
@@ -85,7 +85,7 @@ public interface IUnsupportedGroupPolicyExtensionRequest extends IHttpRequest {
      * @param newUnsupportedGroupPolicyExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback);
+    void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback);
 
     /**
      * Posts a UnsupportedGroupPolicyExtension with a new object

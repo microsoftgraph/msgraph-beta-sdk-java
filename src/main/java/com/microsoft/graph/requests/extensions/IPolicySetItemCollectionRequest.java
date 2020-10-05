@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPolicySetItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPolicySetItemCollectionPage> callback);
+    void get(final ICallback<? super IPolicySetItemCollectionPage> callback);
 
     IPolicySetItemCollectionPage get() throws ClientException;
 
-    void post(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback);
+    void post(final PolicySetItem newPolicySetItem, final ICallback<? super PolicySetItem> callback);
 
     PolicySetItem post(final PolicySetItem newPolicySetItem) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IPolicySetItemCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPolicySetItemCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPolicySetItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IPolicySetItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPolicySetItemCollectionRequest skipToken(String skipToken);
+	IPolicySetItemCollectionRequest skipToken(final String skipToken);
 }

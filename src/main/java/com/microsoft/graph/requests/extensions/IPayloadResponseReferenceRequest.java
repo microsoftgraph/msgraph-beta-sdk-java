@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IPayloadResponseReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<PayloadResponse> callback);
+    void delete(final ICallback<? super PayloadResponse> callback);
 
     PayloadResponse delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IPayloadResponseReferenceRequest extends IHttpRequest {
      * @param srcPayloadResponse the PayloadResponse to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(PayloadResponse srcPayloadResponse, final ICallback<PayloadResponse> callback);
+    void put(PayloadResponse srcPayloadResponse, final ICallback<? super PayloadResponse> callback);
 
     /**
      * Puts the PayloadResponse

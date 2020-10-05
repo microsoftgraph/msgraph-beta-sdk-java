@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDeviceManagementDerivedCredentialSettingsReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void delete(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     DeviceManagementDerivedCredentialSettings delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IDeviceManagementDerivedCredentialSettingsReferenceRequest exte
      * @param srcDeviceManagementDerivedCredentialSettings the DeviceManagementDerivedCredentialSettings to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DeviceManagementDerivedCredentialSettings srcDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback);
+    void put(DeviceManagementDerivedCredentialSettings srcDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback);
 
     /**
      * Puts the DeviceManagementDerivedCredentialSettings

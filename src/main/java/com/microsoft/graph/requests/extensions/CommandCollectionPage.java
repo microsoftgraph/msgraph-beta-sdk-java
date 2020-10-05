@@ -23,6 +23,6 @@ public class CommandCollectionPage extends BaseCollectionPage<Command, ICommandC
      * @param builder  the request builder for the next collection page
      */
     public CommandCollectionPage(final CommandCollectionResponse response, final ICommandCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

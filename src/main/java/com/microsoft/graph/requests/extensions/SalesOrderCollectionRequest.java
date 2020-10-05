@@ -40,7 +40,7 @@ public class SalesOrderCollectionRequest extends BaseCollectionRequest<SalesOrde
         super(requestUrl, client, requestOptions, SalesOrderCollectionResponse.class, ISalesOrderCollectionPage.class);
     }
 
-    public void get(final ICallback<ISalesOrderCollectionPage> callback) {
+    public void get(final ICallback<? super ISalesOrderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SalesOrderCollectionRequest extends BaseCollectionRequest<SalesOrde
         return buildFromResponse(response);
     }
 
-    public void post(final SalesOrder newSalesOrder, final ICallback<SalesOrder> callback) {
+    public void post(final SalesOrder newSalesOrder, final ICallback<? super SalesOrder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesOrderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SalesOrderCollectionRequest extends BaseCollectionRequest<SalesOrde
      */
     public ISalesOrderCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SalesOrderCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISalesOrderCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SalesOrderCollectionRequest)this;
     }
 

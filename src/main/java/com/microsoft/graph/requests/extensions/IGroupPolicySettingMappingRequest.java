@@ -21,7 +21,7 @@ public interface IGroupPolicySettingMappingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicySettingMapping> callback);
+    void get(final ICallback<? super GroupPolicySettingMapping> callback);
 
     /**
      * Gets the GroupPolicySettingMapping from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicySettingMappingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicySettingMapping> callback);
+    void delete(final ICallback<? super GroupPolicySettingMapping> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicySettingMappingRequest extends IHttpRequest {
      * @param sourceGroupPolicySettingMapping the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicySettingMapping sourceGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback);
+    void patch(final GroupPolicySettingMapping sourceGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback);
 
     /**
      * Patches this GroupPolicySettingMapping with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicySettingMappingRequest extends IHttpRequest {
      * @param newGroupPolicySettingMapping the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback);
+    void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback);
 
     /**
      * Posts a GroupPolicySettingMapping with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicySettingMappingRequest extends IHttpRequest {
      * @param newGroupPolicySettingMapping the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback);
+    void put(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback);
 
     /**
      * Posts a GroupPolicySettingMapping with a new object

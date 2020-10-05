@@ -37,7 +37,7 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidForWorkCompliancePolicy> callback) {
+    public void get(final ICallback<? super AndroidForWorkCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidForWorkCompliancePolicy> callback) {
+    public void delete(final ICallback<? super AndroidForWorkCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
      * @param sourceAndroidForWorkCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkCompliancePolicy sourceAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback) {
+    public void patch(final AndroidForWorkCompliancePolicy sourceAndroidForWorkCompliancePolicy, final ICallback<? super AndroidForWorkCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkCompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
      * @param newAndroidForWorkCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback) {
+    public void post(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<? super AndroidForWorkCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkCompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
      * @param newAndroidForWorkCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback) {
+    public void put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<? super AndroidForWorkCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkCompliancePolicy);
     }
 
@@ -151,17 +151,6 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
      */
      public IAndroidForWorkCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkCompliancePolicyRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidForWorkCompliancePolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidForWorkCompliancePolicyRequest)this;
      }
 

@@ -41,7 +41,7 @@ public class DeviceComplianceScriptCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, DeviceComplianceScriptCollectionResponse.class, IDeviceComplianceScriptCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceComplianceScriptCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceComplianceScriptCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class DeviceComplianceScriptCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback) {
+    public void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class DeviceComplianceScriptCollectionRequest extends BaseCollectionReque
      */
     public IDeviceComplianceScriptCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceComplianceScriptCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceComplianceScriptCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceComplianceScriptCollectionRequest)this;
     }
 

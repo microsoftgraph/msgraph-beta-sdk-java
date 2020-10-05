@@ -21,7 +21,7 @@ public interface IYammerActivitySummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<YammerActivitySummary> callback);
+    void get(final ICallback<? super YammerActivitySummary> callback);
 
     /**
      * Gets the YammerActivitySummary from the service
@@ -36,7 +36,7 @@ public interface IYammerActivitySummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<YammerActivitySummary> callback);
+    void delete(final ICallback<? super YammerActivitySummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IYammerActivitySummaryRequest extends IHttpRequest {
      * @param sourceYammerActivitySummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final YammerActivitySummary sourceYammerActivitySummary, final ICallback<YammerActivitySummary> callback);
+    void patch(final YammerActivitySummary sourceYammerActivitySummary, final ICallback<? super YammerActivitySummary> callback);
 
     /**
      * Patches this YammerActivitySummary with a source
@@ -68,7 +68,7 @@ public interface IYammerActivitySummaryRequest extends IHttpRequest {
      * @param newYammerActivitySummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final YammerActivitySummary newYammerActivitySummary, final ICallback<YammerActivitySummary> callback);
+    void post(final YammerActivitySummary newYammerActivitySummary, final ICallback<? super YammerActivitySummary> callback);
 
     /**
      * Posts a YammerActivitySummary with a new object
@@ -85,7 +85,7 @@ public interface IYammerActivitySummaryRequest extends IHttpRequest {
      * @param newYammerActivitySummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final YammerActivitySummary newYammerActivitySummary, final ICallback<YammerActivitySummary> callback);
+    void put(final YammerActivitySummary newYammerActivitySummary, final ICallback<? super YammerActivitySummary> callback);
 
     /**
      * Posts a YammerActivitySummary with a new object

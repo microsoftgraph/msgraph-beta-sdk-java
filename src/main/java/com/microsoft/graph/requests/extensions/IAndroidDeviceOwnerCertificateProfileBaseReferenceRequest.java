@@ -23,7 +23,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidDeviceOwnerCertificateProfileBaseReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void delete(final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     AndroidDeviceOwnerCertificateProfileBase delete() throws ClientException;
 
@@ -49,7 +49,7 @@ public interface IAndroidDeviceOwnerCertificateProfileBaseReferenceRequest exten
      * @param srcAndroidDeviceOwnerCertificateProfileBase the AndroidDeviceOwnerCertificateProfileBase to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(AndroidDeviceOwnerCertificateProfileBase srcAndroidDeviceOwnerCertificateProfileBase, final ICallback<AndroidDeviceOwnerCertificateProfileBase> callback);
+    void put(AndroidDeviceOwnerCertificateProfileBase srcAndroidDeviceOwnerCertificateProfileBase, final ICallback<? super AndroidDeviceOwnerCertificateProfileBase> callback);
 
     /**
      * Puts the AndroidDeviceOwnerCertificateProfileBase

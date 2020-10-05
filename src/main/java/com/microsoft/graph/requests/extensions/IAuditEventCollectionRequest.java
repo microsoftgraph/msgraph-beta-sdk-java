@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAuditEventCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAuditEventCollectionPage> callback);
+    void get(final ICallback<? super IAuditEventCollectionPage> callback);
 
     IAuditEventCollectionPage get() throws ClientException;
 
-    void post(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback);
+    void post(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback);
 
     AuditEvent post(final AuditEvent newAuditEvent) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAuditEventCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAuditEventCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAuditEventCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAuditEventCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAuditEventCollectionRequest skipToken(String skipToken);
+	IAuditEventCollectionRequest skipToken(final String skipToken);
 }

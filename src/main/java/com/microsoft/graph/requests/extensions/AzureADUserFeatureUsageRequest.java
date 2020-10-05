@@ -37,7 +37,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AzureADUserFeatureUsage> callback) {
+    public void get(final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AzureADUserFeatureUsage> callback) {
+    public void delete(final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param sourceAzureADUserFeatureUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback) {
+    public void patch(final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.PATCH, callback, sourceAzureADUserFeatureUsage);
     }
 
@@ -96,7 +96,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param newAzureADUserFeatureUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback) {
+    public void post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.POST, callback, newAzureADUserFeatureUsage);
     }
 
@@ -117,7 +117,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param newAzureADUserFeatureUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback) {
+    public void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.PUT, callback, newAzureADUserFeatureUsage);
     }
 
@@ -151,17 +151,6 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      */
      public IAzureADUserFeatureUsageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AzureADUserFeatureUsageRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAzureADUserFeatureUsageRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AzureADUserFeatureUsageRequest)this;
      }
 

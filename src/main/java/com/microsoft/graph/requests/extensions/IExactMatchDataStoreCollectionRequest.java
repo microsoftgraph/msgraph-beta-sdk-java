@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IExactMatchDataStoreCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IExactMatchDataStoreCollectionPage> callback);
+    void get(final ICallback<? super IExactMatchDataStoreCollectionPage> callback);
 
     IExactMatchDataStoreCollectionPage get() throws ClientException;
 
-    void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback);
+    void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback);
 
     ExactMatchDataStore post(final ExactMatchDataStore newExactMatchDataStore) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IExactMatchDataStoreCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IExactMatchDataStoreCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IExactMatchDataStoreCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IExactMatchDataStoreCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IExactMatchDataStoreCollectionRequest skipToken(String skipToken);
+	IExactMatchDataStoreCollectionRequest skipToken(final String skipToken);
 }

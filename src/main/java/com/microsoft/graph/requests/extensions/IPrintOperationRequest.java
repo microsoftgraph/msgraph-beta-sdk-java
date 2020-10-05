@@ -21,7 +21,7 @@ public interface IPrintOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PrintOperation> callback);
+    void get(final ICallback<? super PrintOperation> callback);
 
     /**
      * Gets the PrintOperation from the service
@@ -36,7 +36,7 @@ public interface IPrintOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PrintOperation> callback);
+    void delete(final ICallback<? super PrintOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPrintOperationRequest extends IHttpRequest {
      * @param sourcePrintOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PrintOperation sourcePrintOperation, final ICallback<PrintOperation> callback);
+    void patch(final PrintOperation sourcePrintOperation, final ICallback<? super PrintOperation> callback);
 
     /**
      * Patches this PrintOperation with a source
@@ -68,7 +68,7 @@ public interface IPrintOperationRequest extends IHttpRequest {
      * @param newPrintOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PrintOperation newPrintOperation, final ICallback<PrintOperation> callback);
+    void post(final PrintOperation newPrintOperation, final ICallback<? super PrintOperation> callback);
 
     /**
      * Posts a PrintOperation with a new object
@@ -85,7 +85,7 @@ public interface IPrintOperationRequest extends IHttpRequest {
      * @param newPrintOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PrintOperation newPrintOperation, final ICallback<PrintOperation> callback);
+    void put(final PrintOperation newPrintOperation, final ICallback<? super PrintOperation> callback);
 
     /**
      * Posts a PrintOperation with a new object

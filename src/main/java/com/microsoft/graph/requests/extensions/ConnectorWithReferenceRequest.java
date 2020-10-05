@@ -39,7 +39,7 @@ public class ConnectorWithReferenceRequest extends BaseRequest implements IConne
         super(requestUrl, client, requestOptions, Connector.class);
     }
 
-    public void post(final Connector newConnector, final IJsonBackedObject payload, final ICallback<Connector> callback) {
+    public void post(final Connector newConnector, final IJsonBackedObject payload, final ICallback<? super Connector> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class ConnectorWithReferenceRequest extends BaseRequest implements IConne
         return null;
     }
 
-    public void get(final ICallback<Connector> callback) {
+    public void get(final ICallback<? super Connector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class ConnectorWithReferenceRequest extends BaseRequest implements IConne
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Connector> callback) {
+	public void delete(final ICallback<? super Connector> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class ConnectorWithReferenceRequest extends BaseRequest implements IConne
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Connector sourceConnector, final ICallback<Connector> callback) {
+	public void patch(final Connector sourceConnector, final ICallback<? super Connector> callback) {
 		send(HttpMethod.PATCH, callback, sourceConnector);
 	}
 
@@ -95,16 +95,6 @@ public class ConnectorWithReferenceRequest extends BaseRequest implements IConne
      */
     public IConnectorWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ConnectorWithReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IConnectorWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ConnectorWithReferenceRequest)this;
     }
 }

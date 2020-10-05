@@ -52,7 +52,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<NetworkManagementCondition> callback) {
+    public void get(final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<NetworkManagementCondition> callback) {
+    public void delete(final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param sourceNetworkManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NetworkManagementCondition sourceNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback) {
+    public void patch(final NetworkManagementCondition sourceNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceNetworkManagementCondition);
     }
 
@@ -111,7 +111,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param newNetworkManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback) {
+    public void post(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.POST, callback, newNetworkManagementCondition);
     }
 
@@ -132,7 +132,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param newNetworkManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback) {
+    public void put(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newNetworkManagementCondition);
     }
 
@@ -166,17 +166,6 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      */
      public INetworkManagementConditionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NetworkManagementConditionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public INetworkManagementConditionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (NetworkManagementConditionRequest)this;
      }
 

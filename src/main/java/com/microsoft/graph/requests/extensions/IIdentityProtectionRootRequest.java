@@ -21,7 +21,7 @@ public interface IIdentityProtectionRootRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IdentityProtectionRoot> callback);
+    void get(final ICallback<? super IdentityProtectionRoot> callback);
 
     /**
      * Gets the IdentityProtectionRoot from the service
@@ -36,7 +36,7 @@ public interface IIdentityProtectionRootRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IdentityProtectionRoot> callback);
+    void delete(final ICallback<? super IdentityProtectionRoot> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIdentityProtectionRootRequest extends IHttpRequest {
      * @param sourceIdentityProtectionRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IdentityProtectionRoot sourceIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback);
+    void patch(final IdentityProtectionRoot sourceIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback);
 
     /**
      * Patches this IdentityProtectionRoot with a source
@@ -68,7 +68,7 @@ public interface IIdentityProtectionRootRequest extends IHttpRequest {
      * @param newIdentityProtectionRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback);
+    void post(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback);
 
     /**
      * Posts a IdentityProtectionRoot with a new object
@@ -85,7 +85,7 @@ public interface IIdentityProtectionRootRequest extends IHttpRequest {
      * @param newIdentityProtectionRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback);
+    void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback);
 
     /**
      * Posts a IdentityProtectionRoot with a new object

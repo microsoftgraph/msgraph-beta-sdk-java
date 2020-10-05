@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserExperienceAnalyticsCategoryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserExperienceAnalyticsCategoryCollectionPage> callback);
+    void get(final ICallback<? super IUserExperienceAnalyticsCategoryCollectionPage> callback);
 
     IUserExperienceAnalyticsCategoryCollectionPage get() throws ClientException;
 
-    void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+    void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback);
 
     UserExperienceAnalyticsCategory post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUserExperienceAnalyticsCategoryCollectionRequest extends IHttp
      * @return the updated request
      */
     IUserExperienceAnalyticsCategoryCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUserExperienceAnalyticsCategoryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUserExperienceAnalyticsCategoryCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IUserExperienceAnalyticsCategoryCollectionRequest skipToken(String skipToken);
+	IUserExperienceAnalyticsCategoryCollectionRequest skipToken(final String skipToken);
 }

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IIdentityProviderAvailableProviderTypesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIdentityProviderAvailableProviderTypesCollectionPage> callback);
+    void get(final ICallback<? super IIdentityProviderAvailableProviderTypesCollectionPage> callback);
 
     IIdentityProviderAvailableProviderTypesCollectionPage get() throws ClientException;
 

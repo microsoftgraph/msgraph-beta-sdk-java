@@ -21,7 +21,7 @@ public interface ITemporaryAccessPassAuthenticationMethodRequest extends IHttpRe
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+    void get(final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback);
 
     /**
      * Gets the TemporaryAccessPassAuthenticationMethod from the service
@@ -36,7 +36,7 @@ public interface ITemporaryAccessPassAuthenticationMethodRequest extends IHttpRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+    void delete(final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITemporaryAccessPassAuthenticationMethodRequest extends IHttpRe
      * @param sourceTemporaryAccessPassAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TemporaryAccessPassAuthenticationMethod sourceTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+    void patch(final TemporaryAccessPassAuthenticationMethod sourceTemporaryAccessPassAuthenticationMethod, final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback);
 
     /**
      * Patches this TemporaryAccessPassAuthenticationMethod with a source
@@ -68,7 +68,7 @@ public interface ITemporaryAccessPassAuthenticationMethodRequest extends IHttpRe
      * @param newTemporaryAccessPassAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+    void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback);
 
     /**
      * Posts a TemporaryAccessPassAuthenticationMethod with a new object
@@ -85,7 +85,7 @@ public interface ITemporaryAccessPassAuthenticationMethodRequest extends IHttpRe
      * @param newTemporaryAccessPassAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+    void put(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<? super TemporaryAccessPassAuthenticationMethod> callback);
 
     /**
      * Posts a TemporaryAccessPassAuthenticationMethod with a new object

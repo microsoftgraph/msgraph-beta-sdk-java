@@ -23,6 +23,6 @@ public class UserPFXCertificateCollectionPage extends BaseCollectionPage<UserPFX
      * @param builder  the request builder for the next collection page
      */
     public UserPFXCertificateCollectionPage(final UserPFXCertificateCollectionResponse response, final IUserPFXCertificateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

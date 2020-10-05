@@ -57,7 +57,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OnPremisesPublishingProfile> callback) {
+    public void get(final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OnPremisesPublishingProfile> callback) {
+    public void delete(final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param sourceOnPremisesPublishingProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback) {
+    public void patch(final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesPublishingProfile);
     }
 
@@ -116,7 +116,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param newOnPremisesPublishingProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback) {
+    public void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.POST, callback, newOnPremisesPublishingProfile);
     }
 
@@ -137,7 +137,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param newOnPremisesPublishingProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback) {
+    public void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesPublishingProfile);
     }
 
@@ -171,17 +171,6 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      */
      public IOnPremisesPublishingProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesPublishingProfileRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOnPremisesPublishingProfileRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnPremisesPublishingProfileRequest)this;
      }
 

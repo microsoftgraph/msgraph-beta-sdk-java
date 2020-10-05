@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.RoleAssignment;
-import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionPage;
 
 
@@ -81,19 +79,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
 
 
         if (json.has("roleScopeTags")) {
-            final RoleScopeTagCollectionResponse response = new RoleScopeTagCollectionResponse();
-            if (json.has("roleScopeTags@odata.nextLink")) {
-                response.nextLink = json.get("roleScopeTags@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleScopeTags").toString(), JsonObject[].class);
-            final RoleScopeTag[] array = new RoleScopeTag[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RoleScopeTag.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleScopeTags = new RoleScopeTagCollectionPage(response, null);
+            roleScopeTags = serializer.deserializeObject(json.get("roleScopeTags").toString(), RoleScopeTagCollectionPage.class);
         }
     }
 }

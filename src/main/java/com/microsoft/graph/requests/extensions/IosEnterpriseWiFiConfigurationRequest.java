@@ -45,7 +45,7 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosEnterpriseWiFiConfiguration> callback) {
+    public void get(final ICallback<? super IosEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosEnterpriseWiFiConfiguration> callback) {
+    public void delete(final ICallback<? super IosEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      * @param sourceIosEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosEnterpriseWiFiConfiguration sourceIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback) {
+    public void patch(final IosEnterpriseWiFiConfiguration sourceIosEnterpriseWiFiConfiguration, final ICallback<? super IosEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosEnterpriseWiFiConfiguration);
     }
 
@@ -104,7 +104,7 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      * @param newIosEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback) {
+    public void post(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<? super IosEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosEnterpriseWiFiConfiguration);
     }
 
@@ -125,7 +125,7 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      * @param newIosEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback) {
+    public void put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<? super IosEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosEnterpriseWiFiConfiguration);
     }
 
@@ -159,17 +159,6 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      */
      public IIosEnterpriseWiFiConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosEnterpriseWiFiConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosEnterpriseWiFiConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosEnterpriseWiFiConfigurationRequest)this;
      }
 

@@ -21,7 +21,7 @@ public interface IEmbeddedSIMDeviceStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmbeddedSIMDeviceState> callback);
+    void get(final ICallback<? super EmbeddedSIMDeviceState> callback);
 
     /**
      * Gets the EmbeddedSIMDeviceState from the service
@@ -36,7 +36,7 @@ public interface IEmbeddedSIMDeviceStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmbeddedSIMDeviceState> callback);
+    void delete(final ICallback<? super EmbeddedSIMDeviceState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmbeddedSIMDeviceStateRequest extends IHttpRequest {
      * @param sourceEmbeddedSIMDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback);
+    void patch(final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback);
 
     /**
      * Patches this EmbeddedSIMDeviceState with a source
@@ -68,7 +68,7 @@ public interface IEmbeddedSIMDeviceStateRequest extends IHttpRequest {
      * @param newEmbeddedSIMDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback);
+    void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback);
 
     /**
      * Posts a EmbeddedSIMDeviceState with a new object
@@ -85,7 +85,7 @@ public interface IEmbeddedSIMDeviceStateRequest extends IHttpRequest {
      * @param newEmbeddedSIMDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback);
+    void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback);
 
     /**
      * Posts a EmbeddedSIMDeviceState with a new object

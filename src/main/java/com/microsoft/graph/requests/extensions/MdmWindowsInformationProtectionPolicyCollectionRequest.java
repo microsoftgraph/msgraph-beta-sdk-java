@@ -41,7 +41,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class, IMdmWindowsInformationProtectionPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IMdmWindowsInformationProtectionPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IMdmWindowsInformationProtectionPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         return buildFromResponse(response);
     }
 
-    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
+    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      */
     public IMdmWindowsInformationProtectionPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMdmWindowsInformationProtectionPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ProvisioningObjectSummary> callback) {
+    public void get(final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ProvisioningObjectSummary> callback) {
+    public void delete(final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param sourceProvisioningObjectSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProvisioningObjectSummary sourceProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback) {
+    public void patch(final ProvisioningObjectSummary sourceProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceProvisioningObjectSummary);
     }
 
@@ -96,7 +96,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param newProvisioningObjectSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback) {
+    public void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.POST, callback, newProvisioningObjectSummary);
     }
 
@@ -117,7 +117,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param newProvisioningObjectSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback) {
+    public void put(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.PUT, callback, newProvisioningObjectSummary);
     }
 
@@ -151,17 +151,6 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      */
      public IProvisioningObjectSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProvisioningObjectSummaryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IProvisioningObjectSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ProvisioningObjectSummaryRequest)this;
      }
 

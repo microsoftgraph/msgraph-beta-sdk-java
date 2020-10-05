@@ -42,7 +42,7 @@ public class DeviceShellScriptCollectionRequest extends BaseCollectionRequest<De
         super(requestUrl, client, requestOptions, DeviceShellScriptCollectionResponse.class, IDeviceShellScriptCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceShellScriptCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceShellScriptCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class DeviceShellScriptCollectionRequest extends BaseCollectionRequest<De
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback) {
+    public void post(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceShellScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,6 +94,17 @@ public class DeviceShellScriptCollectionRequest extends BaseCollectionRequest<De
      */
     public IDeviceShellScriptCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceShellScriptCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDeviceShellScriptCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceShellScriptCollectionRequest)this;
     }
 

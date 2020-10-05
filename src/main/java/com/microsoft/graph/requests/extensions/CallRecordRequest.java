@@ -37,7 +37,7 @@ public class CallRecordRequest extends BaseRequest implements ICallRecordRequest
         body = new CallRecordBody();
     }
 
-    public void post(final ICallback<RecordOperation> callback) {
+    public void post(final ICallback<? super RecordOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,17 +75,6 @@ public class CallRecordRequest extends BaseRequest implements ICallRecordRequest
      */
     public ICallRecordRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CallRecordRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ICallRecordRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CallRecordRequest)this;
     }
 

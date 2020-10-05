@@ -23,6 +23,6 @@ public class ProgramControlCollectionPage extends BaseCollectionPage<ProgramCont
      * @param builder  the request builder for the next collection page
      */
     public ProgramControlCollectionPage(final ProgramControlCollectionResponse response, final IProgramControlCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

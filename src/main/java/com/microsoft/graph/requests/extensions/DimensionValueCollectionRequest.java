@@ -40,7 +40,7 @@ public class DimensionValueCollectionRequest extends BaseCollectionRequest<Dimen
         super(requestUrl, client, requestOptions, DimensionValueCollectionResponse.class, IDimensionValueCollectionPage.class);
     }
 
-    public void get(final ICallback<IDimensionValueCollectionPage> callback) {
+    public void get(final ICallback<? super IDimensionValueCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DimensionValueCollectionRequest extends BaseCollectionRequest<Dimen
         return buildFromResponse(response);
     }
 
-    public void post(final DimensionValue newDimensionValue, final ICallback<DimensionValue> callback) {
+    public void post(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DimensionValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class DimensionValueCollectionRequest extends BaseCollectionRequest<Dimen
      */
     public IDimensionValueCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DimensionValueCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDimensionValueCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DimensionValueCollectionRequest)this;
     }
 

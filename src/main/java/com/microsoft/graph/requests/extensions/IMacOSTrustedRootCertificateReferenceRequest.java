@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IMacOSTrustedRootCertificateReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<MacOSTrustedRootCertificate> callback);
+    void delete(final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     MacOSTrustedRootCertificate delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IMacOSTrustedRootCertificateReferenceRequest extends IHttpReque
      * @param srcMacOSTrustedRootCertificate the MacOSTrustedRootCertificate to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(MacOSTrustedRootCertificate srcMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+    void put(MacOSTrustedRootCertificate srcMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback);
 
     /**
      * Puts the MacOSTrustedRootCertificate

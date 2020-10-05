@@ -37,7 +37,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UnsupportedGroupPolicyExtension> callback) {
+    public void get(final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UnsupportedGroupPolicyExtension> callback) {
+    public void delete(final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param sourceUnsupportedGroupPolicyExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback) {
+    public void patch(final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.PATCH, callback, sourceUnsupportedGroupPolicyExtension);
     }
 
@@ -96,7 +96,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param newUnsupportedGroupPolicyExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback) {
+    public void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.POST, callback, newUnsupportedGroupPolicyExtension);
     }
 
@@ -117,7 +117,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param newUnsupportedGroupPolicyExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback) {
+    public void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.PUT, callback, newUnsupportedGroupPolicyExtension);
     }
 
@@ -151,17 +151,6 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      */
      public IUnsupportedGroupPolicyExtensionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnsupportedGroupPolicyExtensionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUnsupportedGroupPolicyExtensionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UnsupportedGroupPolicyExtensionRequest)this;
      }
 

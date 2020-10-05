@@ -37,7 +37,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequest extends BaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void get(final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequest extends BaseReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void delete(final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequest extends BaseReque
      * @param sourceMicrosoftAuthenticatorAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftAuthenticatorAuthenticationMethod sourceMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void patch(final MicrosoftAuthenticatorAuthenticationMethod sourceMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -96,7 +96,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequest extends BaseReque
      * @param newMicrosoftAuthenticatorAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -117,7 +117,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequest extends BaseReque
      * @param newMicrosoftAuthenticatorAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void put(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -151,17 +151,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequest extends BaseReque
      */
      public IMicrosoftAuthenticatorAuthenticationMethodRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftAuthenticatorAuthenticationMethodRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMicrosoftAuthenticatorAuthenticationMethodRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MicrosoftAuthenticatorAuthenticationMethodRequest)this;
      }
 

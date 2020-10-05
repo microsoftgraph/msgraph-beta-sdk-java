@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOutlookTaskFolderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOutlookTaskFolderCollectionPage> callback);
+    void get(final ICallback<? super IOutlookTaskFolderCollectionPage> callback);
 
     IOutlookTaskFolderCollectionPage get() throws ClientException;
 
-    void post(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback);
+    void post(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback);
 
     OutlookTaskFolder post(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IOutlookTaskFolderCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOutlookTaskFolderCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOutlookTaskFolderCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IOutlookTaskFolderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOutlookTaskFolderCollectionRequest skipToken(String skipToken);
+	IOutlookTaskFolderCollectionRequest skipToken(final String skipToken);
 }

@@ -40,7 +40,7 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionRequest exten
         super(requestUrl, client, requestOptions, IosLobAppProvisioningConfigurationAssignmentCollectionResponse.class, IIosLobAppProvisioningConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IIosLobAppProvisioningConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IIosLobAppProvisioningConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionRequest exten
         return buildFromResponse(response);
     }
 
-    public void post(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<IosLobAppProvisioningConfigurationAssignment> callback) {
+    public void post(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<? super IosLobAppProvisioningConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosLobAppProvisioningConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionRequest exten
      */
     public IIosLobAppProvisioningConfigurationAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IosLobAppProvisioningConfigurationAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IIosLobAppProvisioningConfigurationAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IosLobAppProvisioningConfigurationAssignmentCollectionRequest)this;
     }
 

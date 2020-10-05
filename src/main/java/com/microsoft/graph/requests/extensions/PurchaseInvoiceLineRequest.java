@@ -41,7 +41,7 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PurchaseInvoiceLine> callback) {
+    public void get(final ICallback<? super PurchaseInvoiceLine> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PurchaseInvoiceLine> callback) {
+    public void delete(final ICallback<? super PurchaseInvoiceLine> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      * @param sourcePurchaseInvoiceLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PurchaseInvoiceLine sourcePurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback) {
+    public void patch(final PurchaseInvoiceLine sourcePurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback) {
         send(HttpMethod.PATCH, callback, sourcePurchaseInvoiceLine);
     }
 
@@ -100,7 +100,7 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      * @param newPurchaseInvoiceLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback) {
+    public void post(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback) {
         send(HttpMethod.POST, callback, newPurchaseInvoiceLine);
     }
 
@@ -121,7 +121,7 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      * @param newPurchaseInvoiceLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback) {
+    public void put(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<? super PurchaseInvoiceLine> callback) {
         send(HttpMethod.PUT, callback, newPurchaseInvoiceLine);
     }
 
@@ -155,17 +155,6 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      */
      public IPurchaseInvoiceLineRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PurchaseInvoiceLineRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPurchaseInvoiceLineRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PurchaseInvoiceLineRequest)this;
      }
 

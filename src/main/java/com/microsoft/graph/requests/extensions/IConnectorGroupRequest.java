@@ -21,7 +21,7 @@ public interface IConnectorGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConnectorGroup> callback);
+    void get(final ICallback<? super ConnectorGroup> callback);
 
     /**
      * Gets the ConnectorGroup from the service
@@ -36,7 +36,7 @@ public interface IConnectorGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConnectorGroup> callback);
+    void delete(final ICallback<? super ConnectorGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConnectorGroupRequest extends IHttpRequest {
      * @param sourceConnectorGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConnectorGroup sourceConnectorGroup, final ICallback<ConnectorGroup> callback);
+    void patch(final ConnectorGroup sourceConnectorGroup, final ICallback<? super ConnectorGroup> callback);
 
     /**
      * Patches this ConnectorGroup with a source
@@ -68,7 +68,7 @@ public interface IConnectorGroupRequest extends IHttpRequest {
      * @param newConnectorGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback);
+    void post(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback);
 
     /**
      * Posts a ConnectorGroup with a new object
@@ -85,7 +85,7 @@ public interface IConnectorGroupRequest extends IHttpRequest {
      * @param newConnectorGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback);
+    void put(final ConnectorGroup newConnectorGroup, final ICallback<? super ConnectorGroup> callback);
 
     /**
      * Posts a ConnectorGroup with a new object

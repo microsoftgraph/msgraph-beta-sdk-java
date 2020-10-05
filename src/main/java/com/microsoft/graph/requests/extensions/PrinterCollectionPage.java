@@ -23,6 +23,6 @@ public class PrinterCollectionPage extends BaseCollectionPage<Printer, IPrinterC
      * @param builder  the request builder for the next collection page
      */
     public PrinterCollectionPage(final PrinterCollectionResponse response, final IPrinterCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

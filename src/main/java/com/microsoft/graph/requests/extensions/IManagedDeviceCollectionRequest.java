@@ -30,11 +30,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedDeviceCollectionPage> callback);
+    void get(final ICallback<? super IManagedDeviceCollectionPage> callback);
 
     IManagedDeviceCollectionPage get() throws ClientException;
 
-    void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback);
+    void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback);
 
     ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException;
 
@@ -53,6 +53,14 @@ public interface IManagedDeviceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IManagedDeviceCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagedDeviceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -85,5 +93,5 @@ public interface IManagedDeviceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceCollectionRequest skipToken(String skipToken);
+	IManagedDeviceCollectionRequest skipToken(final String skipToken);
 }

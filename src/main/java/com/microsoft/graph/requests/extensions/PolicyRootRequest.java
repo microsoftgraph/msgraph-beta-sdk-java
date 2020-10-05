@@ -81,7 +81,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PolicyRoot> callback) {
+    public void get(final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -100,7 +100,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PolicyRoot> callback) {
+    public void delete(final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -119,7 +119,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param sourcePolicyRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicyRoot sourcePolicyRoot, final ICallback<PolicyRoot> callback) {
+    public void patch(final PolicyRoot sourcePolicyRoot, final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicyRoot);
     }
 
@@ -140,7 +140,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param newPolicyRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicyRoot newPolicyRoot, final ICallback<PolicyRoot> callback) {
+    public void post(final PolicyRoot newPolicyRoot, final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.POST, callback, newPolicyRoot);
     }
 
@@ -161,7 +161,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param newPolicyRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicyRoot newPolicyRoot, final ICallback<PolicyRoot> callback) {
+    public void put(final PolicyRoot newPolicyRoot, final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.PUT, callback, newPolicyRoot);
     }
 
@@ -195,17 +195,6 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      */
      public IPolicyRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicyRootRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPolicyRootRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PolicyRootRequest)this;
      }
 

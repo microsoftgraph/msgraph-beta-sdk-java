@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void get(final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void delete(final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param sourceUserExperienceAnalyticsMetric the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsMetric);
     }
 
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param newUserExperienceAnalyticsMetric the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsMetric);
     }
 
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param newUserExperienceAnalyticsMetric the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback) {
+    public void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsMetric);
     }
 
@@ -151,17 +151,6 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      */
      public IUserExperienceAnalyticsMetricRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsMetricRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IUserExperienceAnalyticsMetricRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserExperienceAnalyticsMetricRequest)this;
      }
 

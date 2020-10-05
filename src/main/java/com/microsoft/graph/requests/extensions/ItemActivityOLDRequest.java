@@ -41,7 +41,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemActivityOLD> callback) {
+    public void get(final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemActivityOLD> callback) {
+    public void delete(final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param sourceItemActivityOLD the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemActivityOLD sourceItemActivityOLD, final ICallback<ItemActivityOLD> callback) {
+    public void patch(final ItemActivityOLD sourceItemActivityOLD, final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.PATCH, callback, sourceItemActivityOLD);
     }
 
@@ -100,7 +100,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param newItemActivityOLD the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemActivityOLD newItemActivityOLD, final ICallback<ItemActivityOLD> callback) {
+    public void post(final ItemActivityOLD newItemActivityOLD, final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.POST, callback, newItemActivityOLD);
     }
 
@@ -121,7 +121,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param newItemActivityOLD the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemActivityOLD newItemActivityOLD, final ICallback<ItemActivityOLD> callback) {
+    public void put(final ItemActivityOLD newItemActivityOLD, final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.PUT, callback, newItemActivityOLD);
     }
 
@@ -155,17 +155,6 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      */
      public IItemActivityOLDRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemActivityOLDRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IItemActivityOLDRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemActivityOLDRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISynchronizationTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISynchronizationTemplateCollectionPage> callback);
+    void get(final ICallback<? super ISynchronizationTemplateCollectionPage> callback);
 
     ISynchronizationTemplateCollectionPage get() throws ClientException;
 
-    void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback);
+    void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback);
 
     SynchronizationTemplate post(final SynchronizationTemplate newSynchronizationTemplate) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface ISynchronizationTemplateCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     ISynchronizationTemplateCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISynchronizationTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface ISynchronizationTemplateCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	ISynchronizationTemplateCollectionRequest skipToken(String skipToken);
+	ISynchronizationTemplateCollectionRequest skipToken(final String skipToken);
 }

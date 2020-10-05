@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAccessPackageAssignmentPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAccessPackageAssignmentPolicyCollectionPage> callback);
+    void get(final ICallback<? super IAccessPackageAssignmentPolicyCollectionPage> callback);
 
     IAccessPackageAssignmentPolicyCollectionPage get() throws ClientException;
 
-    void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback);
+    void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback);
 
     AccessPackageAssignmentPolicy post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IAccessPackageAssignmentPolicyCollectionRequest extends IHttpRe
      * @return the updated request
      */
     IAccessPackageAssignmentPolicyCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAccessPackageAssignmentPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IAccessPackageAssignmentPolicyCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IAccessPackageAssignmentPolicyCollectionRequest skipToken(String skipToken);
+	IAccessPackageAssignmentPolicyCollectionRequest skipToken(final String skipToken);
 }

@@ -37,7 +37,7 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SkypeForBusinessActivityUserDetail> callback) {
+    public void get(final ICallback<? super SkypeForBusinessActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SkypeForBusinessActivityUserDetail> callback) {
+    public void delete(final ICallback<? super SkypeForBusinessActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
      * @param sourceSkypeForBusinessActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessActivityUserDetail sourceSkypeForBusinessActivityUserDetail, final ICallback<SkypeForBusinessActivityUserDetail> callback) {
+    public void patch(final SkypeForBusinessActivityUserDetail sourceSkypeForBusinessActivityUserDetail, final ICallback<? super SkypeForBusinessActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessActivityUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
      * @param newSkypeForBusinessActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<SkypeForBusinessActivityUserDetail> callback) {
+    public void post(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<? super SkypeForBusinessActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessActivityUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
      * @param newSkypeForBusinessActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<SkypeForBusinessActivityUserDetail> callback) {
+    public void put(final SkypeForBusinessActivityUserDetail newSkypeForBusinessActivityUserDetail, final ICallback<? super SkypeForBusinessActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessActivityUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
      */
      public ISkypeForBusinessActivityUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessActivityUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISkypeForBusinessActivityUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SkypeForBusinessActivityUserDetailRequest)this;
      }
 

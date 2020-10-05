@@ -39,7 +39,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
         super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, IAppRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IAppRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IAppRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
         return buildFromResponse(response);
     }
 
-    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback) {
+    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,6 +91,17 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      */
     public IAppRoleAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AppRoleAssignmentCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAppRoleAssignmentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppRoleAssignmentCollectionRequest)this;
     }
 

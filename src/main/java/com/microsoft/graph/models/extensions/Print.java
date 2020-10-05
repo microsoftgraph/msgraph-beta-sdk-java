@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PrintSettings;
 import com.microsoft.graph.models.extensions.PrintConnector;
@@ -16,20 +15,12 @@ import com.microsoft.graph.models.extensions.PrinterShare;
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.PrintService;
 import com.microsoft.graph.models.extensions.PrintTaskDefinition;
-import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PrintConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.PrinterCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrinterCollectionPage;
-import com.microsoft.graph.requests.extensions.PrinterShareCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionPage;
-import com.microsoft.graph.requests.extensions.ReportRootCollectionResponse;
 import com.microsoft.graph.requests.extensions.ReportRootCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintServiceCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintServiceCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintTaskDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionCollectionPage;
 
 
@@ -42,8 +33,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Print.
  */
-public class Print extends Entity implements IJsonBackedObject {
+public class Print implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Settings.
@@ -158,131 +159,35 @@ public class Print extends Entity implements IJsonBackedObject {
 
 
         if (json.has("connectors")) {
-            final PrintConnectorCollectionResponse response = new PrintConnectorCollectionResponse();
-            if (json.has("connectors@odata.nextLink")) {
-                response.nextLink = json.get("connectors@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectors").toString(), JsonObject[].class);
-            final PrintConnector[] array = new PrintConnector[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintConnector.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            connectors = new PrintConnectorCollectionPage(response, null);
+            connectors = serializer.deserializeObject(json.get("connectors").toString(), PrintConnectorCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            final PrintOperationCollectionResponse response = new PrintOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final PrintOperation[] array = new PrintOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new PrintOperationCollectionPage(response, null);
+            operations = serializer.deserializeObject(json.get("operations").toString(), PrintOperationCollectionPage.class);
         }
 
         if (json.has("printers")) {
-            final PrinterCollectionResponse response = new PrinterCollectionResponse();
-            if (json.has("printers@odata.nextLink")) {
-                response.nextLink = json.get("printers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("printers").toString(), JsonObject[].class);
-            final Printer[] array = new Printer[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Printer.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            printers = new PrinterCollectionPage(response, null);
+            printers = serializer.deserializeObject(json.get("printers").toString(), PrinterCollectionPage.class);
         }
 
         if (json.has("printerShares")) {
-            final PrinterShareCollectionResponse response = new PrinterShareCollectionResponse();
-            if (json.has("printerShares@odata.nextLink")) {
-                response.nextLink = json.get("printerShares@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("printerShares").toString(), JsonObject[].class);
-            final PrinterShare[] array = new PrinterShare[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrinterShare.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            printerShares = new PrinterShareCollectionPage(response, null);
+            printerShares = serializer.deserializeObject(json.get("printerShares").toString(), PrinterShareCollectionPage.class);
         }
 
         if (json.has("reports")) {
-            final ReportRootCollectionResponse response = new ReportRootCollectionResponse();
-            if (json.has("reports@odata.nextLink")) {
-                response.nextLink = json.get("reports@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("reports").toString(), JsonObject[].class);
-            final ReportRoot[] array = new ReportRoot[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ReportRoot.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            reports = new ReportRootCollectionPage(response, null);
+            reports = serializer.deserializeObject(json.get("reports").toString(), ReportRootCollectionPage.class);
         }
 
         if (json.has("services")) {
-            final PrintServiceCollectionResponse response = new PrintServiceCollectionResponse();
-            if (json.has("services@odata.nextLink")) {
-                response.nextLink = json.get("services@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("services").toString(), JsonObject[].class);
-            final PrintService[] array = new PrintService[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintService.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            services = new PrintServiceCollectionPage(response, null);
+            services = serializer.deserializeObject(json.get("services").toString(), PrintServiceCollectionPage.class);
         }
 
         if (json.has("shares")) {
-            final PrinterShareCollectionResponse response = new PrinterShareCollectionResponse();
-            if (json.has("shares@odata.nextLink")) {
-                response.nextLink = json.get("shares@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("shares").toString(), JsonObject[].class);
-            final PrinterShare[] array = new PrinterShare[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrinterShare.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            shares = new PrinterShareCollectionPage(response, null);
+            shares = serializer.deserializeObject(json.get("shares").toString(), PrinterShareCollectionPage.class);
         }
 
         if (json.has("taskDefinitions")) {
-            final PrintTaskDefinitionCollectionResponse response = new PrintTaskDefinitionCollectionResponse();
-            if (json.has("taskDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("taskDefinitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("taskDefinitions").toString(), JsonObject[].class);
-            final PrintTaskDefinition[] array = new PrintTaskDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintTaskDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            taskDefinitions = new PrintTaskDefinitionCollectionPage(response, null);
+            taskDefinitions = serializer.deserializeObject(json.get("taskDefinitions").toString(), PrintTaskDefinitionCollectionPage.class);
         }
     }
 }

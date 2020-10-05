@@ -21,7 +21,7 @@ public interface IOrganizationalBrandingLocalizationRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OrganizationalBrandingLocalization> callback);
+    void get(final ICallback<? super OrganizationalBrandingLocalization> callback);
 
     /**
      * Gets the OrganizationalBrandingLocalization from the service
@@ -36,7 +36,7 @@ public interface IOrganizationalBrandingLocalizationRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OrganizationalBrandingLocalization> callback);
+    void delete(final ICallback<? super OrganizationalBrandingLocalization> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOrganizationalBrandingLocalizationRequest extends IHttpRequest
      * @param sourceOrganizationalBrandingLocalization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback);
+    void patch(final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback);
 
     /**
      * Patches this OrganizationalBrandingLocalization with a source
@@ -68,7 +68,7 @@ public interface IOrganizationalBrandingLocalizationRequest extends IHttpRequest
      * @param newOrganizationalBrandingLocalization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback);
+    void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback);
 
     /**
      * Posts a OrganizationalBrandingLocalization with a new object
@@ -85,7 +85,7 @@ public interface IOrganizationalBrandingLocalizationRequest extends IHttpRequest
      * @param newOrganizationalBrandingLocalization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<OrganizationalBrandingLocalization> callback);
+    void put(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback);
 
     /**
      * Posts a OrganizationalBrandingLocalization with a new object

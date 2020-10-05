@@ -37,7 +37,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsUserActivityUserDetail> callback) {
+    public void get(final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsUserActivityUserDetail> callback) {
+    public void delete(final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param sourceTeamsUserActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback) {
+    public void patch(final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsUserActivityUserDetail);
     }
 
@@ -96,7 +96,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param newTeamsUserActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback) {
+    public void post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newTeamsUserActivityUserDetail);
     }
 
@@ -117,7 +117,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param newTeamsUserActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback) {
+    public void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newTeamsUserActivityUserDetail);
     }
 
@@ -151,17 +151,6 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      */
      public ITeamsUserActivityUserDetailRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsUserActivityUserDetailRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ITeamsUserActivityUserDetailRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TeamsUserActivityUserDetailRequest)this;
      }
 

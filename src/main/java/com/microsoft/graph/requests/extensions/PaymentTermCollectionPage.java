@@ -23,6 +23,6 @@ public class PaymentTermCollectionPage extends BaseCollectionPage<PaymentTerm, I
      * @param builder  the request builder for the next collection page
      */
     public PaymentTermCollectionPage(final PaymentTermCollectionResponse response, final IPaymentTermCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

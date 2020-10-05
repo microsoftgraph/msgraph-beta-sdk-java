@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IOfficeClientConfigurationAssignCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IOfficeClientConfigurationAssignCollectionPage> callback);
+    void post(final ICallback<? super IOfficeClientConfigurationAssignCollectionPage> callback);
 
     IOfficeClientConfigurationAssignCollectionPage post() throws ClientException;
 

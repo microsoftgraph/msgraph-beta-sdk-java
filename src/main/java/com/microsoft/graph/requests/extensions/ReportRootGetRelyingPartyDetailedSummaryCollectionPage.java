@@ -34,6 +34,6 @@ public class ReportRootGetRelyingPartyDetailedSummaryCollectionPage extends Base
      * @param builder The request builder for the next collection page
      */
     public ReportRootGetRelyingPartyDetailedSummaryCollectionPage(final ReportRootGetRelyingPartyDetailedSummaryCollectionResponse response, final IReportRootGetRelyingPartyDetailedSummaryCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

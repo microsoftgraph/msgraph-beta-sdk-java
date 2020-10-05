@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsInformationProtectionDeviceRegistrationReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void delete(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     WindowsInformationProtectionDeviceRegistration delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationReferenceRequest
      * @param srcWindowsInformationProtectionDeviceRegistration the WindowsInformationProtectionDeviceRegistration to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WindowsInformationProtectionDeviceRegistration srcWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+    void put(WindowsInformationProtectionDeviceRegistration srcWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback);
 
     /**
      * Puts the WindowsInformationProtectionDeviceRegistration

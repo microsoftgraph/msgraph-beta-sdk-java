@@ -37,7 +37,7 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<NetworkIPv4ConfigurationManagementCondition> callback) {
+    public void get(final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<NetworkIPv4ConfigurationManagementCondition> callback) {
+    public void delete(final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
      * @param sourceNetworkIPv4ConfigurationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NetworkIPv4ConfigurationManagementCondition sourceNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback) {
+    public void patch(final NetworkIPv4ConfigurationManagementCondition sourceNetworkIPv4ConfigurationManagementCondition, final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceNetworkIPv4ConfigurationManagementCondition);
     }
 
@@ -96,7 +96,7 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
      * @param newNetworkIPv4ConfigurationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback) {
+    public void post(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback) {
         send(HttpMethod.POST, callback, newNetworkIPv4ConfigurationManagementCondition);
     }
 
@@ -117,7 +117,7 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
      * @param newNetworkIPv4ConfigurationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback) {
+    public void put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<? super NetworkIPv4ConfigurationManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newNetworkIPv4ConfigurationManagementCondition);
     }
 
@@ -151,17 +151,6 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
      */
      public INetworkIPv4ConfigurationManagementConditionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NetworkIPv4ConfigurationManagementConditionRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public INetworkIPv4ConfigurationManagementConditionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (NetworkIPv4ConfigurationManagementConditionRequest)this;
      }
 

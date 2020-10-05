@@ -23,6 +23,6 @@ public class ExactMatchSessionCollectionPage extends BaseCollectionPage<ExactMat
      * @param builder  the request builder for the next collection page
      */
     public ExactMatchSessionCollectionPage(final ExactMatchSessionCollectionResponse response, final IExactMatchSessionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

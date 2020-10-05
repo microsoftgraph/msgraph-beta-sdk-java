@@ -39,7 +39,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PrivilegedRoleAssignment> callback) {
+    public void get(final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PrivilegedRoleAssignment> callback) {
+    public void delete(final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param sourcePrivilegedRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
+    public void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRoleAssignment);
     }
 
@@ -98,7 +98,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param newPrivilegedRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
+    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRoleAssignment);
     }
 
@@ -119,7 +119,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param newPrivilegedRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
+    public void put(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRoleAssignment);
     }
 
@@ -153,17 +153,6 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      */
      public IPrivilegedRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPrivilegedRoleAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PrivilegedRoleAssignmentRequest)this;
      }
 

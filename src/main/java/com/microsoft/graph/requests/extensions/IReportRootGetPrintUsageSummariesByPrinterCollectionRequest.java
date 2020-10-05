@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IReportRootGetPrintUsageSummariesByPrinterCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IReportRootGetPrintUsageSummariesByPrinterCollectionPage> callback);
+    void get(final ICallback<? super IReportRootGetPrintUsageSummariesByPrinterCollectionPage> callback);
 
     IReportRootGetPrintUsageSummariesByPrinterCollectionPage get() throws ClientException;
 

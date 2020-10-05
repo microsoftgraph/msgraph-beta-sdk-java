@@ -21,7 +21,7 @@ public interface IGroupPolicyMigrationReportRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupPolicyMigrationReport> callback);
+    void get(final ICallback<? super GroupPolicyMigrationReport> callback);
 
     /**
      * Gets the GroupPolicyMigrationReport from the service
@@ -36,7 +36,7 @@ public interface IGroupPolicyMigrationReportRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupPolicyMigrationReport> callback);
+    void delete(final ICallback<? super GroupPolicyMigrationReport> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupPolicyMigrationReportRequest extends IHttpRequest {
      * @param sourceGroupPolicyMigrationReport the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback);
+    void patch(final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback);
 
     /**
      * Patches this GroupPolicyMigrationReport with a source
@@ -68,7 +68,7 @@ public interface IGroupPolicyMigrationReportRequest extends IHttpRequest {
      * @param newGroupPolicyMigrationReport the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback);
+    void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback);
 
     /**
      * Posts a GroupPolicyMigrationReport with a new object
@@ -85,7 +85,7 @@ public interface IGroupPolicyMigrationReportRequest extends IHttpRequest {
      * @param newGroupPolicyMigrationReport the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback);
+    void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback);
 
     /**
      * Posts a GroupPolicyMigrationReport with a new object

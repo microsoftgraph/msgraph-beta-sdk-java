@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserIdentity;
 import com.microsoft.graph.models.extensions.AccessReviewScope;
@@ -14,7 +13,6 @@ import com.microsoft.graph.models.extensions.AccessReviewReviewerScope;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleSettings;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionPage;
 
 
@@ -167,19 +165,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
 
         if (json.has("instances")) {
-            final AccessReviewInstanceCollectionResponse response = new AccessReviewInstanceCollectionResponse();
-            if (json.has("instances@odata.nextLink")) {
-                response.nextLink = json.get("instances@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("instances").toString(), JsonObject[].class);
-            final AccessReviewInstance[] array = new AccessReviewInstance[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewInstance.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            instances = new AccessReviewInstanceCollectionPage(response, null);
+            instances = serializer.deserializeObject(json.get("instances").toString(), AccessReviewInstanceCollectionPage.class);
         }
     }
 }

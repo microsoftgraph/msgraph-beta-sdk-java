@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IConnectedOrganizationWithReferenceRequest extends IHttpRequest {
 
-    void post(final ConnectedOrganization newConnectedOrganization, final IJsonBackedObject payload, final ICallback<ConnectedOrganization> callback);
+    void post(final ConnectedOrganization newConnectedOrganization, final IJsonBackedObject payload, final ICallback<? super ConnectedOrganization> callback);
 
     ConnectedOrganization post(final ConnectedOrganization newConnectedOrganization, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ConnectedOrganization> callback);
+    void get(final ICallback<? super ConnectedOrganization> callback);
 
     ConnectedOrganization get() throws ClientException;
 
-	void delete(final ICallback<ConnectedOrganization> callback);
+	void delete(final ICallback<? super ConnectedOrganization> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<ConnectedOrganization> callback);
+	void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<? super ConnectedOrganization> callback);
 
 	ConnectedOrganization patch(final ConnectedOrganization sourceConnectedOrganization) throws ClientException;
 

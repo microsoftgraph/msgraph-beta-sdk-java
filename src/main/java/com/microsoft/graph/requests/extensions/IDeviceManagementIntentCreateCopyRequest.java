@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementIntentCreateCopyRequest extends IHttpRequest {
 
-    void post(final ICallback<DeviceManagementIntent> callback);
+    void post(final ICallback<? super DeviceManagementIntent> callback);
 
     DeviceManagementIntent post() throws ClientException;
 

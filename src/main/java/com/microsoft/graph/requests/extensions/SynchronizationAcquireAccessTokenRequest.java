@@ -36,7 +36,7 @@ public class SynchronizationAcquireAccessTokenRequest extends BaseRequest implem
         body = new SynchronizationAcquireAccessTokenBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,17 +74,6 @@ public class SynchronizationAcquireAccessTokenRequest extends BaseRequest implem
      */
     public ISynchronizationAcquireAccessTokenRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SynchronizationAcquireAccessTokenRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISynchronizationAcquireAccessTokenRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SynchronizationAcquireAccessTokenRequest)this;
     }
 

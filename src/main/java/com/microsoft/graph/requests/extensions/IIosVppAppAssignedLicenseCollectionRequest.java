@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIosVppAppAssignedLicenseCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIosVppAppAssignedLicenseCollectionPage> callback);
+    void get(final ICallback<? super IIosVppAppAssignedLicenseCollectionPage> callback);
 
     IIosVppAppAssignedLicenseCollectionPage get() throws ClientException;
 
-    void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback);
+    void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<? super IosVppAppAssignedLicense> callback);
 
     IosVppAppAssignedLicense post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IIosVppAppAssignedLicenseCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IIosVppAppAssignedLicenseCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IIosVppAppAssignedLicenseCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IIosVppAppAssignedLicenseCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IIosVppAppAssignedLicenseCollectionRequest skipToken(String skipToken);
+	IIosVppAppAssignedLicenseCollectionRequest skipToken(final String skipToken);
 }

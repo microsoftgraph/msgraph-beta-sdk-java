@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEmbeddedSIMActivationCodePoolAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IEmbeddedSIMActivationCodePoolAssignmentCollectionPage> callback);
 
     IEmbeddedSIMActivationCodePoolAssignmentCollectionPage get() throws ClientException;
 
-    void post(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment, final ICallback<EmbeddedSIMActivationCodePoolAssignment> callback);
+    void post(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment, final ICallback<? super EmbeddedSIMActivationCodePoolAssignment> callback);
 
     EmbeddedSIMActivationCodePoolAssignment post(final EmbeddedSIMActivationCodePoolAssignment newEmbeddedSIMActivationCodePoolAssignment) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest exten
      * @return the updated request
      */
     IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest exten
      *
 	 * @return the updated request
 	 */
-	IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest skipToken(String skipToken);
+	IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest skipToken(final String skipToken);
 }

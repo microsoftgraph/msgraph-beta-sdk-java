@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IWindowsAutopilotDeploymentProfileWithReferenceRequest extends IHttpRequest {
 
-    void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final IJsonBackedObject payload, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final IJsonBackedObject payload, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     WindowsAutopilotDeploymentProfile post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<WindowsAutopilotDeploymentProfile> callback);
+    void get(final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
     WindowsAutopilotDeploymentProfile get() throws ClientException;
 
-	void delete(final ICallback<WindowsAutopilotDeploymentProfile> callback);
+	void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback);
+	void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback);
 
 	WindowsAutopilotDeploymentProfile patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile) throws ClientException;
 

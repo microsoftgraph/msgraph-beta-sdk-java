@@ -39,7 +39,7 @@ public class ReportRootGetTeamsDeviceUsageUserDetailCollectionRequest extends Ba
     }
 
 
-    public void get(final ICallback<IReportRootGetTeamsDeviceUsageUserDetailCollectionPage> callback) {
+    public void get(final ICallback<? super IReportRootGetTeamsDeviceUsageUserDetailCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,6 +112,17 @@ public class ReportRootGetTeamsDeviceUsageUserDetailCollectionRequest extends Ba
      */
     public IReportRootGetTeamsDeviceUsageUserDetailCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetTeamsDeviceUsageUserDetailCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IReportRootGetTeamsDeviceUsageUserDetailCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IReportRootGetTeamsDeviceUsageUserDetailCollectionRequest)this;
     }
 

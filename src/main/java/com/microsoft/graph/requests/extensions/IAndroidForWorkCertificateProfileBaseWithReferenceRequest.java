@@ -24,19 +24,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IAndroidForWorkCertificateProfileBaseWithReferenceRequest extends IHttpRequest {
 
-    void post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload, final ICallback<AndroidForWorkCertificateProfileBase> callback);
+    void post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidForWorkCertificateProfileBase> callback);
 
     AndroidForWorkCertificateProfileBase post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<AndroidForWorkCertificateProfileBase> callback);
+    void get(final ICallback<? super AndroidForWorkCertificateProfileBase> callback);
 
     AndroidForWorkCertificateProfileBase get() throws ClientException;
 
-	void delete(final ICallback<AndroidForWorkCertificateProfileBase> callback);
+	void delete(final ICallback<? super AndroidForWorkCertificateProfileBase> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase, final ICallback<AndroidForWorkCertificateProfileBase> callback);
+	void patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase, final ICallback<? super AndroidForWorkCertificateProfileBase> callback);
 
 	AndroidForWorkCertificateProfileBase patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase) throws ClientException;
 

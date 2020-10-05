@@ -21,7 +21,7 @@ public interface IApprovalWorkflowProviderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ApprovalWorkflowProvider> callback);
+    void get(final ICallback<? super ApprovalWorkflowProvider> callback);
 
     /**
      * Gets the ApprovalWorkflowProvider from the service
@@ -36,7 +36,7 @@ public interface IApprovalWorkflowProviderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ApprovalWorkflowProvider> callback);
+    void delete(final ICallback<? super ApprovalWorkflowProvider> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApprovalWorkflowProviderRequest extends IHttpRequest {
      * @param sourceApprovalWorkflowProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ApprovalWorkflowProvider sourceApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback);
+    void patch(final ApprovalWorkflowProvider sourceApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback);
 
     /**
      * Patches this ApprovalWorkflowProvider with a source
@@ -68,7 +68,7 @@ public interface IApprovalWorkflowProviderRequest extends IHttpRequest {
      * @param newApprovalWorkflowProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback);
+    void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback);
 
     /**
      * Posts a ApprovalWorkflowProvider with a new object
@@ -85,7 +85,7 @@ public interface IApprovalWorkflowProviderRequest extends IHttpRequest {
      * @param newApprovalWorkflowProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback);
+    void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback);
 
     /**
      * Posts a ApprovalWorkflowProvider with a new object

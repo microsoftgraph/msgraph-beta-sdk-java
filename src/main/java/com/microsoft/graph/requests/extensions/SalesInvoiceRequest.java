@@ -49,7 +49,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SalesInvoice> callback) {
+    public void get(final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SalesInvoice> callback) {
+    public void delete(final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param sourceSalesInvoice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesInvoice sourceSalesInvoice, final ICallback<SalesInvoice> callback) {
+    public void patch(final SalesInvoice sourceSalesInvoice, final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesInvoice);
     }
 
@@ -108,7 +108,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param newSalesInvoice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesInvoice newSalesInvoice, final ICallback<SalesInvoice> callback) {
+    public void post(final SalesInvoice newSalesInvoice, final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.POST, callback, newSalesInvoice);
     }
 
@@ -129,7 +129,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param newSalesInvoice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesInvoice newSalesInvoice, final ICallback<SalesInvoice> callback) {
+    public void put(final SalesInvoice newSalesInvoice, final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.PUT, callback, newSalesInvoice);
     }
 
@@ -163,17 +163,6 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      */
      public ISalesInvoiceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesInvoiceRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public ISalesInvoiceRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SalesInvoiceRequest)this;
      }
 

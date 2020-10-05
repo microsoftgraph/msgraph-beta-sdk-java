@@ -21,7 +21,7 @@ public interface INotificationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Notification> callback);
+    void get(final ICallback<? super Notification> callback);
 
     /**
      * Gets the Notification from the service
@@ -36,7 +36,7 @@ public interface INotificationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Notification> callback);
+    void delete(final ICallback<? super Notification> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INotificationRequest extends IHttpRequest {
      * @param sourceNotification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Notification sourceNotification, final ICallback<Notification> callback);
+    void patch(final Notification sourceNotification, final ICallback<? super Notification> callback);
 
     /**
      * Patches this Notification with a source
@@ -68,7 +68,7 @@ public interface INotificationRequest extends IHttpRequest {
      * @param newNotification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Notification newNotification, final ICallback<Notification> callback);
+    void post(final Notification newNotification, final ICallback<? super Notification> callback);
 
     /**
      * Posts a Notification with a new object
@@ -85,7 +85,7 @@ public interface INotificationRequest extends IHttpRequest {
      * @param newNotification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Notification newNotification, final ICallback<Notification> callback);
+    void put(final Notification newNotification, final ICallback<? super Notification> callback);
 
     /**
      * Posts a Notification with a new object

@@ -41,7 +41,7 @@ public class PrintJobCollectionRequest extends BaseCollectionRequest<PrintJobCol
         super(requestUrl, client, requestOptions, PrintJobCollectionResponse.class, IPrintJobCollectionPage.class);
     }
 
-    public void get(final ICallback<IPrintJobCollectionPage> callback) {
+    public void get(final ICallback<? super IPrintJobCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class PrintJobCollectionRequest extends BaseCollectionRequest<PrintJobCol
         return buildFromResponse(response);
     }
 
-    public void post(final PrintJob newPrintJob, final ICallback<PrintJob> callback) {
+    public void post(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,6 +93,17 @@ public class PrintJobCollectionRequest extends BaseCollectionRequest<PrintJobCol
      */
     public IPrintJobCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintJobCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPrintJobCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintJobCollectionRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUnitOfMeasureCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUnitOfMeasureCollectionPage> callback);
+    void get(final ICallback<? super IUnitOfMeasureCollectionPage> callback);
 
     IUnitOfMeasureCollectionPage get() throws ClientException;
 
-    void post(final UnitOfMeasure newUnitOfMeasure, final ICallback<UnitOfMeasure> callback);
+    void post(final UnitOfMeasure newUnitOfMeasure, final ICallback<? super UnitOfMeasure> callback);
 
     UnitOfMeasure post(final UnitOfMeasure newUnitOfMeasure) throws ClientException;
 
@@ -45,6 +45,14 @@ public interface IUnitOfMeasureCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUnitOfMeasureCollectionRequest filter(final String value);
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUnitOfMeasureCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request
@@ -77,5 +85,5 @@ public interface IUnitOfMeasureCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUnitOfMeasureCollectionRequest skipToken(String skipToken);
+	IUnitOfMeasureCollectionRequest skipToken(final String skipToken);
 }

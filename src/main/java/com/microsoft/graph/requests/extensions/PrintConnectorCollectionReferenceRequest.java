@@ -36,7 +36,7 @@ public class PrintConnectorCollectionReferenceRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, PrintConnectorCollectionResponse.class, IPrintConnectorCollectionPage.class);
     }
 
-    public void post(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback) {
+    public void post(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/print/connectors/" + newPrintConnector.id);
         new PrintConnectorWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,6 +70,17 @@ public class PrintConnectorCollectionReferenceRequest extends BaseCollectionRequ
      */
     public IPrintConnectorCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintConnectorCollectionReferenceRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IPrintConnectorCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PrintConnectorCollectionReferenceRequest)this;
     }
 

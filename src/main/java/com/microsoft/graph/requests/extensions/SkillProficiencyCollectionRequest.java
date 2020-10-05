@@ -40,7 +40,7 @@ public class SkillProficiencyCollectionRequest extends BaseCollectionRequest<Ski
         super(requestUrl, client, requestOptions, SkillProficiencyCollectionResponse.class, ISkillProficiencyCollectionPage.class);
     }
 
-    public void get(final ICallback<ISkillProficiencyCollectionPage> callback) {
+    public void get(final ICallback<? super ISkillProficiencyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SkillProficiencyCollectionRequest extends BaseCollectionRequest<Ski
         return buildFromResponse(response);
     }
 
-    public void post(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback) {
+    public void post(final SkillProficiency newSkillProficiency, final ICallback<? super SkillProficiency> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SkillProficiencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,6 +92,17 @@ public class SkillProficiencyCollectionRequest extends BaseCollectionRequest<Ski
      */
     public ISkillProficiencyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SkillProficiencyCollectionRequest)this;
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISkillProficiencyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SkillProficiencyCollectionRequest)this;
     }
 
