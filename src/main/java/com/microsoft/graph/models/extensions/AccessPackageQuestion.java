@@ -36,7 +36,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -44,7 +44,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
      * The Is Required.
      * 
      */
-    @SerializedName("isRequired")
+    @SerializedName(value = "isRequired", alternate = {"IsRequired"})
     @Expose
     public Boolean isRequired;
 
@@ -52,7 +52,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
      * The Sequence.
      * 
      */
-    @SerializedName("sequence")
+    @SerializedName(value = "sequence", alternate = {"Sequence"})
     @Expose
     public Integer sequence;
 
@@ -60,7 +60,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
      * The Text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public AccessPackageLocalizedContent text;
 

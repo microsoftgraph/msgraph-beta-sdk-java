@@ -36,7 +36,7 @@ public class TeamworkActivityTopic implements IJsonBackedObject {
      * The Source.
      * 
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public TeamworkActivityTopicSource source;
 
@@ -44,7 +44,7 @@ public class TeamworkActivityTopic implements IJsonBackedObject {
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 
@@ -52,7 +52,7 @@ public class TeamworkActivityTopic implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

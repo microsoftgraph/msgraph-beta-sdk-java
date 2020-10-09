@@ -26,7 +26,7 @@ public class EdgeHomeButtonOpensCustomURL extends EdgeHomeButtonConfiguration im
      * The Home Button Custom URL.
      * The specific URL to load.
      */
-    @SerializedName("homeButtonCustomURL")
+    @SerializedName(value = "homeButtonCustomURL", alternate = {"HomeButtonCustomURL"})
     @Expose
     public String homeButtonCustomURL;
 

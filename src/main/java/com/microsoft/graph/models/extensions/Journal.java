@@ -29,7 +29,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Balancing Account Id.
      * 
      */
-    @SerializedName("balancingAccountId")
+    @SerializedName(value = "balancingAccountId", alternate = {"BalancingAccountId"})
     @Expose
     public java.util.UUID balancingAccountId;
 
@@ -37,7 +37,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Balancing Account Number.
      * 
      */
-    @SerializedName("balancingAccountNumber")
+    @SerializedName(value = "balancingAccountNumber", alternate = {"BalancingAccountNumber"})
     @Expose
     public String balancingAccountNumber;
 
@@ -45,7 +45,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Code.
      * 
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -53,7 +53,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -69,7 +69,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Account.
      * 
      */
-    @SerializedName("account")
+    @SerializedName(value = "account", alternate = {"Account"})
     @Expose
     public Account account;
 
@@ -77,7 +77,7 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Journal Lines.
      * 
      */
-    @SerializedName("journalLines")
+    @SerializedName(value = "journalLines", alternate = {"JournalLines"})
     @Expose
     public JournalLineCollectionPage journalLines;
 

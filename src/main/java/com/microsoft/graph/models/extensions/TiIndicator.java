@@ -30,7 +30,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Action.
      * 
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public TiAction action;
 
@@ -38,7 +38,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Activity Group Names.
      * 
      */
-    @SerializedName("activityGroupNames")
+    @SerializedName(value = "activityGroupNames", alternate = {"ActivityGroupNames"})
     @Expose
     public java.util.List<String> activityGroupNames;
 
@@ -46,7 +46,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Additional Information.
      * 
      */
-    @SerializedName("additionalInformation")
+    @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
     public String additionalInformation;
 
@@ -54,7 +54,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -62,7 +62,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Confidence.
      * 
      */
-    @SerializedName("confidence")
+    @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
     public Integer confidence;
 
@@ -70,7 +70,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -78,7 +78,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Diamond Model.
      * 
      */
-    @SerializedName("diamondModel")
+    @SerializedName(value = "diamondModel", alternate = {"DiamondModel"})
     @Expose
     public DiamondModel diamondModel;
 
@@ -86,7 +86,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Domain Name.
      * 
      */
-    @SerializedName("domainName")
+    @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
     public String domainName;
 
@@ -94,7 +94,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Encoding.
      * 
      */
-    @SerializedName("emailEncoding")
+    @SerializedName(value = "emailEncoding", alternate = {"EmailEncoding"})
     @Expose
     public String emailEncoding;
 
@@ -102,7 +102,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Language.
      * 
      */
-    @SerializedName("emailLanguage")
+    @SerializedName(value = "emailLanguage", alternate = {"EmailLanguage"})
     @Expose
     public String emailLanguage;
 
@@ -110,7 +110,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Recipient.
      * 
      */
-    @SerializedName("emailRecipient")
+    @SerializedName(value = "emailRecipient", alternate = {"EmailRecipient"})
     @Expose
     public String emailRecipient;
 
@@ -118,7 +118,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Sender Address.
      * 
      */
-    @SerializedName("emailSenderAddress")
+    @SerializedName(value = "emailSenderAddress", alternate = {"EmailSenderAddress"})
     @Expose
     public String emailSenderAddress;
 
@@ -126,7 +126,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Sender Name.
      * 
      */
-    @SerializedName("emailSenderName")
+    @SerializedName(value = "emailSenderName", alternate = {"EmailSenderName"})
     @Expose
     public String emailSenderName;
 
@@ -134,7 +134,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Source Domain.
      * 
      */
-    @SerializedName("emailSourceDomain")
+    @SerializedName(value = "emailSourceDomain", alternate = {"EmailSourceDomain"})
     @Expose
     public String emailSourceDomain;
 
@@ -142,7 +142,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Source Ip Address.
      * 
      */
-    @SerializedName("emailSourceIpAddress")
+    @SerializedName(value = "emailSourceIpAddress", alternate = {"EmailSourceIpAddress"})
     @Expose
     public String emailSourceIpAddress;
 
@@ -150,7 +150,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email Subject.
      * 
      */
-    @SerializedName("emailSubject")
+    @SerializedName(value = "emailSubject", alternate = {"EmailSubject"})
     @Expose
     public String emailSubject;
 
@@ -158,7 +158,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Email XMailer.
      * 
      */
-    @SerializedName("emailXMailer")
+    @SerializedName(value = "emailXMailer", alternate = {"EmailXMailer"})
     @Expose
     public String emailXMailer;
 
@@ -166,7 +166,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -174,7 +174,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -182,7 +182,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Compile Date Time.
      * 
      */
-    @SerializedName("fileCompileDateTime")
+    @SerializedName(value = "fileCompileDateTime", alternate = {"FileCompileDateTime"})
     @Expose
     public java.util.Calendar fileCompileDateTime;
 
@@ -190,7 +190,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Created Date Time.
      * 
      */
-    @SerializedName("fileCreatedDateTime")
+    @SerializedName(value = "fileCreatedDateTime", alternate = {"FileCreatedDateTime"})
     @Expose
     public java.util.Calendar fileCreatedDateTime;
 
@@ -198,7 +198,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Hash Type.
      * 
      */
-    @SerializedName("fileHashType")
+    @SerializedName(value = "fileHashType", alternate = {"FileHashType"})
     @Expose
     public FileHashType fileHashType;
 
@@ -206,7 +206,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Hash Value.
      * 
      */
-    @SerializedName("fileHashValue")
+    @SerializedName(value = "fileHashValue", alternate = {"FileHashValue"})
     @Expose
     public String fileHashValue;
 
@@ -214,7 +214,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Mutex Name.
      * 
      */
-    @SerializedName("fileMutexName")
+    @SerializedName(value = "fileMutexName", alternate = {"FileMutexName"})
     @Expose
     public String fileMutexName;
 
@@ -222,7 +222,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Name.
      * 
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -230,7 +230,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Packer.
      * 
      */
-    @SerializedName("filePacker")
+    @SerializedName(value = "filePacker", alternate = {"FilePacker"})
     @Expose
     public String filePacker;
 
@@ -238,7 +238,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Path.
      * 
      */
-    @SerializedName("filePath")
+    @SerializedName(value = "filePath", alternate = {"FilePath"})
     @Expose
     public String filePath;
 
@@ -246,7 +246,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Size.
      * 
      */
-    @SerializedName("fileSize")
+    @SerializedName(value = "fileSize", alternate = {"FileSize"})
     @Expose
     public Long fileSize;
 
@@ -254,7 +254,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The File Type.
      * 
      */
-    @SerializedName("fileType")
+    @SerializedName(value = "fileType", alternate = {"FileType"})
     @Expose
     public String fileType;
 
@@ -262,7 +262,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Ingested Date Time.
      * 
      */
-    @SerializedName("ingestedDateTime")
+    @SerializedName(value = "ingestedDateTime", alternate = {"IngestedDateTime"})
     @Expose
     public java.util.Calendar ingestedDateTime;
 
@@ -270,7 +270,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Is Active.
      * 
      */
-    @SerializedName("isActive")
+    @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
     public Boolean isActive;
 
@@ -278,7 +278,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Kill Chain.
      * 
      */
-    @SerializedName("killChain")
+    @SerializedName(value = "killChain", alternate = {"KillChain"})
     @Expose
     public java.util.List<String> killChain;
 
@@ -286,7 +286,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Known False Positives.
      * 
      */
-    @SerializedName("knownFalsePositives")
+    @SerializedName(value = "knownFalsePositives", alternate = {"KnownFalsePositives"})
     @Expose
     public String knownFalsePositives;
 
@@ -294,7 +294,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Last Reported Date Time.
      * 
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -302,7 +302,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Malware Family Names.
      * 
      */
-    @SerializedName("malwareFamilyNames")
+    @SerializedName(value = "malwareFamilyNames", alternate = {"MalwareFamilyNames"})
     @Expose
     public java.util.List<String> malwareFamilyNames;
 
@@ -310,7 +310,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Cidr Block.
      * 
      */
-    @SerializedName("networkCidrBlock")
+    @SerializedName(value = "networkCidrBlock", alternate = {"NetworkCidrBlock"})
     @Expose
     public String networkCidrBlock;
 
@@ -318,7 +318,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Destination Asn.
      * 
      */
-    @SerializedName("networkDestinationAsn")
+    @SerializedName(value = "networkDestinationAsn", alternate = {"NetworkDestinationAsn"})
     @Expose
     public Integer networkDestinationAsn;
 
@@ -326,7 +326,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Destination Cidr Block.
      * 
      */
-    @SerializedName("networkDestinationCidrBlock")
+    @SerializedName(value = "networkDestinationCidrBlock", alternate = {"NetworkDestinationCidrBlock"})
     @Expose
     public String networkDestinationCidrBlock;
 
@@ -334,7 +334,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Destination IPv4.
      * 
      */
-    @SerializedName("networkDestinationIPv4")
+    @SerializedName(value = "networkDestinationIPv4", alternate = {"NetworkDestinationIPv4"})
     @Expose
     public String networkDestinationIPv4;
 
@@ -342,7 +342,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Destination IPv6.
      * 
      */
-    @SerializedName("networkDestinationIPv6")
+    @SerializedName(value = "networkDestinationIPv6", alternate = {"NetworkDestinationIPv6"})
     @Expose
     public String networkDestinationIPv6;
 
@@ -350,7 +350,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Destination Port.
      * 
      */
-    @SerializedName("networkDestinationPort")
+    @SerializedName(value = "networkDestinationPort", alternate = {"NetworkDestinationPort"})
     @Expose
     public Integer networkDestinationPort;
 
@@ -358,7 +358,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network IPv4.
      * 
      */
-    @SerializedName("networkIPv4")
+    @SerializedName(value = "networkIPv4", alternate = {"NetworkIPv4"})
     @Expose
     public String networkIPv4;
 
@@ -366,7 +366,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network IPv6.
      * 
      */
-    @SerializedName("networkIPv6")
+    @SerializedName(value = "networkIPv6", alternate = {"NetworkIPv6"})
     @Expose
     public String networkIPv6;
 
@@ -374,7 +374,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Port.
      * 
      */
-    @SerializedName("networkPort")
+    @SerializedName(value = "networkPort", alternate = {"NetworkPort"})
     @Expose
     public Integer networkPort;
 
@@ -382,7 +382,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Protocol.
      * 
      */
-    @SerializedName("networkProtocol")
+    @SerializedName(value = "networkProtocol", alternate = {"NetworkProtocol"})
     @Expose
     public Integer networkProtocol;
 
@@ -390,7 +390,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Source Asn.
      * 
      */
-    @SerializedName("networkSourceAsn")
+    @SerializedName(value = "networkSourceAsn", alternate = {"NetworkSourceAsn"})
     @Expose
     public Integer networkSourceAsn;
 
@@ -398,7 +398,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Source Cidr Block.
      * 
      */
-    @SerializedName("networkSourceCidrBlock")
+    @SerializedName(value = "networkSourceCidrBlock", alternate = {"NetworkSourceCidrBlock"})
     @Expose
     public String networkSourceCidrBlock;
 
@@ -406,7 +406,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Source IPv4.
      * 
      */
-    @SerializedName("networkSourceIPv4")
+    @SerializedName(value = "networkSourceIPv4", alternate = {"NetworkSourceIPv4"})
     @Expose
     public String networkSourceIPv4;
 
@@ -414,7 +414,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Source IPv6.
      * 
      */
-    @SerializedName("networkSourceIPv6")
+    @SerializedName(value = "networkSourceIPv6", alternate = {"NetworkSourceIPv6"})
     @Expose
     public String networkSourceIPv6;
 
@@ -422,7 +422,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Network Source Port.
      * 
      */
-    @SerializedName("networkSourcePort")
+    @SerializedName(value = "networkSourcePort", alternate = {"NetworkSourcePort"})
     @Expose
     public Integer networkSourcePort;
 
@@ -430,7 +430,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Passive Only.
      * 
      */
-    @SerializedName("passiveOnly")
+    @SerializedName(value = "passiveOnly", alternate = {"PassiveOnly"})
     @Expose
     public Boolean passiveOnly;
 
@@ -438,7 +438,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Severity.
      * 
      */
-    @SerializedName("severity")
+    @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
     public Integer severity;
 
@@ -446,7 +446,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -454,7 +454,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Target Product.
      * 
      */
-    @SerializedName("targetProduct")
+    @SerializedName(value = "targetProduct", alternate = {"TargetProduct"})
     @Expose
     public String targetProduct;
 
@@ -462,7 +462,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Threat Type.
      * 
      */
-    @SerializedName("threatType")
+    @SerializedName(value = "threatType", alternate = {"ThreatType"})
     @Expose
     public String threatType;
 
@@ -470,7 +470,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Tlp Level.
      * 
      */
-    @SerializedName("tlpLevel")
+    @SerializedName(value = "tlpLevel", alternate = {"TlpLevel"})
     @Expose
     public TlpLevel tlpLevel;
 
@@ -478,7 +478,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The Url.
      * 
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 
@@ -486,7 +486,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      * The User Agent.
      * 
      */
-    @SerializedName("userAgent")
+    @SerializedName(value = "userAgent", alternate = {"UserAgent"})
     @Expose
     public String userAgent;
 

@@ -34,7 +34,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Authentication Method.
      * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
 
@@ -42,7 +42,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Eap Fast Configuration.
      * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
      */
-    @SerializedName("eapFastConfiguration")
+    @SerializedName(value = "eapFastConfiguration", alternate = {"EapFastConfiguration"})
     @Expose
     public EapFastConfiguration eapFastConfiguration;
 
@@ -50,7 +50,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Eap Type.
      * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
-    @SerializedName("eapType")
+    @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
     public EapType eapType;
 
@@ -58,7 +58,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Inner Authentication Protocol For Eap Ttls.
      * Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
      */
-    @SerializedName("innerAuthenticationProtocolForEapTtls")
+    @SerializedName(value = "innerAuthenticationProtocolForEapTtls", alternate = {"InnerAuthenticationProtocolForEapTtls"})
     @Expose
     public NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEapTtls;
 
@@ -66,7 +66,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Outer Identity Privacy Temporary Value.
      * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
      */
-    @SerializedName("outerIdentityPrivacyTemporaryValue")
+    @SerializedName(value = "outerIdentityPrivacyTemporaryValue", alternate = {"OuterIdentityPrivacyTemporaryValue"})
     @Expose
     public String outerIdentityPrivacyTemporaryValue;
 
@@ -74,7 +74,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Password Format String.
      * Password format string used to build the password to connect to wifi
      */
-    @SerializedName("passwordFormatString")
+    @SerializedName(value = "passwordFormatString", alternate = {"PasswordFormatString"})
     @Expose
     public String passwordFormatString;
 
@@ -82,7 +82,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Trusted Server Certificate Names.
      * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
      */
-    @SerializedName("trustedServerCertificateNames")
+    @SerializedName(value = "trustedServerCertificateNames", alternate = {"TrustedServerCertificateNames"})
     @Expose
     public java.util.List<String> trustedServerCertificateNames;
 
@@ -90,7 +90,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Username Format String.
      * Username format string used to build the username to connect to wifi
      */
-    @SerializedName("usernameFormatString")
+    @SerializedName(value = "usernameFormatString", alternate = {"UsernameFormatString"})
     @Expose
     public String usernameFormatString;
 
@@ -98,7 +98,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Derived Credential Settings.
      * Tenant level settings for the Derived Credentials to be used for authentication.
      */
-    @SerializedName("derivedCredentialSettings")
+    @SerializedName(value = "derivedCredentialSettings", alternate = {"DerivedCredentialSettings"})
     @Expose
     public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
@@ -106,7 +106,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Identity Certificate For Client Authentication.
      * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
      */
-    @SerializedName("identityCertificateForClientAuthentication")
+    @SerializedName(value = "identityCertificateForClientAuthentication", alternate = {"IdentityCertificateForClientAuthentication"})
     @Expose
     public IosCertificateProfileBase identityCertificateForClientAuthentication;
 
@@ -114,7 +114,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Root Certificates For Server Validation.
      * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
      */
-    @SerializedName("rootCertificatesForServerValidation")
+    @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose
     public IosTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 

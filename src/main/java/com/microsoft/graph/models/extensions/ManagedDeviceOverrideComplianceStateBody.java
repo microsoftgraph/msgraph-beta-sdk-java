@@ -22,7 +22,7 @@ public class ManagedDeviceOverrideComplianceStateBody {
      * The compliance State.
      * 
      */
-    @SerializedName("complianceState")
+    @SerializedName(value = "complianceState", alternate = {"ComplianceState"})
     @Expose
     public AdministratorConfiguredDeviceComplianceState complianceState;
 
@@ -30,7 +30,7 @@ public class ManagedDeviceOverrideComplianceStateBody {
      * The remediation Url.
      * 
      */
-    @SerializedName("remediationUrl")
+    @SerializedName(value = "remediationUrl", alternate = {"RemediationUrl"})
     @Expose
     public String remediationUrl;
 

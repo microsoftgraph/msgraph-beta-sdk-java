@@ -26,7 +26,7 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The date and time the policy was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -34,7 +34,7 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
      * The Description.
      * The policy's description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -42,7 +42,7 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Policy display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -50,7 +50,7 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Last time the policy was modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -58,7 +58,7 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -66,7 +66,7 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

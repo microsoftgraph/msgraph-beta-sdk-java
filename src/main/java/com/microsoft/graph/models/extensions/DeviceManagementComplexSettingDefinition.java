@@ -26,7 +26,7 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
      * The Property Definition Ids.
      * The definitions of each property of the complex setting
      */
-    @SerializedName("propertyDefinitionIds")
+    @SerializedName(value = "propertyDefinitionIds", alternate = {"PropertyDefinitionIds"})
     @Expose
     public java.util.List<String> propertyDefinitionIds;
 

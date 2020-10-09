@@ -28,7 +28,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Advanced Threat Protection Required Security Level.
      * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
-    @SerializedName("advancedThreatProtectionRequiredSecurityLevel")
+    @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
     @Expose
     public DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
 
@@ -36,7 +36,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */
-    @SerializedName("deviceThreatProtectionEnabled")
+    @SerializedName(value = "deviceThreatProtectionEnabled", alternate = {"DeviceThreatProtectionEnabled"})
     @Expose
     public Boolean deviceThreatProtectionEnabled;
 
@@ -44,7 +44,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Device Threat Protection Required Security Level.
      * Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
@@ -52,7 +52,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Min Android Security Patch Level.
      * Minimum Android security patch level.
      */
-    @SerializedName("minAndroidSecurityPatchLevel")
+    @SerializedName(value = "minAndroidSecurityPatchLevel", alternate = {"MinAndroidSecurityPatchLevel"})
     @Expose
     public String minAndroidSecurityPatchLevel;
 
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Os Maximum Version.
      * Maximum Android version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -68,7 +68,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Os Minimum Version.
      * Minimum Android version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -76,7 +76,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Expiration Days.
      * Number of days before the password expires. Valid values 1 to 365
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -84,7 +84,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Length.
      * Minimum password length. Valid values 4 to 16
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -92,7 +92,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Letter Characters.
      * Indicates the minimum number of letter characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumLetterCharacters")
+    @SerializedName(value = "passwordMinimumLetterCharacters", alternate = {"PasswordMinimumLetterCharacters"})
     @Expose
     public Integer passwordMinimumLetterCharacters;
 
@@ -100,7 +100,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Lower Case Characters.
      * Indicates the minimum number of lower case characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumLowerCaseCharacters")
+    @SerializedName(value = "passwordMinimumLowerCaseCharacters", alternate = {"PasswordMinimumLowerCaseCharacters"})
     @Expose
     public Integer passwordMinimumLowerCaseCharacters;
 
@@ -108,7 +108,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Non Letter Characters.
      * Indicates the minimum number of non-letter characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumNonLetterCharacters")
+    @SerializedName(value = "passwordMinimumNonLetterCharacters", alternate = {"PasswordMinimumNonLetterCharacters"})
     @Expose
     public Integer passwordMinimumNonLetterCharacters;
 
@@ -116,7 +116,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Numeric Characters.
      * Indicates the minimum number of numeric characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumNumericCharacters")
+    @SerializedName(value = "passwordMinimumNumericCharacters", alternate = {"PasswordMinimumNumericCharacters"})
     @Expose
     public Integer passwordMinimumNumericCharacters;
 
@@ -124,7 +124,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Symbol Characters.
      * Indicates the minimum number of symbol characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumSymbolCharacters")
+    @SerializedName(value = "passwordMinimumSymbolCharacters", alternate = {"PasswordMinimumSymbolCharacters"})
     @Expose
     public Integer passwordMinimumSymbolCharacters;
 
@@ -132,7 +132,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Upper Case Characters.
      * Indicates the minimum number of upper case letter characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumUpperCaseCharacters")
+    @SerializedName(value = "passwordMinimumUpperCaseCharacters", alternate = {"PasswordMinimumUpperCaseCharacters"})
     @Expose
     public Integer passwordMinimumUpperCaseCharacters;
 
@@ -140,7 +140,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -148,7 +148,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Previous Password Count To Block.
      * Number of previous passwords to block. Valid values 1 to 24
      */
-    @SerializedName("passwordPreviousPasswordCountToBlock")
+    @SerializedName(value = "passwordPreviousPasswordCountToBlock", alternate = {"PasswordPreviousPasswordCountToBlock"})
     @Expose
     public Integer passwordPreviousPasswordCountToBlock;
 
@@ -156,7 +156,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Required.
      * Require a password to unlock device.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -164,7 +164,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Required Type.
      * Type of characters in password
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
 
@@ -172,7 +172,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Safety Net Attestation Basic Integrity.
      * Require the device to pass the SafetyNet basic integrity check.
      */
-    @SerializedName("securityRequireSafetyNetAttestationBasicIntegrity")
+    @SerializedName(value = "securityRequireSafetyNetAttestationBasicIntegrity", alternate = {"SecurityRequireSafetyNetAttestationBasicIntegrity"})
     @Expose
     public Boolean securityRequireSafetyNetAttestationBasicIntegrity;
 
@@ -180,7 +180,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Safety Net Attestation Certified Device.
      * Require the device to pass the SafetyNet certified device check.
      */
-    @SerializedName("securityRequireSafetyNetAttestationCertifiedDevice")
+    @SerializedName(value = "securityRequireSafetyNetAttestationCertifiedDevice", alternate = {"SecurityRequireSafetyNetAttestationCertifiedDevice"})
     @Expose
     public Boolean securityRequireSafetyNetAttestationCertifiedDevice;
 
@@ -188,7 +188,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * The Storage Require Encryption.
      * Require encryption on Android devices.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 

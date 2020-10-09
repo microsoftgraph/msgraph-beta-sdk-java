@@ -37,7 +37,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements IJsonBackedO
      * The Device Mode.
      * Applicability rule for device mode.
      */
-    @SerializedName("deviceMode")
+    @SerializedName(value = "deviceMode", alternate = {"DeviceMode"})
     @Expose
     public Windows10DeviceModeType deviceMode;
 
@@ -45,7 +45,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements IJsonBackedO
      * The Name.
      * Name for object.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -53,7 +53,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements IJsonBackedO
      * The Rule Type.
      * Applicability Rule type.
      */
-    @SerializedName("ruleType")
+    @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose
     public DeviceManagementApplicabilityRuleType ruleType;
 

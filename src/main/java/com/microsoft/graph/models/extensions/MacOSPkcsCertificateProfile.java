@@ -30,7 +30,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Allow All Apps Access.
      * AllowAllAppsAccess setting
      */
-    @SerializedName("allowAllAppsAccess")
+    @SerializedName(value = "allowAllAppsAccess", alternate = {"AllowAllAppsAccess"})
     @Expose
     public Boolean allowAllAppsAccess;
 
@@ -38,7 +38,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Certificate Store.
      * Target store certificate
      */
-    @SerializedName("certificateStore")
+    @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
     public CertificateStore certificateStore;
 
@@ -46,7 +46,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Certificate Template Name.
      * PKCS certificate template name.
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName(value = "certificateTemplateName", alternate = {"CertificateTemplateName"})
     @Expose
     public String certificateTemplateName;
 
@@ -54,7 +54,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Certification Authority.
      * PKCS certification authority FQDN.
      */
-    @SerializedName("certificationAuthority")
+    @SerializedName(value = "certificationAuthority", alternate = {"CertificationAuthority"})
     @Expose
     public String certificationAuthority;
 
@@ -62,7 +62,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Certification Authority Name.
      * PKCS certification authority Name.
      */
-    @SerializedName("certificationAuthorityName")
+    @SerializedName(value = "certificationAuthorityName", alternate = {"CertificationAuthorityName"})
     @Expose
     public String certificationAuthorityName;
 
@@ -70,7 +70,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Custom Subject Alternative Names.
      * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("customSubjectAlternativeNames")
+    @SerializedName(value = "customSubjectAlternativeNames", alternate = {"CustomSubjectAlternativeNames"})
     @Expose
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
@@ -78,7 +78,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Subject Alternative Name Format String.
      * Format string that defines the subject alternative name.
      */
-    @SerializedName("subjectAlternativeNameFormatString")
+    @SerializedName(value = "subjectAlternativeNameFormatString", alternate = {"SubjectAlternativeNameFormatString"})
     @Expose
     public String subjectAlternativeNameFormatString;
 
@@ -86,7 +86,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Subject Name Format String.
      * Format string that defines the subject name. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
-    @SerializedName("subjectNameFormatString")
+    @SerializedName(value = "subjectNameFormatString", alternate = {"SubjectNameFormatString"})
     @Expose
     public String subjectNameFormatString;
 
@@ -94,7 +94,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 

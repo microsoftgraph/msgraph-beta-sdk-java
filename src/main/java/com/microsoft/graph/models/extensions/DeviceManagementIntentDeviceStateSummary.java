@@ -26,7 +26,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * The Conflict Count.
      * Number of devices in conflict
      */
-    @SerializedName("conflictCount")
+    @SerializedName(value = "conflictCount", alternate = {"ConflictCount"})
     @Expose
     public Integer conflictCount;
 
@@ -34,7 +34,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * The Error Count.
      * Number of error devices
      */
-    @SerializedName("errorCount")
+    @SerializedName(value = "errorCount", alternate = {"ErrorCount"})
     @Expose
     public Integer errorCount;
 
@@ -42,7 +42,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * The Failed Count.
      * Number of failed devices
      */
-    @SerializedName("failedCount")
+    @SerializedName(value = "failedCount", alternate = {"FailedCount"})
     @Expose
     public Integer failedCount;
 
@@ -50,7 +50,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * The Not Applicable Count.
      * Number of not applicable devices
      */
-    @SerializedName("notApplicableCount")
+    @SerializedName(value = "notApplicableCount", alternate = {"NotApplicableCount"})
     @Expose
     public Integer notApplicableCount;
 
@@ -58,7 +58,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * The Not Applicable Platform Count.
      * Number of not applicable devices due to mismatch platform and policy
      */
-    @SerializedName("notApplicablePlatformCount")
+    @SerializedName(value = "notApplicablePlatformCount", alternate = {"NotApplicablePlatformCount"})
     @Expose
     public Integer notApplicablePlatformCount;
 
@@ -66,7 +66,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * The Success Count.
      * Number of succeeded devices
      */
-    @SerializedName("successCount")
+    @SerializedName(value = "successCount", alternate = {"SuccessCount"})
     @Expose
     public Integer successCount;
 

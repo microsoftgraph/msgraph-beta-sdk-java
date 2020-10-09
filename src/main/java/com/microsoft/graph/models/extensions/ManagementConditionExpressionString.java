@@ -26,7 +26,7 @@ public class ManagementConditionExpressionString extends ManagementConditionExpr
      * The Value.
      * The management condition statement expression string value.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

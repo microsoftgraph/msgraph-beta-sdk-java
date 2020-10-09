@@ -23,7 +23,7 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListBody {
      * The imported Apple Device Identities.
      * 
      */
-    @SerializedName("importedAppleDeviceIdentities")
+    @SerializedName(value = "importedAppleDeviceIdentities", alternate = {"ImportedAppleDeviceIdentities"})
     @Expose
     public java.util.List<ImportedAppleDeviceIdentity> importedAppleDeviceIdentities;
 
@@ -31,7 +31,7 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListBody {
      * The overwrite Imported Device Identities.
      * 
      */
-    @SerializedName("overwriteImportedDeviceIdentities")
+    @SerializedName(value = "overwriteImportedDeviceIdentities", alternate = {"OverwriteImportedDeviceIdentities"})
     @Expose
     public Boolean overwriteImportedDeviceIdentities;
 

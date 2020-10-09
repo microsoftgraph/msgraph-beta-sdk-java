@@ -27,7 +27,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The Created Date Time.
      * The time the embedded SIM device status was created. Generated service side.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -35,7 +35,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The Device Name.
      * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -43,7 +43,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The Last Sync Date Time.
      * The time the embedded SIM device last checked in. Updated service side.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -51,7 +51,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The Modified Date Time.
      * The time the embedded SIM device status was last modified. Updated service side.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -59,7 +59,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The State.
      * The state of the profile operation applied to the device.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public EmbeddedSIMDeviceStateValue state;
 
@@ -67,7 +67,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The State Details.
      * String description of the provisioning state.
      */
-    @SerializedName("stateDetails")
+    @SerializedName(value = "stateDetails", alternate = {"StateDetails"})
     @Expose
     public String stateDetails;
 
@@ -75,7 +75,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The Universal Integrated Circuit Card Identifier.
      * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
      */
-    @SerializedName("universalIntegratedCircuitCardIdentifier")
+    @SerializedName(value = "universalIntegratedCircuitCardIdentifier", alternate = {"UniversalIntegratedCircuitCardIdentifier"})
     @Expose
     public String universalIntegratedCircuitCardIdentifier;
 
@@ -83,7 +83,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
      * The User Name.
      * Username which the subscription was provisioned to e.g. joe@contoso.com
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

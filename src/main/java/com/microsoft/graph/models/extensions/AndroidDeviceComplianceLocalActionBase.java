@@ -26,7 +26,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements IJ
      * The Grace Period In Minutes.
      * Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
      */
-    @SerializedName("gracePeriodInMinutes")
+    @SerializedName(value = "gracePeriodInMinutes", alternate = {"GracePeriodInMinutes"})
     @Expose
     public Integer gracePeriodInMinutes;
 

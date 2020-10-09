@@ -35,7 +35,7 @@ public class OsVersionCount implements IJsonBackedObject {
      * The Device Count.
      * Count of devices with malware for the OS version
      */
-    @SerializedName("deviceCount")
+    @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
     public Integer deviceCount;
 
@@ -43,7 +43,7 @@ public class OsVersionCount implements IJsonBackedObject {
      * The Last Update Date Time.
      * The Timestamp of the last update for the device count in UTC
      */
-    @SerializedName("lastUpdateDateTime")
+    @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
     public java.util.Calendar lastUpdateDateTime;
 
@@ -51,7 +51,7 @@ public class OsVersionCount implements IJsonBackedObject {
      * The Os Version.
      * OS version
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 

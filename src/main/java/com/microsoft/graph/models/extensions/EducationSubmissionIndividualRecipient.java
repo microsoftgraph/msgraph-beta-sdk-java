@@ -26,7 +26,7 @@ public class EducationSubmissionIndividualRecipient extends EducationSubmissionR
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

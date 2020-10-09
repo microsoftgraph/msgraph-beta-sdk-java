@@ -35,7 +35,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The Calendar.
      * 
      */
-    @SerializedName("calendar")
+    @SerializedName(value = "calendar", alternate = {"Calendar"})
     @Expose
     public String calendar;
 
@@ -43,7 +43,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The First Day Of Week.
      * 
      */
-    @SerializedName("firstDayOfWeek")
+    @SerializedName(value = "firstDayOfWeek", alternate = {"FirstDayOfWeek"})
     @Expose
     public String firstDayOfWeek;
 
@@ -51,7 +51,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The Long Date Format.
      * 
      */
-    @SerializedName("longDateFormat")
+    @SerializedName(value = "longDateFormat", alternate = {"LongDateFormat"})
     @Expose
     public String longDateFormat;
 
@@ -59,7 +59,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The Long Time Format.
      * 
      */
-    @SerializedName("longTimeFormat")
+    @SerializedName(value = "longTimeFormat", alternate = {"LongTimeFormat"})
     @Expose
     public String longTimeFormat;
 
@@ -67,7 +67,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The Short Date Format.
      * 
      */
-    @SerializedName("shortDateFormat")
+    @SerializedName(value = "shortDateFormat", alternate = {"ShortDateFormat"})
     @Expose
     public String shortDateFormat;
 
@@ -75,7 +75,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The Short Time Format.
      * 
      */
-    @SerializedName("shortTimeFormat")
+    @SerializedName(value = "shortTimeFormat", alternate = {"ShortTimeFormat"})
     @Expose
     public String shortTimeFormat;
 
@@ -83,7 +83,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
      * The Time Zone.
      * 
      */
-    @SerializedName("timeZone")
+    @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose
     public String timeZone;
 

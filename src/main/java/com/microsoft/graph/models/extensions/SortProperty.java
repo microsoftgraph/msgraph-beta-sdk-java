@@ -35,7 +35,7 @@ public class SortProperty implements IJsonBackedObject {
      * The Is Descending.
      * 
      */
-    @SerializedName("isDescending")
+    @SerializedName(value = "isDescending", alternate = {"IsDescending"})
     @Expose
     public Boolean isDescending;
 
@@ -43,7 +43,7 @@ public class SortProperty implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

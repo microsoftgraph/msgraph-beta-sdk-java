@@ -22,7 +22,7 @@ public class OfficeClientConfigurationAssignBody {
      * The office Configuration Assignments.
      * 
      */
-    @SerializedName("officeConfigurationAssignments")
+    @SerializedName(value = "officeConfigurationAssignments", alternate = {"OfficeConfigurationAssignments"})
     @Expose
     public java.util.List<OfficeClientConfigurationAssignment> officeConfigurationAssignments;
 

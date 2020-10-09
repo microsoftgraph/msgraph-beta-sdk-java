@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * The App Display Name.
      * The friendly name of the application for which the event occurred.
      */
-    @SerializedName("appDisplayName")
+    @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
     public String appDisplayName;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * The Device Display Name.
      * The name of the device.
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * The Device Id.
      * The id of the device.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * The Event Date Time.
      * The time the event occurred.
      */
-    @SerializedName("eventDateTime")
+    @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
     public java.util.Calendar eventDateTime;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * The Event Type.
      * The type of the event.
      */
-    @SerializedName("eventType")
+    @SerializedName(value = "eventType", alternate = {"EventType"})
     @Expose
     public String eventType;
 

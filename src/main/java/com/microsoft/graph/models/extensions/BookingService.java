@@ -27,10 +27,18 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
 
     /**
+     * The Additional Information.
+     * 
+     */
+    @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
+    @Expose
+    public String additionalInformation;
+
+    /**
      * The Default Duration.
      * 
      */
-    @SerializedName("defaultDuration")
+    @SerializedName(value = "defaultDuration", alternate = {"DefaultDuration"})
     @Expose
     public javax.xml.datatype.Duration defaultDuration;
 
@@ -38,7 +46,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Default Location.
      * 
      */
-    @SerializedName("defaultLocation")
+    @SerializedName(value = "defaultLocation", alternate = {"DefaultLocation"})
     @Expose
     public Location defaultLocation;
 
@@ -46,7 +54,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Default Price.
      * 
      */
-    @SerializedName("defaultPrice")
+    @SerializedName(value = "defaultPrice", alternate = {"DefaultPrice"})
     @Expose
     public Double defaultPrice;
 
@@ -54,7 +62,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Default Price Type.
      * 
      */
-    @SerializedName("defaultPriceType")
+    @SerializedName(value = "defaultPriceType", alternate = {"DefaultPriceType"})
     @Expose
     public BookingPriceType defaultPriceType;
 
@@ -62,7 +70,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Default Reminders.
      * The value of this property is only available when reading an individual booking service by id.
      */
-    @SerializedName("defaultReminders")
+    @SerializedName(value = "defaultReminders", alternate = {"DefaultReminders"})
     @Expose
     public java.util.List<BookingReminder> defaultReminders;
 
@@ -70,7 +78,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -78,15 +86,23 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Is Hidden From Customers.
      * 
      */
-    @SerializedName("isHiddenFromCustomers")
+    @SerializedName(value = "isHiddenFromCustomers", alternate = {"IsHiddenFromCustomers"})
     @Expose
     public Boolean isHiddenFromCustomers;
+
+    /**
+     * The Is Location Online.
+     * 
+     */
+    @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
+    @Expose
+    public Boolean isLocationOnline;
 
     /**
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public String notes;
 
@@ -94,7 +110,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Post Buffer.
      * 
      */
-    @SerializedName("postBuffer")
+    @SerializedName(value = "postBuffer", alternate = {"PostBuffer"})
     @Expose
     public javax.xml.datatype.Duration postBuffer;
 
@@ -102,7 +118,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Pre Buffer.
      * 
      */
-    @SerializedName("preBuffer")
+    @SerializedName(value = "preBuffer", alternate = {"PreBuffer"})
     @Expose
     public javax.xml.datatype.Duration preBuffer;
 
@@ -110,7 +126,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Scheduling Policy.
      * 
      */
-    @SerializedName("schedulingPolicy")
+    @SerializedName(value = "schedulingPolicy", alternate = {"SchedulingPolicy"})
     @Expose
     public BookingSchedulingPolicy schedulingPolicy;
 
@@ -118,7 +134,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
      * The Staff Member Ids.
      * 
      */
-    @SerializedName("staffMemberIds")
+    @SerializedName(value = "staffMemberIds", alternate = {"StaffMemberIds"})
     @Expose
     public java.util.List<String> staffMemberIds;
 

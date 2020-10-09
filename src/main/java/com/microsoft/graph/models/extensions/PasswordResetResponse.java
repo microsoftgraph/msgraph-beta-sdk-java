@@ -35,7 +35,7 @@ public class PasswordResetResponse implements IJsonBackedObject {
      * The New Password.
      * 
      */
-    @SerializedName("newPassword")
+    @SerializedName(value = "newPassword", alternate = {"NewPassword"})
     @Expose
     public String newPassword;
 

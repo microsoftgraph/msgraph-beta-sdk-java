@@ -30,7 +30,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -38,7 +38,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
      * The Business Flows.
      * 
      */
-    @SerializedName("businessFlows")
+    @SerializedName(value = "businessFlows", alternate = {"BusinessFlows"})
     @Expose
     public BusinessFlowCollectionPage businessFlows;
 
@@ -46,7 +46,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
      * The Business Flows With Requests Awaiting My Decision.
      * 
      */
-    @SerializedName("businessFlowsWithRequestsAwaitingMyDecision")
+    @SerializedName(value = "businessFlowsWithRequestsAwaitingMyDecision", alternate = {"BusinessFlowsWithRequestsAwaitingMyDecision"})
     @Expose
     public BusinessFlowCollectionPage businessFlowsWithRequestsAwaitingMyDecision;
 
@@ -54,7 +54,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
      * The Policy Templates.
      * 
      */
-    @SerializedName("policyTemplates")
+    @SerializedName(value = "policyTemplates", alternate = {"PolicyTemplates"})
     @Expose
     public GovernancePolicyTemplateCollectionPage policyTemplates;
 

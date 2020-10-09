@@ -41,7 +41,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -49,7 +49,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Description.
      * Admin provided description of the Device Configuration.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -57,7 +57,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Management Applicability Rule Device Mode.
      * The device mode applicability rule for this Policy.
      */
-    @SerializedName("deviceManagementApplicabilityRuleDeviceMode")
+    @SerializedName(value = "deviceManagementApplicabilityRuleDeviceMode", alternate = {"DeviceManagementApplicabilityRuleDeviceMode"})
     @Expose
     public DeviceManagementApplicabilityRuleDeviceMode deviceManagementApplicabilityRuleDeviceMode;
 
@@ -65,7 +65,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Management Applicability Rule Os Edition.
      * The OS edition applicability for this Policy.
      */
-    @SerializedName("deviceManagementApplicabilityRuleOsEdition")
+    @SerializedName(value = "deviceManagementApplicabilityRuleOsEdition", alternate = {"DeviceManagementApplicabilityRuleOsEdition"})
     @Expose
     public DeviceManagementApplicabilityRuleOsEdition deviceManagementApplicabilityRuleOsEdition;
 
@@ -73,7 +73,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Management Applicability Rule Os Version.
      * The OS version applicability rule for this Policy.
      */
-    @SerializedName("deviceManagementApplicabilityRuleOsVersion")
+    @SerializedName(value = "deviceManagementApplicabilityRuleOsVersion", alternate = {"DeviceManagementApplicabilityRuleOsVersion"})
     @Expose
     public DeviceManagementApplicabilityRuleOsVersion deviceManagementApplicabilityRuleOsVersion;
 
@@ -81,7 +81,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -89,7 +89,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -97,7 +97,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -105,7 +105,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Supports Scope Tags.
      * Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only.
      */
-    @SerializedName("supportsScopeTags")
+    @SerializedName(value = "supportsScopeTags", alternate = {"SupportsScopeTags"})
     @Expose
     public Boolean supportsScopeTags;
 
@@ -113,7 +113,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the device configuration.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -121,7 +121,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for the device configuration profile.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceConfigurationAssignmentCollectionPage assignments;
 
@@ -129,7 +129,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Setting State Summaries.
      * Device Configuration Setting State Device Summary
      */
-    @SerializedName("deviceSettingStateSummaries")
+    @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
     public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
@@ -137,7 +137,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Statuses.
      * Device configuration installation status by device.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
 
@@ -145,7 +145,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Status Overview.
      * Device Configuration devices status overview
      */
-    @SerializedName("deviceStatusOverview")
+    @SerializedName(value = "deviceStatusOverview", alternate = {"DeviceStatusOverview"})
     @Expose
     public DeviceConfigurationDeviceOverview deviceStatusOverview;
 
@@ -153,7 +153,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Group Assignments.
      * The list of group assignments for the device configuration profile.
      */
-    @SerializedName("groupAssignments")
+    @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
     public DeviceConfigurationGroupAssignmentCollectionPage groupAssignments;
 
@@ -161,7 +161,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The User Statuses.
      * Device configuration installation status by user.
      */
-    @SerializedName("userStatuses")
+    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
     public DeviceConfigurationUserStatusCollectionPage userStatuses;
 
@@ -169,7 +169,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The User Status Overview.
      * Device Configuration users status overview
      */
-    @SerializedName("userStatusOverview")
+    @SerializedName(value = "userStatusOverview", alternate = {"UserStatusOverview"})
     @Expose
     public DeviceConfigurationUserOverview userStatusOverview;
 

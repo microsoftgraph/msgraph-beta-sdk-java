@@ -36,7 +36,7 @@ public class Phone implements IJsonBackedObject {
      * The Number.
      * The phone number.
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -44,7 +44,7 @@ public class Phone implements IJsonBackedObject {
      * The Type.
      * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public PhoneType type;
 

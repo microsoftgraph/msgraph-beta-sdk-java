@@ -26,7 +26,7 @@ public class BookingCurrency extends Entity implements IJsonBackedObject {
      * The Symbol.
      * 
      */
-    @SerializedName("symbol")
+    @SerializedName(value = "symbol", alternate = {"Symbol"})
     @Expose
     public String symbol;
 

@@ -26,7 +26,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
      * The Value.
      * The string value
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

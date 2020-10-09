@@ -35,7 +35,7 @@ public class RoleScopeTagInfo implements IJsonBackedObject {
      * The Display Name.
      * Scope Tag Display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class RoleScopeTagInfo implements IJsonBackedObject {
      * The Role Scope Tag Id.
      * Scope Tag Id.
      */
-    @SerializedName("roleScopeTagId")
+    @SerializedName(value = "roleScopeTagId", alternate = {"RoleScopeTagId"})
     @Expose
     public String roleScopeTagId;
 

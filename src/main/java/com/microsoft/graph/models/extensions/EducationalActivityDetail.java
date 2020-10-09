@@ -35,7 +35,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Abbreviation.
      * 
      */
-    @SerializedName("abbreviation")
+    @SerializedName(value = "abbreviation", alternate = {"Abbreviation"})
     @Expose
     public String abbreviation;
 
@@ -43,7 +43,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Activities.
      * 
      */
-    @SerializedName("activities")
+    @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
     public String activities;
 
@@ -51,7 +51,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Awards.
      * 
      */
-    @SerializedName("awards")
+    @SerializedName(value = "awards", alternate = {"Awards"})
     @Expose
     public String awards;
 
@@ -59,7 +59,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -67,7 +67,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -75,7 +75,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Fields Of Study.
      * 
      */
-    @SerializedName("fieldsOfStudy")
+    @SerializedName(value = "fieldsOfStudy", alternate = {"FieldsOfStudy"})
     @Expose
     public String fieldsOfStudy;
 
@@ -83,7 +83,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Grade.
      * 
      */
-    @SerializedName("grade")
+    @SerializedName(value = "grade", alternate = {"Grade"})
     @Expose
     public String grade;
 
@@ -91,7 +91,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public String notes;
 
@@ -99,7 +99,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

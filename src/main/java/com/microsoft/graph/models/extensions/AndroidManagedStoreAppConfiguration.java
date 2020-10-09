@@ -28,7 +28,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * The App Supports Oem Config.
      * Whether or not this AppConfig is an OEMConfig policy.
      */
-    @SerializedName("appSupportsOemConfig")
+    @SerializedName(value = "appSupportsOemConfig", alternate = {"AppSupportsOemConfig"})
     @Expose
     public Boolean appSupportsOemConfig;
 
@@ -36,7 +36,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * The Package Id.
      * Android Enterprise app configuration package id.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 
@@ -44,7 +44,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * The Payload Json.
      * Android Enterprise app configuration JSON payload.
      */
-    @SerializedName("payloadJson")
+    @SerializedName(value = "payloadJson", alternate = {"PayloadJson"})
     @Expose
     public String payloadJson;
 
@@ -52,7 +52,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * The Permission Actions.
      * List of Android app permissions and corresponding permission actions.
      */
-    @SerializedName("permissionActions")
+    @SerializedName(value = "permissionActions", alternate = {"PermissionActions"})
     @Expose
     public java.util.List<AndroidPermissionAction> permissionActions;
 
@@ -60,7 +60,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * The Profile Applicability.
      * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)).
      */
-    @SerializedName("profileApplicability")
+    @SerializedName(value = "profileApplicability", alternate = {"ProfileApplicability"})
     @Expose
     public AndroidProfileApplicability profileApplicability;
 

@@ -26,7 +26,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Assigned Products.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName(value = "assignedProducts", alternate = {"AssignedProducts"})
     @Expose
     public java.util.List<String> assignedProducts;
 
@@ -34,7 +34,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -42,7 +42,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -50,7 +50,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -58,7 +58,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -66,7 +66,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Read Count.
      * 
      */
-    @SerializedName("readCount")
+    @SerializedName(value = "readCount", alternate = {"ReadCount"})
     @Expose
     public Long readCount;
 
@@ -74,7 +74,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Receive Count.
      * 
      */
-    @SerializedName("receiveCount")
+    @SerializedName(value = "receiveCount", alternate = {"ReceiveCount"})
     @Expose
     public Long receiveCount;
 
@@ -82,7 +82,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -90,7 +90,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -98,7 +98,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The Send Count.
      * 
      */
-    @SerializedName("sendCount")
+    @SerializedName(value = "sendCount", alternate = {"SendCount"})
     @Expose
     public Long sendCount;
 
@@ -106,7 +106,7 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

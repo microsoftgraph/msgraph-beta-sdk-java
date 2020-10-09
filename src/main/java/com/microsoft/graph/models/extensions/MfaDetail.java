@@ -35,7 +35,7 @@ public class MfaDetail implements IJsonBackedObject {
      * The Auth Detail.
      * 
      */
-    @SerializedName("authDetail")
+    @SerializedName(value = "authDetail", alternate = {"AuthDetail"})
     @Expose
     public String authDetail;
 
@@ -43,7 +43,7 @@ public class MfaDetail implements IJsonBackedObject {
      * The Auth Method.
      * 
      */
-    @SerializedName("authMethod")
+    @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose
     public String authMethod;
 

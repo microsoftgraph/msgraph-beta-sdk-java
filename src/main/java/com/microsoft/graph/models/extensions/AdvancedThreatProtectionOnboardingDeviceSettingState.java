@@ -28,7 +28,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Compliance Grace Period Expiration Date Time.
      * The DateTime when device compliance grace period expires
      */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
     public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
@@ -36,7 +36,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Device Id.
      * The Device Id that is being reported
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -44,7 +44,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Device Model.
      * The device model that is being reported
      */
-    @SerializedName("deviceModel")
+    @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
     public String deviceModel;
 
@@ -52,7 +52,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Device Name.
      * The Device Name that is being reported
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -60,7 +60,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Platform Type.
      * Device platform type
      */
-    @SerializedName("platformType")
+    @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
     public DeviceType platformType;
 
@@ -68,7 +68,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Setting.
      * The setting class name and property name.
      */
-    @SerializedName("setting")
+    @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose
     public String setting;
 
@@ -76,7 +76,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The Setting Name.
      * The Setting Name that is being reported
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -84,7 +84,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The State.
      * The compliance state of the setting
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -92,7 +92,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The User Email.
      * The User email address that is being reported
      */
-    @SerializedName("userEmail")
+    @SerializedName(value = "userEmail", alternate = {"UserEmail"})
     @Expose
     public String userEmail;
 
@@ -100,7 +100,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The User Id.
      * The user Id that is being reported
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -108,7 +108,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The User Name.
      * The User Name that is being reported
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -116,7 +116,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * The User Principal Name.
      * The User PrincipalName that is being reported
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

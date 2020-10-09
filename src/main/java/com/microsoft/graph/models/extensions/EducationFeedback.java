@@ -37,7 +37,7 @@ public class EducationFeedback implements IJsonBackedObject {
      * The Feedback By.
      * 
      */
-    @SerializedName("feedbackBy")
+    @SerializedName(value = "feedbackBy", alternate = {"FeedbackBy"})
     @Expose
     public IdentitySet feedbackBy;
 
@@ -45,7 +45,7 @@ public class EducationFeedback implements IJsonBackedObject {
      * The Feedback Date Time.
      * 
      */
-    @SerializedName("feedbackDateTime")
+    @SerializedName(value = "feedbackDateTime", alternate = {"FeedbackDateTime"})
     @Expose
     public java.util.Calendar feedbackDateTime;
 
@@ -53,7 +53,7 @@ public class EducationFeedback implements IJsonBackedObject {
      * The Text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public EducationItemBody text;
 

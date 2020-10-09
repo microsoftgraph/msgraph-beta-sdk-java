@@ -26,7 +26,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
      * The Email.
      * 
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -42,7 +42,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
      * The Principal Name.
      * 
      */
-    @SerializedName("principalName")
+    @SerializedName(value = "principalName", alternate = {"PrincipalName"})
     @Expose
     public String principalName;
 
@@ -50,7 +50,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

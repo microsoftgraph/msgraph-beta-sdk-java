@@ -36,7 +36,7 @@ public class SearchHit implements IJsonBackedObject {
      * The _id.
      * 
      */
-    @SerializedName("_id")
+    @SerializedName(value = "_id", alternate = {"_id"})
     @Expose
     public String _id;
 
@@ -44,7 +44,7 @@ public class SearchHit implements IJsonBackedObject {
      * The _score.
      * 
      */
-    @SerializedName("_score")
+    @SerializedName(value = "_score", alternate = {"_score"})
     @Expose
     public Integer _score;
 
@@ -52,7 +52,7 @@ public class SearchHit implements IJsonBackedObject {
      * The _summary.
      * 
      */
-    @SerializedName("_summary")
+    @SerializedName(value = "_summary", alternate = {"_summary"})
     @Expose
     public String _summary;
 
@@ -60,7 +60,7 @@ public class SearchHit implements IJsonBackedObject {
      * The Content Source.
      * 
      */
-    @SerializedName("contentSource")
+    @SerializedName(value = "contentSource", alternate = {"ContentSource"})
     @Expose
     public String contentSource;
 
@@ -68,7 +68,7 @@ public class SearchHit implements IJsonBackedObject {
      * The Hit Id.
      * 
      */
-    @SerializedName("hitId")
+    @SerializedName(value = "hitId", alternate = {"HitId"})
     @Expose
     public String hitId;
 
@@ -76,7 +76,7 @@ public class SearchHit implements IJsonBackedObject {
      * The Rank.
      * 
      */
-    @SerializedName("rank")
+    @SerializedName(value = "rank", alternate = {"Rank"})
     @Expose
     public Integer rank;
 
@@ -84,7 +84,7 @@ public class SearchHit implements IJsonBackedObject {
      * The Summary.
      * 
      */
-    @SerializedName("summary")
+    @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose
     public String summary;
 
@@ -92,7 +92,7 @@ public class SearchHit implements IJsonBackedObject {
      * The _source.
      * 
      */
-    @SerializedName("_source")
+    @SerializedName(value = "_source", alternate = {"_source"})
     @Expose
     public Entity _source;
 
@@ -100,7 +100,7 @@ public class SearchHit implements IJsonBackedObject {
      * The Resource.
      * 
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public Entity resource;
 

@@ -35,7 +35,7 @@ public class AgreementFileData implements IJsonBackedObject {
      * The Data.
      * 
      */
-    @SerializedName("data")
+    @SerializedName(value = "data", alternate = {"Data"})
     @Expose
     public byte[] data;
 

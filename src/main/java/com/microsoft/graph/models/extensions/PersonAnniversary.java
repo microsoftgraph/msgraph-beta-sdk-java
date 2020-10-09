@@ -27,7 +27,7 @@ public class PersonAnniversary extends ItemFacet implements IJsonBackedObject {
      * The Date.
      * 
      */
-    @SerializedName("date")
+    @SerializedName(value = "date", alternate = {"Date"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly date;
 
@@ -35,7 +35,7 @@ public class PersonAnniversary extends ItemFacet implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public AnniversaryType type;
 

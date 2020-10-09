@@ -29,7 +29,7 @@ public class Relation extends Entity implements IJsonBackedObject {
      * The Relationship.
      * 
      */
-    @SerializedName("relationship")
+    @SerializedName(value = "relationship", alternate = {"Relationship"})
     @Expose
     public RelationType relationship;
 
@@ -37,7 +37,7 @@ public class Relation extends Entity implements IJsonBackedObject {
      * The From Term.
      * 
      */
-    @SerializedName("fromTerm")
+    @SerializedName(value = "fromTerm", alternate = {"FromTerm"})
     @Expose
     public Term fromTerm;
 
@@ -45,7 +45,7 @@ public class Relation extends Entity implements IJsonBackedObject {
      * The Set.
      * 
      */
-    @SerializedName("set")
+    @SerializedName(value = "set", alternate = {"Set"})
     @Expose
     public Set set;
 
@@ -53,7 +53,7 @@ public class Relation extends Entity implements IJsonBackedObject {
      * The To Term.
      * 
      */
-    @SerializedName("toTerm")
+    @SerializedName(value = "toTerm", alternate = {"ToTerm"})
     @Expose
     public Term toTerm;
 

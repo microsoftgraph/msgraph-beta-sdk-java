@@ -36,7 +36,7 @@ public class HasPayloadLinkResultItem implements IJsonBackedObject {
      * The Error.
      * Exception information indicates if check for this item was successful or not.Empty string for no error.
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public String error;
 
@@ -44,7 +44,7 @@ public class HasPayloadLinkResultItem implements IJsonBackedObject {
      * The Has Link.
      * Indicate whether a payload has any link or not.
      */
-    @SerializedName("hasLink")
+    @SerializedName(value = "hasLink", alternate = {"HasLink"})
     @Expose
     public Boolean hasLink;
 
@@ -52,7 +52,7 @@ public class HasPayloadLinkResultItem implements IJsonBackedObject {
      * The Payload Id.
      * Key of the Payload, In the format of Guid.
      */
-    @SerializedName("payloadId")
+    @SerializedName(value = "payloadId", alternate = {"PayloadId"})
     @Expose
     public String payloadId;
 
@@ -60,7 +60,7 @@ public class HasPayloadLinkResultItem implements IJsonBackedObject {
      * The Sources.
      * The reason where the link comes from.
      */
-    @SerializedName("sources")
+    @SerializedName(value = "sources", alternate = {"Sources"})
     @Expose
     public java.util.List<DeviceAndAppManagementAssignmentSource> sources;
 

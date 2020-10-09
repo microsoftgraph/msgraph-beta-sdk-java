@@ -36,7 +36,7 @@ public class EducationAssignmentGrade implements IJsonBackedObject {
      * The Graded By.
      * 
      */
-    @SerializedName("gradedBy")
+    @SerializedName(value = "gradedBy", alternate = {"GradedBy"})
     @Expose
     public IdentitySet gradedBy;
 
@@ -44,7 +44,7 @@ public class EducationAssignmentGrade implements IJsonBackedObject {
      * The Graded Date Time.
      * 
      */
-    @SerializedName("gradedDateTime")
+    @SerializedName(value = "gradedDateTime", alternate = {"GradedDateTime"})
     @Expose
     public java.util.Calendar gradedDateTime;
 

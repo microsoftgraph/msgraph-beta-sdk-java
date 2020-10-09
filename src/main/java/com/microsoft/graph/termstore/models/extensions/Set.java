@@ -33,7 +33,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -41,7 +41,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -49,7 +49,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Localized Names.
      * 
      */
-    @SerializedName("localizedNames")
+    @SerializedName(value = "localizedNames", alternate = {"LocalizedNames"})
     @Expose
     public java.util.List<LocalizedName> localizedNames;
 
@@ -57,7 +57,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Properties.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public java.util.List<KeyValue> properties;
 
@@ -65,7 +65,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Children.
      * 
      */
-    @SerializedName("children")
+    @SerializedName(value = "children", alternate = {"Children"})
     @Expose
     public TermCollectionPage children;
 
@@ -73,7 +73,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Parent Group.
      * 
      */
-    @SerializedName("parentGroup")
+    @SerializedName(value = "parentGroup", alternate = {"ParentGroup"})
     @Expose
     public Group parentGroup;
 
@@ -81,7 +81,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Relations.
      * 
      */
-    @SerializedName("relations")
+    @SerializedName(value = "relations", alternate = {"Relations"})
     @Expose
     public RelationCollectionPage relations;
 
@@ -89,7 +89,7 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Terms.
      * 
      */
-    @SerializedName("terms")
+    @SerializedName(value = "terms", alternate = {"Terms"})
     @Expose
     public TermCollectionPage terms;
 

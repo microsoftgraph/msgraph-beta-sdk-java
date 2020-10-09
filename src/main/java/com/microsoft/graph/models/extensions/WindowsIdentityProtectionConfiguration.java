@@ -27,7 +27,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Enhanced Anti Spoofing For Facial Features Enabled.
      * Boolean value used to enable enhanced anti-spoofing for facial feature recognition on Windows Hello face authentication.
      */
-    @SerializedName("enhancedAntiSpoofingForFacialFeaturesEnabled")
+    @SerializedName(value = "enhancedAntiSpoofingForFacialFeaturesEnabled", alternate = {"EnhancedAntiSpoofingForFacialFeaturesEnabled"})
     @Expose
     public Boolean enhancedAntiSpoofingForFacialFeaturesEnabled;
 
@@ -35,7 +35,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Expiration In Days.
      * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
      */
-    @SerializedName("pinExpirationInDays")
+    @SerializedName(value = "pinExpirationInDays", alternate = {"PinExpirationInDays"})
     @Expose
     public Integer pinExpirationInDays;
 
@@ -43,7 +43,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Lowercase Characters Usage.
      * This value configures the use of lowercase characters in the Windows Hello for Business PIN.
      */
-    @SerializedName("pinLowercaseCharactersUsage")
+    @SerializedName(value = "pinLowercaseCharactersUsage", alternate = {"PinLowercaseCharactersUsage"})
     @Expose
     public ConfigurationUsage pinLowercaseCharactersUsage;
 
@@ -51,7 +51,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Maximum Length.
      * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
      */
-    @SerializedName("pinMaximumLength")
+    @SerializedName(value = "pinMaximumLength", alternate = {"PinMaximumLength"})
     @Expose
     public Integer pinMaximumLength;
 
@@ -59,7 +59,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Minimum Length.
      * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
      */
-    @SerializedName("pinMinimumLength")
+    @SerializedName(value = "pinMinimumLength", alternate = {"PinMinimumLength"})
     @Expose
     public Integer pinMinimumLength;
 
@@ -67,7 +67,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Previous Block Count.
      * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset. Valid values 0 to 50
      */
-    @SerializedName("pinPreviousBlockCount")
+    @SerializedName(value = "pinPreviousBlockCount", alternate = {"PinPreviousBlockCount"})
     @Expose
     public Integer pinPreviousBlockCount;
 
@@ -75,7 +75,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Recovery Enabled.
      * Boolean value that enables a user to change their PIN by using the Windows Hello for Business PIN recovery service.
      */
-    @SerializedName("pinRecoveryEnabled")
+    @SerializedName(value = "pinRecoveryEnabled", alternate = {"PinRecoveryEnabled"})
     @Expose
     public Boolean pinRecoveryEnabled;
 
@@ -83,7 +83,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Special Characters Usage.
      * Controls the ability to use special characters in the Windows Hello for Business PIN.
      */
-    @SerializedName("pinSpecialCharactersUsage")
+    @SerializedName(value = "pinSpecialCharactersUsage", alternate = {"PinSpecialCharactersUsage"})
     @Expose
     public ConfigurationUsage pinSpecialCharactersUsage;
 
@@ -91,7 +91,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Pin Uppercase Characters Usage.
      * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
      */
-    @SerializedName("pinUppercaseCharactersUsage")
+    @SerializedName(value = "pinUppercaseCharactersUsage", alternate = {"PinUppercaseCharactersUsage"})
     @Expose
     public ConfigurationUsage pinUppercaseCharactersUsage;
 
@@ -99,7 +99,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Security Device Required.
      * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
      */
-    @SerializedName("securityDeviceRequired")
+    @SerializedName(value = "securityDeviceRequired", alternate = {"SecurityDeviceRequired"})
     @Expose
     public Boolean securityDeviceRequired;
 
@@ -107,7 +107,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Unlock With Biometrics Enabled.
      * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
      */
-    @SerializedName("unlockWithBiometricsEnabled")
+    @SerializedName(value = "unlockWithBiometricsEnabled", alternate = {"UnlockWithBiometricsEnabled"})
     @Expose
     public Boolean unlockWithBiometricsEnabled;
 
@@ -115,7 +115,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Use Certificates For On Premises Auth Enabled.
      * Boolean value that enables Windows Hello for Business to use certificates to authenticate on-premise resources.
      */
-    @SerializedName("useCertificatesForOnPremisesAuthEnabled")
+    @SerializedName(value = "useCertificatesForOnPremisesAuthEnabled", alternate = {"UseCertificatesForOnPremisesAuthEnabled"})
     @Expose
     public Boolean useCertificatesForOnPremisesAuthEnabled;
 
@@ -123,7 +123,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Use Security Key For Signin.
      * Boolean value used to enable the Windows Hello security key as a logon credential.
      */
-    @SerializedName("useSecurityKeyForSignin")
+    @SerializedName(value = "useSecurityKeyForSignin", alternate = {"UseSecurityKeyForSignin"})
     @Expose
     public Boolean useSecurityKeyForSignin;
 
@@ -131,7 +131,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * The Windows Hello For Business Blocked.
      * Boolean value that blocks Windows Hello for Business as a method for signing into Windows.
      */
-    @SerializedName("windowsHelloForBusinessBlocked")
+    @SerializedName(value = "windowsHelloForBusinessBlocked", alternate = {"WindowsHelloForBusinessBlocked"})
     @Expose
     public Boolean windowsHelloForBusinessBlocked;
 

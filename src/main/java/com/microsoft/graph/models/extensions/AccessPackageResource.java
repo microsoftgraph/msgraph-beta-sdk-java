@@ -31,7 +31,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Added By.
      * 
      */
-    @SerializedName("addedBy")
+    @SerializedName(value = "addedBy", alternate = {"AddedBy"})
     @Expose
     public String addedBy;
 
@@ -39,7 +39,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Added On.
      * 
      */
-    @SerializedName("addedOn")
+    @SerializedName(value = "addedOn", alternate = {"AddedOn"})
     @Expose
     public java.util.Calendar addedOn;
 
@@ -47,7 +47,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Attributes.
      * 
      */
-    @SerializedName("attributes")
+    @SerializedName(value = "attributes", alternate = {"Attributes"})
     @Expose
     public java.util.List<AccessPackageResourceAttribute> attributes;
 
@@ -55,7 +55,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -63,7 +63,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -71,7 +71,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Is Pending Onboarding.
      * 
      */
-    @SerializedName("isPendingOnboarding")
+    @SerializedName(value = "isPendingOnboarding", alternate = {"IsPendingOnboarding"})
     @Expose
     public Boolean isPendingOnboarding;
 
@@ -79,7 +79,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Origin Id.
      * 
      */
-    @SerializedName("originId")
+    @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
     public String originId;
 
@@ -87,7 +87,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Origin System.
      * 
      */
-    @SerializedName("originSystem")
+    @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
     public String originSystem;
 
@@ -95,7 +95,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Resource Type.
      * 
      */
-    @SerializedName("resourceType")
+    @SerializedName(value = "resourceType", alternate = {"ResourceType"})
     @Expose
     public String resourceType;
 
@@ -103,7 +103,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Url.
      * 
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 
@@ -111,7 +111,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Access Package Resource Roles.
      * 
      */
-    @SerializedName("accessPackageResourceRoles")
+    @SerializedName(value = "accessPackageResourceRoles", alternate = {"AccessPackageResourceRoles"})
     @Expose
     public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
 
@@ -119,7 +119,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
      * The Access Package Resource Scopes.
      * 
      */
-    @SerializedName("accessPackageResourceScopes")
+    @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose
     public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
 

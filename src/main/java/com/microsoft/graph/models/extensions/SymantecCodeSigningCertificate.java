@@ -27,7 +27,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Content.
      * The Windows Symantec Code-Signing Certificate in the raw data format.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public byte[] content;
 
@@ -35,7 +35,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Expiration Date Time.
      * The Cert Expiration Date.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -43,7 +43,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Issuer.
      * The Issuer value for the cert.
      */
-    @SerializedName("issuer")
+    @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
     public String issuer;
 
@@ -51,7 +51,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Issuer Name.
      * The Issuer Name for the cert.
      */
-    @SerializedName("issuerName")
+    @SerializedName(value = "issuerName", alternate = {"IssuerName"})
     @Expose
     public String issuerName;
 
@@ -59,7 +59,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Password.
      * The Password required for .pfx file.
      */
-    @SerializedName("password")
+    @SerializedName(value = "password", alternate = {"Password"})
     @Expose
     public String password;
 
@@ -67,7 +67,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Status.
      * The Cert Status Provisioned or not Provisioned.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public CertificateStatus status;
 
@@ -75,7 +75,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Subject.
      * The Subject value for the cert.
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -83,7 +83,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Subject Name.
      * The Subject Name for the cert.
      */
-    @SerializedName("subjectName")
+    @SerializedName(value = "subjectName", alternate = {"SubjectName"})
     @Expose
     public String subjectName;
 
@@ -91,7 +91,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
      * The Upload Date Time.
      * The Type of the CodeSigning Cert as Symantec Cert.
      */
-    @SerializedName("uploadDateTime")
+    @SerializedName(value = "uploadDateTime", alternate = {"UploadDateTime"})
     @Expose
     public java.util.Calendar uploadDateTime;
 

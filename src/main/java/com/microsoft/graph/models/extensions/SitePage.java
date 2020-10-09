@@ -29,7 +29,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
      * The Content Type.
      * 
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public ContentTypeInfo contentType;
 
@@ -37,7 +37,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
      * The Page Layout Type.
      * 
      */
-    @SerializedName("pageLayoutType")
+    @SerializedName(value = "pageLayoutType", alternate = {"PageLayoutType"})
     @Expose
     public String pageLayoutType;
 
@@ -45,7 +45,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
      * The Publishing State.
      * 
      */
-    @SerializedName("publishingState")
+    @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
     public PublicationFacet publishingState;
 
@@ -53,7 +53,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
      * The Title.
      * 
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -61,7 +61,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
      * The Web Parts.
      * 
      */
-    @SerializedName("webParts")
+    @SerializedName(value = "webParts", alternate = {"WebParts"})
     @Expose
     public java.util.List<WebPart> webParts;
 

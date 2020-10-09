@@ -36,7 +36,7 @@ public class DlpActionInfo implements IJsonBackedObject {
      * The Action.
      * 
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public DlpAction action;
 

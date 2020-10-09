@@ -37,7 +37,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
      * The Dayof Month.
      * Day of month. Valid values 1 to 31
      */
-    @SerializedName("dayofMonth")
+    @SerializedName(value = "dayofMonth", alternate = {"DayofMonth"})
     @Expose
     public Integer dayofMonth;
 
@@ -45,7 +45,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
      * The Dayof Week.
      * Day of week.
      */
-    @SerializedName("dayofWeek")
+    @SerializedName(value = "dayofWeek", alternate = {"DayofWeek"})
     @Expose
     public DayOfWeek dayofWeek;
 
@@ -53,7 +53,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
      * The Recurrence.
      * Recurrence schedule.
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public Windows10AppsUpdateRecurrence recurrence;
 
@@ -61,7 +61,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
      * The Run Immediately If After Start Date Time.
      * If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
      */
-    @SerializedName("runImmediatelyIfAfterStartDateTime")
+    @SerializedName(value = "runImmediatelyIfAfterStartDateTime", alternate = {"RunImmediatelyIfAfterStartDateTime"})
     @Expose
     public Boolean runImmediatelyIfAfterStartDateTime;
 
@@ -69,7 +69,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
      * The Start Date Time.
      * The start time for the force restart.
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

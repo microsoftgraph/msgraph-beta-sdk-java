@@ -28,7 +28,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
      * The Auth Method.
      * 
      */
-    @SerializedName("authMethod")
+    @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose
     public UsageAuthMethod authMethod;
 
@@ -36,7 +36,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
      * The Failure Activity Count.
      * 
      */
-    @SerializedName("failureActivityCount")
+    @SerializedName(value = "failureActivityCount", alternate = {"FailureActivityCount"})
     @Expose
     public Long failureActivityCount;
 
@@ -44,7 +44,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
      * The Feature.
      * 
      */
-    @SerializedName("feature")
+    @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
     public FeatureType feature;
 
@@ -52,7 +52,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
      * The Successful Activity Count.
      * 
      */
-    @SerializedName("successfulActivityCount")
+    @SerializedName(value = "successfulActivityCount", alternate = {"SuccessfulActivityCount"})
     @Expose
     public Long successfulActivityCount;
 

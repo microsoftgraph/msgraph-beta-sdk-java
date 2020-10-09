@@ -28,7 +28,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Action.
      * The action name.
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public RemoteAction action;
 
@@ -36,7 +36,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Action State.
      * Action state.
      */
-    @SerializedName("actionState")
+    @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose
     public ActionState actionState;
 
@@ -44,7 +44,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Device Display Name.
      * Intune device name.
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -52,7 +52,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Device IMEI.
      * IMEI of the device.
      */
-    @SerializedName("deviceIMEI")
+    @SerializedName(value = "deviceIMEI", alternate = {"DeviceIMEI"})
     @Expose
     public String deviceIMEI;
 
@@ -60,7 +60,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Device Owner User Principal Name.
      * Upn of the device owner.
      */
-    @SerializedName("deviceOwnerUserPrincipalName")
+    @SerializedName(value = "deviceOwnerUserPrincipalName", alternate = {"DeviceOwnerUserPrincipalName"})
     @Expose
     public String deviceOwnerUserPrincipalName;
 
@@ -68,7 +68,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Initiated By User Principal Name.
      * User who initiated the device action, format is UPN.
      */
-    @SerializedName("initiatedByUserPrincipalName")
+    @SerializedName(value = "initiatedByUserPrincipalName", alternate = {"InitiatedByUserPrincipalName"})
     @Expose
     public String initiatedByUserPrincipalName;
 
@@ -76,7 +76,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Managed Device Id.
      * Action target.
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 
@@ -84,7 +84,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The Request Date Time.
      * Time when the action was issued, given in UTC.
      */
-    @SerializedName("requestDateTime")
+    @SerializedName(value = "requestDateTime", alternate = {"RequestDateTime"})
     @Expose
     public java.util.Calendar requestDateTime;
 
@@ -92,7 +92,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
      * The User Name.
      * [deprecated] Please use InitiatedByUserPrincipalName instead.
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

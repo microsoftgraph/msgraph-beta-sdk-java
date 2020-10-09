@@ -35,7 +35,7 @@ public class NumberRange implements IJsonBackedObject {
      * The Lower Number.
      * Lower number.
      */
-    @SerializedName("lowerNumber")
+    @SerializedName(value = "lowerNumber", alternate = {"LowerNumber"})
     @Expose
     public Integer lowerNumber;
 
@@ -43,7 +43,7 @@ public class NumberRange implements IJsonBackedObject {
      * The Upper Number.
      * Upper number.
      */
-    @SerializedName("upperNumber")
+    @SerializedName(value = "upperNumber", alternate = {"UpperNumber"})
     @Expose
     public Integer upperNumber;
 

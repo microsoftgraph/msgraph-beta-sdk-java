@@ -35,7 +35,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Access.
      * The value for if MS Office Access should be excluded or not.
      */
-    @SerializedName("access")
+    @SerializedName(value = "access", alternate = {"Access"})
     @Expose
     public Boolean access;
 
@@ -43,7 +43,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Bing.
      * The value for if Microsoft Search as default should be excluded or not.
      */
-    @SerializedName("bing")
+    @SerializedName(value = "bing", alternate = {"Bing"})
     @Expose
     public Boolean bing;
 
@@ -51,7 +51,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Excel.
      * The value for if MS Office Excel should be excluded or not.
      */
-    @SerializedName("excel")
+    @SerializedName(value = "excel", alternate = {"Excel"})
     @Expose
     public Boolean excel;
 
@@ -59,7 +59,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Groove.
      * The value for if MS Office OneDrive for Business - Groove should be excluded or not.
      */
-    @SerializedName("groove")
+    @SerializedName(value = "groove", alternate = {"Groove"})
     @Expose
     public Boolean groove;
 
@@ -67,7 +67,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Info Path.
      * The value for if MS Office InfoPath should be excluded or not.
      */
-    @SerializedName("infoPath")
+    @SerializedName(value = "infoPath", alternate = {"InfoPath"})
     @Expose
     public Boolean infoPath;
 
@@ -75,7 +75,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Lync.
      * The value for if MS Office Skype for Business - Lync should be excluded or not.
      */
-    @SerializedName("lync")
+    @SerializedName(value = "lync", alternate = {"Lync"})
     @Expose
     public Boolean lync;
 
@@ -83,7 +83,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The One Drive.
      * The value for if MS Office OneDrive should be excluded or not.
      */
-    @SerializedName("oneDrive")
+    @SerializedName(value = "oneDrive", alternate = {"OneDrive"})
     @Expose
     public Boolean oneDrive;
 
@@ -91,7 +91,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The One Note.
      * The value for if MS Office OneNote should be excluded or not.
      */
-    @SerializedName("oneNote")
+    @SerializedName(value = "oneNote", alternate = {"OneNote"})
     @Expose
     public Boolean oneNote;
 
@@ -99,7 +99,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Outlook.
      * The value for if MS Office Outlook should be excluded or not.
      */
-    @SerializedName("outlook")
+    @SerializedName(value = "outlook", alternate = {"Outlook"})
     @Expose
     public Boolean outlook;
 
@@ -107,7 +107,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Power Point.
      * The value for if MS Office PowerPoint should be excluded or not.
      */
-    @SerializedName("powerPoint")
+    @SerializedName(value = "powerPoint", alternate = {"PowerPoint"})
     @Expose
     public Boolean powerPoint;
 
@@ -115,7 +115,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Publisher.
      * The value for if MS Office Publisher should be excluded or not.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public Boolean publisher;
 
@@ -123,7 +123,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Share Point Designer.
      * The value for if MS Office SharePointDesigner should be excluded or not.
      */
-    @SerializedName("sharePointDesigner")
+    @SerializedName(value = "sharePointDesigner", alternate = {"SharePointDesigner"})
     @Expose
     public Boolean sharePointDesigner;
 
@@ -131,7 +131,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Teams.
      * The value for if MS Office Teams should be excluded or not.
      */
-    @SerializedName("teams")
+    @SerializedName(value = "teams", alternate = {"Teams"})
     @Expose
     public Boolean teams;
 
@@ -139,7 +139,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Visio.
      * The value for if MS Office Visio should be excluded or not.
      */
-    @SerializedName("visio")
+    @SerializedName(value = "visio", alternate = {"Visio"})
     @Expose
     public Boolean visio;
 
@@ -147,7 +147,7 @@ public class ExcludedApps implements IJsonBackedObject {
      * The Word.
      * The value for if MS Office Word should be excluded or not.
      */
-    @SerializedName("word")
+    @SerializedName(value = "word", alternate = {"Word"})
     @Expose
     public Boolean word;
 

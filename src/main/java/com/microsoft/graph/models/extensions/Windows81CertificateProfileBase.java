@@ -28,7 +28,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * The Custom Subject Alternative Names.
      * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("customSubjectAlternativeNames")
+    @SerializedName(value = "customSubjectAlternativeNames", alternate = {"CustomSubjectAlternativeNames"})
     @Expose
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
@@ -36,7 +36,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * The Extended Key Usages.
      * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("extendedKeyUsages")
+    @SerializedName(value = "extendedKeyUsages", alternate = {"ExtendedKeyUsages"})
     @Expose
     public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
 

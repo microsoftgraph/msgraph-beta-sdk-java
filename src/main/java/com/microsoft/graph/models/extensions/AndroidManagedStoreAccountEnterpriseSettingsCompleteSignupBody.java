@@ -22,7 +22,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsCompleteSignupBody {
      * The enterprise Token.
      * 
      */
-    @SerializedName("enterpriseToken")
+    @SerializedName(value = "enterpriseToken", alternate = {"EnterpriseToken"})
     @Expose
     public String enterpriseToken;
 

@@ -26,7 +26,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      * The Not Configured Value.
      * List of value which means not configured for the setting
      */
-    @SerializedName("notConfiguredValue")
+    @SerializedName(value = "notConfiguredValue", alternate = {"NotConfiguredValue"})
     @Expose
     public String notConfiguredValue;
 

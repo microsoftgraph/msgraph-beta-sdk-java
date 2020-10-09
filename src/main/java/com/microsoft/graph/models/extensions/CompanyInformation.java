@@ -27,7 +27,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public PostalAddressType address;
 
@@ -35,7 +35,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Currency Code.
      * 
      */
-    @SerializedName("currencyCode")
+    @SerializedName(value = "currencyCode", alternate = {"CurrencyCode"})
     @Expose
     public String currencyCode;
 
@@ -43,7 +43,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Current Fiscal Year Start Date.
      * 
      */
-    @SerializedName("currentFiscalYearStartDate")
+    @SerializedName(value = "currentFiscalYearStartDate", alternate = {"CurrentFiscalYearStartDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly currentFiscalYearStartDate;
 
@@ -51,7 +51,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -59,7 +59,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Email.
      * 
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -67,7 +67,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Fax Number.
      * 
      */
-    @SerializedName("faxNumber")
+    @SerializedName(value = "faxNumber", alternate = {"FaxNumber"})
     @Expose
     public String faxNumber;
 
@@ -75,7 +75,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Industry.
      * 
      */
-    @SerializedName("industry")
+    @SerializedName(value = "industry", alternate = {"Industry"})
     @Expose
     public String industry;
 
@@ -83,7 +83,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -91,7 +91,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Phone Number.
      * 
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -99,7 +99,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Tax Registration Number.
      * 
      */
-    @SerializedName("taxRegistrationNumber")
+    @SerializedName(value = "taxRegistrationNumber", alternate = {"TaxRegistrationNumber"})
     @Expose
     public String taxRegistrationNumber;
 
@@ -107,7 +107,7 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
      * The Website.
      * 
      */
-    @SerializedName("website")
+    @SerializedName(value = "website", alternate = {"Website"})
     @Expose
     public String website;
 

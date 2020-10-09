@@ -26,7 +26,7 @@ public class NetworkIPv6ConfigurationManagementCondition extends NetworkManageme
      * The Dns Suffix List.
      * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
      */
-    @SerializedName("dnsSuffixList")
+    @SerializedName(value = "dnsSuffixList", alternate = {"DnsSuffixList"})
     @Expose
     public java.util.List<String> dnsSuffixList;
 
@@ -34,7 +34,7 @@ public class NetworkIPv6ConfigurationManagementCondition extends NetworkManageme
      * The Ip V6DNSServer List.
      * An IPv6 DNS servers configured for the adapter.
      */
-    @SerializedName("ipV6DNSServerList")
+    @SerializedName(value = "ipV6DNSServerList", alternate = {"IpV6DNSServerList"})
     @Expose
     public java.util.List<String> ipV6DNSServerList;
 
@@ -42,7 +42,7 @@ public class NetworkIPv6ConfigurationManagementCondition extends NetworkManageme
      * The Ip V6Gateway.
      * The IPv6 gateway address to. e.g 2001:db8::1
      */
-    @SerializedName("ipV6Gateway")
+    @SerializedName(value = "ipV6Gateway", alternate = {"IpV6Gateway"})
     @Expose
     public String ipV6Gateway;
 
@@ -50,7 +50,7 @@ public class NetworkIPv6ConfigurationManagementCondition extends NetworkManageme
      * The Ip V6Prefix.
      * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
      */
-    @SerializedName("ipV6Prefix")
+    @SerializedName(value = "ipV6Prefix", alternate = {"IpV6Prefix"})
     @Expose
     public String ipV6Prefix;
 

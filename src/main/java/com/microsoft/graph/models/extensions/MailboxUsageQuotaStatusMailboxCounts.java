@@ -26,7 +26,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Indeterminate.
      * 
      */
-    @SerializedName("indeterminate")
+    @SerializedName(value = "indeterminate", alternate = {"Indeterminate"})
     @Expose
     public Long indeterminate;
 
@@ -34,7 +34,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -42,7 +42,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -50,7 +50,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -58,7 +58,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Send Prohibited.
      * 
      */
-    @SerializedName("sendProhibited")
+    @SerializedName(value = "sendProhibited", alternate = {"SendProhibited"})
     @Expose
     public Long sendProhibited;
 
@@ -66,7 +66,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Send Receive Prohibited.
      * 
      */
-    @SerializedName("sendReceiveProhibited")
+    @SerializedName(value = "sendReceiveProhibited", alternate = {"SendReceiveProhibited"})
     @Expose
     public Long sendReceiveProhibited;
 
@@ -74,7 +74,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Under Limit.
      * 
      */
-    @SerializedName("underLimit")
+    @SerializedName(value = "underLimit", alternate = {"UnderLimit"})
     @Expose
     public Long underLimit;
 
@@ -82,7 +82,7 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
      * The Warning Issued.
      * 
      */
-    @SerializedName("warningIssued")
+    @SerializedName(value = "warningIssued", alternate = {"WarningIssued"})
     @Expose
     public Long warningIssued;
 

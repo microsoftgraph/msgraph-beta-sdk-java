@@ -29,7 +29,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Description.
      * The localized description of the policy settings in the ADMX file. The default value is empty.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -37,7 +37,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Display Name.
      * The localized friendly name of the ADMX file.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Language Codes.
      * The supported language codes for the ADMX file.
      */
-    @SerializedName("languageCodes")
+    @SerializedName(value = "languageCodes", alternate = {"LanguageCodes"})
     @Expose
     public java.util.List<String> languageCodes;
 
@@ -53,7 +53,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -61,7 +61,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Policy Type.
      * Specifies the type of group policy.
      */
-    @SerializedName("policyType")
+    @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose
     public GroupPolicyType policyType;
 
@@ -69,7 +69,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Revision.
      * The revision version associated with the file.
      */
-    @SerializedName("revision")
+    @SerializedName(value = "revision", alternate = {"Revision"})
     @Expose
     public String revision;
 
@@ -77,7 +77,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Target Namespace.
      * Specifies the URI used to identify the namespace within the ADMX file.
      */
-    @SerializedName("targetNamespace")
+    @SerializedName(value = "targetNamespace", alternate = {"TargetNamespace"})
     @Expose
     public String targetNamespace;
 
@@ -85,7 +85,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
      * The Target Prefix.
      * Specifies the logical name that refers to the namespace within the ADMX file.
      */
-    @SerializedName("targetPrefix")
+    @SerializedName(value = "targetPrefix", alternate = {"TargetPrefix"})
     @Expose
     public String targetPrefix;
 

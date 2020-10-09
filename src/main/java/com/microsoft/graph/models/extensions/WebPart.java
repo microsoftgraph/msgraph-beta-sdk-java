@@ -36,7 +36,7 @@ public class WebPart implements IJsonBackedObject {
      * The Data.
      * 
      */
-    @SerializedName("data")
+    @SerializedName(value = "data", alternate = {"Data"})
     @Expose
     public SitePageData data;
 
@@ -44,7 +44,7 @@ public class WebPart implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

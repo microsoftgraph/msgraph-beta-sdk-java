@@ -7,7 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ClassificationAttribute;
+import com.microsoft.graph.models.generated.ClassificationMethod;
+import com.microsoft.graph.models.extensions.SensitiveContentLocation;
 import com.microsoft.graph.models.generated.SensitiveTypeScope;
+import com.microsoft.graph.models.generated.SensitiveTypeSource;
 import com.microsoft.graph.models.extensions.DetectedSensitiveContentBase;
 
 
@@ -24,12 +28,44 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
 
 
     /**
+     * The Classification Attributes.
+     * 
+     */
+    @SerializedName(value = "classificationAttributes", alternate = {"ClassificationAttributes"})
+    @Expose
+    public java.util.List<ClassificationAttribute> classificationAttributes;
+
+    /**
+     * The Classification Method.
+     * 
+     */
+    @SerializedName(value = "classificationMethod", alternate = {"ClassificationMethod"})
+    @Expose
+    public ClassificationMethod classificationMethod;
+
+    /**
+     * The Matches.
+     * 
+     */
+    @SerializedName(value = "matches", alternate = {"Matches"})
+    @Expose
+    public java.util.List<SensitiveContentLocation> matches;
+
+    /**
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public EnumSet<SensitiveTypeScope> scope;
+
+    /**
+     * The Sensitive Type Source.
+     * 
+     */
+    @SerializedName(value = "sensitiveTypeSource", alternate = {"SensitiveTypeSource"})
+    @Expose
+    public SensitiveTypeSource sensitiveTypeSource;
 
 
     /**

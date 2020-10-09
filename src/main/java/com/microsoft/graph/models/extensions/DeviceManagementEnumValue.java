@@ -35,7 +35,7 @@ public class DeviceManagementEnumValue implements IJsonBackedObject {
      * The Display Name.
      * Display name for this enum value
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class DeviceManagementEnumValue implements IJsonBackedObject {
      * The Value.
      * The raw enum value text
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

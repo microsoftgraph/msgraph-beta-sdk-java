@@ -35,7 +35,7 @@ public class AirPrintDestination implements IJsonBackedObject {
      * The Force Tls.
      * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
      */
-    @SerializedName("forceTls")
+    @SerializedName(value = "forceTls", alternate = {"ForceTls"})
     @Expose
     public Boolean forceTls;
 
@@ -43,7 +43,7 @@ public class AirPrintDestination implements IJsonBackedObject {
      * The Ip Address.
      * The IP Address of the AirPrint destination.
      */
-    @SerializedName("ipAddress")
+    @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
     public String ipAddress;
 
@@ -51,7 +51,7 @@ public class AirPrintDestination implements IJsonBackedObject {
      * The Port.
      * The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
      */
-    @SerializedName("port")
+    @SerializedName(value = "port", alternate = {"Port"})
     @Expose
     public Integer port;
 
@@ -59,7 +59,7 @@ public class AirPrintDestination implements IJsonBackedObject {
      * The Resource Path.
      * The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
      */
-    @SerializedName("resourcePath")
+    @SerializedName(value = "resourcePath", alternate = {"ResourcePath"})
     @Expose
     public String resourcePath;
 

@@ -29,7 +29,7 @@ public class Connector extends Entity implements IJsonBackedObject {
      * The External Ip.
      * 
      */
-    @SerializedName("externalIp")
+    @SerializedName(value = "externalIp", alternate = {"ExternalIp"})
     @Expose
     public String externalIp;
 
@@ -37,7 +37,7 @@ public class Connector extends Entity implements IJsonBackedObject {
      * The Machine Name.
      * 
      */
-    @SerializedName("machineName")
+    @SerializedName(value = "machineName", alternate = {"MachineName"})
     @Expose
     public String machineName;
 
@@ -45,7 +45,7 @@ public class Connector extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ConnectorStatus status;
 
@@ -53,6 +53,8 @@ public class Connector extends Entity implements IJsonBackedObject {
      * The Member Of.
      * 
      */
+    @SerializedName(value = "memberOf", alternate = {"MemberOf"})
+    @Expose
     public ConnectorGroupCollectionPage memberOf;
 
 

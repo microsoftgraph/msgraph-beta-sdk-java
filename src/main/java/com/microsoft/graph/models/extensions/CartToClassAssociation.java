@@ -26,7 +26,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Classroom Ids.
      * Identifiers of classrooms to be associated with device carts.
      */
-    @SerializedName("classroomIds")
+    @SerializedName(value = "classroomIds", alternate = {"ClassroomIds"})
     @Expose
     public java.util.List<String> classroomIds;
 
@@ -34,7 +34,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -42,7 +42,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Description.
      * Admin provided description of the CartToClassAssociation.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -50,7 +50,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Device Cart Ids.
      * Identifiers of device carts to be associated with classes.
      */
-    @SerializedName("deviceCartIds")
+    @SerializedName(value = "deviceCartIds", alternate = {"DeviceCartIds"})
     @Expose
     public java.util.List<String> deviceCartIds;
 
@@ -58,7 +58,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -66,7 +66,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -74,7 +74,7 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
      * The Version.
      * Version of the CartToClassAssociation.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 

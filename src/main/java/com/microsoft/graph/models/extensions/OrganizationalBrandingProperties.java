@@ -26,7 +26,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
      * The Background Color.
      * 
      */
-    @SerializedName("backgroundColor")
+    @SerializedName(value = "backgroundColor", alternate = {"BackgroundColor"})
     @Expose
     public String backgroundColor;
 
@@ -34,7 +34,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
      * The Sign In Page Text.
      * 
      */
-    @SerializedName("signInPageText")
+    @SerializedName(value = "signInPageText", alternate = {"SignInPageText"})
     @Expose
     public String signInPageText;
 
@@ -42,7 +42,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
      * The Username Hint Text.
      * 
      */
-    @SerializedName("usernameHintText")
+    @SerializedName(value = "usernameHintText", alternate = {"UsernameHintText"})
     @Expose
     public String usernameHintText;
 

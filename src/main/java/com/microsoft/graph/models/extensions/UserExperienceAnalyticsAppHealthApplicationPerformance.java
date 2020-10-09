@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The Active Device Count.
      * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("activeDeviceCount")
+    @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
     public Integer activeDeviceCount;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Crash Count.
      * The number of crashes for the app. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appCrashCount")
+    @SerializedName(value = "appCrashCount", alternate = {"AppCrashCount"})
     @Expose
     public Integer appCrashCount;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Display Name.
      * The friendly name of the application.
      */
-    @SerializedName("appDisplayName")
+    @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
     public String appDisplayName;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Hang Count.
      * The number of hangs for the app. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appHangCount")
+    @SerializedName(value = "appHangCount", alternate = {"AppHangCount"})
     @Expose
     public Integer appHangCount;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Health Score.
      * The health score of the app. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
-    @SerializedName("appHealthScore")
+    @SerializedName(value = "appHealthScore", alternate = {"AppHealthScore"})
     @Expose
     public Double appHealthScore;
 
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Health Status.
      * The overall health status of the app.
      */
-    @SerializedName("appHealthStatus")
+    @SerializedName(value = "appHealthStatus", alternate = {"AppHealthStatus"})
     @Expose
     public String appHealthStatus;
 
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Name.
      * The name of the application.
      */
-    @SerializedName("appName")
+    @SerializedName(value = "appName", alternate = {"AppName"})
     @Expose
     public String appName;
 
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Publisher.
      * The publisher of the application.
      */
-    @SerializedName("appPublisher")
+    @SerializedName(value = "appPublisher", alternate = {"AppPublisher"})
     @Expose
     public String appPublisher;
 
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The App Usage Duration.
      * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appUsageDuration")
+    @SerializedName(value = "appUsageDuration", alternate = {"AppUsageDuration"})
     @Expose
     public Integer appUsageDuration;
 
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * The Mean Time To Failure In Minutes.
      * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("meanTimeToFailureInMinutes")
+    @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
     public Integer meanTimeToFailureInMinutes;
 

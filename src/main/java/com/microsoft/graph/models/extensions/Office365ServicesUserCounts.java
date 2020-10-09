@@ -26,7 +26,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Exchange Active.
      * 
      */
-    @SerializedName("exchangeActive")
+    @SerializedName(value = "exchangeActive", alternate = {"ExchangeActive"})
     @Expose
     public Long exchangeActive;
 
@@ -34,7 +34,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Exchange Inactive.
      * 
      */
-    @SerializedName("exchangeInactive")
+    @SerializedName(value = "exchangeInactive", alternate = {"ExchangeInactive"})
     @Expose
     public Long exchangeInactive;
 
@@ -42,7 +42,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Office365Active.
      * 
      */
-    @SerializedName("office365Active")
+    @SerializedName(value = "office365Active", alternate = {"Office365Active"})
     @Expose
     public Long office365Active;
 
@@ -50,7 +50,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Office365Inactive.
      * 
      */
-    @SerializedName("office365Inactive")
+    @SerializedName(value = "office365Inactive", alternate = {"Office365Inactive"})
     @Expose
     public Long office365Inactive;
 
@@ -58,7 +58,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The One Drive Active.
      * 
      */
-    @SerializedName("oneDriveActive")
+    @SerializedName(value = "oneDriveActive", alternate = {"OneDriveActive"})
     @Expose
     public Long oneDriveActive;
 
@@ -66,7 +66,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The One Drive Inactive.
      * 
      */
-    @SerializedName("oneDriveInactive")
+    @SerializedName(value = "oneDriveInactive", alternate = {"OneDriveInactive"})
     @Expose
     public Long oneDriveInactive;
 
@@ -74,7 +74,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -82,7 +82,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -90,7 +90,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Share Point Active.
      * 
      */
-    @SerializedName("sharePointActive")
+    @SerializedName(value = "sharePointActive", alternate = {"SharePointActive"})
     @Expose
     public Long sharePointActive;
 
@@ -98,7 +98,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Share Point Inactive.
      * 
      */
-    @SerializedName("sharePointInactive")
+    @SerializedName(value = "sharePointInactive", alternate = {"SharePointInactive"})
     @Expose
     public Long sharePointInactive;
 
@@ -106,7 +106,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Skype For Business Active.
      * 
      */
-    @SerializedName("skypeForBusinessActive")
+    @SerializedName(value = "skypeForBusinessActive", alternate = {"SkypeForBusinessActive"})
     @Expose
     public Long skypeForBusinessActive;
 
@@ -114,7 +114,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Skype For Business Inactive.
      * 
      */
-    @SerializedName("skypeForBusinessInactive")
+    @SerializedName(value = "skypeForBusinessInactive", alternate = {"SkypeForBusinessInactive"})
     @Expose
     public Long skypeForBusinessInactive;
 
@@ -122,7 +122,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Teams Active.
      * 
      */
-    @SerializedName("teamsActive")
+    @SerializedName(value = "teamsActive", alternate = {"TeamsActive"})
     @Expose
     public Long teamsActive;
 
@@ -130,7 +130,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Teams Inactive.
      * 
      */
-    @SerializedName("teamsInactive")
+    @SerializedName(value = "teamsInactive", alternate = {"TeamsInactive"})
     @Expose
     public Long teamsInactive;
 
@@ -138,7 +138,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Yammer Active.
      * 
      */
-    @SerializedName("yammerActive")
+    @SerializedName(value = "yammerActive", alternate = {"YammerActive"})
     @Expose
     public Long yammerActive;
 
@@ -146,7 +146,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
      * The Yammer Inactive.
      * 
      */
-    @SerializedName("yammerInactive")
+    @SerializedName(value = "yammerInactive", alternate = {"YammerInactive"})
     @Expose
     public Long yammerInactive;
 

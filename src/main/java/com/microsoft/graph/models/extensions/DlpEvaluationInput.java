@@ -38,7 +38,7 @@ public class DlpEvaluationInput implements IJsonBackedObject {
      * The Access Scope.
      * 
      */
-    @SerializedName("accessScope")
+    @SerializedName(value = "accessScope", alternate = {"AccessScope"})
     @Expose
     public AccessScope accessScope;
 
@@ -46,7 +46,7 @@ public class DlpEvaluationInput implements IJsonBackedObject {
      * The Current Label.
      * 
      */
-    @SerializedName("currentLabel")
+    @SerializedName(value = "currentLabel", alternate = {"CurrentLabel"})
     @Expose
     public CurrentLabel currentLabel;
 
@@ -54,7 +54,7 @@ public class DlpEvaluationInput implements IJsonBackedObject {
      * The Discovered Sensitive Types.
      * 
      */
-    @SerializedName("discoveredSensitiveTypes")
+    @SerializedName(value = "discoveredSensitiveTypes", alternate = {"DiscoveredSensitiveTypes"})
     @Expose
     public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
 

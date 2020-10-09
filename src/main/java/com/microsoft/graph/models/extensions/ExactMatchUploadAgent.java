@@ -26,7 +26,7 @@ public class ExactMatchUploadAgent extends Entity implements IJsonBackedObject {
      * The Creation Date Time.
      * 
      */
-    @SerializedName("creationDateTime")
+    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
     public java.util.Calendar creationDateTime;
 
@@ -34,7 +34,7 @@ public class ExactMatchUploadAgent extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 

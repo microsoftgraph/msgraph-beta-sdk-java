@@ -36,7 +36,7 @@ public class EducationIdentityDomain implements IJsonBackedObject {
      * The Applies To.
      * 
      */
-    @SerializedName("appliesTo")
+    @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
     public EducationUserRole appliesTo;
 
@@ -44,7 +44,7 @@ public class EducationIdentityDomain implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

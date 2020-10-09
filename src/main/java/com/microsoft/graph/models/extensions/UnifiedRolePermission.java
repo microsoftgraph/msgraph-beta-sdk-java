@@ -35,7 +35,7 @@ public class UnifiedRolePermission implements IJsonBackedObject {
      * The Allowed Resource Actions.
      * 
      */
-    @SerializedName("allowedResourceActions")
+    @SerializedName(value = "allowedResourceActions", alternate = {"AllowedResourceActions"})
     @Expose
     public java.util.List<String> allowedResourceActions;
 
@@ -43,7 +43,7 @@ public class UnifiedRolePermission implements IJsonBackedObject {
      * The Condition.
      * 
      */
-    @SerializedName("condition")
+    @SerializedName(value = "condition", alternate = {"Condition"})
     @Expose
     public String condition;
 
@@ -51,7 +51,7 @@ public class UnifiedRolePermission implements IJsonBackedObject {
      * The Excluded Resource Actions.
      * 
      */
-    @SerializedName("excludedResourceActions")
+    @SerializedName(value = "excludedResourceActions", alternate = {"ExcludedResourceActions"})
     @Expose
     public java.util.List<String> excludedResourceActions;
 

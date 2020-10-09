@@ -27,7 +27,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements IJsonB
      * The Conflicting Device Configurations.
      * The set of policies in conflict with the given setting
      */
-    @SerializedName("conflictingDeviceConfigurations")
+    @SerializedName(value = "conflictingDeviceConfigurations", alternate = {"ConflictingDeviceConfigurations"})
     @Expose
     public java.util.List<SettingSource> conflictingDeviceConfigurations;
 
@@ -35,7 +35,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements IJsonB
      * The Contributing Settings.
      * The set of settings in conflict with the given policies
      */
-    @SerializedName("contributingSettings")
+    @SerializedName(value = "contributingSettings", alternate = {"ContributingSettings"})
     @Expose
     public java.util.List<String> contributingSettings;
 
@@ -43,7 +43,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements IJsonB
      * The Device Checkins Impacted.
      * The count of checkins impacted by the conflicting policies and settings
      */
-    @SerializedName("deviceCheckinsImpacted")
+    @SerializedName(value = "deviceCheckinsImpacted", alternate = {"DeviceCheckinsImpacted"})
     @Expose
     public Integer deviceCheckinsImpacted;
 

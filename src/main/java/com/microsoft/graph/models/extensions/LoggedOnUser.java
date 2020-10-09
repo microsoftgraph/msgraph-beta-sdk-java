@@ -35,7 +35,7 @@ public class LoggedOnUser implements IJsonBackedObject {
      * The Last Log On Date Time.
      * Date time when user logs on
      */
-    @SerializedName("lastLogOnDateTime")
+    @SerializedName(value = "lastLogOnDateTime", alternate = {"LastLogOnDateTime"})
     @Expose
     public java.util.Calendar lastLogOnDateTime;
 
@@ -43,7 +43,7 @@ public class LoggedOnUser implements IJsonBackedObject {
      * The User Id.
      * User id
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

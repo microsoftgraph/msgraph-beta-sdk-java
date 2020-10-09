@@ -26,7 +26,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The Device Mac Address.
      * Device Mac address.
      */
-    @SerializedName("deviceMacAddress")
+    @SerializedName(value = "deviceMacAddress", alternate = {"DeviceMacAddress"})
     @Expose
     public String deviceMacAddress;
 
@@ -34,7 +34,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The Device Name.
      * Device name.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -42,7 +42,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The Device Registration Id.
      * Device identifier for this device registration record.
      */
-    @SerializedName("deviceRegistrationId")
+    @SerializedName(value = "deviceRegistrationId", alternate = {"DeviceRegistrationId"})
     @Expose
     public String deviceRegistrationId;
 
@@ -50,7 +50,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The Device Type.
      * Device type, for example, Windows laptop VS Windows phone.
      */
-    @SerializedName("deviceType")
+    @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
     public String deviceType;
 
@@ -58,7 +58,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The Last Check In Date Time.
      * Last checkin time of the device.
      */
-    @SerializedName("lastCheckInDateTime")
+    @SerializedName(value = "lastCheckInDateTime", alternate = {"LastCheckInDateTime"})
     @Expose
     public java.util.Calendar lastCheckInDateTime;
 
@@ -66,7 +66,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The User Id.
      * UserId associated with this device registration record.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

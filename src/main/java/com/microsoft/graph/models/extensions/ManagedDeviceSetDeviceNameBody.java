@@ -22,7 +22,7 @@ public class ManagedDeviceSetDeviceNameBody {
      * The device Name.
      * 
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 

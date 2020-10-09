@@ -27,7 +27,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Expiration Date Time.
      * Certificate expiry date
      */
-    @SerializedName("certificateExpirationDateTime")
+    @SerializedName(value = "certificateExpirationDateTime", alternate = {"CertificateExpirationDateTime"})
     @Expose
     public java.util.Calendar certificateExpirationDateTime;
 
@@ -35,7 +35,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Extended Key Usages.
      * Enhanced Key Usage
      */
-    @SerializedName("certificateExtendedKeyUsages")
+    @SerializedName(value = "certificateExtendedKeyUsages", alternate = {"CertificateExtendedKeyUsages"})
     @Expose
     public String certificateExtendedKeyUsages;
 
@@ -43,7 +43,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Issuance Date Time.
      * Issuance date
      */
-    @SerializedName("certificateIssuanceDateTime")
+    @SerializedName(value = "certificateIssuanceDateTime", alternate = {"CertificateIssuanceDateTime"})
     @Expose
     public java.util.Calendar certificateIssuanceDateTime;
 
@@ -51,7 +51,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Issuer Name.
      * Issuer
      */
-    @SerializedName("certificateIssuerName")
+    @SerializedName(value = "certificateIssuerName", alternate = {"CertificateIssuerName"})
     @Expose
     public String certificateIssuerName;
 
@@ -59,7 +59,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Key Usages.
      * Key Usage
      */
-    @SerializedName("certificateKeyUsages")
+    @SerializedName(value = "certificateKeyUsages", alternate = {"CertificateKeyUsages"})
     @Expose
     public Integer certificateKeyUsages;
 
@@ -67,7 +67,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Revoke Status.
      * Revoke status
      */
-    @SerializedName("certificateRevokeStatus")
+    @SerializedName(value = "certificateRevokeStatus", alternate = {"CertificateRevokeStatus"})
     @Expose
     public CertificateRevocationStatus certificateRevokeStatus;
 
@@ -75,7 +75,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Revoke Status Last Change Date Time.
      * The time the revoke status was last changed
      */
-    @SerializedName("certificateRevokeStatusLastChangeDateTime")
+    @SerializedName(value = "certificateRevokeStatusLastChangeDateTime", alternate = {"CertificateRevokeStatusLastChangeDateTime"})
     @Expose
     public java.util.Calendar certificateRevokeStatusLastChangeDateTime;
 
@@ -83,7 +83,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Serial Number.
      * Serial number
      */
-    @SerializedName("certificateSerialNumber")
+    @SerializedName(value = "certificateSerialNumber", alternate = {"CertificateSerialNumber"})
     @Expose
     public String certificateSerialNumber;
 
@@ -91,7 +91,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Subject Name.
      * Certificate subject name
      */
-    @SerializedName("certificateSubjectName")
+    @SerializedName(value = "certificateSubjectName", alternate = {"CertificateSubjectName"})
     @Expose
     public String certificateSubjectName;
 
@@ -99,7 +99,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Certificate Thumbprint.
      * Thumbprint
      */
-    @SerializedName("certificateThumbprint")
+    @SerializedName(value = "certificateThumbprint", alternate = {"CertificateThumbprint"})
     @Expose
     public String certificateThumbprint;
 
@@ -107,7 +107,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The Managed Device Display Name.
      * Device display name
      */
-    @SerializedName("managedDeviceDisplayName")
+    @SerializedName(value = "managedDeviceDisplayName", alternate = {"ManagedDeviceDisplayName"})
     @Expose
     public String managedDeviceDisplayName;
 
@@ -115,7 +115,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
      * The User Principal Name.
      * User principal name
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

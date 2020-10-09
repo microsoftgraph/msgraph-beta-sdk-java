@@ -35,7 +35,7 @@ public class ThreatAssessmentRequestsCount implements IJsonBackedObject {
      * The Count.
      * 
      */
-    @SerializedName("count")
+    @SerializedName(value = "count", alternate = {"Count"})
     @Expose
     public Long count;
 
@@ -43,7 +43,7 @@ public class ThreatAssessmentRequestsCount implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -51,7 +51,7 @@ public class ThreatAssessmentRequestsCount implements IJsonBackedObject {
      * The Pivot Value.
      * 
      */
-    @SerializedName("pivotValue")
+    @SerializedName(value = "pivotValue", alternate = {"PivotValue"})
     @Expose
     public String pivotValue;
 

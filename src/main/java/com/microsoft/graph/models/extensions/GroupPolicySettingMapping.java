@@ -29,7 +29,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Admx Setting Definition Id.
      * Admx Group Policy Id
      */
-    @SerializedName("admxSettingDefinitionId")
+    @SerializedName(value = "admxSettingDefinitionId", alternate = {"AdmxSettingDefinitionId"})
     @Expose
     public String admxSettingDefinitionId;
 
@@ -37,7 +37,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Child Id List.
      * List of Child Ids of the group policy setting.
      */
-    @SerializedName("childIdList")
+    @SerializedName(value = "childIdList", alternate = {"ChildIdList"})
     @Expose
     public java.util.List<String> childIdList;
 
@@ -45,7 +45,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Intune Setting Definition Id.
      * The Intune Setting Definition Id
      */
-    @SerializedName("intuneSettingDefinitionId")
+    @SerializedName(value = "intuneSettingDefinitionId", alternate = {"IntuneSettingDefinitionId"})
     @Expose
     public String intuneSettingDefinitionId;
 
@@ -53,7 +53,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Intune Setting Uri List.
      * The list of Intune Setting URIs this group policy setting maps to
      */
-    @SerializedName("intuneSettingUriList")
+    @SerializedName(value = "intuneSettingUriList", alternate = {"IntuneSettingUriList"})
     @Expose
     public java.util.List<String> intuneSettingUriList;
 
@@ -61,7 +61,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Is Mdm Supported.
      * Indicates if the setting is supported by Intune or not
      */
-    @SerializedName("isMdmSupported")
+    @SerializedName(value = "isMdmSupported", alternate = {"IsMdmSupported"})
     @Expose
     public Boolean isMdmSupported;
 
@@ -69,7 +69,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Mdm Csp Name.
      * The CSP name this group policy setting maps to.
      */
-    @SerializedName("mdmCspName")
+    @SerializedName(value = "mdmCspName", alternate = {"MdmCspName"})
     @Expose
     public String mdmCspName;
 
@@ -77,7 +77,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Mdm Minimum OSVersion.
      * The minimum OS version this mdm setting supports.
      */
-    @SerializedName("mdmMinimumOSVersion")
+    @SerializedName(value = "mdmMinimumOSVersion", alternate = {"MdmMinimumOSVersion"})
     @Expose
     public Integer mdmMinimumOSVersion;
 
@@ -85,7 +85,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Mdm Setting Uri.
      * The MDM CSP URI this group policy setting maps to.
      */
-    @SerializedName("mdmSettingUri")
+    @SerializedName(value = "mdmSettingUri", alternate = {"MdmSettingUri"})
     @Expose
     public String mdmSettingUri;
 
@@ -93,7 +93,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Mdm Supported State.
      * Indicates if the setting is supported in Mdm or not
      */
-    @SerializedName("mdmSupportedState")
+    @SerializedName(value = "mdmSupportedState", alternate = {"MdmSupportedState"})
     @Expose
     public MdmSupportedState mdmSupportedState;
 
@@ -101,7 +101,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Parent Id.
      * Parent Id of the group policy setting.
      */
-    @SerializedName("parentId")
+    @SerializedName(value = "parentId", alternate = {"ParentId"})
     @Expose
     public String parentId;
 
@@ -109,7 +109,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Category.
      * The category the group policy setting is in.
      */
-    @SerializedName("settingCategory")
+    @SerializedName(value = "settingCategory", alternate = {"SettingCategory"})
     @Expose
     public String settingCategory;
 
@@ -117,7 +117,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Display Name.
      * The display name of this group policy setting.
      */
-    @SerializedName("settingDisplayName")
+    @SerializedName(value = "settingDisplayName", alternate = {"SettingDisplayName"})
     @Expose
     public String settingDisplayName;
 
@@ -125,7 +125,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Display Value.
      * The display value of this group policy setting.
      */
-    @SerializedName("settingDisplayValue")
+    @SerializedName(value = "settingDisplayValue", alternate = {"SettingDisplayValue"})
     @Expose
     public String settingDisplayValue;
 
@@ -133,7 +133,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Display Value Type.
      * The display value type of this group policy setting.
      */
-    @SerializedName("settingDisplayValueType")
+    @SerializedName(value = "settingDisplayValueType", alternate = {"SettingDisplayValueType"})
     @Expose
     public String settingDisplayValueType;
 
@@ -141,7 +141,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Name.
      * The name of this group policy setting.
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -149,7 +149,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Scope.
      * The scope of the setting
      */
-    @SerializedName("settingScope")
+    @SerializedName(value = "settingScope", alternate = {"SettingScope"})
     @Expose
     public GroupPolicySettingScope settingScope;
 
@@ -157,7 +157,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Type.
      * The setting type (security or admx) of the Group Policy.
      */
-    @SerializedName("settingType")
+    @SerializedName(value = "settingType", alternate = {"SettingType"})
     @Expose
     public GroupPolicySettingType settingType;
 
@@ -165,7 +165,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Value.
      * The value of this group policy setting.
      */
-    @SerializedName("settingValue")
+    @SerializedName(value = "settingValue", alternate = {"SettingValue"})
     @Expose
     public String settingValue;
 
@@ -173,7 +173,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Value Display Units.
      * The display units of this group policy setting value
      */
-    @SerializedName("settingValueDisplayUnits")
+    @SerializedName(value = "settingValueDisplayUnits", alternate = {"SettingValueDisplayUnits"})
     @Expose
     public String settingValueDisplayUnits;
 
@@ -181,7 +181,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
      * The Setting Value Type.
      * The value type of this group policy setting.
      */
-    @SerializedName("settingValueType")
+    @SerializedName(value = "settingValueType", alternate = {"SettingValueType"})
     @Expose
     public String settingValueType;
 

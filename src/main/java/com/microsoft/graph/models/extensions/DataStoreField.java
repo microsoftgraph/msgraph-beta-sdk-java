@@ -35,7 +35,7 @@ public class DataStoreField implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class DataStoreField implements IJsonBackedObject {
      * The Searchable.
      * 
      */
-    @SerializedName("searchable")
+    @SerializedName(value = "searchable", alternate = {"Searchable"})
     @Expose
     public Boolean searchable;
 
@@ -51,7 +51,7 @@ public class DataStoreField implements IJsonBackedObject {
      * The Unique.
      * 
      */
-    @SerializedName("unique")
+    @SerializedName(value = "unique", alternate = {"Unique"})
     @Expose
     public Boolean unique;
 

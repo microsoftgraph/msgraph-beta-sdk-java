@@ -26,7 +26,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Android Phone.
      * 
      */
-    @SerializedName("androidPhone")
+    @SerializedName(value = "androidPhone", alternate = {"AndroidPhone"})
     @Expose
     public Long androidPhone;
 
@@ -34,7 +34,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Ios.
      * 
      */
-    @SerializedName("ios")
+    @SerializedName(value = "ios", alternate = {"Ios"})
     @Expose
     public Long ios;
 
@@ -42,7 +42,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Mac.
      * 
      */
-    @SerializedName("mac")
+    @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
     public Long mac;
 
@@ -50,7 +50,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -74,7 +74,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Web.
      * 
      */
-    @SerializedName("web")
+    @SerializedName(value = "web", alternate = {"Web"})
     @Expose
     public Long web;
 
@@ -82,7 +82,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Windows.
      * 
      */
-    @SerializedName("windows")
+    @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
     public Long windows;
 
@@ -90,7 +90,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
      * The Windows Phone.
      * 
      */
-    @SerializedName("windowsPhone")
+    @SerializedName(value = "windowsPhone", alternate = {"WindowsPhone"})
     @Expose
     public Long windowsPhone;
 

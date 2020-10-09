@@ -35,7 +35,7 @@ public class EducationCourse implements IJsonBackedObject {
      * The Course Number.
      * 
      */
-    @SerializedName("courseNumber")
+    @SerializedName(value = "courseNumber", alternate = {"CourseNumber"})
     @Expose
     public String courseNumber;
 
@@ -43,7 +43,7 @@ public class EducationCourse implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -51,7 +51,7 @@ public class EducationCourse implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -59,7 +59,7 @@ public class EducationCourse implements IJsonBackedObject {
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -67,7 +67,7 @@ public class EducationCourse implements IJsonBackedObject {
      * The Subject.
      * 
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 

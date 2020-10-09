@@ -22,7 +22,7 @@ public class DeviceCompliancePolicySetScheduledRetireStateBody {
      * The state.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ScheduledRetireState state;
 
@@ -30,7 +30,7 @@ public class DeviceCompliancePolicySetScheduledRetireStateBody {
      * The managed Device Ids.
      * 
      */
-    @SerializedName("managedDeviceIds")
+    @SerializedName(value = "managedDeviceIds", alternate = {"ManagedDeviceIds"})
     @Expose
     public java.util.List<String> managedDeviceIds;
 

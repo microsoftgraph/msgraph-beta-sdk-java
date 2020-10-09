@@ -26,7 +26,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * The Default Value.
      * The default value of string param
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public String defaultValue;
 

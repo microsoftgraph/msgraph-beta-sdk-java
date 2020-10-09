@@ -35,7 +35,7 @@ public class ReputationCategory implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class ReputationCategory implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -51,7 +51,7 @@ public class ReputationCategory implements IJsonBackedObject {
      * The Vendor.
      * 
      */
-    @SerializedName("vendor")
+    @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
     public String vendor;
 

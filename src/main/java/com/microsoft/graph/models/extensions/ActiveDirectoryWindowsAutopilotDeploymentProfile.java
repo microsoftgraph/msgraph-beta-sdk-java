@@ -27,7 +27,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * The Hybrid Azure ADJoin Skip Connectivity Check.
      * The Autopilot Hybrid Azure AD join flow will continue even if it does not establish domain controller connectivity during OOBE.
      */
-    @SerializedName("hybridAzureADJoinSkipConnectivityCheck")
+    @SerializedName(value = "hybridAzureADJoinSkipConnectivityCheck", alternate = {"HybridAzureADJoinSkipConnectivityCheck"})
     @Expose
     public Boolean hybridAzureADJoinSkipConnectivityCheck;
 
@@ -35,7 +35,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * The Domain Join Configuration.
      * Configuration to join Active Directory domain
      */
-    @SerializedName("domainJoinConfiguration")
+    @SerializedName(value = "domainJoinConfiguration", alternate = {"DomainJoinConfiguration"})
     @Expose
     public WindowsDomainJoinConfiguration domainJoinConfiguration;
 

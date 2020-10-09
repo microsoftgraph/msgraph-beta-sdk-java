@@ -29,7 +29,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
      * The App Display Name.
      * 
      */
-    @SerializedName("appDisplayName")
+    @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
     public String appDisplayName;
 
@@ -37,7 +37,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
      * The App Id.
      * 
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -45,7 +45,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
      * The Consent Type.
      * 
      */
-    @SerializedName("consentType")
+    @SerializedName(value = "consentType", alternate = {"ConsentType"})
     @Expose
     public String consentType;
 
@@ -53,7 +53,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
      * The Pending Scopes.
      * 
      */
-    @SerializedName("pendingScopes")
+    @SerializedName(value = "pendingScopes", alternate = {"PendingScopes"})
     @Expose
     public java.util.List<AppConsentRequestScope> pendingScopes;
 
@@ -61,7 +61,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
      * The User Consent Requests.
      * 
      */
-    @SerializedName("userConsentRequests")
+    @SerializedName(value = "userConsentRequests", alternate = {"UserConsentRequests"})
     @Expose
     public UserConsentRequestCollectionPage userConsentRequests;
 

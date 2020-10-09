@@ -37,7 +37,7 @@ public class DlpEvaluatePoliciesRequest implements IJsonBackedObject {
      * The Evaluation Input.
      * 
      */
-    @SerializedName("evaluationInput")
+    @SerializedName(value = "evaluationInput", alternate = {"EvaluationInput"})
     @Expose
     public DlpEvaluationInput evaluationInput;
 
@@ -45,7 +45,7 @@ public class DlpEvaluatePoliciesRequest implements IJsonBackedObject {
      * The Notification Info.
      * 
      */
-    @SerializedName("notificationInfo")
+    @SerializedName(value = "notificationInfo", alternate = {"NotificationInfo"})
     @Expose
     public DlpNotification notificationInfo;
 
@@ -53,7 +53,7 @@ public class DlpEvaluatePoliciesRequest implements IJsonBackedObject {
      * The Target.
      * 
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public String target;
 

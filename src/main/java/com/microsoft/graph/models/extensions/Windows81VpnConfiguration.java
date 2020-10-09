@@ -28,7 +28,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * The Apply Only To Windows81.
      * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      */
-    @SerializedName("applyOnlyToWindows81")
+    @SerializedName(value = "applyOnlyToWindows81", alternate = {"ApplyOnlyToWindows81"})
     @Expose
     public Boolean applyOnlyToWindows81;
 
@@ -36,7 +36,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * The Connection Type.
      * Connection type.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public WindowsVpnConnectionType connectionType;
 
@@ -44,7 +44,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Split Tunneling.
      * Enable split tunneling for the VPN.
      */
-    @SerializedName("enableSplitTunneling")
+    @SerializedName(value = "enableSplitTunneling", alternate = {"EnableSplitTunneling"})
     @Expose
     public Boolean enableSplitTunneling;
 
@@ -52,7 +52,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * The Login Group Or Domain.
      * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
      */
-    @SerializedName("loginGroupOrDomain")
+    @SerializedName(value = "loginGroupOrDomain", alternate = {"LoginGroupOrDomain"})
     @Expose
     public String loginGroupOrDomain;
 
@@ -60,7 +60,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * The Proxy Server.
      * Proxy Server.
      */
-    @SerializedName("proxyServer")
+    @SerializedName(value = "proxyServer", alternate = {"ProxyServer"})
     @Expose
     public Windows81VpnProxyServer proxyServer;
 

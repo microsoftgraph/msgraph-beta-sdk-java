@@ -26,7 +26,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The Android Phone.
      * 
      */
-    @SerializedName("androidPhone")
+    @SerializedName(value = "androidPhone", alternate = {"AndroidPhone"})
     @Expose
     public Integer androidPhone;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The IPad.
      * 
      */
-    @SerializedName("iPad")
+    @SerializedName(value = "iPad", alternate = {"IPad"})
     @Expose
     public Integer iPad;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The IPhone.
      * 
      */
-    @SerializedName("iPhone")
+    @SerializedName(value = "iPhone", alternate = {"IPhone"})
     @Expose
     public Integer iPhone;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -74,7 +74,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The Windows.
      * 
      */
-    @SerializedName("windows")
+    @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
     public Integer windows;
 
@@ -82,7 +82,7 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
      * The Windows Phone.
      * 
      */
-    @SerializedName("windowsPhone")
+    @SerializedName(value = "windowsPhone", alternate = {"WindowsPhone"})
     @Expose
     public Integer windowsPhone;
 

@@ -35,7 +35,7 @@ public class MoveAction implements IJsonBackedObject {
      * The From.
      * The name of the location the item was moved from.
      */
-    @SerializedName("from")
+    @SerializedName(value = "from", alternate = {"From"})
     @Expose
     public String from;
 
@@ -43,7 +43,7 @@ public class MoveAction implements IJsonBackedObject {
      * The To.
      * The name of the location the item was moved to.
      */
-    @SerializedName("to")
+    @SerializedName(value = "to", alternate = {"To"})
     @Expose
     public String to;
 

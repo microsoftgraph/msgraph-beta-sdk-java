@@ -47,7 +47,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Assignment Policies.
      * 
      */
-    @SerializedName("accessPackageAssignmentPolicies")
+    @SerializedName(value = "accessPackageAssignmentPolicies", alternate = {"AccessPackageAssignmentPolicies"})
     @Expose
     public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
 
@@ -55,7 +55,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Assignment Requests.
      * 
      */
-    @SerializedName("accessPackageAssignmentRequests")
+    @SerializedName(value = "accessPackageAssignmentRequests", alternate = {"AccessPackageAssignmentRequests"})
     @Expose
     public AccessPackageAssignmentRequestCollectionPage accessPackageAssignmentRequests;
 
@@ -63,7 +63,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Assignment Resource Roles.
      * 
      */
-    @SerializedName("accessPackageAssignmentResourceRoles")
+    @SerializedName(value = "accessPackageAssignmentResourceRoles", alternate = {"AccessPackageAssignmentResourceRoles"})
     @Expose
     public AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
 
@@ -71,7 +71,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Assignments.
      * 
      */
-    @SerializedName("accessPackageAssignments")
+    @SerializedName(value = "accessPackageAssignments", alternate = {"AccessPackageAssignments"})
     @Expose
     public AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
@@ -79,7 +79,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Catalogs.
      * 
      */
-    @SerializedName("accessPackageCatalogs")
+    @SerializedName(value = "accessPackageCatalogs", alternate = {"AccessPackageCatalogs"})
     @Expose
     public AccessPackageCatalogCollectionPage accessPackageCatalogs;
 
@@ -87,7 +87,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Resource Requests.
      * 
      */
-    @SerializedName("accessPackageResourceRequests")
+    @SerializedName(value = "accessPackageResourceRequests", alternate = {"AccessPackageResourceRequests"})
     @Expose
     public AccessPackageResourceRequestCollectionPage accessPackageResourceRequests;
 
@@ -95,7 +95,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Resource Role Scopes.
      * 
      */
-    @SerializedName("accessPackageResourceRoleScopes")
+    @SerializedName(value = "accessPackageResourceRoleScopes", alternate = {"AccessPackageResourceRoleScopes"})
     @Expose
     public AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
 
@@ -103,7 +103,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Resources.
      * 
      */
-    @SerializedName("accessPackageResources")
+    @SerializedName(value = "accessPackageResources", alternate = {"AccessPackageResources"})
     @Expose
     public AccessPackageResourceCollectionPage accessPackageResources;
 
@@ -111,7 +111,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Packages.
      * 
      */
-    @SerializedName("accessPackages")
+    @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
     public AccessPackageCollectionPage accessPackages;
 
@@ -119,7 +119,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Connected Organizations.
      * 
      */
-    @SerializedName("connectedOrganizations")
+    @SerializedName(value = "connectedOrganizations", alternate = {"ConnectedOrganizations"})
     @Expose
     public ConnectedOrganizationCollectionPage connectedOrganizations;
 
@@ -127,7 +127,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public EntitlementManagementSettings settings;
 

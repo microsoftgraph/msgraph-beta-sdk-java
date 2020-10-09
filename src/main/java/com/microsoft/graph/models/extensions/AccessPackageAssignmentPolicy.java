@@ -32,7 +32,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Access Package Id.
      * 
      */
-    @SerializedName("accessPackageId")
+    @SerializedName(value = "accessPackageId", alternate = {"AccessPackageId"})
     @Expose
     public String accessPackageId;
 
@@ -40,7 +40,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Access Review Settings.
      * 
      */
-    @SerializedName("accessReviewSettings")
+    @SerializedName(value = "accessReviewSettings", alternate = {"AccessReviewSettings"})
     @Expose
     public AssignmentReviewSettings accessReviewSettings;
 
@@ -48,7 +48,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Can Extend.
      * 
      */
-    @SerializedName("canExtend")
+    @SerializedName(value = "canExtend", alternate = {"CanExtend"})
     @Expose
     public Boolean canExtend;
 
@@ -56,7 +56,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -64,7 +64,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -72,7 +72,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -80,7 +80,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -88,7 +88,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Duration In Days.
      * 
      */
-    @SerializedName("durationInDays")
+    @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
     public Integer durationInDays;
 
@@ -96,7 +96,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -104,7 +104,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Modified By.
      * 
      */
-    @SerializedName("modifiedBy")
+    @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
     public String modifiedBy;
 
@@ -112,7 +112,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Modified Date Time.
      * 
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -120,7 +120,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Questions.
      * 
      */
-    @SerializedName("questions")
+    @SerializedName(value = "questions", alternate = {"Questions"})
     @Expose
     public java.util.List<AccessPackageQuestion> questions;
 
@@ -128,7 +128,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Request Approval Settings.
      * 
      */
-    @SerializedName("requestApprovalSettings")
+    @SerializedName(value = "requestApprovalSettings", alternate = {"RequestApprovalSettings"})
     @Expose
     public ApprovalSettings requestApprovalSettings;
 
@@ -136,7 +136,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Requestor Settings.
      * 
      */
-    @SerializedName("requestorSettings")
+    @SerializedName(value = "requestorSettings", alternate = {"RequestorSettings"})
     @Expose
     public RequestorSettings requestorSettings;
 
@@ -144,7 +144,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Access Package.
      * 
      */
-    @SerializedName("accessPackage")
+    @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
     public AccessPackage accessPackage;
 
@@ -152,7 +152,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      * The Access Package Catalog.
      * 
      */
-    @SerializedName("accessPackageCatalog")
+    @SerializedName(value = "accessPackageCatalog", alternate = {"AccessPackageCatalog"})
     @Expose
     public AccessPackageCatalog accessPackageCatalog;
 

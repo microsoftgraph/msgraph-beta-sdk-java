@@ -35,7 +35,7 @@ public class BucketAggregationRange implements IJsonBackedObject {
      * The From.
      * 
      */
-    @SerializedName("from")
+    @SerializedName(value = "from", alternate = {"From"})
     @Expose
     public String from;
 
@@ -43,7 +43,7 @@ public class BucketAggregationRange implements IJsonBackedObject {
      * The To.
      * 
      */
-    @SerializedName("to")
+    @SerializedName(value = "to", alternate = {"To"})
     @Expose
     public String to;
 

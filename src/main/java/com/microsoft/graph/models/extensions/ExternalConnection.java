@@ -35,7 +35,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Configuration.
      * 
      */
-    @SerializedName("configuration")
+    @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
     public Configuration configuration;
 
@@ -43,7 +43,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -51,7 +51,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -59,7 +59,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ConnectionState state;
 
@@ -67,7 +67,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Groups.
      * 
      */
-    @SerializedName("groups")
+    @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
     public ExternalGroupCollectionPage groups;
 
@@ -75,7 +75,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Items.
      * 
      */
-    @SerializedName("items")
+    @SerializedName(value = "items", alternate = {"Items"})
     @Expose
     public ExternalItemCollectionPage items;
 
@@ -83,7 +83,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Operations.
      * 
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public ConnectionOperationCollectionPage operations;
 
@@ -91,7 +91,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Schema.
      * 
      */
-    @SerializedName("schema")
+    @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
     public Schema schema;
 

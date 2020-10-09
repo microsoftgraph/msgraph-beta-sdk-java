@@ -27,7 +27,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Android For Work Restriction.
      * Android for work restrictions based on platform, platform operating system version, and device ownership
      */
-    @SerializedName("androidForWorkRestriction")
+    @SerializedName(value = "androidForWorkRestriction", alternate = {"AndroidForWorkRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction androidForWorkRestriction;
 
@@ -35,7 +35,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Android Restriction.
      * Not yet documented
      */
-    @SerializedName("androidRestriction")
+    @SerializedName(value = "androidRestriction", alternate = {"AndroidRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction androidRestriction;
 
@@ -43,7 +43,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Ios Restriction.
      * Not yet documented
      */
-    @SerializedName("iosRestriction")
+    @SerializedName(value = "iosRestriction", alternate = {"IosRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction iosRestriction;
 
@@ -51,7 +51,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Mac OSRestriction.
      * Not yet documented
      */
-    @SerializedName("macOSRestriction")
+    @SerializedName(value = "macOSRestriction", alternate = {"MacOSRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction macOSRestriction;
 
@@ -59,7 +59,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Mac Restriction.
      * Mac restrictions based on platform, platform operating system version, and device ownership
      */
-    @SerializedName("macRestriction")
+    @SerializedName(value = "macRestriction", alternate = {"MacRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction macRestriction;
 
@@ -67,7 +67,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Windows Home Sku Restriction.
      * Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
      */
-    @SerializedName("windowsHomeSkuRestriction")
+    @SerializedName(value = "windowsHomeSkuRestriction", alternate = {"WindowsHomeSkuRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction windowsHomeSkuRestriction;
 
@@ -75,7 +75,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Windows Mobile Restriction.
      * Not yet documented
      */
-    @SerializedName("windowsMobileRestriction")
+    @SerializedName(value = "windowsMobileRestriction", alternate = {"WindowsMobileRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction windowsMobileRestriction;
 
@@ -83,7 +83,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * The Windows Restriction.
      * Not yet documented
      */
-    @SerializedName("windowsRestriction")
+    @SerializedName(value = "windowsRestriction", alternate = {"WindowsRestriction"})
     @Expose
     public DeviceEnrollmentPlatformRestriction windowsRestriction;
 

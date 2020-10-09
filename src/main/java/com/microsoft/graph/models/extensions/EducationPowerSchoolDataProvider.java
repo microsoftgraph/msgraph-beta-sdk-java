@@ -27,7 +27,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The Allow Teachers In Multiple Schools.
      * 
      */
-    @SerializedName("allowTeachersInMultipleSchools")
+    @SerializedName(value = "allowTeachersInMultipleSchools", alternate = {"AllowTeachersInMultipleSchools"})
     @Expose
     public Boolean allowTeachersInMultipleSchools;
 
@@ -35,7 +35,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The Client Id.
      * 
      */
-    @SerializedName("clientId")
+    @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
     public String clientId;
 
@@ -43,7 +43,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The Client Secret.
      * 
      */
-    @SerializedName("clientSecret")
+    @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose
     public String clientSecret;
 
@@ -51,7 +51,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The Connection Url.
      * 
      */
-    @SerializedName("connectionUrl")
+    @SerializedName(value = "connectionUrl", alternate = {"ConnectionUrl"})
     @Expose
     public String connectionUrl;
 
@@ -59,7 +59,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The Customizations.
      * 
      */
-    @SerializedName("customizations")
+    @SerializedName(value = "customizations", alternate = {"Customizations"})
     @Expose
     public EducationSynchronizationCustomizations customizations;
 
@@ -67,7 +67,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The Schools Ids.
      * 
      */
-    @SerializedName("schoolsIds")
+    @SerializedName(value = "schoolsIds", alternate = {"SchoolsIds"})
     @Expose
     public java.util.List<String> schoolsIds;
 
@@ -75,7 +75,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * The School Year.
      * 
      */
-    @SerializedName("schoolYear")
+    @SerializedName(value = "schoolYear", alternate = {"SchoolYear"})
     @Expose
     public String schoolYear;
 

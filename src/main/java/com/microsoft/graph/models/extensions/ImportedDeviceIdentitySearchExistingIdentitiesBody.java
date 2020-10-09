@@ -22,7 +22,7 @@ public class ImportedDeviceIdentitySearchExistingIdentitiesBody {
      * The imported Device Identities.
      * 
      */
-    @SerializedName("importedDeviceIdentities")
+    @SerializedName(value = "importedDeviceIdentities", alternate = {"ImportedDeviceIdentities"})
     @Expose
     public java.util.List<ImportedDeviceIdentity> importedDeviceIdentities;
 

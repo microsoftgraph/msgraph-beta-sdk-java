@@ -36,7 +36,7 @@ public class MentionAction implements IJsonBackedObject {
      * The Mentionees.
      * The identities of the users mentioned in this action.
      */
-    @SerializedName("mentionees")
+    @SerializedName(value = "mentionees", alternate = {"Mentionees"})
     @Expose
     public java.util.List<IdentitySet> mentionees;
 

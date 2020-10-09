@@ -36,7 +36,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
      * The Context.
      * 
      */
-    @SerializedName("context")
+    @SerializedName(value = "context", alternate = {"Context"})
     @Expose
     public String context;
 
@@ -44,7 +44,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
      * The Failure.
      * 
      */
-    @SerializedName("failure")
+    @SerializedName(value = "failure", alternate = {"Failure"})
     @Expose
     public String failure;
 
@@ -52,7 +52,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
      * The Failure Details.
      * The detailed description of what went wrong.
      */
-    @SerializedName("failureDetails")
+    @SerializedName(value = "failureDetails", alternate = {"FailureDetails"})
     @Expose
     public String failureDetails;
 
@@ -60,7 +60,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
      * The Remediation.
      * The detailed description of how to remediate this issue.
      */
-    @SerializedName("remediation")
+    @SerializedName(value = "remediation", alternate = {"Remediation"})
     @Expose
     public String remediation;
 
@@ -68,7 +68,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
      * The Resources.
      * Links to helpful documentation about this failure.
      */
-    @SerializedName("resources")
+    @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
     public java.util.List<DeviceManagementTroubleshootingErrorResource> resources;
 

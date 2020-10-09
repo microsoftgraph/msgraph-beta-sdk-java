@@ -35,7 +35,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Callee Number.
      * 
      */
-    @SerializedName("calleeNumber")
+    @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
     public String calleeNumber;
 
@@ -43,7 +43,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Call End Sub Reason.
      * 
      */
-    @SerializedName("callEndSubReason")
+    @SerializedName(value = "callEndSubReason", alternate = {"CallEndSubReason"})
     @Expose
     public Integer callEndSubReason;
 
@@ -51,7 +51,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Caller Number.
      * 
      */
-    @SerializedName("callerNumber")
+    @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
     public String callerNumber;
 
@@ -59,7 +59,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Call Type.
      * 
      */
-    @SerializedName("callType")
+    @SerializedName(value = "callType", alternate = {"CallType"})
     @Expose
     public String callType;
 
@@ -67,7 +67,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Correlation Id.
      * 
      */
-    @SerializedName("correlationId")
+    @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
     public String correlationId;
 
@@ -75,7 +75,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public Integer duration;
 
@@ -83,7 +83,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -91,7 +91,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Failure Date Time.
      * 
      */
-    @SerializedName("failureDateTime")
+    @SerializedName(value = "failureDateTime", alternate = {"FailureDateTime"})
     @Expose
     public java.util.Calendar failureDateTime;
 
@@ -99,7 +99,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Final Sip Code.
      * 
      */
-    @SerializedName("finalSipCode")
+    @SerializedName(value = "finalSipCode", alternate = {"FinalSipCode"})
     @Expose
     public Integer finalSipCode;
 
@@ -107,7 +107,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Final Sip Code Phrase.
      * 
      */
-    @SerializedName("finalSipCodePhrase")
+    @SerializedName(value = "finalSipCodePhrase", alternate = {"FinalSipCodePhrase"})
     @Expose
     public String finalSipCodePhrase;
 
@@ -115,7 +115,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -123,7 +123,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Invite Date Time.
      * 
      */
-    @SerializedName("inviteDateTime")
+    @SerializedName(value = "inviteDateTime", alternate = {"InviteDateTime"})
     @Expose
     public java.util.Calendar inviteDateTime;
 
@@ -131,7 +131,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Media Bypass Enabled.
      * 
      */
-    @SerializedName("mediaBypassEnabled")
+    @SerializedName(value = "mediaBypassEnabled", alternate = {"MediaBypassEnabled"})
     @Expose
     public Boolean mediaBypassEnabled;
 
@@ -139,7 +139,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Media Path Location.
      * 
      */
-    @SerializedName("mediaPathLocation")
+    @SerializedName(value = "mediaPathLocation", alternate = {"MediaPathLocation"})
     @Expose
     public String mediaPathLocation;
 
@@ -147,7 +147,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Signaling Location.
      * 
      */
-    @SerializedName("signalingLocation")
+    @SerializedName(value = "signalingLocation", alternate = {"SignalingLocation"})
     @Expose
     public String signalingLocation;
 
@@ -155,7 +155,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -163,7 +163,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Successful Call.
      * 
      */
-    @SerializedName("successfulCall")
+    @SerializedName(value = "successfulCall", alternate = {"SuccessfulCall"})
     @Expose
     public Boolean successfulCall;
 
@@ -171,7 +171,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The Trunk Fully Qualified Domain Name.
      * 
      */
-    @SerializedName("trunkFullyQualifiedDomainName")
+    @SerializedName(value = "trunkFullyQualifiedDomainName", alternate = {"TrunkFullyQualifiedDomainName"})
     @Expose
     public String trunkFullyQualifiedDomainName;
 
@@ -179,7 +179,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -187,7 +187,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -195,7 +195,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

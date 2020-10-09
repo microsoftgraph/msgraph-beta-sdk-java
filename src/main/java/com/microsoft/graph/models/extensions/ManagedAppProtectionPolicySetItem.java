@@ -26,7 +26,7 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
      * The Targeted App Management Levels.
      * TargetedAppManagementLevels of the ManagedAppPolicySetItem.
      */
-    @SerializedName("targetedAppManagementLevels")
+    @SerializedName(value = "targetedAppManagementLevels", alternate = {"TargetedAppManagementLevels"})
     @Expose
     public String targetedAppManagementLevels;
 

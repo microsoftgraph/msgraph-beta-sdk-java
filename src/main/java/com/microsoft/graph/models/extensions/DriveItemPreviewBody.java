@@ -22,7 +22,7 @@ public class DriveItemPreviewBody {
      * The viewer.
      * 
      */
-    @SerializedName("viewer")
+    @SerializedName(value = "viewer", alternate = {"Viewer"})
     @Expose
     public String viewer;
 
@@ -30,7 +30,7 @@ public class DriveItemPreviewBody {
      * The chromeless.
      * 
      */
-    @SerializedName("chromeless")
+    @SerializedName(value = "chromeless", alternate = {"Chromeless"})
     @Expose
     public Boolean chromeless;
 
@@ -38,7 +38,7 @@ public class DriveItemPreviewBody {
      * The allow Edit.
      * 
      */
-    @SerializedName("allowEdit")
+    @SerializedName(value = "allowEdit", alternate = {"AllowEdit"})
     @Expose
     public Boolean allowEdit;
 
@@ -46,7 +46,7 @@ public class DriveItemPreviewBody {
      * The page.
      * 
      */
-    @SerializedName("page")
+    @SerializedName(value = "page", alternate = {"Page"})
     @Expose
     public String page;
 
@@ -54,7 +54,7 @@ public class DriveItemPreviewBody {
      * The zoom.
      * 
      */
-    @SerializedName("zoom")
+    @SerializedName(value = "zoom", alternate = {"Zoom"})
     @Expose
     public Double zoom;
 

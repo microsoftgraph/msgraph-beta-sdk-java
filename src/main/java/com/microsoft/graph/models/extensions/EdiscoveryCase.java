@@ -29,7 +29,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Closed By.
      * 
      */
-    @SerializedName("closedBy")
+    @SerializedName(value = "closedBy", alternate = {"ClosedBy"})
     @Expose
     public String closedBy;
 
@@ -37,7 +37,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Closed Date Time.
      * 
      */
-    @SerializedName("closedDateTime")
+    @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
     public java.util.Calendar closedDateTime;
 
@@ -45,7 +45,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -53,7 +53,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -61,7 +61,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -69,7 +69,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -77,7 +77,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public String lastModifiedBy;
 
@@ -85,7 +85,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -93,7 +93,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public CaseStatus status;
 
@@ -101,7 +101,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Review Sets.
      * 
      */
-    @SerializedName("reviewSets")
+    @SerializedName(value = "reviewSets", alternate = {"ReviewSets"})
     @Expose
     public ReviewSetCollectionPage reviewSets;
 

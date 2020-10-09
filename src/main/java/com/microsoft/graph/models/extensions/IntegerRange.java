@@ -35,7 +35,7 @@ public class IntegerRange implements IJsonBackedObject {
      * The End.
      * 
      */
-    @SerializedName("end")
+    @SerializedName(value = "end", alternate = {"End"})
     @Expose
     public Long end;
 
@@ -43,7 +43,7 @@ public class IntegerRange implements IJsonBackedObject {
      * The Maximum.
      * 
      */
-    @SerializedName("maximum")
+    @SerializedName(value = "maximum", alternate = {"Maximum"})
     @Expose
     public Long maximum;
 
@@ -51,7 +51,7 @@ public class IntegerRange implements IJsonBackedObject {
      * The Minimum.
      * 
      */
-    @SerializedName("minimum")
+    @SerializedName(value = "minimum", alternate = {"Minimum"})
     @Expose
     public Long minimum;
 
@@ -59,7 +59,7 @@ public class IntegerRange implements IJsonBackedObject {
      * The Start.
      * 
      */
-    @SerializedName("start")
+    @SerializedName(value = "start", alternate = {"Start"})
     @Expose
     public Long start;
 

@@ -30,7 +30,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Allowed Audiences.
      * 
      */
-    @SerializedName("allowedAudiences")
+    @SerializedName(value = "allowedAudiences", alternate = {"AllowedAudiences"})
     @Expose
     public EnumSet<AllowedAudiences> allowedAudiences;
 
@@ -38,7 +38,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -46,7 +46,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -54,7 +54,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Inference.
      * 
      */
-    @SerializedName("inference")
+    @SerializedName(value = "inference", alternate = {"Inference"})
     @Expose
     public InferenceData inference;
 
@@ -62,7 +62,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public IdentitySet lastModifiedBy;
 
@@ -70,7 +70,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -78,7 +78,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      * The Source.
      * 
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public PersonDataSource source;
 

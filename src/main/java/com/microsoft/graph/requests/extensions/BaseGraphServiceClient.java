@@ -147,14 +147,6 @@ import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequest
 import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileCollectionRequestBuilder;
@@ -372,7 +364,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * The default endpoint for the Microsoft Graph Service
      */
-    public static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/beta";
+    public static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
 
     /**
      * The current endpoint
@@ -1055,44 +1047,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public ISchemaExtensionRequestBuilder schemaExtensions(final String id) {
         return new SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of ConnectorGroups objects
-     *
-     * @return the request builder for the collection of ConnectorGroups objects
-     */
-    public IConnectorGroupCollectionRequestBuilder connectorGroups() {
-        return new ConnectorGroupCollectionRequestBuilder(getServiceRoot() + "/connectorGroups", this, null);
-    }
-
-    /**
-     * Gets a single ConnectorGroups
-     *
-     * @param id the id of the ConnectorGroups to retrieve
-     * @return the request builder for the ConnectorGroups object
-     */
-    public IConnectorGroupRequestBuilder connectorGroups(final String id) {
-        return new ConnectorGroupRequestBuilder(getServiceRoot() + "/connectorGroups/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Connectors objects
-     *
-     * @return the request builder for the collection of Connectors objects
-     */
-    public IConnectorCollectionRequestBuilder connectors() {
-        return new ConnectorCollectionRequestBuilder(getServiceRoot() + "/connectors", this, null);
-    }
-
-    /**
-     * Gets a single Connectors
-     *
-     * @param id the id of the Connectors to retrieve
-     * @return the request builder for the Connectors object
-     */
-    public IConnectorRequestBuilder connectors(final String id) {
-        return new ConnectorRequestBuilder(getServiceRoot() + "/connectors/" + id, this, null);
     }
 
     /**

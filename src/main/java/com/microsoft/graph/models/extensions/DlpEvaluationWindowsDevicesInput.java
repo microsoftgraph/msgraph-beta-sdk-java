@@ -27,7 +27,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * The Content Properties.
      * 
      */
-    @SerializedName("contentProperties")
+    @SerializedName(value = "contentProperties", alternate = {"ContentProperties"})
     @Expose
     public ContentProperties contentProperties;
 
@@ -35,7 +35,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * The Shared By.
      * 
      */
-    @SerializedName("sharedBy")
+    @SerializedName(value = "sharedBy", alternate = {"SharedBy"})
     @Expose
     public String sharedBy;
 

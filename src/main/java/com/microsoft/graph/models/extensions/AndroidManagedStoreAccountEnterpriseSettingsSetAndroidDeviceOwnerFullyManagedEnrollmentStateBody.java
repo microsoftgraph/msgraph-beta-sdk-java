@@ -22,7 +22,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFu
      * The enabled.
      * 
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 

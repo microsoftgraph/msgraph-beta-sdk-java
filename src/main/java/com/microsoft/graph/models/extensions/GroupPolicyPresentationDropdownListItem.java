@@ -35,7 +35,7 @@ public class GroupPolicyPresentationDropdownListItem implements IJsonBackedObjec
      * The Display Name.
      * Localized display name for the drop-down list item.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class GroupPolicyPresentationDropdownListItem implements IJsonBackedObjec
      * The Value.
      * Associated value for the drop-down list item
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

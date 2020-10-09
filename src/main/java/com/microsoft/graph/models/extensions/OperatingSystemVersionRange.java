@@ -35,7 +35,7 @@ public class OperatingSystemVersionRange implements IJsonBackedObject {
      * The Description.
      * The description of this range (e.g. Valid 1702 builds)
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class OperatingSystemVersionRange implements IJsonBackedObject {
      * The Highest Version.
      * The highest inclusive version that this range contains.
      */
-    @SerializedName("highestVersion")
+    @SerializedName(value = "highestVersion", alternate = {"HighestVersion"})
     @Expose
     public String highestVersion;
 
@@ -51,7 +51,7 @@ public class OperatingSystemVersionRange implements IJsonBackedObject {
      * The Lowest Version.
      * The lowest inclusive version that this range contains.
      */
-    @SerializedName("lowestVersion")
+    @SerializedName(value = "lowestVersion", alternate = {"LowestVersion"})
     @Expose
     public String lowestVersion;
 

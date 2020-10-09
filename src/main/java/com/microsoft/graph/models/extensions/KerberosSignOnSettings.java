@@ -36,7 +36,7 @@ public class KerberosSignOnSettings implements IJsonBackedObject {
      * The Kerberos Service Principal Name.
      * 
      */
-    @SerializedName("KerberosServicePrincipalName")
+    @SerializedName(value = "kerberosServicePrincipalName", alternate = {"KerberosServicePrincipalName"})
     @Expose
     public String kerberosServicePrincipalName;
 
@@ -44,7 +44,7 @@ public class KerberosSignOnSettings implements IJsonBackedObject {
      * The Kerberos Sign On Mapping Attribute Type.
      * 
      */
-    @SerializedName("KerberosSignOnMappingAttributeType")
+    @SerializedName(value = "kerberosSignOnMappingAttributeType", alternate = {"KerberosSignOnMappingAttributeType"})
     @Expose
     public KerberosSignOnMappingAttributeType kerberosSignOnMappingAttributeType;
 

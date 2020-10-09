@@ -26,7 +26,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements IJso
      * The Query Root.
      * 
      */
-    @SerializedName("queryRoot")
+    @SerializedName(value = "queryRoot", alternate = {"QueryRoot"})
     @Expose
     public String queryRoot;
 

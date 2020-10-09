@@ -37,7 +37,7 @@ public class DeviceManagementUserRightsSetting implements IJsonBackedObject {
      * The Local Users Or Groups.
      * Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("localUsersOrGroups")
+    @SerializedName(value = "localUsersOrGroups", alternate = {"LocalUsersOrGroups"})
     @Expose
     public java.util.List<DeviceManagementUserRightsLocalUserOrGroup> localUsersOrGroups;
 
@@ -45,7 +45,7 @@ public class DeviceManagementUserRightsSetting implements IJsonBackedObject {
      * The State.
      * Representing the current state of this user rights setting
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public StateManagementSetting state;
 

@@ -36,7 +36,7 @@ public class RequestorSettings implements IJsonBackedObject {
      * The Accept Requests.
      * 
      */
-    @SerializedName("acceptRequests")
+    @SerializedName(value = "acceptRequests", alternate = {"AcceptRequests"})
     @Expose
     public Boolean acceptRequests;
 
@@ -44,7 +44,7 @@ public class RequestorSettings implements IJsonBackedObject {
      * The Allowed Requestors.
      * 
      */
-    @SerializedName("allowedRequestors")
+    @SerializedName(value = "allowedRequestors", alternate = {"AllowedRequestors"})
     @Expose
     public java.util.List<UserSet> allowedRequestors;
 
@@ -52,7 +52,7 @@ public class RequestorSettings implements IJsonBackedObject {
      * The Scope Type.
      * 
      */
-    @SerializedName("scopeType")
+    @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
     public String scopeType;
 

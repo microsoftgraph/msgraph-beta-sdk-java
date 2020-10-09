@@ -36,7 +36,7 @@ public class BookingReminder implements IJsonBackedObject {
      * The Message.
      * Message to send.
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -44,7 +44,7 @@ public class BookingReminder implements IJsonBackedObject {
      * The Offset.
      * How much time before an appointment the reminder should be sent.
      */
-    @SerializedName("offset")
+    @SerializedName(value = "offset", alternate = {"Offset"})
     @Expose
     public javax.xml.datatype.Duration offset;
 
@@ -52,7 +52,7 @@ public class BookingReminder implements IJsonBackedObject {
      * The Recipients.
      * Who should receive the reminder.
      */
-    @SerializedName("recipients")
+    @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
     public BookingReminderRecipients recipients;
 

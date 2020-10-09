@@ -31,7 +31,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The string id of the category's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -39,7 +39,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The Is Root.
      * Defines if the category is a root category
      */
-    @SerializedName("isRoot")
+    @SerializedName(value = "isRoot", alternate = {"IsRoot"})
     @Expose
     public Boolean isRoot;
 
@@ -47,7 +47,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -61,7 +61,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The Definition File.
      * The id of the definition file the category came from
      */
-    @SerializedName("definitionFile")
+    @SerializedName(value = "definitionFile", alternate = {"DefinitionFile"})
     @Expose
     public GroupPolicyDefinitionFile definitionFile;
 
@@ -75,7 +75,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The Parent.
      * The parent category
      */
-    @SerializedName("parent")
+    @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose
     public GroupPolicyCategory parent;
 

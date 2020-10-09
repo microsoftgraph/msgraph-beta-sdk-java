@@ -26,7 +26,7 @@ public class MuteParticipantsOperation extends CommsOperation implements IJsonBa
      * The Participants.
      * 
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public java.util.List<String> participants;
 

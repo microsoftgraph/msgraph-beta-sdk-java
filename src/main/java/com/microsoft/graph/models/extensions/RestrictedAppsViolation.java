@@ -29,7 +29,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Device Configuration Id.
      * Device configuration profile unique identifier, must be Guid
      */
-    @SerializedName("deviceConfigurationId")
+    @SerializedName(value = "deviceConfigurationId", alternate = {"DeviceConfigurationId"})
     @Expose
     public String deviceConfigurationId;
 
@@ -37,7 +37,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Device Configuration Name.
      * Device configuration profile name
      */
-    @SerializedName("deviceConfigurationName")
+    @SerializedName(value = "deviceConfigurationName", alternate = {"DeviceConfigurationName"})
     @Expose
     public String deviceConfigurationName;
 
@@ -45,7 +45,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Device Name.
      * Device name
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -53,7 +53,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Managed Device Id.
      * Managed device unique identifier, must be Guid
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 
@@ -61,7 +61,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Platform Type.
      * Platform type
      */
-    @SerializedName("platformType")
+    @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
     public PolicyPlatformType platformType;
 
@@ -69,7 +69,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Restricted Apps.
      * List of violated restricted apps
      */
-    @SerializedName("restrictedApps")
+    @SerializedName(value = "restrictedApps", alternate = {"RestrictedApps"})
     @Expose
     public java.util.List<ManagedDeviceReportedApp> restrictedApps;
 
@@ -77,7 +77,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The Restricted Apps State.
      * Restricted apps state
      */
-    @SerializedName("restrictedAppsState")
+    @SerializedName(value = "restrictedAppsState", alternate = {"RestrictedAppsState"})
     @Expose
     public RestrictedAppsState restrictedAppsState;
 
@@ -85,7 +85,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The User Id.
      * User unique identifier, must be Guid
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -93,7 +93,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
      * The User Name.
      * User name
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

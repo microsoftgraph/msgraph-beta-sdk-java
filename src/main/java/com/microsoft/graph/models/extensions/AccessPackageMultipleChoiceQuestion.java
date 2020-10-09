@@ -27,7 +27,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * The Allows Multiple Selection.
      * 
      */
-    @SerializedName("allowsMultipleSelection")
+    @SerializedName(value = "allowsMultipleSelection", alternate = {"AllowsMultipleSelection"})
     @Expose
     public Boolean allowsMultipleSelection;
 
@@ -35,7 +35,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * The Choices.
      * 
      */
-    @SerializedName("choices")
+    @SerializedName(value = "choices", alternate = {"Choices"})
     @Expose
     public java.util.List<AccessPackageAnswerChoice> choices;
 

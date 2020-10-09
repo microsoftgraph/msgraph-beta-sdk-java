@@ -35,7 +35,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Allow Device Use Before Profile And App Install Complete.
      * Allow or block user to use device before profile and app installation complete
      */
-    @SerializedName("allowDeviceUseBeforeProfileAndAppInstallComplete")
+    @SerializedName(value = "allowDeviceUseBeforeProfileAndAppInstallComplete", alternate = {"AllowDeviceUseBeforeProfileAndAppInstallComplete"})
     @Expose
     public Boolean allowDeviceUseBeforeProfileAndAppInstallComplete;
 
@@ -43,7 +43,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Allow Device Use On Install Failure.
      * Allow the user to continue using the device on installation failure
      */
-    @SerializedName("allowDeviceUseOnInstallFailure")
+    @SerializedName(value = "allowDeviceUseOnInstallFailure", alternate = {"AllowDeviceUseOnInstallFailure"})
     @Expose
     public Boolean allowDeviceUseOnInstallFailure;
 
@@ -51,7 +51,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Allow Log Collection On Install Failure.
      * Allow or block log collection on installation failure
      */
-    @SerializedName("allowLogCollectionOnInstallFailure")
+    @SerializedName(value = "allowLogCollectionOnInstallFailure", alternate = {"AllowLogCollectionOnInstallFailure"})
     @Expose
     public Boolean allowLogCollectionOnInstallFailure;
 
@@ -59,7 +59,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Block Device Setup Retry By User.
      * Allow the user to retry the setup on installation failure
      */
-    @SerializedName("blockDeviceSetupRetryByUser")
+    @SerializedName(value = "blockDeviceSetupRetryByUser", alternate = {"BlockDeviceSetupRetryByUser"})
     @Expose
     public Boolean blockDeviceSetupRetryByUser;
 
@@ -67,7 +67,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Custom Error Message.
      * Set custom error message to show upon installation failure
      */
-    @SerializedName("customErrorMessage")
+    @SerializedName(value = "customErrorMessage", alternate = {"CustomErrorMessage"})
     @Expose
     public String customErrorMessage;
 
@@ -75,7 +75,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Hide Installation Progress.
      * Show or hide installation progress to user
      */
-    @SerializedName("hideInstallationProgress")
+    @SerializedName(value = "hideInstallationProgress", alternate = {"HideInstallationProgress"})
     @Expose
     public Boolean hideInstallationProgress;
 
@@ -83,7 +83,7 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
      * The Install Progress Timeout In Minutes.
      * Set installation progress timeout in minutes
      */
-    @SerializedName("installProgressTimeoutInMinutes")
+    @SerializedName(value = "installProgressTimeoutInMinutes", alternate = {"InstallProgressTimeoutInMinutes"})
     @Expose
     public Integer installProgressTimeoutInMinutes;
 

@@ -29,7 +29,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The Display Name.
      * The name of the policy for this policyBase
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The Platform Type.
      * Platform type that the policy applies to
      */
-    @SerializedName("platformType")
+    @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
     public PolicyPlatformType platformType;
 
@@ -45,7 +45,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The Setting Count.
      * Count of how many setting a policy holds
      */
-    @SerializedName("settingCount")
+    @SerializedName(value = "settingCount", alternate = {"SettingCount"})
     @Expose
     public Integer settingCount;
 
@@ -53,7 +53,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The Setting States.
      * 
      */
-    @SerializedName("settingStates")
+    @SerializedName(value = "settingStates", alternate = {"SettingStates"})
     @Expose
     public java.util.List<ManagedDeviceMobileAppConfigurationSettingState> settingStates;
 
@@ -61,7 +61,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The State.
      * The compliance state of the policy
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -69,7 +69,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The User Id.
      * User unique identifier, must be Guid
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -77,7 +77,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The User Principal Name.
      * User Principal Name
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -85,7 +85,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      * The Version.
      * The version of the policy
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 

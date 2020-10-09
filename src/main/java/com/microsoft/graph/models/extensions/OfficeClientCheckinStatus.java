@@ -35,7 +35,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Applied Policies.
      * 
      */
-    @SerializedName("appliedPolicies")
+    @SerializedName(value = "appliedPolicies", alternate = {"AppliedPolicies"})
     @Expose
     public java.util.List<String> appliedPolicies;
 
@@ -43,7 +43,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Checkin Date Time.
      * 
      */
-    @SerializedName("checkinDateTime")
+    @SerializedName(value = "checkinDateTime", alternate = {"CheckinDateTime"})
     @Expose
     public java.util.Calendar checkinDateTime;
 
@@ -51,7 +51,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Device Name.
      * 
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -59,7 +59,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Device Platform.
      * 
      */
-    @SerializedName("devicePlatform")
+    @SerializedName(value = "devicePlatform", alternate = {"DevicePlatform"})
     @Expose
     public String devicePlatform;
 
@@ -67,7 +67,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Device Platform Version.
      * 
      */
-    @SerializedName("devicePlatformVersion")
+    @SerializedName(value = "devicePlatformVersion", alternate = {"DevicePlatformVersion"})
     @Expose
     public String devicePlatformVersion;
 
@@ -75,7 +75,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Error Message.
      * 
      */
-    @SerializedName("errorMessage")
+    @SerializedName(value = "errorMessage", alternate = {"ErrorMessage"})
     @Expose
     public String errorMessage;
 
@@ -83,7 +83,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -91,7 +91,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -99,7 +99,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
      * The Was Successful.
      * 
      */
-    @SerializedName("wasSuccessful")
+    @SerializedName(value = "wasSuccessful", alternate = {"WasSuccessful"})
     @Expose
     public Boolean wasSuccessful;
 

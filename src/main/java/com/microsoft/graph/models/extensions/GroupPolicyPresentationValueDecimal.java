@@ -26,7 +26,7 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
      * The Value.
      * An unsigned integer value for the associated presentation.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Long value;
 

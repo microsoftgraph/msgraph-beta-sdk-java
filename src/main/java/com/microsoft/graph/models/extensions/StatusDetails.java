@@ -26,7 +26,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
      * The Additional Details.
      * 
      */
-    @SerializedName("additionalDetails")
+    @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
     public String additionalDetails;
 
@@ -34,7 +34,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
      * The Error Category.
      * 
      */
-    @SerializedName("errorCategory")
+    @SerializedName(value = "errorCategory", alternate = {"ErrorCategory"})
     @Expose
     public String errorCategory;
 
@@ -42,7 +42,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
      * The Error Code.
      * 
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -50,7 +50,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
      * The Reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 
@@ -58,7 +58,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
      * The Recommended Action.
      * 
      */
-    @SerializedName("recommendedAction")
+    @SerializedName(value = "recommendedAction", alternate = {"RecommendedAction"})
     @Expose
     public String recommendedAction;
 

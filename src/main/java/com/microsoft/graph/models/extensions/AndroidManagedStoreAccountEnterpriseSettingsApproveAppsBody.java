@@ -22,7 +22,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsBody {
      * The package Ids.
      * 
      */
-    @SerializedName("packageIds")
+    @SerializedName(value = "packageIds", alternate = {"PackageIds"})
     @Expose
     public java.util.List<String> packageIds;
 
@@ -30,7 +30,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsBody {
      * The approve All Permissions.
      * 
      */
-    @SerializedName("approveAllPermissions")
+    @SerializedName(value = "approveAllPermissions", alternate = {"ApproveAllPermissions"})
     @Expose
     public Boolean approveAllPermissions;
 

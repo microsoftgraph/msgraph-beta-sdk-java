@@ -32,7 +32,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Capabilities.
      * 
      */
-    @SerializedName("capabilities")
+    @SerializedName(value = "capabilities", alternate = {"Capabilities"})
     @Expose
     public PrinterCapabilities capabilities;
 
@@ -40,7 +40,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Defaults.
      * 
      */
-    @SerializedName("defaults")
+    @SerializedName(value = "defaults", alternate = {"Defaults"})
     @Expose
     public PrinterDefaults defaults;
 
@@ -48,7 +48,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Is Accepting Jobs.
      * 
      */
-    @SerializedName("isAcceptingJobs")
+    @SerializedName(value = "isAcceptingJobs", alternate = {"IsAcceptingJobs"})
     @Expose
     public Boolean isAcceptingJobs;
 
@@ -56,7 +56,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Location.
      * 
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public PrinterLocation location;
 
@@ -64,7 +64,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Manufacturer.
      * 
      */
-    @SerializedName("manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
@@ -72,7 +72,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Model.
      * 
      */
-    @SerializedName("model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -80,7 +80,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -88,7 +88,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public PrinterStatus status;
 
@@ -96,7 +96,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Jobs.
      * 
      */
-    @SerializedName("jobs")
+    @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
     public PrintJobCollectionPage jobs;
 

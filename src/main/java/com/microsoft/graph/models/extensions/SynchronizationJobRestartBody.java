@@ -22,7 +22,7 @@ public class SynchronizationJobRestartBody {
      * The criteria.
      * 
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public SynchronizationJobRestartCriteria criteria;
 

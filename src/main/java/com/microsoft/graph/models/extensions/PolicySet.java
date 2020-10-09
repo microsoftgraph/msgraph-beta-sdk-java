@@ -32,7 +32,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Creation time of the PolicySet.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -40,7 +40,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the PolicySet.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -48,7 +48,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Display Name.
      * DisplayName of the PolicySet.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -56,7 +56,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Error Code.
      * Error code if any occured.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public ErrorCode errorCode;
 
@@ -64,7 +64,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Guided Deployment Tags.
      * Tags of the guided deployment
      */
-    @SerializedName("guidedDeploymentTags")
+    @SerializedName(value = "guidedDeploymentTags", alternate = {"GuidedDeploymentTags"})
     @Expose
     public java.util.List<String> guidedDeploymentTags;
 
@@ -72,7 +72,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Last modified time of the PolicySet.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -80,7 +80,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Role Scope Tags.
      * RoleScopeTags of the PolicySet
      */
-    @SerializedName("roleScopeTags")
+    @SerializedName(value = "roleScopeTags", alternate = {"RoleScopeTags"})
     @Expose
     public java.util.List<String> roleScopeTags;
 
@@ -88,7 +88,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Status.
      * Validation/assignment status of the PolicySet.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public PolicySetStatus status;
 
@@ -96,7 +96,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Assignments.
      * Assignments of the PolicySet.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public PolicySetAssignmentCollectionPage assignments;
 
@@ -104,7 +104,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Items.
      * Items of the PolicySet with maximum count 100.
      */
-    @SerializedName("items")
+    @SerializedName(value = "items", alternate = {"Items"})
     @Expose
     public PolicySetItemCollectionPage items;
 

@@ -22,7 +22,7 @@ public class AndroidDeviceOwnerEnrollmentProfileCreateTokenBody {
      * The token Validity In Seconds.
      * 
      */
-    @SerializedName("tokenValidityInSeconds")
+    @SerializedName(value = "tokenValidityInSeconds", alternate = {"TokenValidityInSeconds"})
     @Expose
     public Integer tokenValidityInSeconds;
 

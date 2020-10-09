@@ -29,7 +29,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Subscription Id.
      * 
      */
-    @SerializedName("azureSubscriptionId")
+    @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
     public String azureSubscriptionId;
 
@@ -37,7 +37,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -45,7 +45,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The First Seen Date Time.
      * 
      */
-    @SerializedName("firstSeenDateTime")
+    @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
     public java.util.Calendar firstSeenDateTime;
 
@@ -53,7 +53,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Fqdn.
      * 
      */
-    @SerializedName("fqdn")
+    @SerializedName(value = "fqdn", alternate = {"Fqdn"})
     @Expose
     public String fqdn;
 
@@ -61,7 +61,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Is Azure Ad Joined.
      * 
      */
-    @SerializedName("isAzureAdJoined")
+    @SerializedName(value = "isAzureAdJoined", alternate = {"IsAzureAdJoined"})
     @Expose
     public Boolean isAzureAdJoined;
 
@@ -69,7 +69,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Is Azure Ad Registered.
      * 
      */
-    @SerializedName("isAzureAdRegistered")
+    @SerializedName(value = "isAzureAdRegistered", alternate = {"IsAzureAdRegistered"})
     @Expose
     public Boolean isAzureAdRegistered;
 
@@ -77,7 +77,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Is Hybrid Azure Domain Joined.
      * 
      */
-    @SerializedName("isHybridAzureDomainJoined")
+    @SerializedName(value = "isHybridAzureDomainJoined", alternate = {"IsHybridAzureDomainJoined"})
     @Expose
     public Boolean isHybridAzureDomainJoined;
 
@@ -85,7 +85,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Last Seen Date Time.
      * 
      */
-    @SerializedName("lastSeenDateTime")
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
     public java.util.Calendar lastSeenDateTime;
 
@@ -93,7 +93,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Logon Users.
      * 
      */
-    @SerializedName("logonUsers")
+    @SerializedName(value = "logonUsers", alternate = {"LogonUsers"})
     @Expose
     public java.util.List<LogonUser> logonUsers;
 
@@ -101,7 +101,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Net Bios Name.
      * 
      */
-    @SerializedName("netBiosName")
+    @SerializedName(value = "netBiosName", alternate = {"NetBiosName"})
     @Expose
     public String netBiosName;
 
@@ -109,7 +109,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Network Interfaces.
      * 
      */
-    @SerializedName("networkInterfaces")
+    @SerializedName(value = "networkInterfaces", alternate = {"NetworkInterfaces"})
     @Expose
     public java.util.List<NetworkInterface> networkInterfaces;
 
@@ -117,7 +117,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Os.
      * 
      */
-    @SerializedName("os")
+    @SerializedName(value = "os", alternate = {"Os"})
     @Expose
     public String os;
 
@@ -125,7 +125,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Os Version.
      * 
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -133,7 +133,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Parent Host.
      * 
      */
-    @SerializedName("parentHost")
+    @SerializedName(value = "parentHost", alternate = {"ParentHost"})
     @Expose
     public String parentHost;
 
@@ -141,7 +141,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Related Host Ids.
      * 
      */
-    @SerializedName("relatedHostIds")
+    @SerializedName(value = "relatedHostIds", alternate = {"RelatedHostIds"})
     @Expose
     public java.util.List<String> relatedHostIds;
 
@@ -149,7 +149,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -157,7 +157,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -165,7 +165,7 @@ public class HostSecurityProfile extends Entity implements IJsonBackedObject {
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

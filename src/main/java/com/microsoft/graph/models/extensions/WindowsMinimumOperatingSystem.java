@@ -35,7 +35,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_0.
      * Windows version 10.0 or later.
      */
-    @SerializedName("v10_0")
+    @SerializedName(value = "v10_0", alternate = {"V10_0"})
     @Expose
     public Boolean v10_0;
 
@@ -43,7 +43,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_1607.
      * Windows 10 1607 or later.
      */
-    @SerializedName("v10_1607")
+    @SerializedName(value = "v10_1607", alternate = {"V10_1607"})
     @Expose
     public Boolean v10_1607;
 
@@ -51,7 +51,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_1703.
      * Windows 10 1703 or later.
      */
-    @SerializedName("v10_1703")
+    @SerializedName(value = "v10_1703", alternate = {"V10_1703"})
     @Expose
     public Boolean v10_1703;
 
@@ -59,7 +59,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_1709.
      * Windows 10 1709 or later.
      */
-    @SerializedName("v10_1709")
+    @SerializedName(value = "v10_1709", alternate = {"V10_1709"})
     @Expose
     public Boolean v10_1709;
 
@@ -67,7 +67,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_1803.
      * Windows 10 1803 or later.
      */
-    @SerializedName("v10_1803")
+    @SerializedName(value = "v10_1803", alternate = {"V10_1803"})
     @Expose
     public Boolean v10_1803;
 
@@ -75,7 +75,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_1809.
      * Windows 10 1809 or later.
      */
-    @SerializedName("v10_1809")
+    @SerializedName(value = "v10_1809", alternate = {"V10_1809"})
     @Expose
     public Boolean v10_1809;
 
@@ -83,7 +83,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_1903.
      * Windows 10 1903 or later.
      */
-    @SerializedName("v10_1903")
+    @SerializedName(value = "v10_1903", alternate = {"V10_1903"})
     @Expose
     public Boolean v10_1903;
 
@@ -91,7 +91,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V8_0.
      * Windows version 8.0 or later.
      */
-    @SerializedName("v8_0")
+    @SerializedName(value = "v8_0", alternate = {"V8_0"})
     @Expose
     public Boolean v8_0;
 
@@ -99,7 +99,7 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
      * The V8_1.
      * Windows version 8.1 or later.
      */
-    @SerializedName("v8_1")
+    @SerializedName(value = "v8_1", alternate = {"V8_1"})
     @Expose
     public Boolean v8_1;
 

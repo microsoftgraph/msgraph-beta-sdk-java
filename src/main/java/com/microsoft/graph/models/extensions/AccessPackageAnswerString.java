@@ -26,7 +26,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements IJ
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

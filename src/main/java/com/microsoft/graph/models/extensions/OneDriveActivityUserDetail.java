@@ -26,7 +26,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Assigned Products.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName(value = "assignedProducts", alternate = {"AssignedProducts"})
     @Expose
     public java.util.List<String> assignedProducts;
 
@@ -34,7 +34,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -42,7 +42,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -50,7 +50,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -58,7 +58,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -74,7 +74,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Shared Externally File Count.
      * 
      */
-    @SerializedName("sharedExternallyFileCount")
+    @SerializedName(value = "sharedExternallyFileCount", alternate = {"SharedExternallyFileCount"})
     @Expose
     public Long sharedExternallyFileCount;
 
@@ -82,7 +82,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Shared Internally File Count.
      * 
      */
-    @SerializedName("sharedInternallyFileCount")
+    @SerializedName(value = "sharedInternallyFileCount", alternate = {"SharedInternallyFileCount"})
     @Expose
     public Long sharedInternallyFileCount;
 
@@ -90,7 +90,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Synced File Count.
      * 
      */
-    @SerializedName("syncedFileCount")
+    @SerializedName(value = "syncedFileCount", alternate = {"SyncedFileCount"})
     @Expose
     public Long syncedFileCount;
 
@@ -98,7 +98,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -106,7 +106,7 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
      * The Viewed Or Edited File Count.
      * 
      */
-    @SerializedName("viewedOrEditedFileCount")
+    @SerializedName(value = "viewedOrEditedFileCount", alternate = {"ViewedOrEditedFileCount"})
     @Expose
     public Long viewedOrEditedFileCount;
 

@@ -26,7 +26,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * The Supported Extensions.
      * Acceptable file extensions to upload for this setting
      */
-    @SerializedName("supportedExtensions")
+    @SerializedName(value = "supportedExtensions", alternate = {"SupportedExtensions"})
     @Expose
     public java.util.List<String> supportedExtensions;
 

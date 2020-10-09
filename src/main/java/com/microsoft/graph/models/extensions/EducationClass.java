@@ -39,7 +39,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Class Code.
      * Class code used by the school to identify the class.
      */
-    @SerializedName("classCode")
+    @SerializedName(value = "classCode", alternate = {"ClassCode"})
     @Expose
     public String classCode;
 
@@ -47,7 +47,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Course.
      * 
      */
-    @SerializedName("course")
+    @SerializedName(value = "course", alternate = {"Course"})
     @Expose
     public EducationCourse course;
 
@@ -55,7 +55,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Created By.
      * Entity who created the class
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -63,7 +63,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the class.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -71,7 +71,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Name of the class.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -79,7 +79,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The External Id.
      * ID of the class from the syncing system.
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -87,7 +87,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The External Name.
      * Name of the class in the syncing system.
      */
-    @SerializedName("externalName")
+    @SerializedName(value = "externalName", alternate = {"ExternalName"})
     @Expose
     public String externalName;
 
@@ -95,7 +95,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The External Source.
      * How this class was created. The possible values are: sis, manual, unknownFutureValue.
      */
-    @SerializedName("externalSource")
+    @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
     public EducationExternalSource externalSource;
 
@@ -103,7 +103,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The External Source Detail.
      * 
      */
-    @SerializedName("externalSourceDetail")
+    @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
     @Expose
     public String externalSourceDetail;
 
@@ -111,7 +111,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Grade.
      * 
      */
-    @SerializedName("grade")
+    @SerializedName(value = "grade", alternate = {"Grade"})
     @Expose
     public String grade;
 
@@ -119,7 +119,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Mail Nickname.
      * Mail name for sending email to all members, if this is enabled.
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -127,7 +127,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Term.
      * Term for this class.
      */
-    @SerializedName("term")
+    @SerializedName(value = "term", alternate = {"Term"})
     @Expose
     public EducationTerm term;
 
@@ -135,7 +135,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Assignment Categories.
      * 
      */
-    @SerializedName("assignmentCategories")
+    @SerializedName(value = "assignmentCategories", alternate = {"AssignmentCategories"})
     @Expose
     public EducationCategoryCollectionPage assignmentCategories;
 
@@ -143,7 +143,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Assignments.
      * 
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public EducationAssignmentCollectionPage assignments;
 
@@ -151,7 +151,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Group.
      * The directory group corresponding to this class.
      */
-    @SerializedName("group")
+    @SerializedName(value = "group", alternate = {"Group"})
     @Expose
     public Group group;
 

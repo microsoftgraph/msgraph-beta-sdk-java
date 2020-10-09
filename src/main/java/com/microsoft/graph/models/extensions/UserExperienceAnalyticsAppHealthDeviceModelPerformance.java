@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * The Active Device Count.
      * The number of active devices for the model. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("activeDeviceCount")
+    @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
     public Integer activeDeviceCount;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * The Device Manufacturer.
      * The manufacturer name of the device.
      */
-    @SerializedName("deviceManufacturer")
+    @SerializedName(value = "deviceManufacturer", alternate = {"DeviceManufacturer"})
     @Expose
     public String deviceManufacturer;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * The Device Model.
      * The model name of the device.
      */
-    @SerializedName("deviceModel")
+    @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
     public String deviceModel;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * The Mean Time To Failure In Minutes.
      * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("meanTimeToFailureInMinutes")
+    @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
     public Integer meanTimeToFailureInMinutes;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * The Model App Health Score.
      * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
-    @SerializedName("modelAppHealthScore")
+    @SerializedName(value = "modelAppHealthScore", alternate = {"ModelAppHealthScore"})
     @Expose
     public Double modelAppHealthScore;
 
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * The Model App Health Status.
      * The overall app health status of the device model.
      */
-    @SerializedName("modelAppHealthStatus")
+    @SerializedName(value = "modelAppHealthStatus", alternate = {"ModelAppHealthStatus"})
     @Expose
     public String modelAppHealthStatus;
 

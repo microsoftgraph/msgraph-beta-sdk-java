@@ -29,7 +29,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Connect Automatically.
      * Specify whether the wifi connection should connect automatically when in range.
      */
-    @SerializedName("connectAutomatically")
+    @SerializedName(value = "connectAutomatically", alternate = {"ConnectAutomatically"})
     @Expose
     public Boolean connectAutomatically;
 
@@ -37,7 +37,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Connect To Preferred Network.
      * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
      */
-    @SerializedName("connectToPreferredNetwork")
+    @SerializedName(value = "connectToPreferredNetwork", alternate = {"ConnectToPreferredNetwork"})
     @Expose
     public Boolean connectToPreferredNetwork;
 
@@ -45,7 +45,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Connect When Network Name Is Hidden.
      * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
      */
-    @SerializedName("connectWhenNetworkNameIsHidden")
+    @SerializedName(value = "connectWhenNetworkNameIsHidden", alternate = {"ConnectWhenNetworkNameIsHidden"})
     @Expose
     public Boolean connectWhenNetworkNameIsHidden;
 
@@ -53,7 +53,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Force FIPSCompliance.
      * Specify whether to force FIPS compliance.
      */
-    @SerializedName("forceFIPSCompliance")
+    @SerializedName(value = "forceFIPSCompliance", alternate = {"ForceFIPSCompliance"})
     @Expose
     public Boolean forceFIPSCompliance;
 
@@ -61,7 +61,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Metered Connection Limit.
      * Specify the metered connection limit type for the wifi connection.
      */
-    @SerializedName("meteredConnectionLimit")
+    @SerializedName(value = "meteredConnectionLimit", alternate = {"MeteredConnectionLimit"})
     @Expose
     public MeteredConnectionLimitType meteredConnectionLimit;
 
@@ -69,7 +69,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Network Name.
      * Specify the network configuration name.
      */
-    @SerializedName("networkName")
+    @SerializedName(value = "networkName", alternate = {"NetworkName"})
     @Expose
     public String networkName;
 
@@ -77,7 +77,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Pre Shared Key.
      * This is the pre-shared key for WPA Personal Wi-Fi network.
      */
-    @SerializedName("preSharedKey")
+    @SerializedName(value = "preSharedKey", alternate = {"PreSharedKey"})
     @Expose
     public String preSharedKey;
 
@@ -85,7 +85,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Proxy Automatic Configuration Url.
      * Specify the URL for the proxy server configuration script.
      */
-    @SerializedName("proxyAutomaticConfigurationUrl")
+    @SerializedName(value = "proxyAutomaticConfigurationUrl", alternate = {"ProxyAutomaticConfigurationUrl"})
     @Expose
     public String proxyAutomaticConfigurationUrl;
 
@@ -93,7 +93,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Proxy Manual Address.
      * Specify the IP address for the proxy server.
      */
-    @SerializedName("proxyManualAddress")
+    @SerializedName(value = "proxyManualAddress", alternate = {"ProxyManualAddress"})
     @Expose
     public String proxyManualAddress;
 
@@ -101,7 +101,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Proxy Manual Port.
      * Specify the port for the proxy server.
      */
-    @SerializedName("proxyManualPort")
+    @SerializedName(value = "proxyManualPort", alternate = {"ProxyManualPort"})
     @Expose
     public Integer proxyManualPort;
 
@@ -109,7 +109,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Proxy Setting.
      * Specify the proxy setting for Wi-Fi configuration
      */
-    @SerializedName("proxySetting")
+    @SerializedName(value = "proxySetting", alternate = {"ProxySetting"})
     @Expose
     public WiFiProxySetting proxySetting;
 
@@ -117,7 +117,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Ssid.
      * Specify the SSID of the wifi connection.
      */
-    @SerializedName("ssid")
+    @SerializedName(value = "ssid", alternate = {"Ssid"})
     @Expose
     public String ssid;
 
@@ -125,7 +125,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
      * The Wifi Security Type.
      * Specify the Wifi Security Type.
      */
-    @SerializedName("wifiSecurityType")
+    @SerializedName(value = "wifiSecurityType", alternate = {"WifiSecurityType"})
     @Expose
     public WiFiSecurityType wifiSecurityType;
 

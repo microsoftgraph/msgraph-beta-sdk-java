@@ -39,7 +39,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Compliance State.
      * Managed Device ComplianceStatus
      */
-    @SerializedName("complianceState")
+    @SerializedName(value = "complianceState", alternate = {"ComplianceState"})
     @Expose
     public ComplianceStatus complianceState;
 
@@ -47,7 +47,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Device Compliance Policy Id.
      * Device Compliance PolicyId
      */
-    @SerializedName("deviceCompliancePolicyId")
+    @SerializedName(value = "deviceCompliancePolicyId", alternate = {"DeviceCompliancePolicyId"})
     @Expose
     public String deviceCompliancePolicyId;
 
@@ -55,7 +55,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Device Compliance Policy Name.
      * Device Compliance Policy Name
      */
-    @SerializedName("deviceCompliancePolicyName")
+    @SerializedName(value = "deviceCompliancePolicyName", alternate = {"DeviceCompliancePolicyName"})
     @Expose
     public String deviceCompliancePolicyName;
 
@@ -63,7 +63,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Device Type.
      * Managed Device Device Type
      */
-    @SerializedName("deviceType")
+    @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
     public DeviceType deviceType;
 
@@ -71,7 +71,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Id.
      * Key of the entity.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -79,7 +79,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Managed Device Id.
      * Managed DeviceId
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 
@@ -87,7 +87,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Managed Device Name.
      * Managed Device Name
      */
-    @SerializedName("managedDeviceName")
+    @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
     public String managedDeviceName;
 
@@ -95,7 +95,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Management Agent.
      * Managed Device ManagementAgentType
      */
-    @SerializedName("managementAgent")
+    @SerializedName(value = "managementAgent", alternate = {"ManagementAgent"})
     @Expose
     public ManagementAgentType managementAgent;
 
@@ -103,7 +103,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Owner Type.
      * Managed Device ManagedDeviceOwnerType
      */
-    @SerializedName("ownerType")
+    @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
     public ManagedDeviceOwnerType ownerType;
 
@@ -111,7 +111,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Retire After Date Time.
      * Managed Device Retire After DateTime
      */
-    @SerializedName("retireAfterDateTime")
+    @SerializedName(value = "retireAfterDateTime", alternate = {"RetireAfterDateTime"})
     @Expose
     public java.util.Calendar retireAfterDateTime;
 
@@ -119,7 +119,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 

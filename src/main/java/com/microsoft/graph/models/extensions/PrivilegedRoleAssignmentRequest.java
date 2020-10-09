@@ -28,7 +28,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Assignment State.
      * 
      */
-    @SerializedName("assignmentState")
+    @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
     public String assignmentState;
 
@@ -36,7 +36,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public String duration;
 
@@ -44,7 +44,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 
@@ -52,7 +52,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Requested Date Time.
      * 
      */
-    @SerializedName("requestedDateTime")
+    @SerializedName(value = "requestedDateTime", alternate = {"RequestedDateTime"})
     @Expose
     public java.util.Calendar requestedDateTime;
 
@@ -60,7 +60,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Role Id.
      * 
      */
-    @SerializedName("roleId")
+    @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
     public String roleId;
 
@@ -68,7 +68,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public GovernanceSchedule schedule;
 
@@ -76,7 +76,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -84,7 +84,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Ticket Number.
      * 
      */
-    @SerializedName("ticketNumber")
+    @SerializedName(value = "ticketNumber", alternate = {"TicketNumber"})
     @Expose
     public String ticketNumber;
 
@@ -92,7 +92,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Ticket System.
      * 
      */
-    @SerializedName("ticketSystem")
+    @SerializedName(value = "ticketSystem", alternate = {"TicketSystem"})
     @Expose
     public String ticketSystem;
 
@@ -100,7 +100,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -108,7 +108,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -116,7 +116,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
      * The Role Info.
      * 
      */
-    @SerializedName("roleInfo")
+    @SerializedName(value = "roleInfo", alternate = {"RoleInfo"})
     @Expose
     public PrivilegedRole roleInfo;
 

@@ -36,7 +36,7 @@ public class ApprovalSettings implements IJsonBackedObject {
      * The Approval Mode.
      * 
      */
-    @SerializedName("approvalMode")
+    @SerializedName(value = "approvalMode", alternate = {"ApprovalMode"})
     @Expose
     public String approvalMode;
 
@@ -44,7 +44,7 @@ public class ApprovalSettings implements IJsonBackedObject {
      * The Approval Stages.
      * 
      */
-    @SerializedName("approvalStages")
+    @SerializedName(value = "approvalStages", alternate = {"ApprovalStages"})
     @Expose
     public java.util.List<ApprovalStage> approvalStages;
 
@@ -52,7 +52,7 @@ public class ApprovalSettings implements IJsonBackedObject {
      * The Is Approval Required.
      * 
      */
-    @SerializedName("isApprovalRequired")
+    @SerializedName(value = "isApprovalRequired", alternate = {"IsApprovalRequired"})
     @Expose
     public Boolean isApprovalRequired;
 
@@ -60,7 +60,7 @@ public class ApprovalSettings implements IJsonBackedObject {
      * The Is Approval Required For Extension.
      * 
      */
-    @SerializedName("isApprovalRequiredForExtension")
+    @SerializedName(value = "isApprovalRequiredForExtension", alternate = {"IsApprovalRequiredForExtension"})
     @Expose
     public Boolean isApprovalRequiredForExtension;
 
@@ -68,7 +68,7 @@ public class ApprovalSettings implements IJsonBackedObject {
      * The Is Requestor Justification Required.
      * 
      */
-    @SerializedName("isRequestorJustificationRequired")
+    @SerializedName(value = "isRequestorJustificationRequired", alternate = {"IsRequestorJustificationRequired"})
     @Expose
     public Boolean isRequestorJustificationRequired;
 

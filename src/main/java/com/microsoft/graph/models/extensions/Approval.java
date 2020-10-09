@@ -28,7 +28,7 @@ public class Approval extends Entity implements IJsonBackedObject {
      * The Completed Steps.
      * 
      */
-    @SerializedName("completedSteps")
+    @SerializedName(value = "completedSteps", alternate = {"CompletedSteps"})
     @Expose
     public ApprovalStepCollectionPage completedSteps;
 
@@ -36,7 +36,7 @@ public class Approval extends Entity implements IJsonBackedObject {
      * The Pending Steps.
      * 
      */
-    @SerializedName("pendingSteps")
+    @SerializedName(value = "pendingSteps", alternate = {"PendingSteps"})
     @Expose
     public ApprovalStepCollectionPage pendingSteps;
 

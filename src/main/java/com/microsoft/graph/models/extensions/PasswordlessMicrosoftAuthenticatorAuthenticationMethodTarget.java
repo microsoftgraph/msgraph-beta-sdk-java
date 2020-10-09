@@ -27,7 +27,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodTarget extend
      * The Shown Context.
      * 
      */
-    @SerializedName("shownContext")
+    @SerializedName(value = "shownContext", alternate = {"ShownContext"})
     @Expose
     public EnumSet<AuthenticatorAppContextType> shownContext;
 

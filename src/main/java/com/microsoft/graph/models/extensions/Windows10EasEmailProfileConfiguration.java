@@ -29,7 +29,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Account Name.
      * Account name.
      */
-    @SerializedName("accountName")
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
     public String accountName;
 
@@ -37,7 +37,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Duration Of Email To Sync.
      * Duration of email to sync.
      */
-    @SerializedName("durationOfEmailToSync")
+    @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
     public EmailSyncDuration durationOfEmailToSync;
 
@@ -45,7 +45,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Email Address Source.
      * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("emailAddressSource")
+    @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
     public UserEmailSource emailAddressSource;
 
@@ -53,7 +53,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Email Sync Schedule.
      * Email sync schedule.
      */
-    @SerializedName("emailSyncSchedule")
+    @SerializedName(value = "emailSyncSchedule", alternate = {"EmailSyncSchedule"})
     @Expose
     public EmailSyncSchedule emailSyncSchedule;
 
@@ -61,7 +61,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Host Name.
      * Exchange location that (URL) that the native mail app connects to.
      */
-    @SerializedName("hostName")
+    @SerializedName(value = "hostName", alternate = {"HostName"})
     @Expose
     public String hostName;
 
@@ -69,7 +69,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Require Ssl.
      * Indicates whether or not to use SSL.
      */
-    @SerializedName("requireSsl")
+    @SerializedName(value = "requireSsl", alternate = {"RequireSsl"})
     @Expose
     public Boolean requireSsl;
 
@@ -77,7 +77,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Sync Calendar.
      * Whether or not to sync the calendar.
      */
-    @SerializedName("syncCalendar")
+    @SerializedName(value = "syncCalendar", alternate = {"SyncCalendar"})
     @Expose
     public Boolean syncCalendar;
 
@@ -85,7 +85,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Sync Contacts.
      * Whether or not to sync contacts.
      */
-    @SerializedName("syncContacts")
+    @SerializedName(value = "syncContacts", alternate = {"SyncContacts"})
     @Expose
     public Boolean syncContacts;
 
@@ -93,7 +93,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * The Sync Tasks.
      * Whether or not to sync tasks.
      */
-    @SerializedName("syncTasks")
+    @SerializedName(value = "syncTasks", alternate = {"SyncTasks"})
     @Expose
     public Boolean syncTasks;
 

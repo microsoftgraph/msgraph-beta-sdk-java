@@ -37,7 +37,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Hybrid Agent Updater Configuration.
      * 
      */
-    @SerializedName("hybridAgentUpdaterConfiguration")
+    @SerializedName(value = "hybridAgentUpdaterConfiguration", alternate = {"HybridAgentUpdaterConfiguration"})
     @Expose
     public HybridAgentUpdaterConfiguration hybridAgentUpdaterConfiguration;
 
@@ -45,7 +45,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -53,7 +53,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Agent Groups.
      * 
      */
-    @SerializedName("agentGroups")
+    @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose
     public OnPremisesAgentGroupCollectionPage agentGroups;
 
@@ -61,7 +61,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Agents.
      * 
      */
-    @SerializedName("agents")
+    @SerializedName(value = "agents", alternate = {"Agents"})
     @Expose
     public OnPremisesAgentCollectionPage agents;
 
@@ -69,7 +69,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Connector Groups.
      * 
      */
-    @SerializedName("connectorGroups")
+    @SerializedName(value = "connectorGroups", alternate = {"ConnectorGroups"})
     @Expose
     public ConnectorGroupCollectionPage connectorGroups;
 
@@ -77,7 +77,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Connectors.
      * 
      */
-    @SerializedName("connectors")
+    @SerializedName(value = "connectors", alternate = {"Connectors"})
     @Expose
     public ConnectorCollectionPage connectors;
 
@@ -85,7 +85,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Published Resources.
      * 
      */
-    @SerializedName("publishedResources")
+    @SerializedName(value = "publishedResources", alternate = {"PublishedResources"})
     @Expose
     public PublishedResourceCollectionPage publishedResources;
 

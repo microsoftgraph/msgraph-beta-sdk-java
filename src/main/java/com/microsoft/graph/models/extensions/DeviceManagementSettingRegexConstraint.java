@@ -26,7 +26,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * The Regex.
      * The RegEx pattern to match against
      */
-    @SerializedName("regex")
+    @SerializedName(value = "regex", alternate = {"Regex"})
     @Expose
     public String regex;
 

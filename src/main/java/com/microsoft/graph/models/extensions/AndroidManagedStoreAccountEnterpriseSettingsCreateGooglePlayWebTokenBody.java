@@ -22,7 +22,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebToke
      * The parent Uri.
      * 
      */
-    @SerializedName("parentUri")
+    @SerializedName(value = "parentUri", alternate = {"ParentUri"})
     @Expose
     public String parentUri;
 

@@ -27,7 +27,7 @@ public class MetadataAction extends InformationProtectionAction implements IJson
      * The Metadata To Add.
      * 
      */
-    @SerializedName("metadataToAdd")
+    @SerializedName(value = "metadataToAdd", alternate = {"MetadataToAdd"})
     @Expose
     public java.util.List<KeyValuePair> metadataToAdd;
 
@@ -35,7 +35,7 @@ public class MetadataAction extends InformationProtectionAction implements IJson
      * The Metadata To Remove.
      * 
      */
-    @SerializedName("metadataToRemove")
+    @SerializedName(value = "metadataToRemove", alternate = {"MetadataToRemove"})
     @Expose
     public java.util.List<String> metadataToRemove;
 

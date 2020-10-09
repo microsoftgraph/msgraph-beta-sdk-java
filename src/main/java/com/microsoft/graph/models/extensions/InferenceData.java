@@ -35,7 +35,7 @@ public class InferenceData implements IJsonBackedObject {
      * The Confidence Score.
      * 
      */
-    @SerializedName("confidenceScore")
+    @SerializedName(value = "confidenceScore", alternate = {"ConfidenceScore"})
     @Expose
     public Double confidenceScore;
 
@@ -43,7 +43,7 @@ public class InferenceData implements IJsonBackedObject {
      * The User Has Verified Accuracy.
      * 
      */
-    @SerializedName("userHasVerifiedAccuracy")
+    @SerializedName(value = "userHasVerifiedAccuracy", alternate = {"UserHasVerifiedAccuracy"})
     @Expose
     public Boolean userHasVerifiedAccuracy;
 

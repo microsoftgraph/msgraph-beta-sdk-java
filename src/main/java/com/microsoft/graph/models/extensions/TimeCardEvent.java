@@ -36,7 +36,7 @@ public class TimeCardEvent implements IJsonBackedObject {
      * The At Approved Location.
      * 
      */
-    @SerializedName("atApprovedLocation")
+    @SerializedName(value = "atApprovedLocation", alternate = {"AtApprovedLocation"})
     @Expose
     public Boolean atApprovedLocation;
 
@@ -44,7 +44,7 @@ public class TimeCardEvent implements IJsonBackedObject {
      * The Date Time.
      * 
      */
-    @SerializedName("dateTime")
+    @SerializedName(value = "dateTime", alternate = {"DateTime"})
     @Expose
     public java.util.Calendar dateTime;
 
@@ -52,7 +52,7 @@ public class TimeCardEvent implements IJsonBackedObject {
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public ItemBody notes;
 

@@ -26,7 +26,7 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
      * The Values.
      * A collection of non-empty strings for the associated presentation.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<String> values;
 

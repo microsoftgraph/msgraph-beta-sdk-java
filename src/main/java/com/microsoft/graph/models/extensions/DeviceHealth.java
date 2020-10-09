@@ -35,7 +35,7 @@ public class DeviceHealth implements IJsonBackedObject {
      * The Last Connection Time.
      * 
      */
-    @SerializedName("lastConnectionTime")
+    @SerializedName(value = "lastConnectionTime", alternate = {"LastConnectionTime"})
     @Expose
     public java.util.Calendar lastConnectionTime;
 

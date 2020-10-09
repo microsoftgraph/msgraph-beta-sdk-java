@@ -22,7 +22,7 @@ public class DeviceConfigurationAssignedAccessMultiModeProfilesBody {
      * The assigned Access Multi Mode Profiles.
      * 
      */
-    @SerializedName("assignedAccessMultiModeProfiles")
+    @SerializedName(value = "assignedAccessMultiModeProfiles", alternate = {"AssignedAccessMultiModeProfiles"})
     @Expose
     public java.util.List<WindowsAssignedAccessProfile> assignedAccessMultiModeProfiles;
 

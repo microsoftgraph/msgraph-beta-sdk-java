@@ -36,7 +36,7 @@ public class Compliance implements IJsonBackedObject {
      * The Ediscovery.
      * 
      */
-    @SerializedName("ediscovery")
+    @SerializedName(value = "ediscovery", alternate = {"Ediscovery"})
     @Expose
     public Ediscovery ediscovery;
 

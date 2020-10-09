@@ -26,7 +26,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      * The Enable Expedited Checkin.
      * Gets or sets whether to enable expedited device check-ins.
      */
-    @SerializedName("enableExpeditedCheckin")
+    @SerializedName(value = "enableExpeditedCheckin", alternate = {"EnableExpeditedCheckin"})
     @Expose
     public Boolean enableExpeditedCheckin;
 

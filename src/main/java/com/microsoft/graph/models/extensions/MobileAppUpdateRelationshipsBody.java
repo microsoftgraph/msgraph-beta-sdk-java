@@ -22,7 +22,7 @@ public class MobileAppUpdateRelationshipsBody {
      * The relationships.
      * 
      */
-    @SerializedName("relationships")
+    @SerializedName(value = "relationships", alternate = {"Relationships"})
     @Expose
     public java.util.List<MobileAppRelationship> relationships;
 

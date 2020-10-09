@@ -36,7 +36,7 @@ public class Windows10AssociatedApps implements IJsonBackedObject {
      * The App Type.
      * Application type.
      */
-    @SerializedName("appType")
+    @SerializedName(value = "appType", alternate = {"AppType"})
     @Expose
     public Windows10AppType appType;
 
@@ -44,7 +44,7 @@ public class Windows10AssociatedApps implements IJsonBackedObject {
      * The Identifier.
      * Identifier.
      */
-    @SerializedName("identifier")
+    @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
     public String identifier;
 

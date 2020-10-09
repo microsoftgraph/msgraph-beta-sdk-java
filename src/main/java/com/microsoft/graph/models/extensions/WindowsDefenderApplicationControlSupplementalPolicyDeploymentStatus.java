@@ -28,7 +28,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Deployment Status.
      * The deployment state of the policy.
      */
-    @SerializedName("deploymentStatus")
+    @SerializedName(value = "deploymentStatus", alternate = {"DeploymentStatus"})
     @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyStatuses deploymentStatus;
 
@@ -36,7 +36,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Device Id.
      * Device ID.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -44,7 +44,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Device Name.
      * Device name.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -52,7 +52,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Last Sync Date Time.
      * Last sync date time.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -60,7 +60,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Os Description.
      * Windows OS Version Description.
      */
-    @SerializedName("osDescription")
+    @SerializedName(value = "osDescription", alternate = {"OsDescription"})
     @Expose
     public String osDescription;
 
@@ -68,7 +68,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Os Version.
      * Windows OS Version.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -76,7 +76,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Policy Version.
      * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("policyVersion")
+    @SerializedName(value = "policyVersion", alternate = {"PolicyVersion"})
     @Expose
     public String policyVersion;
 
@@ -84,7 +84,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The User Name.
      * The name of the user of this device.
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -92,7 +92,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The User Principal Name.
      * User Principal Name.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -100,7 +100,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The Policy.
      * The navigation link to the WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("policy")
+    @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose
     public WindowsDefenderApplicationControlSupplementalPolicy policy;
 

@@ -26,7 +26,7 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
      * The Value.
      * A string value for the associated presentation.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

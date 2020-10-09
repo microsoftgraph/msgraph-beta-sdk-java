@@ -26,7 +26,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements IJson
      * The After Hours.
      * 
      */
-    @SerializedName("afterHours")
+    @SerializedName(value = "afterHours", alternate = {"AfterHours"})
     @Expose
     public javax.xml.datatype.Duration afterHours;
 
@@ -34,7 +34,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements IJson
      * The Read Email.
      * 
      */
-    @SerializedName("readEmail")
+    @SerializedName(value = "readEmail", alternate = {"ReadEmail"})
     @Expose
     public javax.xml.datatype.Duration readEmail;
 
@@ -42,7 +42,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements IJson
      * The Sent Email.
      * 
      */
-    @SerializedName("sentEmail")
+    @SerializedName(value = "sentEmail", alternate = {"SentEmail"})
     @Expose
     public javax.xml.datatype.Duration sentEmail;
 

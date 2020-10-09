@@ -22,7 +22,7 @@ public class DirectoryObjectGetUserOwnedObjectsBody {
      * The user Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -30,7 +30,7 @@ public class DirectoryObjectGetUserOwnedObjectsBody {
      * The type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

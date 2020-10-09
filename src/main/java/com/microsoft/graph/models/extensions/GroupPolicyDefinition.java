@@ -32,7 +32,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Category Path.
      * The localized full category path for the policy.
      */
-    @SerializedName("categoryPath")
+    @SerializedName(value = "categoryPath", alternate = {"CategoryPath"})
     @Expose
     public String categoryPath;
 
@@ -40,7 +40,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Class Type.
      * Identifies the type of groups the policy can be applied to.
      */
-    @SerializedName("classType")
+    @SerializedName(value = "classType", alternate = {"ClassType"})
     @Expose
     public GroupPolicyDefinitionClassType classType;
 
@@ -48,7 +48,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The localized policy name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -56,7 +56,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Explain Text.
      * The localized explanation or help text associated with the policy. The default value is empty.
      */
-    @SerializedName("explainText")
+    @SerializedName(value = "explainText", alternate = {"ExplainText"})
     @Expose
     public String explainText;
 
@@ -64,7 +64,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Group Policy Category Id.
      * The category id of the parent category
      */
-    @SerializedName("groupPolicyCategoryId")
+    @SerializedName(value = "groupPolicyCategoryId", alternate = {"GroupPolicyCategoryId"})
     @Expose
     public java.util.UUID groupPolicyCategoryId;
 
@@ -72,7 +72,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -80,7 +80,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Policy Type.
      * Specifies the type of group policy.
      */
-    @SerializedName("policyType")
+    @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose
     public GroupPolicyType policyType;
 
@@ -88,7 +88,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Supported On.
      * Localized string used to specify what operating system or application version is affected by the policy.
      */
-    @SerializedName("supportedOn")
+    @SerializedName(value = "supportedOn", alternate = {"SupportedOn"})
     @Expose
     public String supportedOn;
 
@@ -96,7 +96,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Category.
      * The group policy category associated with the definition.
      */
-    @SerializedName("category")
+    @SerializedName(value = "category", alternate = {"Category"})
     @Expose
     public GroupPolicyCategory category;
 
@@ -104,7 +104,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Definition File.
      * The group policy file associated with the definition.
      */
-    @SerializedName("definitionFile")
+    @SerializedName(value = "definitionFile", alternate = {"DefinitionFile"})
     @Expose
     public GroupPolicyDefinitionFile definitionFile;
 
@@ -112,7 +112,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Presentations.
      * The group policy presentations associated with the definition.
      */
-    @SerializedName("presentations")
+    @SerializedName(value = "presentations", alternate = {"Presentations"})
     @Expose
     public GroupPolicyPresentationCollectionPage presentations;
 

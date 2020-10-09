@@ -27,7 +27,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * The Uwp App.
      * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
      */
-    @SerializedName("uwpApp")
+    @SerializedName(value = "uwpApp", alternate = {"UwpApp"})
     @Expose
     public WindowsKioskUWPApp uwpApp;
 

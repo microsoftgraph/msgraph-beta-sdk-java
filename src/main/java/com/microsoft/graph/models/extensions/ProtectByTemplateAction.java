@@ -26,7 +26,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * The Template Id.
      * 
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 

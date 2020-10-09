@@ -49,7 +49,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Active Modalities.
      * 
      */
-    @SerializedName("activeModalities")
+    @SerializedName(value = "activeModalities", alternate = {"ActiveModalities"})
     @Expose
     public java.util.List<Modality> activeModalities;
 
@@ -57,7 +57,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Answered By.
      * 
      */
-    @SerializedName("answeredBy")
+    @SerializedName(value = "answeredBy", alternate = {"AnsweredBy"})
     @Expose
     public ParticipantInfo answeredBy;
 
@@ -65,7 +65,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Callback Uri.
      * The callback URL on which callbacks will be delivered. Must be https.
      */
-    @SerializedName("callbackUri")
+    @SerializedName(value = "callbackUri", alternate = {"CallbackUri"})
     @Expose
     public String callbackUri;
 
@@ -73,7 +73,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Call Chain Id.
      * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      */
-    @SerializedName("callChainId")
+    @SerializedName(value = "callChainId", alternate = {"CallChainId"})
     @Expose
     public String callChainId;
 
@@ -81,7 +81,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Call Options.
      * 
      */
-    @SerializedName("callOptions")
+    @SerializedName(value = "callOptions", alternate = {"CallOptions"})
     @Expose
     public CallOptions callOptions;
 
@@ -89,7 +89,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Call Routes.
      * The routing information on how the call was retargeted. Read-only.
      */
-    @SerializedName("callRoutes")
+    @SerializedName(value = "callRoutes", alternate = {"CallRoutes"})
     @Expose
     public java.util.List<CallRoute> callRoutes;
 
@@ -97,7 +97,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Chat Info.
      * The chat information. Required information for joining a meeting.
      */
-    @SerializedName("chatInfo")
+    @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
     public ChatInfo chatInfo;
 
@@ -105,7 +105,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Direction.
      * The direction of the call. The possible value are incoming or outgoing. Read-only.
      */
-    @SerializedName("direction")
+    @SerializedName(value = "direction", alternate = {"Direction"})
     @Expose
     public CallDirection direction;
 
@@ -113,7 +113,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Incoming Context.
      * 
      */
-    @SerializedName("incomingContext")
+    @SerializedName(value = "incomingContext", alternate = {"IncomingContext"})
     @Expose
     public IncomingContext incomingContext;
 
@@ -121,7 +121,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Media Config.
      * The media configuration. Required.
      */
-    @SerializedName("mediaConfig")
+    @SerializedName(value = "mediaConfig", alternate = {"MediaConfig"})
     @Expose
     public MediaConfig mediaConfig;
 
@@ -129,7 +129,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Media State.
      * Read-only. The call media state.
      */
-    @SerializedName("mediaState")
+    @SerializedName(value = "mediaState", alternate = {"MediaState"})
     @Expose
     public CallMediaState mediaState;
 
@@ -137,7 +137,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Meeting Capability.
      * 
      */
-    @SerializedName("meetingCapability")
+    @SerializedName(value = "meetingCapability", alternate = {"MeetingCapability"})
     @Expose
     public MeetingCapability meetingCapability;
 
@@ -145,7 +145,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Meeting Info.
      * The meeting information that's required for joining a meeting.
      */
-    @SerializedName("meetingInfo")
+    @SerializedName(value = "meetingInfo", alternate = {"MeetingInfo"})
     @Expose
     public MeetingInfo meetingInfo;
 
@@ -153,7 +153,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The My Participant Id.
      * 
      */
-    @SerializedName("myParticipantId")
+    @SerializedName(value = "myParticipantId", alternate = {"MyParticipantId"})
     @Expose
     public String myParticipantId;
 
@@ -161,7 +161,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Requested Modalities.
      * 
      */
-    @SerializedName("requestedModalities")
+    @SerializedName(value = "requestedModalities", alternate = {"RequestedModalities"})
     @Expose
     public java.util.List<Modality> requestedModalities;
 
@@ -169,7 +169,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Result Info.
      * 
      */
-    @SerializedName("resultInfo")
+    @SerializedName(value = "resultInfo", alternate = {"ResultInfo"})
     @Expose
     public ResultInfo resultInfo;
 
@@ -177,7 +177,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Ringing Timeout In Seconds.
      * 
      */
-    @SerializedName("ringingTimeoutInSeconds")
+    @SerializedName(value = "ringingTimeoutInSeconds", alternate = {"RingingTimeoutInSeconds"})
     @Expose
     public Integer ringingTimeoutInSeconds;
 
@@ -185,7 +185,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Routing Policies.
      * 
      */
-    @SerializedName("routingPolicies")
+    @SerializedName(value = "routingPolicies", alternate = {"RoutingPolicies"})
     @Expose
     public java.util.List<RoutingPolicy> routingPolicies;
 
@@ -193,7 +193,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Source.
      * 
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public ParticipantInfo source;
 
@@ -201,7 +201,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public CallState state;
 
@@ -209,7 +209,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Subject.
      * 
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -217,7 +217,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Targets.
      * 
      */
-    @SerializedName("targets")
+    @SerializedName(value = "targets", alternate = {"Targets"})
     @Expose
     public java.util.List<InvitationParticipantInfo> targets;
 
@@ -225,7 +225,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Tenant Id.
      * 
      */
-    @SerializedName("tenantId")
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
     public String tenantId;
 
@@ -233,7 +233,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Termination Reason.
      * 
      */
-    @SerializedName("terminationReason")
+    @SerializedName(value = "terminationReason", alternate = {"TerminationReason"})
     @Expose
     public String terminationReason;
 
@@ -241,7 +241,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Tone Info.
      * 
      */
-    @SerializedName("toneInfo")
+    @SerializedName(value = "toneInfo", alternate = {"ToneInfo"})
     @Expose
     public ToneInfo toneInfo;
 
@@ -249,7 +249,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Transcription.
      * 
      */
-    @SerializedName("transcription")
+    @SerializedName(value = "transcription", alternate = {"Transcription"})
     @Expose
     public CallTranscriptionInfo transcription;
 
@@ -257,7 +257,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Audio Routing Groups.
      * 
      */
-    @SerializedName("audioRoutingGroups")
+    @SerializedName(value = "audioRoutingGroups", alternate = {"AudioRoutingGroups"})
     @Expose
     public AudioRoutingGroupCollectionPage audioRoutingGroups;
 
@@ -265,7 +265,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Operations.
      * Read-only. Nullable.
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public CommsOperationCollectionPage operations;
 
@@ -273,7 +273,7 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Participants.
      * Read-only. Nullable.
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public ParticipantCollectionPage participants;
 

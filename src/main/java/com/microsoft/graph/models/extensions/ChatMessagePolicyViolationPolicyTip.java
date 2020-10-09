@@ -35,7 +35,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      * The Compliance Url.
      * The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
      */
-    @SerializedName("complianceUrl")
+    @SerializedName(value = "complianceUrl", alternate = {"ComplianceUrl"})
     @Expose
     public String complianceUrl;
 
@@ -43,7 +43,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      * The General Text.
      * Explanatory text shown to the sender of the message.
      */
-    @SerializedName("generalText")
+    @SerializedName(value = "generalText", alternate = {"GeneralText"})
     @Expose
     public String generalText;
 
@@ -51,7 +51,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      * The Matched Condition Descriptions.
      * The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
      */
-    @SerializedName("matchedConditionDescriptions")
+    @SerializedName(value = "matchedConditionDescriptions", alternate = {"MatchedConditionDescriptions"})
     @Expose
     public java.util.List<String> matchedConditionDescriptions;
 

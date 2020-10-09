@@ -35,7 +35,7 @@ public class AutoReviewSettings implements IJsonBackedObject {
      * The Not Reviewed Result.
      * 
      */
-    @SerializedName("notReviewedResult")
+    @SerializedName(value = "notReviewedResult", alternate = {"NotReviewedResult"})
     @Expose
     public String notReviewedResult;
 

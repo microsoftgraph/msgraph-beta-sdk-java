@@ -35,7 +35,7 @@ public class IosBookmark implements IJsonBackedObject {
      * The Bookmark Folder.
      * The folder into which the bookmark should be added in Safari
      */
-    @SerializedName("bookmarkFolder")
+    @SerializedName(value = "bookmarkFolder", alternate = {"BookmarkFolder"})
     @Expose
     public String bookmarkFolder;
 
@@ -43,7 +43,7 @@ public class IosBookmark implements IJsonBackedObject {
      * The Display Name.
      * The display name of the bookmark
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class IosBookmark implements IJsonBackedObject {
      * The Url.
      * URL allowed to access
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

@@ -26,7 +26,7 @@ public class EncryptWithTemplate extends EncryptContent implements IJsonBackedOb
      * The Available For Encryption.
      * 
      */
-    @SerializedName("availableForEncryption")
+    @SerializedName(value = "availableForEncryption", alternate = {"AvailableForEncryption"})
     @Expose
     public Boolean availableForEncryption;
 
@@ -34,7 +34,7 @@ public class EncryptWithTemplate extends EncryptContent implements IJsonBackedOb
      * The Template Id.
      * 
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 

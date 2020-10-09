@@ -36,7 +36,7 @@ public class NetworkLocationDetail implements IJsonBackedObject {
      * The Network Names.
      * 
      */
-    @SerializedName("networkNames")
+    @SerializedName(value = "networkNames", alternate = {"NetworkNames"})
     @Expose
     public java.util.List<String> networkNames;
 
@@ -44,7 +44,7 @@ public class NetworkLocationDetail implements IJsonBackedObject {
      * The Network Type.
      * 
      */
-    @SerializedName("networkType")
+    @SerializedName(value = "networkType", alternate = {"NetworkType"})
     @Expose
     public NetworkType networkType;
 

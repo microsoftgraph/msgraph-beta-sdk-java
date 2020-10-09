@@ -36,7 +36,7 @@ public class ContentProperties implements IJsonBackedObject {
      * The Extensions.
      * 
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public java.util.List<String> extensions;
 
@@ -44,7 +44,7 @@ public class ContentProperties implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public String lastModifiedBy;
 
@@ -52,7 +52,7 @@ public class ContentProperties implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -60,7 +60,7 @@ public class ContentProperties implements IJsonBackedObject {
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public ContentMetadata metadata;
 

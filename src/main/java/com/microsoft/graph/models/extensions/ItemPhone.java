@@ -27,7 +27,7 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
      * The Number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -43,7 +43,7 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public PhoneType type;
 

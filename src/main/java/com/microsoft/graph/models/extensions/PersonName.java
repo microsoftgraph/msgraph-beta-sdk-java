@@ -27,7 +27,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The First.
      * 
      */
-    @SerializedName("first")
+    @SerializedName(value = "first", alternate = {"First"})
     @Expose
     public String first;
 
@@ -43,7 +43,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Initials.
      * 
      */
-    @SerializedName("initials")
+    @SerializedName(value = "initials", alternate = {"Initials"})
     @Expose
     public String initials;
 
@@ -51,7 +51,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Language Tag.
      * 
      */
-    @SerializedName("languageTag")
+    @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
     public String languageTag;
 
@@ -59,7 +59,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Last.
      * 
      */
-    @SerializedName("last")
+    @SerializedName(value = "last", alternate = {"Last"})
     @Expose
     public String last;
 
@@ -67,7 +67,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Maiden.
      * 
      */
-    @SerializedName("maiden")
+    @SerializedName(value = "maiden", alternate = {"Maiden"})
     @Expose
     public String maiden;
 
@@ -75,7 +75,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Middle.
      * 
      */
-    @SerializedName("middle")
+    @SerializedName(value = "middle", alternate = {"Middle"})
     @Expose
     public String middle;
 
@@ -83,7 +83,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Nickname.
      * 
      */
-    @SerializedName("nickname")
+    @SerializedName(value = "nickname", alternate = {"Nickname"})
     @Expose
     public String nickname;
 
@@ -91,7 +91,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Pronunciation.
      * 
      */
-    @SerializedName("pronunciation")
+    @SerializedName(value = "pronunciation", alternate = {"Pronunciation"})
     @Expose
     public YomiPersonName pronunciation;
 
@@ -99,7 +99,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Suffix.
      * 
      */
-    @SerializedName("suffix")
+    @SerializedName(value = "suffix", alternate = {"Suffix"})
     @Expose
     public String suffix;
 
@@ -107,7 +107,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      * The Title.
      * 
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 

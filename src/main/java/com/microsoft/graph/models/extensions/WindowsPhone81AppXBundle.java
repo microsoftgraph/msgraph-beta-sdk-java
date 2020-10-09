@@ -27,7 +27,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements IJso
      * The App XPackage Information List.
      * The list of AppX Package Information.
      */
-    @SerializedName("appXPackageInformationList")
+    @SerializedName(value = "appXPackageInformationList", alternate = {"AppXPackageInformationList"})
     @Expose
     public java.util.List<WindowsPackageInformation> appXPackageInformationList;
 

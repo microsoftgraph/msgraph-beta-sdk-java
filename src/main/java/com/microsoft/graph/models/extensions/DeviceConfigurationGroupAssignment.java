@@ -27,7 +27,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements IJsonB
      * The Exclude Group.
      * Indicates if this group is should be excluded. Defaults that the group should be included
      */
-    @SerializedName("excludeGroup")
+    @SerializedName(value = "excludeGroup", alternate = {"ExcludeGroup"})
     @Expose
     public Boolean excludeGroup;
 
@@ -35,7 +35,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements IJsonB
      * The Target Group Id.
      * The Id of the AAD group we are targeting the device configuration to.
      */
-    @SerializedName("targetGroupId")
+    @SerializedName(value = "targetGroupId", alternate = {"TargetGroupId"})
     @Expose
     public String targetGroupId;
 
@@ -43,7 +43,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements IJsonB
      * The Device Configuration.
      * The navigation link to the Device Configuration being targeted.
      */
-    @SerializedName("deviceConfiguration")
+    @SerializedName(value = "deviceConfiguration", alternate = {"DeviceConfiguration"})
     @Expose
     public DeviceConfiguration deviceConfiguration;
 

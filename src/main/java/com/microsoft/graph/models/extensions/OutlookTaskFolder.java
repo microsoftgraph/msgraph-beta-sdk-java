@@ -32,7 +32,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Change Key.
      * 
      */
-    @SerializedName("changeKey")
+    @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
     public String changeKey;
 
@@ -40,7 +40,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Is Default Folder.
      * 
      */
-    @SerializedName("isDefaultFolder")
+    @SerializedName(value = "isDefaultFolder", alternate = {"IsDefaultFolder"})
     @Expose
     public Boolean isDefaultFolder;
 
@@ -48,7 +48,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -56,7 +56,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Parent Group Key.
      * 
      */
-    @SerializedName("parentGroupKey")
+    @SerializedName(value = "parentGroupKey", alternate = {"ParentGroupKey"})
     @Expose
     public java.util.UUID parentGroupKey;
 
@@ -64,7 +64,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * 
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -72,7 +72,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * 
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
@@ -80,7 +80,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Tasks.
      * 
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public OutlookTaskCollectionPage tasks;
 

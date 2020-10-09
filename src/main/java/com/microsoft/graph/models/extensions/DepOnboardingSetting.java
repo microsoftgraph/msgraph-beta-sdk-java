@@ -33,7 +33,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Apple Identifier.
      * The Apple ID used to obtain the current token.
      */
-    @SerializedName("appleIdentifier")
+    @SerializedName(value = "appleIdentifier", alternate = {"AppleIdentifier"})
     @Expose
     public String appleIdentifier;
 
@@ -41,7 +41,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Data Sharing Consent Granted.
      * Consent granted for data sharing with Apple Dep Service
      */
-    @SerializedName("dataSharingConsentGranted")
+    @SerializedName(value = "dataSharingConsentGranted", alternate = {"DataSharingConsentGranted"})
     @Expose
     public Boolean dataSharingConsentGranted;
 
@@ -49,7 +49,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * When the service was onboarded.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -57,7 +57,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Last Successful Sync Date Time.
      * When the service last syned with Intune
      */
-    @SerializedName("lastSuccessfulSyncDateTime")
+    @SerializedName(value = "lastSuccessfulSyncDateTime", alternate = {"LastSuccessfulSyncDateTime"})
     @Expose
     public java.util.Calendar lastSuccessfulSyncDateTime;
 
@@ -65,7 +65,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Last Sync Error Code.
      * Error code reported by Apple during last dep sync.
      */
-    @SerializedName("lastSyncErrorCode")
+    @SerializedName(value = "lastSyncErrorCode", alternate = {"LastSyncErrorCode"})
     @Expose
     public Integer lastSyncErrorCode;
 
@@ -73,7 +73,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Last Sync Triggered Date Time.
      * When Intune last requested a sync.
      */
-    @SerializedName("lastSyncTriggeredDateTime")
+    @SerializedName(value = "lastSyncTriggeredDateTime", alternate = {"LastSyncTriggeredDateTime"})
     @Expose
     public java.util.Calendar lastSyncTriggeredDateTime;
 
@@ -81,7 +81,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -89,7 +89,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Share Token With School Data Sync Service.
      * Whether or not the Dep token sharing is enabled with the School Data Sync service.
      */
-    @SerializedName("shareTokenWithSchoolDataSyncService")
+    @SerializedName(value = "shareTokenWithSchoolDataSyncService", alternate = {"ShareTokenWithSchoolDataSyncService"})
     @Expose
     public Boolean shareTokenWithSchoolDataSyncService;
 
@@ -97,7 +97,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Synced Device Count.
      * Gets synced device count
      */
-    @SerializedName("syncedDeviceCount")
+    @SerializedName(value = "syncedDeviceCount", alternate = {"SyncedDeviceCount"})
     @Expose
     public Integer syncedDeviceCount;
 
@@ -105,7 +105,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Token Expiration Date Time.
      * When the token will expire.
      */
-    @SerializedName("tokenExpirationDateTime")
+    @SerializedName(value = "tokenExpirationDateTime", alternate = {"TokenExpirationDateTime"})
     @Expose
     public java.util.Calendar tokenExpirationDateTime;
 
@@ -113,7 +113,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Token Name.
      * Friendly Name for Dep Token
      */
-    @SerializedName("tokenName")
+    @SerializedName(value = "tokenName", alternate = {"TokenName"})
     @Expose
     public String tokenName;
 
@@ -121,7 +121,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Token Type.
      * Gets or sets the Dep Token Type.
      */
-    @SerializedName("tokenType")
+    @SerializedName(value = "tokenType", alternate = {"TokenType"})
     @Expose
     public DepTokenType tokenType;
 
@@ -129,7 +129,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Default Ios Enrollment Profile.
      * Default iOS Enrollment Profile
      */
-    @SerializedName("defaultIosEnrollmentProfile")
+    @SerializedName(value = "defaultIosEnrollmentProfile", alternate = {"DefaultIosEnrollmentProfile"})
     @Expose
     public DepIOSEnrollmentProfile defaultIosEnrollmentProfile;
 
@@ -137,7 +137,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Default Mac Os Enrollment Profile.
      * Default MacOs Enrollment Profile
      */
-    @SerializedName("defaultMacOsEnrollmentProfile")
+    @SerializedName(value = "defaultMacOsEnrollmentProfile", alternate = {"DefaultMacOsEnrollmentProfile"})
     @Expose
     public DepMacOSEnrollmentProfile defaultMacOsEnrollmentProfile;
 
@@ -145,7 +145,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Enrollment Profiles.
      * The enrollment profiles.
      */
-    @SerializedName("enrollmentProfiles")
+    @SerializedName(value = "enrollmentProfiles", alternate = {"EnrollmentProfiles"})
     @Expose
     public EnrollmentProfileCollectionPage enrollmentProfiles;
 
@@ -153,7 +153,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Imported Apple Device Identities.
      * The imported Apple device identities.
      */
-    @SerializedName("importedAppleDeviceIdentities")
+    @SerializedName(value = "importedAppleDeviceIdentities", alternate = {"ImportedAppleDeviceIdentities"})
     @Expose
     public ImportedAppleDeviceIdentityCollectionPage importedAppleDeviceIdentities;
 

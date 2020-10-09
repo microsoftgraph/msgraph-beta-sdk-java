@@ -35,7 +35,7 @@ public class AccessPackageLocalizedText implements IJsonBackedObject {
      * The Language Code.
      * 
      */
-    @SerializedName("languageCode")
+    @SerializedName(value = "languageCode", alternate = {"LanguageCode"})
     @Expose
     public String languageCode;
 
@@ -43,7 +43,7 @@ public class AccessPackageLocalizedText implements IJsonBackedObject {
      * The Text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public String text;
 

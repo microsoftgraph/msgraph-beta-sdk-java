@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * The Active Device Count.
      * The number of active devices for the OS version. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("activeDeviceCount")
+    @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
     public Integer activeDeviceCount;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * The Mean Time To Failure In Minutes.
      * The mean time to failure for the OS version in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("meanTimeToFailureInMinutes")
+    @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
     public Integer meanTimeToFailureInMinutes;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * The Os Build Number.
      * The OS build number installed on the device.
      */
-    @SerializedName("osBuildNumber")
+    @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
     public String osBuildNumber;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * The Os Version.
      * The OS version installed on the device.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * The Os Version App Health Score.
      * The app health score of the OS version. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
-    @SerializedName("osVersionAppHealthScore")
+    @SerializedName(value = "osVersionAppHealthScore", alternate = {"OsVersionAppHealthScore"})
     @Expose
     public Double osVersionAppHealthScore;
 
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * The Os Version App Health Status.
      * The overall app health status of the OS version.
      */
-    @SerializedName("osVersionAppHealthStatus")
+    @SerializedName(value = "osVersionAppHealthStatus", alternate = {"OsVersionAppHealthStatus"})
     @Expose
     public String osVersionAppHealthStatus;
 

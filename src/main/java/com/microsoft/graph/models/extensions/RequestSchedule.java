@@ -37,7 +37,7 @@ public class RequestSchedule implements IJsonBackedObject {
      * The Expiration.
      * 
      */
-    @SerializedName("expiration")
+    @SerializedName(value = "expiration", alternate = {"Expiration"})
     @Expose
     public ExpirationPattern expiration;
 
@@ -45,7 +45,7 @@ public class RequestSchedule implements IJsonBackedObject {
      * The Recurrence.
      * 
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public PatternedRecurrence recurrence;
 
@@ -53,7 +53,7 @@ public class RequestSchedule implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

@@ -28,7 +28,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
      * The Settings.
      * The settings this category contains
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public DeviceManagementSettingInstanceCollectionPage settings;
 

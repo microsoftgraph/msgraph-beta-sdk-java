@@ -22,7 +22,7 @@ public class GroupEvaluateDynamicMembershipBody {
      * The member Id.
      * 
      */
-    @SerializedName("memberId")
+    @SerializedName(value = "memberId", alternate = {"MemberId"})
     @Expose
     public String memberId;
 

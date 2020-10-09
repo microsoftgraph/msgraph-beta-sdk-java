@@ -64,7 +64,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Account.
      * 
      */
-    @SerializedName("account")
+    @SerializedName(value = "account", alternate = {"Account"})
     @Expose
     public UserAccountInformationCollectionPage account;
 
@@ -72,7 +72,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Addresses.
      * 
      */
-    @SerializedName("addresses")
+    @SerializedName(value = "addresses", alternate = {"Addresses"})
     @Expose
     public ItemAddressCollectionPage addresses;
 
@@ -80,7 +80,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Anniversaries.
      * 
      */
-    @SerializedName("anniversaries")
+    @SerializedName(value = "anniversaries", alternate = {"Anniversaries"})
     @Expose
     public PersonAnniversaryCollectionPage anniversaries;
 
@@ -88,7 +88,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Awards.
      * 
      */
-    @SerializedName("awards")
+    @SerializedName(value = "awards", alternate = {"Awards"})
     @Expose
     public PersonAwardCollectionPage awards;
 
@@ -96,7 +96,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Certifications.
      * 
      */
-    @SerializedName("certifications")
+    @SerializedName(value = "certifications", alternate = {"Certifications"})
     @Expose
     public PersonCertificationCollectionPage certifications;
 
@@ -104,7 +104,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Educational Activities.
      * 
      */
-    @SerializedName("educationalActivities")
+    @SerializedName(value = "educationalActivities", alternate = {"EducationalActivities"})
     @Expose
     public EducationalActivityCollectionPage educationalActivities;
 
@@ -112,7 +112,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Emails.
      * 
      */
-    @SerializedName("emails")
+    @SerializedName(value = "emails", alternate = {"Emails"})
     @Expose
     public ItemEmailCollectionPage emails;
 
@@ -120,7 +120,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Interests.
      * 
      */
-    @SerializedName("interests")
+    @SerializedName(value = "interests", alternate = {"Interests"})
     @Expose
     public PersonInterestCollectionPage interests;
 
@@ -128,7 +128,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Languages.
      * 
      */
-    @SerializedName("languages")
+    @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
     public LanguageProficiencyCollectionPage languages;
 
@@ -136,7 +136,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Names.
      * 
      */
-    @SerializedName("names")
+    @SerializedName(value = "names", alternate = {"Names"})
     @Expose
     public PersonNameCollectionPage names;
 
@@ -144,7 +144,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public PersonAnnotationCollectionPage notes;
 
@@ -152,7 +152,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Patents.
      * 
      */
-    @SerializedName("patents")
+    @SerializedName(value = "patents", alternate = {"Patents"})
     @Expose
     public ItemPatentCollectionPage patents;
 
@@ -160,7 +160,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Phones.
      * 
      */
-    @SerializedName("phones")
+    @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
     public ItemPhoneCollectionPage phones;
 
@@ -168,7 +168,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Positions.
      * 
      */
-    @SerializedName("positions")
+    @SerializedName(value = "positions", alternate = {"Positions"})
     @Expose
     public WorkPositionCollectionPage positions;
 
@@ -176,7 +176,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Projects.
      * 
      */
-    @SerializedName("projects")
+    @SerializedName(value = "projects", alternate = {"Projects"})
     @Expose
     public ProjectParticipationCollectionPage projects;
 
@@ -184,7 +184,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Publications.
      * 
      */
-    @SerializedName("publications")
+    @SerializedName(value = "publications", alternate = {"Publications"})
     @Expose
     public ItemPublicationCollectionPage publications;
 
@@ -192,7 +192,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Skills.
      * 
      */
-    @SerializedName("skills")
+    @SerializedName(value = "skills", alternate = {"Skills"})
     @Expose
     public SkillProficiencyCollectionPage skills;
 
@@ -200,7 +200,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Web Accounts.
      * 
      */
-    @SerializedName("webAccounts")
+    @SerializedName(value = "webAccounts", alternate = {"WebAccounts"})
     @Expose
     public WebAccountCollectionPage webAccounts;
 
@@ -208,7 +208,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Websites.
      * 
      */
-    @SerializedName("websites")
+    @SerializedName(value = "websites", alternate = {"Websites"})
     @Expose
     public PersonWebsiteCollectionPage websites;
 

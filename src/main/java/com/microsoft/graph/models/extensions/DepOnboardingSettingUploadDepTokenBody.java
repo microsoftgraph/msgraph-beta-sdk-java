@@ -22,7 +22,7 @@ public class DepOnboardingSettingUploadDepTokenBody {
      * The apple Id.
      * 
      */
-    @SerializedName("appleId")
+    @SerializedName(value = "appleId", alternate = {"AppleId"})
     @Expose
     public String appleId;
 
@@ -30,7 +30,7 @@ public class DepOnboardingSettingUploadDepTokenBody {
      * The dep Token.
      * 
      */
-    @SerializedName("depToken")
+    @SerializedName(value = "depToken", alternate = {"DepToken"})
     @Expose
     public String depToken;
 

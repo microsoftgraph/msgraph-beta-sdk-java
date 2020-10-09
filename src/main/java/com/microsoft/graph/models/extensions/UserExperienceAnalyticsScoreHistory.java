@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements IJson
      * The Startup Date Time.
      * The user experience analytics device startup date time.
      */
-    @SerializedName("startupDateTime")
+    @SerializedName(value = "startupDateTime", alternate = {"StartupDateTime"})
     @Expose
     public java.util.Calendar startupDateTime;
 

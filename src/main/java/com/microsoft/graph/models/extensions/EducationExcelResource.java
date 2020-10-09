@@ -26,7 +26,7 @@ public class EducationExcelResource extends EducationResource implements IJsonBa
      * The File Url.
      * 
      */
-    @SerializedName("fileUrl")
+    @SerializedName(value = "fileUrl", alternate = {"FileUrl"})
     @Expose
     public String fileUrl;
 

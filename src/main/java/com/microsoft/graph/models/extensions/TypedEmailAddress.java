@@ -27,7 +27,7 @@ public class TypedEmailAddress extends EmailAddress implements IJsonBackedObject
      * The Other Label.
      * 
      */
-    @SerializedName("otherLabel")
+    @SerializedName(value = "otherLabel", alternate = {"OtherLabel"})
     @Expose
     public String otherLabel;
 
@@ -35,7 +35,7 @@ public class TypedEmailAddress extends EmailAddress implements IJsonBackedObject
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public EmailType type;
 

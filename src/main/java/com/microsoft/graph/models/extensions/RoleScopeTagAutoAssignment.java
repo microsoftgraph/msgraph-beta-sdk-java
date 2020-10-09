@@ -27,7 +27,7 @@ public class RoleScopeTagAutoAssignment extends Entity implements IJsonBackedObj
      * The Target.
      * The auto-assignment target for the specific Role Scope Tag.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

@@ -30,7 +30,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Content.
      * The contents of the uploaded ADMX file.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public byte[] content;
 
@@ -38,7 +38,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Default Language Code.
      * The default language of the uploaded ADMX file.
      */
-    @SerializedName("defaultLanguageCode")
+    @SerializedName(value = "defaultLanguageCode", alternate = {"DefaultLanguageCode"})
     @Expose
     public String defaultLanguageCode;
 
@@ -46,7 +46,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The File Name.
      * The file name of the uploaded ADML file.
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -54,7 +54,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Group Policy Uploaded Language Files.
      * The list of ADML files associated with the uploaded ADMX file.
      */
-    @SerializedName("groupPolicyUploadedLanguageFiles")
+    @SerializedName(value = "groupPolicyUploadedLanguageFiles", alternate = {"GroupPolicyUploadedLanguageFiles"})
     @Expose
     public java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
 
@@ -62,7 +62,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Status.
      * The upload status of the uploaded ADMX file.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public GroupPolicyUploadedDefinitionFileStatus status;
 
@@ -70,7 +70,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Upload Date Time.
      * The uploaded time of the uploaded ADMX file.
      */
-    @SerializedName("uploadDateTime")
+    @SerializedName(value = "uploadDateTime", alternate = {"UploadDateTime"})
     @Expose
     public java.util.Calendar uploadDateTime;
 
@@ -78,7 +78,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Group Policy Operations.
      * The list of operations on the uploaded ADMX file.
      */
-    @SerializedName("groupPolicyOperations")
+    @SerializedName(value = "groupPolicyOperations", alternate = {"GroupPolicyOperations"})
     @Expose
     public GroupPolicyOperationCollectionPage groupPolicyOperations;
 

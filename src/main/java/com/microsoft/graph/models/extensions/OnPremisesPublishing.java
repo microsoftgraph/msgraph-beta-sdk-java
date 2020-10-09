@@ -40,7 +40,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Alternate Url.
      * 
      */
-    @SerializedName("alternateUrl")
+    @SerializedName(value = "alternateUrl", alternate = {"AlternateUrl"})
     @Expose
     public String alternateUrl;
 
@@ -48,7 +48,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Application Server Timeout.
      * 
      */
-    @SerializedName("applicationServerTimeout")
+    @SerializedName(value = "applicationServerTimeout", alternate = {"ApplicationServerTimeout"})
     @Expose
     public String applicationServerTimeout;
 
@@ -56,7 +56,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Application Type.
      * 
      */
-    @SerializedName("applicationType")
+    @SerializedName(value = "applicationType", alternate = {"ApplicationType"})
     @Expose
     public String applicationType;
 
@@ -64,7 +64,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The External Authentication Type.
      * 
      */
-    @SerializedName("externalAuthenticationType")
+    @SerializedName(value = "externalAuthenticationType", alternate = {"ExternalAuthenticationType"})
     @Expose
     public ExternalAuthenticationType externalAuthenticationType;
 
@@ -72,7 +72,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The External Url.
      * 
      */
-    @SerializedName("externalUrl")
+    @SerializedName(value = "externalUrl", alternate = {"ExternalUrl"})
     @Expose
     public String externalUrl;
 
@@ -80,7 +80,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Internal Url.
      * 
      */
-    @SerializedName("internalUrl")
+    @SerializedName(value = "internalUrl", alternate = {"InternalUrl"})
     @Expose
     public String internalUrl;
 
@@ -88,7 +88,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Is Http Only Cookie Enabled.
      * 
      */
-    @SerializedName("isHttpOnlyCookieEnabled")
+    @SerializedName(value = "isHttpOnlyCookieEnabled", alternate = {"IsHttpOnlyCookieEnabled"})
     @Expose
     public Boolean isHttpOnlyCookieEnabled;
 
@@ -96,7 +96,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Is On Prem Publishing Enabled.
      * 
      */
-    @SerializedName("isOnPremPublishingEnabled")
+    @SerializedName(value = "isOnPremPublishingEnabled", alternate = {"IsOnPremPublishingEnabled"})
     @Expose
     public Boolean isOnPremPublishingEnabled;
 
@@ -104,7 +104,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Is Persistent Cookie Enabled.
      * 
      */
-    @SerializedName("isPersistentCookieEnabled")
+    @SerializedName(value = "isPersistentCookieEnabled", alternate = {"IsPersistentCookieEnabled"})
     @Expose
     public Boolean isPersistentCookieEnabled;
 
@@ -112,7 +112,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Is Secure Cookie Enabled.
      * 
      */
-    @SerializedName("isSecureCookieEnabled")
+    @SerializedName(value = "isSecureCookieEnabled", alternate = {"IsSecureCookieEnabled"})
     @Expose
     public Boolean isSecureCookieEnabled;
 
@@ -120,7 +120,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Is Translate Host Header Enabled.
      * 
      */
-    @SerializedName("isTranslateHostHeaderEnabled")
+    @SerializedName(value = "isTranslateHostHeaderEnabled", alternate = {"IsTranslateHostHeaderEnabled"})
     @Expose
     public Boolean isTranslateHostHeaderEnabled;
 
@@ -128,7 +128,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Is Translate Links In Body Enabled.
      * 
      */
-    @SerializedName("isTranslateLinksInBodyEnabled")
+    @SerializedName(value = "isTranslateLinksInBodyEnabled", alternate = {"IsTranslateLinksInBodyEnabled"})
     @Expose
     public Boolean isTranslateLinksInBodyEnabled;
 
@@ -136,7 +136,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Single Sign On Settings.
      * 
      */
-    @SerializedName("singleSignOnSettings")
+    @SerializedName(value = "singleSignOnSettings", alternate = {"SingleSignOnSettings"})
     @Expose
     public OnPremisesPublishingSingleSignOn singleSignOnSettings;
 
@@ -144,7 +144,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Use Alternate Url For Translation And Redirect.
      * 
      */
-    @SerializedName("useAlternateUrlForTranslationAndRedirect")
+    @SerializedName(value = "useAlternateUrlForTranslationAndRedirect", alternate = {"UseAlternateUrlForTranslationAndRedirect"})
     @Expose
     public Boolean useAlternateUrlForTranslationAndRedirect;
 
@@ -152,7 +152,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Verified Custom Domain Certificates Metadata.
      * 
      */
-    @SerializedName("verifiedCustomDomainCertificatesMetadata")
+    @SerializedName(value = "verifiedCustomDomainCertificatesMetadata", alternate = {"VerifiedCustomDomainCertificatesMetadata"})
     @Expose
     public VerifiedCustomDomainCertificatesMetadata verifiedCustomDomainCertificatesMetadata;
 
@@ -160,7 +160,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Verified Custom Domain Key Credential.
      * 
      */
-    @SerializedName("verifiedCustomDomainKeyCredential")
+    @SerializedName(value = "verifiedCustomDomainKeyCredential", alternate = {"VerifiedCustomDomainKeyCredential"})
     @Expose
     public KeyCredential verifiedCustomDomainKeyCredential;
 
@@ -168,7 +168,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
      * The Verified Custom Domain Password Credential.
      * 
      */
-    @SerializedName("verifiedCustomDomainPasswordCredential")
+    @SerializedName(value = "verifiedCustomDomainPasswordCredential", alternate = {"VerifiedCustomDomainPasswordCredential"})
     @Expose
     public PasswordCredential verifiedCustomDomainPasswordCredential;
 

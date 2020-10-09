@@ -26,7 +26,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
      * The Color.
      * 
      */
-    @SerializedName("color")
+    @SerializedName(value = "color", alternate = {"Color"})
     @Expose
     public String color;
 
@@ -34,7 +34,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -42,7 +42,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
      * The Is Active.
      * 
      */
-    @SerializedName("isActive")
+    @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
     public Boolean isActive;
 
@@ -50,7 +50,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -58,7 +58,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
      * The Sensitivity.
      * 
      */
-    @SerializedName("sensitivity")
+    @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
     public Integer sensitivity;
 
@@ -66,7 +66,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
      * The Tooltip.
      * 
      */
-    @SerializedName("tooltip")
+    @SerializedName(value = "tooltip", alternate = {"Tooltip"})
     @Expose
     public String tooltip;
 

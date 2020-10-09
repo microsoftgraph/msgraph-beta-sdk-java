@@ -22,7 +22,7 @@ public class TrustFrameworkKeySetUploadPkcs12Body {
      * The key.
      * 
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public String key;
 
@@ -30,7 +30,7 @@ public class TrustFrameworkKeySetUploadPkcs12Body {
      * The password.
      * 
      */
-    @SerializedName("password")
+    @SerializedName(value = "password", alternate = {"Password"})
     @Expose
     public String password;
 

@@ -31,7 +31,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -39,7 +39,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
      * The Is Default.
      * 
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -47,7 +47,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
      * The Publishing Type.
      * 
      */
-    @SerializedName("publishingType")
+    @SerializedName(value = "publishingType", alternate = {"PublishingType"})
     @Expose
     public OnPremisesPublishingType publishingType;
 
@@ -55,7 +55,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
      * The Agents.
      * 
      */
-    @SerializedName("agents")
+    @SerializedName(value = "agents", alternate = {"Agents"})
     @Expose
     public OnPremisesAgentCollectionPage agents;
 
@@ -63,7 +63,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
      * The Published Resources.
      * 
      */
-    @SerializedName("publishedResources")
+    @SerializedName(value = "publishedResources", alternate = {"PublishedResources"})
     @Expose
     public PublishedResourceCollectionPage publishedResources;
 

@@ -27,7 +27,7 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
      * The Justification.
      * 
      */
-    @SerializedName("justification")
+    @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
     public String justification;
 
@@ -43,7 +43,7 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
      * The Reviewed By.
      * 
      */
-    @SerializedName("reviewedBy")
+    @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose
     public Identity reviewedBy;
 
@@ -51,7 +51,7 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
      * The Reviewed Date Time.
      * 
      */
-    @SerializedName("reviewedDateTime")
+    @SerializedName(value = "reviewedDateTime", alternate = {"ReviewedDateTime"})
     @Expose
     public java.util.Calendar reviewedDateTime;
 
@@ -59,7 +59,7 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
      * The Review Result.
      * 
      */
-    @SerializedName("reviewResult")
+    @SerializedName(value = "reviewResult", alternate = {"ReviewResult"})
     @Expose
     public String reviewResult;
 

@@ -26,7 +26,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Exchange Mailbox Storage Used In Bytes.
      * 
      */
-    @SerializedName("exchangeMailboxStorageUsedInBytes")
+    @SerializedName(value = "exchangeMailboxStorageUsedInBytes", alternate = {"ExchangeMailboxStorageUsedInBytes"})
     @Expose
     public Long exchangeMailboxStorageUsedInBytes;
 
@@ -34,7 +34,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Exchange Mailbox Total Item Count.
      * 
      */
-    @SerializedName("exchangeMailboxTotalItemCount")
+    @SerializedName(value = "exchangeMailboxTotalItemCount", alternate = {"ExchangeMailboxTotalItemCount"})
     @Expose
     public Long exchangeMailboxTotalItemCount;
 
@@ -42,7 +42,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Exchange Received Email Count.
      * 
      */
-    @SerializedName("exchangeReceivedEmailCount")
+    @SerializedName(value = "exchangeReceivedEmailCount", alternate = {"ExchangeReceivedEmailCount"})
     @Expose
     public Long exchangeReceivedEmailCount;
 
@@ -50,7 +50,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The External Member Count.
      * 
      */
-    @SerializedName("externalMemberCount")
+    @SerializedName(value = "externalMemberCount", alternate = {"ExternalMemberCount"})
     @Expose
     public Long externalMemberCount;
 
@@ -58,7 +58,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Group Display Name.
      * 
      */
-    @SerializedName("groupDisplayName")
+    @SerializedName(value = "groupDisplayName", alternate = {"GroupDisplayName"})
     @Expose
     public String groupDisplayName;
 
@@ -66,7 +66,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 
@@ -74,7 +74,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Group Type.
      * 
      */
-    @SerializedName("groupType")
+    @SerializedName(value = "groupType", alternate = {"GroupType"})
     @Expose
     public String groupType;
 
@@ -82,7 +82,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -90,7 +90,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -98,7 +98,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Member Count.
      * 
      */
-    @SerializedName("memberCount")
+    @SerializedName(value = "memberCount", alternate = {"MemberCount"})
     @Expose
     public Long memberCount;
 
@@ -106,7 +106,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Owner Principal Name.
      * 
      */
-    @SerializedName("ownerPrincipalName")
+    @SerializedName(value = "ownerPrincipalName", alternate = {"OwnerPrincipalName"})
     @Expose
     public String ownerPrincipalName;
 
@@ -114,7 +114,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -122,7 +122,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -130,7 +130,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Share Point Active File Count.
      * 
      */
-    @SerializedName("sharePointActiveFileCount")
+    @SerializedName(value = "sharePointActiveFileCount", alternate = {"SharePointActiveFileCount"})
     @Expose
     public Long sharePointActiveFileCount;
 
@@ -138,7 +138,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Share Point Site Storage Used In Bytes.
      * 
      */
-    @SerializedName("sharePointSiteStorageUsedInBytes")
+    @SerializedName(value = "sharePointSiteStorageUsedInBytes", alternate = {"SharePointSiteStorageUsedInBytes"})
     @Expose
     public Long sharePointSiteStorageUsedInBytes;
 
@@ -146,7 +146,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Share Point Total File Count.
      * 
      */
-    @SerializedName("sharePointTotalFileCount")
+    @SerializedName(value = "sharePointTotalFileCount", alternate = {"SharePointTotalFileCount"})
     @Expose
     public Long sharePointTotalFileCount;
 
@@ -154,7 +154,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Yammer Liked Message Count.
      * 
      */
-    @SerializedName("yammerLikedMessageCount")
+    @SerializedName(value = "yammerLikedMessageCount", alternate = {"YammerLikedMessageCount"})
     @Expose
     public Long yammerLikedMessageCount;
 
@@ -162,7 +162,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Yammer Posted Message Count.
      * 
      */
-    @SerializedName("yammerPostedMessageCount")
+    @SerializedName(value = "yammerPostedMessageCount", alternate = {"YammerPostedMessageCount"})
     @Expose
     public Long yammerPostedMessageCount;
 
@@ -170,7 +170,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
      * The Yammer Read Message Count.
      * 
      */
-    @SerializedName("yammerReadMessageCount")
+    @SerializedName(value = "yammerReadMessageCount", alternate = {"YammerReadMessageCount"})
     @Expose
     public Long yammerReadMessageCount;
 

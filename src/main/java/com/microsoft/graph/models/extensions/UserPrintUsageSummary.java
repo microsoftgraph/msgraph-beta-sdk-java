@@ -36,7 +36,7 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
      * The Completed Job Count.
      * 
      */
-    @SerializedName("completedJobCount")
+    @SerializedName(value = "completedJobCount", alternate = {"CompletedJobCount"})
     @Expose
     public Integer completedJobCount;
 
@@ -44,7 +44,7 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
      * The Incomplete Job Count.
      * 
      */
-    @SerializedName("incompleteJobCount")
+    @SerializedName(value = "incompleteJobCount", alternate = {"IncompleteJobCount"})
     @Expose
     public Integer incompleteJobCount;
 
@@ -52,7 +52,7 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
      * The User.
      * 
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public Identity user;
 
@@ -60,7 +60,7 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -68,7 +68,7 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

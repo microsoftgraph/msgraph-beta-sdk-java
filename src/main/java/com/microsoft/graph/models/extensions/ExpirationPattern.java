@@ -36,7 +36,7 @@ public class ExpirationPattern implements IJsonBackedObject {
      * The Duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public javax.xml.datatype.Duration duration;
 
@@ -44,7 +44,7 @@ public class ExpirationPattern implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -52,7 +52,7 @@ public class ExpirationPattern implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public ExpirationPatternType type;
 

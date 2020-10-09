@@ -37,7 +37,7 @@ public class RoleManagement implements IJsonBackedObject {
      * The Directory.
      * 
      */
-    @SerializedName("directory")
+    @SerializedName(value = "directory", alternate = {"Directory"})
     @Expose
     public RbacApplication directory;
 
@@ -45,7 +45,7 @@ public class RoleManagement implements IJsonBackedObject {
      * The Device Management.
      * The RbacApplication for Device Management
      */
-    @SerializedName("deviceManagement")
+    @SerializedName(value = "deviceManagement", alternate = {"DeviceManagement"})
     @Expose
     public RbacApplicationMultiple deviceManagement;
 

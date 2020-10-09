@@ -38,7 +38,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Default Value.
      * 
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public String defaultValue;
 
@@ -46,7 +46,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Export Missing References.
      * 
      */
-    @SerializedName("exportMissingReferences")
+    @SerializedName(value = "exportMissingReferences", alternate = {"ExportMissingReferences"})
     @Expose
     public Boolean exportMissingReferences;
 
@@ -54,7 +54,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Flow Behavior.
      * 
      */
-    @SerializedName("flowBehavior")
+    @SerializedName(value = "flowBehavior", alternate = {"FlowBehavior"})
     @Expose
     public AttributeFlowBehavior flowBehavior;
 
@@ -62,7 +62,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Flow Type.
      * 
      */
-    @SerializedName("flowType")
+    @SerializedName(value = "flowType", alternate = {"FlowType"})
     @Expose
     public AttributeFlowType flowType;
 
@@ -70,7 +70,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Matching Priority.
      * 
      */
-    @SerializedName("matchingPriority")
+    @SerializedName(value = "matchingPriority", alternate = {"MatchingPriority"})
     @Expose
     public Integer matchingPriority;
 
@@ -78,7 +78,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Source.
      * 
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public AttributeMappingSource source;
 
@@ -86,7 +86,7 @@ public class AttributeMapping implements IJsonBackedObject {
      * The Target Attribute Name.
      * 
      */
-    @SerializedName("targetAttributeName")
+    @SerializedName(value = "targetAttributeName", alternate = {"TargetAttributeName"})
     @Expose
     public String targetAttributeName;
 

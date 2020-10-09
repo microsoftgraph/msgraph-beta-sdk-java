@@ -38,7 +38,7 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
      * The Action.
      * Device Action
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public CompanyPortalAction action;
 
@@ -46,7 +46,7 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
      * The Owner Type.
      * Device ownership type
      */
-    @SerializedName("ownerType")
+    @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
     public OwnerType ownerType;
 
@@ -54,7 +54,7 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
      * The Platform.
      * Device OS/Platform
      */
-    @SerializedName("platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public DevicePlatformType platform;
 

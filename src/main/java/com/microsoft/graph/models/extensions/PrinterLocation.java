@@ -35,7 +35,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Altitude In Meters.
      * 
      */
-    @SerializedName("altitudeInMeters")
+    @SerializedName(value = "altitudeInMeters", alternate = {"AltitudeInMeters"})
     @Expose
     public Integer altitudeInMeters;
 
@@ -43,7 +43,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Building.
      * 
      */
-    @SerializedName("building")
+    @SerializedName(value = "building", alternate = {"Building"})
     @Expose
     public String building;
 
@@ -51,7 +51,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The City.
      * 
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -59,7 +59,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Country Or Region.
      * 
      */
-    @SerializedName("countryOrRegion")
+    @SerializedName(value = "countryOrRegion", alternate = {"CountryOrRegion"})
     @Expose
     public String countryOrRegion;
 
@@ -67,7 +67,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Floor Description.
      * 
      */
-    @SerializedName("floorDescription")
+    @SerializedName(value = "floorDescription", alternate = {"FloorDescription"})
     @Expose
     public String floorDescription;
 
@@ -75,7 +75,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Floor Number.
      * 
      */
-    @SerializedName("floorNumber")
+    @SerializedName(value = "floorNumber", alternate = {"FloorNumber"})
     @Expose
     public Integer floorNumber;
 
@@ -83,7 +83,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Latitude.
      * 
      */
-    @SerializedName("latitude")
+    @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
     public float latitude;
 
@@ -91,7 +91,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Longitude.
      * 
      */
-    @SerializedName("longitude")
+    @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose
     public float longitude;
 
@@ -99,7 +99,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Organization.
      * 
      */
-    @SerializedName("organization")
+    @SerializedName(value = "organization", alternate = {"Organization"})
     @Expose
     public java.util.List<String> organization;
 
@@ -107,7 +107,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Postal Code.
      * 
      */
-    @SerializedName("postalCode")
+    @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
     public String postalCode;
 
@@ -115,7 +115,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Room Description.
      * 
      */
-    @SerializedName("roomDescription")
+    @SerializedName(value = "roomDescription", alternate = {"RoomDescription"})
     @Expose
     public String roomDescription;
 
@@ -123,7 +123,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Room Number.
      * 
      */
-    @SerializedName("roomNumber")
+    @SerializedName(value = "roomNumber", alternate = {"RoomNumber"})
     @Expose
     public Integer roomNumber;
 
@@ -131,7 +131,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Site.
      * 
      */
-    @SerializedName("site")
+    @SerializedName(value = "site", alternate = {"Site"})
     @Expose
     public String site;
 
@@ -139,7 +139,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The State Or Province.
      * 
      */
-    @SerializedName("stateOrProvince")
+    @SerializedName(value = "stateOrProvince", alternate = {"StateOrProvince"})
     @Expose
     public String stateOrProvince;
 
@@ -147,7 +147,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Street Address.
      * 
      */
-    @SerializedName("streetAddress")
+    @SerializedName(value = "streetAddress", alternate = {"StreetAddress"})
     @Expose
     public String streetAddress;
 
@@ -155,7 +155,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Subdivision.
      * 
      */
-    @SerializedName("subdivision")
+    @SerializedName(value = "subdivision", alternate = {"Subdivision"})
     @Expose
     public java.util.List<String> subdivision;
 
@@ -163,7 +163,7 @@ public class PrinterLocation implements IJsonBackedObject {
      * The Subunit.
      * 
      */
-    @SerializedName("subunit")
+    @SerializedName(value = "subunit", alternate = {"Subunit"})
     @Expose
     public java.util.List<String> subunit;
 

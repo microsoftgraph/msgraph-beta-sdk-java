@@ -36,7 +36,7 @@ public class FilterClause implements IJsonBackedObject {
      * The Operator Name.
      * 
      */
-    @SerializedName("operatorName")
+    @SerializedName(value = "operatorName", alternate = {"OperatorName"})
     @Expose
     public String operatorName;
 
@@ -44,7 +44,7 @@ public class FilterClause implements IJsonBackedObject {
      * The Source Operand Name.
      * 
      */
-    @SerializedName("sourceOperandName")
+    @SerializedName(value = "sourceOperandName", alternate = {"SourceOperandName"})
     @Expose
     public String sourceOperandName;
 
@@ -52,7 +52,7 @@ public class FilterClause implements IJsonBackedObject {
      * The Target Operand.
      * 
      */
-    @SerializedName("targetOperand")
+    @SerializedName(value = "targetOperand", alternate = {"TargetOperand"})
     @Expose
     public FilterOperand targetOperand;
 

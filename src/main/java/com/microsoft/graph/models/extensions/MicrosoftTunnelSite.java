@@ -29,7 +29,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
      * The Description.
      * The MicrosoftTunnelSite's description
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -37,7 +37,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The MicrosoftTunnelSite's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
      * The Public Address.
      * The MicrosoftTunnelSite's public domain name or IP address
      */
-    @SerializedName("publicAddress")
+    @SerializedName(value = "publicAddress", alternate = {"PublicAddress"})
     @Expose
     public String publicAddress;
 
@@ -53,7 +53,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -61,7 +61,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
      * The Microsoft Tunnel Configuration.
      * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
      */
-    @SerializedName("microsoftTunnelConfiguration")
+    @SerializedName(value = "microsoftTunnelConfiguration", alternate = {"MicrosoftTunnelConfiguration"})
     @Expose
     public MicrosoftTunnelConfiguration microsoftTunnelConfiguration;
 
@@ -69,7 +69,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
      * The Microsoft Tunnel Servers.
      * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
      */
-    @SerializedName("microsoftTunnelServers")
+    @SerializedName(value = "microsoftTunnelServers", alternate = {"MicrosoftTunnelServers"})
     @Expose
     public MicrosoftTunnelServerCollectionPage microsoftTunnelServers;
 

@@ -26,7 +26,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Compliant Count.
      * Number of compliant devices
      */
-    @SerializedName("compliantCount")
+    @SerializedName(value = "compliantCount", alternate = {"CompliantCount"})
     @Expose
     public Integer compliantCount;
 
@@ -34,7 +34,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Conflict Count.
      * Number of devices in conflict
      */
-    @SerializedName("conflictCount")
+    @SerializedName(value = "conflictCount", alternate = {"ConflictCount"})
     @Expose
     public Integer conflictCount;
 
@@ -42,7 +42,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Error Count.
      * Number of error devices
      */
-    @SerializedName("errorCount")
+    @SerializedName(value = "errorCount", alternate = {"ErrorCount"})
     @Expose
     public Integer errorCount;
 
@@ -50,7 +50,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Non Compliant Count.
      * Number of non compliant devices
      */
-    @SerializedName("nonCompliantCount")
+    @SerializedName(value = "nonCompliantCount", alternate = {"NonCompliantCount"})
     @Expose
     public Integer nonCompliantCount;
 
@@ -58,7 +58,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Not Applicable Count.
      * Number of not applicable devices
      */
-    @SerializedName("notApplicableCount")
+    @SerializedName(value = "notApplicableCount", alternate = {"NotApplicableCount"})
     @Expose
     public Integer notApplicableCount;
 
@@ -66,7 +66,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Remediated Count.
      * Number of remediated devices
      */
-    @SerializedName("remediatedCount")
+    @SerializedName(value = "remediatedCount", alternate = {"RemediatedCount"})
     @Expose
     public Integer remediatedCount;
 
@@ -74,7 +74,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The Setting Name.
      * Name of a setting
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 

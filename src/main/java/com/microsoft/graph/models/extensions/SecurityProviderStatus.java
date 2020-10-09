@@ -35,7 +35,7 @@ public class SecurityProviderStatus implements IJsonBackedObject {
      * The Enabled.
      * 
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -43,7 +43,7 @@ public class SecurityProviderStatus implements IJsonBackedObject {
      * The Endpoint.
      * 
      */
-    @SerializedName("endpoint")
+    @SerializedName(value = "endpoint", alternate = {"Endpoint"})
     @Expose
     public String endpoint;
 
@@ -51,7 +51,7 @@ public class SecurityProviderStatus implements IJsonBackedObject {
      * The Provider.
      * 
      */
-    @SerializedName("provider")
+    @SerializedName(value = "provider", alternate = {"Provider"})
     @Expose
     public String provider;
 
@@ -59,7 +59,7 @@ public class SecurityProviderStatus implements IJsonBackedObject {
      * The Region.
      * 
      */
-    @SerializedName("region")
+    @SerializedName(value = "region", alternate = {"Region"})
     @Expose
     public String region;
 
@@ -67,7 +67,7 @@ public class SecurityProviderStatus implements IJsonBackedObject {
      * The Vendor.
      * 
      */
-    @SerializedName("vendor")
+    @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
     public String vendor;
 

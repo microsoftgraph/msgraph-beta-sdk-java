@@ -36,7 +36,7 @@ public class LicenseInfoDetail implements IJsonBackedObject {
      * The License Type.
      * 
      */
-    @SerializedName("licenseType")
+    @SerializedName(value = "licenseType", alternate = {"LicenseType"})
     @Expose
     public AzureADLicenseType licenseType;
 
@@ -44,7 +44,7 @@ public class LicenseInfoDetail implements IJsonBackedObject {
      * The Total Assigned Count.
      * 
      */
-    @SerializedName("totalAssignedCount")
+    @SerializedName(value = "totalAssignedCount", alternate = {"TotalAssignedCount"})
     @Expose
     public Integer totalAssignedCount;
 
@@ -52,7 +52,7 @@ public class LicenseInfoDetail implements IJsonBackedObject {
      * The Total License Count.
      * 
      */
-    @SerializedName("totalLicenseCount")
+    @SerializedName(value = "totalLicenseCount", alternate = {"TotalLicenseCount"})
     @Expose
     public Integer totalLicenseCount;
 
@@ -60,7 +60,7 @@ public class LicenseInfoDetail implements IJsonBackedObject {
      * The Total Usage Count.
      * 
      */
-    @SerializedName("totalUsageCount")
+    @SerializedName(value = "totalUsageCount", alternate = {"TotalUsageCount"})
     @Expose
     public Integer totalUsageCount;
 

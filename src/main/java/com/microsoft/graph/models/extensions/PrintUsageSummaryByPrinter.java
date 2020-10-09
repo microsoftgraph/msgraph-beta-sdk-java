@@ -26,7 +26,7 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
      * The Completed Black And White Job Count.
      * 
      */
-    @SerializedName("completedBlackAndWhiteJobCount")
+    @SerializedName(value = "completedBlackAndWhiteJobCount", alternate = {"CompletedBlackAndWhiteJobCount"})
     @Expose
     public Long completedBlackAndWhiteJobCount;
 
@@ -34,7 +34,7 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
      * The Completed Color Job Count.
      * 
      */
-    @SerializedName("completedColorJobCount")
+    @SerializedName(value = "completedColorJobCount", alternate = {"CompletedColorJobCount"})
     @Expose
     public Long completedColorJobCount;
 
@@ -42,7 +42,7 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
      * The Incomplete Job Count.
      * 
      */
-    @SerializedName("incompleteJobCount")
+    @SerializedName(value = "incompleteJobCount", alternate = {"IncompleteJobCount"})
     @Expose
     public Long incompleteJobCount;
 
@@ -50,7 +50,7 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
      * The Printer Id.
      * 
      */
-    @SerializedName("printerId")
+    @SerializedName(value = "printerId", alternate = {"PrinterId"})
     @Expose
     public String printerId;
 
@@ -58,7 +58,7 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
      * The Usage Date.
      * 
      */
-    @SerializedName("usageDate")
+    @SerializedName(value = "usageDate", alternate = {"UsageDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly usageDate;
 

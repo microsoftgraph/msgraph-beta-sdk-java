@@ -35,7 +35,7 @@ public class SharedAppleDeviceUser implements IJsonBackedObject {
      * The Data Quota.
      * Data quota
      */
-    @SerializedName("dataQuota")
+    @SerializedName(value = "dataQuota", alternate = {"DataQuota"})
     @Expose
     public Long dataQuota;
 
@@ -43,7 +43,7 @@ public class SharedAppleDeviceUser implements IJsonBackedObject {
      * The Data To Sync.
      * Data to sync
      */
-    @SerializedName("dataToSync")
+    @SerializedName(value = "dataToSync", alternate = {"DataToSync"})
     @Expose
     public Boolean dataToSync;
 
@@ -51,7 +51,7 @@ public class SharedAppleDeviceUser implements IJsonBackedObject {
      * The Data Used.
      * Data quota
      */
-    @SerializedName("dataUsed")
+    @SerializedName(value = "dataUsed", alternate = {"DataUsed"})
     @Expose
     public Long dataUsed;
 
@@ -59,7 +59,7 @@ public class SharedAppleDeviceUser implements IJsonBackedObject {
      * The User Principal Name.
      * User name
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

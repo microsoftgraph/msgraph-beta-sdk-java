@@ -30,7 +30,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -38,7 +38,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public AccessReviewScope scope;
 
@@ -46,7 +46,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -54,7 +54,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -62,7 +62,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The Decisions.
      * 
      */
-    @SerializedName("decisions")
+    @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
     public AccessReviewInstanceDecisionItemCollectionPage decisions;
 
@@ -70,7 +70,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The Definition.
      * 
      */
-    @SerializedName("definition")
+    @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
     public AccessReviewScheduleDefinition definition;
 

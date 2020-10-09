@@ -35,7 +35,7 @@ public class PostalAddressType implements IJsonBackedObject {
      * The City.
      * 
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -43,7 +43,7 @@ public class PostalAddressType implements IJsonBackedObject {
      * The Country Letter Code.
      * 
      */
-    @SerializedName("countryLetterCode")
+    @SerializedName(value = "countryLetterCode", alternate = {"CountryLetterCode"})
     @Expose
     public String countryLetterCode;
 
@@ -51,7 +51,7 @@ public class PostalAddressType implements IJsonBackedObject {
      * The Postal Code.
      * 
      */
-    @SerializedName("postalCode")
+    @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
     public String postalCode;
 
@@ -59,7 +59,7 @@ public class PostalAddressType implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -67,7 +67,7 @@ public class PostalAddressType implements IJsonBackedObject {
      * The Street.
      * 
      */
-    @SerializedName("street")
+    @SerializedName(value = "street", alternate = {"Street"})
     @Expose
     public String street;
 

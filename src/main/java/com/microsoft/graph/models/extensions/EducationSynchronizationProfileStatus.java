@@ -27,7 +27,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
      * The Last Synchronization Date Time.
      * 
      */
-    @SerializedName("lastSynchronizationDateTime")
+    @SerializedName(value = "lastSynchronizationDateTime", alternate = {"LastSynchronizationDateTime"})
     @Expose
     public java.util.Calendar lastSynchronizationDateTime;
 
@@ -35,7 +35,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public EducationSynchronizationStatus status;
 

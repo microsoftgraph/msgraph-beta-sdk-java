@@ -28,7 +28,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * The Check32Bit On64System.
      * A value indicating whether this registry path is for checking 32-bit app on 64-bit system
      */
-    @SerializedName("check32BitOn64System")
+    @SerializedName(value = "check32BitOn64System", alternate = {"Check32BitOn64System"})
     @Expose
     public Boolean check32BitOn64System;
 
@@ -36,7 +36,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * The Detection Type.
      * The registry data detection type
      */
-    @SerializedName("detectionType")
+    @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose
     public Win32LobAppRegistryDetectionType detectionType;
 
@@ -44,7 +44,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * The Detection Value.
      * The registry detection value
      */
-    @SerializedName("detectionValue")
+    @SerializedName(value = "detectionValue", alternate = {"DetectionValue"})
     @Expose
     public String detectionValue;
 
@@ -52,7 +52,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * The Key Path.
      * The registry key path to detect Win32 Line of Business (LoB) app
      */
-    @SerializedName("keyPath")
+    @SerializedName(value = "keyPath", alternate = {"KeyPath"})
     @Expose
     public String keyPath;
 
@@ -60,7 +60,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * The Operator.
      * The operator for registry data detection
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public EnumSet<Win32LobAppDetectionOperator> operator;
 
@@ -68,7 +68,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * The Value Name.
      * The registry value name
      */
-    @SerializedName("valueName")
+    @SerializedName(value = "valueName", alternate = {"ValueName"})
     @Expose
     public String valueName;
 

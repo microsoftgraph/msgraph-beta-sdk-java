@@ -28,7 +28,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
      * The Categories.
      * 
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public java.util.List<String> categories;
 
@@ -36,7 +36,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
      * The Colleagues.
      * 
      */
-    @SerializedName("colleagues")
+    @SerializedName(value = "colleagues", alternate = {"Colleagues"})
     @Expose
     public java.util.List<RelatedPerson> colleagues;
 
@@ -44,7 +44,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
      * The Detail.
      * 
      */
-    @SerializedName("detail")
+    @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
     public PositionDetail detail;
 
@@ -52,7 +52,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
      * The Is Current.
      * 
      */
-    @SerializedName("isCurrent")
+    @SerializedName(value = "isCurrent", alternate = {"IsCurrent"})
     @Expose
     public Boolean isCurrent;
 
@@ -60,7 +60,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
      * The Manager.
      * 
      */
-    @SerializedName("manager")
+    @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
     public RelatedPerson manager;
 

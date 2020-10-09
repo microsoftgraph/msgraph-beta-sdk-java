@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements IJsonBack
      * The Insights.
      * The insights for the user experience analytics category.
      */
-    @SerializedName("insights")
+    @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
     public java.util.List<UserExperienceAnalyticsInsight> insights;
 
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements IJsonBack
      * The Metric Values.
      * The metric values for the user experience analytics category.
      */
-    @SerializedName("metricValues")
+    @SerializedName(value = "metricValues", alternate = {"MetricValues"})
     @Expose
     public UserExperienceAnalyticsMetricCollectionPage metricValues;
 

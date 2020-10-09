@@ -36,8 +36,8 @@ public interface IConnectorRequestBuilder extends IRequestBuilder {
     IConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IConnectorGroupCollectionWithReferencesRequestBuilder memberOf();
+    IConnectorGroupCollectionRequestBuilder memberOf();
 
-    IConnectorGroupWithReferenceRequestBuilder memberOf(final String id);
+    IConnectorGroupRequestBuilder memberOf(final String id);
 
 }

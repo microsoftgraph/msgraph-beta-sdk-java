@@ -22,7 +22,7 @@ public class BookingAppointmentCancelBody {
      * The cancellation Message.
      * 
      */
-    @SerializedName("cancellationMessage")
+    @SerializedName(value = "cancellationMessage", alternate = {"CancellationMessage"})
     @Expose
     public String cancellationMessage;
 

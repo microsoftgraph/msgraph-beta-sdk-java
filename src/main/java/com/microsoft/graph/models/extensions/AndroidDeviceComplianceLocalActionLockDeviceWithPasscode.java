@@ -26,7 +26,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * The Passcode.
      * Passcode to reset to Android device. This property is read-only.
      */
-    @SerializedName("passcode")
+    @SerializedName(value = "passcode", alternate = {"Passcode"})
     @Expose
     public String passcode;
 
@@ -34,7 +34,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * The Passcode Sign In Failure Count Before Wipe.
      * Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
      */
-    @SerializedName("passcodeSignInFailureCountBeforeWipe")
+    @SerializedName(value = "passcodeSignInFailureCountBeforeWipe", alternate = {"PasscodeSignInFailureCountBeforeWipe"})
     @Expose
     public Integer passcodeSignInFailureCountBeforeWipe;
 

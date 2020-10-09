@@ -26,7 +26,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Configuration Version.
      * Version of the policy for that overview
      */
-    @SerializedName("configurationVersion")
+    @SerializedName(value = "configurationVersion", alternate = {"ConfigurationVersion"})
     @Expose
     public Integer configurationVersion;
 
@@ -34,7 +34,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Conflict Count.
      * Number of devices in conflict
      */
-    @SerializedName("conflictCount")
+    @SerializedName(value = "conflictCount", alternate = {"ConflictCount"})
     @Expose
     public Integer conflictCount;
 
@@ -42,7 +42,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Error Count.
      * Number of error devices
      */
-    @SerializedName("errorCount")
+    @SerializedName(value = "errorCount", alternate = {"ErrorCount"})
     @Expose
     public Integer errorCount;
 
@@ -50,7 +50,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Failed Count.
      * Number of failed devices
      */
-    @SerializedName("failedCount")
+    @SerializedName(value = "failedCount", alternate = {"FailedCount"})
     @Expose
     public Integer failedCount;
 
@@ -58,7 +58,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Last Update Date Time.
      * Last update time
      */
-    @SerializedName("lastUpdateDateTime")
+    @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
     public java.util.Calendar lastUpdateDateTime;
 
@@ -66,7 +66,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Not Applicable Count.
      * Number of not applicable devices
      */
-    @SerializedName("notApplicableCount")
+    @SerializedName(value = "notApplicableCount", alternate = {"NotApplicableCount"})
     @Expose
     public Integer notApplicableCount;
 
@@ -74,7 +74,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Not Applicable Platform Count.
      * Number of not applicable devices due to mismatch platform and policy
      */
-    @SerializedName("notApplicablePlatformCount")
+    @SerializedName(value = "notApplicablePlatformCount", alternate = {"NotApplicablePlatformCount"})
     @Expose
     public Integer notApplicablePlatformCount;
 
@@ -82,7 +82,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Pending Count.
      * Number of pending devices
      */
-    @SerializedName("pendingCount")
+    @SerializedName(value = "pendingCount", alternate = {"PendingCount"})
     @Expose
     public Integer pendingCount;
 
@@ -90,7 +90,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
      * The Success Count.
      * Number of succeeded devices
      */
-    @SerializedName("successCount")
+    @SerializedName(value = "successCount", alternate = {"SuccessCount"})
     @Expose
     public Integer successCount;
 

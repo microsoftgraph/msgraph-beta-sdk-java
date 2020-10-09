@@ -28,7 +28,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Emails.
      * Emails to which the scheduled reports are delivered
      */
-    @SerializedName("emails")
+    @SerializedName(value = "emails", alternate = {"Emails"})
     @Expose
     public java.util.List<String> emails;
 
@@ -36,7 +36,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The End Date Time.
      * Time that the delivery of the scheduled reports ends
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -44,7 +44,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Filter.
      * Filters applied on the report
      */
-    @SerializedName("filter")
+    @SerializedName(value = "filter", alternate = {"Filter"})
     @Expose
     public String filter;
 
@@ -52,7 +52,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Format.
      * Format of the scheduled report
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public DeviceManagementReportFileFormat format;
 
@@ -60,7 +60,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Order By.
      * Ordering of columns in the report
      */
-    @SerializedName("orderBy")
+    @SerializedName(value = "orderBy", alternate = {"OrderBy"})
     @Expose
     public java.util.List<String> orderBy;
 
@@ -68,7 +68,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Recurrence.
      * Frequency of scheduled report delivery
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public DeviceManagementScheduledReportRecurrence recurrence;
 
@@ -76,7 +76,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Report Name.
      * Name of the report
      */
-    @SerializedName("reportName")
+    @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose
     public String reportName;
 
@@ -84,7 +84,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Report Schedule Name.
      * Name of the schedule
      */
-    @SerializedName("reportScheduleName")
+    @SerializedName(value = "reportScheduleName", alternate = {"ReportScheduleName"})
     @Expose
     public String reportScheduleName;
 
@@ -92,7 +92,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Select.
      * Columns selected from the report
      */
-    @SerializedName("select")
+    @SerializedName(value = "select", alternate = {"Select"})
     @Expose
     public java.util.List<String> select;
 
@@ -100,7 +100,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Start Date Time.
      * Time that the delivery of the scheduled reports starts
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -108,7 +108,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The Subject.
      * Subject of the scheduled reports that are delivered
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -116,7 +116,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
      * The User Id.
      * The Id of the User who created the report
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

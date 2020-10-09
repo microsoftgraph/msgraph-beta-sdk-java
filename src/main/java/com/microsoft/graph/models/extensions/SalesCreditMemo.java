@@ -32,7 +32,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Billing Postal Address.
      * 
      */
-    @SerializedName("billingPostalAddress")
+    @SerializedName(value = "billingPostalAddress", alternate = {"BillingPostalAddress"})
     @Expose
     public PostalAddressType billingPostalAddress;
 
@@ -40,7 +40,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Bill To Customer Id.
      * 
      */
-    @SerializedName("billToCustomerId")
+    @SerializedName(value = "billToCustomerId", alternate = {"BillToCustomerId"})
     @Expose
     public java.util.UUID billToCustomerId;
 
@@ -48,7 +48,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Bill To Customer Number.
      * 
      */
-    @SerializedName("billToCustomerNumber")
+    @SerializedName(value = "billToCustomerNumber", alternate = {"BillToCustomerNumber"})
     @Expose
     public String billToCustomerNumber;
 
@@ -56,7 +56,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Bill To Name.
      * 
      */
-    @SerializedName("billToName")
+    @SerializedName(value = "billToName", alternate = {"BillToName"})
     @Expose
     public String billToName;
 
@@ -64,7 +64,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Credit Memo Date.
      * 
      */
-    @SerializedName("creditMemoDate")
+    @SerializedName(value = "creditMemoDate", alternate = {"CreditMemoDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly creditMemoDate;
 
@@ -72,7 +72,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Currency Code.
      * 
      */
-    @SerializedName("currencyCode")
+    @SerializedName(value = "currencyCode", alternate = {"CurrencyCode"})
     @Expose
     public String currencyCode;
 
@@ -80,7 +80,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Currency Id.
      * 
      */
-    @SerializedName("currencyId")
+    @SerializedName(value = "currencyId", alternate = {"CurrencyId"})
     @Expose
     public java.util.UUID currencyId;
 
@@ -88,7 +88,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Customer Id.
      * 
      */
-    @SerializedName("customerId")
+    @SerializedName(value = "customerId", alternate = {"CustomerId"})
     @Expose
     public java.util.UUID customerId;
 
@@ -96,7 +96,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Customer Name.
      * 
      */
-    @SerializedName("customerName")
+    @SerializedName(value = "customerName", alternate = {"CustomerName"})
     @Expose
     public String customerName;
 
@@ -104,7 +104,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Customer Number.
      * 
      */
-    @SerializedName("customerNumber")
+    @SerializedName(value = "customerNumber", alternate = {"CustomerNumber"})
     @Expose
     public String customerNumber;
 
@@ -112,7 +112,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Discount Amount.
      * 
      */
-    @SerializedName("discountAmount")
+    @SerializedName(value = "discountAmount", alternate = {"DiscountAmount"})
     @Expose
     public java.math.BigDecimal discountAmount;
 
@@ -120,7 +120,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Discount Applied Before Tax.
      * 
      */
-    @SerializedName("discountAppliedBeforeTax")
+    @SerializedName(value = "discountAppliedBeforeTax", alternate = {"DiscountAppliedBeforeTax"})
     @Expose
     public Boolean discountAppliedBeforeTax;
 
@@ -128,7 +128,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Due Date.
      * 
      */
-    @SerializedName("dueDate")
+    @SerializedName(value = "dueDate", alternate = {"DueDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly dueDate;
 
@@ -136,7 +136,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Email.
      * 
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -144,7 +144,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The External Document Number.
      * 
      */
-    @SerializedName("externalDocumentNumber")
+    @SerializedName(value = "externalDocumentNumber", alternate = {"ExternalDocumentNumber"})
     @Expose
     public String externalDocumentNumber;
 
@@ -152,7 +152,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Invoice Id.
      * 
      */
-    @SerializedName("invoiceId")
+    @SerializedName(value = "invoiceId", alternate = {"InvoiceId"})
     @Expose
     public java.util.UUID invoiceId;
 
@@ -160,7 +160,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Invoice Number.
      * 
      */
-    @SerializedName("invoiceNumber")
+    @SerializedName(value = "invoiceNumber", alternate = {"InvoiceNumber"})
     @Expose
     public String invoiceNumber;
 
@@ -168,7 +168,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -176,7 +176,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -184,7 +184,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Payment Terms Id.
      * 
      */
-    @SerializedName("paymentTermsId")
+    @SerializedName(value = "paymentTermsId", alternate = {"PaymentTermsId"})
     @Expose
     public java.util.UUID paymentTermsId;
 
@@ -192,7 +192,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Phone Number.
      * 
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -200,7 +200,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Prices Include Tax.
      * 
      */
-    @SerializedName("pricesIncludeTax")
+    @SerializedName(value = "pricesIncludeTax", alternate = {"PricesIncludeTax"})
     @Expose
     public Boolean pricesIncludeTax;
 
@@ -208,7 +208,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Salesperson.
      * 
      */
-    @SerializedName("salesperson")
+    @SerializedName(value = "salesperson", alternate = {"Salesperson"})
     @Expose
     public String salesperson;
 
@@ -216,7 +216,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Selling Postal Address.
      * 
      */
-    @SerializedName("sellingPostalAddress")
+    @SerializedName(value = "sellingPostalAddress", alternate = {"SellingPostalAddress"})
     @Expose
     public PostalAddressType sellingPostalAddress;
 
@@ -224,7 +224,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -232,7 +232,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Total Amount Excluding Tax.
      * 
      */
-    @SerializedName("totalAmountExcludingTax")
+    @SerializedName(value = "totalAmountExcludingTax", alternate = {"TotalAmountExcludingTax"})
     @Expose
     public java.math.BigDecimal totalAmountExcludingTax;
 
@@ -240,7 +240,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Total Amount Including Tax.
      * 
      */
-    @SerializedName("totalAmountIncludingTax")
+    @SerializedName(value = "totalAmountIncludingTax", alternate = {"TotalAmountIncludingTax"})
     @Expose
     public java.math.BigDecimal totalAmountIncludingTax;
 
@@ -248,7 +248,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Total Tax Amount.
      * 
      */
-    @SerializedName("totalTaxAmount")
+    @SerializedName(value = "totalTaxAmount", alternate = {"TotalTaxAmount"})
     @Expose
     public java.math.BigDecimal totalTaxAmount;
 
@@ -256,7 +256,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Currency.
      * 
      */
-    @SerializedName("currency")
+    @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
     public Currency currency;
 
@@ -264,7 +264,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Customer.
      * 
      */
-    @SerializedName("customer")
+    @SerializedName(value = "customer", alternate = {"Customer"})
     @Expose
     public Customer customer;
 
@@ -272,7 +272,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Payment Term.
      * 
      */
-    @SerializedName("paymentTerm")
+    @SerializedName(value = "paymentTerm", alternate = {"PaymentTerm"})
     @Expose
     public PaymentTerm paymentTerm;
 
@@ -280,7 +280,7 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Sales Credit Memo Lines.
      * 
      */
-    @SerializedName("salesCreditMemoLines")
+    @SerializedName(value = "salesCreditMemoLines", alternate = {"SalesCreditMemoLines"})
     @Expose
     public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 

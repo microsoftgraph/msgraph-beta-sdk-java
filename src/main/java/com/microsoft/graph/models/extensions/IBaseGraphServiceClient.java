@@ -77,10 +77,6 @@ import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
@@ -717,36 +713,6 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the SchemaExtensions object
      */
     ISchemaExtensionRequestBuilder schemaExtensions(final String id);
-
-    /**
-     * Gets the collection of ConnectorGroups objects
-     *
-     * @return the request builder for the collection of ConnectorGroups objects
-     */
-    IConnectorGroupCollectionRequestBuilder connectorGroups();
-
-    /**
-     * Gets a single ConnectorGroups
-     *
-     * @param id the id of the ConnectorGroups to retrieve
-     * @return the request builder for the ConnectorGroups object
-     */
-    IConnectorGroupRequestBuilder connectorGroups(final String id);
-
-    /**
-     * Gets the collection of Connectors objects
-     *
-     * @return the request builder for the collection of Connectors objects
-     */
-    IConnectorCollectionRequestBuilder connectors();
-
-    /**
-     * Gets a single Connectors
-     *
-     * @param id the id of the Connectors to retrieve
-     * @return the request builder for the Connectors object
-     */
-    IConnectorRequestBuilder connectors(final String id);
 
     /**
      * Gets the collection of OnPremisesPublishingProfiles objects

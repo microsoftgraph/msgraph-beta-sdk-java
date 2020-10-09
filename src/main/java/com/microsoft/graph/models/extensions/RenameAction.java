@@ -35,7 +35,7 @@ public class RenameAction implements IJsonBackedObject {
      * The New Name.
      * The new name of the item.
      */
-    @SerializedName("newName")
+    @SerializedName(value = "newName", alternate = {"NewName"})
     @Expose
     public String newName;
 
@@ -43,7 +43,7 @@ public class RenameAction implements IJsonBackedObject {
      * The Old Name.
      * The previous name of the item.
      */
-    @SerializedName("oldName")
+    @SerializedName(value = "oldName", alternate = {"OldName"})
     @Expose
     public String oldName;
 

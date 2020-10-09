@@ -36,7 +36,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements IJsonBackedOb
      * The Max OSVersion.
      * Max OS version for Applicability Rule.
      */
-    @SerializedName("maxOSVersion")
+    @SerializedName(value = "maxOSVersion", alternate = {"MaxOSVersion"})
     @Expose
     public String maxOSVersion;
 
@@ -44,7 +44,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements IJsonBackedOb
      * The Min OSVersion.
      * Min OS version for Applicability Rule.
      */
-    @SerializedName("minOSVersion")
+    @SerializedName(value = "minOSVersion", alternate = {"MinOSVersion"})
     @Expose
     public String minOSVersion;
 
@@ -52,7 +52,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements IJsonBackedOb
      * The Name.
      * Name for object.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -60,7 +60,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements IJsonBackedOb
      * The Rule Type.
      * Applicability Rule type.
      */
-    @SerializedName("ruleType")
+    @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose
     public DeviceManagementApplicabilityRuleType ruleType;
 

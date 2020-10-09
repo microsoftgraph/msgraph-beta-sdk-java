@@ -42,8 +42,8 @@ public interface IConnectorGroupRequestBuilder extends IRequestBuilder {
 
     IApplicationWithReferenceRequestBuilder applications(final String id);
 
-    IConnectorCollectionWithReferencesRequestBuilder members();
+    IConnectorCollectionRequestBuilder members();
 
-    IConnectorWithReferenceRequestBuilder members(final String id);
+    IConnectorRequestBuilder members(final String id);
 
 }

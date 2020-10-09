@@ -29,7 +29,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
      * The Parent Url.
      * 
      */
-    @SerializedName("parentUrl")
+    @SerializedName(value = "parentUrl", alternate = {"ParentUrl"})
     @Expose
     public String parentUrl;
 
@@ -37,7 +37,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public PrintTaskStatus status;
 
@@ -45,7 +45,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
      * The Definition.
      * 
      */
-    @SerializedName("definition")
+    @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
     public PrintTaskDefinition definition;
 
@@ -53,7 +53,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
      * The Trigger.
      * 
      */
-    @SerializedName("trigger")
+    @SerializedName(value = "trigger", alternate = {"Trigger"})
     @Expose
     public PrintTaskTrigger trigger;
 

@@ -31,7 +31,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Activation Code Count.
      * The total count of activation codes which belong to this pool.
      */
-    @SerializedName("activationCodeCount")
+    @SerializedName(value = "activationCodeCount", alternate = {"ActivationCodeCount"})
     @Expose
     public Integer activationCodeCount;
 
@@ -39,7 +39,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Activation Codes.
      * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
      */
-    @SerializedName("activationCodes")
+    @SerializedName(value = "activationCodes", alternate = {"ActivationCodes"})
     @Expose
     public java.util.List<EmbeddedSIMActivationCode> activationCodes;
 
@@ -47,7 +47,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Created Date Time.
      * The time the embedded SIM activation code pool was created. Generated service side.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -55,7 +55,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Display Name.
      * The admin defined name of the embedded SIM activation code pool.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -63,7 +63,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Modified Date Time.
      * The time the embedded SIM activation code pool was last modified. Updated service side.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -71,7 +71,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Assignments.
      * Navigational property to a list of targets to which this pool is assigned.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public EmbeddedSIMActivationCodePoolAssignmentCollectionPage assignments;
 
@@ -79,7 +79,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Device States.
      * Navigational property to a list of device states for this pool.
      */
-    @SerializedName("deviceStates")
+    @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
     public EmbeddedSIMDeviceStateCollectionPage deviceStates;
 

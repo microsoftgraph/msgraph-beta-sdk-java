@@ -28,7 +28,7 @@ public class ItemAddress extends ItemFacet implements IJsonBackedObject {
      * The Detail.
      * 
      */
-    @SerializedName("detail")
+    @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
     public PhysicalAddress detail;
 
@@ -36,7 +36,7 @@ public class ItemAddress extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class ItemAddress extends ItemFacet implements IJsonBackedObject {
      * The Geo Coordinates.
      * 
      */
-    @SerializedName("geoCoordinates")
+    @SerializedName(value = "geoCoordinates", alternate = {"GeoCoordinates"})
     @Expose
     public GeoCoordinates geoCoordinates;
 

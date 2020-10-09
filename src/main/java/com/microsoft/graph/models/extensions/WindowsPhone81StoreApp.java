@@ -26,7 +26,7 @@ public class WindowsPhone81StoreApp extends MobileApp implements IJsonBackedObje
      * The App Store Url.
      * The Windows Phone 8.1 app store URL.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 

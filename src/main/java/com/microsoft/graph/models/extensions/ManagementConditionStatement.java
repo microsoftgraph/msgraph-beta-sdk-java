@@ -30,7 +30,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The Applicable Platforms.
      * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
      */
-    @SerializedName("applicablePlatforms")
+    @SerializedName(value = "applicablePlatforms", alternate = {"ApplicablePlatforms"})
     @Expose
     public java.util.List<DevicePlatformType> applicablePlatforms;
 
@@ -38,7 +38,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The Created Date Time.
      * The time the management condition statement was created. Generated service side.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -46,7 +46,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The Description.
      * The admin defined description of the management condition statement.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -54,7 +54,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The Display Name.
      * The admin defined name of the management condition statement.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -62,7 +62,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The ETag.
      * ETag of the management condition statement. Updated service side.
      */
-    @SerializedName("eTag")
+    @SerializedName(value = "eTag", alternate = {"ETag"})
     @Expose
     public String eTag;
 
@@ -70,7 +70,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The Expression.
      * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
      */
-    @SerializedName("expression")
+    @SerializedName(value = "expression", alternate = {"Expression"})
     @Expose
     public ManagementConditionExpression expression;
 
@@ -78,7 +78,7 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
      * The Modified Date Time.
      * The time the management condition statement was last modified. Updated service side.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 

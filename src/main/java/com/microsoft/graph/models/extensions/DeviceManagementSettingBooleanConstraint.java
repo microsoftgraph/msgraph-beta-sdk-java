@@ -26,7 +26,7 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
      * The Value.
      * The boolean value to compare against
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Boolean value;
 

@@ -33,7 +33,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Account Enabled.
      * true if the account is enabled; otherwise, false. Required.
      */
-    @SerializedName("accountEnabled")
+    @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
     public Boolean accountEnabled;
 
@@ -41,7 +41,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Alternative Security Ids.
      * For internal use only. Not nullable.
      */
-    @SerializedName("alternativeSecurityIds")
+    @SerializedName(value = "alternativeSecurityIds", alternate = {"AlternativeSecurityIds"})
     @Expose
     public java.util.List<AlternativeSecurityId> alternativeSecurityIds;
 
@@ -49,7 +49,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Approximate Last Sign In Date Time.
      * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
-    @SerializedName("approximateLastSignInDateTime")
+    @SerializedName(value = "approximateLastSignInDateTime", alternate = {"ApproximateLastSignInDateTime"})
     @Expose
     public java.util.Calendar approximateLastSignInDateTime;
 
@@ -57,7 +57,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Compliance Expiration Date Time.
      * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
-    @SerializedName("complianceExpirationDateTime")
+    @SerializedName(value = "complianceExpirationDateTime", alternate = {"ComplianceExpirationDateTime"})
     @Expose
     public java.util.Calendar complianceExpirationDateTime;
 
@@ -65,7 +65,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Device Category.
      * 
      */
-    @SerializedName("deviceCategory")
+    @SerializedName(value = "deviceCategory", alternate = {"DeviceCategory"})
     @Expose
     public String deviceCategory;
 
@@ -73,7 +73,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Device Id.
      * Unique identifier set by Azure Device Registration Service at the time of registration.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -81,7 +81,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Device Metadata.
      * For interal use only. Set to null.
      */
-    @SerializedName("deviceMetadata")
+    @SerializedName(value = "deviceMetadata", alternate = {"DeviceMetadata"})
     @Expose
     public String deviceMetadata;
 
@@ -89,7 +89,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Device Ownership.
      * 
      */
-    @SerializedName("deviceOwnership")
+    @SerializedName(value = "deviceOwnership", alternate = {"DeviceOwnership"})
     @Expose
     public String deviceOwnership;
 
@@ -97,7 +97,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Device Version.
      * For interal use only.
      */
-    @SerializedName("deviceVersion")
+    @SerializedName(value = "deviceVersion", alternate = {"DeviceVersion"})
     @Expose
     public Integer deviceVersion;
 
@@ -105,7 +105,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * The display name for the device. Required.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -113,7 +113,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Domain Name.
      * 
      */
-    @SerializedName("domainName")
+    @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
     public String domainName;
 
@@ -121,7 +121,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Enrollment Profile Name.
      * 
      */
-    @SerializedName("enrollmentProfileName")
+    @SerializedName(value = "enrollmentProfileName", alternate = {"EnrollmentProfileName"})
     @Expose
     public String enrollmentProfileName;
 
@@ -129,7 +129,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Enrollment Type.
      * 
      */
-    @SerializedName("enrollmentType")
+    @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose
     public String enrollmentType;
 
@@ -137,7 +137,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Extension Attributes.
      * 
      */
-    @SerializedName("extensionAttributes")
+    @SerializedName(value = "extensionAttributes", alternate = {"ExtensionAttributes"})
     @Expose
     public OnPremisesExtensionAttributes extensionAttributes;
 
@@ -145,7 +145,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Is Compliant.
      * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
      */
-    @SerializedName("isCompliant")
+    @SerializedName(value = "isCompliant", alternate = {"IsCompliant"})
     @Expose
     public Boolean isCompliant;
 
@@ -153,7 +153,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Is Managed.
      * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
      */
-    @SerializedName("isManaged")
+    @SerializedName(value = "isManaged", alternate = {"IsManaged"})
     @Expose
     public Boolean isManaged;
 
@@ -161,7 +161,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Is Rooted.
      * 
      */
-    @SerializedName("isRooted")
+    @SerializedName(value = "isRooted", alternate = {"IsRooted"})
     @Expose
     public Boolean isRooted;
 
@@ -169,7 +169,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Management Type.
      * 
      */
-    @SerializedName("managementType")
+    @SerializedName(value = "managementType", alternate = {"ManagementType"})
     @Expose
     public String managementType;
 
@@ -177,7 +177,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Last Sync Date Time.
      * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
      */
-    @SerializedName("onPremisesLastSyncDateTime")
+    @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
@@ -185,7 +185,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Sync Enabled.
      * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only.
      */
-    @SerializedName("onPremisesSyncEnabled")
+    @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
     public Boolean onPremisesSyncEnabled;
 
@@ -193,7 +193,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Operating System.
      * The type of operating system on the device. Required.
      */
-    @SerializedName("operatingSystem")
+    @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
     public String operatingSystem;
 
@@ -201,7 +201,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Operating System Version.
      * The version of the operating system on the device. Required.
      */
-    @SerializedName("operatingSystemVersion")
+    @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
     public String operatingSystemVersion;
 
@@ -209,7 +209,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Physical Ids.
      * For interal use only. Not nullable.
      */
-    @SerializedName("physicalIds")
+    @SerializedName(value = "physicalIds", alternate = {"PhysicalIds"})
     @Expose
     public java.util.List<String> physicalIds;
 
@@ -217,7 +217,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Profile Type.
      * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
      */
-    @SerializedName("profileType")
+    @SerializedName(value = "profileType", alternate = {"ProfileType"})
     @Expose
     public String profileType;
 
@@ -225,7 +225,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Registration Date Time.
      * 
      */
-    @SerializedName("registrationDateTime")
+    @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
     @Expose
     public java.util.Calendar registrationDateTime;
 
@@ -233,7 +233,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The System Labels.
      * List of labels applied to the device by the system.
      */
-    @SerializedName("systemLabels")
+    @SerializedName(value = "systemLabels", alternate = {"SystemLabels"})
     @Expose
     public java.util.List<String> systemLabels;
 
@@ -241,7 +241,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Trust Type.
      * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
      */
-    @SerializedName("trustType")
+    @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose
     public String trustType;
 
@@ -249,23 +249,23 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Kind.
      * 
      */
-    @SerializedName("Kind")
+    @SerializedName(value = "kind", alternate = {"Kind"})
     @Expose
     public String kind;
 
     /**
      * The Manufacturer.
-     * 
+     * Manufacturer of the device. Read-only.
      */
-    @SerializedName("Manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
     /**
      * The Model.
-     * 
+     * Model of the device. Read-only.
      */
-    @SerializedName("Model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -273,7 +273,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("Name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -281,7 +281,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Platform.
      * 
      */
-    @SerializedName("Platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public String platform;
 
@@ -289,7 +289,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("Status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -321,7 +321,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the device. Read-only. Nullable.
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -329,7 +329,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Commands.
      * 
      */
-    @SerializedName("commands")
+    @SerializedName(value = "commands", alternate = {"Commands"})
     @Expose
     public CommandCollectionPage commands;
 

@@ -36,7 +36,7 @@ public class UserRegistrationCount implements IJsonBackedObject {
      * The Registration Count.
      * 
      */
-    @SerializedName("registrationCount")
+    @SerializedName(value = "registrationCount", alternate = {"RegistrationCount"})
     @Expose
     public Long registrationCount;
 
@@ -44,7 +44,7 @@ public class UserRegistrationCount implements IJsonBackedObject {
      * The Registration Status.
      * 
      */
-    @SerializedName("registrationStatus")
+    @SerializedName(value = "registrationStatus", alternate = {"RegistrationStatus"})
     @Expose
     public RegistrationStatusType registrationStatus;
 

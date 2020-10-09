@@ -28,7 +28,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Custom Data.
      * 
      */
-    @SerializedName("customData")
+    @SerializedName(value = "customData", alternate = {"CustomData"})
     @Expose
     public String customData;
 
@@ -36,7 +36,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The De Duplication Id.
      * 
      */
-    @SerializedName("deDuplicationId")
+    @SerializedName(value = "deDuplicationId", alternate = {"DeDuplicationId"})
     @Expose
     public String deDuplicationId;
 
@@ -44,7 +44,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -52,7 +52,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -60,7 +60,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Policy.
      * 
      */
-    @SerializedName("policy")
+    @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose
     public GovernancePolicy policy;
 
@@ -68,7 +68,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Policy Template Id.
      * 
      */
-    @SerializedName("policyTemplateId")
+    @SerializedName(value = "policyTemplateId", alternate = {"PolicyTemplateId"})
     @Expose
     public String policyTemplateId;
 
@@ -76,7 +76,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Record Version.
      * 
      */
-    @SerializedName("recordVersion")
+    @SerializedName(value = "recordVersion", alternate = {"RecordVersion"})
     @Expose
     public String recordVersion;
 
@@ -84,7 +84,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Schema Id.
      * 
      */
-    @SerializedName("schemaId")
+    @SerializedName(value = "schemaId", alternate = {"SchemaId"})
     @Expose
     public String schemaId;
 
@@ -92,7 +92,7 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public BusinessFlowSettings settings;
 

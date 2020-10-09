@@ -25,7 +25,7 @@ public class TeamSendActivityNotificationBody {
      * The topic.
      * 
      */
-    @SerializedName("topic")
+    @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
     public TeamworkActivityTopic topic;
 
@@ -33,7 +33,7 @@ public class TeamSendActivityNotificationBody {
      * The activity Type.
      * 
      */
-    @SerializedName("activityType")
+    @SerializedName(value = "activityType", alternate = {"ActivityType"})
     @Expose
     public String activityType;
 
@@ -41,7 +41,7 @@ public class TeamSendActivityNotificationBody {
      * The chain Id.
      * 
      */
-    @SerializedName("chainId")
+    @SerializedName(value = "chainId", alternate = {"ChainId"})
     @Expose
     public Long chainId;
 
@@ -49,7 +49,7 @@ public class TeamSendActivityNotificationBody {
      * The preview Text.
      * 
      */
-    @SerializedName("previewText")
+    @SerializedName(value = "previewText", alternate = {"PreviewText"})
     @Expose
     public ItemBody previewText;
 
@@ -57,7 +57,7 @@ public class TeamSendActivityNotificationBody {
      * The template Parameters.
      * 
      */
-    @SerializedName("templateParameters")
+    @SerializedName(value = "templateParameters", alternate = {"TemplateParameters"})
     @Expose
     public java.util.List<KeyValuePair> templateParameters;
 
@@ -65,7 +65,7 @@ public class TeamSendActivityNotificationBody {
      * The recipient.
      * 
      */
-    @SerializedName("recipient")
+    @SerializedName(value = "recipient", alternate = {"Recipient"})
     @Expose
     public TeamworkNotificationRecipient recipient;
 

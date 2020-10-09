@@ -22,7 +22,7 @@ public class DeviceHealthScriptUpdateGlobalScriptBody {
      * The version.
      * 
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

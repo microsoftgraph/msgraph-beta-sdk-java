@@ -31,7 +31,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Always On.
      * Whether or not to enable always-on VPN connection.
      */
-    @SerializedName("alwaysOn")
+    @SerializedName(value = "alwaysOn", alternate = {"AlwaysOn"})
     @Expose
     public Boolean alwaysOn;
 
@@ -39,7 +39,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Always On Lockdown.
      * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
      */
-    @SerializedName("alwaysOnLockdown")
+    @SerializedName(value = "alwaysOnLockdown", alternate = {"AlwaysOnLockdown"})
     @Expose
     public Boolean alwaysOnLockdown;
 
@@ -47,7 +47,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Connection Type.
      * Connection type.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public AndroidVpnConnectionType connectionType;
 
@@ -55,7 +55,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Microsoft Tunnel Site Id.
      * Microsoft Tunnel site ID.
      */
-    @SerializedName("microsoftTunnelSiteId")
+    @SerializedName(value = "microsoftTunnelSiteId", alternate = {"MicrosoftTunnelSiteId"})
     @Expose
     public String microsoftTunnelSiteId;
 
@@ -63,7 +63,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Proxy Server.
      * Proxy server.
      */
-    @SerializedName("proxyServer")
+    @SerializedName(value = "proxyServer", alternate = {"ProxyServer"})
     @Expose
     public VpnProxyServer proxyServer;
 
@@ -71,7 +71,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Targeted Mobile Apps.
      * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("targetedMobileApps")
+    @SerializedName(value = "targetedMobileApps", alternate = {"TargetedMobileApps"})
     @Expose
     public java.util.List<AppListItem> targetedMobileApps;
 
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Targeted Package Ids.
      * Targeted App package IDs.
      */
-    @SerializedName("targetedPackageIds")
+    @SerializedName(value = "targetedPackageIds", alternate = {"TargetedPackageIds"})
     @Expose
     public java.util.List<String> targetedPackageIds;
 
@@ -87,7 +87,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Derived Credential Settings.
      * Tenant level settings for the Derived Credentials to be used for authentication.
      */
-    @SerializedName("derivedCredentialSettings")
+    @SerializedName(value = "derivedCredentialSettings", alternate = {"DerivedCredentialSettings"})
     @Expose
     public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
@@ -95,7 +95,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public AndroidDeviceOwnerCertificateProfileBase identityCertificate;
 

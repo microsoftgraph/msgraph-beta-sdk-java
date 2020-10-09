@@ -28,7 +28,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Azure Subscription Id.
      * 
      */
-    @SerializedName("azureSubscriptionId")
+    @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
     public String azureSubscriptionId;
 
@@ -36,7 +36,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -44,7 +44,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -52,7 +52,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Deployment Package Url.
      * 
      */
-    @SerializedName("deploymentPackageUrl")
+    @SerializedName(value = "deploymentPackageUrl", alternate = {"DeploymentPackageUrl"})
     @Expose
     public String deploymentPackageUrl;
 
@@ -60,7 +60,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Destination Service Name.
      * 
      */
-    @SerializedName("destinationServiceName")
+    @SerializedName(value = "destinationServiceName", alternate = {"DestinationServiceName"})
     @Expose
     public String destinationServiceName;
 
@@ -68,7 +68,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Is Signed.
      * 
      */
-    @SerializedName("isSigned")
+    @SerializedName(value = "isSigned", alternate = {"IsSigned"})
     @Expose
     public Boolean isSigned;
 
@@ -76,7 +76,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -84,7 +84,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Manifest.
      * 
      */
-    @SerializedName("manifest")
+    @SerializedName(value = "manifest", alternate = {"Manifest"})
     @Expose
     public String manifest;
 
@@ -92,7 +92,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -100,7 +100,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Permissions Required.
      * 
      */
-    @SerializedName("permissionsRequired")
+    @SerializedName(value = "permissionsRequired", alternate = {"PermissionsRequired"})
     @Expose
     public ApplicationPermissionsRequired permissionsRequired;
 
@@ -108,7 +108,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Platform.
      * 
      */
-    @SerializedName("platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public String platform;
 
@@ -116,7 +116,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Policy Name.
      * 
      */
-    @SerializedName("policyName")
+    @SerializedName(value = "policyName", alternate = {"PolicyName"})
     @Expose
     public String policyName;
 
@@ -124,7 +124,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Publisher.
      * 
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -132,7 +132,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -140,7 +140,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -148,7 +148,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -156,7 +156,7 @@ public class CloudAppSecurityProfile extends Entity implements IJsonBackedObject
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

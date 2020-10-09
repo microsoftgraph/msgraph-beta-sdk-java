@@ -28,7 +28,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Boot From Built In Network Adapters.
      * Defines whether a user is allowed to boot from built-in network adapters.
      */
-    @SerializedName("bootFromBuiltInNetworkAdapters")
+    @SerializedName(value = "bootFromBuiltInNetworkAdapters", alternate = {"BootFromBuiltInNetworkAdapters"})
     @Expose
     public Enablement bootFromBuiltInNetworkAdapters;
 
@@ -36,7 +36,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Boot From External Media.
      * Defines whether a user is allowed to boot from external media.
      */
-    @SerializedName("bootFromExternalMedia")
+    @SerializedName(value = "bootFromExternalMedia", alternate = {"BootFromExternalMedia"})
     @Expose
     public Enablement bootFromExternalMedia;
 
@@ -44,7 +44,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Cameras.
      * Defines whether built-in cameras are enabled.
      */
-    @SerializedName("cameras")
+    @SerializedName(value = "cameras", alternate = {"Cameras"})
     @Expose
     public Enablement cameras;
 
@@ -52,7 +52,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Change Uefi Settings Permission.
      * Defines the permission level granted to users to change UEFI settings.
      */
-    @SerializedName("changeUefiSettingsPermission")
+    @SerializedName(value = "changeUefiSettingsPermission", alternate = {"ChangeUefiSettingsPermission"})
     @Expose
     public ChangeUefiSettingsPermission changeUefiSettingsPermission;
 
@@ -60,7 +60,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Microphones And Speakers.
      * Defines whether built-in microphones or speakers are enabled.
      */
-    @SerializedName("microphonesAndSpeakers")
+    @SerializedName(value = "microphonesAndSpeakers", alternate = {"MicrophonesAndSpeakers"})
     @Expose
     public Enablement microphonesAndSpeakers;
 
@@ -68,7 +68,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Radios.
      * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled.
      */
-    @SerializedName("radios")
+    @SerializedName(value = "radios", alternate = {"Radios"})
     @Expose
     public Enablement radios;
 
@@ -76,7 +76,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The Virtualization Of Cpu And IO.
      * Defines whether CPU and IO virtualization is enabled.
      */
-    @SerializedName("virtualizationOfCpuAndIO")
+    @SerializedName(value = "virtualizationOfCpuAndIO", alternate = {"VirtualizationOfCpuAndIO"})
     @Expose
     public Enablement virtualizationOfCpuAndIO;
 

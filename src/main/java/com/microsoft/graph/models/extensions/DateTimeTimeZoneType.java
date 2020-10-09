@@ -35,7 +35,7 @@ public class DateTimeTimeZoneType implements IJsonBackedObject {
      * The Date Time.
      * 
      */
-    @SerializedName("dateTime")
+    @SerializedName(value = "dateTime", alternate = {"DateTime"})
     @Expose
     public String dateTime;
 

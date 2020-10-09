@@ -26,7 +26,7 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements IJsonBack
      * The Bypass Proxy Server For Local Address.
      * Bypass proxy server for local address.
      */
-    @SerializedName("bypassProxyServerForLocalAddress")
+    @SerializedName(value = "bypassProxyServerForLocalAddress", alternate = {"BypassProxyServerForLocalAddress"})
     @Expose
     public Boolean bypassProxyServerForLocalAddress;
 

@@ -35,7 +35,7 @@ public class AuditProperty implements IJsonBackedObject {
      * The Display Name.
      * Display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class AuditProperty implements IJsonBackedObject {
      * The New Value.
      * New value.
      */
-    @SerializedName("newValue")
+    @SerializedName(value = "newValue", alternate = {"NewValue"})
     @Expose
     public String newValue;
 
@@ -51,7 +51,7 @@ public class AuditProperty implements IJsonBackedObject {
      * The Old Value.
      * Old value.
      */
-    @SerializedName("oldValue")
+    @SerializedName(value = "oldValue", alternate = {"OldValue"})
     @Expose
     public String oldValue;
 

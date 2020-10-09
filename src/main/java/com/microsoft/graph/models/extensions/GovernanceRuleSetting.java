@@ -35,7 +35,7 @@ public class GovernanceRuleSetting implements IJsonBackedObject {
      * The Rule Identifier.
      * 
      */
-    @SerializedName("ruleIdentifier")
+    @SerializedName(value = "ruleIdentifier", alternate = {"RuleIdentifier"})
     @Expose
     public String ruleIdentifier;
 
@@ -43,7 +43,7 @@ public class GovernanceRuleSetting implements IJsonBackedObject {
      * The Setting.
      * 
      */
-    @SerializedName("setting")
+    @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose
     public String setting;
 

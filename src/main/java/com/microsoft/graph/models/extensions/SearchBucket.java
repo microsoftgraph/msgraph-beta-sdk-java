@@ -35,7 +35,7 @@ public class SearchBucket implements IJsonBackedObject {
      * The Aggregation Filter Token.
      * 
      */
-    @SerializedName("aggregationFilterToken")
+    @SerializedName(value = "aggregationFilterToken", alternate = {"AggregationFilterToken"})
     @Expose
     public String aggregationFilterToken;
 
@@ -43,7 +43,7 @@ public class SearchBucket implements IJsonBackedObject {
      * The Count.
      * 
      */
-    @SerializedName("count")
+    @SerializedName(value = "count", alternate = {"Count"})
     @Expose
     public Integer count;
 
@@ -51,7 +51,7 @@ public class SearchBucket implements IJsonBackedObject {
      * The Key.
      * 
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public String key;
 

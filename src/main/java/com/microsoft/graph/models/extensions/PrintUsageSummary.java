@@ -35,7 +35,7 @@ public class PrintUsageSummary implements IJsonBackedObject {
      * The Completed Job Count.
      * 
      */
-    @SerializedName("completedJobCount")
+    @SerializedName(value = "completedJobCount", alternate = {"CompletedJobCount"})
     @Expose
     public Integer completedJobCount;
 
@@ -43,7 +43,7 @@ public class PrintUsageSummary implements IJsonBackedObject {
      * The Incomplete Job Count.
      * 
      */
-    @SerializedName("incompleteJobCount")
+    @SerializedName(value = "incompleteJobCount", alternate = {"IncompleteJobCount"})
     @Expose
     public Integer incompleteJobCount;
 

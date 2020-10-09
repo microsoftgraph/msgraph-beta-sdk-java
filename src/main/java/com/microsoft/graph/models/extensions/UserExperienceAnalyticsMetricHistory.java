@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements IJso
      * The Metric Date Time.
      * The user experience analytics metric date time.
      */
-    @SerializedName("metricDateTime")
+    @SerializedName(value = "metricDateTime", alternate = {"MetricDateTime"})
     @Expose
     public java.util.Calendar metricDateTime;
 
@@ -35,7 +35,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements IJso
      * The User Experience Analytics Metric.
      * User experience analytics metric.
      */
-    @SerializedName("userExperienceAnalyticsMetric")
+    @SerializedName(value = "userExperienceAnalyticsMetric", alternate = {"UserExperienceAnalyticsMetric"})
     @Expose
     public UserExperienceAnalyticsMetric userExperienceAnalyticsMetric;
 

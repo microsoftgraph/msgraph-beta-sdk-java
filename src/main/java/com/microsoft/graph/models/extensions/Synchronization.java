@@ -31,7 +31,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
      * The Secrets.
      * 
      */
-    @SerializedName("secrets")
+    @SerializedName(value = "secrets", alternate = {"Secrets"})
     @Expose
     public java.util.List<SynchronizationSecretKeyStringValuePair> secrets;
 
@@ -39,7 +39,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
      * The Jobs.
      * 
      */
-    @SerializedName("jobs")
+    @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
     public SynchronizationJobCollectionPage jobs;
 
@@ -47,7 +47,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
      * The Templates.
      * 
      */
-    @SerializedName("templates")
+    @SerializedName(value = "templates", alternate = {"Templates"})
     @Expose
     public SynchronizationTemplateCollectionPage templates;
 

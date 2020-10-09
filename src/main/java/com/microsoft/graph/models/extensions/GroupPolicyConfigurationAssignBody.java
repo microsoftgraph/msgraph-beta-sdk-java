@@ -22,7 +22,7 @@ public class GroupPolicyConfigurationAssignBody {
      * The assignments.
      * 
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public java.util.List<GroupPolicyConfigurationAssignment> assignments;
 

@@ -28,7 +28,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Account Id.
      * 
      */
-    @SerializedName("accountId")
+    @SerializedName(value = "accountId", alternate = {"AccountId"})
     @Expose
     public java.util.UUID accountId;
 
@@ -36,7 +36,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Amount Excluding Tax.
      * 
      */
-    @SerializedName("amountExcludingTax")
+    @SerializedName(value = "amountExcludingTax", alternate = {"AmountExcludingTax"})
     @Expose
     public java.math.BigDecimal amountExcludingTax;
 
@@ -44,7 +44,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Amount Including Tax.
      * 
      */
-    @SerializedName("amountIncludingTax")
+    @SerializedName(value = "amountIncludingTax", alternate = {"AmountIncludingTax"})
     @Expose
     public java.math.BigDecimal amountIncludingTax;
 
@@ -52,7 +52,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -60,7 +60,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Discount Amount.
      * 
      */
-    @SerializedName("discountAmount")
+    @SerializedName(value = "discountAmount", alternate = {"DiscountAmount"})
     @Expose
     public java.math.BigDecimal discountAmount;
 
@@ -68,7 +68,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Discount Applied Before Tax.
      * 
      */
-    @SerializedName("discountAppliedBeforeTax")
+    @SerializedName(value = "discountAppliedBeforeTax", alternate = {"DiscountAppliedBeforeTax"})
     @Expose
     public Boolean discountAppliedBeforeTax;
 
@@ -76,7 +76,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Discount Percent.
      * 
      */
-    @SerializedName("discountPercent")
+    @SerializedName(value = "discountPercent", alternate = {"DiscountPercent"})
     @Expose
     public java.math.BigDecimal discountPercent;
 
@@ -84,7 +84,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Document Id.
      * 
      */
-    @SerializedName("documentId")
+    @SerializedName(value = "documentId", alternate = {"DocumentId"})
     @Expose
     public java.util.UUID documentId;
 
@@ -92,7 +92,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Invoice Discount Allocation.
      * 
      */
-    @SerializedName("invoiceDiscountAllocation")
+    @SerializedName(value = "invoiceDiscountAllocation", alternate = {"InvoiceDiscountAllocation"})
     @Expose
     public java.math.BigDecimal invoiceDiscountAllocation;
 
@@ -100,7 +100,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Item Id.
      * 
      */
-    @SerializedName("itemId")
+    @SerializedName(value = "itemId", alternate = {"ItemId"})
     @Expose
     public java.util.UUID itemId;
 
@@ -108,7 +108,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Line Type.
      * 
      */
-    @SerializedName("lineType")
+    @SerializedName(value = "lineType", alternate = {"LineType"})
     @Expose
     public String lineType;
 
@@ -116,7 +116,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Net Amount.
      * 
      */
-    @SerializedName("netAmount")
+    @SerializedName(value = "netAmount", alternate = {"NetAmount"})
     @Expose
     public java.math.BigDecimal netAmount;
 
@@ -124,7 +124,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Net Amount Including Tax.
      * 
      */
-    @SerializedName("netAmountIncludingTax")
+    @SerializedName(value = "netAmountIncludingTax", alternate = {"NetAmountIncludingTax"})
     @Expose
     public java.math.BigDecimal netAmountIncludingTax;
 
@@ -132,7 +132,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Net Tax Amount.
      * 
      */
-    @SerializedName("netTaxAmount")
+    @SerializedName(value = "netTaxAmount", alternate = {"NetTaxAmount"})
     @Expose
     public java.math.BigDecimal netTaxAmount;
 
@@ -140,7 +140,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Quantity.
      * 
      */
-    @SerializedName("quantity")
+    @SerializedName(value = "quantity", alternate = {"Quantity"})
     @Expose
     public java.math.BigDecimal quantity;
 
@@ -148,7 +148,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Sequence.
      * 
      */
-    @SerializedName("sequence")
+    @SerializedName(value = "sequence", alternate = {"Sequence"})
     @Expose
     public Integer sequence;
 
@@ -156,7 +156,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Shipment Date.
      * 
      */
-    @SerializedName("shipmentDate")
+    @SerializedName(value = "shipmentDate", alternate = {"ShipmentDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly shipmentDate;
 
@@ -164,7 +164,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Tax Code.
      * 
      */
-    @SerializedName("taxCode")
+    @SerializedName(value = "taxCode", alternate = {"TaxCode"})
     @Expose
     public String taxCode;
 
@@ -172,7 +172,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Tax Percent.
      * 
      */
-    @SerializedName("taxPercent")
+    @SerializedName(value = "taxPercent", alternate = {"TaxPercent"})
     @Expose
     public java.math.BigDecimal taxPercent;
 
@@ -180,7 +180,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Total Tax Amount.
      * 
      */
-    @SerializedName("totalTaxAmount")
+    @SerializedName(value = "totalTaxAmount", alternate = {"TotalTaxAmount"})
     @Expose
     public java.math.BigDecimal totalTaxAmount;
 
@@ -188,7 +188,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Unit Of Measure Id.
      * 
      */
-    @SerializedName("unitOfMeasureId")
+    @SerializedName(value = "unitOfMeasureId", alternate = {"UnitOfMeasureId"})
     @Expose
     public java.util.UUID unitOfMeasureId;
 
@@ -196,7 +196,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Unit Price.
      * 
      */
-    @SerializedName("unitPrice")
+    @SerializedName(value = "unitPrice", alternate = {"UnitPrice"})
     @Expose
     public java.math.BigDecimal unitPrice;
 
@@ -204,7 +204,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Account.
      * 
      */
-    @SerializedName("account")
+    @SerializedName(value = "account", alternate = {"Account"})
     @Expose
     public Account account;
 
@@ -212,7 +212,7 @@ public class SalesCreditMemoLine extends Entity implements IJsonBackedObject {
      * The Item.
      * 
      */
-    @SerializedName("item")
+    @SerializedName(value = "item", alternate = {"Item"})
     @Expose
     public Item item;
 

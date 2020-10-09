@@ -35,7 +35,7 @@ public class UserSet implements IJsonBackedObject {
      * The Is Backup.
      * 
      */
-    @SerializedName("isBackup")
+    @SerializedName(value = "isBackup", alternate = {"IsBackup"})
     @Expose
     public Boolean isBackup;
 

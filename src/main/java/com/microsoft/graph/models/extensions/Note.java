@@ -35,7 +35,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Body.
      * 
      */
-    @SerializedName("body")
+    @SerializedName(value = "body", alternate = {"Body"})
     @Expose
     public ItemBody body;
 
@@ -43,7 +43,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Has Attachments.
      * 
      */
-    @SerializedName("hasAttachments")
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
     public Boolean hasAttachments;
 
@@ -51,7 +51,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -59,7 +59,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Subject.
      * 
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -67,7 +67,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * 
      */
-    @SerializedName("attachments")
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
     public AttachmentCollectionPage attachments;
 
@@ -75,7 +75,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Extensions.
      * 
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -83,7 +83,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * 
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -91,7 +91,7 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * 
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 

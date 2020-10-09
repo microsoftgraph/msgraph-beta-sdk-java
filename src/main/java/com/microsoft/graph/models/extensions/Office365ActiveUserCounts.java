@@ -26,7 +26,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Exchange.
      * 
      */
-    @SerializedName("exchange")
+    @SerializedName(value = "exchange", alternate = {"Exchange"})
     @Expose
     public Long exchange;
 
@@ -34,7 +34,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Office365.
      * 
      */
-    @SerializedName("office365")
+    @SerializedName(value = "office365", alternate = {"Office365"})
     @Expose
     public Long office365;
 
@@ -42,7 +42,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The One Drive.
      * 
      */
-    @SerializedName("oneDrive")
+    @SerializedName(value = "oneDrive", alternate = {"OneDrive"})
     @Expose
     public Long oneDrive;
 
@@ -50,7 +50,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -74,7 +74,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Share Point.
      * 
      */
-    @SerializedName("sharePoint")
+    @SerializedName(value = "sharePoint", alternate = {"SharePoint"})
     @Expose
     public Long sharePoint;
 
@@ -82,7 +82,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Skype For Business.
      * 
      */
-    @SerializedName("skypeForBusiness")
+    @SerializedName(value = "skypeForBusiness", alternate = {"SkypeForBusiness"})
     @Expose
     public Long skypeForBusiness;
 
@@ -90,7 +90,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Teams.
      * 
      */
-    @SerializedName("teams")
+    @SerializedName(value = "teams", alternate = {"Teams"})
     @Expose
     public Long teams;
 
@@ -98,7 +98,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
      * The Yammer.
      * 
      */
-    @SerializedName("yammer")
+    @SerializedName(value = "yammer", alternate = {"Yammer"})
     @Expose
     public Long yammer;
 

@@ -27,7 +27,7 @@ public class WindowsManagementAppHealthState extends Entity implements IJsonBack
      * The Device Name.
      * Name of the device on which Windows management app is installed.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -35,7 +35,7 @@ public class WindowsManagementAppHealthState extends Entity implements IJsonBack
      * The Device OSVersion.
      * Windows 10 OS version of the device on which Windows management app is installed.
      */
-    @SerializedName("deviceOSVersion")
+    @SerializedName(value = "deviceOSVersion", alternate = {"DeviceOSVersion"})
     @Expose
     public String deviceOSVersion;
 
@@ -43,7 +43,7 @@ public class WindowsManagementAppHealthState extends Entity implements IJsonBack
      * The Health State.
      * Windows management app health state.
      */
-    @SerializedName("healthState")
+    @SerializedName(value = "healthState", alternate = {"HealthState"})
     @Expose
     public HealthState healthState;
 
@@ -51,7 +51,7 @@ public class WindowsManagementAppHealthState extends Entity implements IJsonBack
      * The Installed Version.
      * Windows management app installed version.
      */
-    @SerializedName("installedVersion")
+    @SerializedName(value = "installedVersion", alternate = {"InstalledVersion"})
     @Expose
     public String installedVersion;
 
@@ -59,7 +59,7 @@ public class WindowsManagementAppHealthState extends Entity implements IJsonBack
      * The Last Check In Date Time.
      * Windows management app last check-in time.
      */
-    @SerializedName("lastCheckInDateTime")
+    @SerializedName(value = "lastCheckInDateTime", alternate = {"LastCheckInDateTime"})
     @Expose
     public java.util.Calendar lastCheckInDateTime;
 

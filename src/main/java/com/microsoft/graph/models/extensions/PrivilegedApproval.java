@@ -29,7 +29,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Approval Duration.
      * 
      */
-    @SerializedName("approvalDuration")
+    @SerializedName(value = "approvalDuration", alternate = {"ApprovalDuration"})
     @Expose
     public javax.xml.datatype.Duration approvalDuration;
 
@@ -37,7 +37,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Approval State.
      * 
      */
-    @SerializedName("approvalState")
+    @SerializedName(value = "approvalState", alternate = {"ApprovalState"})
     @Expose
     public ApprovalState approvalState;
 
@@ -45,7 +45,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Approval Type.
      * 
      */
-    @SerializedName("approvalType")
+    @SerializedName(value = "approvalType", alternate = {"ApprovalType"})
     @Expose
     public String approvalType;
 
@@ -53,7 +53,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Approver Reason.
      * 
      */
-    @SerializedName("approverReason")
+    @SerializedName(value = "approverReason", alternate = {"ApproverReason"})
     @Expose
     public String approverReason;
 
@@ -61,7 +61,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -69,7 +69,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Requestor Reason.
      * 
      */
-    @SerializedName("requestorReason")
+    @SerializedName(value = "requestorReason", alternate = {"RequestorReason"})
     @Expose
     public String requestorReason;
 
@@ -77,7 +77,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Role Id.
      * 
      */
-    @SerializedName("roleId")
+    @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
     public String roleId;
 
@@ -85,7 +85,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -93,7 +93,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -101,7 +101,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Request.
      * 
      */
-    @SerializedName("request")
+    @SerializedName(value = "request", alternate = {"Request"})
     @Expose
     public PrivilegedRoleAssignmentRequest request;
 
@@ -109,7 +109,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
      * The Role Info.
      * 
      */
-    @SerializedName("roleInfo")
+    @SerializedName(value = "roleInfo", alternate = {"RoleInfo"})
     @Expose
     public PrivilegedRole roleInfo;
 

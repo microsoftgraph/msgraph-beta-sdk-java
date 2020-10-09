@@ -22,7 +22,7 @@ public class DeviceManagementIntentUpdateSettingsBody {
      * The settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public java.util.List<DeviceManagementSettingInstance> settings;
 

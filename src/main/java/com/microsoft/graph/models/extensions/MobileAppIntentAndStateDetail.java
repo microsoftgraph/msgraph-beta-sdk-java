@@ -38,7 +38,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
      * The Application Id.
      * MobieApp identifier.
      */
-    @SerializedName("applicationId")
+    @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
     public String applicationId;
 
@@ -46,7 +46,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
      * The Display Name.
      * The admin provided or imported title of the app.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -54,7 +54,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
      * The Display Version.
      * Human readable version of the application
      */
-    @SerializedName("displayVersion")
+    @SerializedName(value = "displayVersion", alternate = {"DisplayVersion"})
     @Expose
     public String displayVersion;
 
@@ -62,7 +62,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
      * The Install State.
      * The install state of the app.
      */
-    @SerializedName("installState")
+    @SerializedName(value = "installState", alternate = {"InstallState"})
     @Expose
     public ResultantAppState installState;
 
@@ -70,7 +70,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
      * The Mobile App Intent.
      * Mobile App Intent.
      */
-    @SerializedName("mobileAppIntent")
+    @SerializedName(value = "mobileAppIntent", alternate = {"MobileAppIntent"})
     @Expose
     public MobileAppIntent mobileAppIntent;
 
@@ -78,7 +78,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
      * The Supported Device Types.
      * The supported platforms for the app.
      */
-    @SerializedName("supportedDeviceTypes")
+    @SerializedName(value = "supportedDeviceTypes", alternate = {"SupportedDeviceTypes"})
     @Expose
     public java.util.List<MobileAppSupportedDeviceType> supportedDeviceTypes;
 

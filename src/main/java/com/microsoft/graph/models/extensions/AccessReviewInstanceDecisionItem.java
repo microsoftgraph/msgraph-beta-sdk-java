@@ -28,7 +28,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Access Review Id.
      * 
      */
-    @SerializedName("accessReviewId")
+    @SerializedName(value = "accessReviewId", alternate = {"AccessReviewId"})
     @Expose
     public String accessReviewId;
 
@@ -36,7 +36,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Applied By.
      * 
      */
-    @SerializedName("appliedBy")
+    @SerializedName(value = "appliedBy", alternate = {"AppliedBy"})
     @Expose
     public UserIdentity appliedBy;
 
@@ -44,7 +44,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Applied Date Time.
      * 
      */
-    @SerializedName("appliedDateTime")
+    @SerializedName(value = "appliedDateTime", alternate = {"AppliedDateTime"})
     @Expose
     public java.util.Calendar appliedDateTime;
 
@@ -52,7 +52,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Apply Result.
      * 
      */
-    @SerializedName("applyResult")
+    @SerializedName(value = "applyResult", alternate = {"ApplyResult"})
     @Expose
     public String applyResult;
 
@@ -60,7 +60,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Decision.
      * 
      */
-    @SerializedName("decision")
+    @SerializedName(value = "decision", alternate = {"Decision"})
     @Expose
     public String decision;
 
@@ -68,7 +68,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Justification.
      * 
      */
-    @SerializedName("justification")
+    @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
     public String justification;
 
@@ -76,7 +76,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Recommendation.
      * 
      */
-    @SerializedName("recommendation")
+    @SerializedName(value = "recommendation", alternate = {"Recommendation"})
     @Expose
     public String recommendation;
 
@@ -84,7 +84,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Reviewed By.
      * 
      */
-    @SerializedName("reviewedBy")
+    @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose
     public UserIdentity reviewedBy;
 
@@ -92,7 +92,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Reviewed Date Time.
      * 
      */
-    @SerializedName("reviewedDateTime")
+    @SerializedName(value = "reviewedDateTime", alternate = {"ReviewedDateTime"})
     @Expose
     public java.util.Calendar reviewedDateTime;
 
@@ -100,7 +100,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      * The Target.
      * 
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public AccessReviewInstanceDecisionItemTarget target;
 

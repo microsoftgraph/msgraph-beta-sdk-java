@@ -27,7 +27,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Created Date Time.
      * Creation time of the Assignment Filter.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -35,7 +35,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Description.
      * Description of the Assignment Filter.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Display Name.
      * DisplayName of the Assignment Filter.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Last Modified Date Time.
      * Last modified time of the Assignment Filter.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -59,7 +59,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Platform.
      * Platform type of the devices on which the Assignment Filter will be applicable.
      */
-    @SerializedName("platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public DevicePlatformType platform;
 
@@ -67,7 +67,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Role Scope Tags.
      * RoleScopeTags of the Assignment Filter.
      */
-    @SerializedName("roleScopeTags")
+    @SerializedName(value = "roleScopeTags", alternate = {"RoleScopeTags"})
     @Expose
     public java.util.List<String> roleScopeTags;
 
@@ -75,7 +75,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
      * The Rule.
      * Rule definition of the Assignment Filter.
      */
-    @SerializedName("rule")
+    @SerializedName(value = "rule", alternate = {"Rule"})
     @Expose
     public String rule;
 

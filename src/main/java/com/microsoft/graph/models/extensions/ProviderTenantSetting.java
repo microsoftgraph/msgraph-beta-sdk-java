@@ -26,7 +26,7 @@ public class ProviderTenantSetting extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -34,7 +34,7 @@ public class ProviderTenantSetting extends Entity implements IJsonBackedObject {
      * The Enabled.
      * 
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -42,7 +42,7 @@ public class ProviderTenantSetting extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -50,7 +50,7 @@ public class ProviderTenantSetting extends Entity implements IJsonBackedObject {
      * The Provider.
      * 
      */
-    @SerializedName("provider")
+    @SerializedName(value = "provider", alternate = {"Provider"})
     @Expose
     public String provider;
 
@@ -58,7 +58,7 @@ public class ProviderTenantSetting extends Entity implements IJsonBackedObject {
      * The Vendor.
      * 
      */
-    @SerializedName("vendor")
+    @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
     public String vendor;
 

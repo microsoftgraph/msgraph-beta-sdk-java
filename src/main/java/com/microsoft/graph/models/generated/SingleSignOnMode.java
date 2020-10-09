@@ -23,6 +23,18 @@ public enum SingleSignOnMode
     */
     SAML,
     /**
+    * ping Header Based
+    */
+    PING_HEADER_BASED,
+    /**
+    * aad Header Based
+    */
+    AAD_HEADER_BASED,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For SingleSignOnMode values that were not expected from the service
     */
     UNEXPECTED_VALUE

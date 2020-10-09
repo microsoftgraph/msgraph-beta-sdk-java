@@ -29,7 +29,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
      * The Synchronization Rules.
      * 
      */
-    @SerializedName("synchronizationRules")
+    @SerializedName(value = "synchronizationRules", alternate = {"SynchronizationRules"})
     @Expose
     public java.util.List<SynchronizationRule> synchronizationRules;
 
@@ -37,7 +37,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
      * The Version.
      * 
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 
@@ -45,7 +45,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
      * The Directories.
      * 
      */
-    @SerializedName("directories")
+    @SerializedName(value = "directories", alternate = {"Directories"})
     @Expose
     public DirectoryDefinitionCollectionPage directories;
 

@@ -26,7 +26,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * The Status.
      * Status of imported device identity
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public Boolean status;
 

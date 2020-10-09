@@ -36,7 +36,7 @@ public class Initiator implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class Initiator implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -52,7 +52,7 @@ public class Initiator implements IJsonBackedObject {
      * The Initiator Type.
      * 
      */
-    @SerializedName("initiatorType")
+    @SerializedName(value = "initiatorType", alternate = {"InitiatorType"})
     @Expose
     public InitiatorType initiatorType;
 

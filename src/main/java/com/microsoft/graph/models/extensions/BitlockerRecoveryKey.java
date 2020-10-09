@@ -27,7 +27,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -35,7 +35,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
      * The Device Id.
      * 
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -43,7 +43,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
      * The Key.
      * 
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public String key;
 
@@ -51,7 +51,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
      * The Volume Type.
      * 
      */
-    @SerializedName("volumeType")
+    @SerializedName(value = "volumeType", alternate = {"VolumeType"})
     @Expose
     public VolumeType volumeType;
 

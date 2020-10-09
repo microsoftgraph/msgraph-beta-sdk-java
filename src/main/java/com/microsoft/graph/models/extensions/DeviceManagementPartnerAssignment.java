@@ -36,7 +36,7 @@ public class DeviceManagementPartnerAssignment implements IJsonBackedObject {
      * The Target.
      * User groups targeting for devices to be enrolled through partner.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

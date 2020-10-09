@@ -37,7 +37,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Associated Apps.
      * Associated Apps. This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("associatedApps")
+    @SerializedName(value = "associatedApps", alternate = {"AssociatedApps"})
     @Expose
     public java.util.List<Windows10AssociatedApps> associatedApps;
 
@@ -45,7 +45,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Authentication Method.
      * Authentication method.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public Windows10VpnAuthenticationMethod authenticationMethod;
 
@@ -53,7 +53,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Connection Type.
      * Connection type.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public Windows10VpnConnectionType connectionType;
 
@@ -61,7 +61,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Cryptography Suite.
      * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above 
      */
-    @SerializedName("cryptographySuite")
+    @SerializedName(value = "cryptographySuite", alternate = {"CryptographySuite"})
     @Expose
     public CryptographySuite cryptographySuite;
 
@@ -69,7 +69,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Dns Rules.
      * DNS rules. This collection can contain a maximum of 1000 elements.
      */
-    @SerializedName("dnsRules")
+    @SerializedName(value = "dnsRules", alternate = {"DnsRules"})
     @Expose
     public java.util.List<VpnDnsRule> dnsRules;
 
@@ -77,7 +77,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Dns Suffixes.
      * Specify DNS suffixes to add to the DNS search list to properly route short names.
      */
-    @SerializedName("dnsSuffixes")
+    @SerializedName(value = "dnsSuffixes", alternate = {"DnsSuffixes"})
     @Expose
     public java.util.List<String> dnsSuffixes;
 
@@ -85,7 +85,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Eap Xml.
      * Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
      */
-    @SerializedName("eapXml")
+    @SerializedName(value = "eapXml", alternate = {"EapXml"})
     @Expose
     public byte[] eapXml;
 
@@ -93,7 +93,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Always On.
      * Enable Always On mode.
      */
-    @SerializedName("enableAlwaysOn")
+    @SerializedName(value = "enableAlwaysOn", alternate = {"EnableAlwaysOn"})
     @Expose
     public Boolean enableAlwaysOn;
 
@@ -101,7 +101,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Conditional Access.
      * Enable conditional access.
      */
-    @SerializedName("enableConditionalAccess")
+    @SerializedName(value = "enableConditionalAccess", alternate = {"EnableConditionalAccess"})
     @Expose
     public Boolean enableConditionalAccess;
 
@@ -109,7 +109,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Device Tunnel.
      * Enable device tunnel.
      */
-    @SerializedName("enableDeviceTunnel")
+    @SerializedName(value = "enableDeviceTunnel", alternate = {"EnableDeviceTunnel"})
     @Expose
     public Boolean enableDeviceTunnel;
 
@@ -117,7 +117,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Dns Registration.
      * Enable IP address registration with internal DNS.
      */
-    @SerializedName("enableDnsRegistration")
+    @SerializedName(value = "enableDnsRegistration", alternate = {"EnableDnsRegistration"})
     @Expose
     public Boolean enableDnsRegistration;
 
@@ -125,7 +125,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Single Sign On With Alternate Certificate.
      * Enable single sign-on (SSO) with alternate certificate.
      */
-    @SerializedName("enableSingleSignOnWithAlternateCertificate")
+    @SerializedName(value = "enableSingleSignOnWithAlternateCertificate", alternate = {"EnableSingleSignOnWithAlternateCertificate"})
     @Expose
     public Boolean enableSingleSignOnWithAlternateCertificate;
 
@@ -133,7 +133,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Enable Split Tunneling.
      * Enable split tunneling.
      */
-    @SerializedName("enableSplitTunneling")
+    @SerializedName(value = "enableSplitTunneling", alternate = {"EnableSplitTunneling"})
     @Expose
     public Boolean enableSplitTunneling;
 
@@ -141,7 +141,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Only Associated Apps Can Use Connection.
      * Only associated Apps can use connection (per-app VPN).
      */
-    @SerializedName("onlyAssociatedAppsCanUseConnection")
+    @SerializedName(value = "onlyAssociatedAppsCanUseConnection", alternate = {"OnlyAssociatedAppsCanUseConnection"})
     @Expose
     public Boolean onlyAssociatedAppsCanUseConnection;
 
@@ -149,7 +149,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Profile Target.
      * Profile target type.
      */
-    @SerializedName("profileTarget")
+    @SerializedName(value = "profileTarget", alternate = {"ProfileTarget"})
     @Expose
     public Windows10VpnProfileTarget profileTarget;
 
@@ -157,7 +157,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Proxy Server.
      * Proxy Server.
      */
-    @SerializedName("proxyServer")
+    @SerializedName(value = "proxyServer", alternate = {"ProxyServer"})
     @Expose
     public Windows10VpnProxyServer proxyServer;
 
@@ -165,7 +165,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Remember User Credentials.
      * Remember user credentials.
      */
-    @SerializedName("rememberUserCredentials")
+    @SerializedName(value = "rememberUserCredentials", alternate = {"RememberUserCredentials"})
     @Expose
     public Boolean rememberUserCredentials;
 
@@ -173,7 +173,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Routes.
      * Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
      */
-    @SerializedName("routes")
+    @SerializedName(value = "routes", alternate = {"Routes"})
     @Expose
     public java.util.List<VpnRoute> routes;
 
@@ -181,7 +181,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Single Sign On Eku.
      * Single sign-on Extended Key Usage (EKU).
      */
-    @SerializedName("singleSignOnEku")
+    @SerializedName(value = "singleSignOnEku", alternate = {"SingleSignOnEku"})
     @Expose
     public ExtendedKeyUsage singleSignOnEku;
 
@@ -189,7 +189,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Single Sign On Issuer Hash.
      * Single sign-on issuer hash.
      */
-    @SerializedName("singleSignOnIssuerHash")
+    @SerializedName(value = "singleSignOnIssuerHash", alternate = {"SingleSignOnIssuerHash"})
     @Expose
     public String singleSignOnIssuerHash;
 
@@ -197,7 +197,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Traffic Rules.
      * Traffic rules. This collection can contain a maximum of 1000 elements.
      */
-    @SerializedName("trafficRules")
+    @SerializedName(value = "trafficRules", alternate = {"TrafficRules"})
     @Expose
     public java.util.List<VpnTrafficRule> trafficRules;
 
@@ -205,7 +205,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Trusted Network Domains.
      * Trusted Network Domains
      */
-    @SerializedName("trustedNetworkDomains")
+    @SerializedName(value = "trustedNetworkDomains", alternate = {"TrustedNetworkDomains"})
     @Expose
     public java.util.List<String> trustedNetworkDomains;
 
@@ -213,7 +213,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Windows Information Protection Domain.
      * Windows Information Protection (WIP) domain to associate with this connection.
      */
-    @SerializedName("windowsInformationProtectionDomain")
+    @SerializedName(value = "windowsInformationProtectionDomain", alternate = {"WindowsInformationProtectionDomain"})
     @Expose
     public String windowsInformationProtectionDomain;
 
@@ -221,7 +221,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public WindowsCertificateProfileBase identityCertificate;
 

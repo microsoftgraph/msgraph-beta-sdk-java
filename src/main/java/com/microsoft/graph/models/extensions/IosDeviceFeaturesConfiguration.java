@@ -36,7 +36,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Asset Tag Template.
      * Asset tag information for the device, displayed on the login window and lock screen.
      */
-    @SerializedName("assetTagTemplate")
+    @SerializedName(value = "assetTagTemplate", alternate = {"AssetTagTemplate"})
     @Expose
     public String assetTagTemplate;
 
@@ -44,7 +44,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Content Filter Settings.
      * Gets or sets iOS Web Content Filter settings, supervised mode only
      */
-    @SerializedName("contentFilterSettings")
+    @SerializedName(value = "contentFilterSettings", alternate = {"ContentFilterSettings"})
     @Expose
     public IosWebContentFilterBase contentFilterSettings;
 
@@ -52,7 +52,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Home Screen Dock Icons.
      * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("homeScreenDockIcons")
+    @SerializedName(value = "homeScreenDockIcons", alternate = {"HomeScreenDockIcons"})
     @Expose
     public java.util.List<IosHomeScreenItem> homeScreenDockIcons;
 
@@ -60,7 +60,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Home Screen Pages.
      * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("homeScreenPages")
+    @SerializedName(value = "homeScreenPages", alternate = {"HomeScreenPages"})
     @Expose
     public java.util.List<IosHomeScreenPage> homeScreenPages;
 
@@ -68,7 +68,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Ios Single Sign On Extension.
      * Gets or sets a single sign-on extension profile.
      */
-    @SerializedName("iosSingleSignOnExtension")
+    @SerializedName(value = "iosSingleSignOnExtension", alternate = {"IosSingleSignOnExtension"})
     @Expose
     public IosSingleSignOnExtension iosSingleSignOnExtension;
 
@@ -76,7 +76,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Lock Screen Footnote.
      * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
      */
-    @SerializedName("lockScreenFootnote")
+    @SerializedName(value = "lockScreenFootnote", alternate = {"LockScreenFootnote"})
     @Expose
     public String lockScreenFootnote;
 
@@ -84,7 +84,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Notification Settings.
      * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("notificationSettings")
+    @SerializedName(value = "notificationSettings", alternate = {"NotificationSettings"})
     @Expose
     public java.util.List<IosNotificationSettings> notificationSettings;
 
@@ -92,7 +92,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Single Sign On Extension.
      * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
      */
-    @SerializedName("singleSignOnExtension")
+    @SerializedName(value = "singleSignOnExtension", alternate = {"SingleSignOnExtension"})
     @Expose
     public SingleSignOnExtension singleSignOnExtension;
 
@@ -100,7 +100,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Single Sign On Settings.
      * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
      */
-    @SerializedName("singleSignOnSettings")
+    @SerializedName(value = "singleSignOnSettings", alternate = {"SingleSignOnSettings"})
     @Expose
     public IosSingleSignOnSettings singleSignOnSettings;
 
@@ -108,7 +108,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Wallpaper Display Location.
      * A wallpaper display location specifier.
      */
-    @SerializedName("wallpaperDisplayLocation")
+    @SerializedName(value = "wallpaperDisplayLocation", alternate = {"WallpaperDisplayLocation"})
     @Expose
     public IosWallpaperDisplayLocation wallpaperDisplayLocation;
 
@@ -116,7 +116,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Wallpaper Image.
      * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
      */
-    @SerializedName("wallpaperImage")
+    @SerializedName(value = "wallpaperImage", alternate = {"WallpaperImage"})
     @Expose
     public MimeContent wallpaperImage;
 
@@ -124,7 +124,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Identity Certificate For Client Authentication.
      * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
      */
-    @SerializedName("identityCertificateForClientAuthentication")
+    @SerializedName(value = "identityCertificateForClientAuthentication", alternate = {"IdentityCertificateForClientAuthentication"})
     @Expose
     public IosCertificateProfileBase identityCertificateForClientAuthentication;
 
@@ -132,7 +132,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Single Sign On Extension Pkinit Certificate.
      * PKINIT Certificate for the authentication with single sign-on extension settings.
      */
-    @SerializedName("singleSignOnExtensionPkinitCertificate")
+    @SerializedName(value = "singleSignOnExtensionPkinitCertificate", alternate = {"SingleSignOnExtensionPkinitCertificate"})
     @Expose
     public IosCertificateProfileBase singleSignOnExtensionPkinitCertificate;
 

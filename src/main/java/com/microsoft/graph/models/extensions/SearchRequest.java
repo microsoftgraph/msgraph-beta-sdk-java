@@ -39,7 +39,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Aggregation Filters.
      * 
      */
-    @SerializedName("aggregationFilters")
+    @SerializedName(value = "aggregationFilters", alternate = {"AggregationFilters"})
     @Expose
     public java.util.List<String> aggregationFilters;
 
@@ -47,7 +47,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Aggregations.
      * 
      */
-    @SerializedName("aggregations")
+    @SerializedName(value = "aggregations", alternate = {"Aggregations"})
     @Expose
     public java.util.List<AggregationOption> aggregations;
 
@@ -55,7 +55,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Content Sources.
      * 
      */
-    @SerializedName("contentSources")
+    @SerializedName(value = "contentSources", alternate = {"ContentSources"})
     @Expose
     public java.util.List<String> contentSources;
 
@@ -63,7 +63,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Enable Top Results.
      * 
      */
-    @SerializedName("enableTopResults")
+    @SerializedName(value = "enableTopResults", alternate = {"EnableTopResults"})
     @Expose
     public Boolean enableTopResults;
 
@@ -71,7 +71,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Entity Types.
      * 
      */
-    @SerializedName("entityTypes")
+    @SerializedName(value = "entityTypes", alternate = {"EntityTypes"})
     @Expose
     public java.util.List<EntityType> entityTypes;
 
@@ -79,7 +79,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Fields.
      * 
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public java.util.List<String> fields;
 
@@ -87,7 +87,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The From.
      * 
      */
-    @SerializedName("from")
+    @SerializedName(value = "from", alternate = {"From"})
     @Expose
     public Integer from;
 
@@ -95,7 +95,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Query.
      * 
      */
-    @SerializedName("query")
+    @SerializedName(value = "query", alternate = {"Query"})
     @Expose
     public SearchQuery query;
 
@@ -103,7 +103,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Size.
      * 
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Integer size;
 
@@ -111,7 +111,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Sort Properties.
      * 
      */
-    @SerializedName("sortProperties")
+    @SerializedName(value = "sortProperties", alternate = {"SortProperties"})
     @Expose
     public java.util.List<SortProperty> sortProperties;
 
@@ -119,7 +119,7 @@ public class SearchRequest implements IJsonBackedObject {
      * The Stored_fields.
      * 
      */
-    @SerializedName("stored_fields")
+    @SerializedName(value = "stored_fields", alternate = {"Stored_fields"})
     @Expose
     public java.util.List<String> stored_fields;
 

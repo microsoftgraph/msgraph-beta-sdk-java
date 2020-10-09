@@ -32,7 +32,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public UserIdentity createdBy;
 
@@ -40,7 +40,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -48,7 +48,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Description For Admins.
      * 
      */
-    @SerializedName("descriptionForAdmins")
+    @SerializedName(value = "descriptionForAdmins", alternate = {"DescriptionForAdmins"})
     @Expose
     public String descriptionForAdmins;
 
@@ -56,7 +56,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Description For Reviewers.
      * 
      */
-    @SerializedName("descriptionForReviewers")
+    @SerializedName(value = "descriptionForReviewers", alternate = {"DescriptionForReviewers"})
     @Expose
     public String descriptionForReviewers;
 
@@ -64,7 +64,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -72,7 +72,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Instance Enumeration Scope.
      * 
      */
-    @SerializedName("instanceEnumerationScope")
+    @SerializedName(value = "instanceEnumerationScope", alternate = {"InstanceEnumerationScope"})
     @Expose
     public AccessReviewScope instanceEnumerationScope;
 
@@ -80,7 +80,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -88,7 +88,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Reviewers.
      * 
      */
-    @SerializedName("reviewers")
+    @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
     public java.util.List<AccessReviewReviewerScope> reviewers;
 
@@ -96,7 +96,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public AccessReviewScope scope;
 
@@ -104,7 +104,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public AccessReviewScheduleSettings settings;
 
@@ -112,7 +112,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -120,7 +120,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Instances.
      * 
      */
-    @SerializedName("instances")
+    @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
     public AccessReviewInstanceCollectionPage instances;
 

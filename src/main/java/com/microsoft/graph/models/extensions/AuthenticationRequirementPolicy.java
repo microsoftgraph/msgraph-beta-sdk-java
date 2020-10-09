@@ -36,7 +36,7 @@ public class AuthenticationRequirementPolicy implements IJsonBackedObject {
      * The Detail.
      * 
      */
-    @SerializedName("detail")
+    @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
     public String detail;
 
@@ -44,7 +44,7 @@ public class AuthenticationRequirementPolicy implements IJsonBackedObject {
      * The Requirement Provider.
      * 
      */
-    @SerializedName("requirementProvider")
+    @SerializedName(value = "requirementProvider", alternate = {"RequirementProvider"})
     @Expose
     public RequirementProvider requirementProvider;
 

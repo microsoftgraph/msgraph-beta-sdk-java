@@ -34,7 +34,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Catalog Status.
      * 
      */
-    @SerializedName("catalogStatus")
+    @SerializedName(value = "catalogStatus", alternate = {"CatalogStatus"})
     @Expose
     public String catalogStatus;
 
@@ -42,7 +42,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Catalog Type.
      * 
      */
-    @SerializedName("catalogType")
+    @SerializedName(value = "catalogType", alternate = {"CatalogType"})
     @Expose
     public String catalogType;
 
@@ -50,7 +50,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -58,7 +58,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -66,7 +66,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -74,7 +74,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -82,7 +82,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Is Externally Visible.
      * 
      */
-    @SerializedName("isExternallyVisible")
+    @SerializedName(value = "isExternallyVisible", alternate = {"IsExternallyVisible"})
     @Expose
     public Boolean isExternallyVisible;
 
@@ -90,7 +90,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Modified By.
      * 
      */
-    @SerializedName("modifiedBy")
+    @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
     public String modifiedBy;
 
@@ -98,7 +98,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Modified Date Time.
      * 
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -106,7 +106,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Access Package Resource Roles.
      * 
      */
-    @SerializedName("accessPackageResourceRoles")
+    @SerializedName(value = "accessPackageResourceRoles", alternate = {"AccessPackageResourceRoles"})
     @Expose
     public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
 
@@ -114,7 +114,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Access Package Resources.
      * 
      */
-    @SerializedName("accessPackageResources")
+    @SerializedName(value = "accessPackageResources", alternate = {"AccessPackageResources"})
     @Expose
     public AccessPackageResourceCollectionPage accessPackageResources;
 
@@ -122,7 +122,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Access Package Resource Scopes.
      * 
      */
-    @SerializedName("accessPackageResourceScopes")
+    @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose
     public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
 
@@ -130,7 +130,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Access Packages.
      * 
      */
-    @SerializedName("accessPackages")
+    @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
     public AccessPackageCollectionPage accessPackages;
 

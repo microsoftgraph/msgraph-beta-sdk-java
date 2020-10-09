@@ -37,7 +37,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Application Mode.
      * 
      */
-    @SerializedName("applicationMode")
+    @SerializedName(value = "applicationMode", alternate = {"ApplicationMode"})
     @Expose
     public ApplicationMode applicationMode;
 
@@ -45,7 +45,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -53,7 +53,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -69,7 +69,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Is Endpoint Protection Enabled.
      * 
      */
-    @SerializedName("isEndpointProtectionEnabled")
+    @SerializedName(value = "isEndpointProtectionEnabled", alternate = {"IsEndpointProtectionEnabled"})
     @Expose
     public Boolean isEndpointProtectionEnabled;
 
@@ -77,7 +77,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Label Actions.
      * 
      */
-    @SerializedName("labelActions")
+    @SerializedName(value = "labelActions", alternate = {"LabelActions"})
     @Expose
     public java.util.List<LabelActionBase> labelActions;
 
@@ -85,7 +85,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -93,7 +93,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Policy Tip.
      * 
      */
-    @SerializedName("policyTip")
+    @SerializedName(value = "policyTip", alternate = {"PolicyTip"})
     @Expose
     public String policyTip;
 
@@ -101,7 +101,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -109,7 +109,7 @@ public class MatchingLabel implements IJsonBackedObject {
      * The Tool Tip.
      * 
      */
-    @SerializedName("toolTip")
+    @SerializedName(value = "toolTip", alternate = {"ToolTip"})
     @Expose
     public String toolTip;
 

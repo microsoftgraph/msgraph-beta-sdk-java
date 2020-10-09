@@ -26,7 +26,7 @@ public class PrintServiceEndpoint extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class PrintServiceEndpoint extends Entity implements IJsonBackedObject {
      * The Uri.
      * 
      */
-    @SerializedName("uri")
+    @SerializedName(value = "uri", alternate = {"Uri"})
     @Expose
     public String uri;
 

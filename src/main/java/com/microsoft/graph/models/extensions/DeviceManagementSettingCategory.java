@@ -28,7 +28,7 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
      * The Display Name.
      * The category name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -36,7 +36,7 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
      * The Has Required Setting.
      * The category contains top level required setting
      */
-    @SerializedName("hasRequiredSetting")
+    @SerializedName(value = "hasRequiredSetting", alternate = {"HasRequiredSetting"})
     @Expose
     public Boolean hasRequiredSetting;
 
@@ -44,7 +44,7 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
      * The Setting Definitions.
      * The setting definitions this category contains
      */
-    @SerializedName("settingDefinitions")
+    @SerializedName(value = "settingDefinitions", alternate = {"SettingDefinitions"})
     @Expose
     public DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
 

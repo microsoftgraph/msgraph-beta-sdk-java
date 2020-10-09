@@ -27,7 +27,7 @@ public class DirectoryRoleAccessReviewPolicy extends Entity implements IJsonBack
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public AccessReviewScheduleSettings settings;
 

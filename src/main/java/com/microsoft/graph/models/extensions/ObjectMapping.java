@@ -39,7 +39,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Attribute Mappings.
      * 
      */
-    @SerializedName("attributeMappings")
+    @SerializedName(value = "attributeMappings", alternate = {"AttributeMappings"})
     @Expose
     public java.util.List<AttributeMapping> attributeMappings;
 
@@ -47,7 +47,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Enabled.
      * 
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -55,7 +55,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Flow Types.
      * 
      */
-    @SerializedName("flowTypes")
+    @SerializedName(value = "flowTypes", alternate = {"FlowTypes"})
     @Expose
     public EnumSet<ObjectFlowTypes> flowTypes;
 
@@ -63,7 +63,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public java.util.List<MetadataEntry> metadata;
 
@@ -71,7 +71,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -79,7 +79,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public Filter scope;
 
@@ -87,7 +87,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Source Object Name.
      * 
      */
-    @SerializedName("sourceObjectName")
+    @SerializedName(value = "sourceObjectName", alternate = {"SourceObjectName"})
     @Expose
     public String sourceObjectName;
 
@@ -95,7 +95,7 @@ public class ObjectMapping implements IJsonBackedObject {
      * The Target Object Name.
      * 
      */
-    @SerializedName("targetObjectName")
+    @SerializedName(value = "targetObjectName", alternate = {"TargetObjectName"})
     @Expose
     public String targetObjectName;
 

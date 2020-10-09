@@ -35,7 +35,7 @@ public class TermsExpiration implements IJsonBackedObject {
      * The Frequency.
      * 
      */
-    @SerializedName("frequency")
+    @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
     public javax.xml.datatype.Duration frequency;
 
@@ -43,7 +43,7 @@ public class TermsExpiration implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

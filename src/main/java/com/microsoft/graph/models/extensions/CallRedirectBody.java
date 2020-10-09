@@ -23,7 +23,7 @@ public class CallRedirectBody {
      * The targets.
      * 
      */
-    @SerializedName("targets")
+    @SerializedName(value = "targets", alternate = {"Targets"})
     @Expose
     public java.util.List<InvitationParticipantInfo> targets;
 
@@ -31,7 +31,7 @@ public class CallRedirectBody {
      * The target Disposition.
      * 
      */
-    @SerializedName("targetDisposition")
+    @SerializedName(value = "targetDisposition", alternate = {"TargetDisposition"})
     @Expose
     public CallDisposition targetDisposition;
 
@@ -39,7 +39,7 @@ public class CallRedirectBody {
      * The timeout.
      * 
      */
-    @SerializedName("timeout")
+    @SerializedName(value = "timeout", alternate = {"Timeout"})
     @Expose
     public Integer timeout;
 
@@ -47,7 +47,7 @@ public class CallRedirectBody {
      * The mask Callee.
      * 
      */
-    @SerializedName("maskCallee")
+    @SerializedName(value = "maskCallee", alternate = {"MaskCallee"})
     @Expose
     public Boolean maskCallee;
 
@@ -55,7 +55,7 @@ public class CallRedirectBody {
      * The mask Caller.
      * 
      */
-    @SerializedName("maskCaller")
+    @SerializedName(value = "maskCaller", alternate = {"MaskCaller"})
     @Expose
     public Boolean maskCaller;
 
@@ -63,7 +63,7 @@ public class CallRedirectBody {
      * The callback Uri.
      * 
      */
-    @SerializedName("callbackUri")
+    @SerializedName(value = "callbackUri", alternate = {"CallbackUri"})
     @Expose
     public String callbackUri;
 

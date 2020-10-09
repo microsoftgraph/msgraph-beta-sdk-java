@@ -22,7 +22,7 @@ public class AuthenticationMethodResetPasswordBody {
      * The new Password.
      * 
      */
-    @SerializedName("newPassword")
+    @SerializedName(value = "newPassword", alternate = {"NewPassword"})
     @Expose
     public String newPassword;
 
@@ -30,7 +30,7 @@ public class AuthenticationMethodResetPasswordBody {
      * The require Change On Next Sign In.
      * 
      */
-    @SerializedName("requireChangeOnNextSignIn")
+    @SerializedName(value = "requireChangeOnNextSignIn", alternate = {"RequireChangeOnNextSignIn"})
     @Expose
     public Boolean requireChangeOnNextSignIn;
 

@@ -22,7 +22,7 @@ public class RoleScopeTagGetRoleScopeTagsByIdBody {
      * The role Scope Tag Ids.
      * 
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 

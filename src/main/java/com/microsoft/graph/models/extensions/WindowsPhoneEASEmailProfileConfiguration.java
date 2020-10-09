@@ -29,7 +29,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Account Name.
      * Account name.
      */
-    @SerializedName("accountName")
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
     public String accountName;
 
@@ -37,7 +37,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Apply Only To Windows Phone81.
      * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      */
-    @SerializedName("applyOnlyToWindowsPhone81")
+    @SerializedName(value = "applyOnlyToWindowsPhone81", alternate = {"ApplyOnlyToWindowsPhone81"})
     @Expose
     public Boolean applyOnlyToWindowsPhone81;
 
@@ -45,7 +45,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Duration Of Email To Sync.
      * Duration of email to sync.
      */
-    @SerializedName("durationOfEmailToSync")
+    @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
     public EmailSyncDuration durationOfEmailToSync;
 
@@ -53,7 +53,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Email Address Source.
      * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("emailAddressSource")
+    @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
     public UserEmailSource emailAddressSource;
 
@@ -61,7 +61,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Email Sync Schedule.
      * Email sync schedule.
      */
-    @SerializedName("emailSyncSchedule")
+    @SerializedName(value = "emailSyncSchedule", alternate = {"EmailSyncSchedule"})
     @Expose
     public EmailSyncSchedule emailSyncSchedule;
 
@@ -69,7 +69,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Host Name.
      * Exchange location that (URL) that the native mail app connects to.
      */
-    @SerializedName("hostName")
+    @SerializedName(value = "hostName", alternate = {"HostName"})
     @Expose
     public String hostName;
 
@@ -77,7 +77,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Require Ssl.
      * Indicates whether or not to use SSL.
      */
-    @SerializedName("requireSsl")
+    @SerializedName(value = "requireSsl", alternate = {"RequireSsl"})
     @Expose
     public Boolean requireSsl;
 
@@ -85,7 +85,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Sync Calendar.
      * Whether or not to sync the calendar.
      */
-    @SerializedName("syncCalendar")
+    @SerializedName(value = "syncCalendar", alternate = {"SyncCalendar"})
     @Expose
     public Boolean syncCalendar;
 
@@ -93,7 +93,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Sync Contacts.
      * Whether or not to sync contacts.
      */
-    @SerializedName("syncContacts")
+    @SerializedName(value = "syncContacts", alternate = {"SyncContacts"})
     @Expose
     public Boolean syncContacts;
 
@@ -101,7 +101,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * The Sync Tasks.
      * Whether or not to sync tasks.
      */
-    @SerializedName("syncTasks")
+    @SerializedName(value = "syncTasks", alternate = {"SyncTasks"})
     @Expose
     public Boolean syncTasks;
 

@@ -36,7 +36,7 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -44,7 +44,7 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
      * The Status Details.
      * 
      */
-    @SerializedName("statusDetails")
+    @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose
     public java.util.List<KeyValue> statusDetails;
 
@@ -52,7 +52,7 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
      * The Sub Status.
      * 
      */
-    @SerializedName("subStatus")
+    @SerializedName(value = "subStatus", alternate = {"SubStatus"})
     @Expose
     public String subStatus;
 

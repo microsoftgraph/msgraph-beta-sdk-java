@@ -35,7 +35,7 @@ public class VersionAction implements IJsonBackedObject {
      * The New Version.
      * The name of the new version that was created by this action.
      */
-    @SerializedName("newVersion")
+    @SerializedName(value = "newVersion", alternate = {"NewVersion"})
     @Expose
     public String newVersion;
 

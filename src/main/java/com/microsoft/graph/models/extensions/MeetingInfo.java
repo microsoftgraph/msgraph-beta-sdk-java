@@ -35,7 +35,7 @@ public class MeetingInfo implements IJsonBackedObject {
      * The Allow Conversation Without Host.
      * 
      */
-    @SerializedName("allowConversationWithoutHost")
+    @SerializedName(value = "allowConversationWithoutHost", alternate = {"AllowConversationWithoutHost"})
     @Expose
     public Boolean allowConversationWithoutHost;
 

@@ -35,7 +35,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Clean Device Count.
      * Clean device count.
      */
-    @SerializedName("cleanDeviceCount")
+    @SerializedName(value = "cleanDeviceCount", alternate = {"CleanDeviceCount"})
     @Expose
     public Integer cleanDeviceCount;
 
@@ -43,7 +43,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Critical Failures Device Count.
      * Critical failures device count.
      */
-    @SerializedName("criticalFailuresDeviceCount")
+    @SerializedName(value = "criticalFailuresDeviceCount", alternate = {"CriticalFailuresDeviceCount"})
     @Expose
     public Integer criticalFailuresDeviceCount;
 
@@ -51,7 +51,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Inactive Threat Agent Device Count.
      * Device with inactive threat agent count
      */
-    @SerializedName("inactiveThreatAgentDeviceCount")
+    @SerializedName(value = "inactiveThreatAgentDeviceCount", alternate = {"InactiveThreatAgentDeviceCount"})
     @Expose
     public Integer inactiveThreatAgentDeviceCount;
 
@@ -59,7 +59,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Pending Full Scan Device Count.
      * Pending full scan device count.
      */
-    @SerializedName("pendingFullScanDeviceCount")
+    @SerializedName(value = "pendingFullScanDeviceCount", alternate = {"PendingFullScanDeviceCount"})
     @Expose
     public Integer pendingFullScanDeviceCount;
 
@@ -67,7 +67,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Pending Manual Steps Device Count.
      * Pending manual steps device count.
      */
-    @SerializedName("pendingManualStepsDeviceCount")
+    @SerializedName(value = "pendingManualStepsDeviceCount", alternate = {"PendingManualStepsDeviceCount"})
     @Expose
     public Integer pendingManualStepsDeviceCount;
 
@@ -75,7 +75,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Pending Offline Scan Device Count.
      * Pending offline scan device count.
      */
-    @SerializedName("pendingOfflineScanDeviceCount")
+    @SerializedName(value = "pendingOfflineScanDeviceCount", alternate = {"PendingOfflineScanDeviceCount"})
     @Expose
     public Integer pendingOfflineScanDeviceCount;
 
@@ -83,7 +83,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Pending Quick Scan Device Count.
      * Pending quick scan device count. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("pendingQuickScanDeviceCount")
+    @SerializedName(value = "pendingQuickScanDeviceCount", alternate = {"PendingQuickScanDeviceCount"})
     @Expose
     public Integer pendingQuickScanDeviceCount;
 
@@ -91,7 +91,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Pending Restart Device Count.
      * Pending restart device count.
      */
-    @SerializedName("pendingRestartDeviceCount")
+    @SerializedName(value = "pendingRestartDeviceCount", alternate = {"PendingRestartDeviceCount"})
     @Expose
     public Integer pendingRestartDeviceCount;
 
@@ -99,7 +99,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Pending Signature Update Device Count.
      * Device with old signature count.
      */
-    @SerializedName("pendingSignatureUpdateDeviceCount")
+    @SerializedName(value = "pendingSignatureUpdateDeviceCount", alternate = {"PendingSignatureUpdateDeviceCount"})
     @Expose
     public Integer pendingSignatureUpdateDeviceCount;
 
@@ -107,7 +107,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Total Reported Device Count.
      * Total device count.
      */
-    @SerializedName("totalReportedDeviceCount")
+    @SerializedName(value = "totalReportedDeviceCount", alternate = {"TotalReportedDeviceCount"})
     @Expose
     public Integer totalReportedDeviceCount;
 
@@ -115,7 +115,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
      * The Unknown State Threat Agent Device Count.
      * Device with threat agent state as unknown count.
      */
-    @SerializedName("unknownStateThreatAgentDeviceCount")
+    @SerializedName(value = "unknownStateThreatAgentDeviceCount", alternate = {"UnknownStateThreatAgentDeviceCount"})
     @Expose
     public Integer unknownStateThreatAgentDeviceCount;
 

@@ -36,7 +36,7 @@ public class InstanceResourceAccess implements IJsonBackedObject {
      * The Permissions.
      * 
      */
-    @SerializedName("permissions")
+    @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
     public java.util.List<ResourcePermission> permissions;
 
@@ -44,7 +44,7 @@ public class InstanceResourceAccess implements IJsonBackedObject {
      * The Resource App Id.
      * 
      */
-    @SerializedName("resourceAppId")
+    @SerializedName(value = "resourceAppId", alternate = {"ResourceAppId"})
     @Expose
     public String resourceAppId;
 

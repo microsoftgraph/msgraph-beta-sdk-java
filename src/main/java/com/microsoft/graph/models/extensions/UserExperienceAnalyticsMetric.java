@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements IJsonBacked
      * The Unit.
      * The unit of the user experience analytics metric.
      */
-    @SerializedName("unit")
+    @SerializedName(value = "unit", alternate = {"Unit"})
     @Expose
     public String unit;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements IJsonBacked
      * The Value.
      * The value of the user experience analytics metric.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Double value;
 

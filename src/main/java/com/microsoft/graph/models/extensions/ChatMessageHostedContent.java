@@ -26,7 +26,7 @@ public class ChatMessageHostedContent extends Entity implements IJsonBackedObjec
      * The Content Bytes.
      * 
      */
-    @SerializedName("contentBytes")
+    @SerializedName(value = "contentBytes", alternate = {"ContentBytes"})
     @Expose
     public byte[] contentBytes;
 
@@ -34,7 +34,7 @@ public class ChatMessageHostedContent extends Entity implements IJsonBackedObjec
      * The Content Type.
      * 
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public String contentType;
 

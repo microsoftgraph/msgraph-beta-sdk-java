@@ -28,7 +28,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
      * The Error Code.
      * Error code corresponding to erroneous execution of the device management script.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 
@@ -36,7 +36,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
      * The Error Description.
      * Error description corresponding to erroneous execution of the device management script.
      */
-    @SerializedName("errorDescription")
+    @SerializedName(value = "errorDescription", alternate = {"ErrorDescription"})
     @Expose
     public String errorDescription;
 
@@ -44,7 +44,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
      * The Last State Update Date Time.
      * Latest time the device management script executes.
      */
-    @SerializedName("lastStateUpdateDateTime")
+    @SerializedName(value = "lastStateUpdateDateTime", alternate = {"LastStateUpdateDateTime"})
     @Expose
     public java.util.Calendar lastStateUpdateDateTime;
 
@@ -52,7 +52,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
      * The Result Message.
      * Details of execution output.
      */
-    @SerializedName("resultMessage")
+    @SerializedName(value = "resultMessage", alternate = {"ResultMessage"})
     @Expose
     public String resultMessage;
 
@@ -60,7 +60,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
      * The Run State.
      * State of latest run of the device management script.
      */
-    @SerializedName("runState")
+    @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose
     public RunState runState;
 
@@ -68,7 +68,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
      * The Managed Device.
      * The managed devices that executes the device management script.
      */
-    @SerializedName("managedDevice")
+    @SerializedName(value = "managedDevice", alternate = {"ManagedDevice"})
     @Expose
     public ManagedDevice managedDevice;
 

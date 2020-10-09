@@ -26,7 +26,7 @@ public class KeyBooleanValuePair extends KeyTypedValuePair implements IJsonBacke
      * The Value.
      * The Boolean value of the key-value pair.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Boolean value;
 

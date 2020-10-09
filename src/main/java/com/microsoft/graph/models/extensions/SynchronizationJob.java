@@ -30,7 +30,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
      * The Schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public SynchronizationSchedule schedule;
 
@@ -38,7 +38,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public SynchronizationStatus status;
 
@@ -46,7 +46,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
      * The Synchronization Job Settings.
      * 
      */
-    @SerializedName("synchronizationJobSettings")
+    @SerializedName(value = "synchronizationJobSettings", alternate = {"SynchronizationJobSettings"})
     @Expose
     public java.util.List<KeyValuePair> synchronizationJobSettings;
 
@@ -54,7 +54,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
      * The Template Id.
      * 
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 
@@ -62,7 +62,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
      * The Schema.
      * 
      */
-    @SerializedName("schema")
+    @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
     public SynchronizationSchema schema;
 

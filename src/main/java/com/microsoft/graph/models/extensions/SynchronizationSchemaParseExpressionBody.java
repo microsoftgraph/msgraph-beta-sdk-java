@@ -24,7 +24,7 @@ public class SynchronizationSchemaParseExpressionBody {
      * The expression.
      * 
      */
-    @SerializedName("expression")
+    @SerializedName(value = "expression", alternate = {"Expression"})
     @Expose
     public String expression;
 
@@ -32,7 +32,7 @@ public class SynchronizationSchemaParseExpressionBody {
      * The test Input Object.
      * 
      */
-    @SerializedName("testInputObject")
+    @SerializedName(value = "testInputObject", alternate = {"TestInputObject"})
     @Expose
     public ExpressionInputObject testInputObject;
 
@@ -40,7 +40,7 @@ public class SynchronizationSchemaParseExpressionBody {
      * The target Attribute Definition.
      * 
      */
-    @SerializedName("targetAttributeDefinition")
+    @SerializedName(value = "targetAttributeDefinition", alternate = {"TargetAttributeDefinition"})
     @Expose
     public AttributeDefinition targetAttributeDefinition;
 

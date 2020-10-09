@@ -26,7 +26,7 @@ public class WindowsKioskLocalGroup extends WindowsKioskUser implements IJsonBac
      * The Group Name.
      * The name of the local group that will be locked to this kiosk configuration
      */
-    @SerializedName("groupName")
+    @SerializedName(value = "groupName", alternate = {"GroupName"})
     @Expose
     public String groupName;
 

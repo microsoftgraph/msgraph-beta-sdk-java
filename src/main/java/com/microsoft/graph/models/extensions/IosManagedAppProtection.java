@@ -32,7 +32,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Allowed Ios Device Models.
      * Semicolon seperated list of device models allowed, as a string, for the managed app to work.
      */
-    @SerializedName("allowedIosDeviceModels")
+    @SerializedName(value = "allowedIosDeviceModels", alternate = {"AllowedIosDeviceModels"})
     @Expose
     public String allowedIosDeviceModels;
 
@@ -40,7 +40,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The App Action If Ios Device Model Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
      */
-    @SerializedName("appActionIfIosDeviceModelNotAllowed")
+    @SerializedName(value = "appActionIfIosDeviceModelNotAllowed", alternate = {"AppActionIfIosDeviceModelNotAllowed"})
     @Expose
     public ManagedAppRemediationAction appActionIfIosDeviceModelNotAllowed;
 
@@ -48,7 +48,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The App Data Encryption Type.
      * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
-    @SerializedName("appDataEncryptionType")
+    @SerializedName(value = "appDataEncryptionType", alternate = {"AppDataEncryptionType"})
     @Expose
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
@@ -56,7 +56,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Custom Browser Protocol.
      * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
-    @SerializedName("customBrowserProtocol")
+    @SerializedName(value = "customBrowserProtocol", alternate = {"CustomBrowserProtocol"})
     @Expose
     public String customBrowserProtocol;
 
@@ -64,7 +64,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Custom Dialer App Protocol.
      * Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
      */
-    @SerializedName("customDialerAppProtocol")
+    @SerializedName(value = "customDialerAppProtocol", alternate = {"CustomDialerAppProtocol"})
     @Expose
     public String customDialerAppProtocol;
 
@@ -72,7 +72,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Deployed App Count.
      * Count of apps to which the current policy is deployed.
      */
-    @SerializedName("deployedAppCount")
+    @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
 
@@ -80,7 +80,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Disable Protection Of Managed Outbound Open In Data.
      * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
      */
-    @SerializedName("disableProtectionOfManagedOutboundOpenInData")
+    @SerializedName(value = "disableProtectionOfManagedOutboundOpenInData", alternate = {"DisableProtectionOfManagedOutboundOpenInData"})
     @Expose
     public Boolean disableProtectionOfManagedOutboundOpenInData;
 
@@ -88,7 +88,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Exempted App Protocols.
      * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
      */
-    @SerializedName("exemptedAppProtocols")
+    @SerializedName(value = "exemptedAppProtocols", alternate = {"ExemptedAppProtocols"})
     @Expose
     public java.util.List<KeyValuePair> exemptedAppProtocols;
 
@@ -96,7 +96,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Face Id Blocked.
      * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      */
-    @SerializedName("faceIdBlocked")
+    @SerializedName(value = "faceIdBlocked", alternate = {"FaceIdBlocked"})
     @Expose
     public Boolean faceIdBlocked;
 
@@ -104,7 +104,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Filter Open In To Only Managed Apps.
      * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
      */
-    @SerializedName("filterOpenInToOnlyManagedApps")
+    @SerializedName(value = "filterOpenInToOnlyManagedApps", alternate = {"FilterOpenInToOnlyManagedApps"})
     @Expose
     public Boolean filterOpenInToOnlyManagedApps;
 
@@ -112,7 +112,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Minimum Required Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data.
      */
-    @SerializedName("minimumRequiredSdkVersion")
+    @SerializedName(value = "minimumRequiredSdkVersion", alternate = {"MinimumRequiredSdkVersion"})
     @Expose
     public String minimumRequiredSdkVersion;
 
@@ -120,7 +120,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Minimum Wipe Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data.
      */
-    @SerializedName("minimumWipeSdkVersion")
+    @SerializedName(value = "minimumWipeSdkVersion", alternate = {"MinimumWipeSdkVersion"})
     @Expose
     public String minimumWipeSdkVersion;
 
@@ -128,7 +128,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Protect Inbound Data From Unknown Sources.
      * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
      */
-    @SerializedName("protectInboundDataFromUnknownSources")
+    @SerializedName(value = "protectInboundDataFromUnknownSources", alternate = {"ProtectInboundDataFromUnknownSources"})
     @Expose
     public Boolean protectInboundDataFromUnknownSources;
 
@@ -136,7 +136,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Third Party Keyboards Blocked.
      * Defines if third party keyboards are allowed while accessing a managed app
      */
-    @SerializedName("thirdPartyKeyboardsBlocked")
+    @SerializedName(value = "thirdPartyKeyboardsBlocked", alternate = {"ThirdPartyKeyboardsBlocked"})
     @Expose
     public Boolean thirdPartyKeyboardsBlocked;
 
@@ -144,7 +144,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Apps.
      * List of apps to which the policy is deployed.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public ManagedMobileAppCollectionPage apps;
 
@@ -152,7 +152,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
-    @SerializedName("deploymentSummary")
+    @SerializedName(value = "deploymentSummary", alternate = {"DeploymentSummary"})
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
 

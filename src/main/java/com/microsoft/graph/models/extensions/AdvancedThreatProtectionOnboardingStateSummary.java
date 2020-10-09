@@ -28,7 +28,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Compliant Device Count.
      * Number of compliant devices
      */
-    @SerializedName("compliantDeviceCount")
+    @SerializedName(value = "compliantDeviceCount", alternate = {"CompliantDeviceCount"})
     @Expose
     public Integer compliantDeviceCount;
 
@@ -36,7 +36,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Conflict Device Count.
      * Number of conflict devices
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName(value = "conflictDeviceCount", alternate = {"ConflictDeviceCount"})
     @Expose
     public Integer conflictDeviceCount;
 
@@ -44,7 +44,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Error Device Count.
      * Number of error devices
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -52,7 +52,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Non Compliant Device Count.
      * Number of NonCompliant devices
      */
-    @SerializedName("nonCompliantDeviceCount")
+    @SerializedName(value = "nonCompliantDeviceCount", alternate = {"NonCompliantDeviceCount"})
     @Expose
     public Integer nonCompliantDeviceCount;
 
@@ -60,7 +60,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Not Applicable Device Count.
      * Number of not applicable devices
      */
-    @SerializedName("notApplicableDeviceCount")
+    @SerializedName(value = "notApplicableDeviceCount", alternate = {"NotApplicableDeviceCount"})
     @Expose
     public Integer notApplicableDeviceCount;
 
@@ -68,7 +68,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Not Assigned Device Count.
      * Number of not assigned devices
      */
-    @SerializedName("notAssignedDeviceCount")
+    @SerializedName(value = "notAssignedDeviceCount", alternate = {"NotAssignedDeviceCount"})
     @Expose
     public Integer notAssignedDeviceCount;
 
@@ -76,7 +76,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Remediated Device Count.
      * Number of remediated devices
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName(value = "remediatedDeviceCount", alternate = {"RemediatedDeviceCount"})
     @Expose
     public Integer remediatedDeviceCount;
 
@@ -84,7 +84,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Unknown Device Count.
      * Number of unknown devices
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 
@@ -92,7 +92,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Advanced Threat Protection Onboarding Device Setting States.
      * 
      */
-    @SerializedName("advancedThreatProtectionOnboardingDeviceSettingStates")
+    @SerializedName(value = "advancedThreatProtectionOnboardingDeviceSettingStates", alternate = {"AdvancedThreatProtectionOnboardingDeviceSettingStates"})
     @Expose
     public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage advancedThreatProtectionOnboardingDeviceSettingStates;
 

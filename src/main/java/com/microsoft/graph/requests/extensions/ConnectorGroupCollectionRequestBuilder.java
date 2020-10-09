@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnPremisesPublishingProfile;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ConnectorGroupCollectionRequestBuilder extends BaseRequestBuilder implements IConnectorGroupCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of ConnectorGroup
+     * The request builder for this collection of OnPremisesPublishingProfile
      *
      * @param requestUrl     the request URL
      * @param client         the service client

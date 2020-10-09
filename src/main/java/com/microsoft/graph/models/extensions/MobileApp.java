@@ -39,7 +39,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The date and time the app was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -47,7 +47,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Dependent App Count.
      * The total number of dependencies the child app has.
      */
-    @SerializedName("dependentAppCount")
+    @SerializedName(value = "dependentAppCount", alternate = {"DependentAppCount"})
     @Expose
     public Integer dependentAppCount;
 
@@ -55,7 +55,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Description.
      * The description of the app.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -63,7 +63,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Developer.
      * The developer of the app.
      */
-    @SerializedName("developer")
+    @SerializedName(value = "developer", alternate = {"Developer"})
     @Expose
     public String developer;
 
@@ -71,7 +71,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The admin provided or imported title of the app.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -79,7 +79,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Information Url.
      * The more information Url.
      */
-    @SerializedName("informationUrl")
+    @SerializedName(value = "informationUrl", alternate = {"InformationUrl"})
     @Expose
     public String informationUrl;
 
@@ -87,7 +87,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Is Assigned.
      * The value indicating whether the app is assigned to at least one group.
      */
-    @SerializedName("isAssigned")
+    @SerializedName(value = "isAssigned", alternate = {"IsAssigned"})
     @Expose
     public Boolean isAssigned;
 
@@ -95,7 +95,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Is Featured.
      * The value indicating whether the app is marked as featured by the admin.
      */
-    @SerializedName("isFeatured")
+    @SerializedName(value = "isFeatured", alternate = {"IsFeatured"})
     @Expose
     public Boolean isFeatured;
 
@@ -103,7 +103,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Large Icon.
      * The large icon, to be displayed in the app details and used for upload of the icon.
      */
-    @SerializedName("largeIcon")
+    @SerializedName(value = "largeIcon", alternate = {"LargeIcon"})
     @Expose
     public MimeContent largeIcon;
 
@@ -111,7 +111,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the app was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -119,7 +119,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Notes.
      * Notes for the app.
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public String notes;
 
@@ -127,7 +127,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Owner.
      * The owner of the app.
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public String owner;
 
@@ -135,7 +135,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Privacy Information Url.
      * The privacy statement Url.
      */
-    @SerializedName("privacyInformationUrl")
+    @SerializedName(value = "privacyInformationUrl", alternate = {"PrivacyInformationUrl"})
     @Expose
     public String privacyInformationUrl;
 
@@ -143,7 +143,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Publisher.
      * The publisher of the app.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -151,7 +151,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Publishing State.
      * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
      */
-    @SerializedName("publishingState")
+    @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
     public MobileAppPublishingState publishingState;
 
@@ -159,7 +159,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of scope tag ids for this mobile app.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -167,7 +167,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Superseded App Count.
      * The total number of apps this app is directly or indirectly superseded by.
      */
-    @SerializedName("supersededAppCount")
+    @SerializedName(value = "supersededAppCount", alternate = {"SupersededAppCount"})
     @Expose
     public Integer supersededAppCount;
 
@@ -175,7 +175,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Superseding App Count.
      * The total number of apps this app directly or indirectly supersedes.
      */
-    @SerializedName("supersedingAppCount")
+    @SerializedName(value = "supersedingAppCount", alternate = {"SupersedingAppCount"})
     @Expose
     public Integer supersedingAppCount;
 
@@ -183,7 +183,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Upload State.
      * The upload state. Possible values are: 0 - `Not Ready`, 1 - `Ready`, 2 - `Processing`.
      */
-    @SerializedName("uploadState")
+    @SerializedName(value = "uploadState", alternate = {"UploadState"})
     @Expose
     public Integer uploadState;
 
@@ -191,7 +191,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for this mobile app.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public MobileAppAssignmentCollectionPage assignments;
 
@@ -205,7 +205,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Device Statuses.
      * The list of installation states for this mobile app.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public MobileAppInstallStatusCollectionPage deviceStatuses;
 
@@ -213,7 +213,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Install Summary.
      * Mobile App Install Summary.
      */
-    @SerializedName("installSummary")
+    @SerializedName(value = "installSummary", alternate = {"InstallSummary"})
     @Expose
     public MobileAppInstallSummary installSummary;
 
@@ -221,7 +221,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Relationships.
      * The set of direct relationships for this app.
      */
-    @SerializedName("relationships")
+    @SerializedName(value = "relationships", alternate = {"Relationships"})
     @Expose
     public MobileAppRelationshipCollectionPage relationships;
 
@@ -229,7 +229,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The User Statuses.
      * The list of installation states for this mobile app.
      */
-    @SerializedName("userStatuses")
+    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
     public UserAppInstallStatusCollectionPage userStatuses;
 

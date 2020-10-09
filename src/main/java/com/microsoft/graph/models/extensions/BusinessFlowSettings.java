@@ -26,7 +26,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements IJsonB
      * The Duration In Days.
      * 
      */
-    @SerializedName("durationInDays")
+    @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
     public Integer durationInDays;
 

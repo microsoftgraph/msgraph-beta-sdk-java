@@ -27,7 +27,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * The Error Code.
      * Error code for the failure, empty if no failure.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -35,7 +35,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * The Run State.
      * Status of the item.
      */
-    @SerializedName("runState")
+    @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose
     public RunState runState;
 

@@ -28,7 +28,7 @@ public class PrintTaskTrigger extends Entity implements IJsonBackedObject {
      * The Event.
      * 
      */
-    @SerializedName("event")
+    @SerializedName(value = "event", alternate = {"Event"})
     @Expose
     public PrintEvent event;
 
@@ -36,7 +36,7 @@ public class PrintTaskTrigger extends Entity implements IJsonBackedObject {
      * The Definition.
      * 
      */
-    @SerializedName("definition")
+    @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
     public PrintTaskDefinition definition;
 

@@ -33,7 +33,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Data Provider.
      * 
      */
-    @SerializedName("dataProvider")
+    @SerializedName(value = "dataProvider", alternate = {"DataProvider"})
     @Expose
     public EducationSynchronizationDataProvider dataProvider;
 
@@ -41,7 +41,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -49,7 +49,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Expiration Date.
      * 
      */
-    @SerializedName("expirationDate")
+    @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly expirationDate;
 
@@ -57,7 +57,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Handle Special Character Constraint.
      * 
      */
-    @SerializedName("handleSpecialCharacterConstraint")
+    @SerializedName(value = "handleSpecialCharacterConstraint", alternate = {"HandleSpecialCharacterConstraint"})
     @Expose
     public Boolean handleSpecialCharacterConstraint;
 
@@ -65,7 +65,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Identity Synchronization Configuration.
      * 
      */
-    @SerializedName("identitySynchronizationConfiguration")
+    @SerializedName(value = "identitySynchronizationConfiguration", alternate = {"IdentitySynchronizationConfiguration"})
     @Expose
     public EducationIdentitySynchronizationConfiguration identitySynchronizationConfiguration;
 
@@ -73,7 +73,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Licenses To Assign.
      * 
      */
-    @SerializedName("licensesToAssign")
+    @SerializedName(value = "licensesToAssign", alternate = {"LicensesToAssign"})
     @Expose
     public java.util.List<EducationSynchronizationLicenseAssignment> licensesToAssign;
 
@@ -81,7 +81,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public EducationSynchronizationProfileState state;
 
@@ -89,7 +89,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Errors.
      * 
      */
-    @SerializedName("errors")
+    @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
     public EducationSynchronizationErrorCollectionPage errors;
 
@@ -97,7 +97,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Profile Status.
      * 
      */
-    @SerializedName("profileStatus")
+    @SerializedName(value = "profileStatus", alternate = {"ProfileStatus"})
     @Expose
     public EducationSynchronizationProfileStatus profileStatus;
 

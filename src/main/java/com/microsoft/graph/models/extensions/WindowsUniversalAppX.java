@@ -31,7 +31,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Applicable Architectures.
      * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
      */
-    @SerializedName("applicableArchitectures")
+    @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
     public EnumSet<WindowsArchitecture> applicableArchitectures;
 
@@ -39,7 +39,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Applicable Device Types.
      * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
      */
-    @SerializedName("applicableDeviceTypes")
+    @SerializedName(value = "applicableDeviceTypes", alternate = {"ApplicableDeviceTypes"})
     @Expose
     public EnumSet<WindowsDeviceType> applicableDeviceTypes;
 
@@ -47,7 +47,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Identity Name.
      * The Identity Name.
      */
-    @SerializedName("identityName")
+    @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
     public String identityName;
 
@@ -55,7 +55,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Identity Publisher Hash.
      * The Identity Publisher Hash.
      */
-    @SerializedName("identityPublisherHash")
+    @SerializedName(value = "identityPublisherHash", alternate = {"IdentityPublisherHash"})
     @Expose
     public String identityPublisherHash;
 
@@ -63,7 +63,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Identity Resource Identifier.
      * The Identity Resource Identifier.
      */
-    @SerializedName("identityResourceIdentifier")
+    @SerializedName(value = "identityResourceIdentifier", alternate = {"IdentityResourceIdentifier"})
     @Expose
     public String identityResourceIdentifier;
 
@@ -71,7 +71,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Identity Version.
      * The identity version.
      */
-    @SerializedName("identityVersion")
+    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
     public String identityVersion;
 
@@ -79,7 +79,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Is Bundle.
      * Whether or not the app is a bundle.
      */
-    @SerializedName("isBundle")
+    @SerializedName(value = "isBundle", alternate = {"IsBundle"})
     @Expose
     public Boolean isBundle;
 
@@ -87,7 +87,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -95,7 +95,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Committed Contained Apps.
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      */
-    @SerializedName("committedContainedApps")
+    @SerializedName(value = "committedContainedApps", alternate = {"CommittedContainedApps"})
     @Expose
     public MobileContainedAppCollectionPage committedContainedApps;
 

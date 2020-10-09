@@ -29,7 +29,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Activity Group Names.
      * 
      */
-    @SerializedName("activityGroupNames")
+    @SerializedName(value = "activityGroupNames", alternate = {"ActivityGroupNames"})
     @Expose
     public java.util.List<String> activityGroupNames;
 
@@ -37,7 +37,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -45,7 +45,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Subscription Id.
      * 
      */
-    @SerializedName("azureSubscriptionId")
+    @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
     public String azureSubscriptionId;
 
@@ -53,7 +53,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -61,7 +61,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Count Hits.
      * 
      */
-    @SerializedName("countHits")
+    @SerializedName(value = "countHits", alternate = {"CountHits"})
     @Expose
     public Integer countHits;
 
@@ -69,7 +69,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Count Hosts.
      * 
      */
-    @SerializedName("countHosts")
+    @SerializedName(value = "countHosts", alternate = {"CountHosts"})
     @Expose
     public Integer countHosts;
 
@@ -77,7 +77,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The First Seen Date Time.
      * 
      */
-    @SerializedName("firstSeenDateTime")
+    @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
     public java.util.Calendar firstSeenDateTime;
 
@@ -85,7 +85,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Ip Categories.
      * 
      */
-    @SerializedName("ipCategories")
+    @SerializedName(value = "ipCategories", alternate = {"IpCategories"})
     @Expose
     public java.util.List<IpCategory> ipCategories;
 
@@ -93,7 +93,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Ip Reference Data.
      * 
      */
-    @SerializedName("ipReferenceData")
+    @SerializedName(value = "ipReferenceData", alternate = {"IpReferenceData"})
     @Expose
     public java.util.List<IpReferenceData> ipReferenceData;
 
@@ -101,7 +101,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Last Seen Date Time.
      * 
      */
-    @SerializedName("lastSeenDateTime")
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
     public java.util.Calendar lastSeenDateTime;
 
@@ -109,7 +109,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -117,7 +117,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -125,7 +125,7 @@ public class IpSecurityProfile extends Entity implements IJsonBackedObject {
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

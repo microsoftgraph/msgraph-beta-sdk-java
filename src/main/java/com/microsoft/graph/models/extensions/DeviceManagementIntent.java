@@ -40,7 +40,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Description.
      * The user given description
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -48,7 +48,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Display Name.
      * The user given display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -56,7 +56,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Is Assigned.
      * Signifies whether or not the intent is assigned to users
      */
-    @SerializedName("isAssigned")
+    @SerializedName(value = "isAssigned", alternate = {"IsAssigned"})
     @Expose
     public Boolean isAssigned;
 
@@ -64,7 +64,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Last Modified Date Time.
      * When the intent was last modified
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -72,7 +72,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -80,7 +80,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Template Id.
      * The ID of the template this intent was created from (if any)
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 
@@ -88,7 +88,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Assignments.
      * Collection of assignments
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceManagementIntentAssignmentCollectionPage assignments;
 
@@ -96,7 +96,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Categories.
      * Collection of setting categories within the intent
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public DeviceManagementIntentSettingCategoryCollectionPage categories;
 
@@ -104,7 +104,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Device Setting State Summaries.
      * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
      */
-    @SerializedName("deviceSettingStateSummaries")
+    @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
     public DeviceManagementIntentDeviceSettingStateSummaryCollectionPage deviceSettingStateSummaries;
 
@@ -112,7 +112,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Device States.
      * Collection of states of all devices that the intent is applied to
      */
-    @SerializedName("deviceStates")
+    @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
     public DeviceManagementIntentDeviceStateCollectionPage deviceStates;
 
@@ -120,7 +120,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Device State Summary.
      * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
      */
-    @SerializedName("deviceStateSummary")
+    @SerializedName(value = "deviceStateSummary", alternate = {"DeviceStateSummary"})
     @Expose
     public DeviceManagementIntentDeviceStateSummary deviceStateSummary;
 
@@ -128,7 +128,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Settings.
      * Collection of all settings to be applied
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public DeviceManagementSettingInstanceCollectionPage settings;
 
@@ -136,7 +136,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The User States.
      * Collection of states of all users that the intent is applied to
      */
-    @SerializedName("userStates")
+    @SerializedName(value = "userStates", alternate = {"UserStates"})
     @Expose
     public DeviceManagementIntentUserStateCollectionPage userStates;
 
@@ -144,7 +144,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The User State Summary.
      * A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to
      */
-    @SerializedName("userStateSummary")
+    @SerializedName(value = "userStateSummary", alternate = {"UserStateSummary"})
     @Expose
     public DeviceManagementIntentUserStateSummary userStateSummary;
 

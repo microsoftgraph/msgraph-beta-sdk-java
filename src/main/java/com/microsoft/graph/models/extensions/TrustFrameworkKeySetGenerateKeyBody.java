@@ -22,7 +22,7 @@ public class TrustFrameworkKeySetGenerateKeyBody {
      * The use.
      * 
      */
-    @SerializedName("use")
+    @SerializedName(value = "use", alternate = {"Use"})
     @Expose
     public String use;
 
@@ -30,7 +30,7 @@ public class TrustFrameworkKeySetGenerateKeyBody {
      * The kty.
      * 
      */
-    @SerializedName("kty")
+    @SerializedName(value = "kty", alternate = {"Kty"})
     @Expose
     public String kty;
 
@@ -38,7 +38,7 @@ public class TrustFrameworkKeySetGenerateKeyBody {
      * The nbf.
      * 
      */
-    @SerializedName("nbf")
+    @SerializedName(value = "nbf", alternate = {"Nbf"})
     @Expose
     public Long nbf;
 
@@ -46,7 +46,7 @@ public class TrustFrameworkKeySetGenerateKeyBody {
      * The exp.
      * 
      */
-    @SerializedName("exp")
+    @SerializedName(value = "exp", alternate = {"Exp"})
     @Expose
     public Long exp;
 

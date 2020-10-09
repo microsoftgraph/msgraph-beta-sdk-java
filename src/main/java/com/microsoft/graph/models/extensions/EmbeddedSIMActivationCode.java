@@ -35,7 +35,7 @@ public class EmbeddedSIMActivationCode implements IJsonBackedObject {
      * The Integrated Circuit Card Identifier.
      * The input must match the following regular expression: '^[0-9]{19}[0-9]?$'.
      */
-    @SerializedName("integratedCircuitCardIdentifier")
+    @SerializedName(value = "integratedCircuitCardIdentifier", alternate = {"IntegratedCircuitCardIdentifier"})
     @Expose
     public String integratedCircuitCardIdentifier;
 
@@ -43,7 +43,7 @@ public class EmbeddedSIMActivationCode implements IJsonBackedObject {
      * The Matching Identifier.
      * The input must match the following regular expression: '^[a-zA-Z0-9&#92;-]*$'.
      */
-    @SerializedName("matchingIdentifier")
+    @SerializedName(value = "matchingIdentifier", alternate = {"MatchingIdentifier"})
     @Expose
     public String matchingIdentifier;
 
@@ -51,7 +51,7 @@ public class EmbeddedSIMActivationCode implements IJsonBackedObject {
      * The Smdp Plus Server Address.
      * The input must match the following regular expression: '^([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*&#92;.)+[a-zA-Z]{2,}$'.
      */
-    @SerializedName("smdpPlusServerAddress")
+    @SerializedName(value = "smdpPlusServerAddress", alternate = {"SmdpPlusServerAddress"})
     @Expose
     public String smdpPlusServerAddress;
 

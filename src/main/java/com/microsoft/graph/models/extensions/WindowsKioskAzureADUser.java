@@ -26,7 +26,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements IJsonBa
      * The User Id.
      * The ID of the AzureAD user that will be locked to this kiosk configuration
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -34,7 +34,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements IJsonBa
      * The User Principal Name.
      * The user accounts that will be locked to this kiosk configuration
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

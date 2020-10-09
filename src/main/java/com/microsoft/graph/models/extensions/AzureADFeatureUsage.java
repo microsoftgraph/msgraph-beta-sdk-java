@@ -26,7 +26,7 @@ public class AzureADFeatureUsage extends Entity implements IJsonBackedObject {
      * The Feature Name.
      * 
      */
-    @SerializedName("featureName")
+    @SerializedName(value = "featureName", alternate = {"FeatureName"})
     @Expose
     public String featureName;
 
@@ -34,7 +34,7 @@ public class AzureADFeatureUsage extends Entity implements IJsonBackedObject {
      * The Snapshot Date Time.
      * 
      */
-    @SerializedName("snapshotDateTime")
+    @SerializedName(value = "snapshotDateTime", alternate = {"SnapshotDateTime"})
     @Expose
     public java.util.Calendar snapshotDateTime;
 
@@ -42,7 +42,7 @@ public class AzureADFeatureUsage extends Entity implements IJsonBackedObject {
      * The Usage.
      * 
      */
-    @SerializedName("usage")
+    @SerializedName(value = "usage", alternate = {"Usage"})
     @Expose
     public Integer usage;
 

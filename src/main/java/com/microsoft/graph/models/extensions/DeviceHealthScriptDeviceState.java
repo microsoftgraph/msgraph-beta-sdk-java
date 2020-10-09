@@ -29,7 +29,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Detection State.
      * Detection state from the lastest device health script execution
      */
-    @SerializedName("detectionState")
+    @SerializedName(value = "detectionState", alternate = {"DetectionState"})
     @Expose
     public RunState detectionState;
 
@@ -37,7 +37,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Expected State Update Date Time.
      * The next timestamp of when the device health script is expected to execute
      */
-    @SerializedName("expectedStateUpdateDateTime")
+    @SerializedName(value = "expectedStateUpdateDateTime", alternate = {"ExpectedStateUpdateDateTime"})
     @Expose
     public java.util.Calendar expectedStateUpdateDateTime;
 
@@ -45,7 +45,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Last State Update Date Time.
      * The last timestamp of when the device health script executed
      */
-    @SerializedName("lastStateUpdateDateTime")
+    @SerializedName(value = "lastStateUpdateDateTime", alternate = {"LastStateUpdateDateTime"})
     @Expose
     public java.util.Calendar lastStateUpdateDateTime;
 
@@ -53,7 +53,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Last Sync Date Time.
      * The last time that Intune Managment Extension synced with Intune
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -61,7 +61,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Post Remediation Detection Script Error.
      * Error from the detection script after remediation
      */
-    @SerializedName("postRemediationDetectionScriptError")
+    @SerializedName(value = "postRemediationDetectionScriptError", alternate = {"PostRemediationDetectionScriptError"})
     @Expose
     public String postRemediationDetectionScriptError;
 
@@ -69,7 +69,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Post Remediation Detection Script Output.
      * Detection script output after remediation
      */
-    @SerializedName("postRemediationDetectionScriptOutput")
+    @SerializedName(value = "postRemediationDetectionScriptOutput", alternate = {"PostRemediationDetectionScriptOutput"})
     @Expose
     public String postRemediationDetectionScriptOutput;
 
@@ -77,7 +77,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Pre Remediation Detection Script Error.
      * Error from the detection script before remediation
      */
-    @SerializedName("preRemediationDetectionScriptError")
+    @SerializedName(value = "preRemediationDetectionScriptError", alternate = {"PreRemediationDetectionScriptError"})
     @Expose
     public String preRemediationDetectionScriptError;
 
@@ -85,7 +85,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Pre Remediation Detection Script Output.
      * Output of the detection script before remediation
      */
-    @SerializedName("preRemediationDetectionScriptOutput")
+    @SerializedName(value = "preRemediationDetectionScriptOutput", alternate = {"PreRemediationDetectionScriptOutput"})
     @Expose
     public String preRemediationDetectionScriptOutput;
 
@@ -93,7 +93,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Remediation Script Error.
      * Error output of the remediation script
      */
-    @SerializedName("remediationScriptError")
+    @SerializedName(value = "remediationScriptError", alternate = {"RemediationScriptError"})
     @Expose
     public String remediationScriptError;
 
@@ -101,7 +101,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Remediation State.
      * Remediation state from the lastest device health script execution
      */
-    @SerializedName("remediationState")
+    @SerializedName(value = "remediationState", alternate = {"RemediationState"})
     @Expose
     public RemediationState remediationState;
 
@@ -109,7 +109,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
      * The Managed Device.
      * The managed device on which the device health script executed
      */
-    @SerializedName("managedDevice")
+    @SerializedName(value = "managedDevice", alternate = {"ManagedDevice"})
     @Expose
     public ManagedDevice managedDevice;
 

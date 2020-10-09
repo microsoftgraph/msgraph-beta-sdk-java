@@ -37,7 +37,7 @@ public class LogonUser implements IJsonBackedObject {
      * The Account Domain.
      * 
      */
-    @SerializedName("accountDomain")
+    @SerializedName(value = "accountDomain", alternate = {"AccountDomain"})
     @Expose
     public String accountDomain;
 
@@ -45,7 +45,7 @@ public class LogonUser implements IJsonBackedObject {
      * The Account Name.
      * 
      */
-    @SerializedName("accountName")
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
     public String accountName;
 
@@ -53,7 +53,7 @@ public class LogonUser implements IJsonBackedObject {
      * The Account Type.
      * 
      */
-    @SerializedName("accountType")
+    @SerializedName(value = "accountType", alternate = {"AccountType"})
     @Expose
     public UserAccountSecurityType accountType;
 
@@ -61,7 +61,7 @@ public class LogonUser implements IJsonBackedObject {
      * The First Seen Date Time.
      * 
      */
-    @SerializedName("firstSeenDateTime")
+    @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
     public java.util.Calendar firstSeenDateTime;
 
@@ -69,7 +69,7 @@ public class LogonUser implements IJsonBackedObject {
      * The Last Seen Date Time.
      * 
      */
-    @SerializedName("lastSeenDateTime")
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
     public java.util.Calendar lastSeenDateTime;
 
@@ -77,7 +77,7 @@ public class LogonUser implements IJsonBackedObject {
      * The Logon Id.
      * 
      */
-    @SerializedName("logonId")
+    @SerializedName(value = "logonId", alternate = {"LogonId"})
     @Expose
     public String logonId;
 
@@ -85,7 +85,7 @@ public class LogonUser implements IJsonBackedObject {
      * The Logon Types.
      * 
      */
-    @SerializedName("logonTypes")
+    @SerializedName(value = "logonTypes", alternate = {"LogonTypes"})
     @Expose
     public java.util.List<LogonType> logonTypes;
 

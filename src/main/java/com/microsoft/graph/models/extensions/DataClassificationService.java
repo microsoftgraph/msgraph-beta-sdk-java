@@ -40,7 +40,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Exact Match Data Stores.
      * 
      */
-    @SerializedName("exactMatchDataStores")
+    @SerializedName(value = "exactMatchDataStores", alternate = {"ExactMatchDataStores"})
     @Expose
     public ExactMatchDataStoreCollectionPage exactMatchDataStores;
 
@@ -48,7 +48,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Classify File.
      * 
      */
-    @SerializedName("classifyFile")
+    @SerializedName(value = "classifyFile", alternate = {"ClassifyFile"})
     @Expose
     public FileClassificationRequestCollectionPage classifyFile;
 
@@ -56,7 +56,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Classify File Jobs.
      * 
      */
-    @SerializedName("classifyFileJobs")
+    @SerializedName(value = "classifyFileJobs", alternate = {"ClassifyFileJobs"})
     @Expose
     public JobResponseBaseCollectionPage classifyFileJobs;
 
@@ -64,7 +64,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Classify Text.
      * 
      */
-    @SerializedName("classifyText")
+    @SerializedName(value = "classifyText", alternate = {"ClassifyText"})
     @Expose
     public TextClassificationRequestCollectionPage classifyText;
 
@@ -72,7 +72,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Classify Text Jobs.
      * 
      */
-    @SerializedName("classifyTextJobs")
+    @SerializedName(value = "classifyTextJobs", alternate = {"ClassifyTextJobs"})
     @Expose
     public JobResponseBaseCollectionPage classifyTextJobs;
 
@@ -80,7 +80,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Evaluate Dlp Policies Jobs.
      * 
      */
-    @SerializedName("evaluateDlpPoliciesJobs")
+    @SerializedName(value = "evaluateDlpPoliciesJobs", alternate = {"EvaluateDlpPoliciesJobs"})
     @Expose
     public JobResponseBaseCollectionPage evaluateDlpPoliciesJobs;
 
@@ -88,7 +88,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Evaluate Label Jobs.
      * 
      */
-    @SerializedName("evaluateLabelJobs")
+    @SerializedName(value = "evaluateLabelJobs", alternate = {"EvaluateLabelJobs"})
     @Expose
     public JobResponseBaseCollectionPage evaluateLabelJobs;
 
@@ -96,7 +96,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Jobs.
      * 
      */
-    @SerializedName("jobs")
+    @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
     public JobResponseBaseCollectionPage jobs;
 
@@ -104,7 +104,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Labels And Policies Evaluation Jobs.
      * 
      */
-    @SerializedName("labelsAndPoliciesEvaluationJobs")
+    @SerializedName(value = "labelsAndPoliciesEvaluationJobs", alternate = {"LabelsAndPoliciesEvaluationJobs"})
     @Expose
     public JobResponseBaseCollectionPage labelsAndPoliciesEvaluationJobs;
 
@@ -112,7 +112,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Sensitive Types.
      * 
      */
-    @SerializedName("sensitiveTypes")
+    @SerializedName(value = "sensitiveTypes", alternate = {"SensitiveTypes"})
     @Expose
     public SensitiveTypeCollectionPage sensitiveTypes;
 
@@ -120,7 +120,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Sensitivity Labels.
      * 
      */
-    @SerializedName("sensitivityLabels")
+    @SerializedName(value = "sensitivityLabels", alternate = {"SensitivityLabels"})
     @Expose
     public SensitivityLabelCollectionPage sensitivityLabels;
 
@@ -128,7 +128,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Exact Match Upload Agents.
      * 
      */
-    @SerializedName("exactMatchUploadAgents")
+    @SerializedName(value = "exactMatchUploadAgents", alternate = {"ExactMatchUploadAgents"})
     @Expose
     public ExactMatchUploadAgentCollectionPage exactMatchUploadAgents;
 

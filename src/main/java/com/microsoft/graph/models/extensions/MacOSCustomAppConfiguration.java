@@ -26,7 +26,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * The Bundle Id.
      * Bundle id for targeting.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -34,7 +34,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * The Configuration Xml.
      * Configuration xml. (UTF8 encoded byte array)
      */
-    @SerializedName("configurationXml")
+    @SerializedName(value = "configurationXml", alternate = {"ConfigurationXml"})
     @Expose
     public byte[] configurationXml;
 
@@ -42,7 +42,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * The File Name.
      * Configuration file name (*.plist | *.xml).
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 

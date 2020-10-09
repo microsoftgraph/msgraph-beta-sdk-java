@@ -26,7 +26,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements IJsonB
      * The Display Name.
      * The display name of the AzureAD group that will be locked to this kiosk configuration
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements IJsonB
      * The Group Id.
      * The ID of the AzureAD group that will be locked to this kiosk configuration
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 

@@ -34,7 +34,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Activity.
      * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
      */
-    @SerializedName("activity")
+    @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
     public ActivityType activity;
 
@@ -42,7 +42,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Activity Date Time.
      * Date and time that the risky activity occurred.
      */
-    @SerializedName("activityDateTime")
+    @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
     public java.util.Calendar activityDateTime;
 
@@ -50,7 +50,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Additional Info.
      * Additional information associated with the risk detection in JSON format.
      */
-    @SerializedName("additionalInfo")
+    @SerializedName(value = "additionalInfo", alternate = {"AdditionalInfo"})
     @Expose
     public String additionalInfo;
 
@@ -58,7 +58,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Correlation Id.
      * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      */
-    @SerializedName("correlationId")
+    @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
     public String correlationId;
 
@@ -66,7 +66,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Detected Date Time.
      * Date and time that the risk was detected.
      */
-    @SerializedName("detectedDateTime")
+    @SerializedName(value = "detectedDateTime", alternate = {"DetectedDateTime"})
     @Expose
     public java.util.Calendar detectedDateTime;
 
@@ -74,7 +74,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Detection Timing Type.
      * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      */
-    @SerializedName("detectionTimingType")
+    @SerializedName(value = "detectionTimingType", alternate = {"DetectionTimingType"})
     @Expose
     public RiskDetectionTimingType detectionTimingType;
 
@@ -82,7 +82,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Ip Address.
      * Provides the IP address of the client from where the risk occurred.
      */
-    @SerializedName("ipAddress")
+    @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
     public String ipAddress;
 
@@ -90,7 +90,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Last Updated Date Time.
      * Date and time that the risk detection was last updated.
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
 
@@ -98,7 +98,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Location.
      * Location of the sign-in.
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public SignInLocation location;
 
@@ -106,7 +106,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Request Id.
      * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      */
-    @SerializedName("requestId")
+    @SerializedName(value = "requestId", alternate = {"RequestId"})
     @Expose
     public String requestId;
 
@@ -114,7 +114,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Risk Detail.
      * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      */
-    @SerializedName("riskDetail")
+    @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
     public RiskDetail riskDetail;
 
@@ -122,7 +122,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Risk Event Type.
      * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
      */
-    @SerializedName("riskEventType")
+    @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose
     public String riskEventType;
 
@@ -130,7 +130,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Risk Level.
      * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      */
-    @SerializedName("riskLevel")
+    @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
     public RiskLevel riskLevel;
 
@@ -138,7 +138,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Risk State.
      * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      */
-    @SerializedName("riskState")
+    @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
     public RiskState riskState;
 
@@ -146,7 +146,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Risk Type.
      * 
      */
-    @SerializedName("riskType")
+    @SerializedName(value = "riskType", alternate = {"RiskType"})
     @Expose
     public RiskEventType riskType;
 
@@ -154,7 +154,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Source.
      * Source of the risk detection. For example, 'activeDirectory'.
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public String source;
 
@@ -162,7 +162,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The Token Issuer Type.
      * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      */
-    @SerializedName("tokenIssuerType")
+    @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
     public TokenIssuerType tokenIssuerType;
 
@@ -170,7 +170,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The User Display Name.
      * The user principal name (UPN) of the user.
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -178,7 +178,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The User Id.
      * Unique ID of the user.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -186,7 +186,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * The user principal name (UPN) of the user.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

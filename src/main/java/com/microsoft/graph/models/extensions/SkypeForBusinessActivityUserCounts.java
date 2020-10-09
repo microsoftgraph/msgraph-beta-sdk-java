@@ -26,7 +26,7 @@ public class SkypeForBusinessActivityUserCounts extends Entity implements IJsonB
      * The Organized.
      * 
      */
-    @SerializedName("organized")
+    @SerializedName(value = "organized", alternate = {"Organized"})
     @Expose
     public Long organized;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessActivityUserCounts extends Entity implements IJsonB
      * The Participated.
      * 
      */
-    @SerializedName("participated")
+    @SerializedName(value = "participated", alternate = {"Participated"})
     @Expose
     public Long participated;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessActivityUserCounts extends Entity implements IJsonB
      * The Peer To Peer.
      * 
      */
-    @SerializedName("peerToPeer")
+    @SerializedName(value = "peerToPeer", alternate = {"PeerToPeer"})
     @Expose
     public Long peerToPeer;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessActivityUserCounts extends Entity implements IJsonB
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessActivityUserCounts extends Entity implements IJsonB
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessActivityUserCounts extends Entity implements IJsonB
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 

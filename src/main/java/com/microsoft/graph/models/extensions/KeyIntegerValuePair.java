@@ -26,7 +26,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements IJsonBacke
      * The Value.
      * The integer value of the key-value pair.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Integer value;
 

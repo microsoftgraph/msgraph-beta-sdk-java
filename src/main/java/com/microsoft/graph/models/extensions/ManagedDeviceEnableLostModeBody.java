@@ -22,7 +22,7 @@ public class ManagedDeviceEnableLostModeBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -30,7 +30,7 @@ public class ManagedDeviceEnableLostModeBody {
      * The phone Number.
      * 
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -38,7 +38,7 @@ public class ManagedDeviceEnableLostModeBody {
      * The footer.
      * 
      */
-    @SerializedName("footer")
+    @SerializedName(value = "footer", alternate = {"Footer"})
     @Expose
     public String footer;
 

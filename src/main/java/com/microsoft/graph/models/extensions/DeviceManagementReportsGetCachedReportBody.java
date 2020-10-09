@@ -22,7 +22,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -30,7 +30,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The select.
      * 
      */
-    @SerializedName("select")
+    @SerializedName(value = "select", alternate = {"Select"})
     @Expose
     public java.util.List<String> select;
 
@@ -38,7 +38,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The search.
      * 
      */
-    @SerializedName("search")
+    @SerializedName(value = "search", alternate = {"Search"})
     @Expose
     public String search;
 
@@ -46,7 +46,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The group By.
      * 
      */
-    @SerializedName("groupBy")
+    @SerializedName(value = "groupBy", alternate = {"GroupBy"})
     @Expose
     public java.util.List<String> groupBy;
 
@@ -54,7 +54,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The order By.
      * 
      */
-    @SerializedName("orderBy")
+    @SerializedName(value = "orderBy", alternate = {"OrderBy"})
     @Expose
     public java.util.List<String> orderBy;
 
@@ -62,7 +62,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The skip.
      * 
      */
-    @SerializedName("skip")
+    @SerializedName(value = "skip", alternate = {"Skip"})
     @Expose
     public Integer skip;
 
@@ -70,7 +70,7 @@ public class DeviceManagementReportsGetCachedReportBody {
      * The top.
      * 
      */
-    @SerializedName("top")
+    @SerializedName(value = "top", alternate = {"Top"})
     @Expose
     public Integer top;
 

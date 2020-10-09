@@ -36,7 +36,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
      * The Allow Multiple Occurrences.
      * 
      */
-    @SerializedName("allowMultipleOccurrences")
+    @SerializedName(value = "allowMultipleOccurrences", alternate = {"AllowMultipleOccurrences"})
     @Expose
     public Boolean allowMultipleOccurrences;
 
@@ -44,7 +44,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -52,7 +52,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
      * The Required.
      * 
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 
@@ -60,7 +60,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public AttributeType type;
 

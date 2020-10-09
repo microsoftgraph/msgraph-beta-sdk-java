@@ -27,7 +27,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The App Identifier.
      * The Identity Name.
      */
-    @SerializedName("appIdentifier")
+    @SerializedName(value = "appIdentifier", alternate = {"AppIdentifier"})
     @Expose
     public String appIdentifier;
 
@@ -35,7 +35,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The App Store Url.
      * The Play for Work Store app URL.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 
@@ -43,7 +43,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The App Tracks.
      * The tracks that are visible to this enterprise.
      */
-    @SerializedName("appTracks")
+    @SerializedName(value = "appTracks", alternate = {"AppTracks"})
     @Expose
     public java.util.List<AndroidManagedStoreAppTrack> appTracks;
 
@@ -51,7 +51,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The Is Private.
      * Indicates whether the app is only available to a given enterprise's users.
      */
-    @SerializedName("isPrivate")
+    @SerializedName(value = "isPrivate", alternate = {"IsPrivate"})
     @Expose
     public Boolean isPrivate;
 
@@ -59,7 +59,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The Is System App.
      * Indicates whether the app is a preinstalled system app.
      */
-    @SerializedName("isSystemApp")
+    @SerializedName(value = "isSystemApp", alternate = {"IsSystemApp"})
     @Expose
     public Boolean isSystemApp;
 
@@ -67,7 +67,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The Package Id.
      * The package identifier.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 
@@ -75,7 +75,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The Supports Oem Config.
      * Whether this app supports OEMConfig policy.
      */
-    @SerializedName("supportsOemConfig")
+    @SerializedName(value = "supportsOemConfig", alternate = {"SupportsOemConfig"})
     @Expose
     public Boolean supportsOemConfig;
 
@@ -83,7 +83,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The Total License Count.
      * The total number of VPP licenses.
      */
-    @SerializedName("totalLicenseCount")
+    @SerializedName(value = "totalLicenseCount", alternate = {"TotalLicenseCount"})
     @Expose
     public Integer totalLicenseCount;
 
@@ -91,7 +91,7 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
      * The Used License Count.
      * The number of VPP licenses in use.
      */
-    @SerializedName("usedLicenseCount")
+    @SerializedName(value = "usedLicenseCount", alternate = {"UsedLicenseCount"})
     @Expose
     public Integer usedLicenseCount;
 

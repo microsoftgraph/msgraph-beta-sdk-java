@@ -28,7 +28,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the Role Scope Tag.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -36,7 +36,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The display or friendly name of the Role Scope Tag.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
      * The Is Built In.
      * Description of the Role Scope Tag.
      */
-    @SerializedName("isBuiltIn")
+    @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
     public Boolean isBuiltIn;
 
@@ -52,7 +52,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for this Role Scope Tag.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public RoleScopeTagAutoAssignmentCollectionPage assignments;
 

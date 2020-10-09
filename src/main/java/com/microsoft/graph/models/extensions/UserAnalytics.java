@@ -29,7 +29,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public Settings settings;
 
@@ -37,7 +37,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
      * The Activity Statistics.
      * 
      */
-    @SerializedName("activityStatistics")
+    @SerializedName(value = "activityStatistics", alternate = {"ActivityStatistics"})
     @Expose
     public ActivityStatisticsCollectionPage activityStatistics;
 

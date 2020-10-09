@@ -28,7 +28,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
      * The Discoverabilities.
      * 
      */
-    @SerializedName("discoverabilities")
+    @SerializedName(value = "discoverabilities", alternate = {"Discoverabilities"})
     @Expose
     public EnumSet<DirectoryDefinitionDiscoverabilities> discoverabilities;
 
@@ -36,7 +36,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
      * The Discovery Date Time.
      * 
      */
-    @SerializedName("discoveryDateTime")
+    @SerializedName(value = "discoveryDateTime", alternate = {"DiscoveryDateTime"})
     @Expose
     public java.util.Calendar discoveryDateTime;
 
@@ -44,7 +44,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -52,7 +52,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
      * The Objects.
      * 
      */
-    @SerializedName("objects")
+    @SerializedName(value = "objects", alternate = {"Objects"})
     @Expose
     public java.util.List<ObjectDefinition> objects;
 
@@ -60,7 +60,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
      * The Read Only.
      * 
      */
-    @SerializedName("readOnly")
+    @SerializedName(value = "readOnly", alternate = {"ReadOnly"})
     @Expose
     public Boolean readOnly;
 
@@ -68,7 +68,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
      * The Version.
      * 
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

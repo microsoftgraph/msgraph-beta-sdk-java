@@ -22,7 +22,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignBody {
      * The wdac Policy Assignments.
      * 
      */
-    @SerializedName("wdacPolicyAssignments")
+    @SerializedName(value = "wdacPolicyAssignments", alternate = {"WdacPolicyAssignments"})
     @Expose
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> wdacPolicyAssignments;
 

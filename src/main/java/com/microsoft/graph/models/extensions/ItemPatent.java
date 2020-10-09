@@ -26,7 +26,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Is Pending.
      * 
      */
-    @SerializedName("isPending")
+    @SerializedName(value = "isPending", alternate = {"IsPending"})
     @Expose
     public Boolean isPending;
 
@@ -50,7 +50,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Issued Date.
      * 
      */
-    @SerializedName("issuedDate")
+    @SerializedName(value = "issuedDate", alternate = {"IssuedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly issuedDate;
 
@@ -58,7 +58,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Issuing Authority.
      * 
      */
-    @SerializedName("issuingAuthority")
+    @SerializedName(value = "issuingAuthority", alternate = {"IssuingAuthority"})
     @Expose
     public String issuingAuthority;
 
@@ -66,7 +66,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -74,7 +74,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

@@ -36,7 +36,7 @@ public class TimeClockSettings implements IJsonBackedObject {
      * The Approved Location.
      * 
      */
-    @SerializedName("approvedLocation")
+    @SerializedName(value = "approvedLocation", alternate = {"ApprovedLocation"})
     @Expose
     public GeoCoordinates approvedLocation;
 

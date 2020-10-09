@@ -35,7 +35,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
      * The Device Id.
      * The id of the device in the checkin.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -43,7 +43,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
      * The Device Name.
      * The name of the device in the checkin.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -51,7 +51,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
      * The Last Checkin Date Time.
      * Last checkin time for this user/device pair.
      */
-    @SerializedName("lastCheckinDateTime")
+    @SerializedName(value = "lastCheckinDateTime", alternate = {"LastCheckinDateTime"})
     @Expose
     public java.util.Calendar lastCheckinDateTime;
 
@@ -59,7 +59,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
      * The User Display Name.
      * The display name of the user in the checkin
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -67,7 +67,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
      * The User Id.
      * The id of the user in the checkin.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -75,7 +75,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
      * The User Principal Name.
      * The UPN of the user in the checkin.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

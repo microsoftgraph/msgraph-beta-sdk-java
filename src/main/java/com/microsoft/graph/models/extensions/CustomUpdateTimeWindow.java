@@ -36,7 +36,7 @@ public class CustomUpdateTimeWindow implements IJsonBackedObject {
      * The End Day.
      * End day of the time window
      */
-    @SerializedName("endDay")
+    @SerializedName(value = "endDay", alternate = {"EndDay"})
     @Expose
     public DayOfWeek endDay;
 
@@ -44,7 +44,7 @@ public class CustomUpdateTimeWindow implements IJsonBackedObject {
      * The End Time.
      * End time of the time window
      */
-    @SerializedName("endTime")
+    @SerializedName(value = "endTime", alternate = {"EndTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay endTime;
 
@@ -52,7 +52,7 @@ public class CustomUpdateTimeWindow implements IJsonBackedObject {
      * The Start Day.
      * Start day of the time window
      */
-    @SerializedName("startDay")
+    @SerializedName(value = "startDay", alternate = {"StartDay"})
     @Expose
     public DayOfWeek startDay;
 
@@ -60,7 +60,7 @@ public class CustomUpdateTimeWindow implements IJsonBackedObject {
      * The Start Time.
      * Start time of the time window
      */
-    @SerializedName("startTime")
+    @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay startTime;
 

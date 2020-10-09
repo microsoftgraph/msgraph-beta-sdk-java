@@ -27,7 +27,7 @@ public class DeviceManagementScriptAssignment extends Entity implements IJsonBac
      * The Target.
      * The Id of the Azure Active Directory group we are targeting the script to.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

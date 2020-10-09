@@ -27,7 +27,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements IJsonBack
      * The Extension Type.
      * ExtensionType of the unsupported extension.
      */
-    @SerializedName("extensionType")
+    @SerializedName(value = "extensionType", alternate = {"ExtensionType"})
     @Expose
     public String extensionType;
 
@@ -35,7 +35,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements IJsonBack
      * The Namespace Url.
      * Namespace Url of the unsupported extension.
      */
-    @SerializedName("namespaceUrl")
+    @SerializedName(value = "namespaceUrl", alternate = {"NamespaceUrl"})
     @Expose
     public String namespaceUrl;
 
@@ -43,7 +43,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements IJsonBack
      * The Node Name.
      * Node name of the unsupported extension.
      */
-    @SerializedName("nodeName")
+    @SerializedName(value = "nodeName", alternate = {"NodeName"})
     @Expose
     public String nodeName;
 
@@ -51,7 +51,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements IJsonBack
      * The Setting Scope.
      * Setting Scope of the unsupported extension.
      */
-    @SerializedName("settingScope")
+    @SerializedName(value = "settingScope", alternate = {"SettingScope"})
     @Expose
     public GroupPolicySettingScope settingScope;
 

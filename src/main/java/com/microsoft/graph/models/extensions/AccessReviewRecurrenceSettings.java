@@ -35,7 +35,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
      * The Duration In Days.
      * 
      */
-    @SerializedName("durationInDays")
+    @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
     public Integer durationInDays;
 
@@ -43,7 +43,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
      * The Recurrence Count.
      * 
      */
-    @SerializedName("recurrenceCount")
+    @SerializedName(value = "recurrenceCount", alternate = {"RecurrenceCount"})
     @Expose
     public Integer recurrenceCount;
 
@@ -51,7 +51,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
      * The Recurrence End Type.
      * 
      */
-    @SerializedName("recurrenceEndType")
+    @SerializedName(value = "recurrenceEndType", alternate = {"RecurrenceEndType"})
     @Expose
     public String recurrenceEndType;
 
@@ -59,7 +59,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
      * The Recurrence Type.
      * 
      */
-    @SerializedName("recurrenceType")
+    @SerializedName(value = "recurrenceType", alternate = {"RecurrenceType"})
     @Expose
     public String recurrenceType;
 

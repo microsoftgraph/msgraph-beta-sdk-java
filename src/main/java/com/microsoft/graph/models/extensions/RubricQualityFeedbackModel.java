@@ -36,7 +36,7 @@ public class RubricQualityFeedbackModel implements IJsonBackedObject {
      * The Feedback.
      * 
      */
-    @SerializedName("feedback")
+    @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
     public EducationItemBody feedback;
 
@@ -44,7 +44,7 @@ public class RubricQualityFeedbackModel implements IJsonBackedObject {
      * The Quality Id.
      * 
      */
-    @SerializedName("qualityId")
+    @SerializedName(value = "qualityId", alternate = {"QualityId"})
     @Expose
     public String qualityId;
 

@@ -28,7 +28,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Azure ADApp Id.
      * 
      */
-    @SerializedName("azureADAppId")
+    @SerializedName(value = "azureADAppId", alternate = {"AzureADAppId"})
     @Expose
     public String azureADAppId;
 
@@ -36,7 +36,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -44,7 +44,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -52,7 +52,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The name of the app provided by the app developer.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -60,7 +60,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -68,7 +68,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Publishing State.
      * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
      */
-    @SerializedName("publishingState")
+    @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
     public TeamsAppPublishingState publishingState;
 
@@ -76,7 +76,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Shortdescription.
      * 
      */
-    @SerializedName("shortdescription")
+    @SerializedName(value = "shortdescription", alternate = {"Shortdescription"})
     @Expose
     public String shortdescription;
 
@@ -84,7 +84,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Teams App Id.
      * The ID from the Teams app manifest.
      */
-    @SerializedName("teamsAppId")
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose
     public String teamsAppId;
 
@@ -92,7 +92,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Version.
      * The version number of the application.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

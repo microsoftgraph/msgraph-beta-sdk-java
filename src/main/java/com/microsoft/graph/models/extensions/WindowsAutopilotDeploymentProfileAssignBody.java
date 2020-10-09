@@ -22,7 +22,7 @@ public class WindowsAutopilotDeploymentProfileAssignBody {
      * The device Ids.
      * 
      */
-    @SerializedName("deviceIds")
+    @SerializedName(value = "deviceIds", alternate = {"DeviceIds"})
     @Expose
     public java.util.List<String> deviceIds;
 

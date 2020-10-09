@@ -28,7 +28,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * The Compliance Status.
      * The policy compliance status.
      */
-    @SerializedName("complianceStatus")
+    @SerializedName(value = "complianceStatus", alternate = {"ComplianceStatus"})
     @Expose
     public DeviceManagementAutopilotPolicyComplianceStatus complianceStatus;
 
@@ -36,7 +36,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * The Display Name.
      * The friendly name of the policy.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * The Last Reported Date Time.
      * Timestamp of the reported policy status
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -52,7 +52,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * The Policy Type.
      * The type of policy.
      */
-    @SerializedName("policyType")
+    @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose
     public DeviceManagementAutopilotPolicyType policyType;
 
@@ -60,7 +60,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * The Tracked On Enrollment Status.
      * Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
      */
-    @SerializedName("trackedOnEnrollmentStatus")
+    @SerializedName(value = "trackedOnEnrollmentStatus", alternate = {"TrackedOnEnrollmentStatus"})
     @Expose
     public Boolean trackedOnEnrollmentStatus;
 

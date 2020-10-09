@@ -26,7 +26,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Active Directory Site Code.
      * Gets or sets the Active Directory site.
      */
-    @SerializedName("activeDirectorySiteCode")
+    @SerializedName(value = "activeDirectorySiteCode", alternate = {"ActiveDirectorySiteCode"})
     @Expose
     public String activeDirectorySiteCode;
 
@@ -34,7 +34,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Block Active Directory Site Auto Discovery.
      * Enables or disables whether the Kerberos extension can automatically determine its site name.
      */
-    @SerializedName("blockActiveDirectorySiteAutoDiscovery")
+    @SerializedName(value = "blockActiveDirectorySiteAutoDiscovery", alternate = {"BlockActiveDirectorySiteAutoDiscovery"})
     @Expose
     public Boolean blockActiveDirectorySiteAutoDiscovery;
 
@@ -42,7 +42,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Block Automatic Login.
      * Enables or disables Keychain usage.
      */
-    @SerializedName("blockAutomaticLogin")
+    @SerializedName(value = "blockAutomaticLogin", alternate = {"BlockAutomaticLogin"})
     @Expose
     public Boolean blockAutomaticLogin;
 
@@ -50,7 +50,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Cache Name.
      * Gets or sets the Generic Security Services name of the Kerberos cache to use for this profile.
      */
-    @SerializedName("cacheName")
+    @SerializedName(value = "cacheName", alternate = {"CacheName"})
     @Expose
     public String cacheName;
 
@@ -58,7 +58,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Credential Bundle Id Access Control List.
      * Gets or sets a list of app Bundle IDs allowed to access the Kerberos Ticket Granting Ticket.
      */
-    @SerializedName("credentialBundleIdAccessControlList")
+    @SerializedName(value = "credentialBundleIdAccessControlList", alternate = {"CredentialBundleIdAccessControlList"})
     @Expose
     public java.util.List<String> credentialBundleIdAccessControlList;
 
@@ -66,7 +66,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Domain Realms.
      * Gets or sets a list of realms for custom domain-realm mapping. Realms are case sensitive.
      */
-    @SerializedName("domainRealms")
+    @SerializedName(value = "domainRealms", alternate = {"DomainRealms"})
     @Expose
     public java.util.List<String> domainRealms;
 
@@ -74,7 +74,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Domains.
      * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
      */
-    @SerializedName("domains")
+    @SerializedName(value = "domains", alternate = {"Domains"})
     @Expose
     public java.util.List<String> domains;
 
@@ -82,7 +82,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Is Default Realm.
      * When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
      */
-    @SerializedName("isDefaultRealm")
+    @SerializedName(value = "isDefaultRealm", alternate = {"IsDefaultRealm"})
     @Expose
     public Boolean isDefaultRealm;
 
@@ -90,7 +90,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Block Modification.
      * Enables or disables password changes.
      */
-    @SerializedName("passwordBlockModification")
+    @SerializedName(value = "passwordBlockModification", alternate = {"PasswordBlockModification"})
     @Expose
     public Boolean passwordBlockModification;
 
@@ -98,7 +98,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Change Url.
      * Gets or sets the URL that the user will be sent to when they initiate a password change.
      */
-    @SerializedName("passwordChangeUrl")
+    @SerializedName(value = "passwordChangeUrl", alternate = {"PasswordChangeUrl"})
     @Expose
     public String passwordChangeUrl;
 
@@ -106,7 +106,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Enable Local Sync.
      * Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
      */
-    @SerializedName("passwordEnableLocalSync")
+    @SerializedName(value = "passwordEnableLocalSync", alternate = {"PasswordEnableLocalSync"})
     @Expose
     public Boolean passwordEnableLocalSync;
 
@@ -114,7 +114,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Expiration Days.
      * Overrides the default password expiration in days. For most domains, this value is calculated automatically.
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -122,7 +122,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Expiration Notification Days.
      * Gets or sets the number of days until the user is notified that their password will expire (default is 15).
      */
-    @SerializedName("passwordExpirationNotificationDays")
+    @SerializedName(value = "passwordExpirationNotificationDays", alternate = {"PasswordExpirationNotificationDays"})
     @Expose
     public Integer passwordExpirationNotificationDays;
 
@@ -130,7 +130,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Minimum Age Days.
      * Gets or sets the minimum number of days until a user can change their password again.
      */
-    @SerializedName("passwordMinimumAgeDays")
+    @SerializedName(value = "passwordMinimumAgeDays", alternate = {"PasswordMinimumAgeDays"})
     @Expose
     public Integer passwordMinimumAgeDays;
 
@@ -138,7 +138,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Minimum Length.
      * Gets or sets the minimum length of a password.
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -146,7 +146,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Previous Password Block Count.
      * Gets or sets the number of previous passwords to block.
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -154,7 +154,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Require Active Directory Complexity.
      * Enables or disables whether passwords must meet Active Directory's complexity requirements.
      */
-    @SerializedName("passwordRequireActiveDirectoryComplexity")
+    @SerializedName(value = "passwordRequireActiveDirectoryComplexity", alternate = {"PasswordRequireActiveDirectoryComplexity"})
     @Expose
     public Boolean passwordRequireActiveDirectoryComplexity;
 
@@ -162,7 +162,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Password Requirements Description.
      * Gets or sets a description of the password complexity requirements.
      */
-    @SerializedName("passwordRequirementsDescription")
+    @SerializedName(value = "passwordRequirementsDescription", alternate = {"PasswordRequirementsDescription"})
     @Expose
     public String passwordRequirementsDescription;
 
@@ -170,7 +170,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Realm.
      * Gets or sets the case-sensitive realm name for this profile.
      */
-    @SerializedName("realm")
+    @SerializedName(value = "realm", alternate = {"Realm"})
     @Expose
     public String realm;
 
@@ -178,7 +178,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The Require User Presence.
      * Gets or sets whether to require authentication via Touch ID, Face ID, or a passcode to access the keychain entry.
      */
-    @SerializedName("requireUserPresence")
+    @SerializedName(value = "requireUserPresence", alternate = {"RequireUserPresence"})
     @Expose
     public Boolean requireUserPresence;
 
@@ -186,7 +186,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * The User Principal Name.
      * Gets or sets the principle user name to use for this profile. The realm name does not need to be included.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

@@ -28,7 +28,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Configuration.
      * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
      */
-    @SerializedName("configuration")
+    @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
     public TeamsTabConfiguration configuration;
 
@@ -36,7 +36,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Name of the tab.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Message Id.
      * 
      */
-    @SerializedName("messageId")
+    @SerializedName(value = "messageId", alternate = {"MessageId"})
     @Expose
     public String messageId;
 
@@ -52,7 +52,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Sort Order Index.
      * 
      */
-    @SerializedName("sortOrderIndex")
+    @SerializedName(value = "sortOrderIndex", alternate = {"SortOrderIndex"})
     @Expose
     public String sortOrderIndex;
 
@@ -60,7 +60,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Teams App Id.
      * 
      */
-    @SerializedName("teamsAppId")
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose
     public String teamsAppId;
 
@@ -68,7 +68,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Web Url.
      * Deep link URL of the tab instance. Read only.
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 
@@ -76,7 +76,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
      * The Teams App.
      * The application that is linked to the tab. This cannot be changed after tab creation.
      */
-    @SerializedName("teamsApp")
+    @SerializedName(value = "teamsApp", alternate = {"TeamsApp"})
     @Expose
     public TeamsApp teamsApp;
 

@@ -28,7 +28,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * The Connection Settings.
      * 
      */
-    @SerializedName("connectionSettings")
+    @SerializedName(value = "connectionSettings", alternate = {"ConnectionSettings"})
     @Expose
     public EducationSynchronizationConnectionSettings connectionSettings;
 
@@ -36,7 +36,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * The Connection Url.
      * 
      */
-    @SerializedName("connectionUrl")
+    @SerializedName(value = "connectionUrl", alternate = {"ConnectionUrl"})
     @Expose
     public String connectionUrl;
 
@@ -44,7 +44,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * The Customizations.
      * 
      */
-    @SerializedName("customizations")
+    @SerializedName(value = "customizations", alternate = {"Customizations"})
     @Expose
     public EducationSynchronizationCustomizations customizations;
 
@@ -52,7 +52,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * The Provider Name.
      * 
      */
-    @SerializedName("providerName")
+    @SerializedName(value = "providerName", alternate = {"ProviderName"})
     @Expose
     public String providerName;
 
@@ -60,7 +60,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * The Schools Ids.
      * 
      */
-    @SerializedName("schoolsIds")
+    @SerializedName(value = "schoolsIds", alternate = {"SchoolsIds"})
     @Expose
     public java.util.List<String> schoolsIds;
 
@@ -68,7 +68,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * The Term Ids.
      * 
      */
-    @SerializedName("termIds")
+    @SerializedName(value = "termIds", alternate = {"TermIds"})
     @Expose
     public java.util.List<String> termIds;
 

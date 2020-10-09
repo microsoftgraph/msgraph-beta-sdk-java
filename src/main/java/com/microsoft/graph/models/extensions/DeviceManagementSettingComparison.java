@@ -36,7 +36,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
      * The Comparison Result.
      * Setting comparison result
      */
-    @SerializedName("comparisonResult")
+    @SerializedName(value = "comparisonResult", alternate = {"ComparisonResult"})
     @Expose
     public DeviceManagementComparisonResult comparisonResult;
 
@@ -44,7 +44,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
      * The Current Value Json.
      * JSON representation of current intent (or) template setting's value
      */
-    @SerializedName("currentValueJson")
+    @SerializedName(value = "currentValueJson", alternate = {"CurrentValueJson"})
     @Expose
     public String currentValueJson;
 
@@ -52,7 +52,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
      * The Definition Id.
      * The ID of the setting definition for this instance
      */
-    @SerializedName("definitionId")
+    @SerializedName(value = "definitionId", alternate = {"DefinitionId"})
     @Expose
     public String definitionId;
 
@@ -60,7 +60,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
      * The Display Name.
      * The setting's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -68,7 +68,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
      * The Id.
      * The setting ID
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -76,7 +76,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
      * The New Value Json.
      * JSON representation of new template setting's value
      */
-    @SerializedName("newValueJson")
+    @SerializedName(value = "newValueJson", alternate = {"NewValueJson"})
     @Expose
     public String newValueJson;
 

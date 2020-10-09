@@ -27,7 +27,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements IJs
      * The Exclude Group.
      * Indicates if this group is should be excluded. Defaults that the group should be included
      */
-    @SerializedName("excludeGroup")
+    @SerializedName(value = "excludeGroup", alternate = {"ExcludeGroup"})
     @Expose
     public Boolean excludeGroup;
 
@@ -35,7 +35,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements IJs
      * The Target Group Id.
      * The Id of the AAD group we are targeting the device compliance policy to.
      */
-    @SerializedName("targetGroupId")
+    @SerializedName(value = "targetGroupId", alternate = {"TargetGroupId"})
     @Expose
     public String targetGroupId;
 
@@ -43,7 +43,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements IJs
      * The Device Compliance Policy.
      * The navigation link to the  device compliance polic targeted.
      */
-    @SerializedName("deviceCompliancePolicy")
+    @SerializedName(value = "deviceCompliancePolicy", alternate = {"DeviceCompliancePolicy"})
     @Expose
     public DeviceCompliancePolicy deviceCompliancePolicy;
 

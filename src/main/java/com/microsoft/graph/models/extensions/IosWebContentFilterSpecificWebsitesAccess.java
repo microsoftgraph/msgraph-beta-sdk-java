@@ -27,7 +27,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * The Specific Websites Only.
      * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("specificWebsitesOnly")
+    @SerializedName(value = "specificWebsitesOnly", alternate = {"SpecificWebsitesOnly"})
     @Expose
     public java.util.List<IosBookmark> specificWebsitesOnly;
 
@@ -35,7 +35,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * The Website List.
      * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("websiteList")
+    @SerializedName(value = "websiteList", alternate = {"WebsiteList"})
     @Expose
     public java.util.List<IosBookmark> websiteList;
 

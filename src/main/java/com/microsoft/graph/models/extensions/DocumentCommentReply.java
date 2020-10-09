@@ -26,7 +26,7 @@ public class DocumentCommentReply extends Entity implements IJsonBackedObject {
      * The Content.
      * 
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public String content;
 
@@ -34,7 +34,7 @@ public class DocumentCommentReply extends Entity implements IJsonBackedObject {
      * The Location.
      * 
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public String location;
 

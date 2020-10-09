@@ -26,7 +26,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * The Deployed Device Count.
      * Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("deployedDeviceCount")
+    @SerializedName(value = "deployedDeviceCount", alternate = {"DeployedDeviceCount"})
     @Expose
     public Integer deployedDeviceCount;
 
@@ -34,7 +34,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * The Failed Device Count.
      * Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("failedDeviceCount")
+    @SerializedName(value = "failedDeviceCount", alternate = {"FailedDeviceCount"})
     @Expose
     public Integer failedDeviceCount;
 

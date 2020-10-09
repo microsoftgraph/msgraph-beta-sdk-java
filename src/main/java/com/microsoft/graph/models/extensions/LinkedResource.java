@@ -26,7 +26,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
      * The Application Name.
      * 
      */
-    @SerializedName("applicationName")
+    @SerializedName(value = "applicationName", alternate = {"ApplicationName"})
     @Expose
     public String applicationName;
 
@@ -34,7 +34,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -50,7 +50,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

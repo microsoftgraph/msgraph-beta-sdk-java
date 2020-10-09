@@ -27,7 +27,7 @@ public class EncryptContent extends LabelActionBase implements IJsonBackedObject
      * The Encrypt With.
      * 
      */
-    @SerializedName("encryptWith")
+    @SerializedName(value = "encryptWith", alternate = {"EncryptWith"})
     @Expose
     public EncryptWith encryptWith;
 

@@ -28,7 +28,7 @@ public class Dimension extends Entity implements IJsonBackedObject {
      * The Code.
      * 
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -36,7 +36,7 @@ public class Dimension extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class Dimension extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -52,7 +52,7 @@ public class Dimension extends Entity implements IJsonBackedObject {
      * The Dimension Values.
      * 
      */
-    @SerializedName("dimensionValues")
+    @SerializedName(value = "dimensionValues", alternate = {"DimensionValues"})
     @Expose
     public DimensionValueCollectionPage dimensionValues;
 

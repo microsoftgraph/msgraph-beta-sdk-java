@@ -38,7 +38,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Assistant Name.
      * The name of the contact's assistant.
      */
-    @SerializedName("assistantName")
+    @SerializedName(value = "assistantName", alternate = {"AssistantName"})
     @Expose
     public String assistantName;
 
@@ -46,7 +46,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Birthday.
      * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("birthday")
+    @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
     public java.util.Calendar birthday;
 
@@ -54,7 +54,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Children.
      * The names of the contact's children.
      */
-    @SerializedName("children")
+    @SerializedName(value = "children", alternate = {"Children"})
     @Expose
     public java.util.List<String> children;
 
@@ -62,7 +62,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Company Name.
      * The name of the contact's company.
      */
-    @SerializedName("companyName")
+    @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
     public String companyName;
 
@@ -70,7 +70,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Department.
      * The contact's department.
      */
-    @SerializedName("department")
+    @SerializedName(value = "department", alternate = {"Department"})
     @Expose
     public String department;
 
@@ -78,7 +78,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Display Name.
      * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -86,7 +86,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Email Addresses.
      * The contact's email addresses.
      */
-    @SerializedName("emailAddresses")
+    @SerializedName(value = "emailAddresses", alternate = {"EmailAddresses"})
     @Expose
     public java.util.List<TypedEmailAddress> emailAddresses;
 
@@ -94,7 +94,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The File As.
      * The name the contact is filed under.
      */
-    @SerializedName("fileAs")
+    @SerializedName(value = "fileAs", alternate = {"FileAs"})
     @Expose
     public String fileAs;
 
@@ -102,7 +102,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Flag.
      * 
      */
-    @SerializedName("flag")
+    @SerializedName(value = "flag", alternate = {"Flag"})
     @Expose
     public FollowupFlag flag;
 
@@ -110,7 +110,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Gender.
      * 
      */
-    @SerializedName("gender")
+    @SerializedName(value = "gender", alternate = {"Gender"})
     @Expose
     public String gender;
 
@@ -118,7 +118,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Generation.
      * The contact's generation.
      */
-    @SerializedName("generation")
+    @SerializedName(value = "generation", alternate = {"Generation"})
     @Expose
     public String generation;
 
@@ -126,7 +126,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Given Name.
      * The contact's given name.
      */
-    @SerializedName("givenName")
+    @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
     public String givenName;
 
@@ -134,7 +134,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Im Addresses.
      * The contact's instant messaging (IM) addresses.
      */
-    @SerializedName("imAddresses")
+    @SerializedName(value = "imAddresses", alternate = {"ImAddresses"})
     @Expose
     public java.util.List<String> imAddresses;
 
@@ -142,7 +142,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Initials.
      * The contact's initials.
      */
-    @SerializedName("initials")
+    @SerializedName(value = "initials", alternate = {"Initials"})
     @Expose
     public String initials;
 
@@ -150,7 +150,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Is Favorite.
      * 
      */
-    @SerializedName("isFavorite")
+    @SerializedName(value = "isFavorite", alternate = {"IsFavorite"})
     @Expose
     public Boolean isFavorite;
 
@@ -158,7 +158,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Job Title.
      * The contact’s job title.
      */
-    @SerializedName("jobTitle")
+    @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
     public String jobTitle;
 
@@ -166,7 +166,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Manager.
      * The name of the contact's manager.
      */
-    @SerializedName("manager")
+    @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
     public String manager;
 
@@ -174,7 +174,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Middle Name.
      * The contact's middle name.
      */
-    @SerializedName("middleName")
+    @SerializedName(value = "middleName", alternate = {"MiddleName"})
     @Expose
     public String middleName;
 
@@ -182,7 +182,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Nick Name.
      * The contact's nickname.
      */
-    @SerializedName("nickName")
+    @SerializedName(value = "nickName", alternate = {"NickName"})
     @Expose
     public String nickName;
 
@@ -190,7 +190,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Office Location.
      * The location of the contact's office.
      */
-    @SerializedName("officeLocation")
+    @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
     public String officeLocation;
 
@@ -198,7 +198,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Parent Folder Id.
      * The ID of the contact's parent folder.
      */
-    @SerializedName("parentFolderId")
+    @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
     public String parentFolderId;
 
@@ -206,7 +206,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Personal Notes.
      * The user's notes about the contact.
      */
-    @SerializedName("personalNotes")
+    @SerializedName(value = "personalNotes", alternate = {"PersonalNotes"})
     @Expose
     public String personalNotes;
 
@@ -214,7 +214,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Phones.
      * 
      */
-    @SerializedName("phones")
+    @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
     public java.util.List<Phone> phones;
 
@@ -222,7 +222,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Postal Addresses.
      * 
      */
-    @SerializedName("postalAddresses")
+    @SerializedName(value = "postalAddresses", alternate = {"PostalAddresses"})
     @Expose
     public java.util.List<PhysicalAddress> postalAddresses;
 
@@ -230,7 +230,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Profession.
      * The contact's profession.
      */
-    @SerializedName("profession")
+    @SerializedName(value = "profession", alternate = {"Profession"})
     @Expose
     public String profession;
 
@@ -238,7 +238,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Spouse Name.
      * The name of the contact's spouse/partner.
      */
-    @SerializedName("spouseName")
+    @SerializedName(value = "spouseName", alternate = {"SpouseName"})
     @Expose
     public String spouseName;
 
@@ -246,7 +246,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Surname.
      * The contact's surname.
      */
-    @SerializedName("surname")
+    @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
     public String surname;
 
@@ -254,7 +254,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Title.
      * The contact's title.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -262,7 +262,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Websites.
      * 
      */
-    @SerializedName("websites")
+    @SerializedName(value = "websites", alternate = {"Websites"})
     @Expose
     public java.util.List<Website> websites;
 
@@ -270,7 +270,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Wedding Anniversary.
      * 
      */
-    @SerializedName("weddingAnniversary")
+    @SerializedName(value = "weddingAnniversary", alternate = {"WeddingAnniversary"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly weddingAnniversary;
 
@@ -278,7 +278,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Yomi Company Name.
      * The phonetic Japanese company name of the contact.
      */
-    @SerializedName("yomiCompanyName")
+    @SerializedName(value = "yomiCompanyName", alternate = {"YomiCompanyName"})
     @Expose
     public String yomiCompanyName;
 
@@ -286,7 +286,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Yomi Given Name.
      * The phonetic Japanese given name (first name) of the contact.
      */
-    @SerializedName("yomiGivenName")
+    @SerializedName(value = "yomiGivenName", alternate = {"YomiGivenName"})
     @Expose
     public String yomiGivenName;
 
@@ -294,7 +294,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Yomi Surname.
      * The phonetic Japanese surname (last name)  of the contact.
      */
-    @SerializedName("yomiSurname")
+    @SerializedName(value = "yomiSurname", alternate = {"YomiSurname"})
     @Expose
     public String yomiSurname;
 
@@ -302,7 +302,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the contact. Read-only. Nullable.
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -310,7 +310,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -318,7 +318,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Photo.
      * Optional contact picture. You can get or set a photo for a contact.
      */
-    @SerializedName("photo")
+    @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose
     public ProfilePhoto photo;
 
@@ -326,7 +326,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 

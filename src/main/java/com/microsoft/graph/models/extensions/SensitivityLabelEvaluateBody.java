@@ -24,7 +24,7 @@ public class SensitivityLabelEvaluateBody {
      * The discovered Sensitive Types.
      * 
      */
-    @SerializedName("discoveredSensitiveTypes")
+    @SerializedName(value = "discoveredSensitiveTypes", alternate = {"DiscoveredSensitiveTypes"})
     @Expose
     public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
 
@@ -32,7 +32,7 @@ public class SensitivityLabelEvaluateBody {
      * The current Label.
      * 
      */
-    @SerializedName("currentLabel")
+    @SerializedName(value = "currentLabel", alternate = {"CurrentLabel"})
     @Expose
     public CurrentLabel currentLabel;
 

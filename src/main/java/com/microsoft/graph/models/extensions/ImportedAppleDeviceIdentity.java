@@ -29,7 +29,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Created Date Time.
      * Created Date Time of the device
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -37,7 +37,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Description.
      * The description of the device
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -45,7 +45,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Discovery Source.
      * Apple device discovery source.
      */
-    @SerializedName("discoverySource")
+    @SerializedName(value = "discoverySource", alternate = {"DiscoverySource"})
     @Expose
     public DiscoverySource discoverySource;
 
@@ -53,7 +53,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Enrollment State.
      * The state of the device in Intune
      */
-    @SerializedName("enrollmentState")
+    @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
     public EnrollmentState enrollmentState;
 
@@ -61,7 +61,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Is Deleted.
      * Indicates if the device is deleted from Apple Business Manager
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -69,7 +69,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Is Supervised.
      * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
      */
-    @SerializedName("isSupervised")
+    @SerializedName(value = "isSupervised", alternate = {"IsSupervised"})
     @Expose
     public Boolean isSupervised;
 
@@ -77,7 +77,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Last Contacted Date Time.
      * Last Contacted Date Time of the device
      */
-    @SerializedName("lastContactedDateTime")
+    @SerializedName(value = "lastContactedDateTime", alternate = {"LastContactedDateTime"})
     @Expose
     public java.util.Calendar lastContactedDateTime;
 
@@ -85,7 +85,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Platform.
      * The platform of the Device.
      */
-    @SerializedName("platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public Platform platform;
 
@@ -93,7 +93,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Requested Enrollment Profile Assignment Date Time.
      * The time enrollment profile was assigned to the device
      */
-    @SerializedName("requestedEnrollmentProfileAssignmentDateTime")
+    @SerializedName(value = "requestedEnrollmentProfileAssignmentDateTime", alternate = {"RequestedEnrollmentProfileAssignmentDateTime"})
     @Expose
     public java.util.Calendar requestedEnrollmentProfileAssignmentDateTime;
 
@@ -101,7 +101,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Requested Enrollment Profile Id.
      * Enrollment profile Id admin intends to apply to the device during next enrollment
      */
-    @SerializedName("requestedEnrollmentProfileId")
+    @SerializedName(value = "requestedEnrollmentProfileId", alternate = {"RequestedEnrollmentProfileId"})
     @Expose
     public String requestedEnrollmentProfileId;
 
@@ -109,7 +109,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
      * The Serial Number.
      * Device serial number
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public String serialNumber;
 

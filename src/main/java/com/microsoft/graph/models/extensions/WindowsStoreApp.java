@@ -26,7 +26,7 @@ public class WindowsStoreApp extends MobileApp implements IJsonBackedObject {
      * The App Store Url.
      * The Windows app store URL.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 

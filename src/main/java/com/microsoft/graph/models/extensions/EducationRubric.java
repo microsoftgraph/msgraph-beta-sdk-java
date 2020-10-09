@@ -31,7 +31,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -39,7 +39,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -47,7 +47,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public EducationItemBody description;
 
@@ -55,7 +55,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -63,7 +63,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Grading.
      * 
      */
-    @SerializedName("grading")
+    @SerializedName(value = "grading", alternate = {"Grading"})
     @Expose
     public EducationAssignmentGradeType grading;
 
@@ -71,7 +71,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public IdentitySet lastModifiedBy;
 
@@ -79,7 +79,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -87,7 +87,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Levels.
      * 
      */
-    @SerializedName("levels")
+    @SerializedName(value = "levels", alternate = {"Levels"})
     @Expose
     public java.util.List<RubricLevel> levels;
 
@@ -95,7 +95,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
      * The Qualities.
      * 
      */
-    @SerializedName("qualities")
+    @SerializedName(value = "qualities", alternate = {"Qualities"})
     @Expose
     public java.util.List<RubricQuality> qualities;
 

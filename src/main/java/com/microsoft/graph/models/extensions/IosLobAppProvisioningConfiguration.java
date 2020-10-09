@@ -34,7 +34,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -42,7 +42,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Description.
      * Admin provided description of the Device Configuration.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -50,7 +50,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -58,7 +58,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Expiration Date Time.
      * Optional profile expiration date and time.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -66,7 +66,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -74,7 +74,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Payload.
      * Payload. (UTF8 encoded byte array)
      */
-    @SerializedName("payload")
+    @SerializedName(value = "payload", alternate = {"Payload"})
     @Expose
     public byte[] payload;
 
@@ -82,7 +82,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Payload File Name.
      * Payload file name (*.mobileprovision | *.xml).
      */
-    @SerializedName("payloadFileName")
+    @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose
     public String payloadFileName;
 
@@ -90,7 +90,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Role Scope Tag Ids.
      * List of Scope Tags for this iOS LOB app provisioning configuration entity.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -98,7 +98,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Version.
      * Version of the device configuration.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -106,7 +106,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Assignments.
      * The associated group assignments for IosLobAppProvisioningConfiguration.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public IosLobAppProvisioningConfigurationAssignmentCollectionPage assignments;
 
@@ -114,7 +114,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Device Statuses.
      * The list of device installation states for this mobile app configuration.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
@@ -122,7 +122,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Group Assignments.
      * The associated group assignments.
      */
-    @SerializedName("groupAssignments")
+    @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
     public MobileAppProvisioningConfigGroupAssignmentCollectionPage groupAssignments;
 
@@ -130,7 +130,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The User Statuses.
      * The list of user installation states for this mobile app configuration.
      */
-    @SerializedName("userStatuses")
+    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 

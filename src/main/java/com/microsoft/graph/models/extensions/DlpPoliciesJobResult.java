@@ -36,7 +36,7 @@ public class DlpPoliciesJobResult implements IJsonBackedObject {
      * The Matching Rules.
      * 
      */
-    @SerializedName("matchingRules")
+    @SerializedName(value = "matchingRules", alternate = {"MatchingRules"})
     @Expose
     public java.util.List<MatchingDlpRule> matchingRules;
 

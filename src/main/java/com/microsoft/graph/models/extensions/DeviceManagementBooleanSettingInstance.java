@@ -26,7 +26,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      * The Value.
      * The boolean value
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Boolean value;
 

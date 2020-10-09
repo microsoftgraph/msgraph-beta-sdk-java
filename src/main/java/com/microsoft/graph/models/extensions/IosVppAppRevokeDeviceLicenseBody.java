@@ -22,7 +22,7 @@ public class IosVppAppRevokeDeviceLicenseBody {
      * The managed Device Id.
      * 
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 
@@ -30,7 +30,7 @@ public class IosVppAppRevokeDeviceLicenseBody {
      * The notify Managed Devices.
      * 
      */
-    @SerializedName("notifyManagedDevices")
+    @SerializedName(value = "notifyManagedDevices", alternate = {"NotifyManagedDevices"})
     @Expose
     public Boolean notifyManagedDevices;
 

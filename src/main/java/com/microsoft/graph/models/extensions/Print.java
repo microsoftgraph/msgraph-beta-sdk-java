@@ -50,7 +50,7 @@ public class Print implements IJsonBackedObject {
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public PrintSettings settings;
 
@@ -58,7 +58,7 @@ public class Print implements IJsonBackedObject {
      * The Connectors.
      * 
      */
-    @SerializedName("connectors")
+    @SerializedName(value = "connectors", alternate = {"Connectors"})
     @Expose
     public PrintConnectorCollectionPage connectors;
 
@@ -66,7 +66,7 @@ public class Print implements IJsonBackedObject {
      * The Operations.
      * 
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public PrintOperationCollectionPage operations;
 
@@ -74,7 +74,7 @@ public class Print implements IJsonBackedObject {
      * The Printers.
      * 
      */
-    @SerializedName("printers")
+    @SerializedName(value = "printers", alternate = {"Printers"})
     @Expose
     public PrinterCollectionPage printers;
 
@@ -82,7 +82,7 @@ public class Print implements IJsonBackedObject {
      * The Printer Shares.
      * 
      */
-    @SerializedName("printerShares")
+    @SerializedName(value = "printerShares", alternate = {"PrinterShares"})
     @Expose
     public PrinterShareCollectionPage printerShares;
 
@@ -90,7 +90,7 @@ public class Print implements IJsonBackedObject {
      * The Reports.
      * 
      */
-    @SerializedName("reports")
+    @SerializedName(value = "reports", alternate = {"Reports"})
     @Expose
     public ReportRootCollectionPage reports;
 
@@ -98,7 +98,7 @@ public class Print implements IJsonBackedObject {
      * The Services.
      * 
      */
-    @SerializedName("services")
+    @SerializedName(value = "services", alternate = {"Services"})
     @Expose
     public PrintServiceCollectionPage services;
 
@@ -106,7 +106,7 @@ public class Print implements IJsonBackedObject {
      * The Shares.
      * 
      */
-    @SerializedName("shares")
+    @SerializedName(value = "shares", alternate = {"Shares"})
     @Expose
     public PrinterShareCollectionPage shares;
 
@@ -114,7 +114,7 @@ public class Print implements IJsonBackedObject {
      * The Task Definitions.
      * 
      */
-    @SerializedName("taskDefinitions")
+    @SerializedName(value = "taskDefinitions", alternate = {"TaskDefinitions"})
     @Expose
     public PrintTaskDefinitionCollectionPage taskDefinitions;
 

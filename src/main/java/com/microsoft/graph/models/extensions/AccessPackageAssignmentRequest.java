@@ -31,7 +31,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Answers.
      * 
      */
-    @SerializedName("answers")
+    @SerializedName(value = "answers", alternate = {"Answers"})
     @Expose
     public java.util.List<AccessPackageAnswer> answers;
 
@@ -39,7 +39,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Completed Date.
      * 
      */
-    @SerializedName("completedDate")
+    @SerializedName(value = "completedDate", alternate = {"CompletedDate"})
     @Expose
     public java.util.Calendar completedDate;
 
@@ -47,7 +47,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -63,7 +63,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Is Validation Only.
      * 
      */
-    @SerializedName("isValidationOnly")
+    @SerializedName(value = "isValidationOnly", alternate = {"IsValidationOnly"})
     @Expose
     public Boolean isValidationOnly;
 
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Justification.
      * 
      */
-    @SerializedName("justification")
+    @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
     public String justification;
 
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Request State.
      * 
      */
-    @SerializedName("requestState")
+    @SerializedName(value = "requestState", alternate = {"RequestState"})
     @Expose
     public String requestState;
 
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Request Status.
      * 
      */
-    @SerializedName("requestStatus")
+    @SerializedName(value = "requestStatus", alternate = {"RequestStatus"})
     @Expose
     public String requestStatus;
 
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Request Type.
      * 
      */
-    @SerializedName("requestType")
+    @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
     public String requestType;
 
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public RequestSchedule schedule;
 
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Access Package.
      * 
      */
-    @SerializedName("accessPackage")
+    @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
     public AccessPackage accessPackage;
 
@@ -119,7 +119,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Access Package Assignment.
      * 
      */
-    @SerializedName("accessPackageAssignment")
+    @SerializedName(value = "accessPackageAssignment", alternate = {"AccessPackageAssignment"})
     @Expose
     public AccessPackageAssignment accessPackageAssignment;
 
@@ -127,7 +127,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
      * The Requestor.
      * 
      */
-    @SerializedName("requestor")
+    @SerializedName(value = "requestor", alternate = {"Requestor"})
     @Expose
     public AccessPackageSubject requestor;
 

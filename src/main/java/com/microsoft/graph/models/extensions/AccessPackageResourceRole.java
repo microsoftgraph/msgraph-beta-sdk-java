@@ -27,7 +27,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
      * The Origin Id.
      * 
      */
-    @SerializedName("originId")
+    @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
     public String originId;
 
@@ -51,7 +51,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
      * The Origin System.
      * 
      */
-    @SerializedName("originSystem")
+    @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
     public String originSystem;
 
@@ -59,7 +59,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
      * The Access Package Resource.
      * 
      */
-    @SerializedName("accessPackageResource")
+    @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose
     public AccessPackageResource accessPackageResource;
 

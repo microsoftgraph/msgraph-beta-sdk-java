@@ -26,7 +26,7 @@ public class ConnectedOrganizationMembers extends UserSet implements IJsonBacked
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class ConnectedOrganizationMembers extends UserSet implements IJsonBacked
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

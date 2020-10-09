@@ -26,7 +26,7 @@ public class BookingPerson extends BookingNamedEntity implements IJsonBackedObje
      * The Email Address.
      * The e-mail address of this person.
      */
-    @SerializedName("emailAddress")
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
     public String emailAddress;
 

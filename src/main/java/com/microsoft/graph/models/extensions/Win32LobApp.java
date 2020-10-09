@@ -34,7 +34,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Applicable Architectures.
      * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
      */
-    @SerializedName("applicableArchitectures")
+    @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
     public EnumSet<WindowsArchitecture> applicableArchitectures;
 
@@ -42,7 +42,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Detection Rules.
      * The detection rules to detect Win32 Line of Business (LoB) app.
      */
-    @SerializedName("detectionRules")
+    @SerializedName(value = "detectionRules", alternate = {"DetectionRules"})
     @Expose
     public java.util.List<Win32LobAppDetection> detectionRules;
 
@@ -50,7 +50,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Install Command Line.
      * The command line to install this app
      */
-    @SerializedName("installCommandLine")
+    @SerializedName(value = "installCommandLine", alternate = {"InstallCommandLine"})
     @Expose
     public String installCommandLine;
 
@@ -58,7 +58,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Install Experience.
      * The install experience for this app.
      */
-    @SerializedName("installExperience")
+    @SerializedName(value = "installExperience", alternate = {"InstallExperience"})
     @Expose
     public Win32LobAppInstallExperience installExperience;
 
@@ -66,7 +66,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Cpu Speed In MHz.
      * The value for the minimum CPU speed which is required to install this app.
      */
-    @SerializedName("minimumCpuSpeedInMHz")
+    @SerializedName(value = "minimumCpuSpeedInMHz", alternate = {"MinimumCpuSpeedInMHz"})
     @Expose
     public Integer minimumCpuSpeedInMHz;
 
@@ -74,7 +74,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Free Disk Space In MB.
      * The value for the minimum free disk space which is required to install this app.
      */
-    @SerializedName("minimumFreeDiskSpaceInMB")
+    @SerializedName(value = "minimumFreeDiskSpaceInMB", alternate = {"MinimumFreeDiskSpaceInMB"})
     @Expose
     public Integer minimumFreeDiskSpaceInMB;
 
@@ -82,7 +82,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Memory In MB.
      * The value for the minimum physical memory which is required to install this app.
      */
-    @SerializedName("minimumMemoryInMB")
+    @SerializedName(value = "minimumMemoryInMB", alternate = {"MinimumMemoryInMB"})
     @Expose
     public Integer minimumMemoryInMB;
 
@@ -90,7 +90,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Number Of Processors.
      * The value for the minimum number of processors which is required to install this app.
      */
-    @SerializedName("minimumNumberOfProcessors")
+    @SerializedName(value = "minimumNumberOfProcessors", alternate = {"MinimumNumberOfProcessors"})
     @Expose
     public Integer minimumNumberOfProcessors;
 
@@ -98,7 +98,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -106,7 +106,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Supported Windows Release.
      * The value for the minimum supported windows release.
      */
-    @SerializedName("minimumSupportedWindowsRelease")
+    @SerializedName(value = "minimumSupportedWindowsRelease", alternate = {"MinimumSupportedWindowsRelease"})
     @Expose
     public String minimumSupportedWindowsRelease;
 
@@ -114,7 +114,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Msi Information.
      * The MSI details if this Win32 app is an MSI app.
      */
-    @SerializedName("msiInformation")
+    @SerializedName(value = "msiInformation", alternate = {"MsiInformation"})
     @Expose
     public Win32LobAppMsiInformation msiInformation;
 
@@ -122,7 +122,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Requirement Rules.
      * The requirement rules to detect Win32 Line of Business (LoB) app.
      */
-    @SerializedName("requirementRules")
+    @SerializedName(value = "requirementRules", alternate = {"RequirementRules"})
     @Expose
     public java.util.List<Win32LobAppRequirement> requirementRules;
 
@@ -130,7 +130,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Return Codes.
      * The return codes for post installation behavior.
      */
-    @SerializedName("returnCodes")
+    @SerializedName(value = "returnCodes", alternate = {"ReturnCodes"})
     @Expose
     public java.util.List<Win32LobAppReturnCode> returnCodes;
 
@@ -138,7 +138,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Rules.
      * The detection and requirement rules for this app.
      */
-    @SerializedName("rules")
+    @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose
     public java.util.List<Win32LobAppRule> rules;
 
@@ -146,7 +146,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Setup File Path.
      * The relative path of the setup file in the encrypted Win32LobApp package.
      */
-    @SerializedName("setupFilePath")
+    @SerializedName(value = "setupFilePath", alternate = {"SetupFilePath"})
     @Expose
     public String setupFilePath;
 
@@ -154,7 +154,7 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      * The Uninstall Command Line.
      * The command line to uninstall this app
      */
-    @SerializedName("uninstallCommandLine")
+    @SerializedName(value = "uninstallCommandLine", alternate = {"UninstallCommandLine"})
     @Expose
     public String uninstallCommandLine;
 

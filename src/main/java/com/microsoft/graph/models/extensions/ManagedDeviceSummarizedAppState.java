@@ -36,7 +36,7 @@ public class ManagedDeviceSummarizedAppState implements IJsonBackedObject {
      * The Device Id.
      * DeviceId of device represented by this object
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -44,7 +44,7 @@ public class ManagedDeviceSummarizedAppState implements IJsonBackedObject {
      * The Summarized App State.
      * runState for the object
      */
-    @SerializedName("summarizedAppState")
+    @SerializedName(value = "summarizedAppState", alternate = {"SummarizedAppState"})
     @Expose
     public RunState summarizedAppState;
 

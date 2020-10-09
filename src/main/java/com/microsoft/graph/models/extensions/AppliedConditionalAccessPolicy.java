@@ -37,7 +37,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Conditions Not Satisfied.
      * 
      */
-    @SerializedName("conditionsNotSatisfied")
+    @SerializedName(value = "conditionsNotSatisfied", alternate = {"ConditionsNotSatisfied"})
     @Expose
     public EnumSet<ConditionalAccessConditions> conditionsNotSatisfied;
 
@@ -45,7 +45,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Conditions Satisfied.
      * 
      */
-    @SerializedName("conditionsSatisfied")
+    @SerializedName(value = "conditionsSatisfied", alternate = {"ConditionsSatisfied"})
     @Expose
     public EnumSet<ConditionalAccessConditions> conditionsSatisfied;
 
@@ -53,7 +53,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Display Name.
      * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Enforced Grant Controls.
      * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
      */
-    @SerializedName("enforcedGrantControls")
+    @SerializedName(value = "enforcedGrantControls", alternate = {"EnforcedGrantControls"})
     @Expose
     public java.util.List<String> enforcedGrantControls;
 
@@ -69,7 +69,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Enforced Session Controls.
      * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
      */
-    @SerializedName("enforcedSessionControls")
+    @SerializedName(value = "enforcedSessionControls", alternate = {"EnforcedSessionControls"})
     @Expose
     public java.util.List<String> enforcedSessionControls;
 
@@ -77,7 +77,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Id.
      * Unique GUID of the conditional access policy.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -85,7 +85,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
      * The Result.
      * Indicates the result of the CA policy that was triggered. Possible values are:successfailurenotApplied - Policy isn't applied because policy conditions were not met.notEnabled - This is due to the policy in disabled state.
      */
-    @SerializedName("result")
+    @SerializedName(value = "result", alternate = {"Result"})
     @Expose
     public AppliedConditionalAccessPolicyResult result;
 

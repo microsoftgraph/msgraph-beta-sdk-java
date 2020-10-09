@@ -28,7 +28,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements IJsonBacked
      * The Intent.
      * Install intent of the MobileAppPolicySetItem.
      */
-    @SerializedName("intent")
+    @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose
     public InstallIntent intent;
 
@@ -36,7 +36,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements IJsonBacked
      * The Settings.
      * Settings of the MobileAppPolicySetItem.
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public MobileAppAssignmentSettings settings;
 

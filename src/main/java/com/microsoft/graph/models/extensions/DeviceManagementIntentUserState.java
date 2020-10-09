@@ -27,7 +27,7 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
      * The Device Count.
      * Count of Devices that belongs to a user for an intent
      */
-    @SerializedName("deviceCount")
+    @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
     public Integer deviceCount;
 
@@ -35,7 +35,7 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
      * The Last Reported Date Time.
      * Last modified date time of an intent report
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -43,7 +43,7 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
      * The State.
      * User state for an intent
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -51,7 +51,7 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
      * The User Name.
      * The user name that is being reported on a device
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -59,7 +59,7 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
      * The User Principal Name.
      * The user principal name that is being reported on a device
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

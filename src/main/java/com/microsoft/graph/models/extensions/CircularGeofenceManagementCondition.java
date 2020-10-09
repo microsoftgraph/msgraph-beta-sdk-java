@@ -26,7 +26,7 @@ public class CircularGeofenceManagementCondition extends LocationManagementCondi
      * The Latitude.
      * Latitude in degrees, between -90 and +90 inclusive.
      */
-    @SerializedName("latitude")
+    @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
     public Double latitude;
 
@@ -34,7 +34,7 @@ public class CircularGeofenceManagementCondition extends LocationManagementCondi
      * The Longitude.
      * Longitude in degrees, between -180 and +180 inclusive.
      */
-    @SerializedName("longitude")
+    @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose
     public Double longitude;
 
@@ -42,7 +42,7 @@ public class CircularGeofenceManagementCondition extends LocationManagementCondi
      * The Radius In Meters.
      * Radius in meters.
      */
-    @SerializedName("radiusInMeters")
+    @SerializedName(value = "radiusInMeters", alternate = {"RadiusInMeters"})
     @Expose
     public float radiusInMeters;
 

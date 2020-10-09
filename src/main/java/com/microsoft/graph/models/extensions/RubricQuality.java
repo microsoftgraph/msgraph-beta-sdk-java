@@ -37,7 +37,7 @@ public class RubricQuality implements IJsonBackedObject {
      * The Criteria.
      * 
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public java.util.List<RubricCriterion> criteria;
 
@@ -45,7 +45,7 @@ public class RubricQuality implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public EducationItemBody description;
 
@@ -53,7 +53,7 @@ public class RubricQuality implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class RubricQuality implements IJsonBackedObject {
      * The Quality Id.
      * 
      */
-    @SerializedName("qualityId")
+    @SerializedName(value = "qualityId", alternate = {"QualityId"})
     @Expose
     public String qualityId;
 
@@ -69,7 +69,7 @@ public class RubricQuality implements IJsonBackedObject {
      * The Weight.
      * 
      */
-    @SerializedName("weight")
+    @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose
     public float weight;
 

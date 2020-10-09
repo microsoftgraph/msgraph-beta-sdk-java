@@ -26,7 +26,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
      * The Detection Script Error Device Count.
      * Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("detectionScriptErrorDeviceCount")
+    @SerializedName(value = "detectionScriptErrorDeviceCount", alternate = {"DetectionScriptErrorDeviceCount"})
     @Expose
     public Integer detectionScriptErrorDeviceCount;
 
@@ -34,7 +34,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
      * The Detection Script Pending Device Count.
      * Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("detectionScriptPendingDeviceCount")
+    @SerializedName(value = "detectionScriptPendingDeviceCount", alternate = {"DetectionScriptPendingDeviceCount"})
     @Expose
     public Integer detectionScriptPendingDeviceCount;
 
@@ -42,7 +42,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
      * The Issue Detected Device Count.
      * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("issueDetectedDeviceCount")
+    @SerializedName(value = "issueDetectedDeviceCount", alternate = {"IssueDetectedDeviceCount"})
     @Expose
     public Integer issueDetectedDeviceCount;
 
@@ -50,7 +50,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
      * The Last Script Run Date Time.
      * Last run time for the script across all devices
      */
-    @SerializedName("lastScriptRunDateTime")
+    @SerializedName(value = "lastScriptRunDateTime", alternate = {"LastScriptRunDateTime"})
     @Expose
     public java.util.Calendar lastScriptRunDateTime;
 
@@ -58,7 +58,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
      * The No Issue Detected Device Count.
      * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("noIssueDetectedDeviceCount")
+    @SerializedName(value = "noIssueDetectedDeviceCount", alternate = {"NoIssueDetectedDeviceCount"})
     @Expose
     public Integer noIssueDetectedDeviceCount;
 

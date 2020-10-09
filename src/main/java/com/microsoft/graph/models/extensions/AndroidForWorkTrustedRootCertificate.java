@@ -26,7 +26,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * The Cert File Name.
      * File name to display in UI.
      */
-    @SerializedName("certFileName")
+    @SerializedName(value = "certFileName", alternate = {"CertFileName"})
     @Expose
     public String certFileName;
 
@@ -34,7 +34,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * The Trusted Root Certificate.
      * Trusted Root Certificate
      */
-    @SerializedName("trustedRootCertificate")
+    @SerializedName(value = "trustedRootCertificate", alternate = {"TrustedRootCertificate"})
     @Expose
     public byte[] trustedRootCertificate;
 

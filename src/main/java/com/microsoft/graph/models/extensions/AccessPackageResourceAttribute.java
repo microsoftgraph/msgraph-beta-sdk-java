@@ -37,7 +37,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
      * The Attribute Destination.
      * 
      */
-    @SerializedName("attributeDestination")
+    @SerializedName(value = "attributeDestination", alternate = {"AttributeDestination"})
     @Expose
     public AccessPackageResourceAttributeDestination attributeDestination;
 
@@ -45,7 +45,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
      * The Attribute Name.
      * 
      */
-    @SerializedName("attributeName")
+    @SerializedName(value = "attributeName", alternate = {"AttributeName"})
     @Expose
     public String attributeName;
 
@@ -53,7 +53,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
      * The Attribute Source.
      * 
      */
-    @SerializedName("attributeSource")
+    @SerializedName(value = "attributeSource", alternate = {"AttributeSource"})
     @Expose
     public AccessPackageResourceAttributeSource attributeSource;
 
@@ -61,7 +61,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

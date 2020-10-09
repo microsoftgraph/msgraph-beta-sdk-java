@@ -37,7 +37,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
      * The Data Type.
      * Data type specified in the rule.
      */
-    @SerializedName("dataType")
+    @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
     public DataType dataType;
 
@@ -45,7 +45,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
      * The Operand.
      * Operand specified in the rule.
      */
-    @SerializedName("operand")
+    @SerializedName(value = "operand", alternate = {"Operand"})
     @Expose
     public String operand;
 
@@ -53,7 +53,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
      * The Operator.
      * Operator specified in the rule.
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public Operator operator;
 
@@ -61,7 +61,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
      * The Setting Name.
      * Setting name specified in the rule.
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 

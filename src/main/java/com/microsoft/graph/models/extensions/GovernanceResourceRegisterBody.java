@@ -22,7 +22,7 @@ public class GovernanceResourceRegisterBody {
      * The external Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 

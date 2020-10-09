@@ -28,7 +28,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
      * The Contribution To Content Discovery As Organization Disabled.
      * 
      */
-    @SerializedName("contributionToContentDiscoveryAsOrganizationDisabled")
+    @SerializedName(value = "contributionToContentDiscoveryAsOrganizationDisabled", alternate = {"ContributionToContentDiscoveryAsOrganizationDisabled"})
     @Expose
     public Boolean contributionToContentDiscoveryAsOrganizationDisabled;
 
@@ -36,7 +36,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
      * The Contribution To Content Discovery Disabled.
      * 
      */
-    @SerializedName("contributionToContentDiscoveryDisabled")
+    @SerializedName(value = "contributionToContentDiscoveryDisabled", alternate = {"ContributionToContentDiscoveryDisabled"})
     @Expose
     public Boolean contributionToContentDiscoveryDisabled;
 
@@ -44,7 +44,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
      * The Regional And Language Settings.
      * 
      */
-    @SerializedName("regionalAndLanguageSettings")
+    @SerializedName(value = "regionalAndLanguageSettings", alternate = {"RegionalAndLanguageSettings"})
     @Expose
     public RegionalAndLanguageSettings regionalAndLanguageSettings;
 
@@ -52,7 +52,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
      * The Shift Preferences.
      * 
      */
-    @SerializedName("shiftPreferences")
+    @SerializedName(value = "shiftPreferences", alternate = {"ShiftPreferences"})
     @Expose
     public ShiftPreferences shiftPreferences;
 

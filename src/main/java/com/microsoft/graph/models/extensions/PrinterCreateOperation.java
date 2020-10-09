@@ -27,7 +27,7 @@ public class PrinterCreateOperation extends PrintOperation implements IJsonBacke
      * The Certificate.
      * 
      */
-    @SerializedName("certificate")
+    @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose
     public String certificate;
 
@@ -35,7 +35,7 @@ public class PrinterCreateOperation extends PrintOperation implements IJsonBacke
      * The Printer.
      * 
      */
-    @SerializedName("printer")
+    @SerializedName(value = "printer", alternate = {"Printer"})
     @Expose
     public Printer printer;
 

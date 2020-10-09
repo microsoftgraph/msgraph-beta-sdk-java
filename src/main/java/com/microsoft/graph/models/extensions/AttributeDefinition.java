@@ -40,7 +40,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Anchor.
      * 
      */
-    @SerializedName("anchor")
+    @SerializedName(value = "anchor", alternate = {"Anchor"})
     @Expose
     public Boolean anchor;
 
@@ -48,7 +48,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Api Expressions.
      * 
      */
-    @SerializedName("apiExpressions")
+    @SerializedName(value = "apiExpressions", alternate = {"ApiExpressions"})
     @Expose
     public java.util.List<StringKeyStringValuePair> apiExpressions;
 
@@ -56,7 +56,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Case Exact.
      * 
      */
-    @SerializedName("caseExact")
+    @SerializedName(value = "caseExact", alternate = {"CaseExact"})
     @Expose
     public Boolean caseExact;
 
@@ -64,7 +64,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Default Value.
      * 
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public String defaultValue;
 
@@ -72,7 +72,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Flow Null Values.
      * 
      */
-    @SerializedName("flowNullValues")
+    @SerializedName(value = "flowNullValues", alternate = {"FlowNullValues"})
     @Expose
     public Boolean flowNullValues;
 
@@ -80,7 +80,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public java.util.List<MetadataEntry> metadata;
 
@@ -88,7 +88,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Multivalued.
      * 
      */
-    @SerializedName("multivalued")
+    @SerializedName(value = "multivalued", alternate = {"Multivalued"})
     @Expose
     public Boolean multivalued;
 
@@ -96,7 +96,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Mutability.
      * 
      */
-    @SerializedName("mutability")
+    @SerializedName(value = "mutability", alternate = {"Mutability"})
     @Expose
     public Mutability mutability;
 
@@ -104,7 +104,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -112,7 +112,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Referenced Objects.
      * 
      */
-    @SerializedName("referencedObjects")
+    @SerializedName(value = "referencedObjects", alternate = {"ReferencedObjects"})
     @Expose
     public java.util.List<ReferencedObject> referencedObjects;
 
@@ -120,7 +120,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Required.
      * 
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 
@@ -128,7 +128,7 @@ public class AttributeDefinition implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public AttributeType type;
 

@@ -22,7 +22,7 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesBody {
      * The device Configuration Ids.
      * 
      */
-    @SerializedName("deviceConfigurationIds")
+    @SerializedName(value = "deviceConfigurationIds", alternate = {"DeviceConfigurationIds"})
     @Expose
     public java.util.List<String> deviceConfigurationIds;
 

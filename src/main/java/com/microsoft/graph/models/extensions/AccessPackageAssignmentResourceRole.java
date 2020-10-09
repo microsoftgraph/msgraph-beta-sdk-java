@@ -31,7 +31,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Origin Id.
      * 
      */
-    @SerializedName("originId")
+    @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
     public String originId;
 
@@ -39,7 +39,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Origin System.
      * 
      */
-    @SerializedName("originSystem")
+    @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
     public String originSystem;
 
@@ -47,7 +47,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Access Package Assignments.
      * 
      */
-    @SerializedName("accessPackageAssignments")
+    @SerializedName(value = "accessPackageAssignments", alternate = {"AccessPackageAssignments"})
     @Expose
     public AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
@@ -63,7 +63,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Access Package Resource Role.
      * 
      */
-    @SerializedName("accessPackageResourceRole")
+    @SerializedName(value = "accessPackageResourceRole", alternate = {"AccessPackageResourceRole"})
     @Expose
     public AccessPackageResourceRole accessPackageResourceRole;
 
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Access Package Resource Scope.
      * 
      */
-    @SerializedName("accessPackageResourceScope")
+    @SerializedName(value = "accessPackageResourceScope", alternate = {"AccessPackageResourceScope"})
     @Expose
     public AccessPackageResourceScope accessPackageResourceScope;
 
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Access Package Subject.
      * 
      */
-    @SerializedName("accessPackageSubject")
+    @SerializedName(value = "accessPackageSubject", alternate = {"AccessPackageSubject"})
     @Expose
     public AccessPackageSubject accessPackageSubject;
 

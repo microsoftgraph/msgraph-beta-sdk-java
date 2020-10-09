@@ -26,7 +26,7 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      * The Excluded Hosts.
      * The excluded hosts
      */
-    @SerializedName("excludedHosts")
+    @SerializedName(value = "excludedHosts", alternate = {"ExcludedHosts"})
     @Expose
     public java.util.List<String> excludedHosts;
 
@@ -34,7 +34,7 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      * The Host.
      * The host name
      */
-    @SerializedName("host")
+    @SerializedName(value = "host", alternate = {"Host"})
     @Expose
     public String host;
 
@@ -42,7 +42,7 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      * The Port.
      * The port
      */
-    @SerializedName("port")
+    @SerializedName(value = "port", alternate = {"Port"})
     @Expose
     public Integer port;
 

@@ -26,7 +26,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Imap4App.
      * 
      */
-    @SerializedName("imap4App")
+    @SerializedName(value = "imap4App", alternate = {"Imap4App"})
     @Expose
     public Long imap4App;
 
@@ -34,7 +34,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Mail For Mac.
      * 
      */
-    @SerializedName("mailForMac")
+    @SerializedName(value = "mailForMac", alternate = {"MailForMac"})
     @Expose
     public Long mailForMac;
 
@@ -42,7 +42,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Other For Mobile.
      * 
      */
-    @SerializedName("otherForMobile")
+    @SerializedName(value = "otherForMobile", alternate = {"OtherForMobile"})
     @Expose
     public Long otherForMobile;
 
@@ -50,7 +50,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Outlook For Mac.
      * 
      */
-    @SerializedName("outlookForMac")
+    @SerializedName(value = "outlookForMac", alternate = {"OutlookForMac"})
     @Expose
     public Long outlookForMac;
 
@@ -58,7 +58,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Outlook For Mobile.
      * 
      */
-    @SerializedName("outlookForMobile")
+    @SerializedName(value = "outlookForMobile", alternate = {"OutlookForMobile"})
     @Expose
     public Long outlookForMobile;
 
@@ -66,7 +66,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Outlook For Web.
      * 
      */
-    @SerializedName("outlookForWeb")
+    @SerializedName(value = "outlookForWeb", alternate = {"OutlookForWeb"})
     @Expose
     public Long outlookForWeb;
 
@@ -74,7 +74,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Outlook For Windows.
      * 
      */
-    @SerializedName("outlookForWindows")
+    @SerializedName(value = "outlookForWindows", alternate = {"OutlookForWindows"})
     @Expose
     public Long outlookForWindows;
 
@@ -82,7 +82,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Pop3App.
      * 
      */
-    @SerializedName("pop3App")
+    @SerializedName(value = "pop3App", alternate = {"Pop3App"})
     @Expose
     public Long pop3App;
 
@@ -90,7 +90,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -98,7 +98,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -106,7 +106,7 @@ public class EmailAppUsageAppsUserCounts extends Entity implements IJsonBackedOb
      * The Smtp App.
      * 
      */
-    @SerializedName("smtpApp")
+    @SerializedName(value = "smtpApp", alternate = {"SmtpApp"})
     @Expose
     public Long smtpApp;
 

@@ -26,7 +26,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      * The Patch Version.
      * The patch version for the current android app registration
      */
-    @SerializedName("patchVersion")
+    @SerializedName(value = "patchVersion", alternate = {"PatchVersion"})
     @Expose
     public String patchVersion;
 

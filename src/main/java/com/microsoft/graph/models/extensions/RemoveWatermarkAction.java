@@ -26,7 +26,7 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
      * The Ui Element Names.
      * 
      */
-    @SerializedName("uiElementNames")
+    @SerializedName(value = "uiElementNames", alternate = {"UiElementNames"})
     @Expose
     public java.util.List<String> uiElementNames;
 

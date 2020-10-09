@@ -40,7 +40,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Code.
      * 
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public SynchronizationStatusCode code;
 
@@ -48,7 +48,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Count Successive Complete Failures.
      * 
      */
-    @SerializedName("countSuccessiveCompleteFailures")
+    @SerializedName(value = "countSuccessiveCompleteFailures", alternate = {"CountSuccessiveCompleteFailures"})
     @Expose
     public Long countSuccessiveCompleteFailures;
 
@@ -56,7 +56,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Escrows Pruned.
      * 
      */
-    @SerializedName("escrowsPruned")
+    @SerializedName(value = "escrowsPruned", alternate = {"EscrowsPruned"})
     @Expose
     public Boolean escrowsPruned;
 
@@ -64,7 +64,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Last Execution.
      * 
      */
-    @SerializedName("lastExecution")
+    @SerializedName(value = "lastExecution", alternate = {"LastExecution"})
     @Expose
     public SynchronizationTaskExecution lastExecution;
 
@@ -72,7 +72,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Last Successful Execution.
      * 
      */
-    @SerializedName("lastSuccessfulExecution")
+    @SerializedName(value = "lastSuccessfulExecution", alternate = {"LastSuccessfulExecution"})
     @Expose
     public SynchronizationTaskExecution lastSuccessfulExecution;
 
@@ -80,7 +80,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Last Successful Execution With Exports.
      * 
      */
-    @SerializedName("lastSuccessfulExecutionWithExports")
+    @SerializedName(value = "lastSuccessfulExecutionWithExports", alternate = {"LastSuccessfulExecutionWithExports"})
     @Expose
     public SynchronizationTaskExecution lastSuccessfulExecutionWithExports;
 
@@ -88,7 +88,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Progress.
      * 
      */
-    @SerializedName("progress")
+    @SerializedName(value = "progress", alternate = {"Progress"})
     @Expose
     public java.util.List<SynchronizationProgress> progress;
 
@@ -96,7 +96,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Quarantine.
      * 
      */
-    @SerializedName("quarantine")
+    @SerializedName(value = "quarantine", alternate = {"Quarantine"})
     @Expose
     public SynchronizationQuarantine quarantine;
 
@@ -104,7 +104,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Steady State First Achieved Time.
      * 
      */
-    @SerializedName("steadyStateFirstAchievedTime")
+    @SerializedName(value = "steadyStateFirstAchievedTime", alternate = {"SteadyStateFirstAchievedTime"})
     @Expose
     public java.util.Calendar steadyStateFirstAchievedTime;
 
@@ -112,7 +112,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Steady State Last Achieved Time.
      * 
      */
-    @SerializedName("steadyStateLastAchievedTime")
+    @SerializedName(value = "steadyStateLastAchievedTime", alternate = {"SteadyStateLastAchievedTime"})
     @Expose
     public java.util.Calendar steadyStateLastAchievedTime;
 
@@ -120,7 +120,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Synchronized Entry Count By Type.
      * 
      */
-    @SerializedName("synchronizedEntryCountByType")
+    @SerializedName(value = "synchronizedEntryCountByType", alternate = {"SynchronizedEntryCountByType"})
     @Expose
     public java.util.List<StringKeyLongValuePair> synchronizedEntryCountByType;
 
@@ -128,7 +128,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
      * The Troubleshooting Url.
      * 
      */
-    @SerializedName("troubleshootingUrl")
+    @SerializedName(value = "troubleshootingUrl", alternate = {"TroubleshootingUrl"})
     @Expose
     public String troubleshootingUrl;
 

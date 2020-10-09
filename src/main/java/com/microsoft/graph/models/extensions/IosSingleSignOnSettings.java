@@ -36,7 +36,7 @@ public class IosSingleSignOnSettings implements IJsonBackedObject {
      * The Allowed Apps List.
      * List of app identifiers that are allowed to use this login. If this field is omitted, the login applies to all applications on the device. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("allowedAppsList")
+    @SerializedName(value = "allowedAppsList", alternate = {"AllowedAppsList"})
     @Expose
     public java.util.List<AppListItem> allowedAppsList;
 
@@ -44,7 +44,7 @@ public class IosSingleSignOnSettings implements IJsonBackedObject {
      * The Allowed Urls.
      * List of HTTP URLs that must be matched in order to use this login. With iOS 9.0 or later, a wildcard characters may be used.
      */
-    @SerializedName("allowedUrls")
+    @SerializedName(value = "allowedUrls", alternate = {"AllowedUrls"})
     @Expose
     public java.util.List<String> allowedUrls;
 
@@ -52,7 +52,7 @@ public class IosSingleSignOnSettings implements IJsonBackedObject {
      * The Display Name.
      * The display name of login settings shown on the receiving device.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -60,7 +60,7 @@ public class IosSingleSignOnSettings implements IJsonBackedObject {
      * The Kerberos Principal Name.
      * A Kerberos principal name. If not provided, the user is prompted for one during profile installation.
      */
-    @SerializedName("kerberosPrincipalName")
+    @SerializedName(value = "kerberosPrincipalName", alternate = {"KerberosPrincipalName"})
     @Expose
     public String kerberosPrincipalName;
 
@@ -68,7 +68,7 @@ public class IosSingleSignOnSettings implements IJsonBackedObject {
      * The Kerberos Realm.
      * A Kerberos realm name. Case sensitive.
      */
-    @SerializedName("kerberosRealm")
+    @SerializedName(value = "kerberosRealm", alternate = {"KerberosRealm"})
     @Expose
     public String kerberosRealm;
 

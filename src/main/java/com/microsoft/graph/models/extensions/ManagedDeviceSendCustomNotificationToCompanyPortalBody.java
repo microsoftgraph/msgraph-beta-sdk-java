@@ -22,7 +22,7 @@ public class ManagedDeviceSendCustomNotificationToCompanyPortalBody {
      * The notification Title.
      * 
      */
-    @SerializedName("notificationTitle")
+    @SerializedName(value = "notificationTitle", alternate = {"NotificationTitle"})
     @Expose
     public String notificationTitle;
 
@@ -30,7 +30,7 @@ public class ManagedDeviceSendCustomNotificationToCompanyPortalBody {
      * The notification Body.
      * 
      */
-    @SerializedName("notificationBody")
+    @SerializedName(value = "notificationBody", alternate = {"NotificationBody"})
     @Expose
     public String notificationBody;
 

@@ -23,7 +23,7 @@ public class ServicePrincipalCreatePasswordSingleSignOnCredentialsBody {
      * The id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -31,7 +31,7 @@ public class ServicePrincipalCreatePasswordSingleSignOnCredentialsBody {
      * The credentials.
      * 
      */
-    @SerializedName("credentials")
+    @SerializedName(value = "credentials", alternate = {"Credentials"})
     @Expose
     public java.util.List<Credential> credentials;
 

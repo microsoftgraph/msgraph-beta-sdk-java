@@ -43,7 +43,7 @@ public class IdentityContainer implements IJsonBackedObject {
      * The Conditional Access.
      * 
      */
-    @SerializedName("conditionalAccess")
+    @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
     @Expose
     public ConditionalAccessRoot conditionalAccess;
 
@@ -51,7 +51,7 @@ public class IdentityContainer implements IJsonBackedObject {
      * The B2c User Flows.
      * 
      */
-    @SerializedName("b2cUserFlows")
+    @SerializedName(value = "b2cUserFlows", alternate = {"B2cUserFlows"})
     @Expose
     public B2cIdentityUserFlowCollectionPage b2cUserFlows;
 
@@ -59,7 +59,7 @@ public class IdentityContainer implements IJsonBackedObject {
      * The B2x User Flows.
      * 
      */
-    @SerializedName("b2xUserFlows")
+    @SerializedName(value = "b2xUserFlows", alternate = {"B2xUserFlows"})
     @Expose
     public B2xIdentityUserFlowCollectionPage b2xUserFlows;
 
@@ -67,7 +67,7 @@ public class IdentityContainer implements IJsonBackedObject {
      * The User Flows.
      * 
      */
-    @SerializedName("userFlows")
+    @SerializedName(value = "userFlows", alternate = {"UserFlows"})
     @Expose
     public IdentityUserFlowCollectionPage userFlows;
 
@@ -75,7 +75,7 @@ public class IdentityContainer implements IJsonBackedObject {
      * The Continuous Access Evaluation Policy.
      * 
      */
-    @SerializedName("continuousAccessEvaluationPolicy")
+    @SerializedName(value = "continuousAccessEvaluationPolicy", alternate = {"ContinuousAccessEvaluationPolicy"})
     @Expose
     public ContinuousAccessEvaluationPolicy continuousAccessEvaluationPolicy;
 

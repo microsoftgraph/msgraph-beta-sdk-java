@@ -26,7 +26,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * The Enforce Signature Check.
      * A value indicating whether signature check is enforced
      */
-    @SerializedName("enforceSignatureCheck")
+    @SerializedName(value = "enforceSignatureCheck", alternate = {"EnforceSignatureCheck"})
     @Expose
     public Boolean enforceSignatureCheck;
 
@@ -34,7 +34,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * The Run As32Bit.
      * A value indicating whether this script should run as 32-bit
      */
-    @SerializedName("runAs32Bit")
+    @SerializedName(value = "runAs32Bit", alternate = {"RunAs32Bit"})
     @Expose
     public Boolean runAs32Bit;
 
@@ -42,7 +42,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * The Script Content.
      * The base64 encoded script content to detect Win32 Line of Business (LoB) app
      */
-    @SerializedName("scriptContent")
+    @SerializedName(value = "scriptContent", alternate = {"ScriptContent"})
     @Expose
     public String scriptContent;
 

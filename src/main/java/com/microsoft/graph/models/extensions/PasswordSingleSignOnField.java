@@ -35,7 +35,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
      * The Customized Label.
      * 
      */
-    @SerializedName("customizedLabel")
+    @SerializedName(value = "customizedLabel", alternate = {"CustomizedLabel"})
     @Expose
     public String customizedLabel;
 
@@ -43,7 +43,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
      * The Default Label.
      * 
      */
-    @SerializedName("defaultLabel")
+    @SerializedName(value = "defaultLabel", alternate = {"DefaultLabel"})
     @Expose
     public String defaultLabel;
 
@@ -51,7 +51,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
      * The Field Id.
      * 
      */
-    @SerializedName("fieldId")
+    @SerializedName(value = "fieldId", alternate = {"FieldId"})
     @Expose
     public String fieldId;
 
@@ -59,7 +59,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

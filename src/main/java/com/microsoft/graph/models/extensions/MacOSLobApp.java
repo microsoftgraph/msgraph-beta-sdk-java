@@ -28,7 +28,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Build Number.
      * The build number of MacOS Line of Business (LoB) app.
      */
-    @SerializedName("buildNumber")
+    @SerializedName(value = "buildNumber", alternate = {"BuildNumber"})
     @Expose
     public String buildNumber;
 
@@ -36,7 +36,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Bundle Id.
      * The bundle id.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -44,7 +44,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Child Apps.
      * The app list in this bundle package
      */
-    @SerializedName("childApps")
+    @SerializedName(value = "childApps", alternate = {"ChildApps"})
     @Expose
     public java.util.List<MacOSLobChildApp> childApps;
 
@@ -52,7 +52,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Identity Version.
      * The identity version.
      */
-    @SerializedName("identityVersion")
+    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
     public String identityVersion;
 
@@ -60,7 +60,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Ignore Version Detection.
      * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
      */
-    @SerializedName("ignoreVersionDetection")
+    @SerializedName(value = "ignoreVersionDetection", alternate = {"IgnoreVersionDetection"})
     @Expose
     public Boolean ignoreVersionDetection;
 
@@ -68,7 +68,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Md5Hash.
      * The MD5 hash codes
      */
-    @SerializedName("md5Hash")
+    @SerializedName(value = "md5Hash", alternate = {"Md5Hash"})
     @Expose
     public java.util.List<String> md5Hash;
 
@@ -76,7 +76,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Md5Hash Chunk Size.
      * The chunk size for MD5 hash
      */
-    @SerializedName("md5HashChunkSize")
+    @SerializedName(value = "md5HashChunkSize", alternate = {"Md5HashChunkSize"})
     @Expose
     public Integer md5HashChunkSize;
 
@@ -84,7 +84,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -92,7 +92,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Version Number.
      * The version number of MacOS Line of Business (LoB) app.
      */
-    @SerializedName("versionNumber")
+    @SerializedName(value = "versionNumber", alternate = {"VersionNumber"})
     @Expose
     public String versionNumber;
 

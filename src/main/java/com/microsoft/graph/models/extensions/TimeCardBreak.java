@@ -37,7 +37,7 @@ public class TimeCardBreak implements IJsonBackedObject {
      * The Break Id.
      * 
      */
-    @SerializedName("breakId")
+    @SerializedName(value = "breakId", alternate = {"BreakId"})
     @Expose
     public String breakId;
 
@@ -45,7 +45,7 @@ public class TimeCardBreak implements IJsonBackedObject {
      * The End.
      * 
      */
-    @SerializedName("end")
+    @SerializedName(value = "end", alternate = {"End"})
     @Expose
     public TimeCardEvent end;
 
@@ -53,7 +53,7 @@ public class TimeCardBreak implements IJsonBackedObject {
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public ItemBody notes;
 
@@ -61,7 +61,7 @@ public class TimeCardBreak implements IJsonBackedObject {
      * The Start.
      * 
      */
-    @SerializedName("start")
+    @SerializedName(value = "start", alternate = {"Start"})
     @Expose
     public TimeCardEvent start;
 

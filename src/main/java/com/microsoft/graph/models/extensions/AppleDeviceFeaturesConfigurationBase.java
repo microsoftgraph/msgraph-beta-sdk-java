@@ -27,7 +27,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * The Air Print Destinations.
      * An array of AirPrint printers that should always be shown. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("airPrintDestinations")
+    @SerializedName(value = "airPrintDestinations", alternate = {"AirPrintDestinations"})
     @Expose
     public java.util.List<AirPrintDestination> airPrintDestinations;
 

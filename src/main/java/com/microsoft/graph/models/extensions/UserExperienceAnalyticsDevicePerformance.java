@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Average Blue Screens.
      * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("averageBlueScreens")
+    @SerializedName(value = "averageBlueScreens", alternate = {"AverageBlueScreens"})
     @Expose
     public Double averageBlueScreens;
 
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Average Restarts.
      * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("averageRestarts")
+    @SerializedName(value = "averageRestarts", alternate = {"AverageRestarts"})
     @Expose
     public Double averageRestarts;
 
@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Blue Screen Count.
      * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("blueScreenCount")
+    @SerializedName(value = "blueScreenCount", alternate = {"BlueScreenCount"})
     @Expose
     public Integer blueScreenCount;
 
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Boot Score.
      * The user experience analytics device boot score.
      */
-    @SerializedName("bootScore")
+    @SerializedName(value = "bootScore", alternate = {"BootScore"})
     @Expose
     public Integer bootScore;
 
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Core Boot Time In Ms.
      * The user experience analytics device core boot time in milliseconds.
      */
-    @SerializedName("coreBootTimeInMs")
+    @SerializedName(value = "coreBootTimeInMs", alternate = {"CoreBootTimeInMs"})
     @Expose
     public Integer coreBootTimeInMs;
 
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Core Login Time In Ms.
      * The user experience analytics device core login time in milliseconds.
      */
-    @SerializedName("coreLoginTimeInMs")
+    @SerializedName(value = "coreLoginTimeInMs", alternate = {"CoreLoginTimeInMs"})
     @Expose
     public Integer coreLoginTimeInMs;
 
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Device Count.
      * User experience analytics summarized device count.
      */
-    @SerializedName("deviceCount")
+    @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
     public Long deviceCount;
 
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Device Name.
      * The user experience analytics device name.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Disk Type.
      * The user experience analytics device disk type.
      */
-    @SerializedName("diskType")
+    @SerializedName(value = "diskType", alternate = {"DiskType"})
     @Expose
     public DiskType diskType;
 
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Group Policy Boot Time In Ms.
      * The user experience analytics device group policy boot time in milliseconds.
      */
-    @SerializedName("groupPolicyBootTimeInMs")
+    @SerializedName(value = "groupPolicyBootTimeInMs", alternate = {"GroupPolicyBootTimeInMs"})
     @Expose
     public Integer groupPolicyBootTimeInMs;
 
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Group Policy Login Time In Ms.
      * The user experience analytics device group policy login time in milliseconds.
      */
-    @SerializedName("groupPolicyLoginTimeInMs")
+    @SerializedName(value = "groupPolicyLoginTimeInMs", alternate = {"GroupPolicyLoginTimeInMs"})
     @Expose
     public Integer groupPolicyLoginTimeInMs;
 
@@ -116,7 +116,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Health Status.
      * The health state of the user experience analytics device.
      */
-    @SerializedName("healthStatus")
+    @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
     public UserExperienceAnalyticsHealthState healthStatus;
 
@@ -124,7 +124,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Login Score.
      * The user experience analytics device login score.
      */
-    @SerializedName("loginScore")
+    @SerializedName(value = "loginScore", alternate = {"LoginScore"})
     @Expose
     public Integer loginScore;
 
@@ -132,7 +132,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Manufacturer.
      * The user experience analytics device manufacturer.
      */
-    @SerializedName("manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
@@ -140,7 +140,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Model.
      * The user experience analytics device model.
      */
-    @SerializedName("model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -148,7 +148,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Operating System Version.
      * The user experience analytics device Operating System version.
      */
-    @SerializedName("operatingSystemVersion")
+    @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
     public String operatingSystemVersion;
 
@@ -156,7 +156,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Responsive Desktop Time In Ms.
      * The user experience analytics responsive desktop time in milliseconds.
      */
-    @SerializedName("responsiveDesktopTimeInMs")
+    @SerializedName(value = "responsiveDesktopTimeInMs", alternate = {"ResponsiveDesktopTimeInMs"})
     @Expose
     public Integer responsiveDesktopTimeInMs;
 
@@ -164,7 +164,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The Restart Count.
      * Number of Restarts in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("restartCount")
+    @SerializedName(value = "restartCount", alternate = {"RestartCount"})
     @Expose
     public Integer restartCount;
 

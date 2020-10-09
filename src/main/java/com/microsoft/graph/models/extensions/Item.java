@@ -29,7 +29,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Base Unit Of Measure Id.
      * 
      */
-    @SerializedName("baseUnitOfMeasureId")
+    @SerializedName(value = "baseUnitOfMeasureId", alternate = {"BaseUnitOfMeasureId"})
     @Expose
     public java.util.UUID baseUnitOfMeasureId;
 
@@ -37,7 +37,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Blocked.
      * 
      */
-    @SerializedName("blocked")
+    @SerializedName(value = "blocked", alternate = {"Blocked"})
     @Expose
     public Boolean blocked;
 
@@ -45,7 +45,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -53,7 +53,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Gtin.
      * 
      */
-    @SerializedName("gtin")
+    @SerializedName(value = "gtin", alternate = {"Gtin"})
     @Expose
     public String gtin;
 
@@ -61,7 +61,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Inventory.
      * 
      */
-    @SerializedName("inventory")
+    @SerializedName(value = "inventory", alternate = {"Inventory"})
     @Expose
     public java.math.BigDecimal inventory;
 
@@ -69,7 +69,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Item Category Code.
      * 
      */
-    @SerializedName("itemCategoryCode")
+    @SerializedName(value = "itemCategoryCode", alternate = {"ItemCategoryCode"})
     @Expose
     public String itemCategoryCode;
 
@@ -77,7 +77,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Item Category Id.
      * 
      */
-    @SerializedName("itemCategoryId")
+    @SerializedName(value = "itemCategoryId", alternate = {"ItemCategoryId"})
     @Expose
     public java.util.UUID itemCategoryId;
 
@@ -85,7 +85,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -93,7 +93,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -101,7 +101,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Price Includes Tax.
      * 
      */
-    @SerializedName("priceIncludesTax")
+    @SerializedName(value = "priceIncludesTax", alternate = {"PriceIncludesTax"})
     @Expose
     public Boolean priceIncludesTax;
 
@@ -109,7 +109,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Tax Group Code.
      * 
      */
-    @SerializedName("taxGroupCode")
+    @SerializedName(value = "taxGroupCode", alternate = {"TaxGroupCode"})
     @Expose
     public String taxGroupCode;
 
@@ -117,7 +117,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Tax Group Id.
      * 
      */
-    @SerializedName("taxGroupId")
+    @SerializedName(value = "taxGroupId", alternate = {"TaxGroupId"})
     @Expose
     public java.util.UUID taxGroupId;
 
@@ -125,7 +125,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -133,7 +133,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Unit Cost.
      * 
      */
-    @SerializedName("unitCost")
+    @SerializedName(value = "unitCost", alternate = {"UnitCost"})
     @Expose
     public java.math.BigDecimal unitCost;
 
@@ -141,7 +141,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Unit Price.
      * 
      */
-    @SerializedName("unitPrice")
+    @SerializedName(value = "unitPrice", alternate = {"UnitPrice"})
     @Expose
     public java.math.BigDecimal unitPrice;
 
@@ -149,7 +149,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Item Category.
      * 
      */
-    @SerializedName("itemCategory")
+    @SerializedName(value = "itemCategory", alternate = {"ItemCategory"})
     @Expose
     public ItemCategory itemCategory;
 
@@ -157,7 +157,7 @@ public class Item extends Entity implements IJsonBackedObject {
      * The Picture.
      * 
      */
-    @SerializedName("picture")
+    @SerializedName(value = "picture", alternate = {"Picture"})
     @Expose
     public PictureCollectionPage picture;
 

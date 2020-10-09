@@ -23,7 +23,7 @@ public class DataClassificationServiceClassifyExactMatchesBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public String text;
 
@@ -31,7 +31,7 @@ public class DataClassificationServiceClassifyExactMatchesBody {
      * The timeout In Ms.
      * 
      */
-    @SerializedName("timeoutInMs")
+    @SerializedName(value = "timeoutInMs", alternate = {"TimeoutInMs"})
     @Expose
     public String timeoutInMs;
 
@@ -39,7 +39,7 @@ public class DataClassificationServiceClassifyExactMatchesBody {
      * The sensitive Type Ids.
      * 
      */
-    @SerializedName("sensitiveTypeIds")
+    @SerializedName(value = "sensitiveTypeIds", alternate = {"SensitiveTypeIds"})
     @Expose
     public java.util.List<String> sensitiveTypeIds;
 
@@ -47,7 +47,7 @@ public class DataClassificationServiceClassifyExactMatchesBody {
      * The content Classifications.
      * 
      */
-    @SerializedName("contentClassifications")
+    @SerializedName(value = "contentClassifications", alternate = {"ContentClassifications"})
     @Expose
     public java.util.List<ContentClassification> contentClassifications;
 

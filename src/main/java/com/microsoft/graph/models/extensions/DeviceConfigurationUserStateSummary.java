@@ -26,7 +26,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Compliant User Count.
      * Number of compliant users
      */
-    @SerializedName("compliantUserCount")
+    @SerializedName(value = "compliantUserCount", alternate = {"CompliantUserCount"})
     @Expose
     public Integer compliantUserCount;
 
@@ -34,7 +34,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Conflict User Count.
      * Number of conflict users
      */
-    @SerializedName("conflictUserCount")
+    @SerializedName(value = "conflictUserCount", alternate = {"ConflictUserCount"})
     @Expose
     public Integer conflictUserCount;
 
@@ -42,7 +42,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Error User Count.
      * Number of error users
      */
-    @SerializedName("errorUserCount")
+    @SerializedName(value = "errorUserCount", alternate = {"ErrorUserCount"})
     @Expose
     public Integer errorUserCount;
 
@@ -50,7 +50,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Non Compliant User Count.
      * Number of NonCompliant users
      */
-    @SerializedName("nonCompliantUserCount")
+    @SerializedName(value = "nonCompliantUserCount", alternate = {"NonCompliantUserCount"})
     @Expose
     public Integer nonCompliantUserCount;
 
@@ -58,7 +58,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Not Applicable User Count.
      * Number of not applicable users
      */
-    @SerializedName("notApplicableUserCount")
+    @SerializedName(value = "notApplicableUserCount", alternate = {"NotApplicableUserCount"})
     @Expose
     public Integer notApplicableUserCount;
 
@@ -66,7 +66,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Remediated User Count.
      * Number of remediated users
      */
-    @SerializedName("remediatedUserCount")
+    @SerializedName(value = "remediatedUserCount", alternate = {"RemediatedUserCount"})
     @Expose
     public Integer remediatedUserCount;
 
@@ -74,7 +74,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
      * The Unknown User Count.
      * Number of unknown users
      */
-    @SerializedName("unknownUserCount")
+    @SerializedName(value = "unknownUserCount", alternate = {"UnknownUserCount"})
     @Expose
     public Integer unknownUserCount;
 

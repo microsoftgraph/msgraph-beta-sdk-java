@@ -30,7 +30,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Active Firewall Required.
      * Require active firewall on Windows devices.
      */
-    @SerializedName("activeFirewallRequired")
+    @SerializedName(value = "activeFirewallRequired", alternate = {"ActiveFirewallRequired"})
     @Expose
     public Boolean activeFirewallRequired;
 
@@ -38,7 +38,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Anti Spyware Required.
      * Require any AntiSpyware solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
      */
-    @SerializedName("antiSpywareRequired")
+    @SerializedName(value = "antiSpywareRequired", alternate = {"AntiSpywareRequired"})
     @Expose
     public Boolean antiSpywareRequired;
 
@@ -46,7 +46,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Antivirus Required.
      * Require any Antivirus solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
      */
-    @SerializedName("antivirusRequired")
+    @SerializedName(value = "antivirusRequired", alternate = {"AntivirusRequired"})
     @Expose
     public Boolean antivirusRequired;
 
@@ -54,7 +54,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Bit Locker Enabled.
      * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
      */
-    @SerializedName("bitLockerEnabled")
+    @SerializedName(value = "bitLockerEnabled", alternate = {"BitLockerEnabled"})
     @Expose
     public Boolean bitLockerEnabled;
 
@@ -62,7 +62,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Code Integrity Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation.
      */
-    @SerializedName("codeIntegrityEnabled")
+    @SerializedName(value = "codeIntegrityEnabled", alternate = {"CodeIntegrityEnabled"})
     @Expose
     public Boolean codeIntegrityEnabled;
 
@@ -70,7 +70,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Configuration Manager Compliance Required.
      * Require to consider SCCM Compliance state into consideration for Intune Compliance State.
      */
-    @SerializedName("configurationManagerComplianceRequired")
+    @SerializedName(value = "configurationManagerComplianceRequired", alternate = {"ConfigurationManagerComplianceRequired"})
     @Expose
     public Boolean configurationManagerComplianceRequired;
 
@@ -78,7 +78,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Defender Enabled.
      * Require Windows Defender Antimalware on Windows devices.
      */
-    @SerializedName("defenderEnabled")
+    @SerializedName(value = "defenderEnabled", alternate = {"DefenderEnabled"})
     @Expose
     public Boolean defenderEnabled;
 
@@ -86,7 +86,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Defender Version.
      * Require Windows Defender Antimalware minimum version on Windows devices.
      */
-    @SerializedName("defenderVersion")
+    @SerializedName(value = "defenderVersion", alternate = {"DefenderVersion"})
     @Expose
     public String defenderVersion;
 
@@ -94,7 +94,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Device Compliance Policy Script.
      * 
      */
-    @SerializedName("deviceCompliancePolicyScript")
+    @SerializedName(value = "deviceCompliancePolicyScript", alternate = {"DeviceCompliancePolicyScript"})
     @Expose
     public DeviceCompliancePolicyScript deviceCompliancePolicyScript;
 
@@ -102,7 +102,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */
-    @SerializedName("deviceThreatProtectionEnabled")
+    @SerializedName(value = "deviceThreatProtectionEnabled", alternate = {"DeviceThreatProtectionEnabled"})
     @Expose
     public Boolean deviceThreatProtectionEnabled;
 
@@ -110,7 +110,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Device Threat Protection Required Security Level.
      * Require Device Threat Protection minimum risk level to report noncompliance.
      */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
@@ -118,7 +118,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Early Launch Anti Malware Driver Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      */
-    @SerializedName("earlyLaunchAntiMalwareDriverEnabled")
+    @SerializedName(value = "earlyLaunchAntiMalwareDriverEnabled", alternate = {"EarlyLaunchAntiMalwareDriverEnabled"})
     @Expose
     public Boolean earlyLaunchAntiMalwareDriverEnabled;
 
@@ -126,7 +126,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Mobile Os Maximum Version.
      * Maximum Windows Phone version.
      */
-    @SerializedName("mobileOsMaximumVersion")
+    @SerializedName(value = "mobileOsMaximumVersion", alternate = {"MobileOsMaximumVersion"})
     @Expose
     public String mobileOsMaximumVersion;
 
@@ -134,7 +134,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Mobile Os Minimum Version.
      * Minimum Windows Phone version.
      */
-    @SerializedName("mobileOsMinimumVersion")
+    @SerializedName(value = "mobileOsMinimumVersion", alternate = {"MobileOsMinimumVersion"})
     @Expose
     public String mobileOsMinimumVersion;
 
@@ -142,7 +142,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Os Maximum Version.
      * Maximum Windows 10 version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -150,7 +150,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Os Minimum Version.
      * Minimum Windows 10 version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -158,7 +158,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Block Simple.
      * Indicates whether or not to block simple password.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -166,7 +166,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Expiration Days.
      * The password expiration in days.
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -174,7 +174,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -182,7 +182,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Minimum Length.
      * The minimum password length.
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -190,7 +190,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -198,7 +198,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Previous Password Block Count.
      * The number of previous passwords to prevent re-use of.
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -206,7 +206,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Required.
      * Require a password to unlock Windows device.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -214,7 +214,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Required To Unlock From Idle.
      * Require a password to unlock an idle device.
      */
-    @SerializedName("passwordRequiredToUnlockFromIdle")
+    @SerializedName(value = "passwordRequiredToUnlockFromIdle", alternate = {"PasswordRequiredToUnlockFromIdle"})
     @Expose
     public Boolean passwordRequiredToUnlockFromIdle;
 
@@ -222,7 +222,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -230,7 +230,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Require Healthy Device Report.
      * Require devices to be reported as healthy by Windows Device Health Attestation.
      */
-    @SerializedName("requireHealthyDeviceReport")
+    @SerializedName(value = "requireHealthyDeviceReport", alternate = {"RequireHealthyDeviceReport"})
     @Expose
     public Boolean requireHealthyDeviceReport;
 
@@ -238,7 +238,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Rtp Enabled.
      * Require Windows Defender Antimalware Real-Time Protection on Windows devices.
      */
-    @SerializedName("rtpEnabled")
+    @SerializedName(value = "rtpEnabled", alternate = {"RtpEnabled"})
     @Expose
     public Boolean rtpEnabled;
 
@@ -246,7 +246,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Secure Boot Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
      */
-    @SerializedName("secureBootEnabled")
+    @SerializedName(value = "secureBootEnabled", alternate = {"SecureBootEnabled"})
     @Expose
     public Boolean secureBootEnabled;
 
@@ -254,7 +254,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Signature Out Of Date.
      * Require Windows Defender Antimalware Signature to be up to date on Windows devices.
      */
-    @SerializedName("signatureOutOfDate")
+    @SerializedName(value = "signatureOutOfDate", alternate = {"SignatureOutOfDate"})
     @Expose
     public Boolean signatureOutOfDate;
 
@@ -262,7 +262,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Storage Require Encryption.
      * Require encryption on windows devices.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 
@@ -270,7 +270,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Tpm Required.
      * Require Trusted Platform Module(TPM) to be present.
      */
-    @SerializedName("tpmRequired")
+    @SerializedName(value = "tpmRequired", alternate = {"TpmRequired"})
     @Expose
     public Boolean tpmRequired;
 
@@ -278,7 +278,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The Valid Operating System Build Ranges.
      * The valid operating system build ranges on Windows devices. This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("validOperatingSystemBuildRanges")
+    @SerializedName(value = "validOperatingSystemBuildRanges", alternate = {"ValidOperatingSystemBuildRanges"})
     @Expose
     public java.util.List<OperatingSystemVersionRange> validOperatingSystemBuildRanges;
 

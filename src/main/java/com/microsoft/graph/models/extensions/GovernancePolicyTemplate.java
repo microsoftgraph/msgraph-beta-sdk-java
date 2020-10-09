@@ -28,7 +28,7 @@ public class GovernancePolicyTemplate extends Entity implements IJsonBackedObjec
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -36,7 +36,7 @@ public class GovernancePolicyTemplate extends Entity implements IJsonBackedObjec
      * The Policy.
      * 
      */
-    @SerializedName("policy")
+    @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose
     public GovernancePolicy policy;
 
@@ -44,7 +44,7 @@ public class GovernancePolicyTemplate extends Entity implements IJsonBackedObjec
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public BusinessFlowSettings settings;
 

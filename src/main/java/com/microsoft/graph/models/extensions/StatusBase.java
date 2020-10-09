@@ -36,7 +36,7 @@ public class StatusBase implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ProvisioningResult status;
 

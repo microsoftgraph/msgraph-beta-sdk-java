@@ -26,7 +26,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Android Phone.
      * 
      */
-    @SerializedName("androidPhone")
+    @SerializedName(value = "androidPhone", alternate = {"AndroidPhone"})
     @Expose
     public Long androidPhone;
 
@@ -34,7 +34,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Ios.
      * 
      */
-    @SerializedName("ios")
+    @SerializedName(value = "ios", alternate = {"Ios"})
     @Expose
     public Long ios;
 
@@ -42,7 +42,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Mac.
      * 
      */
-    @SerializedName("mac")
+    @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
     public Long mac;
 
@@ -50,7 +50,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -58,7 +58,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -66,7 +66,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Web.
      * 
      */
-    @SerializedName("web")
+    @SerializedName(value = "web", alternate = {"Web"})
     @Expose
     public Long web;
 
@@ -74,7 +74,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Windows.
      * 
      */
-    @SerializedName("windows")
+    @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
     public Long windows;
 
@@ -82,7 +82,7 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
      * The Windows Phone.
      * 
      */
-    @SerializedName("windowsPhone")
+    @SerializedName(value = "windowsPhone", alternate = {"WindowsPhone"})
     @Expose
     public Long windowsPhone;
 

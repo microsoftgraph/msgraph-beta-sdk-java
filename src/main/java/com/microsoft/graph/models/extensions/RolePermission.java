@@ -36,7 +36,7 @@ public class RolePermission implements IJsonBackedObject {
      * The Actions.
      * Allowed Actions - Deprecated
      */
-    @SerializedName("actions")
+    @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
     public java.util.List<String> actions;
 
@@ -44,7 +44,7 @@ public class RolePermission implements IJsonBackedObject {
      * The Resource Actions.
      * Actions
      */
-    @SerializedName("resourceActions")
+    @SerializedName(value = "resourceActions", alternate = {"ResourceActions"})
     @Expose
     public java.util.List<ResourceAction> resourceActions;
 

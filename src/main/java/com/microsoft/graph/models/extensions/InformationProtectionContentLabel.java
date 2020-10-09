@@ -37,7 +37,7 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
      * The Assignment Method.
      * 
      */
-    @SerializedName("assignmentMethod")
+    @SerializedName(value = "assignmentMethod", alternate = {"AssignmentMethod"})
     @Expose
     public AssignmentMethod assignmentMethod;
 
@@ -45,7 +45,7 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
      * The Creation Date Time.
      * 
      */
-    @SerializedName("creationDateTime")
+    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
     public java.util.Calendar creationDateTime;
 
@@ -53,7 +53,7 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
      * The Label.
      * 
      */
-    @SerializedName("label")
+    @SerializedName(value = "label", alternate = {"Label"})
     @Expose
     public LabelDetails label;
 

@@ -39,7 +39,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Battery Charge Cycles.
      * The number of charge cycles the device???s current battery has gone through. Valid values 0 to 2147483647
      */
-    @SerializedName("batteryChargeCycles")
+    @SerializedName(value = "batteryChargeCycles", alternate = {"BatteryChargeCycles"})
     @Expose
     public Integer batteryChargeCycles;
 
@@ -47,7 +47,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Battery Health Percentage.
      * The device???s current battery???s health percentage. Valid values 0 to 100
      */
-    @SerializedName("batteryHealthPercentage")
+    @SerializedName(value = "batteryHealthPercentage", alternate = {"BatteryHealthPercentage"})
     @Expose
     public Integer batteryHealthPercentage;
 
@@ -55,7 +55,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Battery Serial Number.
      * The serial number of the device???s current battery
      */
-    @SerializedName("batterySerialNumber")
+    @SerializedName(value = "batterySerialNumber", alternate = {"BatterySerialNumber"})
     @Expose
     public String batterySerialNumber;
 
@@ -63,7 +63,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Cellular Technology.
      * Cellular technology of the device
      */
-    @SerializedName("cellularTechnology")
+    @SerializedName(value = "cellularTechnology", alternate = {"CellularTechnology"})
     @Expose
     public String cellularTechnology;
 
@@ -71,7 +71,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Device Full Qualified Domain Name.
      * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
      */
-    @SerializedName("deviceFullQualifiedDomainName")
+    @SerializedName(value = "deviceFullQualifiedDomainName", alternate = {"DeviceFullQualifiedDomainName"})
     @Expose
     public String deviceFullQualifiedDomainName;
 
@@ -79,7 +79,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Device Guard Local System Authority Credential Guard State.
      * Local System Authority (LSA) credential guard status. 
      */
-    @SerializedName("deviceGuardLocalSystemAuthorityCredentialGuardState")
+    @SerializedName(value = "deviceGuardLocalSystemAuthorityCredentialGuardState", alternate = {"DeviceGuardLocalSystemAuthorityCredentialGuardState"})
     @Expose
     public DeviceGuardLocalSystemAuthorityCredentialGuardState deviceGuardLocalSystemAuthorityCredentialGuardState;
 
@@ -87,7 +87,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Device Guard Virtualization Based Security Hardware Requirement State.
      * Virtualization-based security hardware requirement status.
      */
-    @SerializedName("deviceGuardVirtualizationBasedSecurityHardwareRequirementState")
+    @SerializedName(value = "deviceGuardVirtualizationBasedSecurityHardwareRequirementState", alternate = {"DeviceGuardVirtualizationBasedSecurityHardwareRequirementState"})
     @Expose
     public DeviceGuardVirtualizationBasedSecurityHardwareRequirementState deviceGuardVirtualizationBasedSecurityHardwareRequirementState;
 
@@ -95,7 +95,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Device Guard Virtualization Based Security State.
      * Virtualization-based security status. 
      */
-    @SerializedName("deviceGuardVirtualizationBasedSecurityState")
+    @SerializedName(value = "deviceGuardVirtualizationBasedSecurityState", alternate = {"DeviceGuardVirtualizationBasedSecurityState"})
     @Expose
     public DeviceGuardVirtualizationBasedSecurityState deviceGuardVirtualizationBasedSecurityState;
 
@@ -103,7 +103,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Free Storage Space.
      * Free storage space of the device.
      */
-    @SerializedName("freeStorageSpace")
+    @SerializedName(value = "freeStorageSpace", alternate = {"FreeStorageSpace"})
     @Expose
     public Long freeStorageSpace;
 
@@ -111,7 +111,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Imei.
      * IMEI
      */
-    @SerializedName("imei")
+    @SerializedName(value = "imei", alternate = {"Imei"})
     @Expose
     public String imei;
 
@@ -119,7 +119,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Is Encrypted.
      * Encryption status of the device
      */
-    @SerializedName("isEncrypted")
+    @SerializedName(value = "isEncrypted", alternate = {"IsEncrypted"})
     @Expose
     public Boolean isEncrypted;
 
@@ -127,7 +127,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Is Shared Device.
      * Shared iPad
      */
-    @SerializedName("isSharedDevice")
+    @SerializedName(value = "isSharedDevice", alternate = {"IsSharedDevice"})
     @Expose
     public Boolean isSharedDevice;
 
@@ -135,7 +135,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Is Supervised.
      * Supervised mode of the device
      */
-    @SerializedName("isSupervised")
+    @SerializedName(value = "isSupervised", alternate = {"IsSupervised"})
     @Expose
     public Boolean isSupervised;
 
@@ -143,7 +143,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Manufacturer.
      * Manufacturer of the device
      */
-    @SerializedName("manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
@@ -151,7 +151,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Meid.
      * MEID
      */
-    @SerializedName("meid")
+    @SerializedName(value = "meid", alternate = {"Meid"})
     @Expose
     public String meid;
 
@@ -159,7 +159,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Model.
      * Model of the device
      */
-    @SerializedName("model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -167,7 +167,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Operating System Edition.
      * String that specifies the OS edition.
      */
-    @SerializedName("operatingSystemEdition")
+    @SerializedName(value = "operatingSystemEdition", alternate = {"OperatingSystemEdition"})
     @Expose
     public String operatingSystemEdition;
 
@@ -175,7 +175,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Operating System Language.
      * Operating system language of the device
      */
-    @SerializedName("operatingSystemLanguage")
+    @SerializedName(value = "operatingSystemLanguage", alternate = {"OperatingSystemLanguage"})
     @Expose
     public String operatingSystemLanguage;
 
@@ -183,7 +183,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Operating System Product Type.
      * Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
      */
-    @SerializedName("operatingSystemProductType")
+    @SerializedName(value = "operatingSystemProductType", alternate = {"OperatingSystemProductType"})
     @Expose
     public Integer operatingSystemProductType;
 
@@ -191,7 +191,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Os Build Number.
      * Operating System Build Number on Android device
      */
-    @SerializedName("osBuildNumber")
+    @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
     public String osBuildNumber;
 
@@ -199,7 +199,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Phone Number.
      * Phone number of the device
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -207,7 +207,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Serial Number.
      * Serial number.
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public String serialNumber;
 
@@ -215,7 +215,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Shared Device Cached Users.
      * All users on the shared Apple device
      */
-    @SerializedName("sharedDeviceCachedUsers")
+    @SerializedName(value = "sharedDeviceCachedUsers", alternate = {"SharedDeviceCachedUsers"})
     @Expose
     public java.util.List<SharedAppleDeviceUser> sharedDeviceCachedUsers;
 
@@ -223,7 +223,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Subscriber Carrier.
      * Subscriber carrier of the device
      */
-    @SerializedName("subscriberCarrier")
+    @SerializedName(value = "subscriberCarrier", alternate = {"SubscriberCarrier"})
     @Expose
     public String subscriberCarrier;
 
@@ -231,7 +231,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Total Storage Space.
      * Total storage space of the device.
      */
-    @SerializedName("totalStorageSpace")
+    @SerializedName(value = "totalStorageSpace", alternate = {"TotalStorageSpace"})
     @Expose
     public Long totalStorageSpace;
 
@@ -239,7 +239,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Tpm Specification Version.
      * String that specifies the specification version.
      */
-    @SerializedName("tpmSpecificationVersion")
+    @SerializedName(value = "tpmSpecificationVersion", alternate = {"TpmSpecificationVersion"})
     @Expose
     public String tpmSpecificationVersion;
 
@@ -247,7 +247,7 @@ public class HardwareInformation implements IJsonBackedObject {
      * The Wifi Mac.
      * WiFi MAC address of the device
      */
-    @SerializedName("wifiMac")
+    @SerializedName(value = "wifiMac", alternate = {"WifiMac"})
     @Expose
     public String wifiMac;
 

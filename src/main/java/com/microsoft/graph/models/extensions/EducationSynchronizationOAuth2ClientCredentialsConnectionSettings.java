@@ -26,7 +26,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public String scope;
 
@@ -34,7 +34,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * The Token Url.
      * 
      */
-    @SerializedName("tokenUrl")
+    @SerializedName(value = "tokenUrl", alternate = {"TokenUrl"})
     @Expose
     public String tokenUrl;
 

@@ -28,7 +28,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the Role Assignment.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -36,7 +36,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The display or friendly name of the role Assignment.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Resource Scopes.
      * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
      */
-    @SerializedName("resourceScopes")
+    @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
     public java.util.List<String> resourceScopes;
 
@@ -52,7 +52,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Scope Members.
      * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
      */
-    @SerializedName("scopeMembers")
+    @SerializedName(value = "scopeMembers", alternate = {"ScopeMembers"})
     @Expose
     public java.util.List<String> scopeMembers;
 
@@ -60,7 +60,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Scope Type.
      * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty.
      */
-    @SerializedName("scopeType")
+    @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
     public RoleAssignmentScopeType scopeType;
 
@@ -68,7 +68,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Role Definition.
      * Role definition this assignment is part of.
      */
-    @SerializedName("roleDefinition")
+    @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
     public RoleDefinition roleDefinition;
 

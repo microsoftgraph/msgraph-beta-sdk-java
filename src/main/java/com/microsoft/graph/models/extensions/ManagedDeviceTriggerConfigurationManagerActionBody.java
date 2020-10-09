@@ -22,7 +22,7 @@ public class ManagedDeviceTriggerConfigurationManagerActionBody {
      * The configuration Manager Action.
      * 
      */
-    @SerializedName("configurationManagerAction")
+    @SerializedName(value = "configurationManagerAction", alternate = {"ConfigurationManagerAction"})
     @Expose
     public ConfigurationManagerAction configurationManagerAction;
 

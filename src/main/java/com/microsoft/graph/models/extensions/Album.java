@@ -35,7 +35,7 @@ public class Album implements IJsonBackedObject {
      * The Cover Image Item Id.
      * 
      */
-    @SerializedName("coverImageItemId")
+    @SerializedName(value = "coverImageItemId", alternate = {"CoverImageItemId"})
     @Expose
     public String coverImageItemId;
 

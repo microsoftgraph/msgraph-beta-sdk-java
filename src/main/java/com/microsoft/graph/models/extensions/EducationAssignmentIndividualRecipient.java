@@ -26,7 +26,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * The Recipients.
      * 
      */
-    @SerializedName("recipients")
+    @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
     public java.util.List<String> recipients;
 

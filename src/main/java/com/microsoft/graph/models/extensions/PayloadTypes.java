@@ -36,7 +36,7 @@ public class PayloadTypes implements IJsonBackedObject {
      * The Raw Content.
      * 
      */
-    @SerializedName("rawContent")
+    @SerializedName(value = "rawContent", alternate = {"RawContent"})
     @Expose
     public String rawContent;
 
@@ -44,7 +44,7 @@ public class PayloadTypes implements IJsonBackedObject {
      * The Visual Content.
      * 
      */
-    @SerializedName("visualContent")
+    @SerializedName(value = "visualContent", alternate = {"VisualContent"})
     @Expose
     public VisualProperties visualContent;
 

@@ -28,7 +28,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
      * The Error Device Count.
      * Error device count for specific user.
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -36,7 +36,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
      * The Success Device Count.
      * Success device count for specific user.
      */
-    @SerializedName("successDeviceCount")
+    @SerializedName(value = "successDeviceCount", alternate = {"SuccessDeviceCount"})
     @Expose
     public Integer successDeviceCount;
 
@@ -44,7 +44,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
      * The User Principal Name.
      * User principle name of specific user.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -52,7 +52,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
      * The Device Run States.
      * List of run states for this script across all devices of specific user.
      */
-    @SerializedName("deviceRunStates")
+    @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
     public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 

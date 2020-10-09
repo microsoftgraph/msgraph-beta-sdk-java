@@ -22,7 +22,7 @@ public class RoleScopeTagAssignBody {
      * The assignments.
      * 
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public java.util.List<RoleScopeTagAutoAssignment> assignments;
 

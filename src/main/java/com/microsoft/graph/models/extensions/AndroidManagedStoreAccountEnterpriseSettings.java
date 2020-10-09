@@ -30,7 +30,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Android Device Owner Fully Managed Enrollment Enabled.
      * Company codes for AndroidManagedStoreAccountEnterpriseSettings
      */
-    @SerializedName("androidDeviceOwnerFullyManagedEnrollmentEnabled")
+    @SerializedName(value = "androidDeviceOwnerFullyManagedEnrollmentEnabled", alternate = {"AndroidDeviceOwnerFullyManagedEnrollmentEnabled"})
     @Expose
     public Boolean androidDeviceOwnerFullyManagedEnrollmentEnabled;
 
@@ -38,7 +38,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Bind Status.
      * Bind status of the tenant with the Google EMM API
      */
-    @SerializedName("bindStatus")
+    @SerializedName(value = "bindStatus", alternate = {"BindStatus"})
     @Expose
     public AndroidManagedStoreAccountBindStatus bindStatus;
 
@@ -46,7 +46,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Company Codes.
      * Company codes for AndroidManagedStoreAccountEnterpriseSettings
      */
-    @SerializedName("companyCodes")
+    @SerializedName(value = "companyCodes", alternate = {"CompanyCodes"})
     @Expose
     public java.util.List<AndroidEnrollmentCompanyCode> companyCodes;
 
@@ -54,7 +54,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Device Owner Management Enabled.
      * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
      */
-    @SerializedName("deviceOwnerManagementEnabled")
+    @SerializedName(value = "deviceOwnerManagementEnabled", alternate = {"DeviceOwnerManagementEnabled"})
     @Expose
     public Boolean deviceOwnerManagementEnabled;
 
@@ -62,7 +62,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Enrollment Target.
      * Indicates which users can enroll devices in Android Enterprise device management
      */
-    @SerializedName("enrollmentTarget")
+    @SerializedName(value = "enrollmentTarget", alternate = {"EnrollmentTarget"})
     @Expose
     public AndroidManagedStoreAccountEnrollmentTarget enrollmentTarget;
 
@@ -70,7 +70,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Last App Sync Date Time.
      * Last completion time for app sync
      */
-    @SerializedName("lastAppSyncDateTime")
+    @SerializedName(value = "lastAppSyncDateTime", alternate = {"LastAppSyncDateTime"})
     @Expose
     public java.util.Calendar lastAppSyncDateTime;
 
@@ -78,7 +78,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Last App Sync Status.
      * Last application sync result
      */
-    @SerializedName("lastAppSyncStatus")
+    @SerializedName(value = "lastAppSyncStatus", alternate = {"LastAppSyncStatus"})
     @Expose
     public AndroidManagedStoreAccountAppSyncStatus lastAppSyncStatus;
 
@@ -86,7 +86,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Last Modified Date Time.
      * Last modification time for Android enterprise settings
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -94,7 +94,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Owner Organization Name.
      * Organization name used when onboarding Android Enterprise
      */
-    @SerializedName("ownerOrganizationName")
+    @SerializedName(value = "ownerOrganizationName", alternate = {"OwnerOrganizationName"})
     @Expose
     public String ownerOrganizationName;
 
@@ -102,7 +102,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Owner User Principal Name.
      * Owner UPN that created the enterprise
      */
-    @SerializedName("ownerUserPrincipalName")
+    @SerializedName(value = "ownerUserPrincipalName", alternate = {"OwnerUserPrincipalName"})
     @Expose
     public String ownerUserPrincipalName;
 
@@ -110,7 +110,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The Target Group Ids.
      * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
      */
-    @SerializedName("targetGroupIds")
+    @SerializedName(value = "targetGroupIds", alternate = {"TargetGroupIds"})
     @Expose
     public java.util.List<String> targetGroupIds;
 

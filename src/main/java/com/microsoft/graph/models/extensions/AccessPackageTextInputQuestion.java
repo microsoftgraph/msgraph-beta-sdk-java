@@ -26,7 +26,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      * The Is Single Line Question.
      * 
      */
-    @SerializedName("isSingleLineQuestion")
+    @SerializedName(value = "isSingleLineQuestion", alternate = {"IsSingleLineQuestion"})
     @Expose
     public Boolean isSingleLineQuestion;
 

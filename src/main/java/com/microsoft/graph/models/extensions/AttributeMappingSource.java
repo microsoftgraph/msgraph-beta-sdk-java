@@ -37,7 +37,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
      * The Expression.
      * 
      */
-    @SerializedName("expression")
+    @SerializedName(value = "expression", alternate = {"Expression"})
     @Expose
     public String expression;
 
@@ -45,7 +45,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -53,7 +53,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
      * The Parameters.
      * 
      */
-    @SerializedName("parameters")
+    @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
     public java.util.List<StringKeyAttributeMappingSourceValuePair> parameters;
 
@@ -61,7 +61,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public AttributeMappingSourceType type;
 

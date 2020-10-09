@@ -35,7 +35,7 @@ public class EmployeeOrgData implements IJsonBackedObject {
      * The Cost Center.
      * 
      */
-    @SerializedName("costCenter")
+    @SerializedName(value = "costCenter", alternate = {"CostCenter"})
     @Expose
     public String costCenter;
 
@@ -43,7 +43,7 @@ public class EmployeeOrgData implements IJsonBackedObject {
      * The Division.
      * 
      */
-    @SerializedName("division")
+    @SerializedName(value = "division", alternate = {"Division"})
     @Expose
     public String division;
 

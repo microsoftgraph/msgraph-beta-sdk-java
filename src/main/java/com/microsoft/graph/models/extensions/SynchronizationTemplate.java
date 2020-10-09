@@ -28,7 +28,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Application Id.
      * 
      */
-    @SerializedName("applicationId")
+    @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
     public java.util.UUID applicationId;
 
@@ -36,7 +36,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Default.
      * 
      */
-    @SerializedName("default")
+    @SerializedName(value = "default", alternate = {"Default"})
     @Expose
     public Boolean msgraphDefault;
 
@@ -44,7 +44,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -52,7 +52,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Discoverable.
      * 
      */
-    @SerializedName("discoverable")
+    @SerializedName(value = "discoverable", alternate = {"Discoverable"})
     @Expose
     public Boolean discoverable;
 
@@ -60,7 +60,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Factory Tag.
      * 
      */
-    @SerializedName("factoryTag")
+    @SerializedName(value = "factoryTag", alternate = {"FactoryTag"})
     @Expose
     public String factoryTag;
 
@@ -68,7 +68,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public java.util.List<MetadataEntry> metadata;
 
@@ -76,7 +76,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
      * The Schema.
      * 
      */
-    @SerializedName("schema")
+    @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
     public SynchronizationSchema schema;
 

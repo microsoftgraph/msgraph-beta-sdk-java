@@ -28,7 +28,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Applicable Architectures.
      * The Windows architecture(s) for which this app can run on.
      */
-    @SerializedName("applicableArchitectures")
+    @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
     public EnumSet<WindowsArchitecture> applicableArchitectures;
 
@@ -36,7 +36,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Identity Name.
      * The Identity Name.
      */
-    @SerializedName("identityName")
+    @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
     public String identityName;
 
@@ -44,7 +44,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Identity Publisher Hash.
      * The Identity Publisher Hash.
      */
-    @SerializedName("identityPublisherHash")
+    @SerializedName(value = "identityPublisherHash", alternate = {"IdentityPublisherHash"})
     @Expose
     public String identityPublisherHash;
 
@@ -52,7 +52,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Identity Resource Identifier.
      * The Identity Resource Identifier.
      */
-    @SerializedName("identityResourceIdentifier")
+    @SerializedName(value = "identityResourceIdentifier", alternate = {"IdentityResourceIdentifier"})
     @Expose
     public String identityResourceIdentifier;
 
@@ -60,7 +60,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Identity Version.
      * The identity version.
      */
-    @SerializedName("identityVersion")
+    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
     public String identityVersion;
 
@@ -68,7 +68,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -76,7 +76,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Phone Product Identifier.
      * The Phone Product Identifier.
      */
-    @SerializedName("phoneProductIdentifier")
+    @SerializedName(value = "phoneProductIdentifier", alternate = {"PhoneProductIdentifier"})
     @Expose
     public String phoneProductIdentifier;
 
@@ -84,7 +84,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements IJsonBackedObjec
      * The Phone Publisher Id.
      * The Phone Publisher Id.
      */
-    @SerializedName("phonePublisherId")
+    @SerializedName(value = "phonePublisherId", alternate = {"PhonePublisherId"})
     @Expose
     public String phonePublisherId;
 

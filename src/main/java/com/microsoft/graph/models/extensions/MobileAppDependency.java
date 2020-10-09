@@ -27,7 +27,7 @@ public class MobileAppDependency extends MobileAppRelationship implements IJsonB
      * The Dependency Type.
      * The type of dependency relationship between the parent and child apps.
      */
-    @SerializedName("dependencyType")
+    @SerializedName(value = "dependencyType", alternate = {"DependencyType"})
     @Expose
     public MobileAppDependencyType dependencyType;
 
@@ -35,7 +35,7 @@ public class MobileAppDependency extends MobileAppRelationship implements IJsonB
      * The Dependent App Count.
      * The total number of dependencies the child app has.
      */
-    @SerializedName("dependentAppCount")
+    @SerializedName(value = "dependentAppCount", alternate = {"DependentAppCount"})
     @Expose
     public Integer dependentAppCount;
 

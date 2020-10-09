@@ -36,7 +36,7 @@ public class PublicErrorResponse implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public PublicError error;
 

@@ -35,7 +35,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Accepting Jobs.
      * 
      */
-    @SerializedName("acceptingJobs")
+    @SerializedName(value = "acceptingJobs", alternate = {"AcceptingJobs"})
     @Expose
     public Boolean acceptingJobs;
 
@@ -43,7 +43,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Is Shared.
      * 
      */
-    @SerializedName("isShared")
+    @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
     public Boolean isShared;
 
@@ -51,7 +51,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Registered Date Time.
      * 
      */
-    @SerializedName("registeredDateTime")
+    @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose
     public java.util.Calendar registeredDateTime;
 
@@ -59,7 +59,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Allowed Groups.
      * 
      */
-    @SerializedName("allowedGroups")
+    @SerializedName(value = "allowedGroups", alternate = {"AllowedGroups"})
     @Expose
     public PrintIdentityCollectionPage allowedGroups;
 
@@ -67,7 +67,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Allowed Users.
      * 
      */
-    @SerializedName("allowedUsers")
+    @SerializedName(value = "allowedUsers", alternate = {"AllowedUsers"})
     @Expose
     public PrintUserIdentityCollectionPage allowedUsers;
 
@@ -81,7 +81,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Share.
      * 
      */
-    @SerializedName("share")
+    @SerializedName(value = "share", alternate = {"Share"})
     @Expose
     public PrinterShare share;
 
@@ -89,7 +89,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Task Triggers.
      * 
      */
-    @SerializedName("taskTriggers")
+    @SerializedName(value = "taskTriggers", alternate = {"TaskTriggers"})
     @Expose
     public PrintTaskTriggerCollectionPage taskTriggers;
 

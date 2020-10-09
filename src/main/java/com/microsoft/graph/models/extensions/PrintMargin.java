@@ -35,7 +35,7 @@ public class PrintMargin implements IJsonBackedObject {
      * The Bottom.
      * 
      */
-    @SerializedName("bottom")
+    @SerializedName(value = "bottom", alternate = {"Bottom"})
     @Expose
     public Integer bottom;
 
@@ -43,7 +43,7 @@ public class PrintMargin implements IJsonBackedObject {
      * The Left.
      * 
      */
-    @SerializedName("left")
+    @SerializedName(value = "left", alternate = {"Left"})
     @Expose
     public Integer left;
 
@@ -51,7 +51,7 @@ public class PrintMargin implements IJsonBackedObject {
      * The Right.
      * 
      */
-    @SerializedName("right")
+    @SerializedName(value = "right", alternate = {"Right"})
     @Expose
     public Integer right;
 
@@ -59,7 +59,7 @@ public class PrintMargin implements IJsonBackedObject {
      * The Top.
      * 
      */
-    @SerializedName("top")
+    @SerializedName(value = "top", alternate = {"Top"})
     @Expose
     public Integer top;
 

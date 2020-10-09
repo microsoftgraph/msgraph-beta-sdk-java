@@ -35,7 +35,7 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
      * The File Name.
      * 
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -51,7 +51,7 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

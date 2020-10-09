@@ -27,7 +27,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * The Bandwidth Background Percentage Hours.
      * Background download percentage hours.
      */
-    @SerializedName("bandwidthBackgroundPercentageHours")
+    @SerializedName(value = "bandwidthBackgroundPercentageHours", alternate = {"BandwidthBackgroundPercentageHours"})
     @Expose
     public DeliveryOptimizationBandwidthBusinessHoursLimit bandwidthBackgroundPercentageHours;
 
@@ -35,7 +35,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * The Bandwidth Foreground Percentage Hours.
      * Foreground download percentage hours.
      */
-    @SerializedName("bandwidthForegroundPercentageHours")
+    @SerializedName(value = "bandwidthForegroundPercentageHours", alternate = {"BandwidthForegroundPercentageHours"})
     @Expose
     public DeliveryOptimizationBandwidthBusinessHoursLimit bandwidthForegroundPercentageHours;
 

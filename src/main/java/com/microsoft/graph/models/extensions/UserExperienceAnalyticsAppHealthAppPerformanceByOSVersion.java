@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The Active Device Count.
      * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("activeDeviceCount")
+    @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
     public Integer activeDeviceCount;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The App Crash Count.
      * The number of crashes for the app. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appCrashCount")
+    @SerializedName(value = "appCrashCount", alternate = {"AppCrashCount"})
     @Expose
     public Integer appCrashCount;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The App Display Name.
      * The friendly name of the application.
      */
-    @SerializedName("appDisplayName")
+    @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
     public String appDisplayName;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The App Name.
      * The name of the application.
      */
-    @SerializedName("appName")
+    @SerializedName(value = "appName", alternate = {"AppName"})
     @Expose
     public String appName;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The App Publisher.
      * The publisher of the application.
      */
-    @SerializedName("appPublisher")
+    @SerializedName(value = "appPublisher", alternate = {"AppPublisher"})
     @Expose
     public String appPublisher;
 
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The App Usage Duration.
      * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appUsageDuration")
+    @SerializedName(value = "appUsageDuration", alternate = {"AppUsageDuration"})
     @Expose
     public Integer appUsageDuration;
 
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The Mean Time To Failure In Minutes.
      * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("meanTimeToFailureInMinutes")
+    @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
     public Integer meanTimeToFailureInMinutes;
 
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The Os Build Number.
      * The os build number of the application.
      */
-    @SerializedName("osBuildNumber")
+    @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
     public String osBuildNumber;
 
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * The Os Version.
      * The os version of the application.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 

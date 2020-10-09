@@ -29,7 +29,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Activity Group Names.
      * 
      */
-    @SerializedName("activityGroupNames")
+    @SerializedName(value = "activityGroupNames", alternate = {"ActivityGroupNames"})
     @Expose
     public java.util.List<String> activityGroupNames;
 
@@ -37,7 +37,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Subscription Id.
      * 
      */
-    @SerializedName("azureSubscriptionId")
+    @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
     public String azureSubscriptionId;
 
@@ -45,7 +45,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -53,7 +53,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Count Hits.
      * 
      */
-    @SerializedName("countHits")
+    @SerializedName(value = "countHits", alternate = {"CountHits"})
     @Expose
     public Integer countHits;
 
@@ -61,7 +61,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Count In Org.
      * 
      */
-    @SerializedName("countInOrg")
+    @SerializedName(value = "countInOrg", alternate = {"CountInOrg"})
     @Expose
     public Integer countInOrg;
 
@@ -69,7 +69,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Domain Categories.
      * 
      */
-    @SerializedName("domainCategories")
+    @SerializedName(value = "domainCategories", alternate = {"DomainCategories"})
     @Expose
     public java.util.List<ReputationCategory> domainCategories;
 
@@ -77,7 +77,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Domain Registered Date Time.
      * 
      */
-    @SerializedName("domainRegisteredDateTime")
+    @SerializedName(value = "domainRegisteredDateTime", alternate = {"DomainRegisteredDateTime"})
     @Expose
     public java.util.Calendar domainRegisteredDateTime;
 
@@ -85,7 +85,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The First Seen Date Time.
      * 
      */
-    @SerializedName("firstSeenDateTime")
+    @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
     public java.util.Calendar firstSeenDateTime;
 
@@ -93,7 +93,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Last Seen Date Time.
      * 
      */
-    @SerializedName("lastSeenDateTime")
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
     public java.util.Calendar lastSeenDateTime;
 
@@ -101,7 +101,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -109,7 +109,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Registrant.
      * 
      */
-    @SerializedName("registrant")
+    @SerializedName(value = "registrant", alternate = {"Registrant"})
     @Expose
     public DomainRegistrant registrant;
 
@@ -117,7 +117,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -125,7 +125,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -133,7 +133,7 @@ public class DomainSecurityProfile extends Entity implements IJsonBackedObject {
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

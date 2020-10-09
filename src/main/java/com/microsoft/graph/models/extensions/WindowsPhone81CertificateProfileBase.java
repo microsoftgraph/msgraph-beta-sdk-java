@@ -31,7 +31,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Certificate Validity Period Scale.
      * Scale for the Certificate Validity Period.
      */
-    @SerializedName("certificateValidityPeriodScale")
+    @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
     public CertificateValidityPeriodScale certificateValidityPeriodScale;
 
@@ -39,7 +39,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Certificate Validity Period Value.
      * Value for the Certificate Validtiy Period.
      */
-    @SerializedName("certificateValidityPeriodValue")
+    @SerializedName(value = "certificateValidityPeriodValue", alternate = {"CertificateValidityPeriodValue"})
     @Expose
     public Integer certificateValidityPeriodValue;
 
@@ -47,7 +47,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Extended Key Usages.
      * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("extendedKeyUsages")
+    @SerializedName(value = "extendedKeyUsages", alternate = {"ExtendedKeyUsages"})
     @Expose
     public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
 
@@ -55,7 +55,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Key Storage Provider.
      * Key Storage Provider (KSP).
      */
-    @SerializedName("keyStorageProvider")
+    @SerializedName(value = "keyStorageProvider", alternate = {"KeyStorageProvider"})
     @Expose
     public KeyStorageProviderOption keyStorageProvider;
 
@@ -63,7 +63,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Renewal Threshold Percentage.
      * Certificate renewal threshold percentage.
      */
-    @SerializedName("renewalThresholdPercentage")
+    @SerializedName(value = "renewalThresholdPercentage", alternate = {"RenewalThresholdPercentage"})
     @Expose
     public Integer renewalThresholdPercentage;
 
@@ -71,7 +71,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Subject Alternative Name Type.
      * Certificate Subject Alternative Name Type.
      */
-    @SerializedName("subjectAlternativeNameType")
+    @SerializedName(value = "subjectAlternativeNameType", alternate = {"SubjectAlternativeNameType"})
     @Expose
     public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
 
@@ -79,7 +79,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The Subject Name Format.
      * Certificate Subject Name Format.
      */
-    @SerializedName("subjectNameFormat")
+    @SerializedName(value = "subjectNameFormat", alternate = {"SubjectNameFormat"})
     @Expose
     public SubjectNameFormat subjectNameFormat;
 

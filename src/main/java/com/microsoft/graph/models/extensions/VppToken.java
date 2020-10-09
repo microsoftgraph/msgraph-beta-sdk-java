@@ -30,7 +30,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Apple Id.
      * The apple Id associated with the given Apple Volume Purchase Program Token.
      */
-    @SerializedName("appleId")
+    @SerializedName(value = "appleId", alternate = {"AppleId"})
     @Expose
     public String appleId;
 
@@ -38,7 +38,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Automatically Update Apps.
      * Whether or not apps for the VPP token will be automatically updated.
      */
-    @SerializedName("automaticallyUpdateApps")
+    @SerializedName(value = "automaticallyUpdateApps", alternate = {"AutomaticallyUpdateApps"})
     @Expose
     public Boolean automaticallyUpdateApps;
 
@@ -46,7 +46,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Claim Token Management From External Mdm.
      * Admin consent to allow claiming token management from external MDM.
      */
-    @SerializedName("claimTokenManagementFromExternalMdm")
+    @SerializedName(value = "claimTokenManagementFromExternalMdm", alternate = {"ClaimTokenManagementFromExternalMdm"})
     @Expose
     public Boolean claimTokenManagementFromExternalMdm;
 
@@ -54,7 +54,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Country Or Region.
      * Whether or not apps for the VPP token will be automatically updated.
      */
-    @SerializedName("countryOrRegion")
+    @SerializedName(value = "countryOrRegion", alternate = {"CountryOrRegion"})
     @Expose
     public String countryOrRegion;
 
@@ -62,7 +62,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Data Sharing Consent Granted.
      * Consent granted for data sharing with the Apple Volume Purchase Program.
      */
-    @SerializedName("dataSharingConsentGranted")
+    @SerializedName(value = "dataSharingConsentGranted", alternate = {"DataSharingConsentGranted"})
     @Expose
     public Boolean dataSharingConsentGranted;
 
@@ -70,7 +70,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Display Name.
      * An admin specified token friendly name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -78,7 +78,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * The expiration date time of the Apple Volume Purchase Program Token.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -86,7 +86,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Last modification date time associated with the Apple Volume Purchase Program Token.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -94,7 +94,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Last Sync Date Time.
      * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -102,7 +102,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Last Sync Status.
      * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
      */
-    @SerializedName("lastSyncStatus")
+    @SerializedName(value = "lastSyncStatus", alternate = {"LastSyncStatus"})
     @Expose
     public VppTokenSyncStatus lastSyncStatus;
 
@@ -110,7 +110,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Location Name.
      * Token location returned from Apple VPP.
      */
-    @SerializedName("locationName")
+    @SerializedName(value = "locationName", alternate = {"LocationName"})
     @Expose
     public String locationName;
 
@@ -118,7 +118,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Organization Name.
      * The organization associated with the Apple Volume Purchase Program Token
      */
-    @SerializedName("organizationName")
+    @SerializedName(value = "organizationName", alternate = {"OrganizationName"})
     @Expose
     public String organizationName;
 
@@ -126,7 +126,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * Role Scope Tags IDs assigned to this entity.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -134,7 +134,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The State.
      * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public VppTokenState state;
 
@@ -142,7 +142,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Token.
      * The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
      */
-    @SerializedName("token")
+    @SerializedName(value = "token", alternate = {"Token"})
     @Expose
     public String token;
 
@@ -150,7 +150,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Token Action Results.
      * The collection of statuses of the actions performed on the Apple Volume Purchase Program Token.
      */
-    @SerializedName("tokenActionResults")
+    @SerializedName(value = "tokenActionResults", alternate = {"TokenActionResults"})
     @Expose
     public java.util.List<VppTokenActionResult> tokenActionResults;
 
@@ -158,7 +158,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
      * The Vpp Token Account Type.
      * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
      */
-    @SerializedName("vppTokenAccountType")
+    @SerializedName(value = "vppTokenAccountType", alternate = {"VppTokenAccountType"})
     @Expose
     public VppTokenAccountType vppTokenAccountType;
 

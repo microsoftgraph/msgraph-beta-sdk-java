@@ -29,7 +29,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Account Manager Policy.
      * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
      */
-    @SerializedName("accountManagerPolicy")
+    @SerializedName(value = "accountManagerPolicy", alternate = {"AccountManagerPolicy"})
     @Expose
     public SharedPCAccountManagerPolicy accountManagerPolicy;
 
@@ -37,7 +37,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Allowed Accounts.
      * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
      */
-    @SerializedName("allowedAccounts")
+    @SerializedName(value = "allowedAccounts", alternate = {"AllowedAccounts"})
     @Expose
     public EnumSet<SharedPCAllowedAccountType> allowedAccounts;
 
@@ -45,7 +45,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Allow Local Storage.
      * Specifies whether local storage is allowed on a shared PC.
      */
-    @SerializedName("allowLocalStorage")
+    @SerializedName(value = "allowLocalStorage", alternate = {"AllowLocalStorage"})
     @Expose
     public Boolean allowLocalStorage;
 
@@ -53,7 +53,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Disable Account Manager.
      * Disables the account manager for shared PC mode.
      */
-    @SerializedName("disableAccountManager")
+    @SerializedName(value = "disableAccountManager", alternate = {"DisableAccountManager"})
     @Expose
     public Boolean disableAccountManager;
 
@@ -61,7 +61,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Disable Edu Policies.
      * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
      */
-    @SerializedName("disableEduPolicies")
+    @SerializedName(value = "disableEduPolicies", alternate = {"DisableEduPolicies"})
     @Expose
     public Boolean disableEduPolicies;
 
@@ -69,7 +69,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Disable Power Policies.
      * Specifies whether the default shared PC power policies should be disabled.
      */
-    @SerializedName("disablePowerPolicies")
+    @SerializedName(value = "disablePowerPolicies", alternate = {"DisablePowerPolicies"})
     @Expose
     public Boolean disablePowerPolicies;
 
@@ -77,7 +77,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Disable Sign In On Resume.
      * Disables the requirement to sign in whenever the device wakes up from sleep mode.
      */
-    @SerializedName("disableSignInOnResume")
+    @SerializedName(value = "disableSignInOnResume", alternate = {"DisableSignInOnResume"})
     @Expose
     public Boolean disableSignInOnResume;
 
@@ -85,7 +85,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Enabled.
      * Enables shared PC mode and applies the shared pc policies.
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -93,7 +93,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Fast First Sign In.
      * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
      */
-    @SerializedName("fastFirstSignIn")
+    @SerializedName(value = "fastFirstSignIn", alternate = {"FastFirstSignIn"})
     @Expose
     public Enablement fastFirstSignIn;
 
@@ -101,7 +101,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Idle Time Before Sleep In Seconds.
      * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
      */
-    @SerializedName("idleTimeBeforeSleepInSeconds")
+    @SerializedName(value = "idleTimeBeforeSleepInSeconds", alternate = {"IdleTimeBeforeSleepInSeconds"})
     @Expose
     public Integer idleTimeBeforeSleepInSeconds;
 
@@ -109,7 +109,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Kiosk App Display Name.
      * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
      */
-    @SerializedName("kioskAppDisplayName")
+    @SerializedName(value = "kioskAppDisplayName", alternate = {"KioskAppDisplayName"})
     @Expose
     public String kioskAppDisplayName;
 
@@ -117,7 +117,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Kiosk App User Model Id.
      * Specifies the application user model ID of the app to use with assigned access.
      */
-    @SerializedName("kioskAppUserModelId")
+    @SerializedName(value = "kioskAppUserModelId", alternate = {"KioskAppUserModelId"})
     @Expose
     public String kioskAppUserModelId;
 
@@ -125,7 +125,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Local Storage.
      * Specifies whether local storage is allowed on a shared PC.
      */
-    @SerializedName("localStorage")
+    @SerializedName(value = "localStorage", alternate = {"LocalStorage"})
     @Expose
     public Enablement localStorage;
 
@@ -133,7 +133,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Maintenance Start Time.
      * Specifies the daily start time of maintenance hour.
      */
-    @SerializedName("maintenanceStartTime")
+    @SerializedName(value = "maintenanceStartTime", alternate = {"MaintenanceStartTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay maintenanceStartTime;
 
@@ -141,7 +141,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Set Account Manager.
      * Disables the account manager for shared PC mode.
      */
-    @SerializedName("setAccountManager")
+    @SerializedName(value = "setAccountManager", alternate = {"SetAccountManager"})
     @Expose
     public Enablement setAccountManager;
 
@@ -149,7 +149,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Set Edu Policies.
      * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
      */
-    @SerializedName("setEduPolicies")
+    @SerializedName(value = "setEduPolicies", alternate = {"SetEduPolicies"})
     @Expose
     public Enablement setEduPolicies;
 
@@ -157,7 +157,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Set Power Policies.
      * Specifies whether the default shared PC power policies should be enabled/disabled.
      */
-    @SerializedName("setPowerPolicies")
+    @SerializedName(value = "setPowerPolicies", alternate = {"SetPowerPolicies"})
     @Expose
     public Enablement setPowerPolicies;
 
@@ -165,7 +165,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      * The Sign In On Resume.
      * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
      */
-    @SerializedName("signInOnResume")
+    @SerializedName(value = "signInOnResume", alternate = {"SignInOnResume"})
     @Expose
     public Enablement signInOnResume;
 

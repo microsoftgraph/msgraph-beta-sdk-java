@@ -35,7 +35,7 @@ public class VppLicensingType implements IJsonBackedObject {
      * The Support Device Licensing.
      * Whether the program supports the device licensing type.
      */
-    @SerializedName("supportDeviceLicensing")
+    @SerializedName(value = "supportDeviceLicensing", alternate = {"SupportDeviceLicensing"})
     @Expose
     public Boolean supportDeviceLicensing;
 
@@ -43,7 +43,7 @@ public class VppLicensingType implements IJsonBackedObject {
      * The Supports Device Licensing.
      * Whether the program supports the device licensing type.
      */
-    @SerializedName("supportsDeviceLicensing")
+    @SerializedName(value = "supportsDeviceLicensing", alternate = {"SupportsDeviceLicensing"})
     @Expose
     public Boolean supportsDeviceLicensing;
 
@@ -51,7 +51,7 @@ public class VppLicensingType implements IJsonBackedObject {
      * The Supports User Licensing.
      * Whether the program supports the user licensing type.
      */
-    @SerializedName("supportsUserLicensing")
+    @SerializedName(value = "supportsUserLicensing", alternate = {"SupportsUserLicensing"})
     @Expose
     public Boolean supportsUserLicensing;
 
@@ -59,7 +59,7 @@ public class VppLicensingType implements IJsonBackedObject {
      * The Support User Licensing.
      * Whether the program supports the user licensing type.
      */
-    @SerializedName("supportUserLicensing")
+    @SerializedName(value = "supportUserLicensing", alternate = {"SupportUserLicensing"})
     @Expose
     public Boolean supportUserLicensing;
 

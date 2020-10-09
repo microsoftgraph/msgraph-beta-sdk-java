@@ -26,7 +26,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * The Date.
      * The date the script is scheduled to run. This collection can contain a maximum of 20 elements.
      */
-    @SerializedName("date")
+    @SerializedName(value = "date", alternate = {"Date"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly date;
 

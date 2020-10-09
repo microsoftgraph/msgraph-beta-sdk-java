@@ -36,7 +36,7 @@ public class HybridAgentUpdaterConfiguration implements IJsonBackedObject {
      * The Allow Update Configuration Override.
      * 
      */
-    @SerializedName("allowUpdateConfigurationOverride")
+    @SerializedName(value = "allowUpdateConfigurationOverride", alternate = {"AllowUpdateConfigurationOverride"})
     @Expose
     public Boolean allowUpdateConfigurationOverride;
 
@@ -44,7 +44,7 @@ public class HybridAgentUpdaterConfiguration implements IJsonBackedObject {
      * The Defer Update Date Time.
      * 
      */
-    @SerializedName("deferUpdateDateTime")
+    @SerializedName(value = "deferUpdateDateTime", alternate = {"DeferUpdateDateTime"})
     @Expose
     public java.util.Calendar deferUpdateDateTime;
 
@@ -52,7 +52,7 @@ public class HybridAgentUpdaterConfiguration implements IJsonBackedObject {
      * The Update Window.
      * 
      */
-    @SerializedName("updateWindow")
+    @SerializedName(value = "updateWindow", alternate = {"UpdateWindow"})
     @Expose
     public UpdateWindow updateWindow;
 

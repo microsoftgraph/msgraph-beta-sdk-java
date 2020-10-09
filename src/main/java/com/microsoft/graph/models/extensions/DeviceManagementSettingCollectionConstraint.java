@@ -26,7 +26,7 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
      * The Maximum Length.
      * The maximum number of elements in the collection
      */
-    @SerializedName("maximumLength")
+    @SerializedName(value = "maximumLength", alternate = {"MaximumLength"})
     @Expose
     public Integer maximumLength;
 
@@ -34,7 +34,7 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
      * The Minimum Length.
      * The minimum number of elements in the collection
      */
-    @SerializedName("minimumLength")
+    @SerializedName(value = "minimumLength", alternate = {"MinimumLength"})
     @Expose
     public Integer minimumLength;
 

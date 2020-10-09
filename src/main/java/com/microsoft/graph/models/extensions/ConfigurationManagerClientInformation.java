@@ -35,7 +35,7 @@ public class ConfigurationManagerClientInformation implements IJsonBackedObject 
      * The Client Identifier.
      * Configuration Manager Client Id from SCCM
      */
-    @SerializedName("clientIdentifier")
+    @SerializedName(value = "clientIdentifier", alternate = {"ClientIdentifier"})
     @Expose
     public String clientIdentifier;
 
@@ -43,7 +43,7 @@ public class ConfigurationManagerClientInformation implements IJsonBackedObject 
      * The Is Blocked.
      * Configuration Manager Client blocked status from SCCM
      */
-    @SerializedName("isBlocked")
+    @SerializedName(value = "isBlocked", alternate = {"IsBlocked"})
     @Expose
     public Boolean isBlocked;
 

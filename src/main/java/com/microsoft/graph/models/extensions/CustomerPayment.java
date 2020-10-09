@@ -27,7 +27,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Amount.
      * 
      */
-    @SerializedName("amount")
+    @SerializedName(value = "amount", alternate = {"Amount"})
     @Expose
     public java.math.BigDecimal amount;
 
@@ -35,7 +35,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Applies To Invoice Id.
      * 
      */
-    @SerializedName("appliesToInvoiceId")
+    @SerializedName(value = "appliesToInvoiceId", alternate = {"AppliesToInvoiceId"})
     @Expose
     public java.util.UUID appliesToInvoiceId;
 
@@ -43,7 +43,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Applies To Invoice Number.
      * 
      */
-    @SerializedName("appliesToInvoiceNumber")
+    @SerializedName(value = "appliesToInvoiceNumber", alternate = {"AppliesToInvoiceNumber"})
     @Expose
     public String appliesToInvoiceNumber;
 
@@ -51,7 +51,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 
@@ -59,7 +59,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Contact Id.
      * 
      */
-    @SerializedName("contactId")
+    @SerializedName(value = "contactId", alternate = {"ContactId"})
     @Expose
     public String contactId;
 
@@ -67,7 +67,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Customer Id.
      * 
      */
-    @SerializedName("customerId")
+    @SerializedName(value = "customerId", alternate = {"CustomerId"})
     @Expose
     public java.util.UUID customerId;
 
@@ -75,7 +75,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Customer Number.
      * 
      */
-    @SerializedName("customerNumber")
+    @SerializedName(value = "customerNumber", alternate = {"CustomerNumber"})
     @Expose
     public String customerNumber;
 
@@ -83,7 +83,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -91,7 +91,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Document Number.
      * 
      */
-    @SerializedName("documentNumber")
+    @SerializedName(value = "documentNumber", alternate = {"DocumentNumber"})
     @Expose
     public String documentNumber;
 
@@ -99,7 +99,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The External Document Number.
      * 
      */
-    @SerializedName("externalDocumentNumber")
+    @SerializedName(value = "externalDocumentNumber", alternate = {"ExternalDocumentNumber"})
     @Expose
     public String externalDocumentNumber;
 
@@ -107,7 +107,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Journal Display Name.
      * 
      */
-    @SerializedName("journalDisplayName")
+    @SerializedName(value = "journalDisplayName", alternate = {"JournalDisplayName"})
     @Expose
     public String journalDisplayName;
 
@@ -115,7 +115,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -123,7 +123,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Line Number.
      * 
      */
-    @SerializedName("lineNumber")
+    @SerializedName(value = "lineNumber", alternate = {"LineNumber"})
     @Expose
     public Integer lineNumber;
 
@@ -131,7 +131,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Posting Date.
      * 
      */
-    @SerializedName("postingDate")
+    @SerializedName(value = "postingDate", alternate = {"PostingDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly postingDate;
 
@@ -139,7 +139,7 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
      * The Customer.
      * 
      */
-    @SerializedName("customer")
+    @SerializedName(value = "customer", alternate = {"Customer"})
     @Expose
     public Customer customer;
 

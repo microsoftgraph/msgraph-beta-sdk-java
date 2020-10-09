@@ -22,7 +22,7 @@ public class PrivilegedRoleSelfActivateBody {
      * The reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 
@@ -30,7 +30,7 @@ public class PrivilegedRoleSelfActivateBody {
      * The duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public String duration;
 
@@ -38,7 +38,7 @@ public class PrivilegedRoleSelfActivateBody {
      * The ticket Number.
      * 
      */
-    @SerializedName("ticketNumber")
+    @SerializedName(value = "ticketNumber", alternate = {"TicketNumber"})
     @Expose
     public String ticketNumber;
 
@@ -46,7 +46,7 @@ public class PrivilegedRoleSelfActivateBody {
      * The ticket System.
      * 
      */
-    @SerializedName("ticketSystem")
+    @SerializedName(value = "ticketSystem", alternate = {"TicketSystem"})
     @Expose
     public String ticketSystem;
 

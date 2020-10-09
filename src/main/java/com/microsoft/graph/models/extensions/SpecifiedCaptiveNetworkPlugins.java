@@ -35,7 +35,7 @@ public class SpecifiedCaptiveNetworkPlugins implements IJsonBackedObject {
      * The Allowed Bundle Identifiers.
      * Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
      */
-    @SerializedName("allowedBundleIdentifiers")
+    @SerializedName(value = "allowedBundleIdentifiers", alternate = {"AllowedBundleIdentifiers"})
     @Expose
     public java.util.List<String> allowedBundleIdentifiers;
 

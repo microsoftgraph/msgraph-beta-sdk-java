@@ -34,7 +34,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Access Package Id.
      * 
      */
-    @SerializedName("accessPackageId")
+    @SerializedName(value = "accessPackageId", alternate = {"AccessPackageId"})
     @Expose
     public String accessPackageId;
 
@@ -42,7 +42,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Assignment Policy Id.
      * 
      */
-    @SerializedName("assignmentPolicyId")
+    @SerializedName(value = "assignmentPolicyId", alternate = {"AssignmentPolicyId"})
     @Expose
     public String assignmentPolicyId;
 
@@ -50,7 +50,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Assignment State.
      * 
      */
-    @SerializedName("assignmentState")
+    @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
     public String assignmentState;
 
@@ -58,7 +58,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Assignment Status.
      * 
      */
-    @SerializedName("assignmentStatus")
+    @SerializedName(value = "assignmentStatus", alternate = {"AssignmentStatus"})
     @Expose
     public String assignmentStatus;
 
@@ -66,7 +66,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Catalog Id.
      * 
      */
-    @SerializedName("catalogId")
+    @SerializedName(value = "catalogId", alternate = {"CatalogId"})
     @Expose
     public String catalogId;
 
@@ -74,7 +74,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Expired Date Time.
      * 
      */
-    @SerializedName("expiredDateTime")
+    @SerializedName(value = "expiredDateTime", alternate = {"ExpiredDateTime"})
     @Expose
     public java.util.Calendar expiredDateTime;
 
@@ -82,7 +82,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Is Extended.
      * 
      */
-    @SerializedName("isExtended")
+    @SerializedName(value = "isExtended", alternate = {"IsExtended"})
     @Expose
     public Boolean isExtended;
 
@@ -90,7 +90,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public RequestSchedule schedule;
 
@@ -98,7 +98,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Target Id.
      * 
      */
-    @SerializedName("targetId")
+    @SerializedName(value = "targetId", alternate = {"TargetId"})
     @Expose
     public String targetId;
 
@@ -106,7 +106,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Access Package.
      * 
      */
-    @SerializedName("accessPackage")
+    @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
     public AccessPackage accessPackage;
 
@@ -114,7 +114,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Access Package Assignment Policy.
      * 
      */
-    @SerializedName("accessPackageAssignmentPolicy")
+    @SerializedName(value = "accessPackageAssignmentPolicy", alternate = {"AccessPackageAssignmentPolicy"})
     @Expose
     public AccessPackageAssignmentPolicy accessPackageAssignmentPolicy;
 
@@ -122,7 +122,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Access Package Assignment Requests.
      * 
      */
-    @SerializedName("accessPackageAssignmentRequests")
+    @SerializedName(value = "accessPackageAssignmentRequests", alternate = {"AccessPackageAssignmentRequests"})
     @Expose
     public AccessPackageAssignmentRequestCollectionPage accessPackageAssignmentRequests;
 
@@ -130,7 +130,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Access Package Assignment Resource Roles.
      * 
      */
-    @SerializedName("accessPackageAssignmentResourceRoles")
+    @SerializedName(value = "accessPackageAssignmentResourceRoles", alternate = {"AccessPackageAssignmentResourceRoles"})
     @Expose
     public AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
 
@@ -138,7 +138,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Target.
      * 
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public AccessPackageSubject target;
 

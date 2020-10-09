@@ -32,7 +32,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The Breaks.
      * 
      */
-    @SerializedName("breaks")
+    @SerializedName(value = "breaks", alternate = {"Breaks"})
     @Expose
     public java.util.List<TimeCardBreak> breaks;
 
@@ -40,7 +40,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The Clock In Event.
      * 
      */
-    @SerializedName("clockInEvent")
+    @SerializedName(value = "clockInEvent", alternate = {"ClockInEvent"})
     @Expose
     public TimeCardEvent clockInEvent;
 
@@ -48,7 +48,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The Clock Out Event.
      * 
      */
-    @SerializedName("clockOutEvent")
+    @SerializedName(value = "clockOutEvent", alternate = {"ClockOutEvent"})
     @Expose
     public TimeCardEvent clockOutEvent;
 
@@ -56,7 +56,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The Confirmed By.
      * 
      */
-    @SerializedName("confirmedBy")
+    @SerializedName(value = "confirmedBy", alternate = {"ConfirmedBy"})
     @Expose
     public EnumSet<ConfirmedBy> confirmedBy;
 
@@ -64,7 +64,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public ItemBody notes;
 
@@ -72,7 +72,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The Original Entry.
      * 
      */
-    @SerializedName("originalEntry")
+    @SerializedName(value = "originalEntry", alternate = {"OriginalEntry"})
     @Expose
     public TimeCardEntry originalEntry;
 
@@ -80,7 +80,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public TimeCardState state;
 
@@ -88,7 +88,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

@@ -22,7 +22,7 @@ public class TiIndicatorDeleteTiIndicatorsBody {
      * The value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public java.util.List<String> value;
 

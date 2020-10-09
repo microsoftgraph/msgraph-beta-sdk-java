@@ -35,7 +35,7 @@ public class UpdateWindow implements IJsonBackedObject {
      * The Update Window End Time.
      * 
      */
-    @SerializedName("updateWindowEndTime")
+    @SerializedName(value = "updateWindowEndTime", alternate = {"UpdateWindowEndTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay updateWindowEndTime;
 
@@ -43,7 +43,7 @@ public class UpdateWindow implements IJsonBackedObject {
      * The Update Window Start Time.
      * 
      */
-    @SerializedName("updateWindowStartTime")
+    @SerializedName(value = "updateWindowStartTime", alternate = {"UpdateWindowStartTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay updateWindowStartTime;
 

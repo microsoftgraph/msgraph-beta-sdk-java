@@ -35,7 +35,7 @@ public class Credential implements IJsonBackedObject {
      * The Field Id.
      * 
      */
-    @SerializedName("fieldId")
+    @SerializedName(value = "fieldId", alternate = {"FieldId"})
     @Expose
     public String fieldId;
 
@@ -43,7 +43,7 @@ public class Credential implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -51,7 +51,7 @@ public class Credential implements IJsonBackedObject {
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

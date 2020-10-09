@@ -27,7 +27,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
      * The Key Storage Provider.
      * 
      */
-    @SerializedName("keyStorageProvider")
+    @SerializedName(value = "keyStorageProvider", alternate = {"KeyStorageProvider"})
     @Expose
     public KeyStorageProviderOption keyStorageProvider;
 

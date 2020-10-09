@@ -27,7 +27,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements IJsonB
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -35,7 +35,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements IJsonB
      * The Target.
      * The type of groups targeted the group policy configuration.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

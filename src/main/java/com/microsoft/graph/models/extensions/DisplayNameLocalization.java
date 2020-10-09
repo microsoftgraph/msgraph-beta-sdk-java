@@ -35,7 +35,7 @@ public class DisplayNameLocalization implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class DisplayNameLocalization implements IJsonBackedObject {
      * The Language Tag.
      * 
      */
-    @SerializedName("languageTag")
+    @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
     public String languageTag;
 

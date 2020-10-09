@@ -36,7 +36,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Cert File Name.
      * File name to display in UI.
      */
-    @SerializedName("certFileName")
+    @SerializedName(value = "certFileName", alternate = {"CertFileName"})
     @Expose
     public String certFileName;
 
@@ -44,7 +44,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Certificate Template Name.
      * PKCS Certificate Template Name.
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName(value = "certificateTemplateName", alternate = {"CertificateTemplateName"})
     @Expose
     public String certificateTemplateName;
 
@@ -52,7 +52,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Certificate Validity Period Scale.
      * Scale for the Certificate Validity Period.
      */
-    @SerializedName("certificateValidityPeriodScale")
+    @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
     public CertificateValidityPeriodScale certificateValidityPeriodScale;
 
@@ -60,7 +60,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Certificate Validity Period Value.
      * Value for the Certificate Validity Period.
      */
-    @SerializedName("certificateValidityPeriodValue")
+    @SerializedName(value = "certificateValidityPeriodValue", alternate = {"CertificateValidityPeriodValue"})
     @Expose
     public Integer certificateValidityPeriodValue;
 
@@ -68,7 +68,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Certification Authority.
      * PKCS Certification Authority.
      */
-    @SerializedName("certificationAuthority")
+    @SerializedName(value = "certificationAuthority", alternate = {"CertificationAuthority"})
     @Expose
     public String certificationAuthority;
 
@@ -76,7 +76,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Certification Authority Name.
      * PKCS Certification Authority Name.
      */
-    @SerializedName("certificationAuthorityName")
+    @SerializedName(value = "certificationAuthorityName", alternate = {"CertificationAuthorityName"})
     @Expose
     public String certificationAuthorityName;
 
@@ -84,7 +84,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Renewal Threshold Percentage.
      * Certificate renewal threshold percentage. Valid values 1 to 99
      */
-    @SerializedName("renewalThresholdPercentage")
+    @SerializedName(value = "renewalThresholdPercentage", alternate = {"RenewalThresholdPercentage"})
     @Expose
     public Integer renewalThresholdPercentage;
 
@@ -92,7 +92,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
      * The Trusted Root Certificate.
      * Trusted Root Certificate.
      */
-    @SerializedName("trustedRootCertificate")
+    @SerializedName(value = "trustedRootCertificate", alternate = {"TrustedRootCertificate"})
     @Expose
     public byte[] trustedRootCertificate;
 

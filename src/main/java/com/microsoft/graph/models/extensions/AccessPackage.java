@@ -31,7 +31,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Catalog Id.
      * 
      */
-    @SerializedName("catalogId")
+    @SerializedName(value = "catalogId", alternate = {"CatalogId"})
     @Expose
     public String catalogId;
 
@@ -39,7 +39,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -47,7 +47,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -55,7 +55,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -63,7 +63,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -71,7 +71,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Is Hidden.
      * 
      */
-    @SerializedName("isHidden")
+    @SerializedName(value = "isHidden", alternate = {"IsHidden"})
     @Expose
     public Boolean isHidden;
 
@@ -79,7 +79,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Is Role Scopes Visible.
      * 
      */
-    @SerializedName("isRoleScopesVisible")
+    @SerializedName(value = "isRoleScopesVisible", alternate = {"IsRoleScopesVisible"})
     @Expose
     public Boolean isRoleScopesVisible;
 
@@ -87,7 +87,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Modified By.
      * 
      */
-    @SerializedName("modifiedBy")
+    @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
     public String modifiedBy;
 
@@ -95,7 +95,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Modified Date Time.
      * 
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -103,7 +103,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Access Package Assignment Policies.
      * 
      */
-    @SerializedName("accessPackageAssignmentPolicies")
+    @SerializedName(value = "accessPackageAssignmentPolicies", alternate = {"AccessPackageAssignmentPolicies"})
     @Expose
     public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
 
@@ -111,7 +111,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Access Package Catalog.
      * 
      */
-    @SerializedName("accessPackageCatalog")
+    @SerializedName(value = "accessPackageCatalog", alternate = {"AccessPackageCatalog"})
     @Expose
     public AccessPackageCatalog accessPackageCatalog;
 
@@ -119,7 +119,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Access Package Resource Role Scopes.
      * 
      */
-    @SerializedName("accessPackageResourceRoleScopes")
+    @SerializedName(value = "accessPackageResourceRoleScopes", alternate = {"AccessPackageResourceRoleScopes"})
     @Expose
     public AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
 

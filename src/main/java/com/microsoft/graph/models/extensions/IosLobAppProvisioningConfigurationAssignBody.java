@@ -23,7 +23,7 @@ public class IosLobAppProvisioningConfigurationAssignBody {
      * The app Provisioning Configuration Group Assignments.
      * 
      */
-    @SerializedName("appProvisioningConfigurationGroupAssignments")
+    @SerializedName(value = "appProvisioningConfigurationGroupAssignments", alternate = {"AppProvisioningConfigurationGroupAssignments"})
     @Expose
     public java.util.List<MobileAppProvisioningConfigGroupAssignment> appProvisioningConfigurationGroupAssignments;
 
@@ -31,7 +31,7 @@ public class IosLobAppProvisioningConfigurationAssignBody {
      * The i OSLob App Provisioning Config Assignments.
      * 
      */
-    @SerializedName("iOSLobAppProvisioningConfigAssignments")
+    @SerializedName(value = "iOSLobAppProvisioningConfigAssignments", alternate = {"IOSLobAppProvisioningConfigAssignments"})
     @Expose
     public java.util.List<IosLobAppProvisioningConfigurationAssignment> iOSLobAppProvisioningConfigAssignments;
 

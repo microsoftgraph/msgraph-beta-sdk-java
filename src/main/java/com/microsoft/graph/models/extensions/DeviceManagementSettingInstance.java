@@ -26,7 +26,7 @@ public class DeviceManagementSettingInstance extends Entity implements IJsonBack
      * The Definition Id.
      * The ID of the setting definition for this instance
      */
-    @SerializedName("definitionId")
+    @SerializedName(value = "definitionId", alternate = {"DefinitionId"})
     @Expose
     public String definitionId;
 
@@ -34,7 +34,7 @@ public class DeviceManagementSettingInstance extends Entity implements IJsonBack
      * The Value Json.
      * JSON representation of the value
      */
-    @SerializedName("valueJson")
+    @SerializedName(value = "valueJson", alternate = {"ValueJson"})
     @Expose
     public String valueJson;
 

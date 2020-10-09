@@ -37,7 +37,7 @@ public class ObjectDefinition implements IJsonBackedObject {
      * The Attributes.
      * 
      */
-    @SerializedName("attributes")
+    @SerializedName(value = "attributes", alternate = {"Attributes"})
     @Expose
     public java.util.List<AttributeDefinition> attributes;
 
@@ -45,7 +45,7 @@ public class ObjectDefinition implements IJsonBackedObject {
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public java.util.List<MetadataEntry> metadata;
 
@@ -53,7 +53,7 @@ public class ObjectDefinition implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -61,7 +61,7 @@ public class ObjectDefinition implements IJsonBackedObject {
      * The Supported Apis.
      * 
      */
-    @SerializedName("supportedApis")
+    @SerializedName(value = "supportedApis", alternate = {"SupportedApis"})
     @Expose
     public java.util.List<String> supportedApis;
 

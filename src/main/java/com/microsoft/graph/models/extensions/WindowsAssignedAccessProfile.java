@@ -26,7 +26,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
      * The App User Model Ids.
      * These are the only Windows Store Apps that will be available to launch from the Start menu.
      */
-    @SerializedName("appUserModelIds")
+    @SerializedName(value = "appUserModelIds", alternate = {"AppUserModelIds"})
     @Expose
     public java.util.List<String> appUserModelIds;
 
@@ -34,7 +34,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
      * The Desktop App Paths.
      * These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
      */
-    @SerializedName("desktopAppPaths")
+    @SerializedName(value = "desktopAppPaths", alternate = {"DesktopAppPaths"})
     @Expose
     public java.util.List<String> desktopAppPaths;
 
@@ -42,7 +42,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
      * The Profile Name.
      * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      */
-    @SerializedName("profileName")
+    @SerializedName(value = "profileName", alternate = {"ProfileName"})
     @Expose
     public String profileName;
 
@@ -50,7 +50,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
      * The Show Task Bar.
      * This setting allows the admin to specify whether the Task Bar is shown or not.
      */
-    @SerializedName("showTaskBar")
+    @SerializedName(value = "showTaskBar", alternate = {"ShowTaskBar"})
     @Expose
     public Boolean showTaskBar;
 
@@ -58,7 +58,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
      * The Start Menu Layout Xml.
      * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      */
-    @SerializedName("startMenuLayoutXml")
+    @SerializedName(value = "startMenuLayoutXml", alternate = {"StartMenuLayoutXml"})
     @Expose
     public byte[] startMenuLayoutXml;
 
@@ -66,7 +66,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
      * The User Accounts.
      * The user accounts that will be locked to this kiosk configuration.
      */
-    @SerializedName("userAccounts")
+    @SerializedName(value = "userAccounts", alternate = {"UserAccounts"})
     @Expose
     public java.util.List<String> userAccounts;
 

@@ -28,7 +28,7 @@ public class Document extends Entity implements IJsonBackedObject {
      * The Comments.
      * 
      */
-    @SerializedName("comments")
+    @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
     public DocumentCommentCollectionPage comments;
 

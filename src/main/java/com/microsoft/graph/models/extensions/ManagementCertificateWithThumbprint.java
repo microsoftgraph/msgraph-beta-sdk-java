@@ -35,7 +35,7 @@ public class ManagementCertificateWithThumbprint implements IJsonBackedObject {
      * The Certificate.
      * The Base 64 encoded management certificate
      */
-    @SerializedName("certificate")
+    @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose
     public String certificate;
 
@@ -43,7 +43,7 @@ public class ManagementCertificateWithThumbprint implements IJsonBackedObject {
      * The Thumbprint.
      * The thumbprint of the management certificate
      */
-    @SerializedName("thumbprint")
+    @SerializedName(value = "thumbprint", alternate = {"Thumbprint"})
     @Expose
     public String thumbprint;
 

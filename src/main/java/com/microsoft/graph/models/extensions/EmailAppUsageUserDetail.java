@@ -26,7 +26,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -34,7 +34,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Imap4App.
      * 
      */
-    @SerializedName("imap4App")
+    @SerializedName(value = "imap4App", alternate = {"Imap4App"})
     @Expose
     public java.util.List<String> imap4App;
 
@@ -50,7 +50,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -58,7 +58,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -66,7 +66,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Mail For Mac.
      * 
      */
-    @SerializedName("mailForMac")
+    @SerializedName(value = "mailForMac", alternate = {"MailForMac"})
     @Expose
     public java.util.List<String> mailForMac;
 
@@ -74,7 +74,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Other For Mobile.
      * 
      */
-    @SerializedName("otherForMobile")
+    @SerializedName(value = "otherForMobile", alternate = {"OtherForMobile"})
     @Expose
     public java.util.List<String> otherForMobile;
 
@@ -82,7 +82,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Outlook For Mac.
      * 
      */
-    @SerializedName("outlookForMac")
+    @SerializedName(value = "outlookForMac", alternate = {"OutlookForMac"})
     @Expose
     public java.util.List<String> outlookForMac;
 
@@ -90,7 +90,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Outlook For Mobile.
      * 
      */
-    @SerializedName("outlookForMobile")
+    @SerializedName(value = "outlookForMobile", alternate = {"OutlookForMobile"})
     @Expose
     public java.util.List<String> outlookForMobile;
 
@@ -98,7 +98,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Outlook For Web.
      * 
      */
-    @SerializedName("outlookForWeb")
+    @SerializedName(value = "outlookForWeb", alternate = {"OutlookForWeb"})
     @Expose
     public java.util.List<String> outlookForWeb;
 
@@ -106,7 +106,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Outlook For Windows.
      * 
      */
-    @SerializedName("outlookForWindows")
+    @SerializedName(value = "outlookForWindows", alternate = {"OutlookForWindows"})
     @Expose
     public java.util.List<String> outlookForWindows;
 
@@ -114,7 +114,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Pop3App.
      * 
      */
-    @SerializedName("pop3App")
+    @SerializedName(value = "pop3App", alternate = {"Pop3App"})
     @Expose
     public java.util.List<String> pop3App;
 
@@ -122,7 +122,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -130,7 +130,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -138,7 +138,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The Smtp App.
      * 
      */
-    @SerializedName("smtpApp")
+    @SerializedName(value = "smtpApp", alternate = {"SmtpApp"})
     @Expose
     public java.util.List<String> smtpApp;
 
@@ -146,7 +146,7 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

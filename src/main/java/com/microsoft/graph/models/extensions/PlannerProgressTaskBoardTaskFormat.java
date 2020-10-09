@@ -26,7 +26,7 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
      * The Order Hint.
      * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 

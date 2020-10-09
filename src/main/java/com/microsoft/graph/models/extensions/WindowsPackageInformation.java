@@ -37,7 +37,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Applicable Architecture.
      * The Windows architecture for which this app can run on.
      */
-    @SerializedName("applicableArchitecture")
+    @SerializedName(value = "applicableArchitecture", alternate = {"ApplicableArchitecture"})
     @Expose
     public EnumSet<WindowsArchitecture> applicableArchitecture;
 
@@ -45,7 +45,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Display Name.
      * The Display Name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -53,7 +53,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Identity Name.
      * The Identity Name.
      */
-    @SerializedName("identityName")
+    @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
     public String identityName;
 
@@ -61,7 +61,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Identity Publisher.
      * The Identity Publisher.
      */
-    @SerializedName("identityPublisher")
+    @SerializedName(value = "identityPublisher", alternate = {"IdentityPublisher"})
     @Expose
     public String identityPublisher;
 
@@ -69,7 +69,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Identity Resource Identifier.
      * The Identity Resource Identifier.
      */
-    @SerializedName("identityResourceIdentifier")
+    @SerializedName(value = "identityResourceIdentifier", alternate = {"IdentityResourceIdentifier"})
     @Expose
     public String identityResourceIdentifier;
 
@@ -77,7 +77,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Identity Version.
      * The Identity Version.
      */
-    @SerializedName("identityVersion")
+    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
     public String identityVersion;
 
@@ -85,7 +85,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 

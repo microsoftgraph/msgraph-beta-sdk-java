@@ -27,7 +27,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
      * The File Data.
      * 
      */
-    @SerializedName("fileData")
+    @SerializedName(value = "fileData", alternate = {"FileData"})
     @Expose
     public AgreementFileData fileData;
 
@@ -35,7 +35,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
      * The File Name.
      * 
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -43,7 +43,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
      * The Is Default.
      * 
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -51,7 +51,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
      * The Language.
      * 
      */
-    @SerializedName("language")
+    @SerializedName(value = "language", alternate = {"Language"})
     @Expose
     public String language;
 

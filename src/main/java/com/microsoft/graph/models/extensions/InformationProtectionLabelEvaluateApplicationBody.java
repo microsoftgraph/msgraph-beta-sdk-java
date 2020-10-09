@@ -24,7 +24,7 @@ public class InformationProtectionLabelEvaluateApplicationBody {
      * The content Info.
      * 
      */
-    @SerializedName("contentInfo")
+    @SerializedName(value = "contentInfo", alternate = {"ContentInfo"})
     @Expose
     public ContentInfo contentInfo;
 
@@ -32,7 +32,7 @@ public class InformationProtectionLabelEvaluateApplicationBody {
      * The labeling Options.
      * 
      */
-    @SerializedName("labelingOptions")
+    @SerializedName(value = "labelingOptions", alternate = {"LabelingOptions"})
     @Expose
     public LabelingOptions labelingOptions;
 

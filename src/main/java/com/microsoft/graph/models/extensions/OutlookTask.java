@@ -38,7 +38,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Assigned To.
      * 
      */
-    @SerializedName("assignedTo")
+    @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
     public String assignedTo;
 
@@ -46,7 +46,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Body.
      * 
      */
-    @SerializedName("body")
+    @SerializedName(value = "body", alternate = {"Body"})
     @Expose
     public ItemBody body;
 
@@ -54,7 +54,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Completed Date Time.
      * 
      */
-    @SerializedName("completedDateTime")
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
     public DateTimeTimeZone completedDateTime;
 
@@ -62,7 +62,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Due Date Time.
      * 
      */
-    @SerializedName("dueDateTime")
+    @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
     public DateTimeTimeZone dueDateTime;
 
@@ -70,7 +70,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Has Attachments.
      * 
      */
-    @SerializedName("hasAttachments")
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
     public Boolean hasAttachments;
 
@@ -78,7 +78,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Importance.
      * 
      */
-    @SerializedName("importance")
+    @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
     public Importance importance;
 
@@ -86,7 +86,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Is Reminder On.
      * 
      */
-    @SerializedName("isReminderOn")
+    @SerializedName(value = "isReminderOn", alternate = {"IsReminderOn"})
     @Expose
     public Boolean isReminderOn;
 
@@ -94,7 +94,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Owner.
      * 
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public String owner;
 
@@ -102,7 +102,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Parent Folder Id.
      * 
      */
-    @SerializedName("parentFolderId")
+    @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
     public String parentFolderId;
 
@@ -110,7 +110,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Recurrence.
      * 
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public PatternedRecurrence recurrence;
 
@@ -118,7 +118,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Reminder Date Time.
      * 
      */
-    @SerializedName("reminderDateTime")
+    @SerializedName(value = "reminderDateTime", alternate = {"ReminderDateTime"})
     @Expose
     public DateTimeTimeZone reminderDateTime;
 
@@ -126,7 +126,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Sensitivity.
      * 
      */
-    @SerializedName("sensitivity")
+    @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
     public Sensitivity sensitivity;
 
@@ -134,7 +134,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public DateTimeTimeZone startDateTime;
 
@@ -142,7 +142,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public TaskStatus status;
 
@@ -150,7 +150,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Subject.
      * 
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -158,7 +158,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * 
      */
-    @SerializedName("attachments")
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
     public AttachmentCollectionPage attachments;
 
@@ -166,7 +166,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * 
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -174,7 +174,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * 
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 

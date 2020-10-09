@@ -25,7 +25,7 @@ public class InformationProtectionEvaluateLabelsAndPoliciesBody {
      * The evaluate Sensitivity Labels.
      * 
      */
-    @SerializedName("evaluateSensitivityLabels")
+    @SerializedName(value = "evaluateSensitivityLabels", alternate = {"EvaluateSensitivityLabels"})
     @Expose
     public EvaluateSensitivityLabelsRequest evaluateSensitivityLabels;
 
@@ -33,7 +33,7 @@ public class InformationProtectionEvaluateLabelsAndPoliciesBody {
      * The evaluate Data Loss Prevention Policies.
      * 
      */
-    @SerializedName("evaluateDataLossPreventionPolicies")
+    @SerializedName(value = "evaluateDataLossPreventionPolicies", alternate = {"EvaluateDataLossPreventionPolicies"})
     @Expose
     public DlpEvaluatePoliciesRequest evaluateDataLossPreventionPolicies;
 
@@ -41,7 +41,7 @@ public class InformationProtectionEvaluateLabelsAndPoliciesBody {
      * The classify Text.
      * 
      */
-    @SerializedName("classifyText")
+    @SerializedName(value = "classifyText", alternate = {"ClassifyText"})
     @Expose
     public TextClassificationRequest classifyText;
 

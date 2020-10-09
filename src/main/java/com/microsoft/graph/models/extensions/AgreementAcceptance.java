@@ -27,7 +27,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Agreement File Id.
      * 
      */
-    @SerializedName("agreementFileId")
+    @SerializedName(value = "agreementFileId", alternate = {"AgreementFileId"})
     @Expose
     public String agreementFileId;
 
@@ -35,7 +35,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Agreement Id.
      * 
      */
-    @SerializedName("agreementId")
+    @SerializedName(value = "agreementId", alternate = {"AgreementId"})
     @Expose
     public String agreementId;
 
@@ -43,7 +43,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Device Display Name.
      * 
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -51,7 +51,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Device Id.
      * 
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -59,7 +59,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Device OSType.
      * 
      */
-    @SerializedName("deviceOSType")
+    @SerializedName(value = "deviceOSType", alternate = {"DeviceOSType"})
     @Expose
     public String deviceOSType;
 
@@ -67,7 +67,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Device OSVersion.
      * 
      */
-    @SerializedName("deviceOSVersion")
+    @SerializedName(value = "deviceOSVersion", alternate = {"DeviceOSVersion"})
     @Expose
     public String deviceOSVersion;
 
@@ -75,7 +75,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -83,7 +83,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The Recorded Date Time.
      * 
      */
-    @SerializedName("recordedDateTime")
+    @SerializedName(value = "recordedDateTime", alternate = {"RecordedDateTime"})
     @Expose
     public java.util.Calendar recordedDateTime;
 
@@ -91,7 +91,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public AgreementAcceptanceState state;
 
@@ -99,7 +99,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -107,7 +107,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The User Email.
      * 
      */
-    @SerializedName("userEmail")
+    @SerializedName(value = "userEmail", alternate = {"UserEmail"})
     @Expose
     public String userEmail;
 
@@ -115,7 +115,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -123,7 +123,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

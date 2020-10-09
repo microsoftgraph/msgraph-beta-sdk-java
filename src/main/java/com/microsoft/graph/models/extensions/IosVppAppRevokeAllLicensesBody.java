@@ -22,7 +22,7 @@ public class IosVppAppRevokeAllLicensesBody {
      * The notify Managed Devices.
      * 
      */
-    @SerializedName("notifyManagedDevices")
+    @SerializedName(value = "notifyManagedDevices", alternate = {"NotifyManagedDevices"})
     @Expose
     public Boolean notifyManagedDevices;
 

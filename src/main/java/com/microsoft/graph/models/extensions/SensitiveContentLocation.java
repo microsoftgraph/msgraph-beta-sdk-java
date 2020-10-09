@@ -7,7 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.SensitiveContentEvidence;
+import com.microsoft.graph.models.extensions.SensitiveContentLocationBase;
 
 
 import com.google.gson.JsonObject;
@@ -19,50 +19,16 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Sensitive Content Location.
  */
-public class SensitiveContentLocation implements IJsonBackedObject {
+public class SensitiveContentLocation extends SensitiveContentLocationBase implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
-     * The Evidences.
+     * The Confidence.
      * 
      */
-    @SerializedName("evidences")
+    @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
-    public java.util.List<SensitiveContentEvidence> evidences;
-
-    /**
-     * The Id Match.
-     * 
-     */
-    @SerializedName("idMatch")
-    @Expose
-    public String idMatch;
-
-    /**
-     * The Length.
-     * 
-     */
-    @SerializedName("length")
-    @Expose
-    public Integer length;
-
-    /**
-     * The Offset.
-     * 
-     */
-    @SerializedName("offset")
-    @Expose
-    public Integer offset;
+    public Integer confidence;
 
 
     /**

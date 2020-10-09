@@ -27,7 +27,7 @@ public class ProfileCardProperty extends Entity implements IJsonBackedObject {
      * The Annotations.
      * 
      */
-    @SerializedName("annotations")
+    @SerializedName(value = "annotations", alternate = {"Annotations"})
     @Expose
     public java.util.List<ProfileCardAnnotation> annotations;
 
@@ -35,7 +35,7 @@ public class ProfileCardProperty extends Entity implements IJsonBackedObject {
      * The Directory Property Name.
      * 
      */
-    @SerializedName("directoryPropertyName")
+    @SerializedName(value = "directoryPropertyName", alternate = {"DirectoryPropertyName"})
     @Expose
     public String directoryPropertyName;
 

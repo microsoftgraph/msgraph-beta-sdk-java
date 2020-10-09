@@ -26,7 +26,7 @@ public class OmaSettingInteger extends OmaSetting implements IJsonBackedObject {
      * The Is Read Only.
      * By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
      */
-    @SerializedName("isReadOnly")
+    @SerializedName(value = "isReadOnly", alternate = {"IsReadOnly"})
     @Expose
     public Boolean isReadOnly;
 
@@ -34,7 +34,7 @@ public class OmaSettingInteger extends OmaSetting implements IJsonBackedObject {
      * The Value.
      * Value.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Integer value;
 

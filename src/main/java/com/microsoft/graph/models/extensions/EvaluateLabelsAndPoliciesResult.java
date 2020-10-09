@@ -38,7 +38,7 @@ public class EvaluateLabelsAndPoliciesResult implements IJsonBackedObject {
      * The Classification Result.
      * 
      */
-    @SerializedName("classificationResult")
+    @SerializedName(value = "classificationResult", alternate = {"ClassificationResult"})
     @Expose
     public DetectedSensitiveContentWrapper classificationResult;
 
@@ -46,7 +46,7 @@ public class EvaluateLabelsAndPoliciesResult implements IJsonBackedObject {
      * The Data Loss Prevention Policies Result.
      * 
      */
-    @SerializedName("dataLossPreventionPoliciesResult")
+    @SerializedName(value = "dataLossPreventionPoliciesResult", alternate = {"DataLossPreventionPoliciesResult"})
     @Expose
     public DlpPoliciesJobResult dataLossPreventionPoliciesResult;
 
@@ -54,7 +54,7 @@ public class EvaluateLabelsAndPoliciesResult implements IJsonBackedObject {
      * The Sensitivity Labels Result.
      * 
      */
-    @SerializedName("sensitivityLabelsResult")
+    @SerializedName(value = "sensitivityLabelsResult", alternate = {"SensitivityLabelsResult"})
     @Expose
     public EvaluateLabelJobResultGroup sensitivityLabelsResult;
 

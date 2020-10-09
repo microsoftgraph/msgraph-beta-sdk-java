@@ -42,7 +42,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Accounts Block Modification.
      * Indicates whether or not adding or removing accounts is disabled.
      */
-    @SerializedName("accountsBlockModification")
+    @SerializedName(value = "accountsBlockModification", alternate = {"AccountsBlockModification"})
     @Expose
     public Boolean accountsBlockModification;
 
@@ -50,7 +50,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Apps Allow Install From Unknown Sources.
      * Indicates whether or not the user is allowed to enable to unknown sources setting.
      */
-    @SerializedName("appsAllowInstallFromUnknownSources")
+    @SerializedName(value = "appsAllowInstallFromUnknownSources", alternate = {"AppsAllowInstallFromUnknownSources"})
     @Expose
     public Boolean appsAllowInstallFromUnknownSources;
 
@@ -58,7 +58,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Apps Auto Update Policy.
      * Indicates the value of the app auto update policy.
      */
-    @SerializedName("appsAutoUpdatePolicy")
+    @SerializedName(value = "appsAutoUpdatePolicy", alternate = {"AppsAutoUpdatePolicy"})
     @Expose
     public AndroidDeviceOwnerAppAutoUpdatePolicyType appsAutoUpdatePolicy;
 
@@ -66,7 +66,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Apps Default Permission Policy.
      * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically.
      */
-    @SerializedName("appsDefaultPermissionPolicy")
+    @SerializedName(value = "appsDefaultPermissionPolicy", alternate = {"AppsDefaultPermissionPolicy"})
     @Expose
     public AndroidDeviceOwnerDefaultAppPermissionPolicyType appsDefaultPermissionPolicy;
 
@@ -74,7 +74,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Apps Recommend Skipping First Use Hints.
      * Whether or not to recommend all apps skip any first-time-use hints they may have added.
      */
-    @SerializedName("appsRecommendSkippingFirstUseHints")
+    @SerializedName(value = "appsRecommendSkippingFirstUseHints", alternate = {"AppsRecommendSkippingFirstUseHints"})
     @Expose
     public Boolean appsRecommendSkippingFirstUseHints;
 
@@ -82,7 +82,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Bluetooth Block Configuration.
      * Indicates whether or not to block a user from configuring bluetooth.
      */
-    @SerializedName("bluetoothBlockConfiguration")
+    @SerializedName(value = "bluetoothBlockConfiguration", alternate = {"BluetoothBlockConfiguration"})
     @Expose
     public Boolean bluetoothBlockConfiguration;
 
@@ -90,7 +90,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Bluetooth Block Contact Sharing.
      * Indicates whether or not to block a user from sharing contacts via bluetooth.
      */
-    @SerializedName("bluetoothBlockContactSharing")
+    @SerializedName(value = "bluetoothBlockContactSharing", alternate = {"BluetoothBlockContactSharing"})
     @Expose
     public Boolean bluetoothBlockContactSharing;
 
@@ -98,7 +98,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Camera Blocked.
      * Indicates whether or not to disable the use of the camera.
      */
-    @SerializedName("cameraBlocked")
+    @SerializedName(value = "cameraBlocked", alternate = {"CameraBlocked"})
     @Expose
     public Boolean cameraBlocked;
 
@@ -106,7 +106,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Cellular Block Wi Fi Tethering.
      * Indicates whether or not to block Wi-Fi tethering.
      */
-    @SerializedName("cellularBlockWiFiTethering")
+    @SerializedName(value = "cellularBlockWiFiTethering", alternate = {"CellularBlockWiFiTethering"})
     @Expose
     public Boolean cellularBlockWiFiTethering;
 
@@ -114,7 +114,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Certificate Credential Configuration Disabled.
      * Indicates whether or not to block users from any certificate credential configuration.
      */
-    @SerializedName("certificateCredentialConfigurationDisabled")
+    @SerializedName(value = "certificateCredentialConfigurationDisabled", alternate = {"CertificateCredentialConfigurationDisabled"})
     @Expose
     public Boolean certificateCredentialConfigurationDisabled;
 
@@ -122,7 +122,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Data Roaming Blocked.
      * Indicates whether or not to block a user from data roaming.
      */
-    @SerializedName("dataRoamingBlocked")
+    @SerializedName(value = "dataRoamingBlocked", alternate = {"DataRoamingBlocked"})
     @Expose
     public Boolean dataRoamingBlocked;
 
@@ -130,7 +130,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Date Time Configuration Blocked.
      * Indicates whether or not to block the user from manually changing the date or time on the device
      */
-    @SerializedName("dateTimeConfigurationBlocked")
+    @SerializedName(value = "dateTimeConfigurationBlocked", alternate = {"DateTimeConfigurationBlocked"})
     @Expose
     public Boolean dateTimeConfigurationBlocked;
 
@@ -138,7 +138,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Enrollment Profile.
      * Indicates which enrollment profile you want to configure.
      */
-    @SerializedName("enrollmentProfile")
+    @SerializedName(value = "enrollmentProfile", alternate = {"EnrollmentProfile"})
     @Expose
     public AndroidDeviceOwnerEnrollmentProfileType enrollmentProfile;
 
@@ -146,7 +146,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Factory Reset Blocked.
      * Indicates whether or not the factory reset option in settings is disabled.
      */
-    @SerializedName("factoryResetBlocked")
+    @SerializedName(value = "factoryResetBlocked", alternate = {"FactoryResetBlocked"})
     @Expose
     public Boolean factoryResetBlocked;
 
@@ -154,7 +154,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Factory Reset Device Administrator Emails.
      * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
      */
-    @SerializedName("factoryResetDeviceAdministratorEmails")
+    @SerializedName(value = "factoryResetDeviceAdministratorEmails", alternate = {"FactoryResetDeviceAdministratorEmails"})
     @Expose
     public java.util.List<String> factoryResetDeviceAdministratorEmails;
 
@@ -162,7 +162,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Global Proxy.
      * Proxy is set up directly with host, port and excluded hosts.
      */
-    @SerializedName("globalProxy")
+    @SerializedName(value = "globalProxy", alternate = {"GlobalProxy"})
     @Expose
     public AndroidDeviceOwnerGlobalProxy globalProxy;
 
@@ -170,7 +170,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Google Accounts Blocked.
      * Indicates whether or not google accounts will be blocked.
      */
-    @SerializedName("googleAccountsBlocked")
+    @SerializedName(value = "googleAccountsBlocked", alternate = {"GoogleAccountsBlocked"})
     @Expose
     public Boolean googleAccountsBlocked;
 
@@ -178,7 +178,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Apps.
      * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("kioskModeApps")
+    @SerializedName(value = "kioskModeApps", alternate = {"KioskModeApps"})
     @Expose
     public java.util.List<AppListItem> kioskModeApps;
 
@@ -186,7 +186,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Bluetooth Configuration Enabled.
      * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
      */
-    @SerializedName("kioskModeBluetoothConfigurationEnabled")
+    @SerializedName(value = "kioskModeBluetoothConfigurationEnabled", alternate = {"KioskModeBluetoothConfigurationEnabled"})
     @Expose
     public Boolean kioskModeBluetoothConfigurationEnabled;
 
@@ -194,7 +194,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Debug Menu Easy Access Enabled.
      * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
      */
-    @SerializedName("kioskModeDebugMenuEasyAccessEnabled")
+    @SerializedName(value = "kioskModeDebugMenuEasyAccessEnabled", alternate = {"KioskModeDebugMenuEasyAccessEnabled"})
     @Expose
     public Boolean kioskModeDebugMenuEasyAccessEnabled;
 
@@ -202,7 +202,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Exit Code.
      * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
      */
-    @SerializedName("kioskModeExitCode")
+    @SerializedName(value = "kioskModeExitCode", alternate = {"KioskModeExitCode"})
     @Expose
     public String kioskModeExitCode;
 
@@ -210,7 +210,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Flashlight Configuration Enabled.
      * Whether or not to allow a user to use the flashlight in Kiosk Mode.
      */
-    @SerializedName("kioskModeFlashlightConfigurationEnabled")
+    @SerializedName(value = "kioskModeFlashlightConfigurationEnabled", alternate = {"KioskModeFlashlightConfigurationEnabled"})
     @Expose
     public Boolean kioskModeFlashlightConfigurationEnabled;
 
@@ -218,7 +218,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Folder Icon.
      * Folder icon configuration for managed home screen in Kiosk Mode.
      */
-    @SerializedName("kioskModeFolderIcon")
+    @SerializedName(value = "kioskModeFolderIcon", alternate = {"KioskModeFolderIcon"})
     @Expose
     public AndroidDeviceOwnerKioskModeFolderIcon kioskModeFolderIcon;
 
@@ -226,7 +226,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Icon Size.
      * Icon size configuration for managed home screen in Kiosk Mode.
      */
-    @SerializedName("kioskModeIconSize")
+    @SerializedName(value = "kioskModeIconSize", alternate = {"KioskModeIconSize"})
     @Expose
     public AndroidDeviceOwnerKioskModeIconSize kioskModeIconSize;
 
@@ -234,7 +234,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Managed Settings Entry Disabled.
      * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
      */
-    @SerializedName("kioskModeManagedSettingsEntryDisabled")
+    @SerializedName(value = "kioskModeManagedSettingsEntryDisabled", alternate = {"KioskModeManagedSettingsEntryDisabled"})
     @Expose
     public Boolean kioskModeManagedSettingsEntryDisabled;
 
@@ -242,7 +242,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Media Volume Configuration Enabled.
      * Whether or not to allow a user to change the media volume in Kiosk Mode.
      */
-    @SerializedName("kioskModeMediaVolumeConfigurationEnabled")
+    @SerializedName(value = "kioskModeMediaVolumeConfigurationEnabled", alternate = {"KioskModeMediaVolumeConfigurationEnabled"})
     @Expose
     public Boolean kioskModeMediaVolumeConfigurationEnabled;
 
@@ -250,7 +250,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Screen Orientation.
      * Screen orientation configuration for managed home screen in Kiosk Mode.
      */
-    @SerializedName("kioskModeScreenOrientation")
+    @SerializedName(value = "kioskModeScreenOrientation", alternate = {"KioskModeScreenOrientation"})
     @Expose
     public AndroidDeviceOwnerKioskModeScreenOrientation kioskModeScreenOrientation;
 
@@ -258,7 +258,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Screen Saver Configuration Enabled.
      * Whether or not to enable screen saver mode or not in Kiosk Mode.
      */
-    @SerializedName("kioskModeScreenSaverConfigurationEnabled")
+    @SerializedName(value = "kioskModeScreenSaverConfigurationEnabled", alternate = {"KioskModeScreenSaverConfigurationEnabled"})
     @Expose
     public Boolean kioskModeScreenSaverConfigurationEnabled;
 
@@ -266,7 +266,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Screen Saver Detect Media Disabled.
      * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
      */
-    @SerializedName("kioskModeScreenSaverDetectMediaDisabled")
+    @SerializedName(value = "kioskModeScreenSaverDetectMediaDisabled", alternate = {"KioskModeScreenSaverDetectMediaDisabled"})
     @Expose
     public Boolean kioskModeScreenSaverDetectMediaDisabled;
 
@@ -274,7 +274,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Screen Saver Display Time In Seconds.
      * The number of seconds that the device will display the screen saver for in Kiosk Mode. Valid values 0 to 9999999
      */
-    @SerializedName("kioskModeScreenSaverDisplayTimeInSeconds")
+    @SerializedName(value = "kioskModeScreenSaverDisplayTimeInSeconds", alternate = {"KioskModeScreenSaverDisplayTimeInSeconds"})
     @Expose
     public Integer kioskModeScreenSaverDisplayTimeInSeconds;
 
@@ -282,7 +282,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Screen Saver Image Url.
      * URL for an image that will be the device's screen saver in Kiosk Mode.
      */
-    @SerializedName("kioskModeScreenSaverImageUrl")
+    @SerializedName(value = "kioskModeScreenSaverImageUrl", alternate = {"KioskModeScreenSaverImageUrl"})
     @Expose
     public String kioskModeScreenSaverImageUrl;
 
@@ -290,7 +290,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Screen Saver Start Delay In Seconds.
      * The number of seconds the device needs to be inactive for before the screen saver is shown in Kiosk Mode. Valid values 1 to 9999999
      */
-    @SerializedName("kioskModeScreenSaverStartDelayInSeconds")
+    @SerializedName(value = "kioskModeScreenSaverStartDelayInSeconds", alternate = {"KioskModeScreenSaverStartDelayInSeconds"})
     @Expose
     public Integer kioskModeScreenSaverStartDelayInSeconds;
 
@@ -298,7 +298,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Show App Notification Badge.
      * Whether or not to display application notification badges in Kiosk Mode.
      */
-    @SerializedName("kioskModeShowAppNotificationBadge")
+    @SerializedName(value = "kioskModeShowAppNotificationBadge", alternate = {"KioskModeShowAppNotificationBadge"})
     @Expose
     public Boolean kioskModeShowAppNotificationBadge;
 
@@ -306,7 +306,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Show Device Info.
      * Whether or not to allow a user to access basic device information.
      */
-    @SerializedName("kioskModeShowDeviceInfo")
+    @SerializedName(value = "kioskModeShowDeviceInfo", alternate = {"KioskModeShowDeviceInfo"})
     @Expose
     public Boolean kioskModeShowDeviceInfo;
 
@@ -314,7 +314,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Virtual Home Button Enabled.
      * Whether or not to display a virtual home button when the device is in Kiosk Mode.
      */
-    @SerializedName("kioskModeVirtualHomeButtonEnabled")
+    @SerializedName(value = "kioskModeVirtualHomeButtonEnabled", alternate = {"KioskModeVirtualHomeButtonEnabled"})
     @Expose
     public Boolean kioskModeVirtualHomeButtonEnabled;
 
@@ -322,7 +322,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Virtual Home Button Type.
      * Indicates whether the virtual home button is a swipe up home button or a floating home button.
      */
-    @SerializedName("kioskModeVirtualHomeButtonType")
+    @SerializedName(value = "kioskModeVirtualHomeButtonType", alternate = {"KioskModeVirtualHomeButtonType"})
     @Expose
     public AndroidDeviceOwnerVirtualHomeButtonType kioskModeVirtualHomeButtonType;
 
@@ -330,7 +330,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Wallpaper Url.
      * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
      */
-    @SerializedName("kioskModeWallpaperUrl")
+    @SerializedName(value = "kioskModeWallpaperUrl", alternate = {"KioskModeWallpaperUrl"})
     @Expose
     public String kioskModeWallpaperUrl;
 
@@ -338,7 +338,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Wifi Allowed Ssids.
      * The restricted set of WIFI SSIDs available for the user to configure in Kiosk Mode. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("kioskModeWifiAllowedSsids")
+    @SerializedName(value = "kioskModeWifiAllowedSsids", alternate = {"KioskModeWifiAllowedSsids"})
     @Expose
     public java.util.List<String> kioskModeWifiAllowedSsids;
 
@@ -346,7 +346,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Kiosk Mode Wi Fi Configuration Enabled.
      * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
      */
-    @SerializedName("kioskModeWiFiConfigurationEnabled")
+    @SerializedName(value = "kioskModeWiFiConfigurationEnabled", alternate = {"KioskModeWiFiConfigurationEnabled"})
     @Expose
     public Boolean kioskModeWiFiConfigurationEnabled;
 
@@ -354,7 +354,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microphone Force Mute.
      * Indicates whether or not to block unmuting the microphone on the device.
      */
-    @SerializedName("microphoneForceMute")
+    @SerializedName(value = "microphoneForceMute", alternate = {"MicrophoneForceMute"})
     @Expose
     public Boolean microphoneForceMute;
 
@@ -362,7 +362,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Configuration Enabled.
      * Indicates whether or not to you want configure Microsoft Launcher.
      */
-    @SerializedName("microsoftLauncherConfigurationEnabled")
+    @SerializedName(value = "microsoftLauncherConfigurationEnabled", alternate = {"MicrosoftLauncherConfigurationEnabled"})
     @Expose
     public Boolean microsoftLauncherConfigurationEnabled;
 
@@ -370,7 +370,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Custom Wallpaper Allow User Modification.
      * Indicates whether or not the user can modify the wallpaper to personalize their device.
      */
-    @SerializedName("microsoftLauncherCustomWallpaperAllowUserModification")
+    @SerializedName(value = "microsoftLauncherCustomWallpaperAllowUserModification", alternate = {"MicrosoftLauncherCustomWallpaperAllowUserModification"})
     @Expose
     public Boolean microsoftLauncherCustomWallpaperAllowUserModification;
 
@@ -378,7 +378,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Custom Wallpaper Enabled.
      * Indicates whether or not to configure the wallpaper on the targeted devices.
      */
-    @SerializedName("microsoftLauncherCustomWallpaperEnabled")
+    @SerializedName(value = "microsoftLauncherCustomWallpaperEnabled", alternate = {"MicrosoftLauncherCustomWallpaperEnabled"})
     @Expose
     public Boolean microsoftLauncherCustomWallpaperEnabled;
 
@@ -386,7 +386,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Custom Wallpaper Image Url.
      * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
      */
-    @SerializedName("microsoftLauncherCustomWallpaperImageUrl")
+    @SerializedName(value = "microsoftLauncherCustomWallpaperImageUrl", alternate = {"MicrosoftLauncherCustomWallpaperImageUrl"})
     @Expose
     public String microsoftLauncherCustomWallpaperImageUrl;
 
@@ -394,7 +394,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Dock Presence Allow User Modification.
      * Indicates whether or not the user can modify the device dock configuration on the device.
      */
-    @SerializedName("microsoftLauncherDockPresenceAllowUserModification")
+    @SerializedName(value = "microsoftLauncherDockPresenceAllowUserModification", alternate = {"MicrosoftLauncherDockPresenceAllowUserModification"})
     @Expose
     public Boolean microsoftLauncherDockPresenceAllowUserModification;
 
@@ -402,7 +402,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Dock Presence Configuration.
      * Indicates whether or not you want to configure the device dock.
      */
-    @SerializedName("microsoftLauncherDockPresenceConfiguration")
+    @SerializedName(value = "microsoftLauncherDockPresenceConfiguration", alternate = {"MicrosoftLauncherDockPresenceConfiguration"})
     @Expose
     public MicrosoftLauncherDockPresence microsoftLauncherDockPresenceConfiguration;
 
@@ -410,7 +410,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Feed Allow User Modification.
      * Indicates whether or not the user can modify the launcher feed on the device.
      */
-    @SerializedName("microsoftLauncherFeedAllowUserModification")
+    @SerializedName(value = "microsoftLauncherFeedAllowUserModification", alternate = {"MicrosoftLauncherFeedAllowUserModification"})
     @Expose
     public Boolean microsoftLauncherFeedAllowUserModification;
 
@@ -418,7 +418,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Feed Enabled.
      * Indicates whether or not you want to enable the launcher feed on the device.
      */
-    @SerializedName("microsoftLauncherFeedEnabled")
+    @SerializedName(value = "microsoftLauncherFeedEnabled", alternate = {"MicrosoftLauncherFeedEnabled"})
     @Expose
     public Boolean microsoftLauncherFeedEnabled;
 
@@ -426,7 +426,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Microsoft Launcher Search Bar Placement Configuration.
      * Indicates the search bar placement configuration on the device.
      */
-    @SerializedName("microsoftLauncherSearchBarPlacementConfiguration")
+    @SerializedName(value = "microsoftLauncherSearchBarPlacementConfiguration", alternate = {"MicrosoftLauncherSearchBarPlacementConfiguration"})
     @Expose
     public MicrosoftLauncherSearchBarPlacement microsoftLauncherSearchBarPlacementConfiguration;
 
@@ -434,7 +434,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Network Escape Hatch Allowed.
      * Indicates whether or not the device will allow connecting to a temporary network connection at boot time.
      */
-    @SerializedName("networkEscapeHatchAllowed")
+    @SerializedName(value = "networkEscapeHatchAllowed", alternate = {"NetworkEscapeHatchAllowed"})
     @Expose
     public Boolean networkEscapeHatchAllowed;
 
@@ -442,7 +442,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Nfc Block Outgoing Beam.
      * Indicates whether or not to block NFC outgoing beam.
      */
-    @SerializedName("nfcBlockOutgoingBeam")
+    @SerializedName(value = "nfcBlockOutgoingBeam", alternate = {"NfcBlockOutgoingBeam"})
     @Expose
     public Boolean nfcBlockOutgoingBeam;
 
@@ -450,7 +450,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Block Keyguard.
      * Indicates whether or not the keyguard is disabled.
      */
-    @SerializedName("passwordBlockKeyguard")
+    @SerializedName(value = "passwordBlockKeyguard", alternate = {"PasswordBlockKeyguard"})
     @Expose
     public Boolean passwordBlockKeyguard;
 
@@ -458,7 +458,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Block Keyguard Features.
      * List of device keyguard features to block. This collection can contain a maximum of 7 elements.
      */
-    @SerializedName("passwordBlockKeyguardFeatures")
+    @SerializedName(value = "passwordBlockKeyguardFeatures", alternate = {"PasswordBlockKeyguardFeatures"})
     @Expose
     public java.util.List<AndroidKeyguardFeature> passwordBlockKeyguardFeatures;
 
@@ -466,7 +466,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Expiration Days.
      * Indicates the amount of time that a password can be set for before it expires and a new password will be required. Valid values 1 to 365
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -474,7 +474,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Length.
      * Indicates the minimum length of the password required on the device. Valid values 4 to 16
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -482,7 +482,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Letter Characters.
      * Indicates the minimum number of letter characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumLetterCharacters")
+    @SerializedName(value = "passwordMinimumLetterCharacters", alternate = {"PasswordMinimumLetterCharacters"})
     @Expose
     public Integer passwordMinimumLetterCharacters;
 
@@ -490,7 +490,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Lower Case Characters.
      * Indicates the minimum number of lower case characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumLowerCaseCharacters")
+    @SerializedName(value = "passwordMinimumLowerCaseCharacters", alternate = {"PasswordMinimumLowerCaseCharacters"})
     @Expose
     public Integer passwordMinimumLowerCaseCharacters;
 
@@ -498,7 +498,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Non Letter Characters.
      * Indicates the minimum number of non-letter characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumNonLetterCharacters")
+    @SerializedName(value = "passwordMinimumNonLetterCharacters", alternate = {"PasswordMinimumNonLetterCharacters"})
     @Expose
     public Integer passwordMinimumNonLetterCharacters;
 
@@ -506,7 +506,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Numeric Characters.
      * Indicates the minimum number of numeric characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumNumericCharacters")
+    @SerializedName(value = "passwordMinimumNumericCharacters", alternate = {"PasswordMinimumNumericCharacters"})
     @Expose
     public Integer passwordMinimumNumericCharacters;
 
@@ -514,7 +514,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Symbol Characters.
      * Indicates the minimum number of symbol characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumSymbolCharacters")
+    @SerializedName(value = "passwordMinimumSymbolCharacters", alternate = {"PasswordMinimumSymbolCharacters"})
     @Expose
     public Integer passwordMinimumSymbolCharacters;
 
@@ -522,7 +522,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minimum Upper Case Characters.
      * Indicates the minimum number of upper case letter characters required for device password. Valid values 1 to 16
      */
-    @SerializedName("passwordMinimumUpperCaseCharacters")
+    @SerializedName(value = "passwordMinimumUpperCaseCharacters", alternate = {"PasswordMinimumUpperCaseCharacters"})
     @Expose
     public Integer passwordMinimumUpperCaseCharacters;
 
@@ -530,7 +530,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Minutes Of Inactivity Before Screen Timeout.
      * Minutes of inactivity before the screen times out.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
@@ -538,7 +538,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Previous Password Count To Block.
      * Indicates the length of password history, where the user will not be able to enter a new password that is the same as any password in the history. Valid values 0 to 24
      */
-    @SerializedName("passwordPreviousPasswordCountToBlock")
+    @SerializedName(value = "passwordPreviousPasswordCountToBlock", alternate = {"PasswordPreviousPasswordCountToBlock"})
     @Expose
     public Integer passwordPreviousPasswordCountToBlock;
 
@@ -546,7 +546,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Required Type.
      * Indicates the minimum password quality required on the device.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
 
@@ -554,7 +554,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Password Sign In Failure Count Before Factory Reset.
      * Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName(value = "passwordSignInFailureCountBeforeFactoryReset", alternate = {"PasswordSignInFailureCountBeforeFactoryReset"})
     @Expose
     public Integer passwordSignInFailureCountBeforeFactoryReset;
 
@@ -562,7 +562,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Personal Profile Apps Allow Install From Unknown Sources.
      * Indicates whether the user can install apps from unknown sources on the personal profile.
      */
-    @SerializedName("personalProfileAppsAllowInstallFromUnknownSources")
+    @SerializedName(value = "personalProfileAppsAllowInstallFromUnknownSources", alternate = {"PersonalProfileAppsAllowInstallFromUnknownSources"})
     @Expose
     public Boolean personalProfileAppsAllowInstallFromUnknownSources;
 
@@ -570,7 +570,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Personal Profile Camera Blocked.
      * Indicates whether to disable the use of the camera on the personal profile.
      */
-    @SerializedName("personalProfileCameraBlocked")
+    @SerializedName(value = "personalProfileCameraBlocked", alternate = {"PersonalProfileCameraBlocked"})
     @Expose
     public Boolean personalProfileCameraBlocked;
 
@@ -578,7 +578,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Personal Profile Screen Capture Blocked.
      * Indicates whether to disable the capability to take screenshots on the personal profile.
      */
-    @SerializedName("personalProfileScreenCaptureBlocked")
+    @SerializedName(value = "personalProfileScreenCaptureBlocked", alternate = {"PersonalProfileScreenCaptureBlocked"})
     @Expose
     public Boolean personalProfileScreenCaptureBlocked;
 
@@ -586,7 +586,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Play Store Mode.
      * Indicates the Play Store mode of the device.
      */
-    @SerializedName("playStoreMode")
+    @SerializedName(value = "playStoreMode", alternate = {"PlayStoreMode"})
     @Expose
     public AndroidDeviceOwnerPlayStoreMode playStoreMode;
 
@@ -594,7 +594,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Safe Boot Blocked.
      * Indicates whether or not rebooting the device into safe boot is disabled.
      */
-    @SerializedName("safeBootBlocked")
+    @SerializedName(value = "safeBootBlocked", alternate = {"SafeBootBlocked"})
     @Expose
     public Boolean safeBootBlocked;
 
@@ -602,7 +602,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Screen Capture Blocked.
      * Indicates whether or not to disable the capability to take screenshots.
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -610,7 +610,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Security Allow Debugging Features.
      * Indicates whether or not to block the user from enabling debugging features on the device.
      */
-    @SerializedName("securityAllowDebuggingFeatures")
+    @SerializedName(value = "securityAllowDebuggingFeatures", alternate = {"SecurityAllowDebuggingFeatures"})
     @Expose
     public Boolean securityAllowDebuggingFeatures;
 
@@ -618,7 +618,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Security Require Verify Apps.
      * Indicates whether or not verify apps is required.
      */
-    @SerializedName("securityRequireVerifyApps")
+    @SerializedName(value = "securityRequireVerifyApps", alternate = {"SecurityRequireVerifyApps"})
     @Expose
     public Boolean securityRequireVerifyApps;
 
@@ -626,7 +626,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Status Bar Blocked.
      * Indicates whether or the status bar is disabled, including notifications, quick settings and other screen overlays.
      */
-    @SerializedName("statusBarBlocked")
+    @SerializedName(value = "statusBarBlocked", alternate = {"StatusBarBlocked"})
     @Expose
     public Boolean statusBarBlocked;
 
@@ -634,7 +634,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Stay On Modes.
      * List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements.
      */
-    @SerializedName("stayOnModes")
+    @SerializedName(value = "stayOnModes", alternate = {"StayOnModes"})
     @Expose
     public java.util.List<AndroidDeviceOwnerBatteryPluggedMode> stayOnModes;
 
@@ -642,7 +642,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Storage Allow Usb.
      * Indicates whether or not to allow USB mass storage.
      */
-    @SerializedName("storageAllowUsb")
+    @SerializedName(value = "storageAllowUsb", alternate = {"StorageAllowUsb"})
     @Expose
     public Boolean storageAllowUsb;
 
@@ -650,7 +650,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Storage Block External Media.
      * Indicates whether or not to block external media.
      */
-    @SerializedName("storageBlockExternalMedia")
+    @SerializedName(value = "storageBlockExternalMedia", alternate = {"StorageBlockExternalMedia"})
     @Expose
     public Boolean storageBlockExternalMedia;
 
@@ -658,7 +658,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Storage Block Usb File Transfer.
      * Indicates whether or not to block USB file transfer.
      */
-    @SerializedName("storageBlockUsbFileTransfer")
+    @SerializedName(value = "storageBlockUsbFileTransfer", alternate = {"StorageBlockUsbFileTransfer"})
     @Expose
     public Boolean storageBlockUsbFileTransfer;
 
@@ -666,7 +666,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The System Update Install Type.
      * The type of system update configuration.
      */
-    @SerializedName("systemUpdateInstallType")
+    @SerializedName(value = "systemUpdateInstallType", alternate = {"SystemUpdateInstallType"})
     @Expose
     public AndroidDeviceOwnerSystemUpdateInstallType systemUpdateInstallType;
 
@@ -674,7 +674,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The System Update Window End Minutes After Midnight.
      * Indicates the number of minutes after midnight that the system update window ends. Valid values 0 to 1440
      */
-    @SerializedName("systemUpdateWindowEndMinutesAfterMidnight")
+    @SerializedName(value = "systemUpdateWindowEndMinutesAfterMidnight", alternate = {"SystemUpdateWindowEndMinutesAfterMidnight"})
     @Expose
     public Integer systemUpdateWindowEndMinutesAfterMidnight;
 
@@ -682,7 +682,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The System Update Window Start Minutes After Midnight.
      * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
      */
-    @SerializedName("systemUpdateWindowStartMinutesAfterMidnight")
+    @SerializedName(value = "systemUpdateWindowStartMinutesAfterMidnight", alternate = {"SystemUpdateWindowStartMinutesAfterMidnight"})
     @Expose
     public Integer systemUpdateWindowStartMinutesAfterMidnight;
 
@@ -690,7 +690,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The System Windows Blocked.
      * Whether or not to block Android system prompt windows, like toasts, phone activities, and system alerts.
      */
-    @SerializedName("systemWindowsBlocked")
+    @SerializedName(value = "systemWindowsBlocked", alternate = {"SystemWindowsBlocked"})
     @Expose
     public Boolean systemWindowsBlocked;
 
@@ -698,7 +698,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Users Block Add.
      * Indicates whether or not adding users and profiles is disabled.
      */
-    @SerializedName("usersBlockAdd")
+    @SerializedName(value = "usersBlockAdd", alternate = {"UsersBlockAdd"})
     @Expose
     public Boolean usersBlockAdd;
 
@@ -706,7 +706,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Users Block Remove.
      * Indicates whether or not to disable removing other users from the device.
      */
-    @SerializedName("usersBlockRemove")
+    @SerializedName(value = "usersBlockRemove", alternate = {"UsersBlockRemove"})
     @Expose
     public Boolean usersBlockRemove;
 
@@ -714,7 +714,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Volume Block Adjustment.
      * Indicates whether or not adjusting the master volume is disabled.
      */
-    @SerializedName("volumeBlockAdjustment")
+    @SerializedName(value = "volumeBlockAdjustment", alternate = {"VolumeBlockAdjustment"})
     @Expose
     public Boolean volumeBlockAdjustment;
 
@@ -722,7 +722,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Vpn Always On Lockdown Mode.
      * If an always on VPN package name is specified, whether or not to lock network traffic when that VPN is disconnected.
      */
-    @SerializedName("vpnAlwaysOnLockdownMode")
+    @SerializedName(value = "vpnAlwaysOnLockdownMode", alternate = {"VpnAlwaysOnLockdownMode"})
     @Expose
     public Boolean vpnAlwaysOnLockdownMode;
 
@@ -730,7 +730,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Vpn Always On Package Identifier.
      * Android app package name for app that will handle an always-on VPN connection.
      */
-    @SerializedName("vpnAlwaysOnPackageIdentifier")
+    @SerializedName(value = "vpnAlwaysOnPackageIdentifier", alternate = {"VpnAlwaysOnPackageIdentifier"})
     @Expose
     public String vpnAlwaysOnPackageIdentifier;
 
@@ -738,7 +738,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Wifi Block Edit Configurations.
      * Indicates whether or not to block the user from editing the wifi connection settings.
      */
-    @SerializedName("wifiBlockEditConfigurations")
+    @SerializedName(value = "wifiBlockEditConfigurations", alternate = {"WifiBlockEditConfigurations"})
     @Expose
     public Boolean wifiBlockEditConfigurations;
 
@@ -746,7 +746,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Wifi Block Edit Policy Defined Configurations.
      * Indicates whether or not to block the user from editing just the networks defined by the policy.
      */
-    @SerializedName("wifiBlockEditPolicyDefinedConfigurations")
+    @SerializedName(value = "wifiBlockEditPolicyDefinedConfigurations", alternate = {"WifiBlockEditPolicyDefinedConfigurations"})
     @Expose
     public Boolean wifiBlockEditPolicyDefinedConfigurations;
 
@@ -754,7 +754,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Expiration Days.
      * Indicates the number of days that a work profile password can be set before it expires and a new password will be required. Valid values 1 to 365
      */
-    @SerializedName("workProfilePasswordExpirationDays")
+    @SerializedName(value = "workProfilePasswordExpirationDays", alternate = {"WorkProfilePasswordExpirationDays"})
     @Expose
     public Integer workProfilePasswordExpirationDays;
 
@@ -762,7 +762,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Length.
      * Indicates the minimum length of the work profile password. Valid values 4 to 16
      */
-    @SerializedName("workProfilePasswordMinimumLength")
+    @SerializedName(value = "workProfilePasswordMinimumLength", alternate = {"WorkProfilePasswordMinimumLength"})
     @Expose
     public Integer workProfilePasswordMinimumLength;
 
@@ -770,7 +770,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Letter Characters.
      * Indicates the minimum number of letter characters required for the work profile password. Valid values 1 to 16
      */
-    @SerializedName("workProfilePasswordMinimumLetterCharacters")
+    @SerializedName(value = "workProfilePasswordMinimumLetterCharacters", alternate = {"WorkProfilePasswordMinimumLetterCharacters"})
     @Expose
     public Integer workProfilePasswordMinimumLetterCharacters;
 
@@ -778,7 +778,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Lower Case Characters.
      * Indicates the minimum number of lower-case characters required for the work profile password. Valid values 1 to 16
      */
-    @SerializedName("workProfilePasswordMinimumLowerCaseCharacters")
+    @SerializedName(value = "workProfilePasswordMinimumLowerCaseCharacters", alternate = {"WorkProfilePasswordMinimumLowerCaseCharacters"})
     @Expose
     public Integer workProfilePasswordMinimumLowerCaseCharacters;
 
@@ -786,7 +786,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Non Letter Characters.
      * Indicates the minimum number of non-letter characters required for the work profile password. Valid values 1 to 16
      */
-    @SerializedName("workProfilePasswordMinimumNonLetterCharacters")
+    @SerializedName(value = "workProfilePasswordMinimumNonLetterCharacters", alternate = {"WorkProfilePasswordMinimumNonLetterCharacters"})
     @Expose
     public Integer workProfilePasswordMinimumNonLetterCharacters;
 
@@ -794,7 +794,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Numeric Characters.
      * Indicates the minimum number of numeric characters required for the work profile password. Valid values 1 to 16
      */
-    @SerializedName("workProfilePasswordMinimumNumericCharacters")
+    @SerializedName(value = "workProfilePasswordMinimumNumericCharacters", alternate = {"WorkProfilePasswordMinimumNumericCharacters"})
     @Expose
     public Integer workProfilePasswordMinimumNumericCharacters;
 
@@ -802,7 +802,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Symbol Characters.
      * Indicates the minimum number of symbol characters required for the work profile password. Valid values 1 to 16
      */
-    @SerializedName("workProfilePasswordMinimumSymbolCharacters")
+    @SerializedName(value = "workProfilePasswordMinimumSymbolCharacters", alternate = {"WorkProfilePasswordMinimumSymbolCharacters"})
     @Expose
     public Integer workProfilePasswordMinimumSymbolCharacters;
 
@@ -810,7 +810,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Minimum Upper Case Characters.
      * Indicates the minimum number of upper-case letter characters required for the work profile password. Valid values 1 to 16
      */
-    @SerializedName("workProfilePasswordMinimumUpperCaseCharacters")
+    @SerializedName(value = "workProfilePasswordMinimumUpperCaseCharacters", alternate = {"WorkProfilePasswordMinimumUpperCaseCharacters"})
     @Expose
     public Integer workProfilePasswordMinimumUpperCaseCharacters;
 
@@ -818,7 +818,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Previous Password Count To Block.
      * Indicates the length of the work profile password history, where the user will not be able to enter a new password that is the same as any password in the history. Valid values 0 to 24
      */
-    @SerializedName("workProfilePasswordPreviousPasswordCountToBlock")
+    @SerializedName(value = "workProfilePasswordPreviousPasswordCountToBlock", alternate = {"WorkProfilePasswordPreviousPasswordCountToBlock"})
     @Expose
     public Integer workProfilePasswordPreviousPasswordCountToBlock;
 
@@ -826,7 +826,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Required Type.
      * Indicates the minimum password quality required on the work profile password.
      */
-    @SerializedName("workProfilePasswordRequiredType")
+    @SerializedName(value = "workProfilePasswordRequiredType", alternate = {"WorkProfilePasswordRequiredType"})
     @Expose
     public AndroidDeviceOwnerRequiredPasswordType workProfilePasswordRequiredType;
 
@@ -834,7 +834,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * The Work Profile Password Sign In Failure Count Before Factory Reset.
      * Indicates the number of times a user can enter an incorrect work profile password before the device is wiped. Valid values 4 to 11
      */
-    @SerializedName("workProfilePasswordSignInFailureCountBeforeFactoryReset")
+    @SerializedName(value = "workProfilePasswordSignInFailureCountBeforeFactoryReset", alternate = {"WorkProfilePasswordSignInFailureCountBeforeFactoryReset"})
     @Expose
     public Integer workProfilePasswordSignInFailureCountBeforeFactoryReset;
 

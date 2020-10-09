@@ -28,7 +28,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Allowed To Sign Up Email Based Subscriptions.
      * 
      */
-    @SerializedName("allowedToSignUpEmailBasedSubscriptions")
+    @SerializedName(value = "allowedToSignUpEmailBasedSubscriptions", alternate = {"AllowedToSignUpEmailBasedSubscriptions"})
     @Expose
     public Boolean allowedToSignUpEmailBasedSubscriptions;
 
@@ -36,7 +36,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Allowed To Use SSPR.
      * 
      */
-    @SerializedName("allowedToUseSSPR")
+    @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose
     public Boolean allowedToUseSSPR;
 
@@ -44,7 +44,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Allow Email Verified Users To Join Organization.
      * 
      */
-    @SerializedName("allowEmailVerifiedUsersToJoinOrganization")
+    @SerializedName(value = "allowEmailVerifiedUsersToJoinOrganization", alternate = {"AllowEmailVerifiedUsersToJoinOrganization"})
     @Expose
     public Boolean allowEmailVerifiedUsersToJoinOrganization;
 
@@ -52,7 +52,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Allow Invites From.
      * 
      */
-    @SerializedName("allowInvitesFrom")
+    @SerializedName(value = "allowInvitesFrom", alternate = {"AllowInvitesFrom"})
     @Expose
     public AllowInvitesFrom allowInvitesFrom;
 
@@ -60,7 +60,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Block Msol Power Shell.
      * 
      */
-    @SerializedName("blockMsolPowerShell")
+    @SerializedName(value = "blockMsolPowerShell", alternate = {"BlockMsolPowerShell"})
     @Expose
     public Boolean blockMsolPowerShell;
 
@@ -68,7 +68,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Default User Role Permissions.
      * 
      */
-    @SerializedName("defaultUserRolePermissions")
+    @SerializedName(value = "defaultUserRolePermissions", alternate = {"DefaultUserRolePermissions"})
     @Expose
     public DefaultUserRolePermissions defaultUserRolePermissions;
 
@@ -76,7 +76,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Enabled Preview Features.
      * 
      */
-    @SerializedName("enabledPreviewFeatures")
+    @SerializedName(value = "enabledPreviewFeatures", alternate = {"EnabledPreviewFeatures"})
     @Expose
     public java.util.List<String> enabledPreviewFeatures;
 
@@ -84,7 +84,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Guest User Role Id.
      * 
      */
-    @SerializedName("guestUserRoleId")
+    @SerializedName(value = "guestUserRoleId", alternate = {"GuestUserRoleId"})
     @Expose
     public java.util.UUID guestUserRoleId;
 
@@ -92,7 +92,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      * The Permission Grant Policy Ids Assigned To Default User Role.
      * 
      */
-    @SerializedName("permissionGrantPolicyIdsAssignedToDefaultUserRole")
+    @SerializedName(value = "permissionGrantPolicyIdsAssignedToDefaultUserRole", alternate = {"PermissionGrantPolicyIdsAssignedToDefaultUserRole"})
     @Expose
     public java.util.List<String> permissionGrantPolicyIdsAssignedToDefaultUserRole;
 

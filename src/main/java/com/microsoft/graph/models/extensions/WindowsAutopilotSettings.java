@@ -27,7 +27,7 @@ public class WindowsAutopilotSettings extends Entity implements IJsonBackedObjec
      * The Last Manual Sync Trigger Date Time.
      * Last data sync date time with DDS service.
      */
-    @SerializedName("lastManualSyncTriggerDateTime")
+    @SerializedName(value = "lastManualSyncTriggerDateTime", alternate = {"LastManualSyncTriggerDateTime"})
     @Expose
     public java.util.Calendar lastManualSyncTriggerDateTime;
 
@@ -35,7 +35,7 @@ public class WindowsAutopilotSettings extends Entity implements IJsonBackedObjec
      * The Last Sync Date Time.
      * Last data sync date time with DDS service.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -43,7 +43,7 @@ public class WindowsAutopilotSettings extends Entity implements IJsonBackedObjec
      * The Sync Status.
      * Indicates the status of sync with Device data sync (DDS) service.
      */
-    @SerializedName("syncStatus")
+    @SerializedName(value = "syncStatus", alternate = {"SyncStatus"})
     @Expose
     public WindowsAutopilotSyncStatus syncStatus;
 

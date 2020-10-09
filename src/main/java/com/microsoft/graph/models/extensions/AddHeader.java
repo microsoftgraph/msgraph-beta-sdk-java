@@ -27,7 +27,7 @@ public class AddHeader extends MarkContent implements IJsonBackedObject {
      * The Alignment.
      * 
      */
-    @SerializedName("alignment")
+    @SerializedName(value = "alignment", alternate = {"Alignment"})
     @Expose
     public Alignment alignment;
 
@@ -35,7 +35,7 @@ public class AddHeader extends MarkContent implements IJsonBackedObject {
      * The Margin.
      * 
      */
-    @SerializedName("margin")
+    @SerializedName(value = "margin", alternate = {"Margin"})
     @Expose
     public Integer margin;
 

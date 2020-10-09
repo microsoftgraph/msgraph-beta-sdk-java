@@ -37,7 +37,7 @@ public class AppCatalogs implements IJsonBackedObject {
      * The Teams Apps.
      * 
      */
-    @SerializedName("teamsApps")
+    @SerializedName(value = "teamsApps", alternate = {"TeamsApps"})
     @Expose
     public TeamsAppCollectionPage teamsApps;
 

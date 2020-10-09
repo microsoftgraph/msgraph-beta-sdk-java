@@ -45,7 +45,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Collate.
      * 
      */
-    @SerializedName("collate")
+    @SerializedName(value = "collate", alternate = {"Collate"})
     @Expose
     public Boolean collate;
 
@@ -53,7 +53,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Color Mode.
      * 
      */
-    @SerializedName("colorMode")
+    @SerializedName(value = "colorMode", alternate = {"ColorMode"})
     @Expose
     public PrintColorMode colorMode;
 
@@ -61,7 +61,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Copies.
      * 
      */
-    @SerializedName("copies")
+    @SerializedName(value = "copies", alternate = {"Copies"})
     @Expose
     public Integer copies;
 
@@ -69,7 +69,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Dpi.
      * 
      */
-    @SerializedName("dpi")
+    @SerializedName(value = "dpi", alternate = {"Dpi"})
     @Expose
     public Integer dpi;
 
@@ -77,7 +77,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Duplex Mode.
      * 
      */
-    @SerializedName("duplexMode")
+    @SerializedName(value = "duplexMode", alternate = {"DuplexMode"})
     @Expose
     public PrintDuplexMode duplexMode;
 
@@ -85,7 +85,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Feed Direction.
      * 
      */
-    @SerializedName("feedDirection")
+    @SerializedName(value = "feedDirection", alternate = {"FeedDirection"})
     @Expose
     public PrinterFeedDirection feedDirection;
 
@@ -93,7 +93,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Finishings.
      * 
      */
-    @SerializedName("finishings")
+    @SerializedName(value = "finishings", alternate = {"Finishings"})
     @Expose
     public java.util.List<PrintFinishing> finishings;
 
@@ -101,7 +101,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Fit Pdf To Page.
      * 
      */
-    @SerializedName("fitPdfToPage")
+    @SerializedName(value = "fitPdfToPage", alternate = {"FitPdfToPage"})
     @Expose
     public Boolean fitPdfToPage;
 
@@ -109,7 +109,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Input Bin.
      * 
      */
-    @SerializedName("inputBin")
+    @SerializedName(value = "inputBin", alternate = {"InputBin"})
     @Expose
     public String inputBin;
 
@@ -117,7 +117,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Margin.
      * 
      */
-    @SerializedName("margin")
+    @SerializedName(value = "margin", alternate = {"Margin"})
     @Expose
     public PrintMargin margin;
 
@@ -125,7 +125,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Media Size.
      * 
      */
-    @SerializedName("mediaSize")
+    @SerializedName(value = "mediaSize", alternate = {"MediaSize"})
     @Expose
     public String mediaSize;
 
@@ -133,7 +133,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Media Type.
      * 
      */
-    @SerializedName("mediaType")
+    @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
     public String mediaType;
 
@@ -141,7 +141,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Multipage Layout.
      * 
      */
-    @SerializedName("multipageLayout")
+    @SerializedName(value = "multipageLayout", alternate = {"MultipageLayout"})
     @Expose
     public PrintMultipageLayout multipageLayout;
 
@@ -149,7 +149,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Orientation.
      * 
      */
-    @SerializedName("orientation")
+    @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
     public PrintOrientation orientation;
 
@@ -157,7 +157,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Output Bin.
      * 
      */
-    @SerializedName("outputBin")
+    @SerializedName(value = "outputBin", alternate = {"OutputBin"})
     @Expose
     public String outputBin;
 
@@ -165,7 +165,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Page Ranges.
      * 
      */
-    @SerializedName("pageRanges")
+    @SerializedName(value = "pageRanges", alternate = {"PageRanges"})
     @Expose
     public java.util.List<IntegerRange> pageRanges;
 
@@ -173,7 +173,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Pages Per Sheet.
      * 
      */
-    @SerializedName("pagesPerSheet")
+    @SerializedName(value = "pagesPerSheet", alternate = {"PagesPerSheet"})
     @Expose
     public Integer pagesPerSheet;
 
@@ -181,7 +181,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Quality.
      * 
      */
-    @SerializedName("quality")
+    @SerializedName(value = "quality", alternate = {"Quality"})
     @Expose
     public PrintQuality quality;
 
@@ -189,7 +189,7 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
      * The Scaling.
      * 
      */
-    @SerializedName("scaling")
+    @SerializedName(value = "scaling", alternate = {"Scaling"})
     @Expose
     public PrintScaling scaling;
 

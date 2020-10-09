@@ -37,7 +37,7 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
      * The Current Began.
      * 
      */
-    @SerializedName("currentBegan")
+    @SerializedName(value = "currentBegan", alternate = {"CurrentBegan"})
     @Expose
     public java.util.Calendar currentBegan;
 
@@ -45,7 +45,7 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public SynchronizationError error;
 
@@ -53,7 +53,7 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
      * The Next Attempt.
      * 
      */
-    @SerializedName("nextAttempt")
+    @SerializedName(value = "nextAttempt", alternate = {"NextAttempt"})
     @Expose
     public java.util.Calendar nextAttempt;
 
@@ -61,7 +61,7 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
      * The Reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public QuarantineReason reason;
 
@@ -69,7 +69,7 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
      * The Series Began.
      * 
      */
-    @SerializedName("seriesBegan")
+    @SerializedName(value = "seriesBegan", alternate = {"SeriesBegan"})
     @Expose
     public java.util.Calendar seriesBegan;
 
@@ -77,7 +77,7 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
      * The Series Count.
      * 
      */
-    @SerializedName("seriesCount")
+    @SerializedName(value = "seriesCount", alternate = {"SeriesCount"})
     @Expose
     public Long seriesCount;
 

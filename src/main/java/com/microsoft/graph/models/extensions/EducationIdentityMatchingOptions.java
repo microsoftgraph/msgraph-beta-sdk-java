@@ -36,7 +36,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
      * The Applies To.
      * 
      */
-    @SerializedName("appliesTo")
+    @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
     public EducationUserRole appliesTo;
 
@@ -44,7 +44,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
      * The Source Property Name.
      * 
      */
-    @SerializedName("sourcePropertyName")
+    @SerializedName(value = "sourcePropertyName", alternate = {"SourcePropertyName"})
     @Expose
     public String sourcePropertyName;
 
@@ -52,7 +52,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
      * The Target Domain.
      * 
      */
-    @SerializedName("targetDomain")
+    @SerializedName(value = "targetDomain", alternate = {"TargetDomain"})
     @Expose
     public String targetDomain;
 
@@ -60,7 +60,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
      * The Target Property Name.
      * 
      */
-    @SerializedName("targetPropertyName")
+    @SerializedName(value = "targetPropertyName", alternate = {"TargetPropertyName"})
     @Expose
     public String targetPropertyName;
 

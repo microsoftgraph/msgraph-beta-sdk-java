@@ -36,7 +36,7 @@ public class AdminConsent implements IJsonBackedObject {
      * The Share APNSData.
      * The admin consent state of sharing user and device data to Apple.
      */
-    @SerializedName("shareAPNSData")
+    @SerializedName(value = "shareAPNSData", alternate = {"ShareAPNSData"})
     @Expose
     public AdminConsentState shareAPNSData;
 
@@ -44,7 +44,7 @@ public class AdminConsent implements IJsonBackedObject {
      * The Share User Experience Analytics Data.
      * Gets or sets the admin consent for sharing User experience analytics data.
      */
-    @SerializedName("shareUserExperienceAnalyticsData")
+    @SerializedName(value = "shareUserExperienceAnalyticsData", alternate = {"ShareUserExperienceAnalyticsData"})
     @Expose
     public AdminConsentState shareUserExperienceAnalyticsData;
 

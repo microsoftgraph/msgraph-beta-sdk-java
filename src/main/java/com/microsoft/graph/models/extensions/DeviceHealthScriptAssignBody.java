@@ -22,7 +22,7 @@ public class DeviceHealthScriptAssignBody {
      * The device Health Script Assignments.
      * 
      */
-    @SerializedName("deviceHealthScriptAssignments")
+    @SerializedName(value = "deviceHealthScriptAssignments", alternate = {"DeviceHealthScriptAssignments"})
     @Expose
     public java.util.List<DeviceHealthScriptAssignment> deviceHealthScriptAssignments;
 

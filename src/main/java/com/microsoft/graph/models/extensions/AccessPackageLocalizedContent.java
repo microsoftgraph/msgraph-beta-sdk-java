@@ -36,7 +36,7 @@ public class AccessPackageLocalizedContent implements IJsonBackedObject {
      * The Default Text.
      * 
      */
-    @SerializedName("defaultText")
+    @SerializedName(value = "defaultText", alternate = {"DefaultText"})
     @Expose
     public String defaultText;
 
@@ -44,7 +44,7 @@ public class AccessPackageLocalizedContent implements IJsonBackedObject {
      * The Localized Texts.
      * 
      */
-    @SerializedName("localizedTexts")
+    @SerializedName(value = "localizedTexts", alternate = {"LocalizedTexts"})
     @Expose
     public java.util.List<AccessPackageLocalizedText> localizedTexts;
 

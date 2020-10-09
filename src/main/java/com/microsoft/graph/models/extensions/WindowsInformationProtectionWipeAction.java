@@ -27,7 +27,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
      * The Last Check In Date Time.
      * Last checkin time of the device that was targeted by this wipe action.
      */
-    @SerializedName("lastCheckInDateTime")
+    @SerializedName(value = "lastCheckInDateTime", alternate = {"LastCheckInDateTime"})
     @Expose
     public java.util.Calendar lastCheckInDateTime;
 
@@ -35,7 +35,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
      * The Status.
      * Wipe action status.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ActionState status;
 
@@ -43,7 +43,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
      * The Targeted Device Mac Address.
      * Targeted device Mac address.
      */
-    @SerializedName("targetedDeviceMacAddress")
+    @SerializedName(value = "targetedDeviceMacAddress", alternate = {"TargetedDeviceMacAddress"})
     @Expose
     public String targetedDeviceMacAddress;
 
@@ -51,7 +51,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
      * The Targeted Device Name.
      * Targeted device name.
      */
-    @SerializedName("targetedDeviceName")
+    @SerializedName(value = "targetedDeviceName", alternate = {"TargetedDeviceName"})
     @Expose
     public String targetedDeviceName;
 
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
      * The Targeted Device Registration Id.
      * The DeviceRegistrationId being targeted by this wipe action.
      */
-    @SerializedName("targetedDeviceRegistrationId")
+    @SerializedName(value = "targetedDeviceRegistrationId", alternate = {"TargetedDeviceRegistrationId"})
     @Expose
     public String targetedDeviceRegistrationId;
 
@@ -67,7 +67,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
      * The Targeted User Id.
      * The UserId being targeted by this wipe action.
      */
-    @SerializedName("targetedUserId")
+    @SerializedName(value = "targetedUserId", alternate = {"TargetedUserId"})
     @Expose
     public String targetedUserId;
 

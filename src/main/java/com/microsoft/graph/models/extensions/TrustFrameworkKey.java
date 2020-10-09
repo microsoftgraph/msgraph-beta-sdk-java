@@ -35,7 +35,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The D.
      * 
      */
-    @SerializedName("d")
+    @SerializedName(value = "d", alternate = {"D"})
     @Expose
     public String d;
 
@@ -43,7 +43,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Dp.
      * 
      */
-    @SerializedName("dp")
+    @SerializedName(value = "dp", alternate = {"Dp"})
     @Expose
     public String dp;
 
@@ -51,7 +51,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Dq.
      * 
      */
-    @SerializedName("dq")
+    @SerializedName(value = "dq", alternate = {"Dq"})
     @Expose
     public String dq;
 
@@ -59,7 +59,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The E.
      * 
      */
-    @SerializedName("e")
+    @SerializedName(value = "e", alternate = {"E"})
     @Expose
     public String e;
 
@@ -67,7 +67,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Exp.
      * 
      */
-    @SerializedName("exp")
+    @SerializedName(value = "exp", alternate = {"Exp"})
     @Expose
     public Long exp;
 
@@ -75,7 +75,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The K.
      * 
      */
-    @SerializedName("k")
+    @SerializedName(value = "k", alternate = {"K"})
     @Expose
     public String k;
 
@@ -83,7 +83,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Kid.
      * 
      */
-    @SerializedName("kid")
+    @SerializedName(value = "kid", alternate = {"Kid"})
     @Expose
     public String kid;
 
@@ -91,7 +91,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Kty.
      * 
      */
-    @SerializedName("kty")
+    @SerializedName(value = "kty", alternate = {"Kty"})
     @Expose
     public String kty;
 
@@ -99,7 +99,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The N.
      * 
      */
-    @SerializedName("n")
+    @SerializedName(value = "n", alternate = {"N"})
     @Expose
     public String n;
 
@@ -107,7 +107,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Nbf.
      * 
      */
-    @SerializedName("nbf")
+    @SerializedName(value = "nbf", alternate = {"Nbf"})
     @Expose
     public Long nbf;
 
@@ -115,7 +115,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The P.
      * 
      */
-    @SerializedName("p")
+    @SerializedName(value = "p", alternate = {"P"})
     @Expose
     public String p;
 
@@ -123,7 +123,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Q.
      * 
      */
-    @SerializedName("q")
+    @SerializedName(value = "q", alternate = {"Q"})
     @Expose
     public String q;
 
@@ -131,7 +131,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Qi.
      * 
      */
-    @SerializedName("qi")
+    @SerializedName(value = "qi", alternate = {"Qi"})
     @Expose
     public String qi;
 
@@ -139,7 +139,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The Use.
      * 
      */
-    @SerializedName("use")
+    @SerializedName(value = "use", alternate = {"Use"})
     @Expose
     public String use;
 
@@ -147,7 +147,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The X5c.
      * 
      */
-    @SerializedName("x5c")
+    @SerializedName(value = "x5c", alternate = {"X5c"})
     @Expose
     public java.util.List<String> x5c;
 
@@ -155,7 +155,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
      * The X5t.
      * 
      */
-    @SerializedName("x5t")
+    @SerializedName(value = "x5t", alternate = {"X5t"})
     @Expose
     public String x5t;
 

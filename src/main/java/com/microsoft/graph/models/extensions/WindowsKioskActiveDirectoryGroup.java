@@ -26,7 +26,7 @@ public class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser implement
      * The Group Name.
      * The name of the AD group that will be locked to this kiosk configuration
      */
-    @SerializedName("groupName")
+    @SerializedName(value = "groupName", alternate = {"GroupName"})
     @Expose
     public String groupName;
 

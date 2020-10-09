@@ -22,7 +22,7 @@ public class GroupPolicyMigrationReportCreateMigrationReportBody {
      * The group Policy Object File.
      * 
      */
-    @SerializedName("groupPolicyObjectFile")
+    @SerializedName(value = "groupPolicyObjectFile", alternate = {"GroupPolicyObjectFile"})
     @Expose
     public GroupPolicyObjectFile groupPolicyObjectFile;
 

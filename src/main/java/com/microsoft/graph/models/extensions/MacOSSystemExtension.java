@@ -35,7 +35,7 @@ public class MacOSSystemExtension implements IJsonBackedObject {
      * The Bundle Id.
      * Gets or sets the bundle identifier of the system extension.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -43,7 +43,7 @@ public class MacOSSystemExtension implements IJsonBackedObject {
      * The Team Identifier.
      * Gets or sets the team identifier that was used to sign the system extension.
      */
-    @SerializedName("teamIdentifier")
+    @SerializedName(value = "teamIdentifier", alternate = {"TeamIdentifier"})
     @Expose
     public String teamIdentifier;
 

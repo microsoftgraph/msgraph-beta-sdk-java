@@ -27,7 +27,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * The Action Failure Reason.
      * The reason for the revoke licenses action failure.
      */
-    @SerializedName("actionFailureReason")
+    @SerializedName(value = "actionFailureReason", alternate = {"ActionFailureReason"})
     @Expose
     public VppTokenActionFailureReason actionFailureReason;
 
@@ -35,7 +35,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * The Failed Licenses Count.
      * A count of the number of licenses that failed to revoke.
      */
-    @SerializedName("failedLicensesCount")
+    @SerializedName(value = "failedLicensesCount", alternate = {"FailedLicensesCount"})
     @Expose
     public Integer failedLicensesCount;
 
@@ -43,7 +43,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * The Total Licenses Count.
      * A count of the number of licenses that were attempted to revoke.
      */
-    @SerializedName("totalLicensesCount")
+    @SerializedName(value = "totalLicensesCount", alternate = {"TotalLicensesCount"})
     @Expose
     public Integer totalLicensesCount;
 

@@ -35,7 +35,7 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
      * The Content.
      * The contents of the uploaded ADML file.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public byte[] content;
 
@@ -43,7 +43,7 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
      * The File Name.
      * The file name of the uploaded ADML file.
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -51,7 +51,7 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
      * The Id.
      * Key of the entity.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -59,7 +59,7 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
      * The Language Code.
      * The language code of the uploaded ADML file.
      */
-    @SerializedName("languageCode")
+    @SerializedName(value = "languageCode", alternate = {"LanguageCode"})
     @Expose
     public String languageCode;
 
@@ -67,7 +67,7 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 

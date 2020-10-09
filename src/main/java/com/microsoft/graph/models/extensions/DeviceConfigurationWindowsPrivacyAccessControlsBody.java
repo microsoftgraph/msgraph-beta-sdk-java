@@ -22,7 +22,7 @@ public class DeviceConfigurationWindowsPrivacyAccessControlsBody {
      * The windows Privacy Access Controls.
      * 
      */
-    @SerializedName("windowsPrivacyAccessControls")
+    @SerializedName(value = "windowsPrivacyAccessControls", alternate = {"WindowsPrivacyAccessControls"})
     @Expose
     public java.util.List<WindowsPrivacyDataAccessControlItem> windowsPrivacyAccessControls;
 

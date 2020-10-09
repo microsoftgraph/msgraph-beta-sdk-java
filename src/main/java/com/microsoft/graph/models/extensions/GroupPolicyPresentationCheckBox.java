@@ -26,7 +26,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyPresentation imp
      * The Default Checked.
      * Default value for the check box. The default value is false.
      */
-    @SerializedName("defaultChecked")
+    @SerializedName(value = "defaultChecked", alternate = {"DefaultChecked"})
     @Expose
     public Boolean defaultChecked;
 

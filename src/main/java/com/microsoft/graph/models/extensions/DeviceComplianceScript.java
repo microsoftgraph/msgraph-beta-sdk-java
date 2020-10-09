@@ -32,7 +32,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Created Date Time.
      * The timestamp of when the device compliance script was created. This property is read-only.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -40,7 +40,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Description.
      * Description of the device compliance script
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -48,7 +48,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Detection Script Content.
      * The entire content of the detection powershell script
      */
-    @SerializedName("detectionScriptContent")
+    @SerializedName(value = "detectionScriptContent", alternate = {"DetectionScriptContent"})
     @Expose
     public byte[] detectionScriptContent;
 
@@ -56,7 +56,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Display Name.
      * Name of the device compliance script
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -64,7 +64,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Enforce Signature Check.
      * Indicate whether the script signature needs be checked
      */
-    @SerializedName("enforceSignatureCheck")
+    @SerializedName(value = "enforceSignatureCheck", alternate = {"EnforceSignatureCheck"})
     @Expose
     public Boolean enforceSignatureCheck;
 
@@ -72,7 +72,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Last Modified Date Time.
      * The timestamp of when the device compliance script was modified. This property is read-only.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -80,7 +80,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Publisher.
      * Name of the device compliance script publisher
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -88,7 +88,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Role Scope Tag Ids.
      * List of Scope Tag IDs for the device compliance script
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -96,7 +96,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Run As32Bit.
      * Indicate whether PowerShell script(s) should run as 32-bit
      */
-    @SerializedName("runAs32Bit")
+    @SerializedName(value = "runAs32Bit", alternate = {"RunAs32Bit"})
     @Expose
     public Boolean runAs32Bit;
 
@@ -104,7 +104,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Run As Account.
      * Indicates the type of execution context
      */
-    @SerializedName("runAsAccount")
+    @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose
     public RunAsAccountType runAsAccount;
 
@@ -112,7 +112,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Version.
      * Version of the device compliance script
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 
@@ -120,7 +120,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Assignments.
      * The list of group assignments for the device compliance script
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceHealthScriptAssignmentCollectionPage assignments;
 
@@ -128,7 +128,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Device Run States.
      * List of run states for the device compliance script across all devices
      */
-    @SerializedName("deviceRunStates")
+    @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
     public DeviceComplianceScriptDeviceStateCollectionPage deviceRunStates;
 
@@ -136,7 +136,7 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Run Summary.
      * High level run summary for device compliance script.
      */
-    @SerializedName("runSummary")
+    @SerializedName(value = "runSummary", alternate = {"RunSummary"})
     @Expose
     public DeviceComplianceScriptRunSummary runSummary;
 

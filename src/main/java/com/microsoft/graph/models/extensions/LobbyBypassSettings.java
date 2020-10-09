@@ -36,7 +36,7 @@ public class LobbyBypassSettings implements IJsonBackedObject {
      * The Is Dial In Bypass Enabled.
      * 
      */
-    @SerializedName("isDialInBypassEnabled")
+    @SerializedName(value = "isDialInBypassEnabled", alternate = {"IsDialInBypassEnabled"})
     @Expose
     public Boolean isDialInBypassEnabled;
 
@@ -44,7 +44,7 @@ public class LobbyBypassSettings implements IJsonBackedObject {
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public LobbyBypassScope scope;
 

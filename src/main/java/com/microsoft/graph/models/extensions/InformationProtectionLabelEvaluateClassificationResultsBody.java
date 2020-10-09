@@ -24,7 +24,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsBody {
      * The content Info.
      * 
      */
-    @SerializedName("contentInfo")
+    @SerializedName(value = "contentInfo", alternate = {"ContentInfo"})
     @Expose
     public ContentInfo contentInfo;
 
@@ -32,7 +32,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsBody {
      * The classification Results.
      * 
      */
-    @SerializedName("classificationResults")
+    @SerializedName(value = "classificationResults", alternate = {"ClassificationResults"})
     @Expose
     public java.util.List<ClassificationResult> classificationResults;
 

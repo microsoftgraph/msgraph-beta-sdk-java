@@ -37,7 +37,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public PublicError error;
 
@@ -45,7 +45,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
      * The Evaluation Result.
      * 
      */
-    @SerializedName("evaluationResult")
+    @SerializedName(value = "evaluationResult", alternate = {"EvaluationResult"})
     @Expose
     public java.util.List<String> evaluationResult;
 
@@ -53,7 +53,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
      * The Evaluation Succeeded.
      * 
      */
-    @SerializedName("evaluationSucceeded")
+    @SerializedName(value = "evaluationSucceeded", alternate = {"EvaluationSucceeded"})
     @Expose
     public Boolean evaluationSucceeded;
 
@@ -61,7 +61,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
      * The Parsed Expression.
      * 
      */
-    @SerializedName("parsedExpression")
+    @SerializedName(value = "parsedExpression", alternate = {"ParsedExpression"})
     @Expose
     public AttributeMappingSource parsedExpression;
 
@@ -69,7 +69,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
      * The Parsing Succeeded.
      * 
      */
-    @SerializedName("parsingSucceeded")
+    @SerializedName(value = "parsingSucceeded", alternate = {"ParsingSucceeded"})
     @Expose
     public Boolean parsingSucceeded;
 

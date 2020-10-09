@@ -35,7 +35,7 @@ public class MacOSLaunchItem implements IJsonBackedObject {
      * The Hide.
      * Whether or not to hide the item from the Users and Groups List.
      */
-    @SerializedName("hide")
+    @SerializedName(value = "hide", alternate = {"Hide"})
     @Expose
     public Boolean hide;
 
@@ -43,7 +43,7 @@ public class MacOSLaunchItem implements IJsonBackedObject {
      * The Path.
      * Path to the launch item.
      */
-    @SerializedName("path")
+    @SerializedName(value = "path", alternate = {"Path"})
     @Expose
     public String path;
 

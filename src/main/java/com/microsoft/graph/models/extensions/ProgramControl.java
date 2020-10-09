@@ -29,7 +29,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Control Id.
      * 
      */
-    @SerializedName("controlId")
+    @SerializedName(value = "controlId", alternate = {"ControlId"})
     @Expose
     public String controlId;
 
@@ -37,7 +37,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Control Type Id.
      * 
      */
-    @SerializedName("controlTypeId")
+    @SerializedName(value = "controlTypeId", alternate = {"ControlTypeId"})
     @Expose
     public String controlTypeId;
 
@@ -45,7 +45,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -53,7 +53,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Owner.
      * 
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public UserIdentity owner;
 
@@ -69,7 +69,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Program Id.
      * 
      */
-    @SerializedName("programId")
+    @SerializedName(value = "programId", alternate = {"ProgramId"})
     @Expose
     public String programId;
 
@@ -77,7 +77,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Resource.
      * 
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public ProgramResource resource;
 
@@ -85,7 +85,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -93,7 +93,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
      * The Program.
      * 
      */
-    @SerializedName("program")
+    @SerializedName(value = "program", alternate = {"Program"})
     @Expose
     public Program program;
 

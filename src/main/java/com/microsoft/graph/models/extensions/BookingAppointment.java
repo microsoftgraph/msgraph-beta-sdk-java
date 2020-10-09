@@ -28,10 +28,18 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Additional Information.
+     * 
+     */
+    @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
+    @Expose
+    public String additionalInformation;
+
+    /**
      * The Customer Email Address.
      * 
      */
-    @SerializedName("customerEmailAddress")
+    @SerializedName(value = "customerEmailAddress", alternate = {"CustomerEmailAddress"})
     @Expose
     public String customerEmailAddress;
 
@@ -39,7 +47,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Customer Id.
      * If CustomerId is not specified when an appointment is created then a new customer is created based on the appointment customer information. Once set, the customerId should be considered immutable.
      */
-    @SerializedName("customerId")
+    @SerializedName(value = "customerId", alternate = {"CustomerId"})
     @Expose
     public String customerId;
 
@@ -47,7 +55,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Customer Location.
      * 
      */
-    @SerializedName("customerLocation")
+    @SerializedName(value = "customerLocation", alternate = {"CustomerLocation"})
     @Expose
     public Location customerLocation;
 
@@ -55,7 +63,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Customer Name.
      * 
      */
-    @SerializedName("customerName")
+    @SerializedName(value = "customerName", alternate = {"CustomerName"})
     @Expose
     public String customerName;
 
@@ -63,7 +71,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Customer Notes.
      * The value of this property is only available when reading an individual booking appointment by id. Its value can only be set when creating a new appointment with a new customer, ie, without specifying a CustomerId. After that, the property is computed from the customer represented by CustomerId.
      */
-    @SerializedName("customerNotes")
+    @SerializedName(value = "customerNotes", alternate = {"CustomerNotes"})
     @Expose
     public String customerNotes;
 
@@ -71,7 +79,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Customer Phone.
      * 
      */
-    @SerializedName("customerPhone")
+    @SerializedName(value = "customerPhone", alternate = {"CustomerPhone"})
     @Expose
     public String customerPhone;
 
@@ -79,7 +87,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public javax.xml.datatype.Duration duration;
 
@@ -87,7 +95,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The End.
      * 
      */
-    @SerializedName("end")
+    @SerializedName(value = "end", alternate = {"End"})
     @Expose
     public DateTimeTimeZone end;
 
@@ -95,7 +103,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Invoice Amount.
      * 
      */
-    @SerializedName("invoiceAmount")
+    @SerializedName(value = "invoiceAmount", alternate = {"InvoiceAmount"})
     @Expose
     public Double invoiceAmount;
 
@@ -103,7 +111,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Invoice Date.
      * 
      */
-    @SerializedName("invoiceDate")
+    @SerializedName(value = "invoiceDate", alternate = {"InvoiceDate"})
     @Expose
     public DateTimeTimeZone invoiceDate;
 
@@ -111,7 +119,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Invoice Id.
      * 
      */
-    @SerializedName("invoiceId")
+    @SerializedName(value = "invoiceId", alternate = {"InvoiceId"})
     @Expose
     public String invoiceId;
 
@@ -119,7 +127,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Invoice Status.
      * 
      */
-    @SerializedName("invoiceStatus")
+    @SerializedName(value = "invoiceStatus", alternate = {"InvoiceStatus"})
     @Expose
     public BookingInvoiceStatus invoiceStatus;
 
@@ -127,15 +135,31 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Invoice Url.
      * 
      */
-    @SerializedName("invoiceUrl")
+    @SerializedName(value = "invoiceUrl", alternate = {"InvoiceUrl"})
     @Expose
     public String invoiceUrl;
+
+    /**
+     * The Is Location Online.
+     * 
+     */
+    @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
+    @Expose
+    public Boolean isLocationOnline;
+
+    /**
+     * The Online Meeting Url.
+     * 
+     */
+    @SerializedName(value = "onlineMeetingUrl", alternate = {"OnlineMeetingUrl"})
+    @Expose
+    public String onlineMeetingUrl;
 
     /**
      * The Opt Out Of Customer Email.
      * 
      */
-    @SerializedName("optOutOfCustomerEmail")
+    @SerializedName(value = "optOutOfCustomerEmail", alternate = {"OptOutOfCustomerEmail"})
     @Expose
     public Boolean optOutOfCustomerEmail;
 
@@ -143,7 +167,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Post Buffer.
      * 
      */
-    @SerializedName("postBuffer")
+    @SerializedName(value = "postBuffer", alternate = {"PostBuffer"})
     @Expose
     public javax.xml.datatype.Duration postBuffer;
 
@@ -151,7 +175,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Pre Buffer.
      * 
      */
-    @SerializedName("preBuffer")
+    @SerializedName(value = "preBuffer", alternate = {"PreBuffer"})
     @Expose
     public javax.xml.datatype.Duration preBuffer;
 
@@ -159,7 +183,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Price.
      * 
      */
-    @SerializedName("price")
+    @SerializedName(value = "price", alternate = {"Price"})
     @Expose
     public Double price;
 
@@ -167,7 +191,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Price Type.
      * 
      */
-    @SerializedName("priceType")
+    @SerializedName(value = "priceType", alternate = {"PriceType"})
     @Expose
     public BookingPriceType priceType;
 
@@ -175,7 +199,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Reminders.
      * The value of this property is only available when reading an individual booking appointment by id.
      */
-    @SerializedName("reminders")
+    @SerializedName(value = "reminders", alternate = {"Reminders"})
     @Expose
     public java.util.List<BookingReminder> reminders;
 
@@ -183,7 +207,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Self Service Appointment Id.
      * 
      */
-    @SerializedName("selfServiceAppointmentId")
+    @SerializedName(value = "selfServiceAppointmentId", alternate = {"SelfServiceAppointmentId"})
     @Expose
     public String selfServiceAppointmentId;
 
@@ -191,7 +215,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Service Id.
      * The id of the booking service associated with this appointment.
      */
-    @SerializedName("serviceId")
+    @SerializedName(value = "serviceId", alternate = {"ServiceId"})
     @Expose
     public String serviceId;
 
@@ -199,7 +223,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Service Location.
      * 
      */
-    @SerializedName("serviceLocation")
+    @SerializedName(value = "serviceLocation", alternate = {"ServiceLocation"})
     @Expose
     public Location serviceLocation;
 
@@ -207,7 +231,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Service Name.
      * This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the service id.
      */
-    @SerializedName("serviceName")
+    @SerializedName(value = "serviceName", alternate = {"ServiceName"})
     @Expose
     public String serviceName;
 
@@ -215,7 +239,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Service Notes.
      * The value of this property is only available when reading an individual booking appointment by id.
      */
-    @SerializedName("serviceNotes")
+    @SerializedName(value = "serviceNotes", alternate = {"ServiceNotes"})
     @Expose
     public String serviceNotes;
 
@@ -223,7 +247,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Staff Member Ids.
      * 
      */
-    @SerializedName("staffMemberIds")
+    @SerializedName(value = "staffMemberIds", alternate = {"StaffMemberIds"})
     @Expose
     public java.util.List<String> staffMemberIds;
 
@@ -231,7 +255,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
      * The Start.
      * 
      */
-    @SerializedName("start")
+    @SerializedName(value = "start", alternate = {"Start"})
     @Expose
     public DateTimeTimeZone start;
 

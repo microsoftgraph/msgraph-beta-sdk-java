@@ -27,7 +27,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * The Example Json.
      * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
      */
-    @SerializedName("exampleJson")
+    @SerializedName(value = "exampleJson", alternate = {"ExampleJson"})
     @Expose
     public byte[] exampleJson;
 
@@ -35,7 +35,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * The Nested Schema Items.
      * Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
      */
-    @SerializedName("nestedSchemaItems")
+    @SerializedName(value = "nestedSchemaItems", alternate = {"NestedSchemaItems"})
     @Expose
     public java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> nestedSchemaItems;
 
@@ -43,7 +43,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * The Schema Items.
      * Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
      */
-    @SerializedName("schemaItems")
+    @SerializedName(value = "schemaItems", alternate = {"SchemaItems"})
     @Expose
     public java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> schemaItems;
 

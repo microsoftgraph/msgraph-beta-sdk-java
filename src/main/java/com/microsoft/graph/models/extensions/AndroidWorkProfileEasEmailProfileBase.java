@@ -31,7 +31,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Authentication Method.
      * Authentication method for Exchange ActiveSync.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public EasAuthenticationMethod authenticationMethod;
 
@@ -39,7 +39,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Duration Of Email To Sync.
      * Duration of time email should be synced to.
      */
-    @SerializedName("durationOfEmailToSync")
+    @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
     public EmailSyncDuration durationOfEmailToSync;
 
@@ -47,7 +47,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Email Address Source.
      * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("emailAddressSource")
+    @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
     public UserEmailSource emailAddressSource;
 
@@ -55,7 +55,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Host Name.
      * Exchange location (URL) that the mail app connects to.
      */
-    @SerializedName("hostName")
+    @SerializedName(value = "hostName", alternate = {"HostName"})
     @Expose
     public String hostName;
 
@@ -63,7 +63,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Require Ssl.
      * Indicates whether or not to use SSL.
      */
-    @SerializedName("requireSsl")
+    @SerializedName(value = "requireSsl", alternate = {"RequireSsl"})
     @Expose
     public Boolean requireSsl;
 
@@ -71,7 +71,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Username Source.
      * Username attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("usernameSource")
+    @SerializedName(value = "usernameSource", alternate = {"UsernameSource"})
     @Expose
     public AndroidUsernameSource usernameSource;
 
@@ -79,7 +79,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * The Identity Certificate.
      * Identity certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public AndroidWorkProfileCertificateProfileBase identityCertificate;
 

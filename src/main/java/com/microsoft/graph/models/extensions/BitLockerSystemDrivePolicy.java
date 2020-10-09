@@ -38,7 +38,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Encryption Method.
      * Select the encryption method for operating system drives.
      */
-    @SerializedName("encryptionMethod")
+    @SerializedName(value = "encryptionMethod", alternate = {"EncryptionMethod"})
     @Expose
     public BitLockerEncryptionMethod encryptionMethod;
 
@@ -46,7 +46,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Minimum Pin Length.
      * Indicates the minimum length of startup pin. Valid values 4 to 20
      */
-    @SerializedName("minimumPinLength")
+    @SerializedName(value = "minimumPinLength", alternate = {"MinimumPinLength"})
     @Expose
     public Integer minimumPinLength;
 
@@ -54,7 +54,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Preboot Recovery Enable Message And Url.
      * Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
      */
-    @SerializedName("prebootRecoveryEnableMessageAndUrl")
+    @SerializedName(value = "prebootRecoveryEnableMessageAndUrl", alternate = {"PrebootRecoveryEnableMessageAndUrl"})
     @Expose
     public Boolean prebootRecoveryEnableMessageAndUrl;
 
@@ -62,7 +62,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Preboot Recovery Message.
      * Defines a custom recovery message.
      */
-    @SerializedName("prebootRecoveryMessage")
+    @SerializedName(value = "prebootRecoveryMessage", alternate = {"PrebootRecoveryMessage"})
     @Expose
     public String prebootRecoveryMessage;
 
@@ -70,7 +70,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Preboot Recovery Url.
      * Defines a custom recovery URL.
      */
-    @SerializedName("prebootRecoveryUrl")
+    @SerializedName(value = "prebootRecoveryUrl", alternate = {"PrebootRecoveryUrl"})
     @Expose
     public String prebootRecoveryUrl;
 
@@ -78,7 +78,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Recovery Options.
      * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
      */
-    @SerializedName("recoveryOptions")
+    @SerializedName(value = "recoveryOptions", alternate = {"RecoveryOptions"})
     @Expose
     public BitLockerRecoveryOptions recoveryOptions;
 
@@ -86,7 +86,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Startup Authentication Block Without Tpm Chip.
      * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
      */
-    @SerializedName("startupAuthenticationBlockWithoutTpmChip")
+    @SerializedName(value = "startupAuthenticationBlockWithoutTpmChip", alternate = {"StartupAuthenticationBlockWithoutTpmChip"})
     @Expose
     public Boolean startupAuthenticationBlockWithoutTpmChip;
 
@@ -94,7 +94,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Startup Authentication Required.
      * Require additional authentication at startup.
      */
-    @SerializedName("startupAuthenticationRequired")
+    @SerializedName(value = "startupAuthenticationRequired", alternate = {"StartupAuthenticationRequired"})
     @Expose
     public Boolean startupAuthenticationRequired;
 
@@ -102,7 +102,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Startup Authentication Tpm Key Usage.
      * Indicates if TPM startup key is allowed/required/disallowed.
      */
-    @SerializedName("startupAuthenticationTpmKeyUsage")
+    @SerializedName(value = "startupAuthenticationTpmKeyUsage", alternate = {"StartupAuthenticationTpmKeyUsage"})
     @Expose
     public ConfigurationUsage startupAuthenticationTpmKeyUsage;
 
@@ -110,7 +110,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Startup Authentication Tpm Pin And Key Usage.
      * Indicates if TPM startup pin key and key are allowed/required/disallowed.
      */
-    @SerializedName("startupAuthenticationTpmPinAndKeyUsage")
+    @SerializedName(value = "startupAuthenticationTpmPinAndKeyUsage", alternate = {"StartupAuthenticationTpmPinAndKeyUsage"})
     @Expose
     public ConfigurationUsage startupAuthenticationTpmPinAndKeyUsage;
 
@@ -118,7 +118,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Startup Authentication Tpm Pin Usage.
      * Indicates if TPM startup pin is allowed/required/disallowed.
      */
-    @SerializedName("startupAuthenticationTpmPinUsage")
+    @SerializedName(value = "startupAuthenticationTpmPinUsage", alternate = {"StartupAuthenticationTpmPinUsage"})
     @Expose
     public ConfigurationUsage startupAuthenticationTpmPinUsage;
 
@@ -126,7 +126,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
      * The Startup Authentication Tpm Usage.
      * Indicates if TPM startup is allowed/required/disallowed.
      */
-    @SerializedName("startupAuthenticationTpmUsage")
+    @SerializedName(value = "startupAuthenticationTpmUsage", alternate = {"StartupAuthenticationTpmUsage"})
     @Expose
     public ConfigurationUsage startupAuthenticationTpmUsage;
 

@@ -31,7 +31,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Certificate Store.
      * Target store certificate
      */
-    @SerializedName("certificateStore")
+    @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
     public CertificateStore certificateStore;
 
@@ -39,7 +39,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Certificate Template Name.
      * PKCS Certificate Template Name
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName(value = "certificateTemplateName", alternate = {"CertificateTemplateName"})
     @Expose
     public String certificateTemplateName;
 
@@ -47,7 +47,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Certification Authority.
      * PKCS Certification Authority
      */
-    @SerializedName("certificationAuthority")
+    @SerializedName(value = "certificationAuthority", alternate = {"CertificationAuthority"})
     @Expose
     public String certificationAuthority;
 
@@ -55,7 +55,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Certification Authority Name.
      * PKCS Certification Authority Name
      */
-    @SerializedName("certificationAuthorityName")
+    @SerializedName(value = "certificationAuthorityName", alternate = {"CertificationAuthorityName"})
     @Expose
     public String certificationAuthorityName;
 
@@ -63,7 +63,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Certification Authority Type.
      * Certification authority type
      */
-    @SerializedName("certificationAuthorityType")
+    @SerializedName(value = "certificationAuthorityType", alternate = {"CertificationAuthorityType"})
     @Expose
     public DeviceManagementCertificationAuthority certificationAuthorityType;
 
@@ -71,7 +71,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Custom Subject Alternative Names.
      * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("customSubjectAlternativeNames")
+    @SerializedName(value = "customSubjectAlternativeNames", alternate = {"CustomSubjectAlternativeNames"})
     @Expose
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
-    @SerializedName("subjectAlternativeNameFormatString")
+    @SerializedName(value = "subjectAlternativeNameFormatString", alternate = {"SubjectAlternativeNameFormatString"})
     @Expose
     public String subjectAlternativeNameFormatString;
 
@@ -87,7 +87,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Subject Name Format String.
      * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
-    @SerializedName("subjectNameFormatString")
+    @SerializedName(value = "subjectNameFormatString", alternate = {"SubjectNameFormatString"})
     @Expose
     public String subjectNameFormatString;
 
@@ -95,7 +95,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 

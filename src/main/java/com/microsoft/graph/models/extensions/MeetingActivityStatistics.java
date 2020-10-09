@@ -26,7 +26,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      * The After Hours.
      * 
      */
-    @SerializedName("afterHours")
+    @SerializedName(value = "afterHours", alternate = {"AfterHours"})
     @Expose
     public javax.xml.datatype.Duration afterHours;
 
@@ -34,7 +34,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      * The Conflicting.
      * 
      */
-    @SerializedName("conflicting")
+    @SerializedName(value = "conflicting", alternate = {"Conflicting"})
     @Expose
     public javax.xml.datatype.Duration conflicting;
 
@@ -42,7 +42,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      * The Long.
      * 
      */
-    @SerializedName("long")
+    @SerializedName(value = "long", alternate = {"Long"})
     @Expose
     public javax.xml.datatype.Duration msgraphLong;
 
@@ -50,7 +50,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      * The Multitasking.
      * 
      */
-    @SerializedName("multitasking")
+    @SerializedName(value = "multitasking", alternate = {"Multitasking"})
     @Expose
     public javax.xml.datatype.Duration multitasking;
 
@@ -58,7 +58,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      * The Organized.
      * 
      */
-    @SerializedName("organized")
+    @SerializedName(value = "organized", alternate = {"Organized"})
     @Expose
     public javax.xml.datatype.Duration organized;
 
@@ -66,7 +66,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      * The Recurring.
      * 
      */
-    @SerializedName("recurring")
+    @SerializedName(value = "recurring", alternate = {"Recurring"})
     @Expose
     public javax.xml.datatype.Duration recurring;
 

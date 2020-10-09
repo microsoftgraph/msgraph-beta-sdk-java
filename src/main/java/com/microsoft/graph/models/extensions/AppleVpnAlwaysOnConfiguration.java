@@ -38,7 +38,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Air Print Exception Action.
      * Determine whether AirPrint service will be exempt from the always-on VPN connection
      */
-    @SerializedName("airPrintExceptionAction")
+    @SerializedName(value = "airPrintExceptionAction", alternate = {"AirPrintExceptionAction"})
     @Expose
     public VpnServiceExceptionAction airPrintExceptionAction;
 
@@ -46,7 +46,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Allow All Captive Network Plugins.
      * Specifies whether traffic from all captive network plugins should be allowed outside the vpn
      */
-    @SerializedName("allowAllCaptiveNetworkPlugins")
+    @SerializedName(value = "allowAllCaptiveNetworkPlugins", alternate = {"AllowAllCaptiveNetworkPlugins"})
     @Expose
     public Boolean allowAllCaptiveNetworkPlugins;
 
@@ -54,7 +54,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Allow Captive Web Sheet.
      * Determines whether traffic from the Websheet app is allowed outside of the VPN
      */
-    @SerializedName("allowCaptiveWebSheet")
+    @SerializedName(value = "allowCaptiveWebSheet", alternate = {"AllowCaptiveWebSheet"})
     @Expose
     public Boolean allowCaptiveWebSheet;
 
@@ -62,7 +62,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Allowed Captive Network Plugins.
      * Determines whether all, some, or no non-native captive networking apps are allowed
      */
-    @SerializedName("allowedCaptiveNetworkPlugins")
+    @SerializedName(value = "allowedCaptiveNetworkPlugins", alternate = {"AllowedCaptiveNetworkPlugins"})
     @Expose
     public SpecifiedCaptiveNetworkPlugins allowedCaptiveNetworkPlugins;
 
@@ -70,7 +70,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Cellular Exception Action.
      * Determine whether Cellular service will be exempt from the always-on VPN connection
      */
-    @SerializedName("cellularExceptionAction")
+    @SerializedName(value = "cellularExceptionAction", alternate = {"CellularExceptionAction"})
     @Expose
     public VpnServiceExceptionAction cellularExceptionAction;
 
@@ -78,7 +78,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Nat Keep Alive Interval In Seconds.
      * Specifies how often in seconds to send a network address translation keepalive package through the VPN
      */
-    @SerializedName("natKeepAliveIntervalInSeconds")
+    @SerializedName(value = "natKeepAliveIntervalInSeconds", alternate = {"NatKeepAliveIntervalInSeconds"})
     @Expose
     public Integer natKeepAliveIntervalInSeconds;
 
@@ -86,7 +86,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Nat Keep Alive Offload Enable.
      * Enable hardware offloading of NAT keepalive signals when the device is asleep
      */
-    @SerializedName("natKeepAliveOffloadEnable")
+    @SerializedName(value = "natKeepAliveOffloadEnable", alternate = {"NatKeepAliveOffloadEnable"})
     @Expose
     public Boolean natKeepAliveOffloadEnable;
 
@@ -94,7 +94,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Tunnel Configuration.
      * Determines what connections the specific tunnel configuration applies to
      */
-    @SerializedName("tunnelConfiguration")
+    @SerializedName(value = "tunnelConfiguration", alternate = {"TunnelConfiguration"})
     @Expose
     public VpnTunnelConfigurationType tunnelConfiguration;
 
@@ -102,7 +102,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The User Toggle Enabled.
      * Allow the user to toggle the VPN configuration using the UI
      */
-    @SerializedName("userToggleEnabled")
+    @SerializedName(value = "userToggleEnabled", alternate = {"UserToggleEnabled"})
     @Expose
     public Boolean userToggleEnabled;
 
@@ -110,7 +110,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
      * The Voicemail Exception Action.
      * Determine whether voicemail service will be exempt from the always-on VPN connection
      */
-    @SerializedName("voicemailExceptionAction")
+    @SerializedName(value = "voicemailExceptionAction", alternate = {"VoicemailExceptionAction"})
     @Expose
     public VpnServiceExceptionAction voicemailExceptionAction;
 

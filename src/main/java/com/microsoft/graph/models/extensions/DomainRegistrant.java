@@ -35,7 +35,7 @@ public class DomainRegistrant implements IJsonBackedObject {
      * The Country Or Region Code.
      * 
      */
-    @SerializedName("countryOrRegionCode")
+    @SerializedName(value = "countryOrRegionCode", alternate = {"CountryOrRegionCode"})
     @Expose
     public String countryOrRegionCode;
 
@@ -43,7 +43,7 @@ public class DomainRegistrant implements IJsonBackedObject {
      * The Organization.
      * 
      */
-    @SerializedName("organization")
+    @SerializedName(value = "organization", alternate = {"Organization"})
     @Expose
     public String organization;
 
@@ -51,7 +51,7 @@ public class DomainRegistrant implements IJsonBackedObject {
      * The Url.
      * 
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 
@@ -59,7 +59,7 @@ public class DomainRegistrant implements IJsonBackedObject {
      * The Vendor.
      * 
      */
-    @SerializedName("vendor")
+    @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
     public String vendor;
 

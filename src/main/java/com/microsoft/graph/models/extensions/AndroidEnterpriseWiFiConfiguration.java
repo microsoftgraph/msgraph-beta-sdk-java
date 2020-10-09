@@ -32,7 +32,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Authentication Method.
      * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
 
@@ -40,7 +40,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Eap Type.
      * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
-    @SerializedName("eapType")
+    @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
     public AndroidEapType eapType;
 
@@ -48,7 +48,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Inner Authentication Protocol For Eap Ttls.
      * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
      */
-    @SerializedName("innerAuthenticationProtocolForEapTtls")
+    @SerializedName(value = "innerAuthenticationProtocolForEapTtls", alternate = {"InnerAuthenticationProtocolForEapTtls"})
     @Expose
     public NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEapTtls;
 
@@ -56,7 +56,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Inner Authentication Protocol For Peap.
      * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password.
      */
-    @SerializedName("innerAuthenticationProtocolForPeap")
+    @SerializedName(value = "innerAuthenticationProtocolForPeap", alternate = {"InnerAuthenticationProtocolForPeap"})
     @Expose
     public NonEapAuthenticationMethodForPeap innerAuthenticationProtocolForPeap;
 
@@ -64,7 +64,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Outer Identity Privacy Temporary Value.
      * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
      */
-    @SerializedName("outerIdentityPrivacyTemporaryValue")
+    @SerializedName(value = "outerIdentityPrivacyTemporaryValue", alternate = {"OuterIdentityPrivacyTemporaryValue"})
     @Expose
     public String outerIdentityPrivacyTemporaryValue;
 
@@ -72,7 +72,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Password Format String.
      * Password format string used to build the password to connect to wifi
      */
-    @SerializedName("passwordFormatString")
+    @SerializedName(value = "passwordFormatString", alternate = {"PasswordFormatString"})
     @Expose
     public String passwordFormatString;
 
@@ -80,7 +80,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Pre Shared Key.
      * PreSharedKey used to build the password to connect to wifi
      */
-    @SerializedName("preSharedKey")
+    @SerializedName(value = "preSharedKey", alternate = {"PreSharedKey"})
     @Expose
     public String preSharedKey;
 
@@ -88,7 +88,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Username Format String.
      * Username format string used to build the username to connect to wifi
      */
-    @SerializedName("usernameFormatString")
+    @SerializedName(value = "usernameFormatString", alternate = {"UsernameFormatString"})
     @Expose
     public String usernameFormatString;
 
@@ -96,7 +96,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Identity Certificate For Client Authentication.
      * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
      */
-    @SerializedName("identityCertificateForClientAuthentication")
+    @SerializedName(value = "identityCertificateForClientAuthentication", alternate = {"IdentityCertificateForClientAuthentication"})
     @Expose
     public AndroidCertificateProfileBase identityCertificateForClientAuthentication;
 
@@ -104,7 +104,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * The Root Certificate For Server Validation.
      * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
      */
-    @SerializedName("rootCertificateForServerValidation")
+    @SerializedName(value = "rootCertificateForServerValidation", alternate = {"RootCertificateForServerValidation"})
     @Expose
     public AndroidTrustedRootCertificate rootCertificateForServerValidation;
 

@@ -31,7 +31,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Assignment State.
      * 
      */
-    @SerializedName("assignmentState")
+    @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
     public String assignmentState;
 
@@ -39,7 +39,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Linked Eligible Role Assignment Id.
      * 
      */
-    @SerializedName("linkedEligibleRoleAssignmentId")
+    @SerializedName(value = "linkedEligibleRoleAssignmentId", alternate = {"LinkedEligibleRoleAssignmentId"})
     @Expose
     public String linkedEligibleRoleAssignmentId;
 
@@ -47,7 +47,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 
@@ -55,7 +55,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Requested Date Time.
      * 
      */
-    @SerializedName("requestedDateTime")
+    @SerializedName(value = "requestedDateTime", alternate = {"RequestedDateTime"})
     @Expose
     public java.util.Calendar requestedDateTime;
 
@@ -63,7 +63,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Resource Id.
      * 
      */
-    @SerializedName("resourceId")
+    @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
     public String resourceId;
 
@@ -71,7 +71,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Role Definition Id.
      * 
      */
-    @SerializedName("roleDefinitionId")
+    @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
     public String roleDefinitionId;
 
@@ -79,7 +79,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public GovernanceSchedule schedule;
 
@@ -87,7 +87,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public GovernanceRoleAssignmentRequestStatus status;
 
@@ -95,7 +95,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Subject Id.
      * 
      */
-    @SerializedName("subjectId")
+    @SerializedName(value = "subjectId", alternate = {"SubjectId"})
     @Expose
     public String subjectId;
 
@@ -103,7 +103,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -111,7 +111,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Resource.
      * 
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public GovernanceResource resource;
 
@@ -119,7 +119,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Role Definition.
      * 
      */
-    @SerializedName("roleDefinition")
+    @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
     public GovernanceRoleDefinition roleDefinition;
 
@@ -127,7 +127,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
      * The Subject.
      * 
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public GovernanceSubject subject;
 

@@ -23,7 +23,7 @@ public class TimeCardClockInBody {
      * The at Approved Location.
      * 
      */
-    @SerializedName("atApprovedLocation")
+    @SerializedName(value = "atApprovedLocation", alternate = {"AtApprovedLocation"})
     @Expose
     public Boolean atApprovedLocation;
 
@@ -31,7 +31,7 @@ public class TimeCardClockInBody {
      * The on Behalf Of User Id.
      * 
      */
-    @SerializedName("onBehalfOfUserId")
+    @SerializedName(value = "onBehalfOfUserId", alternate = {"OnBehalfOfUserId"})
     @Expose
     public String onBehalfOfUserId;
 
@@ -39,7 +39,7 @@ public class TimeCardClockInBody {
      * The notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public ItemBody notes;
 

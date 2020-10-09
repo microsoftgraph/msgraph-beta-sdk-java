@@ -28,7 +28,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      * The Localizations.
      * 
      */
-    @SerializedName("localizations")
+    @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose
     public OrganizationalBrandingLocalizationCollectionPage localizations;
 

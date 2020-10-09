@@ -27,7 +27,7 @@ public class MobileAppIntentAndState extends Entity implements IJsonBackedObject
      * The Managed Device Identifier.
      * Device identifier created or collected by Intune.
      */
-    @SerializedName("managedDeviceIdentifier")
+    @SerializedName(value = "managedDeviceIdentifier", alternate = {"ManagedDeviceIdentifier"})
     @Expose
     public String managedDeviceIdentifier;
 
@@ -35,7 +35,7 @@ public class MobileAppIntentAndState extends Entity implements IJsonBackedObject
      * The Mobile App List.
      * The list of payload intents and states for the tenant.
      */
-    @SerializedName("mobileAppList")
+    @SerializedName(value = "mobileAppList", alternate = {"MobileAppList"})
     @Expose
     public java.util.List<MobileAppIntentAndStateDetail> mobileAppList;
 
@@ -43,7 +43,7 @@ public class MobileAppIntentAndState extends Entity implements IJsonBackedObject
      * The User Id.
      * Identifier for the user that tried to enroll the device.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

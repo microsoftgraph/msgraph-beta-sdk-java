@@ -36,7 +36,7 @@ public class SynchronizationJobRestartCriteria implements IJsonBackedObject {
      * The Reset Scope.
      * 
      */
-    @SerializedName("resetScope")
+    @SerializedName(value = "resetScope", alternate = {"ResetScope"})
     @Expose
     public EnumSet<SynchronizationJobRestartScope> resetScope;
 

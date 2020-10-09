@@ -36,7 +36,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Resources.
      * 
      */
-    @SerializedName("resources")
+    @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
     public GovernanceResourceCollectionPage resources;
 
@@ -52,7 +52,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Role Assignment Requests.
      * 
      */
-    @SerializedName("roleAssignmentRequests")
+    @SerializedName(value = "roleAssignmentRequests", alternate = {"RoleAssignmentRequests"})
     @Expose
     public GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
 
@@ -60,7 +60,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Role Assignments.
      * 
      */
-    @SerializedName("roleAssignments")
+    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
     public GovernanceRoleAssignmentCollectionPage roleAssignments;
 
@@ -68,7 +68,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Role Definitions.
      * 
      */
-    @SerializedName("roleDefinitions")
+    @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
     public GovernanceRoleDefinitionCollectionPage roleDefinitions;
 
@@ -76,7 +76,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Role Settings.
      * 
      */
-    @SerializedName("roleSettings")
+    @SerializedName(value = "roleSettings", alternate = {"RoleSettings"})
     @Expose
     public GovernanceRoleSettingCollectionPage roleSettings;
 

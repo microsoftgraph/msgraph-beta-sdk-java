@@ -29,7 +29,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Assigned To.
      * The name or email of the admin this task is assigned to.
      */
-    @SerializedName("assignedTo")
+    @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
     public String assignedTo;
 
@@ -37,7 +37,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Category.
      * The category.
      */
-    @SerializedName("category")
+    @SerializedName(value = "category", alternate = {"Category"})
     @Expose
     public DeviceAppManagementTaskCategory category;
 
@@ -45,7 +45,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Created Date Time.
      * The created date.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -53,7 +53,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Creator.
      * The email address of the creator.
      */
-    @SerializedName("creator")
+    @SerializedName(value = "creator", alternate = {"Creator"})
     @Expose
     public String creator;
 
@@ -61,7 +61,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Creator Notes.
      * Notes from the creator.
      */
-    @SerializedName("creatorNotes")
+    @SerializedName(value = "creatorNotes", alternate = {"CreatorNotes"})
     @Expose
     public String creatorNotes;
 
@@ -69,7 +69,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Description.
      * The description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -77,7 +77,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Display Name.
      * The name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -85,7 +85,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Due Date Time.
      * The due date.
      */
-    @SerializedName("dueDateTime")
+    @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
     public java.util.Calendar dueDateTime;
 
@@ -93,7 +93,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Priority.
      * The priority.
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public DeviceAppManagementTaskPriority priority;
 
@@ -101,7 +101,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
      * The Status.
      * The status.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public DeviceAppManagementTaskStatus status;
 

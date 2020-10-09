@@ -28,7 +28,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
      * The Is Folder.
      * 
      */
-    @SerializedName("isFolder")
+    @SerializedName(value = "isFolder", alternate = {"IsFolder"})
     @Expose
     public Boolean isFolder;
 
@@ -36,7 +36,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
      * The Permission.
      * 
      */
-    @SerializedName("permission")
+    @SerializedName(value = "permission", alternate = {"Permission"})
     @Expose
     public ReferenceAttachmentPermission permission;
 
@@ -44,7 +44,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
      * The Preview Url.
      * 
      */
-    @SerializedName("previewUrl")
+    @SerializedName(value = "previewUrl", alternate = {"PreviewUrl"})
     @Expose
     public String previewUrl;
 
@@ -52,7 +52,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
      * The Provider Type.
      * 
      */
-    @SerializedName("providerType")
+    @SerializedName(value = "providerType", alternate = {"ProviderType"})
     @Expose
     public ReferenceAttachmentProvider providerType;
 
@@ -60,7 +60,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
      * The Source Url.
      * 
      */
-    @SerializedName("sourceUrl")
+    @SerializedName(value = "sourceUrl", alternate = {"SourceUrl"})
     @Expose
     public String sourceUrl;
 
@@ -68,7 +68,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
      * The Thumbnail Url.
      * 
      */
-    @SerializedName("thumbnailUrl")
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
     public String thumbnailUrl;
 

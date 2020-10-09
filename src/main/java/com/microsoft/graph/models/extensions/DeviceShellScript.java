@@ -36,7 +36,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Block Execution Notifications.
      * Does not notify the user a script is being executed
      */
-    @SerializedName("blockExecutionNotifications")
+    @SerializedName(value = "blockExecutionNotifications", alternate = {"BlockExecutionNotifications"})
     @Expose
     public Boolean blockExecutionNotifications;
 
@@ -44,7 +44,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The date and time the device management script was created. This property is read-only.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -52,7 +52,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Description.
      * Optional description for the device management script.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -60,7 +60,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Name of the device management script.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -68,7 +68,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Execution Frequency.
      * The interval for script to run. If not defined the script will run once
      */
-    @SerializedName("executionFrequency")
+    @SerializedName(value = "executionFrequency", alternate = {"ExecutionFrequency"})
     @Expose
     public javax.xml.datatype.Duration executionFrequency;
 
@@ -76,7 +76,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The File Name.
      * Script file name.
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -84,7 +84,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the device management script was last modified. This property is read-only.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -92,7 +92,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Retry Count.
      * Number of times for the script to be retried if it fails
      */
-    @SerializedName("retryCount")
+    @SerializedName(value = "retryCount", alternate = {"RetryCount"})
     @Expose
     public Integer retryCount;
 
@@ -100,7 +100,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tag IDs for this PowerShellScript instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -108,7 +108,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Run As Account.
      * Indicates the type of execution context.
      */
-    @SerializedName("runAsAccount")
+    @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose
     public RunAsAccountType runAsAccount;
 
@@ -116,7 +116,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Script Content.
      * The script content.
      */
-    @SerializedName("scriptContent")
+    @SerializedName(value = "scriptContent", alternate = {"ScriptContent"})
     @Expose
     public byte[] scriptContent;
 
@@ -124,7 +124,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for the device management script.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceManagementScriptAssignmentCollectionPage assignments;
 
@@ -132,7 +132,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Device Run States.
      * List of run states for this script across all devices.
      */
-    @SerializedName("deviceRunStates")
+    @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
     public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 
@@ -140,7 +140,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Group Assignments.
      * The list of group assignments for the device management script.
      */
-    @SerializedName("groupAssignments")
+    @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
     public DeviceManagementScriptGroupAssignmentCollectionPage groupAssignments;
 
@@ -148,7 +148,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The Run Summary.
      * Run summary for device management script.
      */
-    @SerializedName("runSummary")
+    @SerializedName(value = "runSummary", alternate = {"RunSummary"})
     @Expose
     public DeviceManagementScriptRunSummary runSummary;
 
@@ -156,7 +156,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
      * The User Run States.
      * List of run states for this script across all users.
      */
-    @SerializedName("userRunStates")
+    @SerializedName(value = "userRunStates", alternate = {"UserRunStates"})
     @Expose
     public DeviceManagementScriptUserStateCollectionPage userRunStates;
 

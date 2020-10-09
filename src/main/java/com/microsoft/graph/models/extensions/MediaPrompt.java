@@ -27,7 +27,7 @@ public class MediaPrompt extends Prompt implements IJsonBackedObject {
      * The Loop.
      * 
      */
-    @SerializedName("loop")
+    @SerializedName(value = "loop", alternate = {"Loop"})
     @Expose
     public Integer loop;
 
@@ -35,7 +35,7 @@ public class MediaPrompt extends Prompt implements IJsonBackedObject {
      * The Media Info.
      * The media information
      */
-    @SerializedName("mediaInfo")
+    @SerializedName(value = "mediaInfo", alternate = {"MediaInfo"})
     @Expose
     public MediaInfo mediaInfo;
 

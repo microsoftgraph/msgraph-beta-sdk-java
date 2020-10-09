@@ -26,7 +26,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements IJ
      * The Content Name.
      * 
      */
-    @SerializedName("contentName")
+    @SerializedName(value = "contentName", alternate = {"ContentName"})
     @Expose
     public String contentName;
 
@@ -34,7 +34,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements IJ
      * The Last Modfied By.
      * 
      */
-    @SerializedName("lastModfiedBy")
+    @SerializedName(value = "lastModfiedBy", alternate = {"LastModfiedBy"})
     @Expose
     public String lastModfiedBy;
 

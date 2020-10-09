@@ -30,7 +30,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      * The Certificate Validity Period Scale.
      * Scale for the Certificate Validity Period
      */
-    @SerializedName("certificateValidityPeriodScale")
+    @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
     public CertificateValidityPeriodScale certificateValidityPeriodScale;
 
@@ -38,7 +38,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      * The Certificate Validity Period Value.
      * Value for the Certificate Validity Period
      */
-    @SerializedName("certificateValidityPeriodValue")
+    @SerializedName(value = "certificateValidityPeriodValue", alternate = {"CertificateValidityPeriodValue"})
     @Expose
     public Integer certificateValidityPeriodValue;
 
@@ -46,7 +46,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      * The Key Storage Provider.
      * Key Storage Provider (KSP)
      */
-    @SerializedName("keyStorageProvider")
+    @SerializedName(value = "keyStorageProvider", alternate = {"KeyStorageProvider"})
     @Expose
     public KeyStorageProviderOption keyStorageProvider;
 
@@ -54,7 +54,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      * The Renewal Threshold Percentage.
      * Certificate renewal threshold percentage. Valid values 1 to 99
      */
-    @SerializedName("renewalThresholdPercentage")
+    @SerializedName(value = "renewalThresholdPercentage", alternate = {"RenewalThresholdPercentage"})
     @Expose
     public Integer renewalThresholdPercentage;
 
@@ -62,7 +62,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      * The Subject Alternative Name Type.
      * Certificate Subject Alternative Name Type
      */
-    @SerializedName("subjectAlternativeNameType")
+    @SerializedName(value = "subjectAlternativeNameType", alternate = {"SubjectAlternativeNameType"})
     @Expose
     public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
 
@@ -70,7 +70,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
      * The Subject Name Format.
      * Certificate Subject Name Format
      */
-    @SerializedName("subjectNameFormat")
+    @SerializedName(value = "subjectNameFormat", alternate = {"SubjectNameFormat"})
     @Expose
     public SubjectNameFormat subjectNameFormat;
 

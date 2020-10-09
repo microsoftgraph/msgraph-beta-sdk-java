@@ -35,7 +35,7 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
      * The Cert Expiry Time.
      * Certificate expire time
      */
-    @SerializedName("certExpiryTime")
+    @SerializedName(value = "certExpiryTime", alternate = {"CertExpiryTime"})
     @Expose
     public java.util.Calendar certExpiryTime;
 
@@ -43,7 +43,7 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
      * The Connector Version.
      * Version of certificate connector
      */
-    @SerializedName("connectorVersion")
+    @SerializedName(value = "connectorVersion", alternate = {"ConnectorVersion"})
     @Expose
     public String connectorVersion;
 
@@ -51,7 +51,7 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
      * The Enrollment Error.
      * Certificate connector enrollment error
      */
-    @SerializedName("enrollmentError")
+    @SerializedName(value = "enrollmentError", alternate = {"EnrollmentError"})
     @Expose
     public String enrollmentError;
 
@@ -59,7 +59,7 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
      * The Last Connector Connection Time.
      * Last time certificate connector connected
      */
-    @SerializedName("lastConnectorConnectionTime")
+    @SerializedName(value = "lastConnectorConnectionTime", alternate = {"LastConnectorConnectionTime"})
     @Expose
     public java.util.Calendar lastConnectorConnectionTime;
 
@@ -67,7 +67,7 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
      * The Last Upload Version.
      * Version of last uploaded certificate connector
      */
-    @SerializedName("lastUploadVersion")
+    @SerializedName(value = "lastUploadVersion", alternate = {"LastUploadVersion"})
     @Expose
     public Long lastUploadVersion;
 
@@ -75,7 +75,7 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
      * The Status.
      * Certificate connector status
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public Integer status;
 

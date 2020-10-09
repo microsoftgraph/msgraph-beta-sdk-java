@@ -31,7 +31,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Available Enrollment Type Options.
      * List of available enrollment type options
      */
-    @SerializedName("availableEnrollmentTypeOptions")
+    @SerializedName(value = "availableEnrollmentTypeOptions", alternate = {"AvailableEnrollmentTypeOptions"})
     @Expose
     public java.util.List<AppleOwnerTypeEnrollmentType> availableEnrollmentTypeOptions;
 
@@ -39,7 +39,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Created Date Time.
      * Profile creation time
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -47,7 +47,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Default Enrollment Type.
      * The default profile enrollment type.
      */
-    @SerializedName("defaultEnrollmentType")
+    @SerializedName(value = "defaultEnrollmentType", alternate = {"DefaultEnrollmentType"})
     @Expose
     public AppleUserInitiatedEnrollmentType defaultEnrollmentType;
 
@@ -55,7 +55,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Description.
      * Description of the profile
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -63,7 +63,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Display Name.
      * Name of the profile
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -71,7 +71,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Last Modified Date Time.
      * Profile last modified time
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -79,7 +79,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Platform.
      * The platform of the Device.
      */
-    @SerializedName("platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public DevicePlatformType platform;
 
@@ -87,7 +87,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Priority.
      * Priority, 0 is highest
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -95,7 +95,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Assignments.
      * The list of assignments for this profile.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public AppleEnrollmentProfileAssignmentCollectionPage assignments;
 

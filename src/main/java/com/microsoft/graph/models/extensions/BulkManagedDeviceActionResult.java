@@ -35,7 +35,7 @@ public class BulkManagedDeviceActionResult implements IJsonBackedObject {
      * The Failed Device Ids.
      * Failed devices
      */
-    @SerializedName("failedDeviceIds")
+    @SerializedName(value = "failedDeviceIds", alternate = {"FailedDeviceIds"})
     @Expose
     public java.util.List<String> failedDeviceIds;
 
@@ -43,7 +43,7 @@ public class BulkManagedDeviceActionResult implements IJsonBackedObject {
      * The Not Found Device Ids.
      * Not found devices
      */
-    @SerializedName("notFoundDeviceIds")
+    @SerializedName(value = "notFoundDeviceIds", alternate = {"NotFoundDeviceIds"})
     @Expose
     public java.util.List<String> notFoundDeviceIds;
 
@@ -51,7 +51,7 @@ public class BulkManagedDeviceActionResult implements IJsonBackedObject {
      * The Not Supported Device Ids.
      * Not supported devices
      */
-    @SerializedName("notSupportedDeviceIds")
+    @SerializedName(value = "notSupportedDeviceIds", alternate = {"NotSupportedDeviceIds"})
     @Expose
     public java.util.List<String> notSupportedDeviceIds;
 
@@ -59,7 +59,7 @@ public class BulkManagedDeviceActionResult implements IJsonBackedObject {
      * The Successful Device Ids.
      * Successful devices
      */
-    @SerializedName("successfulDeviceIds")
+    @SerializedName(value = "successfulDeviceIds", alternate = {"SuccessfulDeviceIds"})
     @Expose
     public java.util.List<String> successfulDeviceIds;
 

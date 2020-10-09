@@ -30,7 +30,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * The External Ip.
      * 
      */
-    @SerializedName("externalIp")
+    @SerializedName(value = "externalIp", alternate = {"ExternalIp"})
     @Expose
     public String externalIp;
 
@@ -38,7 +38,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * The Machine Name.
      * 
      */
-    @SerializedName("machineName")
+    @SerializedName(value = "machineName", alternate = {"MachineName"})
     @Expose
     public String machineName;
 
@@ -46,7 +46,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public AgentStatus status;
 
@@ -54,7 +54,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * The Supported Publishing Types.
      * 
      */
-    @SerializedName("supportedPublishingTypes")
+    @SerializedName(value = "supportedPublishingTypes", alternate = {"SupportedPublishingTypes"})
     @Expose
     public java.util.List<OnPremisesPublishingType> supportedPublishingTypes;
 
@@ -62,7 +62,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * The Agent Groups.
      * 
      */
-    @SerializedName("agentGroups")
+    @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose
     public OnPremisesAgentGroupCollectionPage agentGroups;
 

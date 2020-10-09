@@ -26,7 +26,7 @@ public class BookingNamedEntity extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The display name is suitable for human-readable interfaces.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

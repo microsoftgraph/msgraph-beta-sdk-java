@@ -31,7 +31,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Account Setup Duration.
      * Time spent in user ESP.
      */
-    @SerializedName("accountSetupDuration")
+    @SerializedName(value = "accountSetupDuration", alternate = {"AccountSetupDuration"})
     @Expose
     public javax.xml.datatype.Duration accountSetupDuration;
 
@@ -39,7 +39,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Deployment Duration.
      * Autopilot deployment duration including enrollment.
      */
-    @SerializedName("deploymentDuration")
+    @SerializedName(value = "deploymentDuration", alternate = {"DeploymentDuration"})
     @Expose
     public javax.xml.datatype.Duration deploymentDuration;
 
@@ -47,7 +47,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Deployment End Date Time.
      * Deployment end time.
      */
-    @SerializedName("deploymentEndDateTime")
+    @SerializedName(value = "deploymentEndDateTime", alternate = {"DeploymentEndDateTime"})
     @Expose
     public java.util.Calendar deploymentEndDateTime;
 
@@ -55,7 +55,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Deployment Start Date Time.
      * Deployment start time.
      */
-    @SerializedName("deploymentStartDateTime")
+    @SerializedName(value = "deploymentStartDateTime", alternate = {"DeploymentStartDateTime"})
     @Expose
     public java.util.Calendar deploymentStartDateTime;
 
@@ -63,7 +63,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Deployment State.
      * Deployment state like Success, Failure, InProgress, SuccessWithTimeout.
      */
-    @SerializedName("deploymentState")
+    @SerializedName(value = "deploymentState", alternate = {"DeploymentState"})
     @Expose
     public WindowsAutopilotDeploymentState deploymentState;
 
@@ -71,7 +71,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Deployment Total Duration.
      * Total deployment duration from enrollment to Desktop screen.
      */
-    @SerializedName("deploymentTotalDuration")
+    @SerializedName(value = "deploymentTotalDuration", alternate = {"DeploymentTotalDuration"})
     @Expose
     public javax.xml.datatype.Duration deploymentTotalDuration;
 
@@ -79,7 +79,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Device Id.
      * Device id associated with the object
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -87,7 +87,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Device Preparation Duration.
      * Time spent in device enrollment.
      */
-    @SerializedName("devicePreparationDuration")
+    @SerializedName(value = "devicePreparationDuration", alternate = {"DevicePreparationDuration"})
     @Expose
     public javax.xml.datatype.Duration devicePreparationDuration;
 
@@ -95,7 +95,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Device Registered Date Time.
      * Device registration date.
      */
-    @SerializedName("deviceRegisteredDateTime")
+    @SerializedName(value = "deviceRegisteredDateTime", alternate = {"DeviceRegisteredDateTime"})
     @Expose
     public java.util.Calendar deviceRegisteredDateTime;
 
@@ -103,7 +103,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Device Serial Number.
      * Device serial number.
      */
-    @SerializedName("deviceSerialNumber")
+    @SerializedName(value = "deviceSerialNumber", alternate = {"DeviceSerialNumber"})
     @Expose
     public String deviceSerialNumber;
 
@@ -111,7 +111,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Device Setup Duration.
      * Time spent in device ESP.
      */
-    @SerializedName("deviceSetupDuration")
+    @SerializedName(value = "deviceSetupDuration", alternate = {"DeviceSetupDuration"})
     @Expose
     public javax.xml.datatype.Duration deviceSetupDuration;
 
@@ -119,7 +119,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Enrollment Failure Details.
      * Enrollment failure details.
      */
-    @SerializedName("enrollmentFailureDetails")
+    @SerializedName(value = "enrollmentFailureDetails", alternate = {"EnrollmentFailureDetails"})
     @Expose
     public String enrollmentFailureDetails;
 
@@ -127,7 +127,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Enrollment Start Date Time.
      * Device enrollment start date.
      */
-    @SerializedName("enrollmentStartDateTime")
+    @SerializedName(value = "enrollmentStartDateTime", alternate = {"EnrollmentStartDateTime"})
     @Expose
     public java.util.Calendar enrollmentStartDateTime;
 
@@ -135,7 +135,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Enrollment State.
      * Enrollment state like Enrolled, Failed.
      */
-    @SerializedName("enrollmentState")
+    @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
     public EnrollmentState enrollmentState;
 
@@ -143,7 +143,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Enrollment Type.
      * Enrollment type.
      */
-    @SerializedName("enrollmentType")
+    @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose
     public WindowsAutopilotEnrollmentType enrollmentType;
 
@@ -151,7 +151,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Event Date Time.
      * Time when the event occurred .
      */
-    @SerializedName("eventDateTime")
+    @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
     public java.util.Calendar eventDateTime;
 
@@ -159,7 +159,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Managed Device Name.
      * Managed device name.
      */
-    @SerializedName("managedDeviceName")
+    @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
     public String managedDeviceName;
 
@@ -167,7 +167,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Os Version.
      * Device operating system version.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -175,7 +175,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Targeted App Count.
      * Count of applications targeted.
      */
-    @SerializedName("targetedAppCount")
+    @SerializedName(value = "targetedAppCount", alternate = {"TargetedAppCount"})
     @Expose
     public Integer targetedAppCount;
 
@@ -183,7 +183,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Targeted Policy Count.
      * Count of policies targeted.
      */
-    @SerializedName("targetedPolicyCount")
+    @SerializedName(value = "targetedPolicyCount", alternate = {"TargetedPolicyCount"})
     @Expose
     public Integer targetedPolicyCount;
 
@@ -191,7 +191,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The User Principal Name.
      * User principal name used to enroll the device.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -199,7 +199,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Windows10Enrollment Completion Page Configuration Display Name.
      * Enrollment Status Page profile name
      */
-    @SerializedName("windows10EnrollmentCompletionPageConfigurationDisplayName")
+    @SerializedName(value = "windows10EnrollmentCompletionPageConfigurationDisplayName", alternate = {"Windows10EnrollmentCompletionPageConfigurationDisplayName"})
     @Expose
     public String windows10EnrollmentCompletionPageConfigurationDisplayName;
 
@@ -207,7 +207,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Windows Autopilot Deployment Profile Display Name.
      * Autopilot profile name.
      */
-    @SerializedName("windowsAutopilotDeploymentProfileDisplayName")
+    @SerializedName(value = "windowsAutopilotDeploymentProfileDisplayName", alternate = {"WindowsAutopilotDeploymentProfileDisplayName"})
     @Expose
     public String windowsAutopilotDeploymentProfileDisplayName;
 
@@ -215,7 +215,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Policy Status Details.
      * Policy and application status details for this device.
      */
-    @SerializedName("policyStatusDetails")
+    @SerializedName(value = "policyStatusDetails", alternate = {"PolicyStatusDetails"})
     @Expose
     public DeviceManagementAutopilotPolicyStatusDetailCollectionPage policyStatusDetails;
 

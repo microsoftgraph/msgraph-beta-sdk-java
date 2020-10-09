@@ -27,7 +27,7 @@ public class Schema extends Entity implements IJsonBackedObject {
      * The Base Type.
      * 
      */
-    @SerializedName("baseType")
+    @SerializedName(value = "baseType", alternate = {"BaseType"})
     @Expose
     public String baseType;
 
@@ -35,7 +35,7 @@ public class Schema extends Entity implements IJsonBackedObject {
      * The Properties.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public java.util.List<Property> properties;
 

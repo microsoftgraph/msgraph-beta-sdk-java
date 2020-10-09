@@ -36,7 +36,7 @@ public class DeviceAndAppManagementAssignmentTarget implements IJsonBackedObject
      * The Device And App Management Assignment Filter Id.
      * The Id of the filter for the target assignment.
      */
-    @SerializedName("deviceAndAppManagementAssignmentFilterId")
+    @SerializedName(value = "deviceAndAppManagementAssignmentFilterId", alternate = {"DeviceAndAppManagementAssignmentFilterId"})
     @Expose
     public String deviceAndAppManagementAssignmentFilterId;
 
@@ -44,7 +44,7 @@ public class DeviceAndAppManagementAssignmentTarget implements IJsonBackedObject
      * The Device And App Management Assignment Filter Type.
      * The type of filter of the target assignment i.e. Exclude or Include.
      */
-    @SerializedName("deviceAndAppManagementAssignmentFilterType")
+    @SerializedName(value = "deviceAndAppManagementAssignmentFilterType", alternate = {"DeviceAndAppManagementAssignmentFilterType"})
     @Expose
     public DeviceAndAppManagementAssignmentFilterType deviceAndAppManagementAssignmentFilterType;
 

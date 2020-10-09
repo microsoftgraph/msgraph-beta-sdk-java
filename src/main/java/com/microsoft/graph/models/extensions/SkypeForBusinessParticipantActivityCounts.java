@@ -26,7 +26,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The App Sharing.
      * 
      */
-    @SerializedName("appSharing")
+    @SerializedName(value = "appSharing", alternate = {"AppSharing"})
     @Expose
     public Long appSharing;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Audio Video.
      * 
      */
-    @SerializedName("audioVideo")
+    @SerializedName(value = "audioVideo", alternate = {"AudioVideo"})
     @Expose
     public Long audioVideo;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Dial In Out3rd Party.
      * 
      */
-    @SerializedName("dialInOut3rdParty")
+    @SerializedName(value = "dialInOut3rdParty", alternate = {"DialInOut3rdParty"})
     @Expose
     public Long dialInOut3rdParty;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Im.
      * 
      */
-    @SerializedName("im")
+    @SerializedName(value = "im", alternate = {"Im"})
     @Expose
     public Long im;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -74,7 +74,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -82,7 +82,7 @@ public class SkypeForBusinessParticipantActivityCounts extends Entity implements
      * The Web.
      * 
      */
-    @SerializedName("web")
+    @SerializedName(value = "web", alternate = {"Web"})
     @Expose
     public Long web;
 

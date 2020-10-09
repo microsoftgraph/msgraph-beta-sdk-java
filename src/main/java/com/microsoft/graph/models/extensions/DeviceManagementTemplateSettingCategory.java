@@ -28,7 +28,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
      * The Recommended Settings.
      * The settings this category contains
      */
-    @SerializedName("recommendedSettings")
+    @SerializedName(value = "recommendedSettings", alternate = {"RecommendedSettings"})
     @Expose
     public DeviceManagementSettingInstanceCollectionPage recommendedSettings;
 

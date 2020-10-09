@@ -26,7 +26,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Outlook2007.
      * 
      */
-    @SerializedName("outlook2007")
+    @SerializedName(value = "outlook2007", alternate = {"Outlook2007"})
     @Expose
     public Long outlook2007;
 
@@ -34,7 +34,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Outlook2010.
      * 
      */
-    @SerializedName("outlook2010")
+    @SerializedName(value = "outlook2010", alternate = {"Outlook2010"})
     @Expose
     public Long outlook2010;
 
@@ -42,7 +42,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Outlook2013.
      * 
      */
-    @SerializedName("outlook2013")
+    @SerializedName(value = "outlook2013", alternate = {"Outlook2013"})
     @Expose
     public Long outlook2013;
 
@@ -50,7 +50,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Outlook2016.
      * 
      */
-    @SerializedName("outlook2016")
+    @SerializedName(value = "outlook2016", alternate = {"Outlook2016"})
     @Expose
     public Long outlook2016;
 
@@ -58,7 +58,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Outlook2019.
      * 
      */
-    @SerializedName("outlook2019")
+    @SerializedName(value = "outlook2019", alternate = {"Outlook2019"})
     @Expose
     public Long outlook2019;
 
@@ -66,7 +66,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Outlook M365.
      * 
      */
-    @SerializedName("outlookM365")
+    @SerializedName(value = "outlookM365", alternate = {"OutlookM365"})
     @Expose
     public Long outlookM365;
 
@@ -74,7 +74,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -82,7 +82,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -90,7 +90,7 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
      * The Undetermined.
      * 
      */
-    @SerializedName("undetermined")
+    @SerializedName(value = "undetermined", alternate = {"Undetermined"})
     @Expose
     public Long undetermined;
 

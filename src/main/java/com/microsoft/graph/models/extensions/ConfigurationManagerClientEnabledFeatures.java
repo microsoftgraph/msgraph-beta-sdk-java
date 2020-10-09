@@ -35,7 +35,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Compliance Policy.
      * Whether compliance policy is managed by Intune
      */
-    @SerializedName("compliancePolicy")
+    @SerializedName(value = "compliancePolicy", alternate = {"CompliancePolicy"})
     @Expose
     public Boolean compliancePolicy;
 
@@ -43,7 +43,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Device Configuration.
      * Whether device configuration is managed by Intune
      */
-    @SerializedName("deviceConfiguration")
+    @SerializedName(value = "deviceConfiguration", alternate = {"DeviceConfiguration"})
     @Expose
     public Boolean deviceConfiguration;
 
@@ -51,7 +51,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Endpoint Protection.
      * Whether Endpoint Protection is managed by Intune
      */
-    @SerializedName("endpointProtection")
+    @SerializedName(value = "endpointProtection", alternate = {"EndpointProtection"})
     @Expose
     public Boolean endpointProtection;
 
@@ -59,7 +59,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Inventory.
      * Whether inventory is managed by Intune
      */
-    @SerializedName("inventory")
+    @SerializedName(value = "inventory", alternate = {"Inventory"})
     @Expose
     public Boolean inventory;
 
@@ -67,7 +67,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Modern Apps.
      * Whether modern application is managed by Intune
      */
-    @SerializedName("modernApps")
+    @SerializedName(value = "modernApps", alternate = {"ModernApps"})
     @Expose
     public Boolean modernApps;
 
@@ -75,7 +75,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Office Apps.
      * Whether Office application is managed by Intune
      */
-    @SerializedName("officeApps")
+    @SerializedName(value = "officeApps", alternate = {"OfficeApps"})
     @Expose
     public Boolean officeApps;
 
@@ -83,7 +83,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Resource Access.
      * Whether resource access is managed by Intune
      */
-    @SerializedName("resourceAccess")
+    @SerializedName(value = "resourceAccess", alternate = {"ResourceAccess"})
     @Expose
     public Boolean resourceAccess;
 
@@ -91,7 +91,7 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      * The Windows Update For Business.
      * Whether Windows Update for Business is managed by Intune
      */
-    @SerializedName("windowsUpdateForBusiness")
+    @SerializedName(value = "windowsUpdateForBusiness", alternate = {"WindowsUpdateForBusiness"})
     @Expose
     public Boolean windowsUpdateForBusiness;
 

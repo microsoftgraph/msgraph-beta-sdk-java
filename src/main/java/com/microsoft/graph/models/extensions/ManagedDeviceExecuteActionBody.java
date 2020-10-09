@@ -23,7 +23,7 @@ public class ManagedDeviceExecuteActionBody {
      * The action Name.
      * 
      */
-    @SerializedName("actionName")
+    @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose
     public ManagedDeviceRemoteAction actionName;
 
@@ -31,7 +31,7 @@ public class ManagedDeviceExecuteActionBody {
      * The keep Enrollment Data.
      * 
      */
-    @SerializedName("keepEnrollmentData")
+    @SerializedName(value = "keepEnrollmentData", alternate = {"KeepEnrollmentData"})
     @Expose
     public Boolean keepEnrollmentData;
 
@@ -39,7 +39,7 @@ public class ManagedDeviceExecuteActionBody {
      * The keep User Data.
      * 
      */
-    @SerializedName("keepUserData")
+    @SerializedName(value = "keepUserData", alternate = {"KeepUserData"})
     @Expose
     public Boolean keepUserData;
 
@@ -47,7 +47,7 @@ public class ManagedDeviceExecuteActionBody {
      * The device Ids.
      * 
      */
-    @SerializedName("deviceIds")
+    @SerializedName(value = "deviceIds", alternate = {"DeviceIds"})
     @Expose
     public java.util.List<String> deviceIds;
 
@@ -55,7 +55,7 @@ public class ManagedDeviceExecuteActionBody {
      * The notification Title.
      * 
      */
-    @SerializedName("notificationTitle")
+    @SerializedName(value = "notificationTitle", alternate = {"NotificationTitle"})
     @Expose
     public String notificationTitle;
 
@@ -63,7 +63,7 @@ public class ManagedDeviceExecuteActionBody {
      * The notification Body.
      * 
      */
-    @SerializedName("notificationBody")
+    @SerializedName(value = "notificationBody", alternate = {"NotificationBody"})
     @Expose
     public String notificationBody;
 
@@ -71,7 +71,7 @@ public class ManagedDeviceExecuteActionBody {
      * The device Name.
      * 
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 

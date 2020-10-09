@@ -22,7 +22,7 @@ public class SynchronizationJobValidateCredentialsBody {
      * The application Identifier.
      * 
      */
-    @SerializedName("applicationIdentifier")
+    @SerializedName(value = "applicationIdentifier", alternate = {"ApplicationIdentifier"})
     @Expose
     public String applicationIdentifier;
 
@@ -30,7 +30,7 @@ public class SynchronizationJobValidateCredentialsBody {
      * The template Id.
      * 
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 
@@ -38,7 +38,7 @@ public class SynchronizationJobValidateCredentialsBody {
      * The use Saved Credentials.
      * 
      */
-    @SerializedName("useSavedCredentials")
+    @SerializedName(value = "useSavedCredentials", alternate = {"UseSavedCredentials"})
     @Expose
     public Boolean useSavedCredentials;
 
@@ -46,7 +46,7 @@ public class SynchronizationJobValidateCredentialsBody {
      * The credentials.
      * 
      */
-    @SerializedName("credentials")
+    @SerializedName(value = "credentials", alternate = {"Credentials"})
     @Expose
     public java.util.List<SynchronizationSecretKeyStringValuePair> credentials;
 

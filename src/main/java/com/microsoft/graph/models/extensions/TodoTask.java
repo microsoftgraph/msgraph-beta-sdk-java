@@ -35,7 +35,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Body.
      * 
      */
-    @SerializedName("body")
+    @SerializedName(value = "body", alternate = {"Body"})
     @Expose
     public ItemBody body;
 
@@ -43,7 +43,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Body Last Modified Date Time.
      * 
      */
-    @SerializedName("bodyLastModifiedDateTime")
+    @SerializedName(value = "bodyLastModifiedDateTime", alternate = {"BodyLastModifiedDateTime"})
     @Expose
     public java.util.Calendar bodyLastModifiedDateTime;
 
@@ -51,7 +51,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Completed Date Time.
      * 
      */
-    @SerializedName("completedDateTime")
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
     public DateTimeTimeZone completedDateTime;
 
@@ -59,7 +59,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -67,7 +67,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Due Date Time.
      * 
      */
-    @SerializedName("dueDateTime")
+    @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
     public DateTimeTimeZone dueDateTime;
 
@@ -75,7 +75,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Importance.
      * 
      */
-    @SerializedName("importance")
+    @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
     public Importance importance;
 
@@ -83,7 +83,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Is Reminder On.
      * 
      */
-    @SerializedName("isReminderOn")
+    @SerializedName(value = "isReminderOn", alternate = {"IsReminderOn"})
     @Expose
     public Boolean isReminderOn;
 
@@ -91,7 +91,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -99,7 +99,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Recurrence.
      * 
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public PatternedRecurrence recurrence;
 
@@ -107,7 +107,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Reminder Date Time.
      * 
      */
-    @SerializedName("reminderDateTime")
+    @SerializedName(value = "reminderDateTime", alternate = {"ReminderDateTime"})
     @Expose
     public DateTimeTimeZone reminderDateTime;
 
@@ -115,7 +115,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public TaskStatus status;
 
@@ -123,7 +123,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Title.
      * 
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -131,7 +131,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Extensions.
      * 
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -139,7 +139,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Linked Resources.
      * 
      */
-    @SerializedName("linkedResources")
+    @SerializedName(value = "linkedResources", alternate = {"LinkedResources"})
     @Expose
     public LinkedResourceCollectionPage linkedResources;
 

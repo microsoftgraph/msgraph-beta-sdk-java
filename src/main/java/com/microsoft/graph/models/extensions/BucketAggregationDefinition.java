@@ -37,7 +37,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
      * The Is Descending.
      * 
      */
-    @SerializedName("isDescending")
+    @SerializedName(value = "isDescending", alternate = {"IsDescending"})
     @Expose
     public Boolean isDescending;
 
@@ -45,7 +45,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
      * The Minimum Count.
      * 
      */
-    @SerializedName("minimumCount")
+    @SerializedName(value = "minimumCount", alternate = {"MinimumCount"})
     @Expose
     public Integer minimumCount;
 
@@ -53,7 +53,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
      * The Prefix Filter.
      * 
      */
-    @SerializedName("prefixFilter")
+    @SerializedName(value = "prefixFilter", alternate = {"PrefixFilter"})
     @Expose
     public String prefixFilter;
 
@@ -61,7 +61,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
      * The Ranges.
      * 
      */
-    @SerializedName("ranges")
+    @SerializedName(value = "ranges", alternate = {"Ranges"})
     @Expose
     public java.util.List<BucketAggregationRange> ranges;
 
@@ -69,7 +69,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
      * The Sort By.
      * 
      */
-    @SerializedName("sortBy")
+    @SerializedName(value = "sortBy", alternate = {"SortBy"})
     @Expose
     public BucketAggregationSortProperty sortBy;
 

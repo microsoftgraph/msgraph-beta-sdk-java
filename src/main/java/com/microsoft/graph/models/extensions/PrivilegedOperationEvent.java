@@ -26,7 +26,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Additional Information.
      * 
      */
-    @SerializedName("additionalInformation")
+    @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
     public String additionalInformation;
 
@@ -34,7 +34,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Creation Date Time.
      * 
      */
-    @SerializedName("creationDateTime")
+    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
     public java.util.Calendar creationDateTime;
 
@@ -42,7 +42,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -50,7 +50,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Reference Key.
      * 
      */
-    @SerializedName("referenceKey")
+    @SerializedName(value = "referenceKey", alternate = {"ReferenceKey"})
     @Expose
     public String referenceKey;
 
@@ -58,7 +58,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Reference System.
      * 
      */
-    @SerializedName("referenceSystem")
+    @SerializedName(value = "referenceSystem", alternate = {"ReferenceSystem"})
     @Expose
     public String referenceSystem;
 
@@ -66,7 +66,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Requestor Id.
      * 
      */
-    @SerializedName("requestorId")
+    @SerializedName(value = "requestorId", alternate = {"RequestorId"})
     @Expose
     public String requestorId;
 
@@ -74,7 +74,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Requestor Name.
      * 
      */
-    @SerializedName("requestorName")
+    @SerializedName(value = "requestorName", alternate = {"RequestorName"})
     @Expose
     public String requestorName;
 
@@ -82,7 +82,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Request Type.
      * 
      */
-    @SerializedName("requestType")
+    @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
     public String requestType;
 
@@ -90,7 +90,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Role Id.
      * 
      */
-    @SerializedName("roleId")
+    @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
     public String roleId;
 
@@ -98,7 +98,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Role Name.
      * 
      */
-    @SerializedName("roleName")
+    @SerializedName(value = "roleName", alternate = {"RoleName"})
     @Expose
     public String roleName;
 
@@ -106,7 +106,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The Tenant Id.
      * 
      */
-    @SerializedName("tenantId")
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
     public String tenantId;
 
@@ -114,7 +114,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -122,7 +122,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The User Mail.
      * 
      */
-    @SerializedName("userMail")
+    @SerializedName(value = "userMail", alternate = {"UserMail"})
     @Expose
     public String userMail;
 
@@ -130,7 +130,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
      * The User Name.
      * 
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

@@ -39,7 +39,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Dlp Action.
      * The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
      */
-    @SerializedName("dlpAction")
+    @SerializedName(value = "dlpAction", alternate = {"DlpAction"})
     @Expose
     public EnumSet<ChatMessagePolicyViolationDlpActionTypes> dlpAction;
 
@@ -47,7 +47,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Justification Text.
      * Justification text provided by the sender of the message when overriding a policy violation.
      */
-    @SerializedName("justificationText")
+    @SerializedName(value = "justificationText", alternate = {"JustificationText"})
     @Expose
     public String justificationText;
 
@@ -55,7 +55,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Policy Tip.
      * Information to display to the message sender about why the message was flagged as a violation.
      */
-    @SerializedName("policyTip")
+    @SerializedName(value = "policyTip", alternate = {"PolicyTip"})
     @Expose
     public ChatMessagePolicyViolationPolicyTip policyTip;
 
@@ -63,7 +63,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The User Action.
      * Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
      */
-    @SerializedName("userAction")
+    @SerializedName(value = "userAction", alternate = {"UserAction"})
     @Expose
     public EnumSet<ChatMessagePolicyViolationUserActionTypes> userAction;
 
@@ -71,7 +71,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Verdict Details.
      * Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
      */
-    @SerializedName("verdictDetails")
+    @SerializedName(value = "verdictDetails", alternate = {"VerdictDetails"})
     @Expose
     public EnumSet<ChatMessagePolicyViolationVerdictDetailsTypes> verdictDetails;
 

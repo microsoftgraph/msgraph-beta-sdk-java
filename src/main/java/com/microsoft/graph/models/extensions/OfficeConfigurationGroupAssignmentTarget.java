@@ -26,7 +26,7 @@ public class OfficeConfigurationGroupAssignmentTarget extends OfficeConfiguratio
      * The Group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 

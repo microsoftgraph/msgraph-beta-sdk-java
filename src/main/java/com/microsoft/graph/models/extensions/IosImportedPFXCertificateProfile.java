@@ -29,7 +29,7 @@ public class IosImportedPFXCertificateProfile extends IosCertificateProfile impl
      * The Intended Purpose.
      * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
      */
-    @SerializedName("intendedPurpose")
+    @SerializedName(value = "intendedPurpose", alternate = {"IntendedPurpose"})
     @Expose
     public IntendedPurpose intendedPurpose;
 
@@ -37,7 +37,7 @@ public class IosImportedPFXCertificateProfile extends IosCertificateProfile impl
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 

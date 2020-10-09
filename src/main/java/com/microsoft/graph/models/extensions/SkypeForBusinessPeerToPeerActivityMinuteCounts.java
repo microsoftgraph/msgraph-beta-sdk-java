@@ -26,7 +26,7 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
      * The Audio.
      * 
      */
-    @SerializedName("audio")
+    @SerializedName(value = "audio", alternate = {"Audio"})
     @Expose
     public Long audio;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
      * The Video.
      * 
      */
-    @SerializedName("video")
+    @SerializedName(value = "video", alternate = {"Video"})
     @Expose
     public Long video;
 

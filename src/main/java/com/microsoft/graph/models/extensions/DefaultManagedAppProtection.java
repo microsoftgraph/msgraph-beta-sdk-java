@@ -35,7 +35,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Allowed Android Device Manufacturers.
      * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only)
      */
-    @SerializedName("allowedAndroidDeviceManufacturers")
+    @SerializedName(value = "allowedAndroidDeviceManufacturers", alternate = {"AllowedAndroidDeviceManufacturers"})
     @Expose
     public String allowedAndroidDeviceManufacturers;
 
@@ -43,7 +43,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Allowed Android Device Models.
      * List of device models allowed, as a string, for the managed app to work. (Android Only)
      */
-    @SerializedName("allowedAndroidDeviceModels")
+    @SerializedName(value = "allowedAndroidDeviceModels", alternate = {"AllowedAndroidDeviceModels"})
     @Expose
     public java.util.List<String> allowedAndroidDeviceModels;
 
@@ -51,7 +51,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Allowed Ios Device Models.
      * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
      */
-    @SerializedName("allowedIosDeviceModels")
+    @SerializedName(value = "allowedIosDeviceModels", alternate = {"AllowedIosDeviceModels"})
     @Expose
     public String allowedIosDeviceModels;
 
@@ -59,7 +59,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Action If Android Device Manufacturer Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
      */
-    @SerializedName("appActionIfAndroidDeviceManufacturerNotAllowed")
+    @SerializedName(value = "appActionIfAndroidDeviceManufacturerNotAllowed", alternate = {"AppActionIfAndroidDeviceManufacturerNotAllowed"})
     @Expose
     public ManagedAppRemediationAction appActionIfAndroidDeviceManufacturerNotAllowed;
 
@@ -67,7 +67,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Action If Android Device Model Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only)
      */
-    @SerializedName("appActionIfAndroidDeviceModelNotAllowed")
+    @SerializedName(value = "appActionIfAndroidDeviceModelNotAllowed", alternate = {"AppActionIfAndroidDeviceModelNotAllowed"})
     @Expose
     public ManagedAppRemediationAction appActionIfAndroidDeviceModelNotAllowed;
 
@@ -75,7 +75,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Action If Android Safety Net Apps Verification Failed.
      * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
      */
-    @SerializedName("appActionIfAndroidSafetyNetAppsVerificationFailed")
+    @SerializedName(value = "appActionIfAndroidSafetyNetAppsVerificationFailed", alternate = {"AppActionIfAndroidSafetyNetAppsVerificationFailed"})
     @Expose
     public ManagedAppRemediationAction appActionIfAndroidSafetyNetAppsVerificationFailed;
 
@@ -83,7 +83,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Action If Android Safety Net Device Attestation Failed.
      * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
      */
-    @SerializedName("appActionIfAndroidSafetyNetDeviceAttestationFailed")
+    @SerializedName(value = "appActionIfAndroidSafetyNetDeviceAttestationFailed", alternate = {"AppActionIfAndroidSafetyNetDeviceAttestationFailed"})
     @Expose
     public ManagedAppRemediationAction appActionIfAndroidSafetyNetDeviceAttestationFailed;
 
@@ -91,7 +91,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Action If Ios Device Model Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
      */
-    @SerializedName("appActionIfIosDeviceModelNotAllowed")
+    @SerializedName(value = "appActionIfIosDeviceModelNotAllowed", alternate = {"AppActionIfIosDeviceModelNotAllowed"})
     @Expose
     public ManagedAppRemediationAction appActionIfIosDeviceModelNotAllowed;
 
@@ -99,7 +99,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Data Encryption Type.
      * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
-    @SerializedName("appDataEncryptionType")
+    @SerializedName(value = "appDataEncryptionType", alternate = {"AppDataEncryptionType"})
     @Expose
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
@@ -107,7 +107,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Biometric Authentication Blocked.
      * Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only)
      */
-    @SerializedName("biometricAuthenticationBlocked")
+    @SerializedName(value = "biometricAuthenticationBlocked", alternate = {"BiometricAuthenticationBlocked"})
     @Expose
     public Boolean biometricAuthenticationBlocked;
 
@@ -115,7 +115,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Browser Display Name.
      * Friendly name of the preferred custom browser to open weblink on Android. (Android only)
      */
-    @SerializedName("customBrowserDisplayName")
+    @SerializedName(value = "customBrowserDisplayName", alternate = {"CustomBrowserDisplayName"})
     @Expose
     public String customBrowserDisplayName;
 
@@ -123,7 +123,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Browser Package Id.
      * Unique identifier of a custom browser to open weblink on Android. (Android only)
      */
-    @SerializedName("customBrowserPackageId")
+    @SerializedName(value = "customBrowserPackageId", alternate = {"CustomBrowserPackageId"})
     @Expose
     public String customBrowserPackageId;
 
@@ -131,7 +131,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Browser Protocol.
      * A custom browser protocol to open weblink on iOS. (iOS only)
      */
-    @SerializedName("customBrowserProtocol")
+    @SerializedName(value = "customBrowserProtocol", alternate = {"CustomBrowserProtocol"})
     @Expose
     public String customBrowserProtocol;
 
@@ -139,7 +139,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Dialer App Display Name.
      * Friendly name of a custom dialer app to click-to-open a phone number on Android.
      */
-    @SerializedName("customDialerAppDisplayName")
+    @SerializedName(value = "customDialerAppDisplayName", alternate = {"CustomDialerAppDisplayName"})
     @Expose
     public String customDialerAppDisplayName;
 
@@ -147,7 +147,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Dialer App Package Id.
      * PackageId of a custom dialer app to click-to-open a phone number on Android.
      */
-    @SerializedName("customDialerAppPackageId")
+    @SerializedName(value = "customDialerAppPackageId", alternate = {"CustomDialerAppPackageId"})
     @Expose
     public String customDialerAppPackageId;
 
@@ -155,7 +155,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Dialer App Protocol.
      * Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
      */
-    @SerializedName("customDialerAppProtocol")
+    @SerializedName(value = "customDialerAppProtocol", alternate = {"CustomDialerAppProtocol"})
     @Expose
     public String customDialerAppProtocol;
 
@@ -163,7 +163,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Settings.
      * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      */
-    @SerializedName("customSettings")
+    @SerializedName(value = "customSettings", alternate = {"CustomSettings"})
     @Expose
     public java.util.List<KeyValuePair> customSettings;
 
@@ -171,7 +171,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Deployed App Count.
      * Count of apps to which the current policy is deployed.
      */
-    @SerializedName("deployedAppCount")
+    @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
 
@@ -179,7 +179,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Disable App Encryption If Device Encryption Is Enabled.
      * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      */
-    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
+    @SerializedName(value = "disableAppEncryptionIfDeviceEncryptionIsEnabled", alternate = {"DisableAppEncryptionIfDeviceEncryptionIsEnabled"})
     @Expose
     public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
 
@@ -187,7 +187,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Disable Protection Of Managed Outbound Open In Data.
      * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
      */
-    @SerializedName("disableProtectionOfManagedOutboundOpenInData")
+    @SerializedName(value = "disableProtectionOfManagedOutboundOpenInData", alternate = {"DisableProtectionOfManagedOutboundOpenInData"})
     @Expose
     public Boolean disableProtectionOfManagedOutboundOpenInData;
 
@@ -195,7 +195,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Encrypt App Data.
      * Indicates whether managed-app data should be encrypted. (Android only)
      */
-    @SerializedName("encryptAppData")
+    @SerializedName(value = "encryptAppData", alternate = {"EncryptAppData"})
     @Expose
     public Boolean encryptAppData;
 
@@ -203,7 +203,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Exempted App Packages.
      * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
      */
-    @SerializedName("exemptedAppPackages")
+    @SerializedName(value = "exemptedAppPackages", alternate = {"ExemptedAppPackages"})
     @Expose
     public java.util.List<KeyValuePair> exemptedAppPackages;
 
@@ -211,7 +211,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Exempted App Protocols.
      * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
      */
-    @SerializedName("exemptedAppProtocols")
+    @SerializedName(value = "exemptedAppProtocols", alternate = {"ExemptedAppProtocols"})
     @Expose
     public java.util.List<KeyValuePair> exemptedAppProtocols;
 
@@ -219,7 +219,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Face Id Blocked.
      * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      */
-    @SerializedName("faceIdBlocked")
+    @SerializedName(value = "faceIdBlocked", alternate = {"FaceIdBlocked"})
     @Expose
     public Boolean faceIdBlocked;
 
@@ -227,7 +227,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Filter Open In To Only Managed Apps.
      * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
      */
-    @SerializedName("filterOpenInToOnlyManagedApps")
+    @SerializedName(value = "filterOpenInToOnlyManagedApps", alternate = {"FilterOpenInToOnlyManagedApps"})
     @Expose
     public Boolean filterOpenInToOnlyManagedApps;
 
@@ -235,7 +235,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Required Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or app access will be blocked
      */
-    @SerializedName("minimumRequiredCompanyPortalVersion")
+    @SerializedName(value = "minimumRequiredCompanyPortalVersion", alternate = {"MinimumRequiredCompanyPortalVersion"})
     @Expose
     public String minimumRequiredCompanyPortalVersion;
 
@@ -243,7 +243,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Required Patch Version.
      * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      */
-    @SerializedName("minimumRequiredPatchVersion")
+    @SerializedName(value = "minimumRequiredPatchVersion", alternate = {"MinimumRequiredPatchVersion"})
     @Expose
     public String minimumRequiredPatchVersion;
 
@@ -251,7 +251,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Required Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
      */
-    @SerializedName("minimumRequiredSdkVersion")
+    @SerializedName(value = "minimumRequiredSdkVersion", alternate = {"MinimumRequiredSdkVersion"})
     @Expose
     public String minimumRequiredSdkVersion;
 
@@ -259,7 +259,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Warning Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
      */
-    @SerializedName("minimumWarningCompanyPortalVersion")
+    @SerializedName(value = "minimumWarningCompanyPortalVersion", alternate = {"MinimumWarningCompanyPortalVersion"})
     @Expose
     public String minimumWarningCompanyPortalVersion;
 
@@ -267,7 +267,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Warning Patch Version.
      * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
      */
-    @SerializedName("minimumWarningPatchVersion")
+    @SerializedName(value = "minimumWarningPatchVersion", alternate = {"MinimumWarningPatchVersion"})
     @Expose
     public String minimumWarningPatchVersion;
 
@@ -275,7 +275,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Wipe Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
      */
-    @SerializedName("minimumWipeCompanyPortalVersion")
+    @SerializedName(value = "minimumWipeCompanyPortalVersion", alternate = {"MinimumWipeCompanyPortalVersion"})
     @Expose
     public String minimumWipeCompanyPortalVersion;
 
@@ -283,7 +283,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Wipe Patch Version.
      * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
      */
-    @SerializedName("minimumWipePatchVersion")
+    @SerializedName(value = "minimumWipePatchVersion", alternate = {"MinimumWipePatchVersion"})
     @Expose
     public String minimumWipePatchVersion;
 
@@ -291,7 +291,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Wipe Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data.
      */
-    @SerializedName("minimumWipeSdkVersion")
+    @SerializedName(value = "minimumWipeSdkVersion", alternate = {"MinimumWipeSdkVersion"})
     @Expose
     public String minimumWipeSdkVersion;
 
@@ -299,7 +299,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Protect Inbound Data From Unknown Sources.
      * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
      */
-    @SerializedName("protectInboundDataFromUnknownSources")
+    @SerializedName(value = "protectInboundDataFromUnknownSources", alternate = {"ProtectInboundDataFromUnknownSources"})
     @Expose
     public Boolean protectInboundDataFromUnknownSources;
 
@@ -307,7 +307,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Required Android Safety Net Apps Verification Type.
      * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
      */
-    @SerializedName("requiredAndroidSafetyNetAppsVerificationType")
+    @SerializedName(value = "requiredAndroidSafetyNetAppsVerificationType", alternate = {"RequiredAndroidSafetyNetAppsVerificationType"})
     @Expose
     public AndroidManagedAppSafetyNetAppsVerificationType requiredAndroidSafetyNetAppsVerificationType;
 
@@ -315,7 +315,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Required Android Safety Net Device Attestation Type.
      * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
      */
-    @SerializedName("requiredAndroidSafetyNetDeviceAttestationType")
+    @SerializedName(value = "requiredAndroidSafetyNetDeviceAttestationType", alternate = {"RequiredAndroidSafetyNetDeviceAttestationType"})
     @Expose
     public AndroidManagedAppSafetyNetDeviceAttestationType requiredAndroidSafetyNetDeviceAttestationType;
 
@@ -323,7 +323,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Required Android Safety Net Evaluation Type.
      * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only)
      */
-    @SerializedName("requiredAndroidSafetyNetEvaluationType")
+    @SerializedName(value = "requiredAndroidSafetyNetEvaluationType", alternate = {"RequiredAndroidSafetyNetEvaluationType"})
     @Expose
     public AndroidManagedAppSafetyNetEvaluationType requiredAndroidSafetyNetEvaluationType;
 
@@ -331,7 +331,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Screen Capture Blocked.
      * Indicates whether screen capture is blocked. (Android only)
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -339,7 +339,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Third Party Keyboards Blocked.
      * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
      */
-    @SerializedName("thirdPartyKeyboardsBlocked")
+    @SerializedName(value = "thirdPartyKeyboardsBlocked", alternate = {"ThirdPartyKeyboardsBlocked"})
     @Expose
     public Boolean thirdPartyKeyboardsBlocked;
 
@@ -347,7 +347,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Apps.
      * List of apps to which the policy is deployed.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public ManagedMobileAppCollectionPage apps;
 
@@ -355,7 +355,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
-    @SerializedName("deploymentSummary")
+    @SerializedName(value = "deploymentSummary", alternate = {"DeploymentSummary"})
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
 

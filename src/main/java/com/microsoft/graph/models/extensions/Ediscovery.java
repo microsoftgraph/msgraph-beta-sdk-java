@@ -28,7 +28,7 @@ public class Ediscovery extends Entity implements IJsonBackedObject {
      * The Cases.
      * 
      */
-    @SerializedName("cases")
+    @SerializedName(value = "cases", alternate = {"Cases"})
     @Expose
     public EdiscoveryCaseCollectionPage cases;
 

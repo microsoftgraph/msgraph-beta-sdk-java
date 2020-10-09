@@ -35,7 +35,7 @@ public class ItemActivityTimeSet implements IJsonBackedObject {
      * The Last Recorded Date Time.
      * 
      */
-    @SerializedName("lastRecordedDateTime")
+    @SerializedName(value = "lastRecordedDateTime", alternate = {"LastRecordedDateTime"})
     @Expose
     public java.util.Calendar lastRecordedDateTime;
 
@@ -43,7 +43,7 @@ public class ItemActivityTimeSet implements IJsonBackedObject {
      * The Observed Date Time.
      * When the activity was observed to take place.
      */
-    @SerializedName("observedDateTime")
+    @SerializedName(value = "observedDateTime", alternate = {"ObservedDateTime"})
     @Expose
     public java.util.Calendar observedDateTime;
 
@@ -51,7 +51,7 @@ public class ItemActivityTimeSet implements IJsonBackedObject {
      * The Recorded Date Time.
      * When the observation was recorded on the service.
      */
-    @SerializedName("recordedDateTime")
+    @SerializedName(value = "recordedDateTime", alternate = {"RecordedDateTime"})
     @Expose
     public java.util.Calendar recordedDateTime;
 

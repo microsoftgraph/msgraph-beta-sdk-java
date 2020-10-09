@@ -22,7 +22,7 @@ public class RiskyUserDismissBody {
      * The user Ids.
      * 
      */
-    @SerializedName("userIds")
+    @SerializedName(value = "userIds", alternate = {"UserIds"})
     @Expose
     public java.util.List<String> userIds;
 

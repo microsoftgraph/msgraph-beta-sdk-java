@@ -26,7 +26,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
      * The Entry Type.
      * 
      */
-    @SerializedName("entryType")
+    @SerializedName(value = "entryType", alternate = {"EntryType"})
     @Expose
     public String entryType;
 
@@ -34,7 +34,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
      * The Error Code.
      * 
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -42,7 +42,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
      * The Error Message.
      * 
      */
-    @SerializedName("errorMessage")
+    @SerializedName(value = "errorMessage", alternate = {"ErrorMessage"})
     @Expose
     public String errorMessage;
 
@@ -50,7 +50,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
      * The Joining Value.
      * 
      */
-    @SerializedName("joiningValue")
+    @SerializedName(value = "joiningValue", alternate = {"JoiningValue"})
     @Expose
     public String joiningValue;
 
@@ -58,7 +58,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
      * The Recorded Date Time.
      * 
      */
-    @SerializedName("recordedDateTime")
+    @SerializedName(value = "recordedDateTime", alternate = {"RecordedDateTime"})
     @Expose
     public java.util.Calendar recordedDateTime;
 
@@ -66,7 +66,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
      * The Reportable Identifier.
      * 
      */
-    @SerializedName("reportableIdentifier")
+    @SerializedName(value = "reportableIdentifier", alternate = {"ReportableIdentifier"})
     @Expose
     public String reportableIdentifier;
 

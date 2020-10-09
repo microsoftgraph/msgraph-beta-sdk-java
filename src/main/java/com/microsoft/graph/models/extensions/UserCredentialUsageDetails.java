@@ -28,7 +28,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The Auth Method.
      * 
      */
-    @SerializedName("authMethod")
+    @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose
     public UsageAuthMethod authMethod;
 
@@ -36,7 +36,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The Event Date Time.
      * 
      */
-    @SerializedName("eventDateTime")
+    @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
     public java.util.Calendar eventDateTime;
 
@@ -44,7 +44,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The Failure Reason.
      * 
      */
-    @SerializedName("failureReason")
+    @SerializedName(value = "failureReason", alternate = {"FailureReason"})
     @Expose
     public String failureReason;
 
@@ -52,7 +52,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The Feature.
      * 
      */
-    @SerializedName("feature")
+    @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
     public FeatureType feature;
 
@@ -60,7 +60,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The Is Success.
      * 
      */
-    @SerializedName("isSuccess")
+    @SerializedName(value = "isSuccess", alternate = {"IsSuccess"})
     @Expose
     public Boolean isSuccess;
 
@@ -68,7 +68,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -76,7 +76,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

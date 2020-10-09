@@ -27,7 +27,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * The Configurations.
      * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("configurations")
+    @SerializedName(value = "configurations", alternate = {"Configurations"})
     @Expose
     public java.util.List<KeyTypedValuePair> configurations;
 
@@ -35,7 +35,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * The Domains.
      * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
      */
-    @SerializedName("domains")
+    @SerializedName(value = "domains", alternate = {"Domains"})
     @Expose
     public java.util.List<String> domains;
 
@@ -43,7 +43,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * The Extension Identifier.
      * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      */
-    @SerializedName("extensionIdentifier")
+    @SerializedName(value = "extensionIdentifier", alternate = {"ExtensionIdentifier"})
     @Expose
     public String extensionIdentifier;
 
@@ -51,7 +51,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * The Realm.
      * Gets or sets the case-sensitive realm name for this profile.
      */
-    @SerializedName("realm")
+    @SerializedName(value = "realm", alternate = {"Realm"})
     @Expose
     public String realm;
 
@@ -59,7 +59,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * The Team Identifier.
      * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      */
-    @SerializedName("teamIdentifier")
+    @SerializedName(value = "teamIdentifier", alternate = {"TeamIdentifier"})
     @Expose
     public String teamIdentifier;
 

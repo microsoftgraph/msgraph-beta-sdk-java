@@ -38,7 +38,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Accessibility.
      * Allow the app or process to control the Mac via the Accessibility subsystem.
      */
-    @SerializedName("accessibility")
+    @SerializedName(value = "accessibility", alternate = {"Accessibility"})
     @Expose
     public Enablement accessibility;
 
@@ -46,7 +46,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Address Book.
      * Allow or block access to contact information managed by Contacts.
      */
-    @SerializedName("addressBook")
+    @SerializedName(value = "addressBook", alternate = {"AddressBook"})
     @Expose
     public Enablement addressBook;
 
@@ -54,7 +54,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Apple Events Allowed Receivers.
      * Allow or deny the app or process to send a restricted Apple event to another app or process. You will need to know the identifier, identifier type, and code requirement of the receiving app or process. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("appleEventsAllowedReceivers")
+    @SerializedName(value = "appleEventsAllowedReceivers", alternate = {"AppleEventsAllowedReceivers"})
     @Expose
     public java.util.List<MacOSAppleEventReceiver> appleEventsAllowedReceivers;
 
@@ -62,7 +62,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Block Camera.
      * Block access to camera app.
      */
-    @SerializedName("blockCamera")
+    @SerializedName(value = "blockCamera", alternate = {"BlockCamera"})
     @Expose
     public Boolean blockCamera;
 
@@ -70,7 +70,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Block Listen Event.
      * Block the app or process from listening to events from input devices such as mouse, keyboard, and trackpad.Requires macOS 10.15 or later.
      */
-    @SerializedName("blockListenEvent")
+    @SerializedName(value = "blockListenEvent", alternate = {"BlockListenEvent"})
     @Expose
     public Boolean blockListenEvent;
 
@@ -78,7 +78,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Block Microphone.
      * Block access to microphone.
      */
-    @SerializedName("blockMicrophone")
+    @SerializedName(value = "blockMicrophone", alternate = {"BlockMicrophone"})
     @Expose
     public Boolean blockMicrophone;
 
@@ -86,7 +86,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Block Screen Capture.
      * Block app from capturing contents of system display. Requires macOS 10.15 or later.
      */
-    @SerializedName("blockScreenCapture")
+    @SerializedName(value = "blockScreenCapture", alternate = {"BlockScreenCapture"})
     @Expose
     public Boolean blockScreenCapture;
 
@@ -94,7 +94,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Calendar.
      * Allow or block access to event information managed by Calendar.
      */
-    @SerializedName("calendar")
+    @SerializedName(value = "calendar", alternate = {"Calendar"})
     @Expose
     public Enablement calendar;
 
@@ -102,7 +102,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Code Requirement.
      * Enter the code requirement, which can be obtained with the command 'codesign ???display -r ???' in the Terminal app. Include everything after '=&amp;gt;'.
      */
-    @SerializedName("codeRequirement")
+    @SerializedName(value = "codeRequirement", alternate = {"CodeRequirement"})
     @Expose
     public String codeRequirement;
 
@@ -110,7 +110,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Display Name.
      * The display name of the app, process, or executable.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -118,7 +118,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The File Provider Presence.
      * Allow the app or process to access files managed by another app???s file provider extension. Requires macOS 10.15 or later. 
      */
-    @SerializedName("fileProviderPresence")
+    @SerializedName(value = "fileProviderPresence", alternate = {"FileProviderPresence"})
     @Expose
     public Enablement fileProviderPresence;
 
@@ -126,7 +126,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Identifier.
      * The bundle ID or path of the app, process, or executable.
      */
-    @SerializedName("identifier")
+    @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
     public String identifier;
 
@@ -134,7 +134,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Identifier Type.
      * A bundle ID is used to identify an app. A path is used to identify a process or executable.
      */
-    @SerializedName("identifierType")
+    @SerializedName(value = "identifierType", alternate = {"IdentifierType"})
     @Expose
     public MacOSProcessIdentifierType identifierType;
 
@@ -142,7 +142,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Media Library.
      * Allow or block access to music and the media library.
      */
-    @SerializedName("mediaLibrary")
+    @SerializedName(value = "mediaLibrary", alternate = {"MediaLibrary"})
     @Expose
     public Enablement mediaLibrary;
 
@@ -150,7 +150,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Photos.
      * Allow or block access to images managed by Photos.
      */
-    @SerializedName("photos")
+    @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
     public Enablement photos;
 
@@ -158,7 +158,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Post Event.
      * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream.
      */
-    @SerializedName("postEvent")
+    @SerializedName(value = "postEvent", alternate = {"PostEvent"})
     @Expose
     public Enablement postEvent;
 
@@ -166,7 +166,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Reminders.
      * Allow or block access to information managed by Reminders.
      */
-    @SerializedName("reminders")
+    @SerializedName(value = "reminders", alternate = {"Reminders"})
     @Expose
     public Enablement reminders;
 
@@ -174,7 +174,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Speech Recognition.
      * Allow or block access to system speech recognition facility.
      */
-    @SerializedName("speechRecognition")
+    @SerializedName(value = "speechRecognition", alternate = {"SpeechRecognition"})
     @Expose
     public Enablement speechRecognition;
 
@@ -182,7 +182,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The Static Code Validation.
      * Statically validates the code requirement. Use this setting if the process invalidates its dynamic code signature.
      */
-    @SerializedName("staticCodeValidation")
+    @SerializedName(value = "staticCodeValidation", alternate = {"StaticCodeValidation"})
     @Expose
     public Boolean staticCodeValidation;
 
@@ -190,7 +190,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy All Files.
      * Control access to all protected files on a device. Files might be in locations such as emails, messages, apps, and administrative settings. Apply this setting with caution.
      */
-    @SerializedName("systemPolicyAllFiles")
+    @SerializedName(value = "systemPolicyAllFiles", alternate = {"SystemPolicyAllFiles"})
     @Expose
     public Enablement systemPolicyAllFiles;
 
@@ -198,7 +198,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy Desktop Folder.
      * Allow or block access to Desktop folder.
      */
-    @SerializedName("systemPolicyDesktopFolder")
+    @SerializedName(value = "systemPolicyDesktopFolder", alternate = {"SystemPolicyDesktopFolder"})
     @Expose
     public Enablement systemPolicyDesktopFolder;
 
@@ -206,7 +206,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy Documents Folder.
      * Allow or block access to Documents folder.
      */
-    @SerializedName("systemPolicyDocumentsFolder")
+    @SerializedName(value = "systemPolicyDocumentsFolder", alternate = {"SystemPolicyDocumentsFolder"})
     @Expose
     public Enablement systemPolicyDocumentsFolder;
 
@@ -214,7 +214,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy Downloads Folder.
      * Allow or block access to Downloads folder.
      */
-    @SerializedName("systemPolicyDownloadsFolder")
+    @SerializedName(value = "systemPolicyDownloadsFolder", alternate = {"SystemPolicyDownloadsFolder"})
     @Expose
     public Enablement systemPolicyDownloadsFolder;
 
@@ -222,7 +222,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy Network Volumes.
      * Allow or block access to network volumes. Requires macOS 10.15 or later.
      */
-    @SerializedName("systemPolicyNetworkVolumes")
+    @SerializedName(value = "systemPolicyNetworkVolumes", alternate = {"SystemPolicyNetworkVolumes"})
     @Expose
     public Enablement systemPolicyNetworkVolumes;
 
@@ -230,7 +230,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy Removable Volumes.
      * Control access to removable  volumes on the device, such as an external hard drive. Requires macOS 10.15 or later.
      */
-    @SerializedName("systemPolicyRemovableVolumes")
+    @SerializedName(value = "systemPolicyRemovableVolumes", alternate = {"SystemPolicyRemovableVolumes"})
     @Expose
     public Enablement systemPolicyRemovableVolumes;
 
@@ -238,7 +238,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
      * The System Policy System Admin Files.
      * Allow app or process to access files used in system administration.
      */
-    @SerializedName("systemPolicySystemAdminFiles")
+    @SerializedName(value = "systemPolicySystemAdminFiles", alternate = {"SystemPolicySystemAdminFiles"})
     @Expose
     public Enablement systemPolicySystemAdminFiles;
 

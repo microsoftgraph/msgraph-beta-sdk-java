@@ -31,7 +31,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Buy From Address.
      * 
      */
-    @SerializedName("buyFromAddress")
+    @SerializedName(value = "buyFromAddress", alternate = {"BuyFromAddress"})
     @Expose
     public PostalAddressType buyFromAddress;
 
@@ -39,7 +39,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Currency Code.
      * 
      */
-    @SerializedName("currencyCode")
+    @SerializedName(value = "currencyCode", alternate = {"CurrencyCode"})
     @Expose
     public String currencyCode;
 
@@ -47,7 +47,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Currency Id.
      * 
      */
-    @SerializedName("currencyId")
+    @SerializedName(value = "currencyId", alternate = {"CurrencyId"})
     @Expose
     public java.util.UUID currencyId;
 
@@ -55,7 +55,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Discount Amount.
      * 
      */
-    @SerializedName("discountAmount")
+    @SerializedName(value = "discountAmount", alternate = {"DiscountAmount"})
     @Expose
     public java.math.BigDecimal discountAmount;
 
@@ -63,7 +63,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Discount Applied Before Tax.
      * 
      */
-    @SerializedName("discountAppliedBeforeTax")
+    @SerializedName(value = "discountAppliedBeforeTax", alternate = {"DiscountAppliedBeforeTax"})
     @Expose
     public Boolean discountAppliedBeforeTax;
 
@@ -71,7 +71,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Due Date.
      * 
      */
-    @SerializedName("dueDate")
+    @SerializedName(value = "dueDate", alternate = {"DueDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly dueDate;
 
@@ -79,7 +79,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Invoice Date.
      * 
      */
-    @SerializedName("invoiceDate")
+    @SerializedName(value = "invoiceDate", alternate = {"InvoiceDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly invoiceDate;
 
@@ -87,7 +87,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -95,7 +95,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -103,7 +103,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Pay To Address.
      * 
      */
-    @SerializedName("payToAddress")
+    @SerializedName(value = "payToAddress", alternate = {"PayToAddress"})
     @Expose
     public PostalAddressType payToAddress;
 
@@ -111,7 +111,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Pay To Contact.
      * 
      */
-    @SerializedName("payToContact")
+    @SerializedName(value = "payToContact", alternate = {"PayToContact"})
     @Expose
     public String payToContact;
 
@@ -119,7 +119,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Pay To Name.
      * 
      */
-    @SerializedName("payToName")
+    @SerializedName(value = "payToName", alternate = {"PayToName"})
     @Expose
     public String payToName;
 
@@ -127,7 +127,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Pay To Vendor Id.
      * 
      */
-    @SerializedName("payToVendorId")
+    @SerializedName(value = "payToVendorId", alternate = {"PayToVendorId"})
     @Expose
     public java.util.UUID payToVendorId;
 
@@ -135,7 +135,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Pay To Vendor Number.
      * 
      */
-    @SerializedName("payToVendorNumber")
+    @SerializedName(value = "payToVendorNumber", alternate = {"PayToVendorNumber"})
     @Expose
     public String payToVendorNumber;
 
@@ -143,7 +143,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Prices Include Tax.
      * 
      */
-    @SerializedName("pricesIncludeTax")
+    @SerializedName(value = "pricesIncludeTax", alternate = {"PricesIncludeTax"})
     @Expose
     public Boolean pricesIncludeTax;
 
@@ -151,7 +151,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Ship To Address.
      * 
      */
-    @SerializedName("shipToAddress")
+    @SerializedName(value = "shipToAddress", alternate = {"ShipToAddress"})
     @Expose
     public PostalAddressType shipToAddress;
 
@@ -159,7 +159,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Ship To Contact.
      * 
      */
-    @SerializedName("shipToContact")
+    @SerializedName(value = "shipToContact", alternate = {"ShipToContact"})
     @Expose
     public String shipToContact;
 
@@ -167,7 +167,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Ship To Name.
      * 
      */
-    @SerializedName("shipToName")
+    @SerializedName(value = "shipToName", alternate = {"ShipToName"})
     @Expose
     public String shipToName;
 
@@ -175,7 +175,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -183,7 +183,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Total Amount Excluding Tax.
      * 
      */
-    @SerializedName("totalAmountExcludingTax")
+    @SerializedName(value = "totalAmountExcludingTax", alternate = {"TotalAmountExcludingTax"})
     @Expose
     public java.math.BigDecimal totalAmountExcludingTax;
 
@@ -191,7 +191,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Total Amount Including Tax.
      * 
      */
-    @SerializedName("totalAmountIncludingTax")
+    @SerializedName(value = "totalAmountIncludingTax", alternate = {"TotalAmountIncludingTax"})
     @Expose
     public java.math.BigDecimal totalAmountIncludingTax;
 
@@ -199,7 +199,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Total Tax Amount.
      * 
      */
-    @SerializedName("totalTaxAmount")
+    @SerializedName(value = "totalTaxAmount", alternate = {"TotalTaxAmount"})
     @Expose
     public java.math.BigDecimal totalTaxAmount;
 
@@ -207,7 +207,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Vendor Id.
      * 
      */
-    @SerializedName("vendorId")
+    @SerializedName(value = "vendorId", alternate = {"VendorId"})
     @Expose
     public java.util.UUID vendorId;
 
@@ -215,7 +215,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Vendor Invoice Number.
      * 
      */
-    @SerializedName("vendorInvoiceNumber")
+    @SerializedName(value = "vendorInvoiceNumber", alternate = {"VendorInvoiceNumber"})
     @Expose
     public String vendorInvoiceNumber;
 
@@ -223,7 +223,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Vendor Name.
      * 
      */
-    @SerializedName("vendorName")
+    @SerializedName(value = "vendorName", alternate = {"VendorName"})
     @Expose
     public String vendorName;
 
@@ -231,7 +231,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Vendor Number.
      * 
      */
-    @SerializedName("vendorNumber")
+    @SerializedName(value = "vendorNumber", alternate = {"VendorNumber"})
     @Expose
     public String vendorNumber;
 
@@ -239,7 +239,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Currency.
      * 
      */
-    @SerializedName("currency")
+    @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
     public Currency currency;
 
@@ -247,7 +247,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Purchase Invoice Lines.
      * 
      */
-    @SerializedName("purchaseInvoiceLines")
+    @SerializedName(value = "purchaseInvoiceLines", alternate = {"PurchaseInvoiceLines"})
     @Expose
     public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
 
@@ -255,7 +255,7 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Vendor.
      * 
      */
-    @SerializedName("vendor")
+    @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
     public Vendor vendor;
 

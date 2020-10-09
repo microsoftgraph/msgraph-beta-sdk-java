@@ -26,7 +26,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -34,7 +34,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -42,7 +42,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -50,7 +50,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -58,7 +58,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -66,7 +66,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Used Android Phone.
      * 
      */
-    @SerializedName("usedAndroidPhone")
+    @SerializedName(value = "usedAndroidPhone", alternate = {"UsedAndroidPhone"})
     @Expose
     public Boolean usedAndroidPhone;
 
@@ -74,7 +74,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Usedi OS.
      * 
      */
-    @SerializedName("usediOS")
+    @SerializedName(value = "usediOS", alternate = {"UsediOS"})
     @Expose
     public Boolean usediOS;
 
@@ -82,7 +82,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Used Mac.
      * 
      */
-    @SerializedName("usedMac")
+    @SerializedName(value = "usedMac", alternate = {"UsedMac"})
     @Expose
     public Boolean usedMac;
 
@@ -90,7 +90,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Used Web.
      * 
      */
-    @SerializedName("usedWeb")
+    @SerializedName(value = "usedWeb", alternate = {"UsedWeb"})
     @Expose
     public Boolean usedWeb;
 
@@ -98,7 +98,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Used Windows.
      * 
      */
-    @SerializedName("usedWindows")
+    @SerializedName(value = "usedWindows", alternate = {"UsedWindows"})
     @Expose
     public Boolean usedWindows;
 
@@ -106,7 +106,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The Used Windows Phone.
      * 
      */
-    @SerializedName("usedWindowsPhone")
+    @SerializedName(value = "usedWindowsPhone", alternate = {"UsedWindowsPhone"})
     @Expose
     public Boolean usedWindowsPhone;
 
@@ -114,7 +114,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

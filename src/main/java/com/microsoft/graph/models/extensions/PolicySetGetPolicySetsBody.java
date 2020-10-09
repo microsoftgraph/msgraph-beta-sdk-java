@@ -22,7 +22,7 @@ public class PolicySetGetPolicySetsBody {
      * The policy Set Ids.
      * 
      */
-    @SerializedName("policySetIds")
+    @SerializedName(value = "policySetIds", alternate = {"PolicySetIds"})
     @Expose
     public java.util.List<String> policySetIds;
 

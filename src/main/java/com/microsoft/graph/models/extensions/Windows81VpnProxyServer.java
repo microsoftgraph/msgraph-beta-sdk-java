@@ -26,7 +26,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements IJsonBack
      * The Automatically Detect Proxy Settings.
      * Automatically detect proxy settings.
      */
-    @SerializedName("automaticallyDetectProxySettings")
+    @SerializedName(value = "automaticallyDetectProxySettings", alternate = {"AutomaticallyDetectProxySettings"})
     @Expose
     public Boolean automaticallyDetectProxySettings;
 
@@ -34,7 +34,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements IJsonBack
      * The Bypass Proxy Server For Local Address.
      * Bypass proxy server for local address.
      */
-    @SerializedName("bypassProxyServerForLocalAddress")
+    @SerializedName(value = "bypassProxyServerForLocalAddress", alternate = {"BypassProxyServerForLocalAddress"})
     @Expose
     public Boolean bypassProxyServerForLocalAddress;
 

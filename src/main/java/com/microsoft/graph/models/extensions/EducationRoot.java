@@ -34,7 +34,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Synchronization Profiles.
      * 
      */
-    @SerializedName("synchronizationProfiles")
+    @SerializedName(value = "synchronizationProfiles", alternate = {"SynchronizationProfiles"})
     @Expose
     public EducationSynchronizationProfileCollectionPage synchronizationProfiles;
 
@@ -42,7 +42,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Classes.
      * Read-only. Nullable.
      */
-    @SerializedName("classes")
+    @SerializedName(value = "classes", alternate = {"Classes"})
     @Expose
     public EducationClassCollectionPage classes;
 
@@ -50,7 +50,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Me.
      * Read-only. Nullable.
      */
-    @SerializedName("me")
+    @SerializedName(value = "me", alternate = {"Me"})
     @Expose
     public EducationUser me;
 
@@ -58,7 +58,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Schools.
      * Read-only. Nullable.
      */
-    @SerializedName("schools")
+    @SerializedName(value = "schools", alternate = {"Schools"})
     @Expose
     public EducationSchoolCollectionPage schools;
 
@@ -66,7 +66,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Users.
      * Read-only. Nullable.
      */
-    @SerializedName("users")
+    @SerializedName(value = "users", alternate = {"Users"})
     @Expose
     public EducationUserCollectionPage users;
 

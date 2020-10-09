@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplicationMultiple;
+import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
@@ -37,6 +39,10 @@ public interface IRbacApplicationMultipleRequestBuilder extends IRequestBuilder 
      */
     IRbacApplicationMultipleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IUnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces();
+
+    IUnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(final String id);
 
     IUnifiedRoleAssignmentMultipleCollectionRequestBuilder roleAssignments();
 

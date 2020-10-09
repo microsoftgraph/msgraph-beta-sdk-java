@@ -29,7 +29,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Display Time To Live.
      * 
      */
-    @SerializedName("displayTimeToLive")
+    @SerializedName(value = "displayTimeToLive", alternate = {"DisplayTimeToLive"})
     @Expose
     public Integer displayTimeToLive;
 
@@ -37,7 +37,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -45,7 +45,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Group Name.
      * 
      */
-    @SerializedName("groupName")
+    @SerializedName(value = "groupName", alternate = {"GroupName"})
     @Expose
     public String groupName;
 
@@ -53,7 +53,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Payload.
      * 
      */
-    @SerializedName("payload")
+    @SerializedName(value = "payload", alternate = {"Payload"})
     @Expose
     public PayloadTypes payload;
 
@@ -61,7 +61,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Priority priority;
 
@@ -69,7 +69,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Target Host Name.
      * 
      */
-    @SerializedName("targetHostName")
+    @SerializedName(value = "targetHostName", alternate = {"TargetHostName"})
     @Expose
     public String targetHostName;
 
@@ -77,7 +77,7 @@ public class Notification extends Entity implements IJsonBackedObject {
      * The Target Policy.
      * 
      */
-    @SerializedName("targetPolicy")
+    @SerializedName(value = "targetPolicy", alternate = {"TargetPolicy"})
     @Expose
     public TargetPolicyEndpoints targetPolicy;
 

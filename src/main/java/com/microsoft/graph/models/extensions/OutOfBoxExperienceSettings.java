@@ -37,7 +37,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
      * The Device Usage Type.
      * AAD join authentication type
      */
-    @SerializedName("deviceUsageType")
+    @SerializedName(value = "deviceUsageType", alternate = {"DeviceUsageType"})
     @Expose
     public WindowsDeviceUsageType deviceUsageType;
 
@@ -45,7 +45,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
      * The Hide Escape Link.
      * If set to true, then the user can't start over with different account, on company sign-in
      */
-    @SerializedName("hideEscapeLink")
+    @SerializedName(value = "hideEscapeLink", alternate = {"HideEscapeLink"})
     @Expose
     public Boolean hideEscapeLink;
 
@@ -53,7 +53,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
      * The Hide EULA.
      * Show or hide EULA to user
      */
-    @SerializedName("hideEULA")
+    @SerializedName(value = "hideEULA", alternate = {"HideEULA"})
     @Expose
     public Boolean hideEULA;
 
@@ -61,7 +61,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
      * The Hide Privacy Settings.
      * Show or hide privacy settings to user
      */
-    @SerializedName("hidePrivacySettings")
+    @SerializedName(value = "hidePrivacySettings", alternate = {"HidePrivacySettings"})
     @Expose
     public Boolean hidePrivacySettings;
 
@@ -69,7 +69,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
      * The Skip Keyboard Selection Page.
      * If set, then skip the keyboard selection page if Language and Region are set
      */
-    @SerializedName("skipKeyboardSelectionPage")
+    @SerializedName(value = "skipKeyboardSelectionPage", alternate = {"SkipKeyboardSelectionPage"})
     @Expose
     public Boolean skipKeyboardSelectionPage;
 
@@ -77,7 +77,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
      * The User Type.
      * Type of user
      */
-    @SerializedName("userType")
+    @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
     public WindowsUserType userType;
 

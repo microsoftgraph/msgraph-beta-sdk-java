@@ -27,7 +27,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * The Cert File Name.
      * File name to display in UI.
      */
-    @SerializedName("certFileName")
+    @SerializedName(value = "certFileName", alternate = {"CertFileName"})
     @Expose
     public String certFileName;
 
@@ -35,7 +35,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * The Destination Store.
      * Destination store location for the Trusted Root Certificate.
      */
-    @SerializedName("destinationStore")
+    @SerializedName(value = "destinationStore", alternate = {"DestinationStore"})
     @Expose
     public CertificateDestinationStore destinationStore;
 
@@ -43,7 +43,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * The Trusted Root Certificate.
      * Trusted Root Certificate
      */
-    @SerializedName("trustedRootCertificate")
+    @SerializedName(value = "trustedRootCertificate", alternate = {"TrustedRootCertificate"})
     @Expose
     public byte[] trustedRootCertificate;
 

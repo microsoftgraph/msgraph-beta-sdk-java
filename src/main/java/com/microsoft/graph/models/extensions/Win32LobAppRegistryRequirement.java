@@ -27,7 +27,7 @@ public class Win32LobAppRegistryRequirement extends Win32LobAppRequirement imple
      * The Check32Bit On64System.
      * A value indicating whether this registry path is for checking 32-bit app on 64-bit system
      */
-    @SerializedName("check32BitOn64System")
+    @SerializedName(value = "check32BitOn64System", alternate = {"Check32BitOn64System"})
     @Expose
     public Boolean check32BitOn64System;
 
@@ -35,7 +35,7 @@ public class Win32LobAppRegistryRequirement extends Win32LobAppRequirement imple
      * The Detection Type.
      * The registry data detection type
      */
-    @SerializedName("detectionType")
+    @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose
     public Win32LobAppRegistryDetectionType detectionType;
 
@@ -43,7 +43,7 @@ public class Win32LobAppRegistryRequirement extends Win32LobAppRequirement imple
      * The Key Path.
      * The registry key path to detect Win32 Line of Business (LoB) app
      */
-    @SerializedName("keyPath")
+    @SerializedName(value = "keyPath", alternate = {"KeyPath"})
     @Expose
     public String keyPath;
 
@@ -51,7 +51,7 @@ public class Win32LobAppRegistryRequirement extends Win32LobAppRequirement imple
      * The Value Name.
      * The registry value name
      */
-    @SerializedName("valueName")
+    @SerializedName(value = "valueName", alternate = {"ValueName"})
     @Expose
     public String valueName;
 

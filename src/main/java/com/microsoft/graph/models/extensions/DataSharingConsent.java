@@ -26,7 +26,7 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
      * The Grant Date Time.
      * The time consent was granted for this account
      */
-    @SerializedName("grantDateTime")
+    @SerializedName(value = "grantDateTime", alternate = {"GrantDateTime"})
     @Expose
     public java.util.Calendar grantDateTime;
 
@@ -34,7 +34,7 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
      * The Granted.
      * The granted state for the data sharing consent
      */
-    @SerializedName("granted")
+    @SerializedName(value = "granted", alternate = {"Granted"})
     @Expose
     public Boolean granted;
 
@@ -42,7 +42,7 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
      * The Granted By Upn.
      * The Upn of the user that granted consent for this account
      */
-    @SerializedName("grantedByUpn")
+    @SerializedName(value = "grantedByUpn", alternate = {"GrantedByUpn"})
     @Expose
     public String grantedByUpn;
 
@@ -50,7 +50,7 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
      * The Granted By User Id.
      * The UserId of the user that granted consent for this account
      */
-    @SerializedName("grantedByUserId")
+    @SerializedName(value = "grantedByUserId", alternate = {"GrantedByUserId"})
     @Expose
     public String grantedByUserId;
 
@@ -58,7 +58,7 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
      * The Service Display Name.
      * The display name of the service work flow
      */
-    @SerializedName("serviceDisplayName")
+    @SerializedName(value = "serviceDisplayName", alternate = {"ServiceDisplayName"})
     @Expose
     public String serviceDisplayName;
 
@@ -66,7 +66,7 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
      * The Terms Url.
      * The TermsUrl for the data sharing consent
      */
-    @SerializedName("termsUrl")
+    @SerializedName(value = "termsUrl", alternate = {"TermsUrl"})
     @Expose
     public String termsUrl;
 

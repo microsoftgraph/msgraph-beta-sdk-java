@@ -26,7 +26,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
      * The Published Date.
      * 
      */
-    @SerializedName("publishedDate")
+    @SerializedName(value = "publishedDate", alternate = {"PublishedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly publishedDate;
 
@@ -50,7 +50,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
      * The Publisher.
      * 
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -58,7 +58,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
      * The Thumbnail Url.
      * 
      */
-    @SerializedName("thumbnailUrl")
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
     public String thumbnailUrl;
 
@@ -66,7 +66,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 
