@@ -35,7 +35,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -51,7 +51,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Registered Date Time.
      * 
      */
-    @SerializedName("registeredDateTime")
+    @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose
     public java.util.Calendar registeredDateTime;
 
@@ -59,7 +59,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Registered Root.
      * 
      */
-    @SerializedName("registeredRoot")
+    @SerializedName(value = "registeredRoot", alternate = {"RegisteredRoot"})
     @Expose
     public String registeredRoot;
 
@@ -67,7 +67,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -75,7 +75,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -83,7 +83,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Parent.
      * 
      */
-    @SerializedName("parent")
+    @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose
     public GovernanceResource parent;
 
@@ -91,7 +91,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Role Assignment Requests.
      * 
      */
-    @SerializedName("roleAssignmentRequests")
+    @SerializedName(value = "roleAssignmentRequests", alternate = {"RoleAssignmentRequests"})
     @Expose
     public GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
 
@@ -99,7 +99,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Role Assignments.
      * 
      */
-    @SerializedName("roleAssignments")
+    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
     public GovernanceRoleAssignmentCollectionPage roleAssignments;
 
@@ -107,7 +107,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Role Definitions.
      * 
      */
-    @SerializedName("roleDefinitions")
+    @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
     public GovernanceRoleDefinitionCollectionPage roleDefinitions;
 
@@ -115,7 +115,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
      * The Role Settings.
      * 
      */
-    @SerializedName("roleSettings")
+    @SerializedName(value = "roleSettings", alternate = {"RoleSettings"})
     @Expose
     public GovernanceRoleSettingCollectionPage roleSettings;
 

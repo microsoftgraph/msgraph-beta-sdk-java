@@ -32,7 +32,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Authentication Method.
      * Authentication method.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public VpnAuthenticationMethod authenticationMethod;
 
@@ -40,7 +40,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Connection Name.
      * Connection name displayed to the user.
      */
-    @SerializedName("connectionName")
+    @SerializedName(value = "connectionName", alternate = {"ConnectionName"})
     @Expose
     public String connectionName;
 
@@ -48,7 +48,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Connection Type.
      * Connection type.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public AndroidForWorkVpnConnectionType connectionType;
 
@@ -56,7 +56,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Custom Data.
      * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      */
-    @SerializedName("customData")
+    @SerializedName(value = "customData", alternate = {"CustomData"})
     @Expose
     public java.util.List<KeyValue> customData;
 
@@ -64,7 +64,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Custom Key Value Data.
      * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      */
-    @SerializedName("customKeyValueData")
+    @SerializedName(value = "customKeyValueData", alternate = {"CustomKeyValueData"})
     @Expose
     public java.util.List<KeyValuePair> customKeyValueData;
 
@@ -72,7 +72,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Fingerprint.
      * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
      */
-    @SerializedName("fingerprint")
+    @SerializedName(value = "fingerprint", alternate = {"Fingerprint"})
     @Expose
     public String fingerprint;
 
@@ -80,7 +80,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Realm.
      * Realm when connection type is set to Pulse Secure.
      */
-    @SerializedName("realm")
+    @SerializedName(value = "realm", alternate = {"Realm"})
     @Expose
     public String realm;
 
@@ -88,7 +88,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Role.
      * Role when connection type is set to Pulse Secure.
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public String role;
 
@@ -96,7 +96,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Servers.
      * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("servers")
+    @SerializedName(value = "servers", alternate = {"Servers"})
     @Expose
     public java.util.List<VpnServer> servers;
 
@@ -104,7 +104,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public AndroidForWorkCertificateProfileBase identityCertificate;
 

@@ -26,7 +26,7 @@ public class EducationMakeCodeResource extends EducationResource implements IJso
      * The Host Web Url.
      * 
      */
-    @SerializedName("hostWebUrl")
+    @SerializedName(value = "hostWebUrl", alternate = {"HostWebUrl"})
     @Expose
     public String hostWebUrl;
 
@@ -34,7 +34,7 @@ public class EducationMakeCodeResource extends EducationResource implements IJso
      * The Project Id.
      * 
      */
-    @SerializedName("projectId")
+    @SerializedName(value = "projectId", alternate = {"ProjectId"})
     @Expose
     public String projectId;
 

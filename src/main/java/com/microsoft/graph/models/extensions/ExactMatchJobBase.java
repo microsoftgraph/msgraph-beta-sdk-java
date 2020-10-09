@@ -27,7 +27,7 @@ public class ExactMatchJobBase extends Entity implements IJsonBackedObject {
      * The Completion Date Time.
      * 
      */
-    @SerializedName("completionDateTime")
+    @SerializedName(value = "completionDateTime", alternate = {"CompletionDateTime"})
     @Expose
     public java.util.Calendar completionDateTime;
 
@@ -35,7 +35,7 @@ public class ExactMatchJobBase extends Entity implements IJsonBackedObject {
      * The Creation Date Time.
      * 
      */
-    @SerializedName("creationDateTime")
+    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
     public java.util.Calendar creationDateTime;
 
@@ -43,7 +43,7 @@ public class ExactMatchJobBase extends Entity implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public ClassificationError error;
 
@@ -51,7 +51,7 @@ public class ExactMatchJobBase extends Entity implements IJsonBackedObject {
      * The Last Updated Date Time.
      * 
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
 
@@ -59,7 +59,7 @@ public class ExactMatchJobBase extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

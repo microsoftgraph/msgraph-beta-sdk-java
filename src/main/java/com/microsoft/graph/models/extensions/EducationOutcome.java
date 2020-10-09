@@ -27,7 +27,7 @@ public class EducationOutcome extends Entity implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public IdentitySet lastModifiedBy;
 
@@ -35,7 +35,7 @@ public class EducationOutcome extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 

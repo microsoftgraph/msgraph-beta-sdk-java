@@ -27,7 +27,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * The Is Number Matching Required.
      * 
      */
-    @SerializedName("isNumberMatchingRequired")
+    @SerializedName(value = "isNumberMatchingRequired", alternate = {"IsNumberMatchingRequired"})
     @Expose
     public Boolean isNumberMatchingRequired;
 
@@ -35,7 +35,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * The Shown Context.
      * 
      */
-    @SerializedName("shownContext")
+    @SerializedName(value = "shownContext", alternate = {"ShownContext"})
     @Expose
     public EnumSet<AuthenticatorAppContextType> shownContext;
 

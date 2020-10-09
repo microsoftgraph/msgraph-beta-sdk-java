@@ -30,7 +30,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Created Date Time.
      * The date and time the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -38,7 +38,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Description.
      * User provided description for the resource object.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -46,7 +46,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Display Name.
      * User provided name for the resource object.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -54,7 +54,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -62,7 +62,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Role Scope Tag Ids.
      * The list of scope tags for the configuration.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -70,7 +70,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Assignments.
      * The list of group assignments for the configuration.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public GroupPolicyConfigurationAssignmentCollectionPage assignments;
 
@@ -78,7 +78,7 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Definition Values.
      * The list of enabled or disabled group policy definition values for the configuration.
      */
-    @SerializedName("definitionValues")
+    @SerializedName(value = "definitionValues", alternate = {"DefinitionValues"})
     @Expose
     public GroupPolicyDefinitionValueCollectionPage definitionValues;
 

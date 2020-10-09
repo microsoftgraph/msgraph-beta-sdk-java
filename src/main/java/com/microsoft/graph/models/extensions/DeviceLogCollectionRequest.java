@@ -36,7 +36,7 @@ public class DeviceLogCollectionRequest implements IJsonBackedObject {
      * The Id.
      * The unique identifier
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -44,7 +44,7 @@ public class DeviceLogCollectionRequest implements IJsonBackedObject {
      * The Template Type.
      * The template type that is sent with the collection request
      */
-    @SerializedName("templateType")
+    @SerializedName(value = "templateType", alternate = {"TemplateType"})
     @Expose
     public DeviceLogCollectionTemplateType templateType;
 

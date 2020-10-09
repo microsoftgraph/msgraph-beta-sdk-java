@@ -28,7 +28,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * The Actions.
      * 
      */
-    @SerializedName("actions")
+    @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
     public java.util.List<InformationProtectionAction> actions;
 
@@ -36,7 +36,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * The Action Source.
      * 
      */
-    @SerializedName("actionSource")
+    @SerializedName(value = "actionSource", alternate = {"ActionSource"})
     @Expose
     public ActionSource actionSource;
 
@@ -44,7 +44,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * The Label.
      * 
      */
-    @SerializedName("label")
+    @SerializedName(value = "label", alternate = {"Label"})
     @Expose
     public LabelDetails label;
 
@@ -52,7 +52,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * The Responsible Sensitive Type Ids.
      * 
      */
-    @SerializedName("responsibleSensitiveTypeIds")
+    @SerializedName(value = "responsibleSensitiveTypeIds", alternate = {"ResponsibleSensitiveTypeIds"})
     @Expose
     public java.util.List<java.util.UUID> responsibleSensitiveTypeIds;
 

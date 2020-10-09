@@ -28,7 +28,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -36,7 +36,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -44,7 +44,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -52,7 +52,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
      * The Queries.
      * 
      */
-    @SerializedName("queries")
+    @SerializedName(value = "queries", alternate = {"Queries"})
     @Expose
     public ReviewSetQueryCollectionPage queries;
 

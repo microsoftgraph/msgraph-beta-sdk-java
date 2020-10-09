@@ -28,7 +28,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
      * The Source.
      * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only.
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public DeviceAndAppManagementAssignmentSource source;
 
@@ -36,7 +36,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
      * The Source Id.
      * The identifier of the source of the assignment. This property is read-only.
      */
-    @SerializedName("sourceId")
+    @SerializedName(value = "sourceId", alternate = {"SourceId"})
     @Expose
     public String sourceId;
 
@@ -44,7 +44,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
      * The Target.
      * The assignment target for the device configuration.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

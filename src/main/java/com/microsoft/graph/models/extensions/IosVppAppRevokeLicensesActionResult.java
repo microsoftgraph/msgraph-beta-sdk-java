@@ -37,7 +37,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Action Failure Reason.
      * The reason for the revoke licenses action failure.
      */
-    @SerializedName("actionFailureReason")
+    @SerializedName(value = "actionFailureReason", alternate = {"ActionFailureReason"})
     @Expose
     public VppTokenActionFailureReason actionFailureReason;
 
@@ -45,7 +45,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Action Name.
      * Action name
      */
-    @SerializedName("actionName")
+    @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose
     public String actionName;
 
@@ -53,7 +53,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Action State.
      * State of the action
      */
-    @SerializedName("actionState")
+    @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose
     public ActionState actionState;
 
@@ -61,7 +61,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Failed Licenses Count.
      * A count of the number of licenses for which revoke failed.
      */
-    @SerializedName("failedLicensesCount")
+    @SerializedName(value = "failedLicensesCount", alternate = {"FailedLicensesCount"})
     @Expose
     public Integer failedLicensesCount;
 
@@ -69,7 +69,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Last Updated Date Time.
      * Time the action state was last updated
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
 
@@ -77,7 +77,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Managed Device Id.
      * DeviceId associated with the action.
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 
@@ -85,7 +85,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Start Date Time.
      * Time the action was initiated
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -93,7 +93,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The Total Licenses Count.
      * A count of the number of licenses for which revoke was attempted.
      */
-    @SerializedName("totalLicensesCount")
+    @SerializedName(value = "totalLicensesCount", alternate = {"TotalLicensesCount"})
     @Expose
     public Integer totalLicensesCount;
 
@@ -101,7 +101,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
      * The User Id.
      * UserId associated with the action.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

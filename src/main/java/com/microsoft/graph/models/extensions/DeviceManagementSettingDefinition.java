@@ -29,7 +29,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Constraints.
      * Collection of constraints for the setting value
      */
-    @SerializedName("constraints")
+    @SerializedName(value = "constraints", alternate = {"Constraints"})
     @Expose
     public java.util.List<DeviceManagementConstraint> constraints;
 
@@ -37,7 +37,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Dependencies.
      * Collection of dependencies on other settings
      */
-    @SerializedName("dependencies")
+    @SerializedName(value = "dependencies", alternate = {"Dependencies"})
     @Expose
     public java.util.List<DeviceManagementSettingDependency> dependencies;
 
@@ -45,7 +45,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Description.
      * The setting's description
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -53,7 +53,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Display Name.
      * The setting's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Documentation Url.
      * Url to setting documentation
      */
-    @SerializedName("documentationUrl")
+    @SerializedName(value = "documentationUrl", alternate = {"DocumentationUrl"})
     @Expose
     public String documentationUrl;
 
@@ -69,7 +69,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Is Top Level.
      * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
      */
-    @SerializedName("isTopLevel")
+    @SerializedName(value = "isTopLevel", alternate = {"IsTopLevel"})
     @Expose
     public Boolean isTopLevel;
 
@@ -77,7 +77,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Keywords.
      * Keywords associated with the setting
      */
-    @SerializedName("keywords")
+    @SerializedName(value = "keywords", alternate = {"Keywords"})
     @Expose
     public java.util.List<String> keywords;
 
@@ -85,7 +85,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Placeholder Text.
      * Placeholder text as an example of valid input
      */
-    @SerializedName("placeholderText")
+    @SerializedName(value = "placeholderText", alternate = {"PlaceholderText"})
     @Expose
     public String placeholderText;
 
@@ -93,7 +93,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
      * The Value Type.
      * The data type of the value
      */
-    @SerializedName("valueType")
+    @SerializedName(value = "valueType", alternate = {"ValueType"})
     @Expose
     public DeviceManangementIntentValueType valueType;
 

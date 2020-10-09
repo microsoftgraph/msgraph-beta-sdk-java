@@ -37,7 +37,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Access Recommendations Enabled.
      * 
      */
-    @SerializedName("accessRecommendationsEnabled")
+    @SerializedName(value = "accessRecommendationsEnabled", alternate = {"AccessRecommendationsEnabled"})
     @Expose
     public Boolean accessRecommendationsEnabled;
 
@@ -45,7 +45,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Activity Duration In Days.
      * 
      */
-    @SerializedName("activityDurationInDays")
+    @SerializedName(value = "activityDurationInDays", alternate = {"ActivityDurationInDays"})
     @Expose
     public Integer activityDurationInDays;
 
@@ -53,7 +53,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Auto Apply Review Results Enabled.
      * 
      */
-    @SerializedName("autoApplyReviewResultsEnabled")
+    @SerializedName(value = "autoApplyReviewResultsEnabled", alternate = {"AutoApplyReviewResultsEnabled"})
     @Expose
     public Boolean autoApplyReviewResultsEnabled;
 
@@ -61,7 +61,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Auto Review Enabled.
      * 
      */
-    @SerializedName("autoReviewEnabled")
+    @SerializedName(value = "autoReviewEnabled", alternate = {"AutoReviewEnabled"})
     @Expose
     public Boolean autoReviewEnabled;
 
@@ -69,7 +69,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Auto Review Settings.
      * 
      */
-    @SerializedName("autoReviewSettings")
+    @SerializedName(value = "autoReviewSettings", alternate = {"AutoReviewSettings"})
     @Expose
     public AutoReviewSettings autoReviewSettings;
 
@@ -77,7 +77,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Justification Required On Approval.
      * 
      */
-    @SerializedName("justificationRequiredOnApproval")
+    @SerializedName(value = "justificationRequiredOnApproval", alternate = {"JustificationRequiredOnApproval"})
     @Expose
     public Boolean justificationRequiredOnApproval;
 
@@ -85,7 +85,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Mail Notifications Enabled.
      * 
      */
-    @SerializedName("mailNotificationsEnabled")
+    @SerializedName(value = "mailNotificationsEnabled", alternate = {"MailNotificationsEnabled"})
     @Expose
     public Boolean mailNotificationsEnabled;
 
@@ -93,7 +93,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Recurrence Settings.
      * 
      */
-    @SerializedName("recurrenceSettings")
+    @SerializedName(value = "recurrenceSettings", alternate = {"RecurrenceSettings"})
     @Expose
     public AccessReviewRecurrenceSettings recurrenceSettings;
 
@@ -101,7 +101,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
      * The Reminders Enabled.
      * 
      */
-    @SerializedName("remindersEnabled")
+    @SerializedName(value = "remindersEnabled", alternate = {"RemindersEnabled"})
     @Expose
     public Boolean remindersEnabled;
 

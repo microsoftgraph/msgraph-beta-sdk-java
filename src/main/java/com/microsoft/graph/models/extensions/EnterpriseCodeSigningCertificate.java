@@ -27,7 +27,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Content.
      * The Windows Enterprise Code-Signing Certificate in the raw data format.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public byte[] content;
 
@@ -35,7 +35,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Expiration Date Time.
      * The Cert Expiration Date.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -43,7 +43,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Issuer.
      * The Issuer value for the cert.
      */
-    @SerializedName("issuer")
+    @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
     public String issuer;
 
@@ -51,7 +51,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Issuer Name.
      * The Issuer Name for the cert.
      */
-    @SerializedName("issuerName")
+    @SerializedName(value = "issuerName", alternate = {"IssuerName"})
     @Expose
     public String issuerName;
 
@@ -59,7 +59,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Status.
      * The Certificate Status Provisioned or not Provisioned.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public CertificateStatus status;
 
@@ -67,7 +67,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Subject.
      * The Subject Value for the cert.
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -75,7 +75,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Subject Name.
      * The Subject Name for the cert.
      */
-    @SerializedName("subjectName")
+    @SerializedName(value = "subjectName", alternate = {"SubjectName"})
     @Expose
     public String subjectName;
 
@@ -83,7 +83,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
      * The Upload Date Time.
      * The date time of CodeSigning Cert when it is uploaded.
      */
-    @SerializedName("uploadDateTime")
+    @SerializedName(value = "uploadDateTime", alternate = {"UploadDateTime"})
     @Expose
     public java.util.Calendar uploadDateTime;
 

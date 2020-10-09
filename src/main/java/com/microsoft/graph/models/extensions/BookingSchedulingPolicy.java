@@ -35,7 +35,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
      * The Allow Staff Selection.
      * Allow customers to choose a specific person for the booking.
      */
-    @SerializedName("allowStaffSelection")
+    @SerializedName(value = "allowStaffSelection", alternate = {"AllowStaffSelection"})
     @Expose
     public Boolean allowStaffSelection;
 
@@ -43,7 +43,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
      * The Maximum Advance.
      * Maximum number of days in advance that a booking can be made.
      */
-    @SerializedName("maximumAdvance")
+    @SerializedName(value = "maximumAdvance", alternate = {"MaximumAdvance"})
     @Expose
     public javax.xml.datatype.Duration maximumAdvance;
 
@@ -51,7 +51,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
      * The Minimum Lead Time.
      * Minimum lead time for bookings and cancellations.
      */
-    @SerializedName("minimumLeadTime")
+    @SerializedName(value = "minimumLeadTime", alternate = {"MinimumLeadTime"})
     @Expose
     public javax.xml.datatype.Duration minimumLeadTime;
 
@@ -59,7 +59,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
      * The Send Confirmations To Owner.
      * Notify the business via email when a booking is created or changed.
      */
-    @SerializedName("sendConfirmationsToOwner")
+    @SerializedName(value = "sendConfirmationsToOwner", alternate = {"SendConfirmationsToOwner"})
     @Expose
     public Boolean sendConfirmationsToOwner;
 
@@ -67,7 +67,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
      * The Time Slot Interval.
      * Duration of each time slot.
      */
-    @SerializedName("timeSlotInterval")
+    @SerializedName(value = "timeSlotInterval", alternate = {"TimeSlotInterval"})
     @Expose
     public javax.xml.datatype.Duration timeSlotInterval;
 

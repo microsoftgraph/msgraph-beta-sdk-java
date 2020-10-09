@@ -36,7 +36,7 @@ public class SynchronizationJobApplicationParameters implements IJsonBackedObjec
      * The Rule Id.
      * 
      */
-    @SerializedName("ruleId")
+    @SerializedName(value = "ruleId", alternate = {"RuleId"})
     @Expose
     public String ruleId;
 
@@ -44,7 +44,7 @@ public class SynchronizationJobApplicationParameters implements IJsonBackedObjec
      * The Subjects.
      * 
      */
-    @SerializedName("subjects")
+    @SerializedName(value = "subjects", alternate = {"Subjects"})
     @Expose
     public java.util.List<SynchronizationJobSubject> subjects;
 

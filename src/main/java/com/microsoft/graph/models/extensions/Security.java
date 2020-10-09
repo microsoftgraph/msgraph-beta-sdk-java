@@ -51,7 +51,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Provider Status.
      * 
      */
-    @SerializedName("providerStatus")
+    @SerializedName(value = "providerStatus", alternate = {"ProviderStatus"})
     @Expose
     public java.util.List<SecurityProviderStatus> providerStatus;
 
@@ -59,7 +59,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Alerts.
      * Read-only. Nullable.
      */
-    @SerializedName("alerts")
+    @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
     public AlertCollectionPage alerts;
 
@@ -67,7 +67,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Cloud App Security Profiles.
      * 
      */
-    @SerializedName("cloudAppSecurityProfiles")
+    @SerializedName(value = "cloudAppSecurityProfiles", alternate = {"CloudAppSecurityProfiles"})
     @Expose
     public CloudAppSecurityProfileCollectionPage cloudAppSecurityProfiles;
 
@@ -75,7 +75,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Domain Security Profiles.
      * 
      */
-    @SerializedName("domainSecurityProfiles")
+    @SerializedName(value = "domainSecurityProfiles", alternate = {"DomainSecurityProfiles"})
     @Expose
     public DomainSecurityProfileCollectionPage domainSecurityProfiles;
 
@@ -83,7 +83,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The File Security Profiles.
      * 
      */
-    @SerializedName("fileSecurityProfiles")
+    @SerializedName(value = "fileSecurityProfiles", alternate = {"FileSecurityProfiles"})
     @Expose
     public FileSecurityProfileCollectionPage fileSecurityProfiles;
 
@@ -91,7 +91,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Host Security Profiles.
      * 
      */
-    @SerializedName("hostSecurityProfiles")
+    @SerializedName(value = "hostSecurityProfiles", alternate = {"HostSecurityProfiles"})
     @Expose
     public HostSecurityProfileCollectionPage hostSecurityProfiles;
 
@@ -99,7 +99,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Ip Security Profiles.
      * 
      */
-    @SerializedName("ipSecurityProfiles")
+    @SerializedName(value = "ipSecurityProfiles", alternate = {"IpSecurityProfiles"})
     @Expose
     public IpSecurityProfileCollectionPage ipSecurityProfiles;
 
@@ -107,7 +107,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Provider Tenant Settings.
      * 
      */
-    @SerializedName("providerTenantSettings")
+    @SerializedName(value = "providerTenantSettings", alternate = {"ProviderTenantSettings"})
     @Expose
     public ProviderTenantSettingCollectionPage providerTenantSettings;
 
@@ -115,7 +115,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Secure Score Control Profiles.
      * 
      */
-    @SerializedName("secureScoreControlProfiles")
+    @SerializedName(value = "secureScoreControlProfiles", alternate = {"SecureScoreControlProfiles"})
     @Expose
     public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
@@ -123,7 +123,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Secure Scores.
      * 
      */
-    @SerializedName("secureScores")
+    @SerializedName(value = "secureScores", alternate = {"SecureScores"})
     @Expose
     public SecureScoreCollectionPage secureScores;
 
@@ -131,7 +131,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Security Actions.
      * 
      */
-    @SerializedName("securityActions")
+    @SerializedName(value = "securityActions", alternate = {"SecurityActions"})
     @Expose
     public SecurityActionCollectionPage securityActions;
 
@@ -139,7 +139,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Ti Indicators.
      * 
      */
-    @SerializedName("tiIndicators")
+    @SerializedName(value = "tiIndicators", alternate = {"TiIndicators"})
     @Expose
     public TiIndicatorCollectionPage tiIndicators;
 
@@ -147,7 +147,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The User Security Profiles.
      * 
      */
-    @SerializedName("userSecurityProfiles")
+    @SerializedName(value = "userSecurityProfiles", alternate = {"UserSecurityProfiles"})
     @Expose
     public UserSecurityProfileCollectionPage userSecurityProfiles;
 

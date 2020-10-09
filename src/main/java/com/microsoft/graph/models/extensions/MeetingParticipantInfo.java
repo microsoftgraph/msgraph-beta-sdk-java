@@ -37,7 +37,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
      * The Identity.
      * Identity information of the participant.
      */
-    @SerializedName("identity")
+    @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
     public IdentitySet identity;
 
@@ -45,7 +45,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
      * The Role.
      * 
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public OnlineMeetingRole role;
 
@@ -53,7 +53,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
      * The Upn.
      * User principal name of the participant.
      */
-    @SerializedName("upn")
+    @SerializedName(value = "upn", alternate = {"Upn"})
     @Expose
     public String upn;
 

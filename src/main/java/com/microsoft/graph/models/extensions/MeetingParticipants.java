@@ -36,7 +36,7 @@ public class MeetingParticipants implements IJsonBackedObject {
      * The Attendees.
      * 
      */
-    @SerializedName("attendees")
+    @SerializedName(value = "attendees", alternate = {"Attendees"})
     @Expose
     public java.util.List<MeetingParticipantInfo> attendees;
 
@@ -44,7 +44,7 @@ public class MeetingParticipants implements IJsonBackedObject {
      * The Contributors.
      * 
      */
-    @SerializedName("contributors")
+    @SerializedName(value = "contributors", alternate = {"Contributors"})
     @Expose
     public java.util.List<MeetingParticipantInfo> contributors;
 
@@ -52,7 +52,7 @@ public class MeetingParticipants implements IJsonBackedObject {
      * The Organizer.
      * 
      */
-    @SerializedName("organizer")
+    @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose
     public MeetingParticipantInfo organizer;
 
@@ -60,7 +60,7 @@ public class MeetingParticipants implements IJsonBackedObject {
      * The Producers.
      * 
      */
-    @SerializedName("producers")
+    @SerializedName(value = "producers", alternate = {"Producers"})
     @Expose
     public java.util.List<MeetingParticipantInfo> producers;
 

@@ -23,7 +23,7 @@ public class DriveItemCreateLinkBody {
      * The type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -31,7 +31,7 @@ public class DriveItemCreateLinkBody {
      * The scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public String scope;
 
@@ -39,7 +39,7 @@ public class DriveItemCreateLinkBody {
      * The expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -47,7 +47,7 @@ public class DriveItemCreateLinkBody {
      * The password.
      * 
      */
-    @SerializedName("password")
+    @SerializedName(value = "password", alternate = {"Password"})
     @Expose
     public String password;
 
@@ -55,7 +55,7 @@ public class DriveItemCreateLinkBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -63,7 +63,7 @@ public class DriveItemCreateLinkBody {
      * The recipients.
      * 
      */
-    @SerializedName("recipients")
+    @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
     public java.util.List<DriveRecipient> recipients;
 

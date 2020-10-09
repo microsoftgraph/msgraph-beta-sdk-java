@@ -26,7 +26,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
      * The Use Device Context.
      * Whether or not to use device execution context for Windows Universal AppX mobile app.
      */
-    @SerializedName("useDeviceContext")
+    @SerializedName(value = "useDeviceContext", alternate = {"UseDeviceContext"})
     @Expose
     public Boolean useDeviceContext;
 

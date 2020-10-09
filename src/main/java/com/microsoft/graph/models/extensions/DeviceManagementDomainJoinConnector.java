@@ -27,7 +27,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements IJson
      * The Display Name.
      * The connector display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements IJson
      * The Last Connection Date Time.
      * Last time connector contacted Intune.
      */
-    @SerializedName("lastConnectionDateTime")
+    @SerializedName(value = "lastConnectionDateTime", alternate = {"LastConnectionDateTime"})
     @Expose
     public java.util.Calendar lastConnectionDateTime;
 
@@ -43,7 +43,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements IJson
      * The State.
      * The connector state.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public DeviceManagementDomainJoinConnectorState state;
 
@@ -51,7 +51,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements IJson
      * The Version.
      * The version of the connector.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

@@ -35,7 +35,7 @@ public class AccessReviewScope implements IJsonBackedObject {
      * The Query.
      * 
      */
-    @SerializedName("query")
+    @SerializedName(value = "query", alternate = {"Query"})
     @Expose
     public String query;
 
@@ -43,7 +43,7 @@ public class AccessReviewScope implements IJsonBackedObject {
      * The Query Type.
      * 
      */
-    @SerializedName("queryType")
+    @SerializedName(value = "queryType", alternate = {"QueryType"})
     @Expose
     public String queryType;
 

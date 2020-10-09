@@ -35,7 +35,7 @@ public class ChannelIdentity implements IJsonBackedObject {
      * The Channel Id.
      * 
      */
-    @SerializedName("channelId")
+    @SerializedName(value = "channelId", alternate = {"ChannelId"})
     @Expose
     public String channelId;
 
@@ -43,7 +43,7 @@ public class ChannelIdentity implements IJsonBackedObject {
      * The Team Id.
      * 
      */
-    @SerializedName("teamId")
+    @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose
     public String teamId;
 

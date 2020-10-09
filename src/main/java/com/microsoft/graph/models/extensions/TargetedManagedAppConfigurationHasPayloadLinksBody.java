@@ -22,7 +22,7 @@ public class TargetedManagedAppConfigurationHasPayloadLinksBody {
      * The payload Ids.
      * 
      */
-    @SerializedName("payloadIds")
+    @SerializedName(value = "payloadIds", alternate = {"PayloadIds"})
     @Expose
     public java.util.List<String> payloadIds;
 

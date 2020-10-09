@@ -26,7 +26,7 @@ public class YammerGroupsActivityCounts extends Entity implements IJsonBackedObj
      * The Liked.
      * 
      */
-    @SerializedName("liked")
+    @SerializedName(value = "liked", alternate = {"Liked"})
     @Expose
     public Long liked;
 
@@ -34,7 +34,7 @@ public class YammerGroupsActivityCounts extends Entity implements IJsonBackedObj
      * The Posted.
      * 
      */
-    @SerializedName("posted")
+    @SerializedName(value = "posted", alternate = {"Posted"})
     @Expose
     public Long posted;
 
@@ -42,7 +42,7 @@ public class YammerGroupsActivityCounts extends Entity implements IJsonBackedObj
      * The Read.
      * 
      */
-    @SerializedName("read")
+    @SerializedName(value = "read", alternate = {"Read"})
     @Expose
     public Long read;
 
@@ -50,7 +50,7 @@ public class YammerGroupsActivityCounts extends Entity implements IJsonBackedObj
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class YammerGroupsActivityCounts extends Entity implements IJsonBackedObj
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class YammerGroupsActivityCounts extends Entity implements IJsonBackedObj
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 

@@ -26,7 +26,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Assigned Products.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName(value = "assignedProducts", alternate = {"AssignedProducts"})
     @Expose
     public java.util.List<String> assignedProducts;
 
@@ -34,7 +34,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -42,7 +42,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -50,7 +50,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Exchange Last Activity Date.
      * 
      */
-    @SerializedName("exchangeLastActivityDate")
+    @SerializedName(value = "exchangeLastActivityDate", alternate = {"ExchangeLastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly exchangeLastActivityDate;
 
@@ -58,7 +58,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Exchange License Assign Date.
      * 
      */
-    @SerializedName("exchangeLicenseAssignDate")
+    @SerializedName(value = "exchangeLicenseAssignDate", alternate = {"ExchangeLicenseAssignDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly exchangeLicenseAssignDate;
 
@@ -66,7 +66,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Has Exchange License.
      * 
      */
-    @SerializedName("hasExchangeLicense")
+    @SerializedName(value = "hasExchangeLicense", alternate = {"HasExchangeLicense"})
     @Expose
     public Boolean hasExchangeLicense;
 
@@ -74,7 +74,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Has One Drive License.
      * 
      */
-    @SerializedName("hasOneDriveLicense")
+    @SerializedName(value = "hasOneDriveLicense", alternate = {"HasOneDriveLicense"})
     @Expose
     public Boolean hasOneDriveLicense;
 
@@ -82,7 +82,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Has Share Point License.
      * 
      */
-    @SerializedName("hasSharePointLicense")
+    @SerializedName(value = "hasSharePointLicense", alternate = {"HasSharePointLicense"})
     @Expose
     public Boolean hasSharePointLicense;
 
@@ -90,7 +90,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Has Skype For Business License.
      * 
      */
-    @SerializedName("hasSkypeForBusinessLicense")
+    @SerializedName(value = "hasSkypeForBusinessLicense", alternate = {"HasSkypeForBusinessLicense"})
     @Expose
     public Boolean hasSkypeForBusinessLicense;
 
@@ -98,7 +98,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Has Teams License.
      * 
      */
-    @SerializedName("hasTeamsLicense")
+    @SerializedName(value = "hasTeamsLicense", alternate = {"HasTeamsLicense"})
     @Expose
     public Boolean hasTeamsLicense;
 
@@ -106,7 +106,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Has Yammer License.
      * 
      */
-    @SerializedName("hasYammerLicense")
+    @SerializedName(value = "hasYammerLicense", alternate = {"HasYammerLicense"})
     @Expose
     public Boolean hasYammerLicense;
 
@@ -114,7 +114,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -122,7 +122,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The One Drive Last Activity Date.
      * 
      */
-    @SerializedName("oneDriveLastActivityDate")
+    @SerializedName(value = "oneDriveLastActivityDate", alternate = {"OneDriveLastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly oneDriveLastActivityDate;
 
@@ -130,7 +130,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The One Drive License Assign Date.
      * 
      */
-    @SerializedName("oneDriveLicenseAssignDate")
+    @SerializedName(value = "oneDriveLicenseAssignDate", alternate = {"OneDriveLicenseAssignDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly oneDriveLicenseAssignDate;
 
@@ -138,7 +138,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -146,7 +146,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Share Point Last Activity Date.
      * 
      */
-    @SerializedName("sharePointLastActivityDate")
+    @SerializedName(value = "sharePointLastActivityDate", alternate = {"SharePointLastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly sharePointLastActivityDate;
 
@@ -154,7 +154,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Share Point License Assign Date.
      * 
      */
-    @SerializedName("sharePointLicenseAssignDate")
+    @SerializedName(value = "sharePointLicenseAssignDate", alternate = {"SharePointLicenseAssignDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly sharePointLicenseAssignDate;
 
@@ -162,7 +162,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Skype For Business Last Activity Date.
      * 
      */
-    @SerializedName("skypeForBusinessLastActivityDate")
+    @SerializedName(value = "skypeForBusinessLastActivityDate", alternate = {"SkypeForBusinessLastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly skypeForBusinessLastActivityDate;
 
@@ -170,7 +170,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Skype For Business License Assign Date.
      * 
      */
-    @SerializedName("skypeForBusinessLicenseAssignDate")
+    @SerializedName(value = "skypeForBusinessLicenseAssignDate", alternate = {"SkypeForBusinessLicenseAssignDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly skypeForBusinessLicenseAssignDate;
 
@@ -178,7 +178,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Teams Last Activity Date.
      * 
      */
-    @SerializedName("teamsLastActivityDate")
+    @SerializedName(value = "teamsLastActivityDate", alternate = {"TeamsLastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly teamsLastActivityDate;
 
@@ -186,7 +186,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Teams License Assign Date.
      * 
      */
-    @SerializedName("teamsLicenseAssignDate")
+    @SerializedName(value = "teamsLicenseAssignDate", alternate = {"TeamsLicenseAssignDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly teamsLicenseAssignDate;
 
@@ -194,7 +194,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -202,7 +202,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Yammer Last Activity Date.
      * 
      */
-    @SerializedName("yammerLastActivityDate")
+    @SerializedName(value = "yammerLastActivityDate", alternate = {"YammerLastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly yammerLastActivityDate;
 
@@ -210,7 +210,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
      * The Yammer License Assign Date.
      * 
      */
-    @SerializedName("yammerLicenseAssignDate")
+    @SerializedName(value = "yammerLicenseAssignDate", alternate = {"YammerLicenseAssignDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly yammerLicenseAssignDate;
 

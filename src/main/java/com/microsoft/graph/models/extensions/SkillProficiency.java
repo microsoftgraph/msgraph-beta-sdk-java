@@ -27,7 +27,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
      * The Categories.
      * 
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public java.util.List<String> categories;
 
@@ -35,7 +35,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
      * The Collaboration Tags.
      * 
      */
-    @SerializedName("collaborationTags")
+    @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
     public java.util.List<String> collaborationTags;
 
@@ -43,7 +43,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
      * The Proficiency.
      * 
      */
-    @SerializedName("proficiency")
+    @SerializedName(value = "proficiency", alternate = {"Proficiency"})
     @Expose
     public SkillProficiencyLevel proficiency;
 
@@ -59,7 +59,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

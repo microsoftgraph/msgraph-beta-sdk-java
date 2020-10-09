@@ -35,7 +35,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Content Type.
      * The content type of this list item
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public ContentTypeInfo contentType;
 
@@ -43,7 +43,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Sharepoint Ids.
      * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
-    @SerializedName("sharepointIds")
+    @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
     public SharepointIds sharepointIds;
 
@@ -51,7 +51,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Activities.
      * The list of recent activities that took place on this item.
      */
-    @SerializedName("activities")
+    @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
     public ItemActivityOLDCollectionPage activities;
 
@@ -59,7 +59,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Analytics.
      * Analytics about the view activities that took place on this item.
      */
-    @SerializedName("analytics")
+    @SerializedName(value = "analytics", alternate = {"Analytics"})
     @Expose
     public ItemAnalytics analytics;
 
@@ -67,7 +67,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Drive Item.
      * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      */
-    @SerializedName("driveItem")
+    @SerializedName(value = "driveItem", alternate = {"DriveItem"})
     @Expose
     public DriveItem driveItem;
 
@@ -75,7 +75,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Fields.
      * The values of the columns set on this list item.
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public FieldValueSet fields;
 
@@ -83,7 +83,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Versions.
      * The list of previous versions of the list item.
      */
-    @SerializedName("versions")
+    @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
     public ListItemVersionCollectionPage versions;
 

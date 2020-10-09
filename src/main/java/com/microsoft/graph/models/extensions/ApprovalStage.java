@@ -36,7 +36,7 @@ public class ApprovalStage implements IJsonBackedObject {
      * The Approval Stage Time Out In Days.
      * 
      */
-    @SerializedName("approvalStageTimeOutInDays")
+    @SerializedName(value = "approvalStageTimeOutInDays", alternate = {"ApprovalStageTimeOutInDays"})
     @Expose
     public Integer approvalStageTimeOutInDays;
 
@@ -44,7 +44,7 @@ public class ApprovalStage implements IJsonBackedObject {
      * The Escalation Approvers.
      * 
      */
-    @SerializedName("escalationApprovers")
+    @SerializedName(value = "escalationApprovers", alternate = {"EscalationApprovers"})
     @Expose
     public java.util.List<UserSet> escalationApprovers;
 
@@ -52,7 +52,7 @@ public class ApprovalStage implements IJsonBackedObject {
      * The Escalation Time In Minutes.
      * 
      */
-    @SerializedName("escalationTimeInMinutes")
+    @SerializedName(value = "escalationTimeInMinutes", alternate = {"EscalationTimeInMinutes"})
     @Expose
     public Integer escalationTimeInMinutes;
 
@@ -60,7 +60,7 @@ public class ApprovalStage implements IJsonBackedObject {
      * The Is Approver Justification Required.
      * 
      */
-    @SerializedName("isApproverJustificationRequired")
+    @SerializedName(value = "isApproverJustificationRequired", alternate = {"IsApproverJustificationRequired"})
     @Expose
     public Boolean isApproverJustificationRequired;
 
@@ -68,7 +68,7 @@ public class ApprovalStage implements IJsonBackedObject {
      * The Is Escalation Enabled.
      * 
      */
-    @SerializedName("isEscalationEnabled")
+    @SerializedName(value = "isEscalationEnabled", alternate = {"IsEscalationEnabled"})
     @Expose
     public Boolean isEscalationEnabled;
 
@@ -76,7 +76,7 @@ public class ApprovalStage implements IJsonBackedObject {
      * The Primary Approvers.
      * 
      */
-    @SerializedName("primaryApprovers")
+    @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose
     public java.util.List<UserSet> primaryApprovers;
 

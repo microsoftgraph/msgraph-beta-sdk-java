@@ -23,7 +23,7 @@ public class ManagedDeviceCreateDeviceLogCollectionRequestBody {
      * The template Type.
      * 
      */
-    @SerializedName("templateType")
+    @SerializedName(value = "templateType", alternate = {"TemplateType"})
     @Expose
     public DeviceLogCollectionRequest templateType;
 

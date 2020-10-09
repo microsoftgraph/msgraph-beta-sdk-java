@@ -37,7 +37,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Data Type.
      * The type of value this item describes
      */
-    @SerializedName("dataType")
+    @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
     public AndroidForWorkAppConfigurationSchemaItemDataType dataType;
 
@@ -45,7 +45,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Default Bool Value.
      * Default value for boolean type items, if specified by the app developer
      */
-    @SerializedName("defaultBoolValue")
+    @SerializedName(value = "defaultBoolValue", alternate = {"DefaultBoolValue"})
     @Expose
     public Boolean defaultBoolValue;
 
@@ -53,7 +53,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Default Int Value.
      * Default value for integer type items, if specified by the app developer
      */
-    @SerializedName("defaultIntValue")
+    @SerializedName(value = "defaultIntValue", alternate = {"DefaultIntValue"})
     @Expose
     public Integer defaultIntValue;
 
@@ -61,7 +61,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Default String Array Value.
      * Default value for string array type items, if specified by the app developer
      */
-    @SerializedName("defaultStringArrayValue")
+    @SerializedName(value = "defaultStringArrayValue", alternate = {"DefaultStringArrayValue"})
     @Expose
     public java.util.List<String> defaultStringArrayValue;
 
@@ -69,7 +69,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Default String Value.
      * Default value for string type items, if specified by the app developer
      */
-    @SerializedName("defaultStringValue")
+    @SerializedName(value = "defaultStringValue", alternate = {"DefaultStringValue"})
     @Expose
     public String defaultStringValue;
 
@@ -77,7 +77,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Description.
      * Description of what the item controls within the application
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -85,7 +85,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Display Name.
      * Human readable name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -93,7 +93,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Schema Item Key.
      * Unique key the application uses to identify the item
      */
-    @SerializedName("schemaItemKey")
+    @SerializedName(value = "schemaItemKey", alternate = {"SchemaItemKey"})
     @Expose
     public String schemaItemKey;
 
@@ -101,7 +101,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
      * The Selections.
      * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
      */
-    @SerializedName("selections")
+    @SerializedName(value = "selections", alternate = {"Selections"})
     @Expose
     public java.util.List<KeyValuePair> selections;
 

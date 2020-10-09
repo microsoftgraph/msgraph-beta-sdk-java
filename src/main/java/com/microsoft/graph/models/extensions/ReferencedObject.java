@@ -35,7 +35,7 @@ public class ReferencedObject implements IJsonBackedObject {
      * The Referenced Object Name.
      * 
      */
-    @SerializedName("referencedObjectName")
+    @SerializedName(value = "referencedObjectName", alternate = {"ReferencedObjectName"})
     @Expose
     public String referencedObjectName;
 
@@ -43,7 +43,7 @@ public class ReferencedObject implements IJsonBackedObject {
      * The Referenced Property.
      * 
      */
-    @SerializedName("referencedProperty")
+    @SerializedName(value = "referencedProperty", alternate = {"ReferencedProperty"})
     @Expose
     public String referencedProperty;
 

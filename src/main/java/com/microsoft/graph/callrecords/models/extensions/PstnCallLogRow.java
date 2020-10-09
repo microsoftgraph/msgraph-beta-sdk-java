@@ -35,7 +35,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Callee Number.
      * 
      */
-    @SerializedName("calleeNumber")
+    @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
     public String calleeNumber;
 
@@ -43,7 +43,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Caller Number.
      * 
      */
-    @SerializedName("callerNumber")
+    @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
     public String callerNumber;
 
@@ -51,7 +51,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Call Id.
      * 
      */
-    @SerializedName("callId")
+    @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
     public String callId;
 
@@ -59,7 +59,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Call Type.
      * 
      */
-    @SerializedName("callType")
+    @SerializedName(value = "callType", alternate = {"CallType"})
     @Expose
     public String callType;
 
@@ -67,7 +67,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Charge.
      * 
      */
-    @SerializedName("charge")
+    @SerializedName(value = "charge", alternate = {"Charge"})
     @Expose
     public java.math.BigDecimal charge;
 
@@ -75,7 +75,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Conference Id.
      * 
      */
-    @SerializedName("conferenceId")
+    @SerializedName(value = "conferenceId", alternate = {"ConferenceId"})
     @Expose
     public String conferenceId;
 
@@ -83,7 +83,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Connection Charge.
      * 
      */
-    @SerializedName("connectionCharge")
+    @SerializedName(value = "connectionCharge", alternate = {"ConnectionCharge"})
     @Expose
     public java.math.BigDecimal connectionCharge;
 
@@ -91,7 +91,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Currency.
      * 
      */
-    @SerializedName("currency")
+    @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
     public String currency;
 
@@ -99,7 +99,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Destination Context.
      * 
      */
-    @SerializedName("destinationContext")
+    @SerializedName(value = "destinationContext", alternate = {"DestinationContext"})
     @Expose
     public String destinationContext;
 
@@ -107,7 +107,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Destination Name.
      * 
      */
-    @SerializedName("destinationName")
+    @SerializedName(value = "destinationName", alternate = {"DestinationName"})
     @Expose
     public String destinationName;
 
@@ -115,7 +115,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public Integer duration;
 
@@ -123,7 +123,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -131,7 +131,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -139,7 +139,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Inventory Type.
      * 
      */
-    @SerializedName("inventoryType")
+    @SerializedName(value = "inventoryType", alternate = {"InventoryType"})
     @Expose
     public String inventoryType;
 
@@ -147,7 +147,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The License Capability.
      * 
      */
-    @SerializedName("licenseCapability")
+    @SerializedName(value = "licenseCapability", alternate = {"LicenseCapability"})
     @Expose
     public String licenseCapability;
 
@@ -155,7 +155,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -163,7 +163,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Tenant Country Code.
      * 
      */
-    @SerializedName("tenantCountryCode")
+    @SerializedName(value = "tenantCountryCode", alternate = {"TenantCountryCode"})
     @Expose
     public String tenantCountryCode;
 
@@ -171,7 +171,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The Usage Country Code.
      * 
      */
-    @SerializedName("usageCountryCode")
+    @SerializedName(value = "usageCountryCode", alternate = {"UsageCountryCode"})
     @Expose
     public String usageCountryCode;
 
@@ -179,7 +179,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -187,7 +187,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -195,7 +195,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

@@ -22,7 +22,7 @@ public class ParticipantMuteAllBody {
      * The participants.
      * 
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public java.util.List<String> participants;
 
@@ -30,7 +30,7 @@ public class ParticipantMuteAllBody {
      * The client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 

@@ -35,7 +35,7 @@ public class TeamDiscoverySettings implements IJsonBackedObject {
      * The Show In Teams Search And Suggestions.
      * 
      */
-    @SerializedName("showInTeamsSearchAndSuggestions")
+    @SerializedName(value = "showInTeamsSearchAndSuggestions", alternate = {"ShowInTeamsSearchAndSuggestions"})
     @Expose
     public Boolean showInTeamsSearchAndSuggestions;
 

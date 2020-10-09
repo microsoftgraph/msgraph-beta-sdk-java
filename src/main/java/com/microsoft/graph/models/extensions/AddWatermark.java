@@ -27,7 +27,7 @@ public class AddWatermark extends MarkContent implements IJsonBackedObject {
      * The Orientation.
      * 
      */
-    @SerializedName("orientation")
+    @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
     public PageOrientation orientation;
 

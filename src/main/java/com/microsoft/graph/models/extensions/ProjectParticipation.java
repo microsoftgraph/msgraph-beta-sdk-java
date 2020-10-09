@@ -29,7 +29,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Categories.
      * 
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public java.util.List<String> categories;
 
@@ -37,7 +37,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Client.
      * 
      */
-    @SerializedName("client")
+    @SerializedName(value = "client", alternate = {"Client"})
     @Expose
     public CompanyDetail client;
 
@@ -45,7 +45,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Collaboration Tags.
      * 
      */
-    @SerializedName("collaborationTags")
+    @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
     public java.util.List<String> collaborationTags;
 
@@ -53,7 +53,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Colleagues.
      * 
      */
-    @SerializedName("colleagues")
+    @SerializedName(value = "colleagues", alternate = {"Colleagues"})
     @Expose
     public java.util.List<RelatedPerson> colleagues;
 
@@ -61,7 +61,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Detail.
      * 
      */
-    @SerializedName("detail")
+    @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
     public PositionDetail detail;
 
@@ -69,7 +69,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -77,7 +77,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
      * The Sponsors.
      * 
      */
-    @SerializedName("sponsors")
+    @SerializedName(value = "sponsors", alternate = {"Sponsors"})
     @Expose
     public java.util.List<RelatedPerson> sponsors;
 

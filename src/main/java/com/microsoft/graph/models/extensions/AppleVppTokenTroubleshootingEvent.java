@@ -26,7 +26,7 @@ public class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroublesh
      * The Token Id.
      * Apple Volume Purchase Program Token Identifier.
      */
-    @SerializedName("tokenId")
+    @SerializedName(value = "tokenId", alternate = {"TokenId"})
     @Expose
     public String tokenId;
 

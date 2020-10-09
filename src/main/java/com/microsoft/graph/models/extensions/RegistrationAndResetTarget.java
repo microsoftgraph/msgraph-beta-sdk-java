@@ -36,7 +36,7 @@ public class RegistrationAndResetTarget implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -44,7 +44,7 @@ public class RegistrationAndResetTarget implements IJsonBackedObject {
      * The Min Auth Methods To Register.
      * 
      */
-    @SerializedName("minAuthMethodsToRegister")
+    @SerializedName(value = "minAuthMethodsToRegister", alternate = {"MinAuthMethodsToRegister"})
     @Expose
     public Integer minAuthMethodsToRegister;
 
@@ -52,7 +52,7 @@ public class RegistrationAndResetTarget implements IJsonBackedObject {
      * The Min Auth Methods To Reset.
      * 
      */
-    @SerializedName("minAuthMethodsToReset")
+    @SerializedName(value = "minAuthMethodsToReset", alternate = {"MinAuthMethodsToReset"})
     @Expose
     public Integer minAuthMethodsToReset;
 
@@ -60,7 +60,7 @@ public class RegistrationAndResetTarget implements IJsonBackedObject {
      * The Target Type.
      * 
      */
-    @SerializedName("targetType")
+    @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose
     public AuthenticationMethodTargetType targetType;
 

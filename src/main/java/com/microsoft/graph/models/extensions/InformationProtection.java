@@ -34,7 +34,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Policy.
      * 
      */
-    @SerializedName("policy")
+    @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose
     public InformationProtectionPolicy policy;
 
@@ -42,7 +42,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Data Loss Prevention Policies.
      * 
      */
-    @SerializedName("dataLossPreventionPolicies")
+    @SerializedName(value = "dataLossPreventionPolicies", alternate = {"DataLossPreventionPolicies"})
     @Expose
     public DataLossPreventionPolicyCollectionPage dataLossPreventionPolicies;
 
@@ -50,7 +50,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Sensitivity Labels.
      * 
      */
-    @SerializedName("sensitivityLabels")
+    @SerializedName(value = "sensitivityLabels", alternate = {"SensitivityLabels"})
     @Expose
     public SensitivityLabelCollectionPage sensitivityLabels;
 
@@ -58,7 +58,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Sensitivity Policy Settings.
      * 
      */
-    @SerializedName("sensitivityPolicySettings")
+    @SerializedName(value = "sensitivityPolicySettings", alternate = {"SensitivityPolicySettings"})
     @Expose
     public SensitivityPolicySettings sensitivityPolicySettings;
 
@@ -66,7 +66,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Threat Assessment Requests.
      * 
      */
-    @SerializedName("threatAssessmentRequests")
+    @SerializedName(value = "threatAssessmentRequests", alternate = {"ThreatAssessmentRequests"})
     @Expose
     public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 

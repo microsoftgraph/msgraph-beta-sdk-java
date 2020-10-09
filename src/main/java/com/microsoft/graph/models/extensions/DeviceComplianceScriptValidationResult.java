@@ -38,7 +38,7 @@ public class DeviceComplianceScriptValidationResult implements IJsonBackedObject
      * The Rule Errors.
      * Errors in json for the script for rules.
      */
-    @SerializedName("ruleErrors")
+    @SerializedName(value = "ruleErrors", alternate = {"RuleErrors"})
     @Expose
     public java.util.List<DeviceComplianceScriptRuleError> ruleErrors;
 
@@ -46,7 +46,7 @@ public class DeviceComplianceScriptValidationResult implements IJsonBackedObject
      * The Rules.
      * Parsed rules from json.
      */
-    @SerializedName("rules")
+    @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose
     public java.util.List<DeviceComplianceScriptRule> rules;
 
@@ -54,7 +54,7 @@ public class DeviceComplianceScriptValidationResult implements IJsonBackedObject
      * The Script Errors.
      * Errors in json for the script.
      */
-    @SerializedName("scriptErrors")
+    @SerializedName(value = "scriptErrors", alternate = {"ScriptErrors"})
     @Expose
     public java.util.List<DeviceComplianceScriptError> scriptErrors;
 

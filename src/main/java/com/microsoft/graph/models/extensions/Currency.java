@@ -26,7 +26,7 @@ public class Currency extends Entity implements IJsonBackedObject {
      * The Amount Decimal Places.
      * 
      */
-    @SerializedName("amountDecimalPlaces")
+    @SerializedName(value = "amountDecimalPlaces", alternate = {"AmountDecimalPlaces"})
     @Expose
     public String amountDecimalPlaces;
 
@@ -34,7 +34,7 @@ public class Currency extends Entity implements IJsonBackedObject {
      * The Amount Rounding Precision.
      * 
      */
-    @SerializedName("amountRoundingPrecision")
+    @SerializedName(value = "amountRoundingPrecision", alternate = {"AmountRoundingPrecision"})
     @Expose
     public java.math.BigDecimal amountRoundingPrecision;
 
@@ -42,7 +42,7 @@ public class Currency extends Entity implements IJsonBackedObject {
      * The Code.
      * 
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -50,7 +50,7 @@ public class Currency extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -58,7 +58,7 @@ public class Currency extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -66,7 +66,7 @@ public class Currency extends Entity implements IJsonBackedObject {
      * The Symbol.
      * 
      */
-    @SerializedName("symbol")
+    @SerializedName(value = "symbol", alternate = {"Symbol"})
     @Expose
     public String symbol;
 

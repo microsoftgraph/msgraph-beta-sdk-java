@@ -35,7 +35,7 @@ public class MediaConfig implements IJsonBackedObject {
      * The Remove From Default Audio Group.
      * 
      */
-    @SerializedName("removeFromDefaultAudioGroup")
+    @SerializedName(value = "removeFromDefaultAudioGroup", alternate = {"RemoveFromDefaultAudioGroup"})
     @Expose
     public Boolean removeFromDefaultAudioGroup;
 

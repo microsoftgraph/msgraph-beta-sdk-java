@@ -36,7 +36,7 @@ public class DeviceManagementExchangeDeviceClass implements IJsonBackedObject {
      * The Name.
      * Name of the device class which will be impacted by this rule.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -44,7 +44,7 @@ public class DeviceManagementExchangeDeviceClass implements IJsonBackedObject {
      * The Type.
      * Type of device which is impacted by this rule e.g. Model, Family
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public DeviceManagementExchangeAccessRuleType type;
 

@@ -36,7 +36,7 @@ public class CurrentLabel implements IJsonBackedObject {
      * The Application Mode.
      * 
      */
-    @SerializedName("applicationMode")
+    @SerializedName(value = "applicationMode", alternate = {"ApplicationMode"})
     @Expose
     public ApplicationMode applicationMode;
 
@@ -44,7 +44,7 @@ public class CurrentLabel implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

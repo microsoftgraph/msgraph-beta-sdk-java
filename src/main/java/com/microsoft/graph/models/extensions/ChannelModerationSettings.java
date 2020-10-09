@@ -37,7 +37,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
      * The Allow New Message From Bots.
      * 
      */
-    @SerializedName("allowNewMessageFromBots")
+    @SerializedName(value = "allowNewMessageFromBots", alternate = {"AllowNewMessageFromBots"})
     @Expose
     public Boolean allowNewMessageFromBots;
 
@@ -45,7 +45,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
      * The Allow New Message From Connectors.
      * 
      */
-    @SerializedName("allowNewMessageFromConnectors")
+    @SerializedName(value = "allowNewMessageFromConnectors", alternate = {"AllowNewMessageFromConnectors"})
     @Expose
     public Boolean allowNewMessageFromConnectors;
 
@@ -53,7 +53,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
      * The Reply Restriction.
      * 
      */
-    @SerializedName("replyRestriction")
+    @SerializedName(value = "replyRestriction", alternate = {"ReplyRestriction"})
     @Expose
     public ReplyRestriction replyRestriction;
 
@@ -61,7 +61,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
      * The User New Message Restriction.
      * 
      */
-    @SerializedName("userNewMessageRestriction")
+    @SerializedName(value = "userNewMessageRestriction", alternate = {"UserNewMessageRestriction"})
     @Expose
     public UserNewMessageRestriction userNewMessageRestriction;
 

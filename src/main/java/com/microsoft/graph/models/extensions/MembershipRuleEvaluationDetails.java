@@ -36,7 +36,7 @@ public class MembershipRuleEvaluationDetails implements IJsonBackedObject {
      * The Membership Rule Evaluation Details.
      * 
      */
-    @SerializedName("membershipRuleEvaluationDetails")
+    @SerializedName(value = "membershipRuleEvaluationDetails", alternate = {"MembershipRuleEvaluationDetails"})
     @Expose
     public ExpressionEvaluationDetails membershipRuleEvaluationDetails;
 

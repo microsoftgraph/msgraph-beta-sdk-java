@@ -27,7 +27,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements IJsonB
      * The Feedback.
      * 
      */
-    @SerializedName("feedback")
+    @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
     public EducationFeedback feedback;
 
@@ -35,7 +35,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements IJsonB
      * The Published Feedback.
      * 
      */
-    @SerializedName("publishedFeedback")
+    @SerializedName(value = "publishedFeedback", alternate = {"PublishedFeedback"})
     @Expose
     public EducationFeedback publishedFeedback;
 

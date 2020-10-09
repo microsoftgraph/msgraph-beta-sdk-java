@@ -35,7 +35,7 @@ public class RankedEmailAddress implements IJsonBackedObject {
      * The Address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -43,7 +43,7 @@ public class RankedEmailAddress implements IJsonBackedObject {
      * The Rank.
      * 
      */
-    @SerializedName("rank")
+    @SerializedName(value = "rank", alternate = {"Rank"})
     @Expose
     public Double rank;
 

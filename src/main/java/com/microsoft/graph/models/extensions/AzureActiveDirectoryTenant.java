@@ -26,7 +26,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements IJsonB
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements IJsonB
      * The Tenant Id.
      * 
      */
-    @SerializedName("tenantId")
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
     public String tenantId;
 

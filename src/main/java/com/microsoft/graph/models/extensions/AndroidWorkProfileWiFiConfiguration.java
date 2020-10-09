@@ -27,7 +27,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      * The Connect Automatically.
      * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
      */
-    @SerializedName("connectAutomatically")
+    @SerializedName(value = "connectAutomatically", alternate = {"ConnectAutomatically"})
     @Expose
     public Boolean connectAutomatically;
 
@@ -35,7 +35,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      * The Connect When Network Name Is Hidden.
      * When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
      */
-    @SerializedName("connectWhenNetworkNameIsHidden")
+    @SerializedName(value = "connectWhenNetworkNameIsHidden", alternate = {"ConnectWhenNetworkNameIsHidden"})
     @Expose
     public Boolean connectWhenNetworkNameIsHidden;
 
@@ -43,7 +43,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      * The Network Name.
      * Network Name
      */
-    @SerializedName("networkName")
+    @SerializedName(value = "networkName", alternate = {"NetworkName"})
     @Expose
     public String networkName;
 
@@ -51,7 +51,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      * The Ssid.
      * This is the name of the Wi-Fi network that is broadcast to all devices.
      */
-    @SerializedName("ssid")
+    @SerializedName(value = "ssid", alternate = {"Ssid"})
     @Expose
     public String ssid;
 
@@ -59,7 +59,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      * The Wi Fi Security Type.
      * Indicates whether Wi-Fi endpoint uses an EAP based security type.
      */
-    @SerializedName("wiFiSecurityType")
+    @SerializedName(value = "wiFiSecurityType", alternate = {"WiFiSecurityType"})
     @Expose
     public AndroidWiFiSecurityType wiFiSecurityType;
 

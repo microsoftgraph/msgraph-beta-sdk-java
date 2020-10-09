@@ -32,7 +32,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public UserIdentity createdBy;
 
@@ -40,7 +40,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -48,7 +48,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public PrintJobStatus status;
 
@@ -56,7 +56,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
      * The Documents.
      * 
      */
-    @SerializedName("documents")
+    @SerializedName(value = "documents", alternate = {"Documents"})
     @Expose
     public PrintDocumentCollectionPage documents;
 
@@ -64,7 +64,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
      * The Tasks.
      * 
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public PrintTaskCollectionPage tasks;
 

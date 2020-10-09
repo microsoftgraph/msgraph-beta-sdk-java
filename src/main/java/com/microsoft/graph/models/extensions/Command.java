@@ -28,7 +28,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The App Service Name.
      * 
      */
-    @SerializedName("AppServiceName")
+    @SerializedName(value = "appServiceName", alternate = {"AppServiceName"})
     @Expose
     public String appServiceName;
 
@@ -36,7 +36,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("Error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public String error;
 
@@ -44,7 +44,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Package Family Name.
      * 
      */
-    @SerializedName("PackageFamilyName")
+    @SerializedName(value = "packageFamilyName", alternate = {"PackageFamilyName"})
     @Expose
     public String packageFamilyName;
 
@@ -52,7 +52,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Payload.
      * 
      */
-    @SerializedName("Payload")
+    @SerializedName(value = "payload", alternate = {"Payload"})
     @Expose
     public PayloadRequest payload;
 
@@ -60,7 +60,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Permission Ticket.
      * 
      */
-    @SerializedName("PermissionTicket")
+    @SerializedName(value = "permissionTicket", alternate = {"PermissionTicket"})
     @Expose
     public String permissionTicket;
 
@@ -68,7 +68,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Post Back Uri.
      * 
      */
-    @SerializedName("PostBackUri")
+    @SerializedName(value = "postBackUri", alternate = {"PostBackUri"})
     @Expose
     public String postBackUri;
 
@@ -76,7 +76,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("Status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -84,7 +84,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("Type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -92,7 +92,7 @@ public class Command extends Entity implements IJsonBackedObject {
      * The Responsepayload.
      * 
      */
-    @SerializedName("responsepayload")
+    @SerializedName(value = "responsepayload", alternate = {"Responsepayload"})
     @Expose
     public PayloadResponse responsepayload;
 

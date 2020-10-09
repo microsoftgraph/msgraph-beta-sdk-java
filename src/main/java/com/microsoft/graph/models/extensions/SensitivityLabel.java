@@ -33,7 +33,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Applicable To.
      * 
      */
-    @SerializedName("applicableTo")
+    @SerializedName(value = "applicableTo", alternate = {"ApplicableTo"})
     @Expose
     public EnumSet<SensitivityLabelTarget> applicableTo;
 
@@ -41,7 +41,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Application Mode.
      * 
      */
-    @SerializedName("applicationMode")
+    @SerializedName(value = "applicationMode", alternate = {"ApplicationMode"})
     @Expose
     public ApplicationMode applicationMode;
 
@@ -49,7 +49,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Assigned Policies.
      * 
      */
-    @SerializedName("assignedPolicies")
+    @SerializedName(value = "assignedPolicies", alternate = {"AssignedPolicies"})
     @Expose
     public java.util.List<LabelPolicy> assignedPolicies;
 
@@ -57,7 +57,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Auto Labeling.
      * 
      */
-    @SerializedName("autoLabeling")
+    @SerializedName(value = "autoLabeling", alternate = {"AutoLabeling"})
     @Expose
     public AutoLabeling autoLabeling;
 
@@ -65,7 +65,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -73,7 +73,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -81,7 +81,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Is Default.
      * 
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -89,7 +89,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Is Endpoint Protection Enabled.
      * 
      */
-    @SerializedName("isEndpointProtectionEnabled")
+    @SerializedName(value = "isEndpointProtectionEnabled", alternate = {"IsEndpointProtectionEnabled"})
     @Expose
     public Boolean isEndpointProtectionEnabled;
 
@@ -97,7 +97,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Label Actions.
      * 
      */
-    @SerializedName("labelActions")
+    @SerializedName(value = "labelActions", alternate = {"LabelActions"})
     @Expose
     public java.util.List<LabelActionBase> labelActions;
 
@@ -105,7 +105,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -113,7 +113,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -121,7 +121,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Tool Tip.
      * 
      */
-    @SerializedName("toolTip")
+    @SerializedName(value = "toolTip", alternate = {"ToolTip"})
     @Expose
     public String toolTip;
 
@@ -129,7 +129,7 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Sublabels.
      * 
      */
-    @SerializedName("sublabels")
+    @SerializedName(value = "sublabels", alternate = {"Sublabels"})
     @Expose
     public SensitivityLabelCollectionPage sublabels;
 

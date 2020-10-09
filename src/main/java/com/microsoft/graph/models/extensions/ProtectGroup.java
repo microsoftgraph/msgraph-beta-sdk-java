@@ -27,7 +27,7 @@ public class ProtectGroup extends LabelActionBase implements IJsonBackedObject {
      * The Allow Email From Guest Users.
      * 
      */
-    @SerializedName("allowEmailFromGuestUsers")
+    @SerializedName(value = "allowEmailFromGuestUsers", alternate = {"AllowEmailFromGuestUsers"})
     @Expose
     public Boolean allowEmailFromGuestUsers;
 
@@ -35,7 +35,7 @@ public class ProtectGroup extends LabelActionBase implements IJsonBackedObject {
      * The Allow Guest Users.
      * 
      */
-    @SerializedName("allowGuestUsers")
+    @SerializedName(value = "allowGuestUsers", alternate = {"AllowGuestUsers"})
     @Expose
     public Boolean allowGuestUsers;
 
@@ -43,7 +43,7 @@ public class ProtectGroup extends LabelActionBase implements IJsonBackedObject {
      * The Privacy.
      * 
      */
-    @SerializedName("privacy")
+    @SerializedName(value = "privacy", alternate = {"Privacy"})
     @Expose
     public GroupPrivacy privacy;
 

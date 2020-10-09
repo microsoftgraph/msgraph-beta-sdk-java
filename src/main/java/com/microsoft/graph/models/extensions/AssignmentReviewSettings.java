@@ -36,7 +36,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
      * The Duration In Days.
      * 
      */
-    @SerializedName("durationInDays")
+    @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
     public Integer durationInDays;
 
@@ -44,7 +44,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -52,7 +52,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
      * The Recurrence Type.
      * 
      */
-    @SerializedName("recurrenceType")
+    @SerializedName(value = "recurrenceType", alternate = {"RecurrenceType"})
     @Expose
     public String recurrenceType;
 
@@ -60,7 +60,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
      * The Reviewers.
      * 
      */
-    @SerializedName("reviewers")
+    @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
     public java.util.List<UserSet> reviewers;
 
@@ -68,7 +68,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
      * The Reviewer Type.
      * 
      */
-    @SerializedName("reviewerType")
+    @SerializedName(value = "reviewerType", alternate = {"ReviewerType"})
     @Expose
     public String reviewerType;
 
@@ -76,7 +76,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

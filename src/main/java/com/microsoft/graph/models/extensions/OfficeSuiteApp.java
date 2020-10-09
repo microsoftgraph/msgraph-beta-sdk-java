@@ -31,7 +31,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Auto Accept Eula.
      * The value to accept the EULA automatically on the enduser's device.
      */
-    @SerializedName("autoAcceptEula")
+    @SerializedName(value = "autoAcceptEula", alternate = {"AutoAcceptEula"})
     @Expose
     public Boolean autoAcceptEula;
 
@@ -39,7 +39,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Excluded Apps.
      * The property to represent the apps which are excluded from the selected Office365 Product Id.
      */
-    @SerializedName("excludedApps")
+    @SerializedName(value = "excludedApps", alternate = {"ExcludedApps"})
     @Expose
     public ExcludedApps excludedApps;
 
@@ -47,7 +47,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Install Progress Display Level.
      * To specify the level of display for the Installation Progress Setup UI on the Device.
      */
-    @SerializedName("installProgressDisplayLevel")
+    @SerializedName(value = "installProgressDisplayLevel", alternate = {"InstallProgressDisplayLevel"})
     @Expose
     public OfficeSuiteInstallProgressDisplayLevel installProgressDisplayLevel;
 
@@ -55,7 +55,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Locales To Install.
      * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
      */
-    @SerializedName("localesToInstall")
+    @SerializedName(value = "localesToInstall", alternate = {"LocalesToInstall"})
     @Expose
     public java.util.List<String> localesToInstall;
 
@@ -63,7 +63,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Office Configuration Xml.
      * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
      */
-    @SerializedName("officeConfigurationXml")
+    @SerializedName(value = "officeConfigurationXml", alternate = {"OfficeConfigurationXml"})
     @Expose
     public byte[] officeConfigurationXml;
 
@@ -71,7 +71,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Office Platform Architecture.
      * The property to represent the Office365 app suite version.
      */
-    @SerializedName("officePlatformArchitecture")
+    @SerializedName(value = "officePlatformArchitecture", alternate = {"OfficePlatformArchitecture"})
     @Expose
     public EnumSet<WindowsArchitecture> officePlatformArchitecture;
 
@@ -79,7 +79,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Product Ids.
      * The Product Ids that represent the Office365 Suite SKU.
      */
-    @SerializedName("productIds")
+    @SerializedName(value = "productIds", alternate = {"ProductIds"})
     @Expose
     public java.util.List<OfficeProductId> productIds;
 
@@ -87,7 +87,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Should Uninstall Older Versions Of Office.
      * The property to determine whether to uninstall existing Office MSI if an Office365 app suite is deployed to the device or not.
      */
-    @SerializedName("shouldUninstallOlderVersionsOfOffice")
+    @SerializedName(value = "shouldUninstallOlderVersionsOfOffice", alternate = {"ShouldUninstallOlderVersionsOfOffice"})
     @Expose
     public Boolean shouldUninstallOlderVersionsOfOffice;
 
@@ -95,7 +95,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Target Version.
      * The property to represent the specific target version for the Office365 app suite that should be remained deployed on the devices.
      */
-    @SerializedName("targetVersion")
+    @SerializedName(value = "targetVersion", alternate = {"TargetVersion"})
     @Expose
     public String targetVersion;
 
@@ -103,7 +103,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Update Channel.
      * The property to represent the Office365 Update Channel.
      */
-    @SerializedName("updateChannel")
+    @SerializedName(value = "updateChannel", alternate = {"UpdateChannel"})
     @Expose
     public OfficeUpdateChannel updateChannel;
 
@@ -111,7 +111,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Update Version.
      * The property to represent the update version in which the specific target version is available for the Office365 app suite.
      */
-    @SerializedName("updateVersion")
+    @SerializedName(value = "updateVersion", alternate = {"UpdateVersion"})
     @Expose
     public String updateVersion;
 
@@ -119,7 +119,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
      * The Use Shared Computer Activation.
      * The property to represent that whether the shared computer activation is used not for Office365 app suite.
      */
-    @SerializedName("useSharedComputerActivation")
+    @SerializedName(value = "useSharedComputerActivation", alternate = {"UseSharedComputerActivation"})
     @Expose
     public Boolean useSharedComputerActivation;
 

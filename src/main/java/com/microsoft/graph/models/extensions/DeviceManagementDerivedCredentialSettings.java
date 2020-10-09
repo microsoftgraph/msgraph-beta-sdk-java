@@ -28,7 +28,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * The Display Name.
      * The display name for the profile.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -36,7 +36,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * The Help Url.
      * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
      */
-    @SerializedName("helpUrl")
+    @SerializedName(value = "helpUrl", alternate = {"HelpUrl"})
     @Expose
     public String helpUrl;
 
@@ -44,7 +44,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * The Issuer.
      * The derived credential provider to use.
      */
-    @SerializedName("issuer")
+    @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
     public DeviceManagementDerivedCredentialIssuer issuer;
 
@@ -52,7 +52,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * The Notification Type.
      * The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device.
      */
-    @SerializedName("notificationType")
+    @SerializedName(value = "notificationType", alternate = {"NotificationType"})
     @Expose
     public EnumSet<DeviceManagementDerivedCredentialNotificationType> notificationType;
 

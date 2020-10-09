@@ -36,7 +36,7 @@ public class AndroidEnrollmentCompanyCode implements IJsonBackedObject {
      * The Enrollment Token.
      * Enrollment Token used by the User to enroll their device.
      */
-    @SerializedName("enrollmentToken")
+    @SerializedName(value = "enrollmentToken", alternate = {"EnrollmentToken"})
     @Expose
     public String enrollmentToken;
 
@@ -44,7 +44,7 @@ public class AndroidEnrollmentCompanyCode implements IJsonBackedObject {
      * The Qr Code Content.
      * String used to generate a QR code for the token.
      */
-    @SerializedName("qrCodeContent")
+    @SerializedName(value = "qrCodeContent", alternate = {"QrCodeContent"})
     @Expose
     public String qrCodeContent;
 
@@ -52,7 +52,7 @@ public class AndroidEnrollmentCompanyCode implements IJsonBackedObject {
      * The Qr Code Image.
      * Generated QR code for the token.
      */
-    @SerializedName("qrCodeImage")
+    @SerializedName(value = "qrCodeImage", alternate = {"QrCodeImage"})
     @Expose
     public MimeContent qrCodeImage;
 

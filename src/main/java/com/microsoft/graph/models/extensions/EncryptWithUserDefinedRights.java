@@ -26,7 +26,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements IJso
      * The Allow Ad Hoc Permissions.
      * 
      */
-    @SerializedName("allowAdHocPermissions")
+    @SerializedName(value = "allowAdHocPermissions", alternate = {"AllowAdHocPermissions"})
     @Expose
     public Boolean allowAdHocPermissions;
 
@@ -34,7 +34,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements IJso
      * The Allow Mail Forwarding.
      * 
      */
-    @SerializedName("allowMailForwarding")
+    @SerializedName(value = "allowMailForwarding", alternate = {"AllowMailForwarding"})
     @Expose
     public Boolean allowMailForwarding;
 
@@ -42,7 +42,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements IJso
      * The Decryption Rights Management Template Id.
      * 
      */
-    @SerializedName("decryptionRightsManagementTemplateId")
+    @SerializedName(value = "decryptionRightsManagementTemplateId", alternate = {"DecryptionRightsManagementTemplateId"})
     @Expose
     public String decryptionRightsManagementTemplateId;
 

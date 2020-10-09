@@ -27,7 +27,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Device Display Name.
      * Device display name.
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -35,7 +35,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Device Id.
      * The id of the device.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -43,7 +43,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Feature Update Version.
      * The current feature update version of the device.
      */
-    @SerializedName("featureUpdateVersion")
+    @SerializedName(value = "featureUpdateVersion", alternate = {"FeatureUpdateVersion"})
     @Expose
     public String featureUpdateVersion;
 
@@ -51,7 +51,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Last Scan Date Time.
      * The date time that the Windows Update Agent did a successful scan.
      */
-    @SerializedName("lastScanDateTime")
+    @SerializedName(value = "lastScanDateTime", alternate = {"LastScanDateTime"})
     @Expose
     public java.util.Calendar lastScanDateTime;
 
@@ -59,7 +59,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Last Sync Date Time.
      * Last date time that the device sync with with Microsoft Intune.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -67,7 +67,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Quality Update Version.
      * The Quality Update Version of the device.
      */
-    @SerializedName("qualityUpdateVersion")
+    @SerializedName(value = "qualityUpdateVersion", alternate = {"QualityUpdateVersion"})
     @Expose
     public String qualityUpdateVersion;
 
@@ -75,7 +75,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The Status.
      * Windows udpate status.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public WindowsUpdateStatus status;
 
@@ -83,7 +83,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The User Id.
      * The id of the user.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -91,7 +91,7 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * User principal name.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

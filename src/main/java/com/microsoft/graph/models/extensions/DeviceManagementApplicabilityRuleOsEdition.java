@@ -37,7 +37,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements IJsonBackedOb
      * The Name.
      * Name for object.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -45,7 +45,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements IJsonBackedOb
      * The Os Edition Types.
      * Applicability rule OS edition type.
      */
-    @SerializedName("osEditionTypes")
+    @SerializedName(value = "osEditionTypes", alternate = {"OsEditionTypes"})
     @Expose
     public java.util.List<Windows10EditionType> osEditionTypes;
 
@@ -53,7 +53,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements IJsonBackedOb
      * The Rule Type.
      * Applicability Rule type.
      */
-    @SerializedName("ruleType")
+    @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose
     public DeviceManagementApplicabilityRuleType ruleType;
 

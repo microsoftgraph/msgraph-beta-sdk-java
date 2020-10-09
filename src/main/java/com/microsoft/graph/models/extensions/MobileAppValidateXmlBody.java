@@ -22,7 +22,7 @@ public class MobileAppValidateXmlBody {
      * The office Configuration Xml.
      * 
      */
-    @SerializedName("officeConfigurationXml")
+    @SerializedName(value = "officeConfigurationXml", alternate = {"OfficeConfigurationXml"})
     @Expose
     public byte[] officeConfigurationXml;
 

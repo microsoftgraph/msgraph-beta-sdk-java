@@ -26,7 +26,7 @@ public class GroupPolicyPresentationValueBoolean extends GroupPolicyPresentation
      * The Value.
      * An boolean value for the associated presentation.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Boolean value;
 

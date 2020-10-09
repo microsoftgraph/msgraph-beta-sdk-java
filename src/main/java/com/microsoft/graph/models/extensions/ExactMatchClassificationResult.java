@@ -37,7 +37,7 @@ public class ExactMatchClassificationResult implements IJsonBackedObject {
      * The Classification.
      * 
      */
-    @SerializedName("classification")
+    @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
     public java.util.List<ExactMatchDetectedSensitiveContent> classification;
 
@@ -45,7 +45,7 @@ public class ExactMatchClassificationResult implements IJsonBackedObject {
      * The Errors.
      * 
      */
-    @SerializedName("errors")
+    @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
     public java.util.List<ClassificationError> errors;
 

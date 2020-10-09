@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ExactMatchSensitiveContentLocation;
 import com.microsoft.graph.models.extensions.DetectedSensitiveContentBase;
 
 
@@ -21,6 +22,14 @@ import com.google.gson.annotations.Expose;
  */
 public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContentBase implements IJsonBackedObject {
 
+
+    /**
+     * The Matches.
+     * 
+     */
+    @SerializedName(value = "matches", alternate = {"Matches"})
+    @Expose
+    public java.util.List<ExactMatchSensitiveContentLocation> matches;
 
 
     /**

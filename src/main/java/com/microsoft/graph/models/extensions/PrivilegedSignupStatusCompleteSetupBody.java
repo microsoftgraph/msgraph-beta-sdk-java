@@ -23,7 +23,7 @@ public class PrivilegedSignupStatusCompleteSetupBody {
      * The tenant Setup Info.
      * 
      */
-    @SerializedName("tenantSetupInfo")
+    @SerializedName(value = "tenantSetupInfo", alternate = {"TenantSetupInfo"})
     @Expose
     public TenantSetupInfo tenantSetupInfo;
 

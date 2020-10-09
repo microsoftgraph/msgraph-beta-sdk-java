@@ -26,7 +26,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Assigned Products.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName(value = "assignedProducts", alternate = {"AssignedProducts"})
     @Expose
     public java.util.List<String> assignedProducts;
 
@@ -34,7 +34,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Call Count.
      * 
      */
-    @SerializedName("callCount")
+    @SerializedName(value = "callCount", alternate = {"CallCount"})
     @Expose
     public Long callCount;
 
@@ -42,7 +42,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -50,7 +50,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Has Other Action.
      * 
      */
-    @SerializedName("hasOtherAction")
+    @SerializedName(value = "hasOtherAction", alternate = {"HasOtherAction"})
     @Expose
     public Boolean hasOtherAction;
 
@@ -58,7 +58,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -66,7 +66,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -74,7 +74,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Meeting Count.
      * 
      */
-    @SerializedName("meetingCount")
+    @SerializedName(value = "meetingCount", alternate = {"MeetingCount"})
     @Expose
     public Long meetingCount;
 
@@ -82,7 +82,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Private Chat Message Count.
      * 
      */
-    @SerializedName("privateChatMessageCount")
+    @SerializedName(value = "privateChatMessageCount", alternate = {"PrivateChatMessageCount"})
     @Expose
     public Long privateChatMessageCount;
 
@@ -90,7 +90,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -98,7 +98,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -106,7 +106,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The Team Chat Message Count.
      * 
      */
-    @SerializedName("teamChatMessageCount")
+    @SerializedName(value = "teamChatMessageCount", alternate = {"TeamChatMessageCount"})
     @Expose
     public Long teamChatMessageCount;
 
@@ -114,7 +114,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

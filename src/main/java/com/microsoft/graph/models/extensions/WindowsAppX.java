@@ -28,7 +28,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Applicable Architectures.
      * The Windows architecture(s) for which this app can run on.
      */
-    @SerializedName("applicableArchitectures")
+    @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
     public EnumSet<WindowsArchitecture> applicableArchitectures;
 
@@ -36,7 +36,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Identity Name.
      * The Identity Name.
      */
-    @SerializedName("identityName")
+    @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
     public String identityName;
 
@@ -44,7 +44,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Identity Publisher Hash.
      * The Identity Publisher Hash.
      */
-    @SerializedName("identityPublisherHash")
+    @SerializedName(value = "identityPublisherHash", alternate = {"IdentityPublisherHash"})
     @Expose
     public String identityPublisherHash;
 
@@ -52,7 +52,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Identity Resource Identifier.
      * The Identity Resource Identifier.
      */
-    @SerializedName("identityResourceIdentifier")
+    @SerializedName(value = "identityResourceIdentifier", alternate = {"IdentityResourceIdentifier"})
     @Expose
     public String identityResourceIdentifier;
 
@@ -60,7 +60,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Identity Version.
      * The identity version.
      */
-    @SerializedName("identityVersion")
+    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
     public String identityVersion;
 
@@ -68,7 +68,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Is Bundle.
      * Whether or not the app is a bundle.
      */
-    @SerializedName("isBundle")
+    @SerializedName(value = "isBundle", alternate = {"IsBundle"})
     @Expose
     public Boolean isBundle;
 
@@ -76,7 +76,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 

@@ -26,7 +26,7 @@ public class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParame
      * The Default Value.
      * The default value of boolean param
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public Boolean defaultValue;
 

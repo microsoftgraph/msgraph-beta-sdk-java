@@ -23,7 +23,7 @@ public class GovernanceRoleAssignmentRequestUpdateRequestBody {
      * The decision.
      * 
      */
-    @SerializedName("decision")
+    @SerializedName(value = "decision", alternate = {"Decision"})
     @Expose
     public String decision;
 
@@ -31,7 +31,7 @@ public class GovernanceRoleAssignmentRequestUpdateRequestBody {
      * The assignment State.
      * 
      */
-    @SerializedName("assignmentState")
+    @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
     public String assignmentState;
 
@@ -39,7 +39,7 @@ public class GovernanceRoleAssignmentRequestUpdateRequestBody {
      * The schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public GovernanceSchedule schedule;
 
@@ -47,7 +47,7 @@ public class GovernanceRoleAssignmentRequestUpdateRequestBody {
      * The reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 

@@ -27,7 +27,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
      * The Completion Reason.
      * 
      */
-    @SerializedName("completionReason")
+    @SerializedName(value = "completionReason", alternate = {"CompletionReason"})
     @Expose
     public RecordCompletionReason completionReason;
 
@@ -35,7 +35,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
      * The Recording Access Token.
      * The access token required to retrieve the recording.
      */
-    @SerializedName("recordingAccessToken")
+    @SerializedName(value = "recordingAccessToken", alternate = {"RecordingAccessToken"})
     @Expose
     public String recordingAccessToken;
 
@@ -43,7 +43,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
      * The Recording Location.
      * The location where the recording is located.
      */
-    @SerializedName("recordingLocation")
+    @SerializedName(value = "recordingLocation", alternate = {"RecordingLocation"})
     @Expose
     public String recordingLocation;
 

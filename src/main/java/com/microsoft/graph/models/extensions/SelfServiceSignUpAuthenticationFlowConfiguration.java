@@ -35,7 +35,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements IJsonBa
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 

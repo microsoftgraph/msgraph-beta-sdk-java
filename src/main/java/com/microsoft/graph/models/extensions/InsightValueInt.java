@@ -26,7 +26,7 @@ public class InsightValueInt extends UserExperienceAnalyticsInsightValue impleme
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Integer value;
 

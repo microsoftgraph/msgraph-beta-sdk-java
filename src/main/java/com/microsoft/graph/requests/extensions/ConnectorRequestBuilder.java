@@ -56,11 +56,11 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder implements IConn
     }
 
 
-    public IConnectorGroupCollectionWithReferencesRequestBuilder memberOf() {
-        return new ConnectorGroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
+    public IConnectorGroupCollectionRequestBuilder memberOf() {
+        return new ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IConnectorGroupWithReferenceRequestBuilder memberOf(final String id) {
-        return new ConnectorGroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
+    public IConnectorGroupRequestBuilder memberOf(final String id) {
+        return new ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
 }

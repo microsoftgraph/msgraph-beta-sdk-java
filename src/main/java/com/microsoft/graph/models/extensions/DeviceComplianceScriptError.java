@@ -36,7 +36,7 @@ public class DeviceComplianceScriptError implements IJsonBackedObject {
      * The Code.
      * Error code.
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public Code code;
 
@@ -44,7 +44,7 @@ public class DeviceComplianceScriptError implements IJsonBackedObject {
      * The Message.
      * Error message.
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 

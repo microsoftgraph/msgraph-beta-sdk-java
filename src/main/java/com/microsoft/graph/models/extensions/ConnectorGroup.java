@@ -32,7 +32,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * The Connector Group Type.
      * 
      */
-    @SerializedName("connectorGroupType")
+    @SerializedName(value = "connectorGroupType", alternate = {"ConnectorGroupType"})
     @Expose
     public ConnectorGroupType connectorGroupType;
 
@@ -40,7 +40,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * The Is Default.
      * 
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -48,7 +48,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -56,7 +56,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * The Region.
      * 
      */
-    @SerializedName("region")
+    @SerializedName(value = "region", alternate = {"Region"})
     @Expose
     public ConnectorGroupRegion region;
 
@@ -70,6 +70,8 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * The Members.
      * 
      */
+    @SerializedName(value = "members", alternate = {"Members"})
+    @Expose
     public ConnectorCollectionPage members;
 
 

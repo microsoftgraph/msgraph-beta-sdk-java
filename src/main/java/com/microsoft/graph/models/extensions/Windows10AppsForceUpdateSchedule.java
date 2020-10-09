@@ -36,7 +36,7 @@ public class Windows10AppsForceUpdateSchedule implements IJsonBackedObject {
      * The Recurrence.
      * Recurrence schedule.
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public Windows10AppsUpdateRecurrence recurrence;
 
@@ -44,7 +44,7 @@ public class Windows10AppsForceUpdateSchedule implements IJsonBackedObject {
      * The Run Immediately If After Start Date Time.
      * If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
      */
-    @SerializedName("runImmediatelyIfAfterStartDateTime")
+    @SerializedName(value = "runImmediatelyIfAfterStartDateTime", alternate = {"RunImmediatelyIfAfterStartDateTime"})
     @Expose
     public Boolean runImmediatelyIfAfterStartDateTime;
 
@@ -52,7 +52,7 @@ public class Windows10AppsForceUpdateSchedule implements IJsonBackedObject {
      * The Start Date Time.
      * The start time for the force restart.
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

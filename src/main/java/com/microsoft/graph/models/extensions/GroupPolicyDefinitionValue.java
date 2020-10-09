@@ -30,7 +30,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Configuration Type.
      * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
      */
-    @SerializedName("configurationType")
+    @SerializedName(value = "configurationType", alternate = {"ConfigurationType"})
     @Expose
     public GroupPolicyConfigurationType configurationType;
 
@@ -38,7 +38,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Created Date Time.
      * The date and time the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -46,7 +46,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Enabled.
      * Enables or disables the associated group policy definition.
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -54,7 +54,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -62,7 +62,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Definition.
      * The associated group policy definition with the value.
      */
-    @SerializedName("definition")
+    @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
     public GroupPolicyDefinition definition;
 
@@ -70,7 +70,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Presentation Values.
      * The associated group policy presentation values with the definition value.
      */
-    @SerializedName("presentationValues")
+    @SerializedName(value = "presentationValues", alternate = {"PresentationValues"})
     @Expose
     public GroupPolicyPresentationValueCollectionPage presentationValues;
 

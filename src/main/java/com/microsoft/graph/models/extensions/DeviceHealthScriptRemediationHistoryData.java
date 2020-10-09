@@ -35,7 +35,7 @@ public class DeviceHealthScriptRemediationHistoryData implements IJsonBackedObje
      * The Date.
      * The date on which devices were remediated by the device health script.
      */
-    @SerializedName("date")
+    @SerializedName(value = "date", alternate = {"Date"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly date;
 
@@ -43,7 +43,7 @@ public class DeviceHealthScriptRemediationHistoryData implements IJsonBackedObje
      * The No Issue Device Count.
      * The number of devices that were found to have no issue by the device health script.
      */
-    @SerializedName("noIssueDeviceCount")
+    @SerializedName(value = "noIssueDeviceCount", alternate = {"NoIssueDeviceCount"})
     @Expose
     public Integer noIssueDeviceCount;
 
@@ -51,7 +51,7 @@ public class DeviceHealthScriptRemediationHistoryData implements IJsonBackedObje
      * The Remediated Device Count.
      * The number of devices remediated by the device health script.
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName(value = "remediatedDeviceCount", alternate = {"RemediatedDeviceCount"})
     @Expose
     public Integer remediatedDeviceCount;
 

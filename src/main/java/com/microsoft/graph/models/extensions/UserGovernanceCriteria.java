@@ -26,7 +26,7 @@ public class UserGovernanceCriteria extends GovernanceCriteria implements IJsonB
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

@@ -26,7 +26,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
      * The Issued Date.
      * 
      */
-    @SerializedName("issuedDate")
+    @SerializedName(value = "issuedDate", alternate = {"IssuedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly issuedDate;
 
@@ -50,7 +50,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
      * The Issuing Authority.
      * 
      */
-    @SerializedName("issuingAuthority")
+    @SerializedName(value = "issuingAuthority", alternate = {"IssuingAuthority"})
     @Expose
     public String issuingAuthority;
 
@@ -58,7 +58,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
      * The Thumbnail Url.
      * 
      */
-    @SerializedName("thumbnailUrl")
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
     public String thumbnailUrl;
 
@@ -66,7 +66,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

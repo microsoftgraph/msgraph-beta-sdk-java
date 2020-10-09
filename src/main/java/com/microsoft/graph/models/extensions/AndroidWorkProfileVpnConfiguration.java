@@ -34,7 +34,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Always On.
      * Whether or not to enable always-on VPN connection.
      */
-    @SerializedName("alwaysOn")
+    @SerializedName(value = "alwaysOn", alternate = {"AlwaysOn"})
     @Expose
     public Boolean alwaysOn;
 
@@ -42,7 +42,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Always On Lockdown.
      * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
      */
-    @SerializedName("alwaysOnLockdown")
+    @SerializedName(value = "alwaysOnLockdown", alternate = {"AlwaysOnLockdown"})
     @Expose
     public Boolean alwaysOnLockdown;
 
@@ -50,7 +50,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Authentication Method.
      * Authentication method.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public VpnAuthenticationMethod authenticationMethod;
 
@@ -58,7 +58,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Connection Name.
      * Connection name displayed to the user.
      */
-    @SerializedName("connectionName")
+    @SerializedName(value = "connectionName", alternate = {"ConnectionName"})
     @Expose
     public String connectionName;
 
@@ -66,7 +66,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Connection Type.
      * Connection type.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public AndroidWorkProfileVpnConnectionType connectionType;
 
@@ -74,7 +74,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Custom Data.
      * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      */
-    @SerializedName("customData")
+    @SerializedName(value = "customData", alternate = {"CustomData"})
     @Expose
     public java.util.List<KeyValue> customData;
 
@@ -82,7 +82,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Custom Key Value Data.
      * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      */
-    @SerializedName("customKeyValueData")
+    @SerializedName(value = "customKeyValueData", alternate = {"CustomKeyValueData"})
     @Expose
     public java.util.List<KeyValuePair> customKeyValueData;
 
@@ -90,7 +90,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Fingerprint.
      * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
      */
-    @SerializedName("fingerprint")
+    @SerializedName(value = "fingerprint", alternate = {"Fingerprint"})
     @Expose
     public String fingerprint;
 
@@ -98,7 +98,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Microsoft Tunnel Site Id.
      * Microsoft Tunnel site ID.
      */
-    @SerializedName("microsoftTunnelSiteId")
+    @SerializedName(value = "microsoftTunnelSiteId", alternate = {"MicrosoftTunnelSiteId"})
     @Expose
     public String microsoftTunnelSiteId;
 
@@ -106,7 +106,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Proxy Server.
      * Proxy server.
      */
-    @SerializedName("proxyServer")
+    @SerializedName(value = "proxyServer", alternate = {"ProxyServer"})
     @Expose
     public VpnProxyServer proxyServer;
 
@@ -114,7 +114,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Realm.
      * Realm when connection type is set to Pulse Secure.
      */
-    @SerializedName("realm")
+    @SerializedName(value = "realm", alternate = {"Realm"})
     @Expose
     public String realm;
 
@@ -122,7 +122,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Role.
      * Role when connection type is set to Pulse Secure.
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public String role;
 
@@ -130,7 +130,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Servers.
      * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("servers")
+    @SerializedName(value = "servers", alternate = {"Servers"})
     @Expose
     public java.util.List<VpnServer> servers;
 
@@ -138,7 +138,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Targeted Mobile Apps.
      * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("targetedMobileApps")
+    @SerializedName(value = "targetedMobileApps", alternate = {"TargetedMobileApps"})
     @Expose
     public java.util.List<AppListItem> targetedMobileApps;
 
@@ -146,7 +146,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Targeted Package Ids.
      * Targeted App package IDs.
      */
-    @SerializedName("targetedPackageIds")
+    @SerializedName(value = "targetedPackageIds", alternate = {"TargetedPackageIds"})
     @Expose
     public java.util.List<String> targetedPackageIds;
 
@@ -154,7 +154,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public AndroidWorkProfileCertificateProfileBase identityCertificate;
 

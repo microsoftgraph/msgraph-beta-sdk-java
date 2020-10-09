@@ -36,7 +36,7 @@ public class DetectedSensitiveContentWrapper implements IJsonBackedObject {
      * The Classification.
      * 
      */
-    @SerializedName("classification")
+    @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
     public java.util.List<DetectedSensitiveContent> classification;
 

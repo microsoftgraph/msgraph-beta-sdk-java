@@ -27,7 +27,7 @@ public class ClassificationJobResponse extends JobResponseBase implements IJsonB
      * The Result.
      * 
      */
-    @SerializedName("result")
+    @SerializedName(value = "result", alternate = {"Result"})
     @Expose
     public DetectedSensitiveContentWrapper result;
 

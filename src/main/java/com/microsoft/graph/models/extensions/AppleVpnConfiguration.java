@@ -34,7 +34,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Authentication Method.
      * Authentication method for this VPN connection.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public VpnAuthenticationMethod authenticationMethod;
 
@@ -42,7 +42,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Connection Name.
      * Connection name displayed to the user.
      */
-    @SerializedName("connectionName")
+    @SerializedName(value = "connectionName", alternate = {"ConnectionName"})
     @Expose
     public String connectionName;
 
@@ -50,7 +50,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Connection Type.
      * Connection type.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public AppleVpnConnectionType connectionType;
 
@@ -58,7 +58,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Custom Data.
      * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      */
-    @SerializedName("customData")
+    @SerializedName(value = "customData", alternate = {"CustomData"})
     @Expose
     public java.util.List<KeyValue> customData;
 
@@ -66,7 +66,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Custom Key Value Data.
      * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      */
-    @SerializedName("customKeyValueData")
+    @SerializedName(value = "customKeyValueData", alternate = {"CustomKeyValueData"})
     @Expose
     public java.util.List<KeyValuePair> customKeyValueData;
 
@@ -74,7 +74,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Disable On Demand User Override.
      * Toggle to prevent user from disabling automatic VPN in the Settings app
      */
-    @SerializedName("disableOnDemandUserOverride")
+    @SerializedName(value = "disableOnDemandUserOverride", alternate = {"DisableOnDemandUserOverride"})
     @Expose
     public Boolean disableOnDemandUserOverride;
 
@@ -82,7 +82,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Enable Per App.
      * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
      */
-    @SerializedName("enablePerApp")
+    @SerializedName(value = "enablePerApp", alternate = {"EnablePerApp"})
     @Expose
     public Boolean enablePerApp;
 
@@ -90,7 +90,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Enable Split Tunneling.
      * Send all network traffic through VPN.
      */
-    @SerializedName("enableSplitTunneling")
+    @SerializedName(value = "enableSplitTunneling", alternate = {"EnableSplitTunneling"})
     @Expose
     public Boolean enableSplitTunneling;
 
@@ -98,7 +98,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Excluded Domains.
      * Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
      */
-    @SerializedName("excludedDomains")
+    @SerializedName(value = "excludedDomains", alternate = {"ExcludedDomains"})
     @Expose
     public java.util.List<String> excludedDomains;
 
@@ -106,7 +106,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Identifier.
      * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
      */
-    @SerializedName("identifier")
+    @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
     public String identifier;
 
@@ -114,7 +114,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Login Group Or Domain.
      * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
      */
-    @SerializedName("loginGroupOrDomain")
+    @SerializedName(value = "loginGroupOrDomain", alternate = {"LoginGroupOrDomain"})
     @Expose
     public String loginGroupOrDomain;
 
@@ -122,7 +122,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The On Demand Rules.
      * On-Demand Rules. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("onDemandRules")
+    @SerializedName(value = "onDemandRules", alternate = {"OnDemandRules"})
     @Expose
     public java.util.List<VpnOnDemandRule> onDemandRules;
 
@@ -130,7 +130,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Opt In To Device Id Sharing.
      * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
      */
-    @SerializedName("optInToDeviceIdSharing")
+    @SerializedName(value = "optInToDeviceIdSharing", alternate = {"OptInToDeviceIdSharing"})
     @Expose
     public Boolean optInToDeviceIdSharing;
 
@@ -138,7 +138,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Provider Type.
      * Provider type for per-app VPN.
      */
-    @SerializedName("providerType")
+    @SerializedName(value = "providerType", alternate = {"ProviderType"})
     @Expose
     public VpnProviderType providerType;
 
@@ -146,7 +146,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Proxy Server.
      * Proxy Server.
      */
-    @SerializedName("proxyServer")
+    @SerializedName(value = "proxyServer", alternate = {"ProxyServer"})
     @Expose
     public VpnProxyServer proxyServer;
 
@@ -154,7 +154,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Realm.
      * Realm when connection type is set to Pulse Secure.
      */
-    @SerializedName("realm")
+    @SerializedName(value = "realm", alternate = {"Realm"})
     @Expose
     public String realm;
 
@@ -162,7 +162,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Role.
      * Role when connection type is set to Pulse Secure.
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public String role;
 
@@ -170,7 +170,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Safari Domains.
      * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
      */
-    @SerializedName("safariDomains")
+    @SerializedName(value = "safariDomains", alternate = {"SafariDomains"})
     @Expose
     public java.util.List<String> safariDomains;
 
@@ -178,7 +178,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
      * The Server.
      * VPN Server on the network. Make sure end users can access this network location.
      */
-    @SerializedName("server")
+    @SerializedName(value = "server", alternate = {"Server"})
     @Expose
     public VpnServer server;
 

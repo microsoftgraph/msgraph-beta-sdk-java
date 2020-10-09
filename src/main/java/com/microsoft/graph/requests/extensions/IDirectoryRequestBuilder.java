@@ -48,6 +48,18 @@ public interface IDirectoryRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectRequestBuilder deletedItems(final String id);
 
+    IUserCollectionRequestBuilder deletedItemsAsUser();
+
+    IUserRequestBuilder deletedItemsAsUser(final String id);
+
+    IGroupCollectionRequestBuilder deletedItemsAsGroup();
+
+    IGroupRequestBuilder deletedItemsAsGroup(final String id);
+
+    IApplicationCollectionRequestBuilder deletedItemsAsApplication();
+
+    IApplicationRequestBuilder deletedItemsAsApplication(final String id);
+
     IFeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies();
 
     IFeatureRolloutPolicyRequestBuilder featureRolloutPolicies(final String id);

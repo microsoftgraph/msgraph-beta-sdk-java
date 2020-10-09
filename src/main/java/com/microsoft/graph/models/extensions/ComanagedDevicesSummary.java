@@ -35,7 +35,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Compliance Policy Count.
      * Number of devices with CompliancePolicy swung-over. This property is read-only.
      */
-    @SerializedName("compliancePolicyCount")
+    @SerializedName(value = "compliancePolicyCount", alternate = {"CompliancePolicyCount"})
     @Expose
     public Integer compliancePolicyCount;
 
@@ -43,7 +43,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Configuration Settings Count.
      * Number of devices with ConfigurationSettings swung-over. This property is read-only.
      */
-    @SerializedName("configurationSettingsCount")
+    @SerializedName(value = "configurationSettingsCount", alternate = {"ConfigurationSettingsCount"})
     @Expose
     public Integer configurationSettingsCount;
 
@@ -51,7 +51,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Endpoint Protection Count.
      * Number of devices with EndpointProtection swung-over. This property is read-only.
      */
-    @SerializedName("endpointProtectionCount")
+    @SerializedName(value = "endpointProtectionCount", alternate = {"EndpointProtectionCount"})
     @Expose
     public Integer endpointProtectionCount;
 
@@ -59,7 +59,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Inventory Count.
      * Number of devices with Inventory swung-over. This property is read-only.
      */
-    @SerializedName("inventoryCount")
+    @SerializedName(value = "inventoryCount", alternate = {"InventoryCount"})
     @Expose
     public Integer inventoryCount;
 
@@ -67,7 +67,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Modern Apps Count.
      * Number of devices with ModernApps swung-over. This property is read-only.
      */
-    @SerializedName("modernAppsCount")
+    @SerializedName(value = "modernAppsCount", alternate = {"ModernAppsCount"})
     @Expose
     public Integer modernAppsCount;
 
@@ -75,7 +75,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Office Apps Count.
      * Number of devices with OfficeApps swung-over. This property is read-only.
      */
-    @SerializedName("officeAppsCount")
+    @SerializedName(value = "officeAppsCount", alternate = {"OfficeAppsCount"})
     @Expose
     public Integer officeAppsCount;
 
@@ -83,7 +83,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Resource Access Count.
      * Number of devices with ResourceAccess swung-over. This property is read-only.
      */
-    @SerializedName("resourceAccessCount")
+    @SerializedName(value = "resourceAccessCount", alternate = {"ResourceAccessCount"})
     @Expose
     public Integer resourceAccessCount;
 
@@ -91,7 +91,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Total Comanaged Count.
      * Number of Co-Managed Devices. This property is read-only.
      */
-    @SerializedName("totalComanagedCount")
+    @SerializedName(value = "totalComanagedCount", alternate = {"TotalComanagedCount"})
     @Expose
     public Integer totalComanagedCount;
 
@@ -99,7 +99,7 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
      * The Windows Update For Business Count.
      * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
      */
-    @SerializedName("windowsUpdateForBusinessCount")
+    @SerializedName(value = "windowsUpdateForBusinessCount", alternate = {"WindowsUpdateForBusinessCount"})
     @Expose
     public Integer windowsUpdateForBusinessCount;
 

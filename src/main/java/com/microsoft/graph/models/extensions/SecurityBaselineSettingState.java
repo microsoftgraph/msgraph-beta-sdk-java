@@ -29,7 +29,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Contributing Policies.
      * The policies that contribute to this setting instance
      */
-    @SerializedName("contributingPolicies")
+    @SerializedName(value = "contributingPolicies", alternate = {"ContributingPolicies"})
     @Expose
     public java.util.List<SecurityBaselineContributingPolicy> contributingPolicies;
 
@@ -37,7 +37,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Error Code.
      * The error code if the setting is in error state
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -45,7 +45,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Setting Category Id.
      * The setting category id which this setting belongs to
      */
-    @SerializedName("settingCategoryId")
+    @SerializedName(value = "settingCategoryId", alternate = {"SettingCategoryId"})
     @Expose
     public String settingCategoryId;
 
@@ -53,7 +53,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Setting Category Name.
      * The setting category name which this setting belongs to
      */
-    @SerializedName("settingCategoryName")
+    @SerializedName(value = "settingCategoryName", alternate = {"SettingCategoryName"})
     @Expose
     public String settingCategoryName;
 
@@ -61,7 +61,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Setting Id.
      * The setting id guid
      */
-    @SerializedName("settingId")
+    @SerializedName(value = "settingId", alternate = {"SettingId"})
     @Expose
     public String settingId;
 
@@ -69,7 +69,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Setting Name.
      * The setting name that is being reported
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -77,7 +77,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The Source Policies.
      * The policies that contribute to this setting instance
      */
-    @SerializedName("sourcePolicies")
+    @SerializedName(value = "sourcePolicies", alternate = {"SourcePolicies"})
     @Expose
     public java.util.List<SettingSource> sourcePolicies;
 
@@ -85,7 +85,7 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
      * The State.
      * The compliance state of the security baseline setting
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public SecurityBaselineComplianceState state;
 

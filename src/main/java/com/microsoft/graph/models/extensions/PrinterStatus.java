@@ -37,7 +37,7 @@ public class PrinterStatus implements IJsonBackedObject {
      * The Processing State.
      * 
      */
-    @SerializedName("processingState")
+    @SerializedName(value = "processingState", alternate = {"ProcessingState"})
     @Expose
     public PrinterProcessingState processingState;
 
@@ -45,7 +45,7 @@ public class PrinterStatus implements IJsonBackedObject {
      * The Processing State Description.
      * 
      */
-    @SerializedName("processingStateDescription")
+    @SerializedName(value = "processingStateDescription", alternate = {"ProcessingStateDescription"})
     @Expose
     public String processingStateDescription;
 
@@ -53,7 +53,7 @@ public class PrinterStatus implements IJsonBackedObject {
      * The Processing State Reasons.
      * 
      */
-    @SerializedName("processingStateReasons")
+    @SerializedName(value = "processingStateReasons", alternate = {"ProcessingStateReasons"})
     @Expose
     public java.util.List<PrinterProcessingStateReason> processingStateReasons;
 

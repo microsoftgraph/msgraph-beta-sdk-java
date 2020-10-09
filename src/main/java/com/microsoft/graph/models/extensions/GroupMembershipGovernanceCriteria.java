@@ -26,7 +26,7 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
      * The Group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 

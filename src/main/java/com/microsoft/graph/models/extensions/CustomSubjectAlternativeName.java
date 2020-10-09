@@ -36,7 +36,7 @@ public class CustomSubjectAlternativeName implements IJsonBackedObject {
      * The Name.
      * Custom SAN Name
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -44,7 +44,7 @@ public class CustomSubjectAlternativeName implements IJsonBackedObject {
      * The San Type.
      * Custom SAN Type.
      */
-    @SerializedName("sanType")
+    @SerializedName(value = "sanType", alternate = {"SanType"})
     @Expose
     public EnumSet<SubjectAlternativeNameType> sanType;
 

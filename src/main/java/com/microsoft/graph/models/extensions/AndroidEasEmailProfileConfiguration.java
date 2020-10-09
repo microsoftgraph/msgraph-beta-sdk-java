@@ -33,7 +33,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Account Name.
      * Exchange ActiveSync account name, displayed to users as name of EAS (this) profile.
      */
-    @SerializedName("accountName")
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
     public String accountName;
 
@@ -41,7 +41,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Authentication Method.
      * Authentication method for Exchange ActiveSync.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public EasAuthenticationMethod authenticationMethod;
 
@@ -49,7 +49,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Custom Domain Name.
      * Custom domain name value used while generating an email profile before installing on the device.
      */
-    @SerializedName("customDomainName")
+    @SerializedName(value = "customDomainName", alternate = {"CustomDomainName"})
     @Expose
     public String customDomainName;
 
@@ -57,7 +57,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Duration Of Email To Sync.
      * Duration of time email should be synced to.
      */
-    @SerializedName("durationOfEmailToSync")
+    @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
     public EmailSyncDuration durationOfEmailToSync;
 
@@ -65,7 +65,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Email Address Source.
      * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("emailAddressSource")
+    @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
     public UserEmailSource emailAddressSource;
 
@@ -73,7 +73,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Email Sync Schedule.
      * Email sync schedule.
      */
-    @SerializedName("emailSyncSchedule")
+    @SerializedName(value = "emailSyncSchedule", alternate = {"EmailSyncSchedule"})
     @Expose
     public EmailSyncSchedule emailSyncSchedule;
 
@@ -81,7 +81,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Host Name.
      * Exchange location (URL) that the native mail app connects to.
      */
-    @SerializedName("hostName")
+    @SerializedName(value = "hostName", alternate = {"HostName"})
     @Expose
     public String hostName;
 
@@ -89,7 +89,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Require Smime.
      * Indicates whether or not to use S/MIME certificate.
      */
-    @SerializedName("requireSmime")
+    @SerializedName(value = "requireSmime", alternate = {"RequireSmime"})
     @Expose
     public Boolean requireSmime;
 
@@ -97,7 +97,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Require Ssl.
      * Indicates whether or not to use SSL.
      */
-    @SerializedName("requireSsl")
+    @SerializedName(value = "requireSsl", alternate = {"RequireSsl"})
     @Expose
     public Boolean requireSsl;
 
@@ -105,7 +105,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Sync Calendar.
      * Toggles syncing the calendar. If set to false calendar is turned off on the device.
      */
-    @SerializedName("syncCalendar")
+    @SerializedName(value = "syncCalendar", alternate = {"SyncCalendar"})
     @Expose
     public Boolean syncCalendar;
 
@@ -113,7 +113,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Sync Contacts.
      * Toggles syncing contacts. If set to false contacts are turned off on the device.
      */
-    @SerializedName("syncContacts")
+    @SerializedName(value = "syncContacts", alternate = {"SyncContacts"})
     @Expose
     public Boolean syncContacts;
 
@@ -121,7 +121,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Sync Notes.
      * Toggles syncing notes. If set to false notes are turned off on the device.
      */
-    @SerializedName("syncNotes")
+    @SerializedName(value = "syncNotes", alternate = {"SyncNotes"})
     @Expose
     public Boolean syncNotes;
 
@@ -129,7 +129,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Sync Tasks.
      * Toggles syncing tasks. If set to false tasks are turned off on the device.
      */
-    @SerializedName("syncTasks")
+    @SerializedName(value = "syncTasks", alternate = {"SyncTasks"})
     @Expose
     public Boolean syncTasks;
 
@@ -137,7 +137,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The User Domain Name Source.
      * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("userDomainNameSource")
+    @SerializedName(value = "userDomainNameSource", alternate = {"UserDomainNameSource"})
     @Expose
     public DomainNameSource userDomainNameSource;
 
@@ -145,7 +145,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Username Source.
      * Username attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("usernameSource")
+    @SerializedName(value = "usernameSource", alternate = {"UsernameSource"})
     @Expose
     public AndroidUsernameSource usernameSource;
 
@@ -153,7 +153,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Identity Certificate.
      * Identity certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public AndroidCertificateProfileBase identityCertificate;
 
@@ -161,7 +161,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The Smime Signing Certificate.
      * S/MIME signing certificate.
      */
-    @SerializedName("smimeSigningCertificate")
+    @SerializedName(value = "smimeSigningCertificate", alternate = {"SmimeSigningCertificate"})
     @Expose
     public AndroidCertificateProfileBase smimeSigningCertificate;
 

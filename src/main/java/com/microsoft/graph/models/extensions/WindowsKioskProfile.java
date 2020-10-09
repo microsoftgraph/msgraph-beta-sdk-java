@@ -37,7 +37,7 @@ public class WindowsKioskProfile implements IJsonBackedObject {
      * The App Configuration.
      * The App configuration that will be used for this kiosk configuration.
      */
-    @SerializedName("appConfiguration")
+    @SerializedName(value = "appConfiguration", alternate = {"AppConfiguration"})
     @Expose
     public WindowsKioskAppConfiguration appConfiguration;
 
@@ -45,7 +45,7 @@ public class WindowsKioskProfile implements IJsonBackedObject {
      * The Profile Id.
      * Key of the entity.
      */
-    @SerializedName("profileId")
+    @SerializedName(value = "profileId", alternate = {"ProfileId"})
     @Expose
     public String profileId;
 
@@ -53,7 +53,7 @@ public class WindowsKioskProfile implements IJsonBackedObject {
      * The Profile Name.
      * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      */
-    @SerializedName("profileName")
+    @SerializedName(value = "profileName", alternate = {"ProfileName"})
     @Expose
     public String profileName;
 
@@ -61,7 +61,7 @@ public class WindowsKioskProfile implements IJsonBackedObject {
      * The User Accounts Configuration.
      * The user accounts that will be locked to this kiosk configuration. This collection can contain a maximum of 100 elements.
      */
-    @SerializedName("userAccountsConfiguration")
+    @SerializedName(value = "userAccountsConfiguration", alternate = {"UserAccountsConfiguration"})
     @Expose
     public java.util.List<WindowsKioskUser> userAccountsConfiguration;
 

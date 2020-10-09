@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
      * The Created Date Time.
      * The date the custom baseline was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -35,7 +35,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
      * The Display Name.
      * The name of the user experience analytics baseline.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
      * The Is Built In.
      * Signifies if the current baseline is the commercial median baseline or a custom baseline.
      */
-    @SerializedName("isBuiltIn")
+    @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
     public Boolean isBuiltIn;
 
@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
      * The Best Practices Metrics.
      * The user experience analytics best practices metrics.
      */
-    @SerializedName("bestPracticesMetrics")
+    @SerializedName(value = "bestPracticesMetrics", alternate = {"BestPracticesMetrics"})
     @Expose
     public UserExperienceAnalyticsCategory bestPracticesMetrics;
 
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
      * The Device Boot Performance Metrics.
      * The user experience analytics device boot performance metrics.
      */
-    @SerializedName("deviceBootPerformanceMetrics")
+    @SerializedName(value = "deviceBootPerformanceMetrics", alternate = {"DeviceBootPerformanceMetrics"})
     @Expose
     public UserExperienceAnalyticsCategory deviceBootPerformanceMetrics;
 
@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
      * The Reboot Analytics Metrics.
      * The user experience analytics reboot analytics metrics.
      */
-    @SerializedName("rebootAnalyticsMetrics")
+    @SerializedName(value = "rebootAnalyticsMetrics", alternate = {"RebootAnalyticsMetrics"})
     @Expose
     public UserExperienceAnalyticsCategory rebootAnalyticsMetrics;
 

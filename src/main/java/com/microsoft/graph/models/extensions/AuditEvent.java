@@ -28,7 +28,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Activity.
      * Friendly name of the activity.
      */
-    @SerializedName("activity")
+    @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
     public String activity;
 
@@ -36,7 +36,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Activity Date Time.
      * The date time in UTC when the activity was performed.
      */
-    @SerializedName("activityDateTime")
+    @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
     public java.util.Calendar activityDateTime;
 
@@ -44,7 +44,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Activity Operation Type.
      * The HTTP operation type of the activity.
      */
-    @SerializedName("activityOperationType")
+    @SerializedName(value = "activityOperationType", alternate = {"ActivityOperationType"})
     @Expose
     public String activityOperationType;
 
@@ -52,7 +52,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Activity Result.
      * The result of the activity.
      */
-    @SerializedName("activityResult")
+    @SerializedName(value = "activityResult", alternate = {"ActivityResult"})
     @Expose
     public String activityResult;
 
@@ -60,7 +60,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Activity Type.
      * The type of activity that was being performed.
      */
-    @SerializedName("activityType")
+    @SerializedName(value = "activityType", alternate = {"ActivityType"})
     @Expose
     public String activityType;
 
@@ -68,7 +68,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Actor.
      * AAD user and application that are associated with the audit event.
      */
-    @SerializedName("actor")
+    @SerializedName(value = "actor", alternate = {"Actor"})
     @Expose
     public AuditActor actor;
 
@@ -76,7 +76,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Category.
      * Audit category.
      */
-    @SerializedName("category")
+    @SerializedName(value = "category", alternate = {"Category"})
     @Expose
     public String category;
 
@@ -84,7 +84,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Component Name.
      * Component name.
      */
-    @SerializedName("componentName")
+    @SerializedName(value = "componentName", alternate = {"ComponentName"})
     @Expose
     public String componentName;
 
@@ -92,7 +92,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Correlation Id.
      * The client request Id that is used to correlate activity within the system.
      */
-    @SerializedName("correlationId")
+    @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
     public java.util.UUID correlationId;
 
@@ -100,7 +100,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Event display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -108,7 +108,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
      * The Resources.
      * Resources being modified.
      */
-    @SerializedName("resources")
+    @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
     public java.util.List<AuditResource> resources;
 

@@ -36,7 +36,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Completed Job Count.
      * 
      */
-    @SerializedName("completedJobCount")
+    @SerializedName(value = "completedJobCount", alternate = {"CompletedJobCount"})
     @Expose
     public Integer completedJobCount;
 
@@ -44,7 +44,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Incomplete Job Count.
      * 
      */
-    @SerializedName("incompleteJobCount")
+    @SerializedName(value = "incompleteJobCount", alternate = {"IncompleteJobCount"})
     @Expose
     public Integer incompleteJobCount;
 
@@ -52,7 +52,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Printer Display Name.
      * 
      */
-    @SerializedName("printerDisplayName")
+    @SerializedName(value = "printerDisplayName", alternate = {"PrinterDisplayName"})
     @Expose
     public String printerDisplayName;
 
@@ -60,7 +60,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Printer Id.
      * 
      */
-    @SerializedName("printerId")
+    @SerializedName(value = "printerId", alternate = {"PrinterId"})
     @Expose
     public String printerId;
 
@@ -68,7 +68,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Printer Manufacturer.
      * 
      */
-    @SerializedName("printerManufacturer")
+    @SerializedName(value = "printerManufacturer", alternate = {"PrinterManufacturer"})
     @Expose
     public String printerManufacturer;
 
@@ -76,7 +76,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Printer Model.
      * 
      */
-    @SerializedName("printerModel")
+    @SerializedName(value = "printerModel", alternate = {"PrinterModel"})
     @Expose
     public String printerModel;
 
@@ -84,7 +84,7 @@ public class PrinterUsageSummary implements IJsonBackedObject {
      * The Printer.
      * 
      */
-    @SerializedName("printer")
+    @SerializedName(value = "printer", alternate = {"Printer"})
     @Expose
     public DirectoryObject printer;
 

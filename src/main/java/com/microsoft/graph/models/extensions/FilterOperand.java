@@ -35,7 +35,7 @@ public class FilterOperand implements IJsonBackedObject {
      * The Values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<String> values;
 

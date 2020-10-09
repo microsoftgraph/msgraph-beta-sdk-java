@@ -35,7 +35,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
      * The Allowed To Create Apps.
      * 
      */
-    @SerializedName("allowedToCreateApps")
+    @SerializedName(value = "allowedToCreateApps", alternate = {"AllowedToCreateApps"})
     @Expose
     public Boolean allowedToCreateApps;
 
@@ -43,7 +43,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
      * The Allowed To Create Security Groups.
      * 
      */
-    @SerializedName("allowedToCreateSecurityGroups")
+    @SerializedName(value = "allowedToCreateSecurityGroups", alternate = {"AllowedToCreateSecurityGroups"})
     @Expose
     public Boolean allowedToCreateSecurityGroups;
 
@@ -51,7 +51,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
      * The Allowed To Read Other Users.
      * 
      */
-    @SerializedName("allowedToReadOtherUsers")
+    @SerializedName(value = "allowedToReadOtherUsers", alternate = {"AllowedToReadOtherUsers"})
     @Expose
     public Boolean allowedToReadOtherUsers;
 

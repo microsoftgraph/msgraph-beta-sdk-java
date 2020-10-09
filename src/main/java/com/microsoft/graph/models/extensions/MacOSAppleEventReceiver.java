@@ -36,7 +36,7 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
      * The Allowed.
      * Allow or block this app from receiving Apple events.
      */
-    @SerializedName("allowed")
+    @SerializedName(value = "allowed", alternate = {"Allowed"})
     @Expose
     public Boolean allowed;
 
@@ -44,7 +44,7 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
      * The Code Requirement.
      * Code requirement for the app or binary that receives the Apple Event.
      */
-    @SerializedName("codeRequirement")
+    @SerializedName(value = "codeRequirement", alternate = {"CodeRequirement"})
     @Expose
     public String codeRequirement;
 
@@ -52,7 +52,7 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
      * The Identifier.
      * Bundle ID of the app or file path of the process or executable that receives the Apple Event.
      */
-    @SerializedName("identifier")
+    @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
     public String identifier;
 
@@ -60,7 +60,7 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
      * The Identifier Type.
      * Use bundle ID for an app or path for a process or executable that receives the Apple Event.
      */
-    @SerializedName("identifierType")
+    @SerializedName(value = "identifierType", alternate = {"IdentifierType"})
     @Expose
     public MacOSProcessIdentifierType identifierType;
 

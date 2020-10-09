@@ -22,7 +22,7 @@ public class AndroidForWorkSettingsRequestSignupUrlBody {
      * The host Name.
      * 
      */
-    @SerializedName("hostName")
+    @SerializedName(value = "hostName", alternate = {"HostName"})
     @Expose
     public String hostName;
 

@@ -34,7 +34,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
      * The Master Categories.
      * A list of categories defined for the user.
      */
-    @SerializedName("masterCategories")
+    @SerializedName(value = "masterCategories", alternate = {"MasterCategories"})
     @Expose
     public OutlookCategoryCollectionPage masterCategories;
 
@@ -42,7 +42,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
      * The Task Folders.
      * 
      */
-    @SerializedName("taskFolders")
+    @SerializedName(value = "taskFolders", alternate = {"TaskFolders"})
     @Expose
     public OutlookTaskFolderCollectionPage taskFolders;
 
@@ -50,7 +50,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
      * The Task Groups.
      * 
      */
-    @SerializedName("taskGroups")
+    @SerializedName(value = "taskGroups", alternate = {"TaskGroups"})
     @Expose
     public OutlookTaskGroupCollectionPage taskGroups;
 
@@ -58,7 +58,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
      * The Tasks.
      * 
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public OutlookTaskCollectionPage tasks;
 

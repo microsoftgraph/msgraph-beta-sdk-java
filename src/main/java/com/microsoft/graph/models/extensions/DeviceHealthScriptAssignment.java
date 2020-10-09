@@ -28,7 +28,7 @@ public class DeviceHealthScriptAssignment extends Entity implements IJsonBackedO
      * The Run Remediation Script.
      * Determine whether we want to run detection script only or run both detection script and remediation script
      */
-    @SerializedName("runRemediationScript")
+    @SerializedName(value = "runRemediationScript", alternate = {"RunRemediationScript"})
     @Expose
     public Boolean runRemediationScript;
 
@@ -36,7 +36,7 @@ public class DeviceHealthScriptAssignment extends Entity implements IJsonBackedO
      * The Run Schedule.
      * Script run schedule for the target group
      */
-    @SerializedName("runSchedule")
+    @SerializedName(value = "runSchedule", alternate = {"RunSchedule"})
     @Expose
     public DeviceHealthScriptRunSchedule runSchedule;
 
@@ -44,7 +44,7 @@ public class DeviceHealthScriptAssignment extends Entity implements IJsonBackedO
      * The Target.
      * The Azure Active Directory group we are targeting the script to
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

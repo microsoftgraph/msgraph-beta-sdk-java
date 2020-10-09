@@ -32,7 +32,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Client Registration Status.
      * ClientRegistrationStatus
      */
-    @SerializedName("clientRegistrationStatus")
+    @SerializedName(value = "clientRegistrationStatus", alternate = {"ClientRegistrationStatus"})
     @Expose
     public DeviceRegistrationState clientRegistrationStatus;
 
@@ -40,7 +40,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Device Name.
      * DeviceName
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -48,7 +48,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Device Type.
      * DeviceType
      */
-    @SerializedName("deviceType")
+    @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
     public DeviceType deviceType;
 
@@ -56,7 +56,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Entity Source.
      * EntitySource
      */
-    @SerializedName("entitySource")
+    @SerializedName(value = "entitySource", alternate = {"EntitySource"})
     @Expose
     public Integer entitySource;
 
@@ -64,7 +64,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Management Agents.
      * ManagementAgents
      */
-    @SerializedName("managementAgents")
+    @SerializedName(value = "managementAgents", alternate = {"ManagementAgents"})
     @Expose
     public ManagementAgentType managementAgents;
 
@@ -72,7 +72,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Management State.
      * ManagementState
      */
-    @SerializedName("managementState")
+    @SerializedName(value = "managementState", alternate = {"ManagementState"})
     @Expose
     public ManagementState managementState;
 
@@ -80,7 +80,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Manufacturer.
      * Manufacturer
      */
-    @SerializedName("manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
@@ -88,7 +88,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Mdm Status.
      * MDMStatus
      */
-    @SerializedName("mdmStatus")
+    @SerializedName(value = "mdmStatus", alternate = {"MdmStatus"})
     @Expose
     public String mdmStatus;
 
@@ -96,7 +96,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Model.
      * Model
      */
-    @SerializedName("model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -104,7 +104,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Os Description.
      * OSDescription
      */
-    @SerializedName("osDescription")
+    @SerializedName(value = "osDescription", alternate = {"OsDescription"})
     @Expose
     public String osDescription;
 
@@ -112,7 +112,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Os Version.
      * OSVersion
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -120,7 +120,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Owner Type.
      * OwnerType
      */
-    @SerializedName("ownerType")
+    @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
     public OwnerType ownerType;
 
@@ -128,7 +128,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Reference Id.
      * ReferenceId
      */
-    @SerializedName("referenceId")
+    @SerializedName(value = "referenceId", alternate = {"ReferenceId"})
     @Expose
     public String referenceId;
 
@@ -136,7 +136,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Serial Number.
      * SerialNumber
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public String serialNumber;
 
@@ -144,7 +144,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Status.
      * ComanagementEligibleStatus
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ComanagementEligibleType status;
 
@@ -152,7 +152,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The Upn.
      * UPN
      */
-    @SerializedName("upn")
+    @SerializedName(value = "upn", alternate = {"Upn"})
     @Expose
     public String upn;
 
@@ -160,7 +160,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The User Email.
      * UserEmail
      */
-    @SerializedName("userEmail")
+    @SerializedName(value = "userEmail", alternate = {"UserEmail"})
     @Expose
     public String userEmail;
 
@@ -168,7 +168,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The User Id.
      * UserId
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -176,7 +176,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
      * The User Name.
      * UserName
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

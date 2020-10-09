@@ -36,7 +36,7 @@ public class AndroidPermissionAction implements IJsonBackedObject {
      * The Action.
      * Type of Android permission action.
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public AndroidPermissionActionType action;
 
@@ -44,7 +44,7 @@ public class AndroidPermissionAction implements IJsonBackedObject {
      * The Permission.
      * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
      */
-    @SerializedName("permission")
+    @SerializedName(value = "permission", alternate = {"Permission"})
     @Expose
     public String permission;
 

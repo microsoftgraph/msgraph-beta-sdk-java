@@ -35,7 +35,7 @@ public class DeviceKey implements IJsonBackedObject {
      * The Device Id.
      * 
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public java.util.UUID deviceId;
 
@@ -43,7 +43,7 @@ public class DeviceKey implements IJsonBackedObject {
      * The Key Material.
      * 
      */
-    @SerializedName("keyMaterial")
+    @SerializedName(value = "keyMaterial", alternate = {"KeyMaterial"})
     @Expose
     public byte[] keyMaterial;
 
@@ -51,7 +51,7 @@ public class DeviceKey implements IJsonBackedObject {
      * The Key Type.
      * 
      */
-    @SerializedName("keyType")
+    @SerializedName(value = "keyType", alternate = {"KeyType"})
     @Expose
     public String keyType;
 

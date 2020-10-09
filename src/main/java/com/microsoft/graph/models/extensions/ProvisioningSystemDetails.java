@@ -36,7 +36,7 @@ public class ProvisioningSystemDetails implements IJsonBackedObject {
      * The Details.
      * 
      */
-    @SerializedName("details")
+    @SerializedName(value = "details", alternate = {"Details"})
     @Expose
     public DetailsInfo details;
 
@@ -44,7 +44,7 @@ public class ProvisioningSystemDetails implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -52,7 +52,7 @@ public class ProvisioningSystemDetails implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

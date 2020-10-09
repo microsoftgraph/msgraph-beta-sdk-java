@@ -30,7 +30,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Created Date Time.
      * The date time that the profile was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -38,7 +38,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Description.
      * The description of the profile which is specified by the user.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -46,7 +46,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Display Name.
      * The display name of the profile.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -54,7 +54,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Feature Update Version.
      * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
      */
-    @SerializedName("featureUpdateVersion")
+    @SerializedName(value = "featureUpdateVersion", alternate = {"FeatureUpdateVersion"})
     @Expose
     public String featureUpdateVersion;
 
@@ -62,7 +62,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Last Modified Date Time.
      * The date time that the profile was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -70,7 +70,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Feature Update entity.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -78,7 +78,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Assignments.
      * The list of group assignments of the profile.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public WindowsFeatureUpdateProfileAssignmentCollectionPage assignments;
 
@@ -86,7 +86,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Device Update States.
      * The list of device states this profile targeted to
      */
-    @SerializedName("deviceUpdateStates")
+    @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
     @Expose
     public WindowsUpdateStateCollectionPage deviceUpdateStates;
 

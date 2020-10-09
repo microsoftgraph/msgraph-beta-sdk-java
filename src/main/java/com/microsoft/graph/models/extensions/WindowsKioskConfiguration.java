@@ -28,7 +28,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Edge Kiosk Enable Public Browsing.
      * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
      */
-    @SerializedName("edgeKioskEnablePublicBrowsing")
+    @SerializedName(value = "edgeKioskEnablePublicBrowsing", alternate = {"EdgeKioskEnablePublicBrowsing"})
     @Expose
     public Boolean edgeKioskEnablePublicBrowsing;
 
@@ -36,7 +36,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Blocked Url Exceptions.
      * Specify URLs that the kiosk browser is allowed to navigate to
      */
-    @SerializedName("kioskBrowserBlockedUrlExceptions")
+    @SerializedName(value = "kioskBrowserBlockedUrlExceptions", alternate = {"KioskBrowserBlockedUrlExceptions"})
     @Expose
     public java.util.List<String> kioskBrowserBlockedUrlExceptions;
 
@@ -44,7 +44,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Blocked URLs.
      * Specify URLs that the kiosk browsers should not navigate to
      */
-    @SerializedName("kioskBrowserBlockedURLs")
+    @SerializedName(value = "kioskBrowserBlockedURLs", alternate = {"KioskBrowserBlockedURLs"})
     @Expose
     public java.util.List<String> kioskBrowserBlockedURLs;
 
@@ -52,7 +52,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Default Url.
      * Specify the default URL the browser should navigate to on launch.
      */
-    @SerializedName("kioskBrowserDefaultUrl")
+    @SerializedName(value = "kioskBrowserDefaultUrl", alternate = {"KioskBrowserDefaultUrl"})
     @Expose
     public String kioskBrowserDefaultUrl;
 
@@ -60,7 +60,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Enable End Session Button.
      * Enable the kiosk browser's end session button. By default, the end session button is disabled.
      */
-    @SerializedName("kioskBrowserEnableEndSessionButton")
+    @SerializedName(value = "kioskBrowserEnableEndSessionButton", alternate = {"KioskBrowserEnableEndSessionButton"})
     @Expose
     public Boolean kioskBrowserEnableEndSessionButton;
 
@@ -68,7 +68,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Enable Home Button.
      * Enable the kiosk browser's home button. By default, the home button is disabled.
      */
-    @SerializedName("kioskBrowserEnableHomeButton")
+    @SerializedName(value = "kioskBrowserEnableHomeButton", alternate = {"KioskBrowserEnableHomeButton"})
     @Expose
     public Boolean kioskBrowserEnableHomeButton;
 
@@ -76,7 +76,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Enable Navigation Buttons.
      * Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
      */
-    @SerializedName("kioskBrowserEnableNavigationButtons")
+    @SerializedName(value = "kioskBrowserEnableNavigationButtons", alternate = {"KioskBrowserEnableNavigationButtons"})
     @Expose
     public Boolean kioskBrowserEnableNavigationButtons;
 
@@ -84,7 +84,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Browser Restart On Idle Time In Minutes.
      * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
      */
-    @SerializedName("kioskBrowserRestartOnIdleTimeInMinutes")
+    @SerializedName(value = "kioskBrowserRestartOnIdleTimeInMinutes", alternate = {"KioskBrowserRestartOnIdleTimeInMinutes"})
     @Expose
     public Integer kioskBrowserRestartOnIdleTimeInMinutes;
 
@@ -92,7 +92,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Kiosk Profiles.
      * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      */
-    @SerializedName("kioskProfiles")
+    @SerializedName(value = "kioskProfiles", alternate = {"KioskProfiles"})
     @Expose
     public java.util.List<WindowsKioskProfile> kioskProfiles;
 
@@ -100,7 +100,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
      * The Windows Kiosk Force Update Schedule.
      * force update schedule for Kiosk devices.
      */
-    @SerializedName("windowsKioskForceUpdateSchedule")
+    @SerializedName(value = "windowsKioskForceUpdateSchedule", alternate = {"WindowsKioskForceUpdateSchedule"})
     @Expose
     public WindowsKioskForceUpdateSchedule windowsKioskForceUpdateSchedule;
 

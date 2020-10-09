@@ -26,7 +26,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * The Target Group Id.
      * The ID of the AAD group in which the app provisioning configuration is being targeted.
      */
-    @SerializedName("targetGroupId")
+    @SerializedName(value = "targetGroupId", alternate = {"TargetGroupId"})
     @Expose
     public String targetGroupId;
 

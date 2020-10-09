@@ -26,7 +26,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
      * The Categories.
      * 
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public java.util.List<String> categories;
 
@@ -34,7 +34,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
      * The Collaboration Tags.
      * 
      */
-    @SerializedName("collaborationTags")
+    @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
     public java.util.List<String> collaborationTags;
 
@@ -42,7 +42,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -50,7 +50,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -58,7 +58,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

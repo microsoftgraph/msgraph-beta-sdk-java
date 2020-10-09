@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
      * The Insight Id.
      * The unique identifier of the user experience analytics insight.
      */
-    @SerializedName("insightId")
+    @SerializedName(value = "insightId", alternate = {"InsightId"})
     @Expose
     public String insightId;
 
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
      * The Severity.
      * The value of the user experience analytics insight.
      */
-    @SerializedName("severity")
+    @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
     public UserExperienceAnalyticsInsightSeverity severity;
 
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
      * The User Experience Analytics Metric Id.
      * The unique identifier of the user experience analytics insight.
      */
-    @SerializedName("userExperienceAnalyticsMetricId")
+    @SerializedName(value = "userExperienceAnalyticsMetricId", alternate = {"UserExperienceAnalyticsMetricId"})
     @Expose
     public String userExperienceAnalyticsMetricId;
 
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
      * The Values.
      * The value of the user experience analytics insight.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<UserExperienceAnalyticsInsightValue> values;
 

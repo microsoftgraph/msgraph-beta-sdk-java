@@ -35,7 +35,7 @@ public class ExtendedKeyUsage implements IJsonBackedObject {
      * The Name.
      * Extended Key Usage Name
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class ExtendedKeyUsage implements IJsonBackedObject {
      * The Object Identifier.
      * Extended Key Usage Object Identifier
      */
-    @SerializedName("objectIdentifier")
+    @SerializedName(value = "objectIdentifier", alternate = {"ObjectIdentifier"})
     @Expose
     public String objectIdentifier;
 

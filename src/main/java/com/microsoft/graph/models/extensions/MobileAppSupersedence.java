@@ -27,7 +27,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements IJso
      * The Superseded App Count.
      * The total number of apps directly or indirectly superseded by the child app.
      */
-    @SerializedName("supersededAppCount")
+    @SerializedName(value = "supersededAppCount", alternate = {"SupersededAppCount"})
     @Expose
     public Integer supersededAppCount;
 
@@ -35,7 +35,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements IJso
      * The Supersedence Type.
      * The supersedence relationship type between the parent and child apps.
      */
-    @SerializedName("supersedenceType")
+    @SerializedName(value = "supersedenceType", alternate = {"SupersedenceType"})
     @Expose
     public MobileAppSupersedenceType supersedenceType;
 
@@ -43,7 +43,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements IJso
      * The Superseding App Count.
      * The total number of apps directly or indirectly superseding the parent app.
      */
-    @SerializedName("supersedingAppCount")
+    @SerializedName(value = "supersedingAppCount", alternate = {"SupersedingAppCount"})
     @Expose
     public Integer supersedingAppCount;
 

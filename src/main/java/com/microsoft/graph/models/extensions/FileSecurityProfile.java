@@ -30,7 +30,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Activity Group Names.
      * 
      */
-    @SerializedName("activityGroupNames")
+    @SerializedName(value = "activityGroupNames", alternate = {"ActivityGroupNames"})
     @Expose
     public java.util.List<String> activityGroupNames;
 
@@ -38,7 +38,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Subscription Id.
      * 
      */
-    @SerializedName("azureSubscriptionId")
+    @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
     public String azureSubscriptionId;
 
@@ -46,7 +46,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -54,7 +54,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Certificate Thumbprint.
      * 
      */
-    @SerializedName("certificateThumbprint")
+    @SerializedName(value = "certificateThumbprint", alternate = {"CertificateThumbprint"})
     @Expose
     public String certificateThumbprint;
 
@@ -62,7 +62,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Extensions.
      * 
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public java.util.List<String> extensions;
 
@@ -70,7 +70,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The File Type.
      * 
      */
-    @SerializedName("fileType")
+    @SerializedName(value = "fileType", alternate = {"FileType"})
     @Expose
     public String fileType;
 
@@ -78,7 +78,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The First Seen Date Time.
      * 
      */
-    @SerializedName("firstSeenDateTime")
+    @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
     public java.util.Calendar firstSeenDateTime;
 
@@ -86,7 +86,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Hashes.
      * 
      */
-    @SerializedName("hashes")
+    @SerializedName(value = "hashes", alternate = {"Hashes"})
     @Expose
     public java.util.List<FileHash> hashes;
 
@@ -94,7 +94,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Last Seen Date Time.
      * 
      */
-    @SerializedName("lastSeenDateTime")
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
     public java.util.Calendar lastSeenDateTime;
 
@@ -102,7 +102,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Malware States.
      * 
      */
-    @SerializedName("malwareStates")
+    @SerializedName(value = "malwareStates", alternate = {"MalwareStates"})
     @Expose
     public java.util.List<MalwareState> malwareStates;
 
@@ -110,7 +110,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Names.
      * 
      */
-    @SerializedName("names")
+    @SerializedName(value = "names", alternate = {"Names"})
     @Expose
     public java.util.List<String> names;
 
@@ -118,7 +118,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -126,7 +126,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Size.
      * 
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Long size;
 
@@ -134,7 +134,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -142,7 +142,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 
@@ -150,7 +150,7 @@ public class FileSecurityProfile extends Entity implements IJsonBackedObject {
      * The Vulnerability States.
      * 
      */
-    @SerializedName("vulnerabilityStates")
+    @SerializedName(value = "vulnerabilityStates", alternate = {"VulnerabilityStates"})
     @Expose
     public java.util.List<VulnerabilityState> vulnerabilityStates;
 

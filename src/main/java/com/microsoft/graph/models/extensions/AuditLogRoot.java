@@ -34,7 +34,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * The Directory Audits.
      * Read-only. Nullable.
      */
-    @SerializedName("directoryAudits")
+    @SerializedName(value = "directoryAudits", alternate = {"DirectoryAudits"})
     @Expose
     public DirectoryAuditCollectionPage directoryAudits;
 
@@ -42,7 +42,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * The Directory Provisioning.
      * 
      */
-    @SerializedName("directoryProvisioning")
+    @SerializedName(value = "directoryProvisioning", alternate = {"DirectoryProvisioning"})
     @Expose
     public ProvisioningObjectSummaryCollectionPage directoryProvisioning;
 
@@ -50,7 +50,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * The Provisioning.
      * 
      */
-    @SerializedName("provisioning")
+    @SerializedName(value = "provisioning", alternate = {"Provisioning"})
     @Expose
     public ProvisioningObjectSummaryCollectionPage provisioning;
 
@@ -58,7 +58,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * The Restricted Sign Ins.
      * 
      */
-    @SerializedName("restrictedSignIns")
+    @SerializedName(value = "restrictedSignIns", alternate = {"RestrictedSignIns"})
     @Expose
     public RestrictedSignInCollectionPage restrictedSignIns;
 
@@ -66,7 +66,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * The Sign Ins.
      * Read-only. Nullable.
      */
-    @SerializedName("signIns")
+    @SerializedName(value = "signIns", alternate = {"SignIns"})
     @Expose
     public SignInCollectionPage signIns;
 

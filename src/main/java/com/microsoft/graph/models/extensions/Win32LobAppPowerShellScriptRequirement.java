@@ -28,7 +28,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * The Detection Type.
      * The detection type for script output
      */
-    @SerializedName("detectionType")
+    @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose
     public Win32LobAppPowerShellScriptDetectionType detectionType;
 
@@ -36,7 +36,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * The Display Name.
      * The unique display name for this rule
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * The Enforce Signature Check.
      * A value indicating whether signature check is enforced
      */
-    @SerializedName("enforceSignatureCheck")
+    @SerializedName(value = "enforceSignatureCheck", alternate = {"EnforceSignatureCheck"})
     @Expose
     public Boolean enforceSignatureCheck;
 
@@ -52,7 +52,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * The Run As32Bit.
      * A value indicating whether this script should run as 32-bit
      */
-    @SerializedName("runAs32Bit")
+    @SerializedName(value = "runAs32Bit", alternate = {"RunAs32Bit"})
     @Expose
     public Boolean runAs32Bit;
 
@@ -60,7 +60,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * The Run As Account.
      * Indicates the type of execution context the script runs in.
      */
-    @SerializedName("runAsAccount")
+    @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose
     public RunAsAccountType runAsAccount;
 
@@ -68,7 +68,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * The Script Content.
      * The base64 encoded script content to detect Win32 Line of Business (LoB) app
      */
-    @SerializedName("scriptContent")
+    @SerializedName(value = "scriptContent", alternate = {"ScriptContent"})
     @Expose
     public String scriptContent;
 

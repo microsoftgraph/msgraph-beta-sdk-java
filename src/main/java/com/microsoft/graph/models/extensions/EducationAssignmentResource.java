@@ -27,7 +27,7 @@ public class EducationAssignmentResource extends Entity implements IJsonBackedOb
      * The Distribute For Student Work.
      * 
      */
-    @SerializedName("distributeForStudentWork")
+    @SerializedName(value = "distributeForStudentWork", alternate = {"DistributeForStudentWork"})
     @Expose
     public Boolean distributeForStudentWork;
 
@@ -35,7 +35,7 @@ public class EducationAssignmentResource extends Entity implements IJsonBackedOb
      * The Resource.
      * 
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public EducationResource resource;
 

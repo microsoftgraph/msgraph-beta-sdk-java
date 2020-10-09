@@ -30,7 +30,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The Checkin Statuses.
      * 
      */
-    @SerializedName("checkinStatuses")
+    @SerializedName(value = "checkinStatuses", alternate = {"CheckinStatuses"})
     @Expose
     public java.util.List<OfficeClientCheckinStatus> checkinStatuses;
 
@@ -38,7 +38,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -46,7 +46,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -54,7 +54,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The Priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -62,7 +62,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The User Checkin Summary.
      * 
      */
-    @SerializedName("userCheckinSummary")
+    @SerializedName(value = "userCheckinSummary", alternate = {"UserCheckinSummary"})
     @Expose
     public OfficeUserCheckinSummary userCheckinSummary;
 
@@ -70,7 +70,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The Assignments.
      * 
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public OfficeClientConfigurationAssignmentCollectionPage assignments;
 

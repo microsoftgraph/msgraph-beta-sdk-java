@@ -37,7 +37,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Acquired By Printer.
      * 
      */
-    @SerializedName("acquiredByPrinter")
+    @SerializedName(value = "acquiredByPrinter", alternate = {"AcquiredByPrinter"})
     @Expose
     public Boolean acquiredByPrinter;
 
@@ -45,7 +45,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Acquired Date Time.
      * 
      */
-    @SerializedName("acquiredDateTime")
+    @SerializedName(value = "acquiredDateTime", alternate = {"AcquiredDateTime"})
     @Expose
     public java.util.Calendar acquiredDateTime;
 
@@ -53,7 +53,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Black And White Page Count.
      * 
      */
-    @SerializedName("blackAndWhitePageCount")
+    @SerializedName(value = "blackAndWhitePageCount", alternate = {"BlackAndWhitePageCount"})
     @Expose
     public Integer blackAndWhitePageCount;
 
@@ -61,7 +61,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Color Page Count.
      * 
      */
-    @SerializedName("colorPageCount")
+    @SerializedName(value = "colorPageCount", alternate = {"ColorPageCount"})
     @Expose
     public Integer colorPageCount;
 
@@ -69,7 +69,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Completion Date Time.
      * 
      */
-    @SerializedName("completionDateTime")
+    @SerializedName(value = "completionDateTime", alternate = {"CompletionDateTime"})
     @Expose
     public java.util.Calendar completionDateTime;
 
@@ -77,7 +77,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Copies Printed.
      * 
      */
-    @SerializedName("copiesPrinted")
+    @SerializedName(value = "copiesPrinted", alternate = {"CopiesPrinted"})
     @Expose
     public Integer copiesPrinted;
 
@@ -85,7 +85,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public UserIdentity createdBy;
 
@@ -93,7 +93,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -101,7 +101,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Duplex Page Count.
      * 
      */
-    @SerializedName("duplexPageCount")
+    @SerializedName(value = "duplexPageCount", alternate = {"DuplexPageCount"})
     @Expose
     public Integer duplexPageCount;
 
@@ -109,7 +109,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -117,7 +117,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Page Count.
      * 
      */
-    @SerializedName("pageCount")
+    @SerializedName(value = "pageCount", alternate = {"PageCount"})
     @Expose
     public Integer pageCount;
 
@@ -125,7 +125,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Printer Id.
      * 
      */
-    @SerializedName("printerId")
+    @SerializedName(value = "printerId", alternate = {"PrinterId"})
     @Expose
     public String printerId;
 
@@ -133,7 +133,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Processing State.
      * 
      */
-    @SerializedName("processingState")
+    @SerializedName(value = "processingState", alternate = {"ProcessingState"})
     @Expose
     public PrintJobProcessingState processingState;
 
@@ -141,7 +141,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
      * The Simplex Page Count.
      * 
      */
-    @SerializedName("simplexPageCount")
+    @SerializedName(value = "simplexPageCount", alternate = {"SimplexPageCount"})
     @Expose
     public Integer simplexPageCount;
 

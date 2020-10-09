@@ -27,7 +27,7 @@ public class AttributeMappingFunctionSchema extends Entity implements IJsonBacke
      * The Parameters.
      * 
      */
-    @SerializedName("parameters")
+    @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
     public java.util.List<AttributeMappingParameterSchema> parameters;
 

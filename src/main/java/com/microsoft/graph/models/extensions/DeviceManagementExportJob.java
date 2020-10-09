@@ -28,7 +28,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Expiration Date Time.
      * Time that the exported report expires
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -36,7 +36,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Filter.
      * Filters applied on the report
      */
-    @SerializedName("filter")
+    @SerializedName(value = "filter", alternate = {"Filter"})
     @Expose
     public String filter;
 
@@ -44,7 +44,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Format.
      * Format of the exported report
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public DeviceManagementReportFileFormat format;
 
@@ -52,7 +52,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Report Name.
      * Name of the report
      */
-    @SerializedName("reportName")
+    @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose
     public String reportName;
 
@@ -60,7 +60,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Request Date Time.
      * Time that the exported report was requested
      */
-    @SerializedName("requestDateTime")
+    @SerializedName(value = "requestDateTime", alternate = {"RequestDateTime"})
     @Expose
     public java.util.Calendar requestDateTime;
 
@@ -68,7 +68,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Select.
      * Columns selected from the report
      */
-    @SerializedName("select")
+    @SerializedName(value = "select", alternate = {"Select"})
     @Expose
     public java.util.List<String> select;
 
@@ -76,7 +76,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Snapshot Id.
      * A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
      */
-    @SerializedName("snapshotId")
+    @SerializedName(value = "snapshotId", alternate = {"SnapshotId"})
     @Expose
     public String snapshotId;
 
@@ -84,7 +84,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Status.
      * Status of the export job
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public DeviceManagementReportStatus status;
 
@@ -92,7 +92,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
      * The Url.
      * Temporary location of the exported report
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

@@ -37,7 +37,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Apply Actions.
      * 
      */
-    @SerializedName("applyActions")
+    @SerializedName(value = "applyActions", alternate = {"ApplyActions"})
     @Expose
     public java.util.List<AccessReviewApplyAction> applyActions;
 
@@ -45,7 +45,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Auto Apply Decisions Enabled.
      * 
      */
-    @SerializedName("autoApplyDecisionsEnabled")
+    @SerializedName(value = "autoApplyDecisionsEnabled", alternate = {"AutoApplyDecisionsEnabled"})
     @Expose
     public Boolean autoApplyDecisionsEnabled;
 
@@ -53,7 +53,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Default Decision.
      * 
      */
-    @SerializedName("defaultDecision")
+    @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
     public String defaultDecision;
 
@@ -61,7 +61,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Default Decision Enabled.
      * 
      */
-    @SerializedName("defaultDecisionEnabled")
+    @SerializedName(value = "defaultDecisionEnabled", alternate = {"DefaultDecisionEnabled"})
     @Expose
     public Boolean defaultDecisionEnabled;
 
@@ -69,7 +69,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Instance Duration In Days.
      * 
      */
-    @SerializedName("instanceDurationInDays")
+    @SerializedName(value = "instanceDurationInDays", alternate = {"InstanceDurationInDays"})
     @Expose
     public Integer instanceDurationInDays;
 
@@ -77,7 +77,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Justification Required On Approval.
      * 
      */
-    @SerializedName("justificationRequiredOnApproval")
+    @SerializedName(value = "justificationRequiredOnApproval", alternate = {"JustificationRequiredOnApproval"})
     @Expose
     public Boolean justificationRequiredOnApproval;
 
@@ -85,7 +85,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Mail Notifications Enabled.
      * 
      */
-    @SerializedName("mailNotificationsEnabled")
+    @SerializedName(value = "mailNotificationsEnabled", alternate = {"MailNotificationsEnabled"})
     @Expose
     public Boolean mailNotificationsEnabled;
 
@@ -93,7 +93,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Recommendations Enabled.
      * 
      */
-    @SerializedName("recommendationsEnabled")
+    @SerializedName(value = "recommendationsEnabled", alternate = {"RecommendationsEnabled"})
     @Expose
     public Boolean recommendationsEnabled;
 
@@ -101,7 +101,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Recurrence.
      * 
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public PatternedRecurrence recurrence;
 
@@ -109,7 +109,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
      * The Reminder Notifications Enabled.
      * 
      */
-    @SerializedName("reminderNotificationsEnabled")
+    @SerializedName(value = "reminderNotificationsEnabled", alternate = {"ReminderNotificationsEnabled"})
     @Expose
     public Boolean reminderNotificationsEnabled;
 

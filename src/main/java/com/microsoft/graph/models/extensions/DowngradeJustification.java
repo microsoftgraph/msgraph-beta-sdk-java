@@ -35,7 +35,7 @@ public class DowngradeJustification implements IJsonBackedObject {
      * The Is Downgrade Justified.
      * 
      */
-    @SerializedName("isDowngradeJustified")
+    @SerializedName(value = "isDowngradeJustified", alternate = {"IsDowngradeJustified"})
     @Expose
     public Boolean isDowngradeJustified;
 
@@ -43,7 +43,7 @@ public class DowngradeJustification implements IJsonBackedObject {
      * The Justification Message.
      * 
      */
-    @SerializedName("justificationMessage")
+    @SerializedName(value = "justificationMessage", alternate = {"JustificationMessage"})
     @Expose
     public String justificationMessage;
 

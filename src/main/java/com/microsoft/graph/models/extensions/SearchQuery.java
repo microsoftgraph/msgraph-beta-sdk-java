@@ -36,7 +36,7 @@ public class SearchQuery implements IJsonBackedObject {
      * The Query_string.
      * 
      */
-    @SerializedName("query_string")
+    @SerializedName(value = "query_string", alternate = {"Query_string"})
     @Expose
     public SearchQueryString query_string;
 
@@ -44,7 +44,7 @@ public class SearchQuery implements IJsonBackedObject {
      * The Query String.
      * 
      */
-    @SerializedName("queryString")
+    @SerializedName(value = "queryString", alternate = {"QueryString"})
     @Expose
     public String queryString;
 

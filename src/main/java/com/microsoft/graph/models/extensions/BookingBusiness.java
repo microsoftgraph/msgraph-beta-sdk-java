@@ -37,7 +37,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public PhysicalAddress address;
 
@@ -45,7 +45,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Business Hours.
      * 
      */
-    @SerializedName("businessHours")
+    @SerializedName(value = "businessHours", alternate = {"BusinessHours"})
     @Expose
     public java.util.List<BookingWorkHours> businessHours;
 
@@ -53,7 +53,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Business Type.
      * 
      */
-    @SerializedName("businessType")
+    @SerializedName(value = "businessType", alternate = {"BusinessType"})
     @Expose
     public String businessType;
 
@@ -61,7 +61,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Default Currency Iso.
      * 
      */
-    @SerializedName("defaultCurrencyIso")
+    @SerializedName(value = "defaultCurrencyIso", alternate = {"DefaultCurrencyIso"})
     @Expose
     public String defaultCurrencyIso;
 
@@ -69,7 +69,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Email.
      * 
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -77,7 +77,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Is Published.
      * 
      */
-    @SerializedName("isPublished")
+    @SerializedName(value = "isPublished", alternate = {"IsPublished"})
     @Expose
     public Boolean isPublished;
 
@@ -85,7 +85,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Phone.
      * 
      */
-    @SerializedName("phone")
+    @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose
     public String phone;
 
@@ -93,7 +93,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Public Url.
      * 
      */
-    @SerializedName("publicUrl")
+    @SerializedName(value = "publicUrl", alternate = {"PublicUrl"})
     @Expose
     public String publicUrl;
 
@@ -101,7 +101,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Scheduling Policy.
      * 
      */
-    @SerializedName("schedulingPolicy")
+    @SerializedName(value = "schedulingPolicy", alternate = {"SchedulingPolicy"})
     @Expose
     public BookingSchedulingPolicy schedulingPolicy;
 
@@ -109,7 +109,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Web Site Url.
      * Example: https://www.contoso.com
      */
-    @SerializedName("webSiteUrl")
+    @SerializedName(value = "webSiteUrl", alternate = {"WebSiteUrl"})
     @Expose
     public String webSiteUrl;
 
@@ -117,7 +117,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Appointments.
      * All appointments in this business.
      */
-    @SerializedName("appointments")
+    @SerializedName(value = "appointments", alternate = {"Appointments"})
     @Expose
     public BookingAppointmentCollectionPage appointments;
 
@@ -125,7 +125,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Calendar View.
      * A calendar view of appointments in this business.
      */
-    @SerializedName("calendarView")
+    @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
     public BookingAppointmentCollectionPage calendarView;
 
@@ -133,7 +133,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Customers.
      * All customers of this business.
      */
-    @SerializedName("customers")
+    @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose
     public BookingCustomerCollectionPage customers;
 
@@ -141,7 +141,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Services.
      * All services offered by this business.
      */
-    @SerializedName("services")
+    @SerializedName(value = "services", alternate = {"Services"})
     @Expose
     public BookingServiceCollectionPage services;
 
@@ -149,7 +149,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Staff Members.
      * All staff members that provides services in this business.
      */
-    @SerializedName("staffMembers")
+    @SerializedName(value = "staffMembers", alternate = {"StaffMembers"})
     @Expose
     public BookingStaffMemberCollectionPage staffMembers;
 

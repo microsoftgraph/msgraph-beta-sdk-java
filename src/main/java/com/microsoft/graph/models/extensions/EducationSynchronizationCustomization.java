@@ -35,7 +35,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
      * The Allow Display Name Update.
      * 
      */
-    @SerializedName("allowDisplayNameUpdate")
+    @SerializedName(value = "allowDisplayNameUpdate", alternate = {"AllowDisplayNameUpdate"})
     @Expose
     public Boolean allowDisplayNameUpdate;
 
@@ -43,7 +43,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
      * The Is Sync Deferred.
      * 
      */
-    @SerializedName("isSyncDeferred")
+    @SerializedName(value = "isSyncDeferred", alternate = {"IsSyncDeferred"})
     @Expose
     public Boolean isSyncDeferred;
 
@@ -51,7 +51,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
      * The Optional Properties To Sync.
      * 
      */
-    @SerializedName("optionalPropertiesToSync")
+    @SerializedName(value = "optionalPropertiesToSync", alternate = {"OptionalPropertiesToSync"})
     @Expose
     public java.util.List<String> optionalPropertiesToSync;
 
@@ -59,7 +59,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
      * The Synchronization Start Date.
      * 
      */
-    @SerializedName("synchronizationStartDate")
+    @SerializedName(value = "synchronizationStartDate", alternate = {"SynchronizationStartDate"})
     @Expose
     public java.util.Calendar synchronizationStartDate;
 

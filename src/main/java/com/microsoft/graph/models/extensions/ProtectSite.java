@@ -27,7 +27,7 @@ public class ProtectSite extends LabelActionBase implements IJsonBackedObject {
      * The Access Type.
      * 
      */
-    @SerializedName("accessType")
+    @SerializedName(value = "accessType", alternate = {"AccessType"})
     @Expose
     public SiteAccessType accessType;
 
@@ -35,7 +35,7 @@ public class ProtectSite extends LabelActionBase implements IJsonBackedObject {
      * The Conditional Access Protection Level Id.
      * 
      */
-    @SerializedName("conditionalAccessProtectionLevelId")
+    @SerializedName(value = "conditionalAccessProtectionLevelId", alternate = {"ConditionalAccessProtectionLevelId"})
     @Expose
     public String conditionalAccessProtectionLevelId;
 

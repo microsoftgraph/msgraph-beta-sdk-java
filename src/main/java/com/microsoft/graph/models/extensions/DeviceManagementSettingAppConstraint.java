@@ -26,7 +26,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      * The Supported Types.
      * Acceptable app types to allow for this setting
      */
-    @SerializedName("supportedTypes")
+    @SerializedName(value = "supportedTypes", alternate = {"SupportedTypes"})
     @Expose
     public java.util.List<String> supportedTypes;
 

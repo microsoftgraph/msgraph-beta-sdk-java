@@ -36,7 +36,7 @@ public class SynchronizationSecretKeyStringValuePair implements IJsonBackedObjec
      * The Key.
      * 
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public SynchronizationSecret key;
 
@@ -44,7 +44,7 @@ public class SynchronizationSecretKeyStringValuePair implements IJsonBackedObjec
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

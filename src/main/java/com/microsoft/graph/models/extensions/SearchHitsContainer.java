@@ -37,7 +37,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
      * The Aggregations.
      * 
      */
-    @SerializedName("aggregations")
+    @SerializedName(value = "aggregations", alternate = {"Aggregations"})
     @Expose
     public java.util.List<SearchAggregation> aggregations;
 
@@ -45,7 +45,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
      * The Hits.
      * 
      */
-    @SerializedName("hits")
+    @SerializedName(value = "hits", alternate = {"Hits"})
     @Expose
     public java.util.List<SearchHit> hits;
 
@@ -53,7 +53,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
      * The More Results Available.
      * 
      */
-    @SerializedName("moreResultsAvailable")
+    @SerializedName(value = "moreResultsAvailable", alternate = {"MoreResultsAvailable"})
     @Expose
     public Boolean moreResultsAvailable;
 
@@ -61,7 +61,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
      * The Total.
      * 
      */
-    @SerializedName("total")
+    @SerializedName(value = "total", alternate = {"Total"})
     @Expose
     public Integer total;
 

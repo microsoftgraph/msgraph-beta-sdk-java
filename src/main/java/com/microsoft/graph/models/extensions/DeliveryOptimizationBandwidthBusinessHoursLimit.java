@@ -35,7 +35,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements IJsonBac
      * The Bandwidth Begin Business Hours.
      * Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23
      */
-    @SerializedName("bandwidthBeginBusinessHours")
+    @SerializedName(value = "bandwidthBeginBusinessHours", alternate = {"BandwidthBeginBusinessHours"})
     @Expose
     public Integer bandwidthBeginBusinessHours;
 
@@ -43,7 +43,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements IJsonBac
      * The Bandwidth End Business Hours.
      * Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23
      */
-    @SerializedName("bandwidthEndBusinessHours")
+    @SerializedName(value = "bandwidthEndBusinessHours", alternate = {"BandwidthEndBusinessHours"})
     @Expose
     public Integer bandwidthEndBusinessHours;
 
@@ -51,7 +51,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements IJsonBac
      * The Bandwidth Percentage During Business Hours.
      * Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100
      */
-    @SerializedName("bandwidthPercentageDuringBusinessHours")
+    @SerializedName(value = "bandwidthPercentageDuringBusinessHours", alternate = {"BandwidthPercentageDuringBusinessHours"})
     @Expose
     public Integer bandwidthPercentageDuringBusinessHours;
 
@@ -59,7 +59,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements IJsonBac
      * The Bandwidth Percentage Outside Business Hours.
      * Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100
      */
-    @SerializedName("bandwidthPercentageOutsideBusinessHours")
+    @SerializedName(value = "bandwidthPercentageOutsideBusinessHours", alternate = {"BandwidthPercentageOutsideBusinessHours"})
     @Expose
     public Integer bandwidthPercentageOutsideBusinessHours;
 

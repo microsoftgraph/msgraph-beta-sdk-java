@@ -26,7 +26,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      * The Points.
      * 
      */
-    @SerializedName("points")
+    @SerializedName(value = "points", alternate = {"Points"})
     @Expose
     public float points;
 

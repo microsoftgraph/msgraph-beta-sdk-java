@@ -35,7 +35,7 @@ public class DeviceHealthScriptParameter implements IJsonBackedObject {
      * The Apply Default Value When Not Assigned.
      * Whether Apply DefaultValue When Not Assigned
      */
-    @SerializedName("applyDefaultValueWhenNotAssigned")
+    @SerializedName(value = "applyDefaultValueWhenNotAssigned", alternate = {"ApplyDefaultValueWhenNotAssigned"})
     @Expose
     public Boolean applyDefaultValueWhenNotAssigned;
 
@@ -43,7 +43,7 @@ public class DeviceHealthScriptParameter implements IJsonBackedObject {
      * The Description.
      * The description of the param
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -51,7 +51,7 @@ public class DeviceHealthScriptParameter implements IJsonBackedObject {
      * The Is Required.
      * Whether the param is required
      */
-    @SerializedName("isRequired")
+    @SerializedName(value = "isRequired", alternate = {"IsRequired"})
     @Expose
     public Boolean isRequired;
 
@@ -59,7 +59,7 @@ public class DeviceHealthScriptParameter implements IJsonBackedObject {
      * The Name.
      * The name of the param
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

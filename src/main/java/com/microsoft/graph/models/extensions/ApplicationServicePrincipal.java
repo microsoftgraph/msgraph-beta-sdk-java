@@ -37,7 +37,7 @@ public class ApplicationServicePrincipal implements IJsonBackedObject {
      * The Application.
      * 
      */
-    @SerializedName("application")
+    @SerializedName(value = "application", alternate = {"Application"})
     @Expose
     public Application application;
 
@@ -45,7 +45,7 @@ public class ApplicationServicePrincipal implements IJsonBackedObject {
      * The Service Principal.
      * 
      */
-    @SerializedName("servicePrincipal")
+    @SerializedName(value = "servicePrincipal", alternate = {"ServicePrincipal"})
     @Expose
     public ServicePrincipal servicePrincipal;
 

@@ -27,7 +27,7 @@ public class GroupPolicyPresentation extends Entity implements IJsonBackedObject
      * The Label.
      * Localized text label for any presentation entity. The default value is empty.
      */
-    @SerializedName("label")
+    @SerializedName(value = "label", alternate = {"Label"})
     @Expose
     public String label;
 
@@ -35,7 +35,7 @@ public class GroupPolicyPresentation extends Entity implements IJsonBackedObject
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -43,7 +43,7 @@ public class GroupPolicyPresentation extends Entity implements IJsonBackedObject
      * The Definition.
      * The group policy definition associated with the presentation.
      */
-    @SerializedName("definition")
+    @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
     public GroupPolicyDefinition definition;
 

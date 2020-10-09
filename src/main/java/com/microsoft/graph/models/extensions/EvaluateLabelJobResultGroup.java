@@ -36,7 +36,7 @@ public class EvaluateLabelJobResultGroup implements IJsonBackedObject {
      * The Automatic.
      * 
      */
-    @SerializedName("automatic")
+    @SerializedName(value = "automatic", alternate = {"Automatic"})
     @Expose
     public EvaluateLabelJobResult automatic;
 
@@ -44,7 +44,7 @@ public class EvaluateLabelJobResultGroup implements IJsonBackedObject {
      * The Recommended.
      * 
      */
-    @SerializedName("recommended")
+    @SerializedName(value = "recommended", alternate = {"Recommended"})
     @Expose
     public EvaluateLabelJobResult recommended;
 

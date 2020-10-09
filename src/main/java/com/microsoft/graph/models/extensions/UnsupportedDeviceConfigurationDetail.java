@@ -35,7 +35,7 @@ public class UnsupportedDeviceConfigurationDetail implements IJsonBackedObject {
      * The Message.
      * A message explaining why an entity is unsupported.
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -43,7 +43,7 @@ public class UnsupportedDeviceConfigurationDetail implements IJsonBackedObject {
      * The Property Name.
      * If message is related to a specific property in the original entity, then the name of that property.
      */
-    @SerializedName("propertyName")
+    @SerializedName(value = "propertyName", alternate = {"PropertyName"})
     @Expose
     public String propertyName;
 

@@ -27,7 +27,7 @@ public class PrivilegedSignupStatus extends Entity implements IJsonBackedObject 
      * The Is Registered.
      * 
      */
-    @SerializedName("isRegistered")
+    @SerializedName(value = "isRegistered", alternate = {"IsRegistered"})
     @Expose
     public Boolean isRegistered;
 
@@ -35,7 +35,7 @@ public class PrivilegedSignupStatus extends Entity implements IJsonBackedObject 
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public SetupStatus status;
 

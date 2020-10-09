@@ -32,7 +32,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Applicable Platform.
      * The applicable platform.
      */
-    @SerializedName("applicablePlatform")
+    @SerializedName(value = "applicablePlatform", alternate = {"ApplicablePlatform"})
     @Expose
     public EndpointSecurityConfigurationApplicablePlatform applicablePlatform;
 
@@ -40,7 +40,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Endpoint Security Policy.
      * The endpoint security policy type.
      */
-    @SerializedName("endpointSecurityPolicy")
+    @SerializedName(value = "endpointSecurityPolicy", alternate = {"EndpointSecurityPolicy"})
     @Expose
     public EndpointSecurityConfigurationType endpointSecurityPolicy;
 
@@ -48,7 +48,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Endpoint Security Policy Profile.
      * The endpoint security policy profile.
      */
-    @SerializedName("endpointSecurityPolicyProfile")
+    @SerializedName(value = "endpointSecurityPolicyProfile", alternate = {"EndpointSecurityPolicyProfile"})
     @Expose
     public EndpointSecurityConfigurationProfileType endpointSecurityPolicyProfile;
 
@@ -56,7 +56,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Insights.
      * Information about the mitigation.
      */
-    @SerializedName("insights")
+    @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
     public String insights;
 
@@ -64,7 +64,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Intended Settings.
      * The intended settings and their values.
      */
-    @SerializedName("intendedSettings")
+    @SerializedName(value = "intendedSettings", alternate = {"IntendedSettings"})
     @Expose
     public java.util.List<KeyValuePair> intendedSettings;
 
@@ -72,7 +72,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Managed Device Count.
      * The number of vulnerable devices.
      */
-    @SerializedName("managedDeviceCount")
+    @SerializedName(value = "managedDeviceCount", alternate = {"ManagedDeviceCount"})
     @Expose
     public Integer managedDeviceCount;
 
@@ -80,7 +80,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Managed Devices.
      * The vulnerable managed devices.
      */
-    @SerializedName("managedDevices")
+    @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
     public VulnerableManagedDeviceCollectionPage managedDevices;
 

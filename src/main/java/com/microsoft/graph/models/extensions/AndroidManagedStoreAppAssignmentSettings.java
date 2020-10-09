@@ -26,7 +26,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * The Android Managed Store App Track Ids.
      * The track IDs to enable for this app assignment.
      */
-    @SerializedName("androidManagedStoreAppTrackIds")
+    @SerializedName(value = "androidManagedStoreAppTrackIds", alternate = {"AndroidManagedStoreAppTrackIds"})
     @Expose
     public java.util.List<String> androidManagedStoreAppTrackIds;
 

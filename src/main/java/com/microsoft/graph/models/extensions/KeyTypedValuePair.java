@@ -35,7 +35,7 @@ public class KeyTypedValuePair implements IJsonBackedObject {
      * The Key.
      * The string key of the key-value pair.
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public String key;
 

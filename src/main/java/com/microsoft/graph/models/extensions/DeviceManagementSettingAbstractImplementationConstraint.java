@@ -26,7 +26,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * The Allowed Abstract Implementation Definition Ids.
      * List of value which means not configured for the setting
      */
-    @SerializedName("allowedAbstractImplementationDefinitionIds")
+    @SerializedName(value = "allowedAbstractImplementationDefinitionIds", alternate = {"AllowedAbstractImplementationDefinitionIds"})
     @Expose
     public java.util.List<String> allowedAbstractImplementationDefinitionIds;
 

@@ -26,7 +26,7 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
      * The Proxy Auto Config URL.
      * The proxy auto-config URL
      */
-    @SerializedName("proxyAutoConfigURL")
+    @SerializedName(value = "proxyAutoConfigURL", alternate = {"ProxyAutoConfigURL"})
     @Expose
     public String proxyAutoConfigURL;
 

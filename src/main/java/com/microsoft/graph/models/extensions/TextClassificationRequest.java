@@ -27,7 +27,7 @@ public class TextClassificationRequest extends Entity implements IJsonBackedObje
      * The File Extension.
      * 
      */
-    @SerializedName("fileExtension")
+    @SerializedName(value = "fileExtension", alternate = {"FileExtension"})
     @Expose
     public String fileExtension;
 
@@ -35,7 +35,7 @@ public class TextClassificationRequest extends Entity implements IJsonBackedObje
      * The Scopes To Run.
      * 
      */
-    @SerializedName("scopesToRun")
+    @SerializedName(value = "scopesToRun", alternate = {"ScopesToRun"})
     @Expose
     public EnumSet<SensitiveTypeScope> scopesToRun;
 
@@ -43,7 +43,7 @@ public class TextClassificationRequest extends Entity implements IJsonBackedObje
      * The Sensitive Type Ids.
      * 
      */
-    @SerializedName("sensitiveTypeIds")
+    @SerializedName(value = "sensitiveTypeIds", alternate = {"SensitiveTypeIds"})
     @Expose
     public java.util.List<String> sensitiveTypeIds;
 
@@ -51,7 +51,7 @@ public class TextClassificationRequest extends Entity implements IJsonBackedObje
      * The Text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public String text;
 

@@ -29,7 +29,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public AppIdentity createdBy;
 
@@ -37,7 +37,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
      * The Tasks.
      * 
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public PrintTaskCollectionPage tasks;
 

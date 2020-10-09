@@ -29,7 +29,7 @@ public class FilterOperatorSchema extends Entity implements IJsonBackedObject {
      * The Arity.
      * 
      */
-    @SerializedName("arity")
+    @SerializedName(value = "arity", alternate = {"Arity"})
     @Expose
     public ScopeOperatorType arity;
 
@@ -37,7 +37,7 @@ public class FilterOperatorSchema extends Entity implements IJsonBackedObject {
      * The Multivalued Comparison Type.
      * 
      */
-    @SerializedName("multivaluedComparisonType")
+    @SerializedName(value = "multivaluedComparisonType", alternate = {"MultivaluedComparisonType"})
     @Expose
     public ScopeOperatorMultiValuedComparisonType multivaluedComparisonType;
 
@@ -45,7 +45,7 @@ public class FilterOperatorSchema extends Entity implements IJsonBackedObject {
      * The Supported Attribute Types.
      * 
      */
-    @SerializedName("supportedAttributeTypes")
+    @SerializedName(value = "supportedAttributeTypes", alternate = {"SupportedAttributeTypes"})
     @Expose
     public java.util.List<AttributeType> supportedAttributeTypes;
 

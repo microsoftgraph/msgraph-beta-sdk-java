@@ -35,7 +35,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V4_0.
      * Version 4.0 or later.
      */
-    @SerializedName("v4_0")
+    @SerializedName(value = "v4_0", alternate = {"V4_0"})
     @Expose
     public Boolean v4_0;
 
@@ -43,7 +43,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V4_0_3.
      * Version 4.0.3 or later.
      */
-    @SerializedName("v4_0_3")
+    @SerializedName(value = "v4_0_3", alternate = {"V4_0_3"})
     @Expose
     public Boolean v4_0_3;
 
@@ -51,7 +51,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V4_1.
      * Version 4.1 or later.
      */
-    @SerializedName("v4_1")
+    @SerializedName(value = "v4_1", alternate = {"V4_1"})
     @Expose
     public Boolean v4_1;
 
@@ -59,7 +59,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V4_2.
      * Version 4.2 or later.
      */
-    @SerializedName("v4_2")
+    @SerializedName(value = "v4_2", alternate = {"V4_2"})
     @Expose
     public Boolean v4_2;
 
@@ -67,7 +67,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V4_3.
      * Version 4.3 or later.
      */
-    @SerializedName("v4_3")
+    @SerializedName(value = "v4_3", alternate = {"V4_3"})
     @Expose
     public Boolean v4_3;
 
@@ -75,7 +75,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V4_4.
      * Version 4.4 or later.
      */
-    @SerializedName("v4_4")
+    @SerializedName(value = "v4_4", alternate = {"V4_4"})
     @Expose
     public Boolean v4_4;
 
@@ -83,7 +83,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V5_0.
      * Version 5.0 or later.
      */
-    @SerializedName("v5_0")
+    @SerializedName(value = "v5_0", alternate = {"V5_0"})
     @Expose
     public Boolean v5_0;
 
@@ -91,7 +91,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V5_1.
      * Version 5.1 or later.
      */
-    @SerializedName("v5_1")
+    @SerializedName(value = "v5_1", alternate = {"V5_1"})
     @Expose
     public Boolean v5_1;
 
@@ -99,7 +99,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V6_0.
      * Version 6.0 or later.
      */
-    @SerializedName("v6_0")
+    @SerializedName(value = "v6_0", alternate = {"V6_0"})
     @Expose
     public Boolean v6_0;
 
@@ -107,7 +107,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V7_0.
      * Version 7.0 or later.
      */
-    @SerializedName("v7_0")
+    @SerializedName(value = "v7_0", alternate = {"V7_0"})
     @Expose
     public Boolean v7_0;
 
@@ -115,7 +115,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V7_1.
      * Version 7.1 or later.
      */
-    @SerializedName("v7_1")
+    @SerializedName(value = "v7_1", alternate = {"V7_1"})
     @Expose
     public Boolean v7_1;
 
@@ -123,7 +123,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V8_0.
      * Version 8.0 or later.
      */
-    @SerializedName("v8_0")
+    @SerializedName(value = "v8_0", alternate = {"V8_0"})
     @Expose
     public Boolean v8_0;
 
@@ -131,7 +131,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V8_1.
      * Version 8.1 or later.
      */
-    @SerializedName("v8_1")
+    @SerializedName(value = "v8_1", alternate = {"V8_1"})
     @Expose
     public Boolean v8_1;
 
@@ -139,7 +139,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
      * The V9_0.
      * Version 9.0 or later.
      */
-    @SerializedName("v9_0")
+    @SerializedName(value = "v9_0", alternate = {"V9_0"})
     @Expose
     public Boolean v9_0;
 

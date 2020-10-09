@@ -26,7 +26,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Allow Device Reset On Install Failure.
      * Allow or block device reset on installation failure
      */
-    @SerializedName("allowDeviceResetOnInstallFailure")
+    @SerializedName(value = "allowDeviceResetOnInstallFailure", alternate = {"AllowDeviceResetOnInstallFailure"})
     @Expose
     public Boolean allowDeviceResetOnInstallFailure;
 
@@ -34,7 +34,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Allow Device Use On Install Failure.
      * Allow the user to continue using the device on installation failure
      */
-    @SerializedName("allowDeviceUseOnInstallFailure")
+    @SerializedName(value = "allowDeviceUseOnInstallFailure", alternate = {"AllowDeviceUseOnInstallFailure"})
     @Expose
     public Boolean allowDeviceUseOnInstallFailure;
 
@@ -42,7 +42,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Allow Log Collection On Install Failure.
      * Allow or block log collection on installation failure
      */
-    @SerializedName("allowLogCollectionOnInstallFailure")
+    @SerializedName(value = "allowLogCollectionOnInstallFailure", alternate = {"AllowLogCollectionOnInstallFailure"})
     @Expose
     public Boolean allowLogCollectionOnInstallFailure;
 
@@ -50,7 +50,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Block Device Setup Retry By User.
      * Allow the user to retry the setup on installation failure
      */
-    @SerializedName("blockDeviceSetupRetryByUser")
+    @SerializedName(value = "blockDeviceSetupRetryByUser", alternate = {"BlockDeviceSetupRetryByUser"})
     @Expose
     public Boolean blockDeviceSetupRetryByUser;
 
@@ -58,7 +58,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Custom Error Message.
      * Set custom error message to show upon installation failure
      */
-    @SerializedName("customErrorMessage")
+    @SerializedName(value = "customErrorMessage", alternate = {"CustomErrorMessage"})
     @Expose
     public String customErrorMessage;
 
@@ -66,7 +66,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Disable User Status Tracking After First User.
      * Only show installation progress for first user post enrollment
      */
-    @SerializedName("disableUserStatusTrackingAfterFirstUser")
+    @SerializedName(value = "disableUserStatusTrackingAfterFirstUser", alternate = {"DisableUserStatusTrackingAfterFirstUser"})
     @Expose
     public Boolean disableUserStatusTrackingAfterFirstUser;
 
@@ -74,7 +74,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Install Progress Timeout In Minutes.
      * Set installation progress timeout in minutes
      */
-    @SerializedName("installProgressTimeoutInMinutes")
+    @SerializedName(value = "installProgressTimeoutInMinutes", alternate = {"InstallProgressTimeoutInMinutes"})
     @Expose
     public Integer installProgressTimeoutInMinutes;
 
@@ -82,7 +82,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Selected Mobile App Ids.
      * Selected applications to track the installation status
      */
-    @SerializedName("selectedMobileAppIds")
+    @SerializedName(value = "selectedMobileAppIds", alternate = {"SelectedMobileAppIds"})
     @Expose
     public java.util.List<String> selectedMobileAppIds;
 
@@ -90,7 +90,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Show Installation Progress.
      * Show or hide installation progress to user
      */
-    @SerializedName("showInstallationProgress")
+    @SerializedName(value = "showInstallationProgress", alternate = {"ShowInstallationProgress"})
     @Expose
     public Boolean showInstallationProgress;
 
@@ -98,7 +98,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The Track Install Progress For Autopilot Only.
      * Only show installation progress for Autopilot enrollment scenarios
      */
-    @SerializedName("trackInstallProgressForAutopilotOnly")
+    @SerializedName(value = "trackInstallProgressForAutopilotOnly", alternate = {"TrackInstallProgressForAutopilotOnly"})
     @Expose
     public Boolean trackInstallProgressForAutopilotOnly;
 

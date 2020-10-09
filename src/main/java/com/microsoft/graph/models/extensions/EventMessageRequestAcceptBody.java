@@ -22,7 +22,7 @@ public class EventMessageRequestAcceptBody {
      * The send Response.
      * 
      */
-    @SerializedName("sendResponse")
+    @SerializedName(value = "sendResponse", alternate = {"SendResponse"})
     @Expose
     public Boolean sendResponse;
 
@@ -30,7 +30,7 @@ public class EventMessageRequestAcceptBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

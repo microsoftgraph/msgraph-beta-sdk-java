@@ -34,7 +34,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Certificate Store.
      * Target store certificate
      */
-    @SerializedName("certificateStore")
+    @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
     public CertificateStore certificateStore;
 
@@ -42,7 +42,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Custom Subject Alternative Names.
      * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: http://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("customSubjectAlternativeNames")
+    @SerializedName(value = "customSubjectAlternativeNames", alternate = {"CustomSubjectAlternativeNames"})
     @Expose
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
@@ -50,7 +50,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Extended Key Usages.
      * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("extendedKeyUsages")
+    @SerializedName(value = "extendedKeyUsages", alternate = {"ExtendedKeyUsages"})
     @Expose
     public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
 
@@ -58,7 +58,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Key Size.
      * SCEP Key Size.
      */
-    @SerializedName("keySize")
+    @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
     public KeySize keySize;
 
@@ -66,7 +66,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Key Usage.
      * SCEP Key Usage.
      */
-    @SerializedName("keyUsage")
+    @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose
     public EnumSet<KeyUsages> keyUsage;
 
@@ -74,7 +74,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Scep Server Urls.
      * SCEP Server Url(s).
      */
-    @SerializedName("scepServerUrls")
+    @SerializedName(value = "scepServerUrls", alternate = {"ScepServerUrls"})
     @Expose
     public java.util.List<String> scepServerUrls;
 
@@ -82,7 +82,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
-    @SerializedName("subjectAlternativeNameFormatString")
+    @SerializedName(value = "subjectAlternativeNameFormatString", alternate = {"SubjectAlternativeNameFormatString"})
     @Expose
     public String subjectAlternativeNameFormatString;
 
@@ -90,7 +90,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Subject Name Format String.
      * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
-    @SerializedName("subjectNameFormatString")
+    @SerializedName(value = "subjectNameFormatString", alternate = {"SubjectNameFormatString"})
     @Expose
     public String subjectNameFormatString;
 
@@ -98,7 +98,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
@@ -106,7 +106,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Root Certificate.
      * Trusted Root Certificate.
      */
-    @SerializedName("rootCertificate")
+    @SerializedName(value = "rootCertificate", alternate = {"RootCertificate"})
     @Expose
     public IosTrustedRootCertificate rootCertificate;
 

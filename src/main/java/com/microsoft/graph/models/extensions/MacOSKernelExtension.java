@@ -35,7 +35,7 @@ public class MacOSKernelExtension implements IJsonBackedObject {
      * The Bundle Id.
      * Bundle ID of the kernel extension.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -43,7 +43,7 @@ public class MacOSKernelExtension implements IJsonBackedObject {
      * The Team Identifier.
      * The team identifier that was used to sign the kernel extension.
      */
-    @SerializedName("teamIdentifier")
+    @SerializedName(value = "teamIdentifier", alternate = {"TeamIdentifier"})
     @Expose
     public String teamIdentifier;
 

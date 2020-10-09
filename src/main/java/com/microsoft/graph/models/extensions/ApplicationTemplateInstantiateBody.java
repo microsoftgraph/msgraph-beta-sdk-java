@@ -22,7 +22,7 @@ public class ApplicationTemplateInstantiateBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

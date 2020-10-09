@@ -27,7 +27,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The MicrosoftTunnelServer's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
      * The Last Checkin Date Time.
      * When the MicrosoftTunnelServer last checked in
      */
-    @SerializedName("lastCheckinDateTime")
+    @SerializedName(value = "lastCheckinDateTime", alternate = {"LastCheckinDateTime"})
     @Expose
     public java.util.Calendar lastCheckinDateTime;
 
@@ -43,7 +43,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
      * The Tunnel Server Health Status.
      * The MicrosoftTunnelServer's health status
      */
-    @SerializedName("tunnelServerHealthStatus")
+    @SerializedName(value = "tunnelServerHealthStatus", alternate = {"TunnelServerHealthStatus"})
     @Expose
     public MicrosoftTunnelServerHealthStatus tunnelServerHealthStatus;
 

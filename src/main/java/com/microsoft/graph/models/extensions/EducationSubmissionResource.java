@@ -27,7 +27,7 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
      * The Assignment Resource Url.
      * 
      */
-    @SerializedName("assignmentResourceUrl")
+    @SerializedName(value = "assignmentResourceUrl", alternate = {"AssignmentResourceUrl"})
     @Expose
     public String assignmentResourceUrl;
 
@@ -35,7 +35,7 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
      * The Resource.
      * 
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public EducationResource resource;
 

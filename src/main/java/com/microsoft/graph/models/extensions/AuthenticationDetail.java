@@ -35,7 +35,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
      * The Authentication Method.
      * 
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public String authenticationMethod;
 
@@ -43,7 +43,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
      * The Authentication Method Detail.
      * 
      */
-    @SerializedName("authenticationMethodDetail")
+    @SerializedName(value = "authenticationMethodDetail", alternate = {"AuthenticationMethodDetail"})
     @Expose
     public String authenticationMethodDetail;
 
@@ -51,7 +51,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
      * The Authentication Step Date Time.
      * 
      */
-    @SerializedName("authenticationStepDateTime")
+    @SerializedName(value = "authenticationStepDateTime", alternate = {"AuthenticationStepDateTime"})
     @Expose
     public java.util.Calendar authenticationStepDateTime;
 
@@ -59,7 +59,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
      * The Authentication Step Requirement.
      * 
      */
-    @SerializedName("authenticationStepRequirement")
+    @SerializedName(value = "authenticationStepRequirement", alternate = {"AuthenticationStepRequirement"})
     @Expose
     public String authenticationStepRequirement;
 
@@ -67,7 +67,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
      * The Authentication Step Result Detail.
      * 
      */
-    @SerializedName("authenticationStepResultDetail")
+    @SerializedName(value = "authenticationStepResultDetail", alternate = {"AuthenticationStepResultDetail"})
     @Expose
     public String authenticationStepResultDetail;
 
@@ -75,7 +75,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
      * The Succeeded.
      * 
      */
-    @SerializedName("succeeded")
+    @SerializedName(value = "succeeded", alternate = {"Succeeded"})
     @Expose
     public Boolean succeeded;
 

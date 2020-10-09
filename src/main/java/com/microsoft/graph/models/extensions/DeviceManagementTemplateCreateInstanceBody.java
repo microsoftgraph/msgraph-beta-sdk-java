@@ -23,7 +23,7 @@ public class DeviceManagementTemplateCreateInstanceBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -31,7 +31,7 @@ public class DeviceManagementTemplateCreateInstanceBody {
      * The description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -39,7 +39,7 @@ public class DeviceManagementTemplateCreateInstanceBody {
      * The settings Delta.
      * 
      */
-    @SerializedName("settingsDelta")
+    @SerializedName(value = "settingsDelta", alternate = {"SettingsDelta"})
     @Expose
     public java.util.List<DeviceManagementSettingInstance> settingsDelta;
 
@@ -47,7 +47,7 @@ public class DeviceManagementTemplateCreateInstanceBody {
      * The role Scope Tag Ids.
      * 
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 

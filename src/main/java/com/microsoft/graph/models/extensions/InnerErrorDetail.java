@@ -35,7 +35,7 @@ public class InnerErrorDetail implements IJsonBackedObject {
      * The Message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -43,7 +43,7 @@ public class InnerErrorDetail implements IJsonBackedObject {
      * The Source.
      * 
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public String source;
 

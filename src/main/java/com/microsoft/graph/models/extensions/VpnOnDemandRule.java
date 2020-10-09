@@ -37,7 +37,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Action.
      * Action.
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public VpnOnDemandRuleConnectionAction action;
 
@@ -45,7 +45,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Dns Search Domains.
      * DNS Search Domains.
      */
-    @SerializedName("dnsSearchDomains")
+    @SerializedName(value = "dnsSearchDomains", alternate = {"DnsSearchDomains"})
     @Expose
     public java.util.List<String> dnsSearchDomains;
 
@@ -53,7 +53,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Domain Action.
      * Domain Action (Only applicable when Action is evaluate connection).
      */
-    @SerializedName("domainAction")
+    @SerializedName(value = "domainAction", alternate = {"DomainAction"})
     @Expose
     public VpnOnDemandRuleConnectionDomainAction domainAction;
 
@@ -61,7 +61,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Domains.
      * Domains (Only applicable when Action is evaluate connection).
      */
-    @SerializedName("domains")
+    @SerializedName(value = "domains", alternate = {"Domains"})
     @Expose
     public java.util.List<String> domains;
 
@@ -69,7 +69,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Probe Required Url.
      * Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
      */
-    @SerializedName("probeRequiredUrl")
+    @SerializedName(value = "probeRequiredUrl", alternate = {"ProbeRequiredUrl"})
     @Expose
     public String probeRequiredUrl;
 
@@ -77,7 +77,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Probe Url.
      * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
      */
-    @SerializedName("probeUrl")
+    @SerializedName(value = "probeUrl", alternate = {"ProbeUrl"})
     @Expose
     public String probeUrl;
 
@@ -85,7 +85,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
      * The Ssids.
      * Network Service Set Identifiers (SSIDs).
      */
-    @SerializedName("ssids")
+    @SerializedName(value = "ssids", alternate = {"Ssids"})
     @Expose
     public java.util.List<String> ssids;
 

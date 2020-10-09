@@ -27,7 +27,7 @@ public class UserAccountInformation extends ItemFacet implements IJsonBackedObje
      * The Age Group.
      * 
      */
-    @SerializedName("ageGroup")
+    @SerializedName(value = "ageGroup", alternate = {"AgeGroup"})
     @Expose
     public String ageGroup;
 
@@ -35,7 +35,7 @@ public class UserAccountInformation extends ItemFacet implements IJsonBackedObje
      * The Country Code.
      * 
      */
-    @SerializedName("countryCode")
+    @SerializedName(value = "countryCode", alternate = {"CountryCode"})
     @Expose
     public String countryCode;
 
@@ -43,7 +43,7 @@ public class UserAccountInformation extends ItemFacet implements IJsonBackedObje
      * The Preferred Language Tag.
      * 
      */
-    @SerializedName("preferredLanguageTag")
+    @SerializedName(value = "preferredLanguageTag", alternate = {"PreferredLanguageTag"})
     @Expose
     public LocaleInfo preferredLanguageTag;
 
@@ -51,7 +51,7 @@ public class UserAccountInformation extends ItemFacet implements IJsonBackedObje
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

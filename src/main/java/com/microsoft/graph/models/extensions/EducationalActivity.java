@@ -28,7 +28,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
      * The Completion Month Year.
      * 
      */
-    @SerializedName("completionMonthYear")
+    @SerializedName(value = "completionMonthYear", alternate = {"CompletionMonthYear"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly completionMonthYear;
 
@@ -36,7 +36,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
      * The End Month Year.
      * 
      */
-    @SerializedName("endMonthYear")
+    @SerializedName(value = "endMonthYear", alternate = {"EndMonthYear"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly endMonthYear;
 
@@ -44,7 +44,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
      * The Institution.
      * 
      */
-    @SerializedName("institution")
+    @SerializedName(value = "institution", alternate = {"Institution"})
     @Expose
     public InstitutionData institution;
 
@@ -52,7 +52,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
      * The Program.
      * 
      */
-    @SerializedName("program")
+    @SerializedName(value = "program", alternate = {"Program"})
     @Expose
     public EducationalActivityDetail program;
 
@@ -60,7 +60,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
      * The Start Month Year.
      * 
      */
-    @SerializedName("startMonthYear")
+    @SerializedName(value = "startMonthYear", alternate = {"StartMonthYear"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly startMonthYear;
 

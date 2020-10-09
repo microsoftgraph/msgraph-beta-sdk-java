@@ -35,7 +35,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
      * The Association Type.
      * 
      */
-    @SerializedName("associationType")
+    @SerializedName(value = "associationType", alternate = {"AssociationType"})
     @Expose
     public String associationType;
 
@@ -43,7 +43,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -51,7 +51,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
      * The Display Name Segments.
      * 
      */
-    @SerializedName("displayNameSegments")
+    @SerializedName(value = "displayNameSegments", alternate = {"DisplayNameSegments"})
     @Expose
     public java.util.List<String> displayNameSegments;
 
@@ -59,7 +59,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
      * The Owner App Id.
      * 
      */
-    @SerializedName("ownerAppId")
+    @SerializedName(value = "ownerAppId", alternate = {"OwnerAppId"})
     @Expose
     public String ownerAppId;
 

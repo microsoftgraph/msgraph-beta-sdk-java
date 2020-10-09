@@ -35,7 +35,7 @@ public class EducationSynchronizationConnectionSettings implements IJsonBackedOb
      * The Client Id.
      * 
      */
-    @SerializedName("clientId")
+    @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
     public String clientId;
 
@@ -43,7 +43,7 @@ public class EducationSynchronizationConnectionSettings implements IJsonBackedOb
      * The Client Secret.
      * 
      */
-    @SerializedName("clientSecret")
+    @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose
     public String clientSecret;
 

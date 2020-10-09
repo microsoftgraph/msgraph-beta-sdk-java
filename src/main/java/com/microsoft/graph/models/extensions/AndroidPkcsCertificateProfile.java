@@ -28,7 +28,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * The Certificate Template Name.
      * PKCS Certificate Template Name
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName(value = "certificateTemplateName", alternate = {"CertificateTemplateName"})
     @Expose
     public String certificateTemplateName;
 
@@ -36,7 +36,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * The Certification Authority.
      * PKCS Certification Authority
      */
-    @SerializedName("certificationAuthority")
+    @SerializedName(value = "certificationAuthority", alternate = {"CertificationAuthority"})
     @Expose
     public String certificationAuthority;
 
@@ -44,7 +44,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * The Certification Authority Name.
      * PKCS Certification Authority Name
      */
-    @SerializedName("certificationAuthorityName")
+    @SerializedName(value = "certificationAuthorityName", alternate = {"CertificationAuthorityName"})
     @Expose
     public String certificationAuthorityName;
 
@@ -52,7 +52,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
-    @SerializedName("subjectAlternativeNameFormatString")
+    @SerializedName(value = "subjectAlternativeNameFormatString", alternate = {"SubjectAlternativeNameFormatString"})
     @Expose
     public String subjectAlternativeNameFormatString;
 
@@ -60,7 +60,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 

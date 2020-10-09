@@ -35,7 +35,7 @@ public class Settings implements IJsonBackedObject {
      * The Has Graph Mailbox.
      * 
      */
-    @SerializedName("hasGraphMailbox")
+    @SerializedName(value = "hasGraphMailbox", alternate = {"HasGraphMailbox"})
     @Expose
     public Boolean hasGraphMailbox;
 
@@ -43,7 +43,7 @@ public class Settings implements IJsonBackedObject {
      * The Has License.
      * 
      */
-    @SerializedName("hasLicense")
+    @SerializedName(value = "hasLicense", alternate = {"HasLicense"})
     @Expose
     public Boolean hasLicense;
 
@@ -51,7 +51,7 @@ public class Settings implements IJsonBackedObject {
      * The Has Opted Out.
      * 
      */
-    @SerializedName("hasOptedOut")
+    @SerializedName(value = "hasOptedOut", alternate = {"HasOptedOut"})
     @Expose
     public Boolean hasOptedOut;
 

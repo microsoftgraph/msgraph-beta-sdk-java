@@ -26,7 +26,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Android.
      * 
      */
-    @SerializedName("android")
+    @SerializedName(value = "android", alternate = {"Android"})
     @Expose
     public Long android;
 
@@ -34,7 +34,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Ios.
      * 
      */
-    @SerializedName("ios")
+    @SerializedName(value = "ios", alternate = {"Ios"})
     @Expose
     public Long ios;
 
@@ -42,7 +42,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Mac.
      * 
      */
-    @SerializedName("mac")
+    @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
     public Long mac;
 
@@ -50,7 +50,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Product Type.
      * 
      */
-    @SerializedName("productType")
+    @SerializedName(value = "productType", alternate = {"ProductType"})
     @Expose
     public String productType;
 
@@ -58,7 +58,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -66,7 +66,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Windows.
      * 
      */
-    @SerializedName("windows")
+    @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
     public Long windows;
 
@@ -74,7 +74,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
      * The Windows10Mobile.
      * 
      */
-    @SerializedName("windows10Mobile")
+    @SerializedName(value = "windows10Mobile", alternate = {"Windows10Mobile"})
     @Expose
     public Long windows10Mobile;
 

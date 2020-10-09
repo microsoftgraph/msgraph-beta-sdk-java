@@ -28,7 +28,7 @@ public class GroupPolicyPresentationValue extends Entity implements IJsonBackedO
      * The Created Date Time.
      * The date and time the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -36,7 +36,7 @@ public class GroupPolicyPresentationValue extends Entity implements IJsonBackedO
      * The Last Modified Date Time.
      * The date and time the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -44,7 +44,7 @@ public class GroupPolicyPresentationValue extends Entity implements IJsonBackedO
      * The Definition Value.
      * The group policy definition value associated with the presentation value.
      */
-    @SerializedName("definitionValue")
+    @SerializedName(value = "definitionValue", alternate = {"DefinitionValue"})
     @Expose
     public GroupPolicyDefinitionValue definitionValue;
 
@@ -52,7 +52,7 @@ public class GroupPolicyPresentationValue extends Entity implements IJsonBackedO
      * The Presentation.
      * The group policy presentation associated with the presentation value.
      */
-    @SerializedName("presentation")
+    @SerializedName(value = "presentation", alternate = {"Presentation"})
     @Expose
     public GroupPolicyPresentation presentation;
 

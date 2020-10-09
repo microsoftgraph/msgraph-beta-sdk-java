@@ -36,7 +36,7 @@ public class SearchResponse implements IJsonBackedObject {
      * The Hits Containers.
      * 
      */
-    @SerializedName("hitsContainers")
+    @SerializedName(value = "hitsContainers", alternate = {"HitsContainers"})
     @Expose
     public java.util.List<SearchHitsContainer> hitsContainers;
 
@@ -44,7 +44,7 @@ public class SearchResponse implements IJsonBackedObject {
      * The Search Terms.
      * 
      */
-    @SerializedName("searchTerms")
+    @SerializedName(value = "searchTerms", alternate = {"SearchTerms"})
     @Expose
     public java.util.List<String> searchTerms;
 

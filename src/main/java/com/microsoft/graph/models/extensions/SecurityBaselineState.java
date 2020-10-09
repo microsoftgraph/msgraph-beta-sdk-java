@@ -28,7 +28,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The display name of the security baseline
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -36,7 +36,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
      * The Security Baseline Template Id.
      * The security baseline template id
      */
-    @SerializedName("securityBaselineTemplateId")
+    @SerializedName(value = "securityBaselineTemplateId", alternate = {"SecurityBaselineTemplateId"})
     @Expose
     public String securityBaselineTemplateId;
 
@@ -44,7 +44,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * User Principal Name
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -52,7 +52,7 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
      * The Setting States.
      * The security baseline state for different settings for a device
      */
-    @SerializedName("settingStates")
+    @SerializedName(value = "settingStates", alternate = {"SettingStates"})
     @Expose
     public SecurityBaselineSettingStateCollectionPage settingStates;
 

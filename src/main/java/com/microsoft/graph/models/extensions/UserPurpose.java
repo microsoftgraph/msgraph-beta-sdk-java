@@ -36,7 +36,7 @@ public class UserPurpose implements IJsonBackedObject {
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public MailboxRecipientType value;
 

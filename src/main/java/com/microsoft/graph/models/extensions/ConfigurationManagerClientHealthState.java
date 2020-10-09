@@ -36,7 +36,7 @@ public class ConfigurationManagerClientHealthState implements IJsonBackedObject 
      * The Error Code.
      * Error code for failed state.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 
@@ -44,7 +44,7 @@ public class ConfigurationManagerClientHealthState implements IJsonBackedObject 
      * The Last Sync Date Time.
      * Datetime for last sync with configuration manager management point.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -52,7 +52,7 @@ public class ConfigurationManagerClientHealthState implements IJsonBackedObject 
      * The State.
      * Current configuration manager client state.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ConfigurationManagerClientState state;
 

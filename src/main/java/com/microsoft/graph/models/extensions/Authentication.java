@@ -48,7 +48,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Email Methods.
      * 
      */
-    @SerializedName("emailMethods")
+    @SerializedName(value = "emailMethods", alternate = {"EmailMethods"})
     @Expose
     public EmailAuthenticationMethodCollectionPage emailMethods;
 
@@ -56,7 +56,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Fido2Methods.
      * 
      */
-    @SerializedName("fido2Methods")
+    @SerializedName(value = "fido2Methods", alternate = {"Fido2Methods"})
     @Expose
     public Fido2AuthenticationMethodCollectionPage fido2Methods;
 
@@ -64,7 +64,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Methods.
      * 
      */
-    @SerializedName("methods")
+    @SerializedName(value = "methods", alternate = {"Methods"})
     @Expose
     public AuthenticationMethodCollectionPage methods;
 
@@ -72,7 +72,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Microsoft Authenticator Methods.
      * 
      */
-    @SerializedName("microsoftAuthenticatorMethods")
+    @SerializedName(value = "microsoftAuthenticatorMethods", alternate = {"MicrosoftAuthenticatorMethods"})
     @Expose
     public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
 
@@ -80,7 +80,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Oath Methods.
      * 
      */
-    @SerializedName("oathMethods")
+    @SerializedName(value = "oathMethods", alternate = {"OathMethods"})
     @Expose
     public SoftwareOathAuthenticationMethodCollectionPage oathMethods;
 
@@ -88,7 +88,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Operations.
      * 
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public LongRunningOperationCollectionPage operations;
 
@@ -96,7 +96,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Passwordless Microsoft Authenticator Methods.
      * 
      */
-    @SerializedName("passwordlessMicrosoftAuthenticatorMethods")
+    @SerializedName(value = "passwordlessMicrosoftAuthenticatorMethods", alternate = {"PasswordlessMicrosoftAuthenticatorMethods"})
     @Expose
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage passwordlessMicrosoftAuthenticatorMethods;
 
@@ -104,7 +104,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Password Methods.
      * 
      */
-    @SerializedName("passwordMethods")
+    @SerializedName(value = "passwordMethods", alternate = {"PasswordMethods"})
     @Expose
     public PasswordAuthenticationMethodCollectionPage passwordMethods;
 
@@ -112,7 +112,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Phone Methods.
      * 
      */
-    @SerializedName("phoneMethods")
+    @SerializedName(value = "phoneMethods", alternate = {"PhoneMethods"})
     @Expose
     public PhoneAuthenticationMethodCollectionPage phoneMethods;
 
@@ -120,7 +120,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Security Question Methods.
      * 
      */
-    @SerializedName("securityQuestionMethods")
+    @SerializedName(value = "securityQuestionMethods", alternate = {"SecurityQuestionMethods"})
     @Expose
     public SecurityQuestionAuthenticationMethodCollectionPage securityQuestionMethods;
 
@@ -128,7 +128,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Temporary Access Pass Methods.
      * 
      */
-    @SerializedName("temporaryAccessPassMethods")
+    @SerializedName(value = "temporaryAccessPassMethods", alternate = {"TemporaryAccessPassMethods"})
     @Expose
     public TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
 

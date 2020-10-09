@@ -26,7 +26,7 @@ public class DataLossPreventionPolicy extends Entity implements IJsonBackedObjec
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

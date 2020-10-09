@@ -28,7 +28,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements IJsonBacke
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -36,7 +36,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements IJsonBacke
      * The Matching Rows.
      * 
      */
-    @SerializedName("matchingRows")
+    @SerializedName(value = "matchingRows", alternate = {"MatchingRows"})
     @Expose
     public LookupResultRowCollectionPage matchingRows;
 

@@ -26,7 +26,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

@@ -27,7 +27,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Assigned User Principal Name.
      * UPN of the user the device will be assigned
      */
-    @SerializedName("assignedUserPrincipalName")
+    @SerializedName(value = "assignedUserPrincipalName", alternate = {"AssignedUserPrincipalName"})
     @Expose
     public String assignedUserPrincipalName;
 
@@ -35,7 +35,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Group Tag.
      * Group Tag of the Windows autopilot device.
      */
-    @SerializedName("groupTag")
+    @SerializedName(value = "groupTag", alternate = {"GroupTag"})
     @Expose
     public String groupTag;
 
@@ -43,7 +43,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Hardware Identifier.
      * Hardware Blob of the Windows autopilot device.
      */
-    @SerializedName("hardwareIdentifier")
+    @SerializedName(value = "hardwareIdentifier", alternate = {"HardwareIdentifier"})
     @Expose
     public byte[] hardwareIdentifier;
 
@@ -51,7 +51,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Import Id.
      * The Import Id of the Windows autopilot device.
      */
-    @SerializedName("importId")
+    @SerializedName(value = "importId", alternate = {"ImportId"})
     @Expose
     public String importId;
 
@@ -59,7 +59,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Order Identifier.
      * Order Id of the Windows autopilot device.
      */
-    @SerializedName("orderIdentifier")
+    @SerializedName(value = "orderIdentifier", alternate = {"OrderIdentifier"})
     @Expose
     public String orderIdentifier;
 
@@ -67,7 +67,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Product Key.
      * Product Key of the Windows autopilot device.
      */
-    @SerializedName("productKey")
+    @SerializedName(value = "productKey", alternate = {"ProductKey"})
     @Expose
     public String productKey;
 
@@ -75,7 +75,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The Serial Number.
      * Serial number of the Windows autopilot device.
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public String serialNumber;
 
@@ -83,7 +83,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
      * The State.
      * Current state of the imported device.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ImportedWindowsAutopilotDeviceIdentityState state;
 

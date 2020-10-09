@@ -32,7 +32,7 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -40,7 +40,7 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Last Updated Date Time.
      * 
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
 
@@ -48,7 +48,7 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Topic.
      * 
      */
-    @SerializedName("topic")
+    @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
     public String topic;
 
@@ -56,7 +56,7 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Installed Apps.
      * 
      */
-    @SerializedName("installedApps")
+    @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
     public TeamsAppInstallationCollectionPage installedApps;
 
@@ -64,7 +64,7 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Members.
      * 
      */
-    @SerializedName("members")
+    @SerializedName(value = "members", alternate = {"Members"})
     @Expose
     public ConversationMemberCollectionPage members;
 
@@ -72,7 +72,7 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Messages.
      * 
      */
-    @SerializedName("messages")
+    @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
     public ChatMessageCollectionPage messages;
 

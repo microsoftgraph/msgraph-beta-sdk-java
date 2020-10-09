@@ -23,7 +23,7 @@ public class TimeCardStartBreakBody {
      * The at Approved Location.
      * 
      */
-    @SerializedName("atApprovedLocation")
+    @SerializedName(value = "atApprovedLocation", alternate = {"AtApprovedLocation"})
     @Expose
     public Boolean atApprovedLocation;
 
@@ -31,7 +31,7 @@ public class TimeCardStartBreakBody {
      * The notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public ItemBody notes;
 

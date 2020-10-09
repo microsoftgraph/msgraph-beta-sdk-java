@@ -23,7 +23,7 @@ public class InformationProtectionLabelExtractLabelBody {
      * The content Info.
      * 
      */
-    @SerializedName("contentInfo")
+    @SerializedName(value = "contentInfo", alternate = {"ContentInfo"})
     @Expose
     public ContentInfo contentInfo;
 

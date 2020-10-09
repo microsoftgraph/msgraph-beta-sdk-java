@@ -37,7 +37,7 @@ public class DeviceManagementExchangeAccessRule implements IJsonBackedObject {
      * The Access Level.
      * Access Level for Exchange granted by this rule.
      */
-    @SerializedName("accessLevel")
+    @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
     @Expose
     public DeviceManagementExchangeAccessLevel accessLevel;
 
@@ -45,7 +45,7 @@ public class DeviceManagementExchangeAccessRule implements IJsonBackedObject {
      * The Device Class.
      * Device Class which will be impacted by this rule.
      */
-    @SerializedName("deviceClass")
+    @SerializedName(value = "deviceClass", alternate = {"DeviceClass"})
     @Expose
     public DeviceManagementExchangeDeviceClass deviceClass;
 

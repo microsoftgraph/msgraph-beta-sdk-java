@@ -28,7 +28,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Accounts.
      * 
      */
-    @SerializedName("accounts")
+    @SerializedName(value = "accounts", alternate = {"Accounts"})
     @Expose
     public java.util.List<UserAccount> accounts;
 
@@ -36,7 +36,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Subscription Id.
      * 
      */
-    @SerializedName("azureSubscriptionId")
+    @SerializedName(value = "azureSubscriptionId", alternate = {"AzureSubscriptionId"})
     @Expose
     public String azureSubscriptionId;
 
@@ -44,7 +44,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -52,7 +52,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -60,7 +60,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -68,7 +68,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -76,7 +76,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -84,7 +84,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Tags.
      * 
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -92,7 +92,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -100,7 +100,7 @@ public class UserSecurityProfile extends Entity implements IJsonBackedObject {
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

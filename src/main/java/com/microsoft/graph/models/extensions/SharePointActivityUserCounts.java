@@ -26,7 +26,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -34,7 +34,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -42,7 +42,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -50,7 +50,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Shared Externally.
      * 
      */
-    @SerializedName("sharedExternally")
+    @SerializedName(value = "sharedExternally", alternate = {"SharedExternally"})
     @Expose
     public Long sharedExternally;
 
@@ -58,7 +58,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Shared Internally.
      * 
      */
-    @SerializedName("sharedInternally")
+    @SerializedName(value = "sharedInternally", alternate = {"SharedInternally"})
     @Expose
     public Long sharedInternally;
 
@@ -66,7 +66,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Synced.
      * 
      */
-    @SerializedName("synced")
+    @SerializedName(value = "synced", alternate = {"Synced"})
     @Expose
     public Long synced;
 
@@ -74,7 +74,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Viewed Or Edited.
      * 
      */
-    @SerializedName("viewedOrEdited")
+    @SerializedName(value = "viewedOrEdited", alternate = {"ViewedOrEdited"})
     @Expose
     public Long viewedOrEdited;
 
@@ -82,7 +82,7 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
      * The Visited Page.
      * 
      */
-    @SerializedName("visitedPage")
+    @SerializedName(value = "visitedPage", alternate = {"VisitedPage"})
     @Expose
     public Long visitedPage;
 

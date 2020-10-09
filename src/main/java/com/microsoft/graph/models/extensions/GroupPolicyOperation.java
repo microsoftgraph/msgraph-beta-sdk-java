@@ -28,7 +28,7 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -36,7 +36,7 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
      * The Operation Status.
      * The group policy operation status.
      */
-    @SerializedName("operationStatus")
+    @SerializedName(value = "operationStatus", alternate = {"OperationStatus"})
     @Expose
     public GroupPolicyOperationStatus operationStatus;
 
@@ -44,7 +44,7 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
      * The Operation Type.
      * The type of group policy operation.
      */
-    @SerializedName("operationType")
+    @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
     public GroupPolicyOperationType operationType;
 
@@ -52,7 +52,7 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
      * The Status Details.
      * The group policy operation status detail.
      */
-    @SerializedName("statusDetails")
+    @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose
     public String statusDetails;
 

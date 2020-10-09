@@ -36,7 +36,7 @@ public class MobileAppTroubleshootingHistoryItem implements IJsonBackedObject {
      * The Occurrence Date Time.
      * Time when the history item occurred.
      */
-    @SerializedName("occurrenceDateTime")
+    @SerializedName(value = "occurrenceDateTime", alternate = {"OccurrenceDateTime"})
     @Expose
     public java.util.Calendar occurrenceDateTime;
 
@@ -44,7 +44,7 @@ public class MobileAppTroubleshootingHistoryItem implements IJsonBackedObject {
      * The Troubleshooting Error Details.
      * Object containing detailed information about the error and its remediation.
      */
-    @SerializedName("troubleshootingErrorDetails")
+    @SerializedName(value = "troubleshootingErrorDetails", alternate = {"TroubleshootingErrorDetails"})
     @Expose
     public DeviceManagementTroubleshootingErrorDetails troubleshootingErrorDetails;
 

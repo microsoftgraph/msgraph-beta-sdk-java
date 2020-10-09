@@ -35,7 +35,7 @@ public class GovernancePermission implements IJsonBackedObject {
      * The Access Level.
      * 
      */
-    @SerializedName("accessLevel")
+    @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
     @Expose
     public String accessLevel;
 
@@ -43,7 +43,7 @@ public class GovernancePermission implements IJsonBackedObject {
      * The Is Active.
      * 
      */
-    @SerializedName("isActive")
+    @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
     public Boolean isActive;
 
@@ -51,7 +51,7 @@ public class GovernancePermission implements IJsonBackedObject {
      * The Is Eligible.
      * 
      */
-    @SerializedName("isEligible")
+    @SerializedName(value = "isEligible", alternate = {"IsEligible"})
     @Expose
     public Boolean isEligible;
 

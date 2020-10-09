@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ClassificationAttribute;
 
 
 import com.google.gson.JsonObject;
@@ -32,10 +33,18 @@ public class DiscoveredSensitiveType implements IJsonBackedObject {
     }
 
     /**
+     * The Classification Attributes.
+     * 
+     */
+    @SerializedName(value = "classificationAttributes", alternate = {"ClassificationAttributes"})
+    @Expose
+    public java.util.List<ClassificationAttribute> classificationAttributes;
+
+    /**
      * The Confidence.
      * 
      */
-    @SerializedName("confidence")
+    @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
     public Integer confidence;
 
@@ -43,7 +52,7 @@ public class DiscoveredSensitiveType implements IJsonBackedObject {
      * The Count.
      * 
      */
-    @SerializedName("count")
+    @SerializedName(value = "count", alternate = {"Count"})
     @Expose
     public Integer count;
 
@@ -51,7 +60,7 @@ public class DiscoveredSensitiveType implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public java.util.UUID id;
 

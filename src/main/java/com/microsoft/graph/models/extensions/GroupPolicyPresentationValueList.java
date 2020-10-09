@@ -27,7 +27,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      * The Values.
      * A list of pairs for the associated presentation.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<KeyValuePair> values;
 

@@ -36,7 +36,7 @@ public class RelatedPerson implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class RelatedPerson implements IJsonBackedObject {
      * The Relationship.
      * 
      */
-    @SerializedName("relationship")
+    @SerializedName(value = "relationship", alternate = {"Relationship"})
     @Expose
     public PersonRelationship relationship;
 
@@ -52,7 +52,7 @@ public class RelatedPerson implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

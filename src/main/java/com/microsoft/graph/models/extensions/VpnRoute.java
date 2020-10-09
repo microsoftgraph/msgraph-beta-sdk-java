@@ -35,7 +35,7 @@ public class VpnRoute implements IJsonBackedObject {
      * The Destination Prefix.
      * Destination prefix (IPv4/v6 address).
      */
-    @SerializedName("destinationPrefix")
+    @SerializedName(value = "destinationPrefix", alternate = {"DestinationPrefix"})
     @Expose
     public String destinationPrefix;
 
@@ -43,7 +43,7 @@ public class VpnRoute implements IJsonBackedObject {
      * The Prefix Size.
      * Prefix size. (1-32). Valid values 1 to 32
      */
-    @SerializedName("prefixSize")
+    @SerializedName(value = "prefixSize", alternate = {"PrefixSize"})
     @Expose
     public Integer prefixSize;
 

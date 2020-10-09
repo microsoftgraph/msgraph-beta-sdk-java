@@ -59,7 +59,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Audio.
      * Audio metadata, if the item is an audio file. Read-only.
      */
-    @SerializedName("audio")
+    @SerializedName(value = "audio", alternate = {"Audio"})
     @Expose
     public Audio audio;
 
@@ -67,7 +67,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Bundle.
      * 
      */
-    @SerializedName("bundle")
+    @SerializedName(value = "bundle", alternate = {"Bundle"})
     @Expose
     public Bundle bundle;
 
@@ -75,7 +75,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The CTag.
      * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
      */
-    @SerializedName("cTag")
+    @SerializedName(value = "cTag", alternate = {"CTag"})
     @Expose
     public String cTag;
 
@@ -83,7 +83,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Deleted.
      * Information about the deleted state of the item. Read-only.
      */
-    @SerializedName("deleted")
+    @SerializedName(value = "deleted", alternate = {"Deleted"})
     @Expose
     public Deleted deleted;
 
@@ -91,7 +91,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The File.
      * File metadata, if the item is a file. Read-only.
      */
-    @SerializedName("file")
+    @SerializedName(value = "file", alternate = {"File"})
     @Expose
     public File file;
 
@@ -99,7 +99,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The File System Info.
      * File system information on client. Read-write.
      */
-    @SerializedName("fileSystemInfo")
+    @SerializedName(value = "fileSystemInfo", alternate = {"FileSystemInfo"})
     @Expose
     public FileSystemInfo fileSystemInfo;
 
@@ -107,7 +107,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Folder.
      * Folder metadata, if the item is a folder. Read-only.
      */
-    @SerializedName("folder")
+    @SerializedName(value = "folder", alternate = {"Folder"})
     @Expose
     public Folder folder;
 
@@ -115,7 +115,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Image.
      * Image metadata, if the item is an image. Read-only.
      */
-    @SerializedName("image")
+    @SerializedName(value = "image", alternate = {"Image"})
     @Expose
     public Image image;
 
@@ -123,7 +123,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Location.
      * Location metadata, if the item has location data. Read-only.
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public GeoCoordinates location;
 
@@ -131,7 +131,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Package.
      * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      */
-    @SerializedName("package")
+    @SerializedName(value = "package", alternate = {"Package"})
     @Expose
     public com.microsoft.graph.models.extensions.Package msgraphPackage;
 
@@ -139,7 +139,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Pending Operations.
      * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      */
-    @SerializedName("pendingOperations")
+    @SerializedName(value = "pendingOperations", alternate = {"PendingOperations"})
     @Expose
     public PendingOperations pendingOperations;
 
@@ -147,7 +147,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Photo.
      * Photo metadata, if the item is a photo. Read-only.
      */
-    @SerializedName("photo")
+    @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose
     public Photo photo;
 
@@ -155,7 +155,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Publication.
      * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
      */
-    @SerializedName("publication")
+    @SerializedName(value = "publication", alternate = {"Publication"})
     @Expose
     public PublicationFacet publication;
 
@@ -163,7 +163,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Remote Item.
      * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
      */
-    @SerializedName("remoteItem")
+    @SerializedName(value = "remoteItem", alternate = {"RemoteItem"})
     @Expose
     public RemoteItem remoteItem;
 
@@ -171,7 +171,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Root.
      * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
      */
-    @SerializedName("root")
+    @SerializedName(value = "root", alternate = {"Root"})
     @Expose
     public Root root;
 
@@ -179,7 +179,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Search Result.
      * Search metadata, if the item is from a search result. Read-only.
      */
-    @SerializedName("searchResult")
+    @SerializedName(value = "searchResult", alternate = {"SearchResult"})
     @Expose
     public SearchResult searchResult;
 
@@ -187,7 +187,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Shared.
      * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      */
-    @SerializedName("shared")
+    @SerializedName(value = "shared", alternate = {"Shared"})
     @Expose
     public Shared shared;
 
@@ -195,7 +195,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Sharepoint Ids.
      * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
-    @SerializedName("sharepointIds")
+    @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
     public SharepointIds sharepointIds;
 
@@ -203,7 +203,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Size.
      * Size of the item in bytes. Read-only.
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Long size;
 
@@ -211,7 +211,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Special Folder.
      * If the current item is also available as a special folder, this facet is returned. Read-only.
      */
-    @SerializedName("specialFolder")
+    @SerializedName(value = "specialFolder", alternate = {"SpecialFolder"})
     @Expose
     public SpecialFolder specialFolder;
 
@@ -219,7 +219,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Video.
      * Video metadata, if the item is a video. Read-only.
      */
-    @SerializedName("video")
+    @SerializedName(value = "video", alternate = {"Video"})
     @Expose
     public Video video;
 
@@ -227,7 +227,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Web Dav Url.
      * WebDAV compatible URL for the item.
      */
-    @SerializedName("webDavUrl")
+    @SerializedName(value = "webDavUrl", alternate = {"WebDavUrl"})
     @Expose
     public String webDavUrl;
 
@@ -235,7 +235,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Workbook.
      * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
      */
-    @SerializedName("workbook")
+    @SerializedName(value = "workbook", alternate = {"Workbook"})
     @Expose
     public Workbook workbook;
 
@@ -243,7 +243,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Activities.
      * The list of recent activities that took place on this item.
      */
-    @SerializedName("activities")
+    @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
     public ItemActivityOLDCollectionPage activities;
 
@@ -251,7 +251,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Analytics.
      * Analytics about the view activities that took place on this item.
      */
-    @SerializedName("analytics")
+    @SerializedName(value = "analytics", alternate = {"Analytics"})
     @Expose
     public ItemAnalytics analytics;
 
@@ -259,7 +259,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Children.
      * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      */
-    @SerializedName("children")
+    @SerializedName(value = "children", alternate = {"Children"})
     @Expose
     public DriveItemCollectionPage children;
 
@@ -267,7 +267,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The List Item.
      * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
      */
-    @SerializedName("listItem")
+    @SerializedName(value = "listItem", alternate = {"ListItem"})
     @Expose
     public ListItem listItem;
 
@@ -275,7 +275,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Permissions.
      * The set of permissions for the item. Read-only. Nullable.
      */
-    @SerializedName("permissions")
+    @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
     public PermissionCollectionPage permissions;
 
@@ -283,7 +283,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Subscriptions.
      * The set of subscriptions on the item. Only supported on the root of a drive.
      */
-    @SerializedName("subscriptions")
+    @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
     public SubscriptionCollectionPage subscriptions;
 
@@ -291,7 +291,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Thumbnails.
      * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      */
-    @SerializedName("thumbnails")
+    @SerializedName(value = "thumbnails", alternate = {"Thumbnails"})
     @Expose
     public ThumbnailSetCollectionPage thumbnails;
 
@@ -299,7 +299,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Versions.
      * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      */
-    @SerializedName("versions")
+    @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
     public DriveItemVersionCollectionPage versions;
 

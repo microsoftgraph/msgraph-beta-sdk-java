@@ -22,7 +22,7 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesBody {
      * The user Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -30,7 +30,7 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesBody {
      * The addressable User Name.
      * 
      */
-    @SerializedName("addressableUserName")
+    @SerializedName(value = "addressableUserName", alternate = {"AddressableUserName"})
     @Expose
     public String addressableUserName;
 
@@ -38,7 +38,7 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesBody {
      * The group Tag.
      * 
      */
-    @SerializedName("groupTag")
+    @SerializedName(value = "groupTag", alternate = {"GroupTag"})
     @Expose
     public String groupTag;
 
@@ -46,7 +46,7 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

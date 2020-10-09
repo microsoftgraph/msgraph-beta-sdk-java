@@ -37,7 +37,7 @@ public class ExpressionInputObject implements IJsonBackedObject {
      * The Definition.
      * 
      */
-    @SerializedName("definition")
+    @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
     public ObjectDefinition definition;
 
@@ -45,7 +45,7 @@ public class ExpressionInputObject implements IJsonBackedObject {
      * The Properties.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public java.util.List<StringKeyObjectValuePair> properties;
 

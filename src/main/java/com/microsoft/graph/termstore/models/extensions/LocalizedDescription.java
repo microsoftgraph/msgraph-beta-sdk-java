@@ -35,7 +35,7 @@ public class LocalizedDescription implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class LocalizedDescription implements IJsonBackedObject {
      * The Language Tag.
      * 
      */
-    @SerializedName("languageTag")
+    @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
     public String languageTag;
 

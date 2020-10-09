@@ -35,7 +35,7 @@ public class DirectorySizeQuota implements IJsonBackedObject {
      * The Total.
      * 
      */
-    @SerializedName("total")
+    @SerializedName(value = "total", alternate = {"Total"})
     @Expose
     public Integer total;
 
@@ -43,7 +43,7 @@ public class DirectorySizeQuota implements IJsonBackedObject {
      * The Used.
      * 
      */
-    @SerializedName("used")
+    @SerializedName(value = "used", alternate = {"Used"})
     @Expose
     public Integer used;
 

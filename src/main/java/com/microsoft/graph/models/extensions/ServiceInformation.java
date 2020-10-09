@@ -35,7 +35,7 @@ public class ServiceInformation implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class ServiceInformation implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

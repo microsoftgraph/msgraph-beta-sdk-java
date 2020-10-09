@@ -37,7 +37,7 @@ public class Bitlocker implements IJsonBackedObject {
      * The Recovery Keys.
      * 
      */
-    @SerializedName("recoveryKeys")
+    @SerializedName(value = "recoveryKeys", alternate = {"RecoveryKeys"})
     @Expose
     public BitlockerRecoveryKeyCollectionPage recoveryKeys;
 

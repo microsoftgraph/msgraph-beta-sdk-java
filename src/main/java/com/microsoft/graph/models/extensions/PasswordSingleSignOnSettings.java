@@ -36,7 +36,7 @@ public class PasswordSingleSignOnSettings implements IJsonBackedObject {
      * The Fields.
      * 
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public java.util.List<PasswordSingleSignOnField> fields;
 

@@ -27,7 +27,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The Auth Methods.
      * 
      */
-    @SerializedName("authMethods")
+    @SerializedName(value = "authMethods", alternate = {"AuthMethods"})
     @Expose
     public java.util.List<RegistrationAuthMethod> authMethods;
 
@@ -35,7 +35,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The Is Capable.
      * 
      */
-    @SerializedName("isCapable")
+    @SerializedName(value = "isCapable", alternate = {"IsCapable"})
     @Expose
     public Boolean isCapable;
 
@@ -43,7 +43,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -51,7 +51,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The Is Mfa Registered.
      * 
      */
-    @SerializedName("isMfaRegistered")
+    @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose
     public Boolean isMfaRegistered;
 
@@ -59,7 +59,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The Is Registered.
      * 
      */
-    @SerializedName("isRegistered")
+    @SerializedName(value = "isRegistered", alternate = {"IsRegistered"})
     @Expose
     public Boolean isRegistered;
 
@@ -67,7 +67,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -75,7 +75,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

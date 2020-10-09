@@ -33,7 +33,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Authentication Method.
      * Specify the authentication method.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
 
@@ -41,7 +41,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Disable User Prompt For Server Validation.
      * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
      */
-    @SerializedName("disableUserPromptForServerValidation")
+    @SerializedName(value = "disableUserPromptForServerValidation", alternate = {"DisableUserPromptForServerValidation"})
     @Expose
     public Boolean disableUserPromptForServerValidation;
 
@@ -49,7 +49,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Eap Type.
      * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
-    @SerializedName("eapType")
+    @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
     public EapType eapType;
 
@@ -57,7 +57,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Enable Pairwise Master Key Caching.
      * Specify whether the wifi connection should enable pairwise master key caching.
      */
-    @SerializedName("enablePairwiseMasterKeyCaching")
+    @SerializedName(value = "enablePairwiseMasterKeyCaching", alternate = {"EnablePairwiseMasterKeyCaching"})
     @Expose
     public Boolean enablePairwiseMasterKeyCaching;
 
@@ -65,7 +65,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Enable Pre Authentication.
      * Specify whether pre-authentication should be enabled.
      */
-    @SerializedName("enablePreAuthentication")
+    @SerializedName(value = "enablePreAuthentication", alternate = {"EnablePreAuthentication"})
     @Expose
     public Boolean enablePreAuthentication;
 
@@ -73,7 +73,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Inner Authentication Protocol For EAPTTLS.
      * Specify inner authentication protocol for EAP TTLS.
      */
-    @SerializedName("innerAuthenticationProtocolForEAPTTLS")
+    @SerializedName(value = "innerAuthenticationProtocolForEAPTTLS", alternate = {"InnerAuthenticationProtocolForEAPTTLS"})
     @Expose
     public NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEAPTTLS;
 
@@ -81,7 +81,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Maximum Authentication Timeout In Seconds.
      * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
      */
-    @SerializedName("maximumAuthenticationTimeoutInSeconds")
+    @SerializedName(value = "maximumAuthenticationTimeoutInSeconds", alternate = {"MaximumAuthenticationTimeoutInSeconds"})
     @Expose
     public Integer maximumAuthenticationTimeoutInSeconds;
 
@@ -89,7 +89,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Maximum Number Of Pairwise Master Keys In Cache.
      * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
      */
-    @SerializedName("maximumNumberOfPairwiseMasterKeysInCache")
+    @SerializedName(value = "maximumNumberOfPairwiseMasterKeysInCache", alternate = {"MaximumNumberOfPairwiseMasterKeysInCache"})
     @Expose
     public Integer maximumNumberOfPairwiseMasterKeysInCache;
 
@@ -97,7 +97,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Maximum Pairwise Master Key Cache Time In Minutes.
      * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
      */
-    @SerializedName("maximumPairwiseMasterKeyCacheTimeInMinutes")
+    @SerializedName(value = "maximumPairwiseMasterKeyCacheTimeInMinutes", alternate = {"MaximumPairwiseMasterKeyCacheTimeInMinutes"})
     @Expose
     public Integer maximumPairwiseMasterKeyCacheTimeInMinutes;
 
@@ -105,7 +105,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Maximum Pre Authentication Attempts.
      * Specify maximum pre-authentication attempts.  Valid range: 1-16
      */
-    @SerializedName("maximumPreAuthenticationAttempts")
+    @SerializedName(value = "maximumPreAuthenticationAttempts", alternate = {"MaximumPreAuthenticationAttempts"})
     @Expose
     public Integer maximumPreAuthenticationAttempts;
 
@@ -113,7 +113,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Network Single Sign On.
      * Specify the network single sign on type.
      */
-    @SerializedName("networkSingleSignOn")
+    @SerializedName(value = "networkSingleSignOn", alternate = {"NetworkSingleSignOn"})
     @Expose
     public NetworkSingleSignOnType networkSingleSignOn;
 
@@ -121,7 +121,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Outer Identity Privacy Temporary Value.
      * Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
      */
-    @SerializedName("outerIdentityPrivacyTemporaryValue")
+    @SerializedName(value = "outerIdentityPrivacyTemporaryValue", alternate = {"OuterIdentityPrivacyTemporaryValue"})
     @Expose
     public String outerIdentityPrivacyTemporaryValue;
 
@@ -129,7 +129,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Perform Server Validation.
      * Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
      */
-    @SerializedName("performServerValidation")
+    @SerializedName(value = "performServerValidation", alternate = {"PerformServerValidation"})
     @Expose
     public Boolean performServerValidation;
 
@@ -137,7 +137,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Prompt For Additional Authentication Credentials.
      * Specify whether the wifi connection should prompt for additional authentication credentials.
      */
-    @SerializedName("promptForAdditionalAuthenticationCredentials")
+    @SerializedName(value = "promptForAdditionalAuthenticationCredentials", alternate = {"PromptForAdditionalAuthenticationCredentials"})
     @Expose
     public Boolean promptForAdditionalAuthenticationCredentials;
 
@@ -145,7 +145,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Require Cryptographic Binding.
      * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
      */
-    @SerializedName("requireCryptographicBinding")
+    @SerializedName(value = "requireCryptographicBinding", alternate = {"RequireCryptographicBinding"})
     @Expose
     public Boolean requireCryptographicBinding;
 
@@ -153,7 +153,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Trusted Server Certificate Names.
      * Specify trusted server certificate names.
      */
-    @SerializedName("trustedServerCertificateNames")
+    @SerializedName(value = "trustedServerCertificateNames", alternate = {"TrustedServerCertificateNames"})
     @Expose
     public java.util.List<String> trustedServerCertificateNames;
 
@@ -161,7 +161,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Identity Certificate For Client Authentication.
      * Specify identity certificate for client authentication.
      */
-    @SerializedName("identityCertificateForClientAuthentication")
+    @SerializedName(value = "identityCertificateForClientAuthentication", alternate = {"IdentityCertificateForClientAuthentication"})
     @Expose
     public WindowsCertificateProfileBase identityCertificateForClientAuthentication;
 
@@ -169,7 +169,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Root Certificate For Client Validation.
      * Specify root certificate for client validation.
      */
-    @SerializedName("rootCertificateForClientValidation")
+    @SerializedName(value = "rootCertificateForClientValidation", alternate = {"RootCertificateForClientValidation"})
     @Expose
     public Windows81TrustedRootCertificate rootCertificateForClientValidation;
 
@@ -177,7 +177,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Root Certificates For Server Validation.
      * Specify root certificate for server validation.
      */
-    @SerializedName("rootCertificatesForServerValidation")
+    @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose
     public Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 

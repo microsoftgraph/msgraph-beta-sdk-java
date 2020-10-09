@@ -28,7 +28,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
      * The Authoring Languages.
      * 
      */
-    @SerializedName("authoringLanguages")
+    @SerializedName(value = "authoringLanguages", alternate = {"AuthoringLanguages"})
     @Expose
     public java.util.List<LocaleInfo> authoringLanguages;
 
@@ -36,7 +36,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
      * The Default Display Language.
      * 
      */
-    @SerializedName("defaultDisplayLanguage")
+    @SerializedName(value = "defaultDisplayLanguage", alternate = {"DefaultDisplayLanguage"})
     @Expose
     public LocaleInfo defaultDisplayLanguage;
 
@@ -44,7 +44,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
      * The Default Regional Format.
      * 
      */
-    @SerializedName("defaultRegionalFormat")
+    @SerializedName(value = "defaultRegionalFormat", alternate = {"DefaultRegionalFormat"})
     @Expose
     public LocaleInfo defaultRegionalFormat;
 
@@ -52,7 +52,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
      * The Default Speech Input Language.
      * 
      */
-    @SerializedName("defaultSpeechInputLanguage")
+    @SerializedName(value = "defaultSpeechInputLanguage", alternate = {"DefaultSpeechInputLanguage"})
     @Expose
     public LocaleInfo defaultSpeechInputLanguage;
 
@@ -60,7 +60,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
      * The Default Translation Language.
      * 
      */
-    @SerializedName("defaultTranslationLanguage")
+    @SerializedName(value = "defaultTranslationLanguage", alternate = {"DefaultTranslationLanguage"})
     @Expose
     public LocaleInfo defaultTranslationLanguage;
 
@@ -68,7 +68,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
      * The Regional Format Overrides.
      * 
      */
-    @SerializedName("regionalFormatOverrides")
+    @SerializedName(value = "regionalFormatOverrides", alternate = {"RegionalFormatOverrides"})
     @Expose
     public RegionalFormatOverrides regionalFormatOverrides;
 

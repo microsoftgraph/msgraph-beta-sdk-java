@@ -147,14 +147,6 @@ import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequest
 import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileCollectionRequestBuilder;

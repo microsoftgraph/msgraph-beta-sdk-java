@@ -27,7 +27,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * The Derived Credential Settings.
      * Tenant level settings for the Derived Credentials to be used for authentication.
      */
-    @SerializedName("derivedCredentialSettings")
+    @SerializedName(value = "derivedCredentialSettings", alternate = {"DerivedCredentialSettings"})
     @Expose
     public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 

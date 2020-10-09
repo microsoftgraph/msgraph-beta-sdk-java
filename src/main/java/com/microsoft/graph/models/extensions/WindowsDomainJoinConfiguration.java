@@ -27,7 +27,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * The Active Directory Domain Name.
      * Active Directory domain name to join.
      */
-    @SerializedName("activeDirectoryDomainName")
+    @SerializedName(value = "activeDirectoryDomainName", alternate = {"ActiveDirectoryDomainName"})
     @Expose
     public String activeDirectoryDomainName;
 
@@ -35,7 +35,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * The Computer Name Static Prefix.
      * Fixed prefix to be used for computer name.
      */
-    @SerializedName("computerNameStaticPrefix")
+    @SerializedName(value = "computerNameStaticPrefix", alternate = {"ComputerNameStaticPrefix"})
     @Expose
     public String computerNameStaticPrefix;
 
@@ -43,7 +43,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * The Computer Name Suffix Random Char Count.
      * Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
      */
-    @SerializedName("computerNameSuffixRandomCharCount")
+    @SerializedName(value = "computerNameSuffixRandomCharCount", alternate = {"ComputerNameSuffixRandomCharCount"})
     @Expose
     public Integer computerNameSuffixRandomCharCount;
 
@@ -51,7 +51,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * The Organizational Unit.
      * Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
      */
-    @SerializedName("organizationalUnit")
+    @SerializedName(value = "organizationalUnit", alternate = {"OrganizationalUnit"})
     @Expose
     public String organizationalUnit;
 

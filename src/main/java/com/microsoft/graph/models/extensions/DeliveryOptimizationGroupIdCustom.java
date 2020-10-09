@@ -26,7 +26,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * The Group Id Custom.
      * Specifies an arbitrary group ID that the device belongs to
      */
-    @SerializedName("groupIdCustom")
+    @SerializedName(value = "groupIdCustom", alternate = {"GroupIdCustom"})
     @Expose
     public String groupIdCustom;
 

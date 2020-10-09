@@ -26,7 +26,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
      * The Audio Video.
      * 
      */
-    @SerializedName("audioVideo")
+    @SerializedName(value = "audioVideo", alternate = {"AudioVideo"})
     @Expose
     public Long audioVideo;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
      * The Dial In Microsoft.
      * 
      */
-    @SerializedName("dialInMicrosoft")
+    @SerializedName(value = "dialInMicrosoft", alternate = {"DialInMicrosoft"})
     @Expose
     public Long dialInMicrosoft;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
      * The Dial Out Microsoft.
      * 
      */
-    @SerializedName("dialOutMicrosoft")
+    @SerializedName(value = "dialOutMicrosoft", alternate = {"DialOutMicrosoft"})
     @Expose
     public Long dialOutMicrosoft;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 

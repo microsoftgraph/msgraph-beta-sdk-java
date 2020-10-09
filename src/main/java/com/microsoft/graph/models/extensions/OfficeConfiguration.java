@@ -39,7 +39,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
      * The Tenant Checkin Statuses.
      * 
      */
-    @SerializedName("tenantCheckinStatuses")
+    @SerializedName(value = "tenantCheckinStatuses", alternate = {"TenantCheckinStatuses"})
     @Expose
     public java.util.List<OfficeClientCheckinStatus> tenantCheckinStatuses;
 
@@ -47,7 +47,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
      * The Tenant User Checkin Summary.
      * 
      */
-    @SerializedName("tenantUserCheckinSummary")
+    @SerializedName(value = "tenantUserCheckinSummary", alternate = {"TenantUserCheckinSummary"})
     @Expose
     public OfficeUserCheckinSummary tenantUserCheckinSummary;
 
@@ -55,7 +55,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
      * The Client Configurations.
      * 
      */
-    @SerializedName("clientConfigurations")
+    @SerializedName(value = "clientConfigurations", alternate = {"ClientConfigurations"})
     @Expose
     public OfficeClientConfigurationCollectionPage clientConfigurations;
 

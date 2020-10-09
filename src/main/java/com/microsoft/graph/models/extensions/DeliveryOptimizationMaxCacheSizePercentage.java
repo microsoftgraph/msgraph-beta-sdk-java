@@ -26,7 +26,7 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
      * The Maximum Cache Size Percentage.
      * Specifies the maximum cache size that Delivery Optimization can utilize, as a percentage of disk size (1-100). Valid values 1 to 100
      */
-    @SerializedName("maximumCacheSizePercentage")
+    @SerializedName(value = "maximumCacheSizePercentage", alternate = {"MaximumCacheSizePercentage"})
     @Expose
     public Integer maximumCacheSizePercentage;
 

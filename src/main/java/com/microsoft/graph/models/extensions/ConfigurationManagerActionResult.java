@@ -27,7 +27,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * The Action Delivery Status.
      * State of the action being delivered to on-prem server
      */
-    @SerializedName("actionDeliveryStatus")
+    @SerializedName(value = "actionDeliveryStatus", alternate = {"ActionDeliveryStatus"})
     @Expose
     public ConfigurationManagerActionDeliveryStatus actionDeliveryStatus;
 
@@ -35,7 +35,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * The Error Code.
      * Error code of Configuration Manager action from client
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 

@@ -7,9 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.UnifiedRbacResourceNamespace;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceCollectionPage;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionPage;
 
@@ -27,10 +29,18 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Resource Namespaces.
+     * 
+     */
+    @SerializedName(value = "resourceNamespaces", alternate = {"ResourceNamespaces"})
+    @Expose
+    public UnifiedRbacResourceNamespaceCollectionPage resourceNamespaces;
+
+    /**
      * The Role Assignments.
      * 
      */
-    @SerializedName("roleAssignments")
+    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
     public UnifiedRoleAssignmentCollectionPage roleAssignments;
 
@@ -38,7 +48,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
      * The Role Definitions.
      * 
      */
-    @SerializedName("roleDefinitions")
+    @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
     public UnifiedRoleDefinitionCollectionPage roleDefinitions;
 
@@ -81,6 +91,10 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("resourceNamespaces")) {
+            resourceNamespaces = serializer.deserializeObject(json.get("resourceNamespaces").toString(), UnifiedRbacResourceNamespaceCollectionPage.class);
+        }
 
         if (json.has("roleAssignments")) {
             roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), UnifiedRoleAssignmentCollectionPage.class);

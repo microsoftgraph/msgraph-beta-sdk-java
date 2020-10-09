@@ -27,7 +27,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements IJso
      * The Example Json.
      * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
      */
-    @SerializedName("exampleJson")
+    @SerializedName(value = "exampleJson", alternate = {"ExampleJson"})
     @Expose
     public byte[] exampleJson;
 
@@ -35,7 +35,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements IJso
      * The Schema Items.
      * Collection of items each representing a named configuration option in the schema
      */
-    @SerializedName("schemaItems")
+    @SerializedName(value = "schemaItems", alternate = {"SchemaItems"})
     @Expose
     public java.util.List<AndroidForWorkAppConfigurationSchemaItem> schemaItems;
 

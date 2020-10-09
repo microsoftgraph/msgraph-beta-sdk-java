@@ -29,7 +29,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
      * The Item Insights.
      * 
      */
-    @SerializedName("itemInsights")
+    @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
     @Expose
     public ItemInsightsSettings itemInsights;
 
@@ -37,7 +37,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
      * The Profile Card Properties.
      * 
      */
-    @SerializedName("profileCardProperties")
+    @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
     @Expose
     public ProfileCardPropertyCollectionPage profileCardProperties;
 

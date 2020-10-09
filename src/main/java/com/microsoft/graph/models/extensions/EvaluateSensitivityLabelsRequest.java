@@ -37,7 +37,7 @@ public class EvaluateSensitivityLabelsRequest implements IJsonBackedObject {
      * The Current Label.
      * 
      */
-    @SerializedName("currentLabel")
+    @SerializedName(value = "currentLabel", alternate = {"CurrentLabel"})
     @Expose
     public CurrentLabel currentLabel;
 
@@ -45,7 +45,7 @@ public class EvaluateSensitivityLabelsRequest implements IJsonBackedObject {
      * The Discovered Sensitive Types.
      * 
      */
-    @SerializedName("discoveredSensitiveTypes")
+    @SerializedName(value = "discoveredSensitiveTypes", alternate = {"DiscoveredSensitiveTypes"})
     @Expose
     public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
 

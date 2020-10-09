@@ -67,11 +67,11 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
     public IApplicationWithReferenceRequestBuilder applications(final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("applications") + "/" + id, getClient(), null);
     }
-    public IConnectorCollectionWithReferencesRequestBuilder members() {
-        return new ConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public IConnectorCollectionRequestBuilder members() {
+        return new ConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public IConnectorWithReferenceRequestBuilder members(final String id) {
-        return new ConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public IConnectorRequestBuilder members(final String id) {
+        return new ConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

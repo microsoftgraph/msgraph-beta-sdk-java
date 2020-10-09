@@ -26,7 +26,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements IJsonBacked
      * The Value.
      * The string value of the key-value pair.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

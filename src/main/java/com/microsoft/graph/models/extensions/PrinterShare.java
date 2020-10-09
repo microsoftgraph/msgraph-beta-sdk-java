@@ -31,7 +31,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Allow All Users.
      * 
      */
-    @SerializedName("allowAllUsers")
+    @SerializedName(value = "allowAllUsers", alternate = {"AllowAllUsers"})
     @Expose
     public Boolean allowAllUsers;
 
@@ -39,7 +39,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -47,7 +47,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Allowed Groups.
      * 
      */
-    @SerializedName("allowedGroups")
+    @SerializedName(value = "allowedGroups", alternate = {"AllowedGroups"})
     @Expose
     public PrintIdentityCollectionPage allowedGroups;
 
@@ -55,7 +55,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Allowed Users.
      * 
      */
-    @SerializedName("allowedUsers")
+    @SerializedName(value = "allowedUsers", alternate = {"AllowedUsers"})
     @Expose
     public PrintUserIdentityCollectionPage allowedUsers;
 
@@ -63,7 +63,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Printer.
      * 
      */
-    @SerializedName("printer")
+    @SerializedName(value = "printer", alternate = {"Printer"})
     @Expose
     public Printer printer;
 

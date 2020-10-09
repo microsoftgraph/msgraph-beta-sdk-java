@@ -35,7 +35,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_10.
      * Mac OS 10.10 or later.
      */
-    @SerializedName("v10_10")
+    @SerializedName(value = "v10_10", alternate = {"V10_10"})
     @Expose
     public Boolean v10_10;
 
@@ -43,7 +43,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_11.
      * Mac OS 10.11 or later.
      */
-    @SerializedName("v10_11")
+    @SerializedName(value = "v10_11", alternate = {"V10_11"})
     @Expose
     public Boolean v10_11;
 
@@ -51,7 +51,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_12.
      * Mac OS 10.12 or later.
      */
-    @SerializedName("v10_12")
+    @SerializedName(value = "v10_12", alternate = {"V10_12"})
     @Expose
     public Boolean v10_12;
 
@@ -59,7 +59,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_13.
      * Mac OS 10.13 or later.
      */
-    @SerializedName("v10_13")
+    @SerializedName(value = "v10_13", alternate = {"V10_13"})
     @Expose
     public Boolean v10_13;
 
@@ -67,7 +67,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_14.
      * Mac OS 10.14 or later.
      */
-    @SerializedName("v10_14")
+    @SerializedName(value = "v10_14", alternate = {"V10_14"})
     @Expose
     public Boolean v10_14;
 
@@ -75,7 +75,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_15.
      * Mac OS 10.15 or later.
      */
-    @SerializedName("v10_15")
+    @SerializedName(value = "v10_15", alternate = {"V10_15"})
     @Expose
     public Boolean v10_15;
 
@@ -83,7 +83,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_7.
      * Mac OS 10.7 or later.
      */
-    @SerializedName("v10_7")
+    @SerializedName(value = "v10_7", alternate = {"V10_7"})
     @Expose
     public Boolean v10_7;
 
@@ -91,7 +91,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_8.
      * Mac OS 10.8 or later.
      */
-    @SerializedName("v10_8")
+    @SerializedName(value = "v10_8", alternate = {"V10_8"})
     @Expose
     public Boolean v10_8;
 
@@ -99,7 +99,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_9.
      * Mac OS 10.9 or later.
      */
-    @SerializedName("v10_9")
+    @SerializedName(value = "v10_9", alternate = {"V10_9"})
     @Expose
     public Boolean v10_9;
 

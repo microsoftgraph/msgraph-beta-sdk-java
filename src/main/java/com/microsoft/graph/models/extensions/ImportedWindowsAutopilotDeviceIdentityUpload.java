@@ -29,7 +29,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * The Created Date Time Utc.
      * DateTime when the entity is created.
      */
-    @SerializedName("createdDateTimeUtc")
+    @SerializedName(value = "createdDateTimeUtc", alternate = {"CreatedDateTimeUtc"})
     @Expose
     public java.util.Calendar createdDateTimeUtc;
 
@@ -37,7 +37,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * The Status.
      * Upload status. Possible values are: noUpload, pending, complete, error.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ImportedWindowsAutopilotDeviceIdentityUploadStatus status;
 
@@ -45,7 +45,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * The Device Identities.
      * Collection of all Autopilot devices as a part of this upload.
      */
-    @SerializedName("deviceIdentities")
+    @SerializedName(value = "deviceIdentities", alternate = {"DeviceIdentities"})
     @Expose
     public ImportedWindowsAutopilotDeviceIdentityCollectionPage deviceIdentities;
 

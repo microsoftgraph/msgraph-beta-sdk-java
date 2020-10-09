@@ -26,7 +26,7 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * The Implementations.
      * List of definition IDs for all possible implementations of this abstract complex setting
      */
-    @SerializedName("implementations")
+    @SerializedName(value = "implementations", alternate = {"Implementations"})
     @Expose
     public java.util.List<String> implementations;
 

@@ -26,7 +26,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
      * The Enrollment Types.
      * List of enrollment types
      */
-    @SerializedName("enrollmentTypes")
+    @SerializedName(value = "enrollmentTypes", alternate = {"EnrollmentTypes"})
     @Expose
     public java.util.List<String> enrollmentTypes;
 

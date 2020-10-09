@@ -35,7 +35,7 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
      * The Url.
      * 
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

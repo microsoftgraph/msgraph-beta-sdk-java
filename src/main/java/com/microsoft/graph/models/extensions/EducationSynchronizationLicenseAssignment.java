@@ -36,7 +36,7 @@ public class EducationSynchronizationLicenseAssignment implements IJsonBackedObj
      * The Applies To.
      * 
      */
-    @SerializedName("appliesTo")
+    @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
     public EducationUserRole appliesTo;
 
@@ -44,7 +44,7 @@ public class EducationSynchronizationLicenseAssignment implements IJsonBackedObj
      * The Sku Ids.
      * 
      */
-    @SerializedName("skuIds")
+    @SerializedName(value = "skuIds", alternate = {"SkuIds"})
     @Expose
     public java.util.List<String> skuIds;
 

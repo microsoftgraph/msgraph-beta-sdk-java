@@ -29,7 +29,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Created Date Time.
      * Created Date Time of the device
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -37,7 +37,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Description.
      * The description of the device
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -45,7 +45,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Enrollment State.
      * The state of the device in Intune
      */
-    @SerializedName("enrollmentState")
+    @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
     public EnrollmentState enrollmentState;
 
@@ -53,7 +53,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Imported Device Identifier.
      * Imported Device Identifier
      */
-    @SerializedName("importedDeviceIdentifier")
+    @SerializedName(value = "importedDeviceIdentifier", alternate = {"ImportedDeviceIdentifier"})
     @Expose
     public String importedDeviceIdentifier;
 
@@ -61,7 +61,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Imported Device Identity Type.
      * Type of Imported Device Identity
      */
-    @SerializedName("importedDeviceIdentityType")
+    @SerializedName(value = "importedDeviceIdentityType", alternate = {"ImportedDeviceIdentityType"})
     @Expose
     public ImportedDeviceIdentityType importedDeviceIdentityType;
 
@@ -69,7 +69,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Last Contacted Date Time.
      * Last Contacted Date Time of the device
      */
-    @SerializedName("lastContactedDateTime")
+    @SerializedName(value = "lastContactedDateTime", alternate = {"LastContactedDateTime"})
     @Expose
     public java.util.Calendar lastContactedDateTime;
 
@@ -77,7 +77,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Last Modified Date Time.
      * Last Modified DateTime of the description
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -85,7 +85,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
      * The Platform.
      * The platform of the Device.
      */
-    @SerializedName("platform")
+    @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
     public Platform platform;
 

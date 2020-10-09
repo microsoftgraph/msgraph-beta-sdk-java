@@ -26,7 +26,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
      * The Priority.
      * Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 

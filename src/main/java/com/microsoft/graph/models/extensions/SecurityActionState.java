@@ -36,7 +36,7 @@ public class SecurityActionState implements IJsonBackedObject {
      * The App Id.
      * 
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -44,7 +44,7 @@ public class SecurityActionState implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public OperationStatus status;
 
@@ -52,7 +52,7 @@ public class SecurityActionState implements IJsonBackedObject {
      * The Updated Date Time.
      * 
      */
-    @SerializedName("updatedDateTime")
+    @SerializedName(value = "updatedDateTime", alternate = {"UpdatedDateTime"})
     @Expose
     public java.util.Calendar updatedDateTime;
 
@@ -60,7 +60,7 @@ public class SecurityActionState implements IJsonBackedObject {
      * The User.
      * 
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public String user;
 

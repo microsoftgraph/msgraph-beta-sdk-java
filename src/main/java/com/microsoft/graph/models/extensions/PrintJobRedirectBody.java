@@ -22,7 +22,7 @@ public class PrintJobRedirectBody {
      * The destination Printer Id.
      * 
      */
-    @SerializedName("destinationPrinterId")
+    @SerializedName(value = "destinationPrinterId", alternate = {"DestinationPrinterId"})
     @Expose
     public String destinationPrinterId;
 

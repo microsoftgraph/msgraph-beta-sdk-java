@@ -37,7 +37,7 @@ public class External implements IJsonBackedObject {
      * The Connections.
      * 
      */
-    @SerializedName("connections")
+    @SerializedName(value = "connections", alternate = {"Connections"})
     @Expose
     public ExternalConnectionCollectionPage connections;
 

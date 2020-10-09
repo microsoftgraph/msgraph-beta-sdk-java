@@ -35,7 +35,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Corporate Work Profile Count.
      * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
      */
-    @SerializedName("androidCorporateWorkProfileCount")
+    @SerializedName(value = "androidCorporateWorkProfileCount", alternate = {"AndroidCorporateWorkProfileCount"})
     @Expose
     public Integer androidCorporateWorkProfileCount;
 
@@ -43,7 +43,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Count.
      * Number of android device count.
      */
-    @SerializedName("androidCount")
+    @SerializedName(value = "androidCount", alternate = {"AndroidCount"})
     @Expose
     public Integer androidCount;
 
@@ -51,7 +51,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Dedicated Count.
      * Number of dedicated Android devices.
      */
-    @SerializedName("androidDedicatedCount")
+    @SerializedName(value = "androidDedicatedCount", alternate = {"AndroidDedicatedCount"})
     @Expose
     public Integer androidDedicatedCount;
 
@@ -59,7 +59,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Device Admin Count.
      * Number of device admin Android devices.
      */
-    @SerializedName("androidDeviceAdminCount")
+    @SerializedName(value = "androidDeviceAdminCount", alternate = {"AndroidDeviceAdminCount"})
     @Expose
     public Integer androidDeviceAdminCount;
 
@@ -67,7 +67,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Fully Managed Count.
      * Number of fully managed Android devices.
      */
-    @SerializedName("androidFullyManagedCount")
+    @SerializedName(value = "androidFullyManagedCount", alternate = {"AndroidFullyManagedCount"})
     @Expose
     public Integer androidFullyManagedCount;
 
@@ -75,7 +75,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Work Profile Count.
      * Number of work profile Android devices.
      */
-    @SerializedName("androidWorkProfileCount")
+    @SerializedName(value = "androidWorkProfileCount", alternate = {"AndroidWorkProfileCount"})
     @Expose
     public Integer androidWorkProfileCount;
 
@@ -83,7 +83,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Aosp Userless Count.
      * Number of AOSP dedicated Android devices. Valid values 0 to 2147483647
      */
-    @SerializedName("aospUserlessCount")
+    @SerializedName(value = "aospUserlessCount", alternate = {"AospUserlessCount"})
     @Expose
     public Integer aospUserlessCount;
 
@@ -91,7 +91,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Config Mgr Device Count.
      * Number of ConfigMgr managed devices.
      */
-    @SerializedName("configMgrDeviceCount")
+    @SerializedName(value = "configMgrDeviceCount", alternate = {"ConfigMgrDeviceCount"})
     @Expose
     public Integer configMgrDeviceCount;
 
@@ -99,7 +99,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Ios Count.
      * Number of iOS device count.
      */
-    @SerializedName("iosCount")
+    @SerializedName(value = "iosCount", alternate = {"IosCount"})
     @Expose
     public Integer iosCount;
 
@@ -107,7 +107,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Mac OSCount.
      * Number of Mac OS X device count.
      */
-    @SerializedName("macOSCount")
+    @SerializedName(value = "macOSCount", alternate = {"MacOSCount"})
     @Expose
     public Integer macOSCount;
 
@@ -115,7 +115,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Unknown Count.
      * Number of unknown device count.
      */
-    @SerializedName("unknownCount")
+    @SerializedName(value = "unknownCount", alternate = {"UnknownCount"})
     @Expose
     public Integer unknownCount;
 
@@ -123,7 +123,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Windows Count.
      * Number of Windows device count.
      */
-    @SerializedName("windowsCount")
+    @SerializedName(value = "windowsCount", alternate = {"WindowsCount"})
     @Expose
     public Integer windowsCount;
 
@@ -131,7 +131,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Windows Mobile Count.
      * Number of Windows mobile device count.
      */
-    @SerializedName("windowsMobileCount")
+    @SerializedName(value = "windowsMobileCount", alternate = {"WindowsMobileCount"})
     @Expose
     public Integer windowsMobileCount;
 

@@ -28,7 +28,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Detection State.
      * Detection state from the lastest device compliance script execution
      */
-    @SerializedName("detectionState")
+    @SerializedName(value = "detectionState", alternate = {"DetectionState"})
     @Expose
     public RunState detectionState;
 
@@ -36,7 +36,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Expected State Update Date Time.
      * The next timestamp of when the device compliance script is expected to execute
      */
-    @SerializedName("expectedStateUpdateDateTime")
+    @SerializedName(value = "expectedStateUpdateDateTime", alternate = {"ExpectedStateUpdateDateTime"})
     @Expose
     public java.util.Calendar expectedStateUpdateDateTime;
 
@@ -44,7 +44,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Last State Update Date Time.
      * The last timestamp of when the device compliance script executed
      */
-    @SerializedName("lastStateUpdateDateTime")
+    @SerializedName(value = "lastStateUpdateDateTime", alternate = {"LastStateUpdateDateTime"})
     @Expose
     public java.util.Calendar lastStateUpdateDateTime;
 
@@ -52,7 +52,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Last Sync Date Time.
      * The last time that Intune Managment Extension synced with Intune
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -60,7 +60,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Script Error.
      * Error from the detection script
      */
-    @SerializedName("scriptError")
+    @SerializedName(value = "scriptError", alternate = {"ScriptError"})
     @Expose
     public String scriptError;
 
@@ -68,7 +68,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Script Output.
      * Output of the detection script
      */
-    @SerializedName("scriptOutput")
+    @SerializedName(value = "scriptOutput", alternate = {"ScriptOutput"})
     @Expose
     public String scriptOutput;
 
@@ -76,7 +76,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
      * The Managed Device.
      * The managed device on which the device compliance script executed
      */
-    @SerializedName("managedDevice")
+    @SerializedName(value = "managedDevice", alternate = {"ManagedDevice"})
     @Expose
     public ManagedDevice managedDevice;
 

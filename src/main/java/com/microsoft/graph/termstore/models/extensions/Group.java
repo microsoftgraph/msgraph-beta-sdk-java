@@ -29,7 +29,7 @@ public class Group extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -37,7 +37,7 @@ public class Group extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -45,7 +45,7 @@ public class Group extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -53,7 +53,7 @@ public class Group extends Entity implements IJsonBackedObject {
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public TermGroupScope scope;
 
@@ -61,7 +61,7 @@ public class Group extends Entity implements IJsonBackedObject {
      * The Sets.
      * 
      */
-    @SerializedName("sets")
+    @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose
     public SetCollectionPage sets;
 

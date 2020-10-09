@@ -22,7 +22,7 @@ public class WindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceBody {
      * The user Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -30,7 +30,7 @@ public class WindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceBody {
      * The addressable User Name.
      * 
      */
-    @SerializedName("addressableUserName")
+    @SerializedName(value = "addressableUserName", alternate = {"AddressableUserName"})
     @Expose
     public String addressableUserName;
 
@@ -38,7 +38,7 @@ public class WindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceBody {
      * The resource Account Name.
      * 
      */
-    @SerializedName("resourceAccountName")
+    @SerializedName(value = "resourceAccountName", alternate = {"ResourceAccountName"})
     @Expose
     public String resourceAccountName;
 

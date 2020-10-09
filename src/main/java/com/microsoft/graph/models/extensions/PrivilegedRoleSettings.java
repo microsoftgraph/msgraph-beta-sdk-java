@@ -26,7 +26,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Approval On Elevation.
      * 
      */
-    @SerializedName("approvalOnElevation")
+    @SerializedName(value = "approvalOnElevation", alternate = {"ApprovalOnElevation"})
     @Expose
     public Boolean approvalOnElevation;
 
@@ -34,7 +34,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Approver Ids.
      * 
      */
-    @SerializedName("approverIds")
+    @SerializedName(value = "approverIds", alternate = {"ApproverIds"})
     @Expose
     public java.util.List<String> approverIds;
 
@@ -42,7 +42,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Elevation Duration.
      * 
      */
-    @SerializedName("elevationDuration")
+    @SerializedName(value = "elevationDuration", alternate = {"ElevationDuration"})
     @Expose
     public javax.xml.datatype.Duration elevationDuration;
 
@@ -50,7 +50,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Is Mfa On Elevation Configurable.
      * 
      */
-    @SerializedName("isMfaOnElevationConfigurable")
+    @SerializedName(value = "isMfaOnElevationConfigurable", alternate = {"IsMfaOnElevationConfigurable"})
     @Expose
     public Boolean isMfaOnElevationConfigurable;
 
@@ -58,7 +58,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Last Global Admin.
      * 
      */
-    @SerializedName("lastGlobalAdmin")
+    @SerializedName(value = "lastGlobalAdmin", alternate = {"LastGlobalAdmin"})
     @Expose
     public Boolean lastGlobalAdmin;
 
@@ -66,7 +66,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Max Elavation Duration.
      * 
      */
-    @SerializedName("maxElavationDuration")
+    @SerializedName(value = "maxElavationDuration", alternate = {"MaxElavationDuration"})
     @Expose
     public javax.xml.datatype.Duration maxElavationDuration;
 
@@ -74,7 +74,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Mfa On Elevation.
      * 
      */
-    @SerializedName("mfaOnElevation")
+    @SerializedName(value = "mfaOnElevation", alternate = {"MfaOnElevation"})
     @Expose
     public Boolean mfaOnElevation;
 
@@ -82,7 +82,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Min Elevation Duration.
      * 
      */
-    @SerializedName("minElevationDuration")
+    @SerializedName(value = "minElevationDuration", alternate = {"MinElevationDuration"})
     @Expose
     public javax.xml.datatype.Duration minElevationDuration;
 
@@ -90,7 +90,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Notification To User On Elevation.
      * 
      */
-    @SerializedName("notificationToUserOnElevation")
+    @SerializedName(value = "notificationToUserOnElevation", alternate = {"NotificationToUserOnElevation"})
     @Expose
     public Boolean notificationToUserOnElevation;
 
@@ -98,7 +98,7 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
      * The Ticketing Info On Elevation.
      * 
      */
-    @SerializedName("ticketingInfoOnElevation")
+    @SerializedName(value = "ticketingInfoOnElevation", alternate = {"TicketingInfoOnElevation"})
     @Expose
     public Boolean ticketingInfoOnElevation;
 

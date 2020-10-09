@@ -38,7 +38,7 @@ public class ContentInfo implements IJsonBackedObject {
      * The Format.
      * 
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public ContentFormat format;
 
@@ -46,7 +46,7 @@ public class ContentInfo implements IJsonBackedObject {
      * The Identifier.
      * 
      */
-    @SerializedName("identifier")
+    @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
     public String identifier;
 
@@ -54,7 +54,7 @@ public class ContentInfo implements IJsonBackedObject {
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public java.util.List<KeyValuePair> metadata;
 
@@ -62,7 +62,7 @@ public class ContentInfo implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ContentState state;
 

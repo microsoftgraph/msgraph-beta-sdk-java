@@ -27,7 +27,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
      * The Question.
      * 
      */
-    @SerializedName("question")
+    @SerializedName(value = "question", alternate = {"Question"})
     @Expose
     public AccessPackageQuestion question;
 

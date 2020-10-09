@@ -26,7 +26,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyPresentation impl
      * The Explicit Value.
      * If this option is specified true the user must specify the registry subkey value and the registry subkey name. The list box shows two columns, one for the name and one for the data. The default value is false.
      */
-    @SerializedName("explicitValue")
+    @SerializedName(value = "explicitValue", alternate = {"ExplicitValue"})
     @Expose
     public Boolean explicitValue;
 
@@ -34,7 +34,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyPresentation impl
      * The Value Prefix.
      * 
      */
-    @SerializedName("valuePrefix")
+    @SerializedName(value = "valuePrefix", alternate = {"ValuePrefix"})
     @Expose
     public String valuePrefix;
 

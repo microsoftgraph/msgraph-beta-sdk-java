@@ -36,7 +36,7 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
      * The Aa Guids.
      * 
      */
-    @SerializedName("aaGuids")
+    @SerializedName(value = "aaGuids", alternate = {"AaGuids"})
     @Expose
     public java.util.List<String> aaGuids;
 
@@ -44,7 +44,7 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
      * The Enforcement Type.
      * 
      */
-    @SerializedName("enforcementType")
+    @SerializedName(value = "enforcementType", alternate = {"EnforcementType"})
     @Expose
     public Fido2RestrictionEnforcementType enforcementType;
 
@@ -52,7 +52,7 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
      * The Is Enforced.
      * 
      */
-    @SerializedName("isEnforced")
+    @SerializedName(value = "isEnforced", alternate = {"IsEnforced"})
     @Expose
     public Boolean isEnforced;
 

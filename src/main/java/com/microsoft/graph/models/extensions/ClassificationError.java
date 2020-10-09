@@ -26,7 +26,7 @@ public class ClassificationError extends ClassifcationErrorBase implements IJson
      * The Details.
      * 
      */
-    @SerializedName("details")
+    @SerializedName(value = "details", alternate = {"Details"})
     @Expose
     public java.util.List<ClassifcationErrorBase> details;
 

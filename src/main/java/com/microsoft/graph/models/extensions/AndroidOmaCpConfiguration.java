@@ -26,7 +26,7 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements IJ
      * The Configuration Xml.
      * Configuration XML that will be applied to the device. When it is read, it only provides a placeholder string since the original data is encrypted and stored.
      */
-    @SerializedName("configurationXml")
+    @SerializedName(value = "configurationXml", alternate = {"ConfigurationXml"})
     @Expose
     public byte[] configurationXml;
 

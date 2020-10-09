@@ -27,7 +27,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements IJso
      * The Connection Name.
      * Connection name displayed to the user.
      */
-    @SerializedName("connectionName")
+    @SerializedName(value = "connectionName", alternate = {"ConnectionName"})
     @Expose
     public String connectionName;
 
@@ -35,7 +35,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements IJso
      * The Custom Xml.
      * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
      */
-    @SerializedName("customXml")
+    @SerializedName(value = "customXml", alternate = {"CustomXml"})
     @Expose
     public byte[] customXml;
 
@@ -43,7 +43,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements IJso
      * The Servers.
      * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("servers")
+    @SerializedName(value = "servers", alternate = {"Servers"})
     @Expose
     public java.util.List<VpnServer> servers;
 

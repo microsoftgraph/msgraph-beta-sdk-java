@@ -27,7 +27,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
      * The Default Item.
      * Localized string value identifying the default choice of the list of items.
      */
-    @SerializedName("defaultItem")
+    @SerializedName(value = "defaultItem", alternate = {"DefaultItem"})
     @Expose
     public GroupPolicyPresentationDropdownListItem defaultItem;
 
@@ -35,7 +35,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
      * The Items.
      * Represents a set of localized display names and their associated values.
      */
-    @SerializedName("items")
+    @SerializedName(value = "items", alternate = {"Items"})
     @Expose
     public java.util.List<GroupPolicyPresentationDropdownListItem> items;
 
@@ -43,7 +43,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
      * The Required.
      * Requirement to enter a value in the parameter box. The default value is false.
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 

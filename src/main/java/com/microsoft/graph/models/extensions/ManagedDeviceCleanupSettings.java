@@ -35,7 +35,7 @@ public class ManagedDeviceCleanupSettings implements IJsonBackedObject {
      * The Device Inactivity Before Retirement In Days.
      * Number of days when the device has not contacted Intune.
      */
-    @SerializedName("deviceInactivityBeforeRetirementInDays")
+    @SerializedName(value = "deviceInactivityBeforeRetirementInDays", alternate = {"DeviceInactivityBeforeRetirementInDays"})
     @Expose
     public String deviceInactivityBeforeRetirementInDays;
 

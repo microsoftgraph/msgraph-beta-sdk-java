@@ -26,7 +26,7 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
      * The Error Code.
      * RotateBitLockerKeys action error code
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 

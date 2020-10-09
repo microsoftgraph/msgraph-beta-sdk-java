@@ -26,7 +26,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The Android Phone.
      * 
      */
-    @SerializedName("androidPhone")
+    @SerializedName(value = "androidPhone", alternate = {"AndroidPhone"})
     @Expose
     public Integer androidPhone;
 
@@ -34,7 +34,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The IPad.
      * 
      */
-    @SerializedName("iPad")
+    @SerializedName(value = "iPad", alternate = {"IPad"})
     @Expose
     public Integer iPad;
 
@@ -42,7 +42,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The IPhone.
      * 
      */
-    @SerializedName("iPhone")
+    @SerializedName(value = "iPhone", alternate = {"IPhone"})
     @Expose
     public Integer iPhone;
 
@@ -50,7 +50,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The Other.
      * 
      */
-    @SerializedName("other")
+    @SerializedName(value = "other", alternate = {"Other"})
     @Expose
     public Integer other;
 
@@ -58,7 +58,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -74,7 +74,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The Web.
      * 
      */
-    @SerializedName("web")
+    @SerializedName(value = "web", alternate = {"Web"})
     @Expose
     public Integer web;
 
@@ -82,7 +82,7 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
      * The Windows Phone.
      * 
      */
-    @SerializedName("windowsPhone")
+    @SerializedName(value = "windowsPhone", alternate = {"WindowsPhone"})
     @Expose
     public Integer windowsPhone;
 

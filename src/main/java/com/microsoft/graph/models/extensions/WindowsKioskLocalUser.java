@@ -26,7 +26,7 @@ public class WindowsKioskLocalUser extends WindowsKioskUser implements IJsonBack
      * The User Name.
      * The local user that will be locked to this kiosk configuration
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

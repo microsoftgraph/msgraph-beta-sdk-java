@@ -40,7 +40,7 @@ public class CryptographySuite implements IJsonBackedObject {
      * The Authentication Transform Constants.
      * Authentication Transform Constants
      */
-    @SerializedName("authenticationTransformConstants")
+    @SerializedName(value = "authenticationTransformConstants", alternate = {"AuthenticationTransformConstants"})
     @Expose
     public AuthenticationTransformConstant authenticationTransformConstants;
 
@@ -48,7 +48,7 @@ public class CryptographySuite implements IJsonBackedObject {
      * The Cipher Transform Constants.
      * Cipher Transform Constants
      */
-    @SerializedName("cipherTransformConstants")
+    @SerializedName(value = "cipherTransformConstants", alternate = {"CipherTransformConstants"})
     @Expose
     public VpnEncryptionAlgorithmType cipherTransformConstants;
 
@@ -56,7 +56,7 @@ public class CryptographySuite implements IJsonBackedObject {
      * The Dh Group.
      * Diffie Hellman Group
      */
-    @SerializedName("dhGroup")
+    @SerializedName(value = "dhGroup", alternate = {"DhGroup"})
     @Expose
     public DiffieHellmanGroup dhGroup;
 
@@ -64,7 +64,7 @@ public class CryptographySuite implements IJsonBackedObject {
      * The Encryption Method.
      * Encryption Method
      */
-    @SerializedName("encryptionMethod")
+    @SerializedName(value = "encryptionMethod", alternate = {"EncryptionMethod"})
     @Expose
     public VpnEncryptionAlgorithmType encryptionMethod;
 
@@ -72,7 +72,7 @@ public class CryptographySuite implements IJsonBackedObject {
      * The Integrity Check Method.
      * Integrity Check Method
      */
-    @SerializedName("integrityCheckMethod")
+    @SerializedName(value = "integrityCheckMethod", alternate = {"IntegrityCheckMethod"})
     @Expose
     public VpnIntegrityAlgorithmType integrityCheckMethod;
 
@@ -80,7 +80,7 @@ public class CryptographySuite implements IJsonBackedObject {
      * The Pfs Group.
      * Perfect Forward Secrecy Group
      */
-    @SerializedName("pfsGroup")
+    @SerializedName(value = "pfsGroup", alternate = {"PfsGroup"})
     @Expose
     public PerfectForwardSecrecyGroup pfsGroup;
 

@@ -26,7 +26,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
      * The Default Value.
      * The default value of Integer param. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public Integer defaultValue;
 

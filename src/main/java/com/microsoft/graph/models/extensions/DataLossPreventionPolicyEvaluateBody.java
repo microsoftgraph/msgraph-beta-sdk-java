@@ -24,7 +24,7 @@ public class DataLossPreventionPolicyEvaluateBody {
      * The target.
      * 
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public String target;
 
@@ -32,7 +32,7 @@ public class DataLossPreventionPolicyEvaluateBody {
      * The evaluation Input.
      * 
      */
-    @SerializedName("evaluationInput")
+    @SerializedName(value = "evaluationInput", alternate = {"EvaluationInput"})
     @Expose
     public DlpEvaluationInput evaluationInput;
 
@@ -40,7 +40,7 @@ public class DataLossPreventionPolicyEvaluateBody {
      * The notification Info.
      * 
      */
-    @SerializedName("notificationInfo")
+    @SerializedName(value = "notificationInfo", alternate = {"NotificationInfo"})
     @Expose
     public DlpNotification notificationInfo;
 

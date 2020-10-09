@@ -37,7 +37,7 @@ public class Acl implements IJsonBackedObject {
      * The Access Type.
      * 
      */
-    @SerializedName("accessType")
+    @SerializedName(value = "accessType", alternate = {"AccessType"})
     @Expose
     public AccessType accessType;
 
@@ -45,7 +45,7 @@ public class Acl implements IJsonBackedObject {
      * The Identity Source.
      * 
      */
-    @SerializedName("identitySource")
+    @SerializedName(value = "identitySource", alternate = {"IdentitySource"})
     @Expose
     public String identitySource;
 
@@ -53,7 +53,7 @@ public class Acl implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public AclType type;
 
@@ -61,7 +61,7 @@ public class Acl implements IJsonBackedObject {
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

@@ -37,7 +37,7 @@ public class BookingWorkHours implements IJsonBackedObject {
      * The Day.
      * The day of the week represented by this instance.
      */
-    @SerializedName("day")
+    @SerializedName(value = "day", alternate = {"Day"})
     @Expose
     public DayOfWeek day;
 
@@ -45,7 +45,7 @@ public class BookingWorkHours implements IJsonBackedObject {
      * The Time Slots.
      * A list of start/end times during a day.
      */
-    @SerializedName("timeSlots")
+    @SerializedName(value = "timeSlots", alternate = {"TimeSlots"})
     @Expose
     public java.util.List<BookingWorkTimeSlot> timeSlots;
 

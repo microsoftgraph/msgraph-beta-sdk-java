@@ -36,7 +36,7 @@ public class GovernanceNotificationPolicy implements IJsonBackedObject {
      * The Enabled Template Types.
      * 
      */
-    @SerializedName("enabledTemplateTypes")
+    @SerializedName(value = "enabledTemplateTypes", alternate = {"EnabledTemplateTypes"})
     @Expose
     public java.util.List<String> enabledTemplateTypes;
 
@@ -44,7 +44,7 @@ public class GovernanceNotificationPolicy implements IJsonBackedObject {
      * The Notification Templates.
      * 
      */
-    @SerializedName("notificationTemplates")
+    @SerializedName(value = "notificationTemplates", alternate = {"NotificationTemplates"})
     @Expose
     public java.util.List<GovernanceNotificationTemplate> notificationTemplates;
 

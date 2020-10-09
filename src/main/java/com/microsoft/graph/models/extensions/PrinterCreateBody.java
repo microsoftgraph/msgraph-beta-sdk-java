@@ -22,7 +22,7 @@ public class PrinterCreateBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -30,7 +30,7 @@ public class PrinterCreateBody {
      * The manufacturer.
      * 
      */
-    @SerializedName("manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
@@ -38,7 +38,7 @@ public class PrinterCreateBody {
      * The model.
      * 
      */
-    @SerializedName("model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -46,7 +46,7 @@ public class PrinterCreateBody {
      * The physical Device Id.
      * 
      */
-    @SerializedName("physicalDeviceId")
+    @SerializedName(value = "physicalDeviceId", alternate = {"PhysicalDeviceId"})
     @Expose
     public String physicalDeviceId;
 
@@ -54,7 +54,7 @@ public class PrinterCreateBody {
      * The has Physical Device.
      * 
      */
-    @SerializedName("hasPhysicalDevice")
+    @SerializedName(value = "hasPhysicalDevice", alternate = {"HasPhysicalDevice"})
     @Expose
     public Boolean hasPhysicalDevice;
 
@@ -62,7 +62,7 @@ public class PrinterCreateBody {
      * The certificate Signing Request.
      * 
      */
-    @SerializedName("certificateSigningRequest")
+    @SerializedName(value = "certificateSigningRequest", alternate = {"CertificateSigningRequest"})
     @Expose
     public PrintCertificateSigningRequest certificateSigningRequest;
 
@@ -70,7 +70,7 @@ public class PrinterCreateBody {
      * The connector Id.
      * 
      */
-    @SerializedName("connectorId")
+    @SerializedName(value = "connectorId", alternate = {"ConnectorId"})
     @Expose
     public String connectorId;
 

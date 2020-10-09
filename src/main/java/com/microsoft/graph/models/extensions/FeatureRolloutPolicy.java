@@ -29,7 +29,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -37,7 +37,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Feature.
      * 
      */
-    @SerializedName("feature")
+    @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
     public StagedFeatureName feature;
 
@@ -53,7 +53,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Is Applied To Organization.
      * 
      */
-    @SerializedName("isAppliedToOrganization")
+    @SerializedName(value = "isAppliedToOrganization", alternate = {"IsAppliedToOrganization"})
     @Expose
     public Boolean isAppliedToOrganization;
 
@@ -61,7 +61,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -69,7 +69,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Applies To.
      * 
      */
-    @SerializedName("appliesTo")
+    @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
     public DirectoryObjectCollectionPage appliesTo;
 

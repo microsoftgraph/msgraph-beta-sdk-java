@@ -27,7 +27,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Advanced Settings.
      * Additional settings that may be applied to the server
      */
-    @SerializedName("advancedSettings")
+    @SerializedName(value = "advancedSettings", alternate = {"AdvancedSettings"})
     @Expose
     public java.util.List<KeyValuePair> advancedSettings;
 
@@ -35,7 +35,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Default Domain Suffix.
      * The Default Domain appendix that will be used by the clients
      */
-    @SerializedName("defaultDomainSuffix")
+    @SerializedName(value = "defaultDomainSuffix", alternate = {"DefaultDomainSuffix"})
     @Expose
     public String defaultDomainSuffix;
 
@@ -43,7 +43,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Description.
      * The MicrosoftTunnelConfiguration's description
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -51,7 +51,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Display Name.
      * The MicrosoftTunnelConfiguration's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -59,7 +59,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Dns Servers.
      * The DNS servers that will be used by the clients
      */
-    @SerializedName("dnsServers")
+    @SerializedName(value = "dnsServers", alternate = {"DnsServers"})
     @Expose
     public java.util.List<String> dnsServers;
 
@@ -67,7 +67,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Last Update Date Time.
      * When the MicrosoftTunnelConfiguration was last updated
      */
-    @SerializedName("lastUpdateDateTime")
+    @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
     public java.util.Calendar lastUpdateDateTime;
 
@@ -75,7 +75,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Listen Port.
      * The port that both TCP and UPD will listen over on the server
      */
-    @SerializedName("listenPort")
+    @SerializedName(value = "listenPort", alternate = {"ListenPort"})
     @Expose
     public Integer listenPort;
 
@@ -83,7 +83,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Network.
      * The subnet that will be used to allocate virtual address for the clients
      */
-    @SerializedName("network")
+    @SerializedName(value = "network", alternate = {"Network"})
     @Expose
     public String network;
 
@@ -91,7 +91,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -99,7 +99,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Routes Exclude.
      * Subsets of the routes that will not be routed by the server
      */
-    @SerializedName("routesExclude")
+    @SerializedName(value = "routesExclude", alternate = {"RoutesExclude"})
     @Expose
     public java.util.List<String> routesExclude;
 
@@ -107,7 +107,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Routes Include.
      * The routs that will be routed by the server
      */
-    @SerializedName("routesInclude")
+    @SerializedName(value = "routesInclude", alternate = {"RoutesInclude"})
     @Expose
     public java.util.List<String> routesInclude;
 
@@ -115,7 +115,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
      * The Split DNS.
      * The domains that will be resolved using the provided dns servers
      */
-    @SerializedName("splitDNS")
+    @SerializedName(value = "splitDNS", alternate = {"SplitDNS"})
     @Expose
     public java.util.List<String> splitDNS;
 

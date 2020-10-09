@@ -28,7 +28,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The Feature Usage Details.
      * 
      */
-    @SerializedName("featureUsageDetails")
+    @SerializedName(value = "featureUsageDetails", alternate = {"FeatureUsageDetails"})
     @Expose
     public java.util.List<FeatureUsageDetail> featureUsageDetails;
 
@@ -36,7 +36,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The Last Updated Date Time.
      * 
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
 
@@ -44,7 +44,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The License Assigned.
      * 
      */
-    @SerializedName("licenseAssigned")
+    @SerializedName(value = "licenseAssigned", alternate = {"LicenseAssigned"})
     @Expose
     public AzureADLicenseType licenseAssigned;
 
@@ -52,7 +52,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The License Recommended.
      * 
      */
-    @SerializedName("licenseRecommended")
+    @SerializedName(value = "licenseRecommended", alternate = {"LicenseRecommended"})
     @Expose
     public AzureADLicenseType licenseRecommended;
 
@@ -60,7 +60,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The User Display Name.
      * 
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -68,7 +68,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -76,7 +76,7 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

@@ -27,7 +27,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Is Root Scope.
      * 
      */
-    @SerializedName("isRootScope")
+    @SerializedName(value = "isRootScope", alternate = {"IsRootScope"})
     @Expose
     public Boolean isRootScope;
 
@@ -51,7 +51,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Origin Id.
      * 
      */
-    @SerializedName("originId")
+    @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
     public String originId;
 
@@ -59,7 +59,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Origin System.
      * 
      */
-    @SerializedName("originSystem")
+    @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
     public String originSystem;
 
@@ -67,7 +67,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Role Origin Id.
      * 
      */
-    @SerializedName("roleOriginId")
+    @SerializedName(value = "roleOriginId", alternate = {"RoleOriginId"})
     @Expose
     public String roleOriginId;
 
@@ -75,7 +75,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Url.
      * 
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 
@@ -83,7 +83,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
      * The Access Package Resource.
      * 
      */
-    @SerializedName("accessPackageResource")
+    @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose
     public AccessPackageResource accessPackageResource;
 

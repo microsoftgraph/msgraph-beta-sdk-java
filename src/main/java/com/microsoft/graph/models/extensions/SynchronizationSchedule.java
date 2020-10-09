@@ -36,7 +36,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
      * The Expiration.
      * 
      */
-    @SerializedName("expiration")
+    @SerializedName(value = "expiration", alternate = {"Expiration"})
     @Expose
     public java.util.Calendar expiration;
 
@@ -44,7 +44,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
      * The Interval.
      * 
      */
-    @SerializedName("interval")
+    @SerializedName(value = "interval", alternate = {"Interval"})
     @Expose
     public javax.xml.datatype.Duration interval;
 
@@ -52,7 +52,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public SynchronizationScheduleState state;
 

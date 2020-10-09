@@ -26,7 +26,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      * The Element Definition Id.
      * The Setting Definition ID that describes what each element of the collection looks like
      */
-    @SerializedName("elementDefinitionId")
+    @SerializedName(value = "elementDefinitionId", alternate = {"ElementDefinitionId"})
     @Expose
     public String elementDefinitionId;
 

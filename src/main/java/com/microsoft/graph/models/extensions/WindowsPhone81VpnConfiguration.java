@@ -28,7 +28,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The Authentication Method.
      * Authentication method.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public VpnAuthenticationMethod authenticationMethod;
 
@@ -36,7 +36,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The Bypass Vpn On Company Wifi.
      * Bypass VPN on company Wi-Fi.
      */
-    @SerializedName("bypassVpnOnCompanyWifi")
+    @SerializedName(value = "bypassVpnOnCompanyWifi", alternate = {"BypassVpnOnCompanyWifi"})
     @Expose
     public Boolean bypassVpnOnCompanyWifi;
 
@@ -44,7 +44,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The Bypass Vpn On Home Wifi.
      * Bypass VPN on home Wi-Fi.
      */
-    @SerializedName("bypassVpnOnHomeWifi")
+    @SerializedName(value = "bypassVpnOnHomeWifi", alternate = {"BypassVpnOnHomeWifi"})
     @Expose
     public Boolean bypassVpnOnHomeWifi;
 
@@ -52,7 +52,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The Dns Suffix Search List.
      * DNS suffix search list.
      */
-    @SerializedName("dnsSuffixSearchList")
+    @SerializedName(value = "dnsSuffixSearchList", alternate = {"DnsSuffixSearchList"})
     @Expose
     public java.util.List<String> dnsSuffixSearchList;
 
@@ -60,7 +60,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The Remember User Credentials.
      * Remember user credentials.
      */
-    @SerializedName("rememberUserCredentials")
+    @SerializedName(value = "rememberUserCredentials", alternate = {"RememberUserCredentials"})
     @Expose
     public Boolean rememberUserCredentials;
 
@@ -68,7 +68,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public WindowsPhone81CertificateProfileBase identityCertificate;
 

@@ -27,7 +27,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Alt Sec Id.
      * 
      */
-    @SerializedName("altSecId")
+    @SerializedName(value = "altSecId", alternate = {"AltSecId"})
     @Expose
     public String altSecId;
 
@@ -35,7 +35,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Connected Organization Id.
      * 
      */
-    @SerializedName("connectedOrganizationId")
+    @SerializedName(value = "connectedOrganizationId", alternate = {"ConnectedOrganizationId"})
     @Expose
     public String connectedOrganizationId;
 
@@ -43,7 +43,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Email.
      * 
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -59,7 +59,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Object Id.
      * 
      */
-    @SerializedName("objectId")
+    @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
     public String objectId;
 
@@ -67,7 +67,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The On Premises Security Identifier.
      * 
      */
-    @SerializedName("onPremisesSecurityIdentifier")
+    @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
     public String onPremisesSecurityIdentifier;
 
@@ -75,7 +75,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Principal Name.
      * 
      */
-    @SerializedName("principalName")
+    @SerializedName(value = "principalName", alternate = {"PrincipalName"})
     @Expose
     public String principalName;
 
@@ -83,7 +83,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -91,7 +91,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
      * The Connected Organization.
      * 
      */
-    @SerializedName("connectedOrganization")
+    @SerializedName(value = "connectedOrganization", alternate = {"ConnectedOrganization"})
     @Expose
     public ConnectedOrganization connectedOrganization;
 

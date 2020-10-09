@@ -29,7 +29,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Bind Status.
      * Bind status of the tenant with the Google EMM API
      */
-    @SerializedName("bindStatus")
+    @SerializedName(value = "bindStatus", alternate = {"BindStatus"})
     @Expose
     public AndroidForWorkBindStatus bindStatus;
 
@@ -37,7 +37,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Device Owner Management Enabled.
      * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
      */
-    @SerializedName("deviceOwnerManagementEnabled")
+    @SerializedName(value = "deviceOwnerManagementEnabled", alternate = {"DeviceOwnerManagementEnabled"})
     @Expose
     public Boolean deviceOwnerManagementEnabled;
 
@@ -45,7 +45,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Enrollment Target.
      * Indicates which users can enroll devices in Android for Work device management
      */
-    @SerializedName("enrollmentTarget")
+    @SerializedName(value = "enrollmentTarget", alternate = {"EnrollmentTarget"})
     @Expose
     public AndroidForWorkEnrollmentTarget enrollmentTarget;
 
@@ -53,7 +53,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Last App Sync Date Time.
      * Last completion time for app sync
      */
-    @SerializedName("lastAppSyncDateTime")
+    @SerializedName(value = "lastAppSyncDateTime", alternate = {"LastAppSyncDateTime"})
     @Expose
     public java.util.Calendar lastAppSyncDateTime;
 
@@ -61,7 +61,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Last App Sync Status.
      * Last application sync result
      */
-    @SerializedName("lastAppSyncStatus")
+    @SerializedName(value = "lastAppSyncStatus", alternate = {"LastAppSyncStatus"})
     @Expose
     public AndroidForWorkSyncStatus lastAppSyncStatus;
 
@@ -69,7 +69,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Last Modified Date Time.
      * Last modification time for Android for Work settings
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -77,7 +77,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Owner Organization Name.
      * Organization name used when onboarding Android for Work
      */
-    @SerializedName("ownerOrganizationName")
+    @SerializedName(value = "ownerOrganizationName", alternate = {"OwnerOrganizationName"})
     @Expose
     public String ownerOrganizationName;
 
@@ -85,7 +85,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Owner User Principal Name.
      * Owner UPN that created the enterprise
      */
-    @SerializedName("ownerUserPrincipalName")
+    @SerializedName(value = "ownerUserPrincipalName", alternate = {"OwnerUserPrincipalName"})
     @Expose
     public String ownerUserPrincipalName;
 
@@ -93,7 +93,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
      * The Target Group Ids.
      * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
      */
-    @SerializedName("targetGroupIds")
+    @SerializedName(value = "targetGroupIds", alternate = {"TargetGroupIds"})
     @Expose
     public java.util.List<String> targetGroupIds;
 

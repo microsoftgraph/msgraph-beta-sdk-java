@@ -28,7 +28,7 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
      * The Available Version.
      * Windows management app available version.
      */
-    @SerializedName("availableVersion")
+    @SerializedName(value = "availableVersion", alternate = {"AvailableVersion"})
     @Expose
     public String availableVersion;
 
@@ -36,7 +36,7 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
      * The Health States.
      * The list of health states for installed Windows management app.
      */
-    @SerializedName("healthStates")
+    @SerializedName(value = "healthStates", alternate = {"HealthStates"})
     @Expose
     public WindowsManagementAppHealthStateCollectionPage healthStates;
 

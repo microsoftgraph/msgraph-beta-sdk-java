@@ -26,7 +26,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * The Role Id.
      * 
      */
-    @SerializedName("roleId")
+    @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
     public String roleId;
 
@@ -34,7 +34,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * The Role Template Id.
      * 
      */
-    @SerializedName("roleTemplateId")
+    @SerializedName(value = "roleTemplateId", alternate = {"RoleTemplateId"})
     @Expose
     public String roleTemplateId;
 

@@ -22,7 +22,7 @@ public class TrustFrameworkKeySetUploadSecretBody {
      * The use.
      * 
      */
-    @SerializedName("use")
+    @SerializedName(value = "use", alternate = {"Use"})
     @Expose
     public String use;
 
@@ -30,7 +30,7 @@ public class TrustFrameworkKeySetUploadSecretBody {
      * The k.
      * 
      */
-    @SerializedName("k")
+    @SerializedName(value = "k", alternate = {"K"})
     @Expose
     public String k;
 
@@ -38,7 +38,7 @@ public class TrustFrameworkKeySetUploadSecretBody {
      * The nbf.
      * 
      */
-    @SerializedName("nbf")
+    @SerializedName(value = "nbf", alternate = {"Nbf"})
     @Expose
     public Long nbf;
 
@@ -46,7 +46,7 @@ public class TrustFrameworkKeySetUploadSecretBody {
      * The exp.
      * 
      */
-    @SerializedName("exp")
+    @SerializedName(value = "exp", alternate = {"Exp"})
     @Expose
     public Long exp;
 

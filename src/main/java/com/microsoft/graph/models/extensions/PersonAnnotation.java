@@ -27,7 +27,7 @@ public class PersonAnnotation extends ItemFacet implements IJsonBackedObject {
      * The Detail.
      * 
      */
-    @SerializedName("detail")
+    @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
     public ItemBody detail;
 
@@ -35,7 +35,7 @@ public class PersonAnnotation extends ItemFacet implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

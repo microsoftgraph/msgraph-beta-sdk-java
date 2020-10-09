@@ -26,7 +26,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * The Maximum Download Bandwidth In Kilobytes Per Second.
      * The value 0 (zero) means that Delivery Optimization dynamically adjusts to use the available bandwidth for downloads. Valid values 0 to 4294967295
      */
-    @SerializedName("maximumDownloadBandwidthInKilobytesPerSecond")
+    @SerializedName(value = "maximumDownloadBandwidthInKilobytesPerSecond", alternate = {"MaximumDownloadBandwidthInKilobytesPerSecond"})
     @Expose
     public Long maximumDownloadBandwidthInKilobytesPerSecond;
 
@@ -34,7 +34,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * The Maximum Upload Bandwidth In Kilobytes Per Second.
      * The default value is 0, which permits unlimited possible bandwidth (optimized for minimal usage of upload bandwidth). Valid values 0 to 4000000
      */
-    @SerializedName("maximumUploadBandwidthInKilobytesPerSecond")
+    @SerializedName(value = "maximumUploadBandwidthInKilobytesPerSecond", alternate = {"MaximumUploadBandwidthInKilobytesPerSecond"})
     @Expose
     public Long maximumUploadBandwidthInKilobytesPerSecond;
 

@@ -22,7 +22,7 @@ public class VppTokenRevokeLicensesBody {
      * The notify Managed Devices.
      * 
      */
-    @SerializedName("notifyManagedDevices")
+    @SerializedName(value = "notifyManagedDevices", alternate = {"NotifyManagedDevices"})
     @Expose
     public Boolean notifyManagedDevices;
 
@@ -30,7 +30,7 @@ public class VppTokenRevokeLicensesBody {
      * The revoke Untracked Licenses.
      * 
      */
-    @SerializedName("revokeUntrackedLicenses")
+    @SerializedName(value = "revokeUntrackedLicenses", alternate = {"RevokeUntrackedLicenses"})
     @Expose
     public Boolean revokeUntrackedLicenses;
 

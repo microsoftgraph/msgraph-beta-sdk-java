@@ -29,7 +29,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public PostalAddressType address;
 
@@ -37,7 +37,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Birth Date.
      * 
      */
-    @SerializedName("birthDate")
+    @SerializedName(value = "birthDate", alternate = {"BirthDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly birthDate;
 
@@ -45,7 +45,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -53,7 +53,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Email.
      * 
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -61,7 +61,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Employment Date.
      * 
      */
-    @SerializedName("employmentDate")
+    @SerializedName(value = "employmentDate", alternate = {"EmploymentDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly employmentDate;
 
@@ -69,7 +69,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Given Name.
      * 
      */
-    @SerializedName("givenName")
+    @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
     public String givenName;
 
@@ -77,7 +77,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Job Title.
      * 
      */
-    @SerializedName("jobTitle")
+    @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
     public String jobTitle;
 
@@ -85,7 +85,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -93,7 +93,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Middle Name.
      * 
      */
-    @SerializedName("middleName")
+    @SerializedName(value = "middleName", alternate = {"MiddleName"})
     @Expose
     public String middleName;
 
@@ -101,7 +101,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Mobile Phone.
      * 
      */
-    @SerializedName("mobilePhone")
+    @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
     public String mobilePhone;
 
@@ -109,7 +109,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public String number;
 
@@ -117,7 +117,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Personal Email.
      * 
      */
-    @SerializedName("personalEmail")
+    @SerializedName(value = "personalEmail", alternate = {"PersonalEmail"})
     @Expose
     public String personalEmail;
 
@@ -125,7 +125,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Phone Number.
      * 
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -133,7 +133,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Statistics Group Code.
      * 
      */
-    @SerializedName("statisticsGroupCode")
+    @SerializedName(value = "statisticsGroupCode", alternate = {"StatisticsGroupCode"})
     @Expose
     public String statisticsGroupCode;
 
@@ -141,7 +141,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -149,7 +149,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Surname.
      * 
      */
-    @SerializedName("surname")
+    @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
     public String surname;
 
@@ -157,7 +157,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Termination Date.
      * 
      */
-    @SerializedName("terminationDate")
+    @SerializedName(value = "terminationDate", alternate = {"TerminationDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly terminationDate;
 
@@ -165,7 +165,7 @@ public class Employee extends Entity implements IJsonBackedObject {
      * The Picture.
      * 
      */
-    @SerializedName("picture")
+    @SerializedName(value = "picture", alternate = {"Picture"})
     @Expose
     public PictureCollectionPage picture;
 

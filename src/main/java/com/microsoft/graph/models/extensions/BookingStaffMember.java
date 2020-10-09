@@ -28,7 +28,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
      * The Availability Is Affected By Personal Calendar.
      * 
      */
-    @SerializedName("availabilityIsAffectedByPersonalCalendar")
+    @SerializedName(value = "availabilityIsAffectedByPersonalCalendar", alternate = {"AvailabilityIsAffectedByPersonalCalendar"})
     @Expose
     public Boolean availabilityIsAffectedByPersonalCalendar;
 
@@ -36,7 +36,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
      * The Color Index.
      * 
      */
-    @SerializedName("colorIndex")
+    @SerializedName(value = "colorIndex", alternate = {"ColorIndex"})
     @Expose
     public Integer colorIndex;
 
@@ -44,7 +44,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
      * The Role.
      * 
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public BookingStaffRole role;
 
@@ -52,7 +52,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
      * The Use Business Hours.
      * 
      */
-    @SerializedName("useBusinessHours")
+    @SerializedName(value = "useBusinessHours", alternate = {"UseBusinessHours"})
     @Expose
     public Boolean useBusinessHours;
 
@@ -60,7 +60,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
      * The Working Hours.
      * 
      */
-    @SerializedName("workingHours")
+    @SerializedName(value = "workingHours", alternate = {"WorkingHours"})
     @Expose
     public java.util.List<BookingWorkHours> workingHours;
 

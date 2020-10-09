@@ -23,7 +23,7 @@ public class SynchronizationJobProvisionOnDemandBody {
      * The parameters.
      * 
      */
-    @SerializedName("parameters")
+    @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
     public java.util.List<SynchronizationJobApplicationParameters> parameters;
 

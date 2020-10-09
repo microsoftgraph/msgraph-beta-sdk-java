@@ -28,7 +28,7 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
      * The First Time Setup.
      * 
      */
-    @SerializedName("firstTimeSetup")
+    @SerializedName(value = "firstTimeSetup", alternate = {"FirstTimeSetup"})
     @Expose
     public Boolean firstTimeSetup;
 
@@ -36,7 +36,7 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
      * The Relevant Roles Settings.
      * 
      */
-    @SerializedName("relevantRolesSettings")
+    @SerializedName(value = "relevantRolesSettings", alternate = {"RelevantRolesSettings"})
     @Expose
     public java.util.List<String> relevantRolesSettings;
 
@@ -44,7 +44,7 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
      * The Setup Status.
      * 
      */
-    @SerializedName("setupStatus")
+    @SerializedName(value = "setupStatus", alternate = {"SetupStatus"})
     @Expose
     public SetupStatus setupStatus;
 
@@ -52,7 +52,7 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
      * The Skip Setup.
      * 
      */
-    @SerializedName("skipSetup")
+    @SerializedName(value = "skipSetup", alternate = {"SkipSetup"})
     @Expose
     public Boolean skipSetup;
 
@@ -60,7 +60,7 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
      * The User Roles Actions.
      * 
      */
-    @SerializedName("userRolesActions")
+    @SerializedName(value = "userRolesActions", alternate = {"UserRolesActions"})
     @Expose
     public String userRolesActions;
 
@@ -68,7 +68,7 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
      * The Default Roles Settings.
      * 
      */
-    @SerializedName("defaultRolesSettings")
+    @SerializedName(value = "defaultRolesSettings", alternate = {"DefaultRolesSettings"})
     @Expose
     public PrivilegedRoleSettings defaultRolesSettings;
 

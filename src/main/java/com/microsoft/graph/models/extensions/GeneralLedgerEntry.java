@@ -27,7 +27,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Account Id.
      * 
      */
-    @SerializedName("accountId")
+    @SerializedName(value = "accountId", alternate = {"AccountId"})
     @Expose
     public java.util.UUID accountId;
 
@@ -35,7 +35,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Account Number.
      * 
      */
-    @SerializedName("accountNumber")
+    @SerializedName(value = "accountNumber", alternate = {"AccountNumber"})
     @Expose
     public String accountNumber;
 
@@ -43,7 +43,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Credit Amount.
      * 
      */
-    @SerializedName("creditAmount")
+    @SerializedName(value = "creditAmount", alternate = {"CreditAmount"})
     @Expose
     public java.math.BigDecimal creditAmount;
 
@@ -51,7 +51,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Debit Amount.
      * 
      */
-    @SerializedName("debitAmount")
+    @SerializedName(value = "debitAmount", alternate = {"DebitAmount"})
     @Expose
     public java.math.BigDecimal debitAmount;
 
@@ -59,7 +59,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -67,7 +67,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Document Number.
      * 
      */
-    @SerializedName("documentNumber")
+    @SerializedName(value = "documentNumber", alternate = {"DocumentNumber"})
     @Expose
     public String documentNumber;
 
@@ -75,7 +75,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Document Type.
      * 
      */
-    @SerializedName("documentType")
+    @SerializedName(value = "documentType", alternate = {"DocumentType"})
     @Expose
     public String documentType;
 
@@ -83,7 +83,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -91,7 +91,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Posting Date.
      * 
      */
-    @SerializedName("postingDate")
+    @SerializedName(value = "postingDate", alternate = {"PostingDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly postingDate;
 
@@ -99,7 +99,7 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
      * The Account.
      * 
      */
-    @SerializedName("account")
+    @SerializedName(value = "account", alternate = {"Account"})
     @Expose
     public Account account;
 

@@ -39,7 +39,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The App Id.
      * App identifier, if this traffic rule is triggered by an app.
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -47,7 +47,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The App Type.
      * App type, if this traffic rule is triggered by an app.
      */
-    @SerializedName("appType")
+    @SerializedName(value = "appType", alternate = {"AppType"})
     @Expose
     public VpnTrafficRuleAppType appType;
 
@@ -55,7 +55,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Claims.
      * Claims associated with this traffic rule.
      */
-    @SerializedName("claims")
+    @SerializedName(value = "claims", alternate = {"Claims"})
     @Expose
     public String claims;
 
@@ -63,7 +63,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Local Address Ranges.
      * Local address range. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("localAddressRanges")
+    @SerializedName(value = "localAddressRanges", alternate = {"LocalAddressRanges"})
     @Expose
     public java.util.List<IPv4Range> localAddressRanges;
 
@@ -71,7 +71,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Local Port Ranges.
      * Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("localPortRanges")
+    @SerializedName(value = "localPortRanges", alternate = {"LocalPortRanges"})
     @Expose
     public java.util.List<NumberRange> localPortRanges;
 
@@ -79,7 +79,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Name.
      * Name.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -87,7 +87,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Protocols.
      * Protocols (0-255). Valid values 0 to 255
      */
-    @SerializedName("protocols")
+    @SerializedName(value = "protocols", alternate = {"Protocols"})
     @Expose
     public Integer protocols;
 
@@ -95,7 +95,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Remote Address Ranges.
      * Remote address range. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("remoteAddressRanges")
+    @SerializedName(value = "remoteAddressRanges", alternate = {"RemoteAddressRanges"})
     @Expose
     public java.util.List<IPv4Range> remoteAddressRanges;
 
@@ -103,7 +103,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Remote Port Ranges.
      * Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("remotePortRanges")
+    @SerializedName(value = "remotePortRanges", alternate = {"RemotePortRanges"})
     @Expose
     public java.util.List<NumberRange> remotePortRanges;
 
@@ -111,7 +111,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
      * The Routing Policy Type.
      * When app triggered, indicates whether to enable split tunneling along this route.
      */
-    @SerializedName("routingPolicyType")
+    @SerializedName(value = "routingPolicyType", alternate = {"RoutingPolicyType"})
     @Expose
     public VpnTrafficRuleRoutingPolicyType routingPolicyType;
 

@@ -26,7 +26,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * The Device Name.
      * The device name.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -34,7 +34,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * The Managed Device Id.
      * The managed device ID.
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 

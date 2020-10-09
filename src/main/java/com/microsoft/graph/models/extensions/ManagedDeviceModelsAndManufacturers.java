@@ -35,7 +35,7 @@ public class ManagedDeviceModelsAndManufacturers implements IJsonBackedObject {
      * The Device Manufacturers.
      * List of Manufactures for managed devices in the account
      */
-    @SerializedName("deviceManufacturers")
+    @SerializedName(value = "deviceManufacturers", alternate = {"DeviceManufacturers"})
     @Expose
     public java.util.List<String> deviceManufacturers;
 
@@ -43,7 +43,7 @@ public class ManagedDeviceModelsAndManufacturers implements IJsonBackedObject {
      * The Device Models.
      * List of Models for managed devices in the account
      */
-    @SerializedName("deviceModels")
+    @SerializedName(value = "deviceModels", alternate = {"DeviceModels"})
     @Expose
     public java.util.List<String> deviceModels;
 

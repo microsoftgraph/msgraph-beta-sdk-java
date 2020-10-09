@@ -28,7 +28,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Failed Sign In Count.
      * 
      */
-    @SerializedName("failedSignInCount")
+    @SerializedName(value = "failedSignInCount", alternate = {"FailedSignInCount"})
     @Expose
     public Long failedSignInCount;
 
@@ -36,7 +36,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Migration Status.
      * 
      */
-    @SerializedName("migrationStatus")
+    @SerializedName(value = "migrationStatus", alternate = {"MigrationStatus"})
     @Expose
     public MigrationStatus migrationStatus;
 
@@ -44,7 +44,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Migration Validation Details.
      * 
      */
-    @SerializedName("migrationValidationDetails")
+    @SerializedName(value = "migrationValidationDetails", alternate = {"MigrationValidationDetails"})
     @Expose
     public java.util.List<KeyValuePair> migrationValidationDetails;
 
@@ -52,7 +52,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Relying Party Id.
      * 
      */
-    @SerializedName("relyingPartyId")
+    @SerializedName(value = "relyingPartyId", alternate = {"RelyingPartyId"})
     @Expose
     public String relyingPartyId;
 
@@ -60,7 +60,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Relying Party Name.
      * 
      */
-    @SerializedName("relyingPartyName")
+    @SerializedName(value = "relyingPartyName", alternate = {"RelyingPartyName"})
     @Expose
     public String relyingPartyName;
 
@@ -68,7 +68,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Reply Urls.
      * 
      */
-    @SerializedName("replyUrls")
+    @SerializedName(value = "replyUrls", alternate = {"ReplyUrls"})
     @Expose
     public java.util.List<String> replyUrls;
 
@@ -76,7 +76,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Service Id.
      * 
      */
-    @SerializedName("serviceId")
+    @SerializedName(value = "serviceId", alternate = {"ServiceId"})
     @Expose
     public String serviceId;
 
@@ -84,7 +84,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Sign In Success Rate.
      * 
      */
-    @SerializedName("signInSuccessRate")
+    @SerializedName(value = "signInSuccessRate", alternate = {"SignInSuccessRate"})
     @Expose
     public Double signInSuccessRate;
 
@@ -92,7 +92,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Successful Sign In Count.
      * 
      */
-    @SerializedName("successfulSignInCount")
+    @SerializedName(value = "successfulSignInCount", alternate = {"SuccessfulSignInCount"})
     @Expose
     public Long successfulSignInCount;
 
@@ -100,7 +100,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Total Sign In Count.
      * 
      */
-    @SerializedName("totalSignInCount")
+    @SerializedName(value = "totalSignInCount", alternate = {"TotalSignInCount"})
     @Expose
     public Long totalSignInCount;
 
@@ -108,7 +108,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
      * The Unique User Count.
      * 
      */
-    @SerializedName("uniqueUserCount")
+    @SerializedName(value = "uniqueUserCount", alternate = {"UniqueUserCount"})
     @Expose
     public Long uniqueUserCount;
 

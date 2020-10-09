@@ -27,7 +27,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
      * The Device Display Name.
      * Device name that is being reported
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -35,7 +35,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
      * The Device Id.
      * Device id that is being reported
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -43,7 +43,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
      * The Last Reported Date Time.
      * Last modified date time of an intent report
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -51,7 +51,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
      * The State.
      * Device state for an intent
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -59,7 +59,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
      * The User Name.
      * The user name that is being reported on a device
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -67,7 +67,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
      * The User Principal Name.
      * The user principal name that is being reported on a device
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

@@ -37,7 +37,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Active Printers Count.
      * 
      */
-    @SerializedName("activePrintersCount")
+    @SerializedName(value = "activePrintersCount", alternate = {"ActivePrintersCount"})
     @Expose
     public Integer activePrintersCount;
 
@@ -45,7 +45,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Active Users Count.
      * 
      */
-    @SerializedName("activeUsersCount")
+    @SerializedName(value = "activeUsersCount", alternate = {"ActiveUsersCount"})
     @Expose
     public Integer activeUsersCount;
 
@@ -53,7 +53,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Days In Period.
      * 
      */
-    @SerializedName("daysInPeriod")
+    @SerializedName(value = "daysInPeriod", alternate = {"DaysInPeriod"})
     @Expose
     public Integer daysInPeriod;
 
@@ -61,7 +61,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Top Printers.
      * 
      */
-    @SerializedName("topPrinters")
+    @SerializedName(value = "topPrinters", alternate = {"TopPrinters"})
     @Expose
     public java.util.List<PrinterUsageSummary> topPrinters;
 
@@ -69,7 +69,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Top Users.
      * 
      */
-    @SerializedName("topUsers")
+    @SerializedName(value = "topUsers", alternate = {"TopUsers"})
     @Expose
     public java.util.List<UserPrintUsageSummary> topUsers;
 
@@ -77,7 +77,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Total Incomplete Jobs.
      * 
      */
-    @SerializedName("totalIncompleteJobs")
+    @SerializedName(value = "totalIncompleteJobs", alternate = {"TotalIncompleteJobs"})
     @Expose
     public Integer totalIncompleteJobs;
 
@@ -85,7 +85,7 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
      * The Total Jobs Processed.
      * 
      */
-    @SerializedName("totalJobsProcessed")
+    @SerializedName(value = "totalJobsProcessed", alternate = {"TotalJobsProcessed"})
     @Expose
     public Integer totalJobsProcessed;
 

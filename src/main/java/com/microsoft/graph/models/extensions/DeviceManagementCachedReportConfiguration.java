@@ -27,7 +27,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Expiration Date Time.
      * Time that the cached report expires
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -35,7 +35,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Filter.
      * Filters applied on report creation.
      */
-    @SerializedName("filter")
+    @SerializedName(value = "filter", alternate = {"Filter"})
     @Expose
     public String filter;
 
@@ -43,7 +43,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Last Refresh Date Time.
      * Time that the cached report was last refreshed
      */
-    @SerializedName("lastRefreshDateTime")
+    @SerializedName(value = "lastRefreshDateTime", alternate = {"LastRefreshDateTime"})
     @Expose
     public java.util.Calendar lastRefreshDateTime;
 
@@ -51,7 +51,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Metadata.
      * Caller-managed metadata associated with the report
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public String metadata;
 
@@ -59,7 +59,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Order By.
      * Ordering of columns in the report
      */
-    @SerializedName("orderBy")
+    @SerializedName(value = "orderBy", alternate = {"OrderBy"})
     @Expose
     public java.util.List<String> orderBy;
 
@@ -67,7 +67,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Report Name.
      * Name of the report
      */
-    @SerializedName("reportName")
+    @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose
     public String reportName;
 
@@ -75,7 +75,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Select.
      * Columns selected from the report
      */
-    @SerializedName("select")
+    @SerializedName(value = "select", alternate = {"Select"})
     @Expose
     public java.util.List<String> select;
 
@@ -83,7 +83,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      * The Status.
      * Status of the cached report
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public DeviceManagementReportStatus status;
 

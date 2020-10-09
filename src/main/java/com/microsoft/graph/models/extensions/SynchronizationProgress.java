@@ -35,7 +35,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
      * The Completed Units.
      * 
      */
-    @SerializedName("completedUnits")
+    @SerializedName(value = "completedUnits", alternate = {"CompletedUnits"})
     @Expose
     public Long completedUnits;
 
@@ -43,7 +43,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
      * The Progress Observation Date Time.
      * 
      */
-    @SerializedName("progressObservationDateTime")
+    @SerializedName(value = "progressObservationDateTime", alternate = {"ProgressObservationDateTime"})
     @Expose
     public java.util.Calendar progressObservationDateTime;
 
@@ -51,7 +51,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
      * The Total Units.
      * 
      */
-    @SerializedName("totalUnits")
+    @SerializedName(value = "totalUnits", alternate = {"TotalUnits"})
     @Expose
     public Long totalUnits;
 
@@ -59,7 +59,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
      * The Units.
      * 
      */
-    @SerializedName("units")
+    @SerializedName(value = "units", alternate = {"Units"})
     @Expose
     public String units;
 

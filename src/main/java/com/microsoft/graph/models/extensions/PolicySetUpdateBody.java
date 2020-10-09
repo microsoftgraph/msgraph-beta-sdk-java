@@ -23,7 +23,7 @@ public class PolicySetUpdateBody {
      * The added Policy Set Items.
      * 
      */
-    @SerializedName("addedPolicySetItems")
+    @SerializedName(value = "addedPolicySetItems", alternate = {"AddedPolicySetItems"})
     @Expose
     public java.util.List<PolicySetItem> addedPolicySetItems;
 
@@ -31,7 +31,7 @@ public class PolicySetUpdateBody {
      * The updated Policy Set Items.
      * 
      */
-    @SerializedName("updatedPolicySetItems")
+    @SerializedName(value = "updatedPolicySetItems", alternate = {"UpdatedPolicySetItems"})
     @Expose
     public java.util.List<PolicySetItem> updatedPolicySetItems;
 
@@ -39,7 +39,7 @@ public class PolicySetUpdateBody {
      * The deleted Policy Set Items.
      * 
      */
-    @SerializedName("deletedPolicySetItems")
+    @SerializedName(value = "deletedPolicySetItems", alternate = {"DeletedPolicySetItems"})
     @Expose
     public java.util.List<String> deletedPolicySetItems;
 
@@ -47,7 +47,7 @@ public class PolicySetUpdateBody {
      * The assignments.
      * 
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public java.util.List<PolicySetAssignment> assignments;
 

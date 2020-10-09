@@ -28,7 +28,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Catalog Id.
      * 
      */
-    @SerializedName("catalogId")
+    @SerializedName(value = "catalogId", alternate = {"CatalogId"})
     @Expose
     public String catalogId;
 
@@ -36,7 +36,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Execute Immediately.
      * 
      */
-    @SerializedName("executeImmediately")
+    @SerializedName(value = "executeImmediately", alternate = {"ExecuteImmediately"})
     @Expose
     public Boolean executeImmediately;
 
@@ -44,7 +44,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -52,7 +52,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Is Validation Only.
      * 
      */
-    @SerializedName("isValidationOnly")
+    @SerializedName(value = "isValidationOnly", alternate = {"IsValidationOnly"})
     @Expose
     public Boolean isValidationOnly;
 
@@ -60,7 +60,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Justification.
      * 
      */
-    @SerializedName("justification")
+    @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
     public String justification;
 
@@ -68,7 +68,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Request State.
      * 
      */
-    @SerializedName("requestState")
+    @SerializedName(value = "requestState", alternate = {"RequestState"})
     @Expose
     public String requestState;
 
@@ -76,7 +76,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Request Status.
      * 
      */
-    @SerializedName("requestStatus")
+    @SerializedName(value = "requestStatus", alternate = {"RequestStatus"})
     @Expose
     public String requestStatus;
 
@@ -84,7 +84,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Request Type.
      * 
      */
-    @SerializedName("requestType")
+    @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
     public String requestType;
 
@@ -92,7 +92,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Access Package Resource.
      * 
      */
-    @SerializedName("accessPackageResource")
+    @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose
     public AccessPackageResource accessPackageResource;
 
@@ -100,7 +100,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
      * The Requestor.
      * 
      */
-    @SerializedName("requestor")
+    @SerializedName(value = "requestor", alternate = {"Requestor"})
     @Expose
     public AccessPackageSubject requestor;
 

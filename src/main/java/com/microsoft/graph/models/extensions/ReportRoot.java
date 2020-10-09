@@ -36,7 +36,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Application Sign In Detailed Summary.
      * 
      */
-    @SerializedName("applicationSignInDetailedSummary")
+    @SerializedName(value = "applicationSignInDetailedSummary", alternate = {"ApplicationSignInDetailedSummary"})
     @Expose
     public ApplicationSignInDetailedSummaryCollectionPage applicationSignInDetailedSummary;
 
@@ -44,7 +44,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Credential User Registration Details.
      * 
      */
-    @SerializedName("credentialUserRegistrationDetails")
+    @SerializedName(value = "credentialUserRegistrationDetails", alternate = {"CredentialUserRegistrationDetails"})
     @Expose
     public CredentialUserRegistrationDetailsCollectionPage credentialUserRegistrationDetails;
 
@@ -52,7 +52,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The User Credential Usage Details.
      * 
      */
-    @SerializedName("userCredentialUsageDetails")
+    @SerializedName(value = "userCredentialUsageDetails", alternate = {"UserCredentialUsageDetails"})
     @Expose
     public UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
 
@@ -60,7 +60,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Daily Print Usage Summaries By Printer.
      * 
      */
-    @SerializedName("dailyPrintUsageSummariesByPrinter")
+    @SerializedName(value = "dailyPrintUsageSummariesByPrinter", alternate = {"DailyPrintUsageSummariesByPrinter"})
     @Expose
     public PrintUsageSummaryByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
 
@@ -68,7 +68,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Daily Print Usage Summaries By User.
      * 
      */
-    @SerializedName("dailyPrintUsageSummariesByUser")
+    @SerializedName(value = "dailyPrintUsageSummariesByUser", alternate = {"DailyPrintUsageSummariesByUser"})
     @Expose
     public PrintUsageSummaryByUserCollectionPage dailyPrintUsageSummariesByUser;
 
@@ -76,7 +76,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Monthly Print Usage Summaries By Printer.
      * 
      */
-    @SerializedName("monthlyPrintUsageSummariesByPrinter")
+    @SerializedName(value = "monthlyPrintUsageSummariesByPrinter", alternate = {"MonthlyPrintUsageSummariesByPrinter"})
     @Expose
     public PrintUsageSummaryByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
 
@@ -84,7 +84,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Monthly Print Usage Summaries By User.
      * 
      */
-    @SerializedName("monthlyPrintUsageSummariesByUser")
+    @SerializedName(value = "monthlyPrintUsageSummariesByUser", alternate = {"MonthlyPrintUsageSummariesByUser"})
     @Expose
     public PrintUsageSummaryByUserCollectionPage monthlyPrintUsageSummariesByUser;
 

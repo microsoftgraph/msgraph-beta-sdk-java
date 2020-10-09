@@ -28,7 +28,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * The Action Type.
      * Action type for Intune Application.
      */
-    @SerializedName("actionType")
+    @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose
     public MobileAppActionType actionType;
 
@@ -36,7 +36,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * The Error Code.
      * Error code for the failure, empty if no failure.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -44,7 +44,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * The Run State.
      * Status of the item.
      */
-    @SerializedName("runState")
+    @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose
     public RunState runState;
 

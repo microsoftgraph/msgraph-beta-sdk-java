@@ -36,7 +36,7 @@ public class Bundle implements IJsonBackedObject {
      * The Album.
      * 
      */
-    @SerializedName("album")
+    @SerializedName(value = "album", alternate = {"Album"})
     @Expose
     public Album album;
 
@@ -44,7 +44,7 @@ public class Bundle implements IJsonBackedObject {
      * The Child Count.
      * 
      */
-    @SerializedName("childCount")
+    @SerializedName(value = "childCount", alternate = {"ChildCount"})
     @Expose
     public Integer childCount;
 

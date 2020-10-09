@@ -35,7 +35,7 @@ public class SuggestedEnrollmentLimit implements IJsonBackedObject {
      * The Suggested Daily Limit.
      * The suggested enrollment limit within a day
      */
-    @SerializedName("suggestedDailyLimit")
+    @SerializedName(value = "suggestedDailyLimit", alternate = {"SuggestedDailyLimit"})
     @Expose
     public Integer suggestedDailyLimit;
 

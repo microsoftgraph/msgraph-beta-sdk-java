@@ -26,7 +26,7 @@ public class DomainIdentitySource extends IdentitySource implements IJsonBackedO
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class DomainIdentitySource extends IdentitySource implements IJsonBackedO
      * The Domain Name.
      * 
      */
-    @SerializedName("domainName")
+    @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
     public String domainName;
 

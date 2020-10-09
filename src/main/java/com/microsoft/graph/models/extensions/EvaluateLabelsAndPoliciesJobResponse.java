@@ -27,7 +27,7 @@ public class EvaluateLabelsAndPoliciesJobResponse extends JobResponseBase implem
      * The Result.
      * 
      */
-    @SerializedName("result")
+    @SerializedName(value = "result", alternate = {"Result"})
     @Expose
     public EvaluateLabelsAndPoliciesResult result;
 

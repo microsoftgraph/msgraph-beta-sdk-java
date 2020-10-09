@@ -36,7 +36,7 @@ public class ProfileCardAnnotation implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class ProfileCardAnnotation implements IJsonBackedObject {
      * The Localizations.
      * 
      */
-    @SerializedName("localizations")
+    @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose
     public java.util.List<DisplayNameLocalization> localizations;
 

@@ -36,7 +36,7 @@ public class AccessPackageAnswerChoice implements IJsonBackedObject {
      * The Actual Value.
      * 
      */
-    @SerializedName("actualValue")
+    @SerializedName(value = "actualValue", alternate = {"ActualValue"})
     @Expose
     public String actualValue;
 
@@ -44,7 +44,7 @@ public class AccessPackageAnswerChoice implements IJsonBackedObject {
      * The Display Value.
      * 
      */
-    @SerializedName("displayValue")
+    @SerializedName(value = "displayValue", alternate = {"DisplayValue"})
     @Expose
     public AccessPackageLocalizedContent displayValue;
 

@@ -35,7 +35,7 @@ public class AndroidManagedStoreAppTrack implements IJsonBackedObject {
      * The Track Alias.
      * Friendly name for track.
      */
-    @SerializedName("trackAlias")
+    @SerializedName(value = "trackAlias", alternate = {"TrackAlias"})
     @Expose
     public String trackAlias;
 
@@ -43,7 +43,7 @@ public class AndroidManagedStoreAppTrack implements IJsonBackedObject {
      * The Track Id.
      * Unique track identifier.
      */
-    @SerializedName("trackId")
+    @SerializedName(value = "trackId", alternate = {"TrackId"})
     @Expose
     public String trackId;
 

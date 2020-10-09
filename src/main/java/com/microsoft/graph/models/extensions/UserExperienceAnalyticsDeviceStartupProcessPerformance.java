@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The Device Count.
      * User experience analytics device startup process summarized count.
      */
-    @SerializedName("deviceCount")
+    @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
     public Long deviceCount;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The Median Impact In Ms.
      * User experience analytics device startup process median impact in milliseconds.
      */
-    @SerializedName("medianImpactInMs")
+    @SerializedName(value = "medianImpactInMs", alternate = {"MedianImpactInMs"})
     @Expose
     public Integer medianImpactInMs;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The Process Name.
      * User experience analytics device startup process name.
      */
-    @SerializedName("processName")
+    @SerializedName(value = "processName", alternate = {"ProcessName"})
     @Expose
     public String processName;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The Product Name.
      * The user experience analytics device startup process product name.
      */
-    @SerializedName("productName")
+    @SerializedName(value = "productName", alternate = {"ProductName"})
     @Expose
     public String productName;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The Publisher.
      * The User experience analytics device startup process publisher.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The Total Impact In Ms.
      * User experience analytics device startup process total impact in milliseconds.
      */
-    @SerializedName("totalImpactInMs")
+    @SerializedName(value = "totalImpactInMs", alternate = {"TotalImpactInMs"})
     @Expose
     public Integer totalImpactInMs;
 

@@ -36,7 +36,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Android Device Administrator Enrollment Enabled.
      * The property to determine if Android device administrator enrollment is enabled for this account.
      */
-    @SerializedName("androidDeviceAdministratorEnrollmentEnabled")
+    @SerializedName(value = "androidDeviceAdministratorEnrollmentEnabled", alternate = {"AndroidDeviceAdministratorEnrollmentEnabled"})
     @Expose
     public Boolean androidDeviceAdministratorEnrollmentEnabled;
 
@@ -44,7 +44,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Derived Credential Provider.
      * The Derived Credential Provider to use for this account.
      */
-    @SerializedName("derivedCredentialProvider")
+    @SerializedName(value = "derivedCredentialProvider", alternate = {"DerivedCredentialProvider"})
     @Expose
     public DerivedCredentialProviderType derivedCredentialProvider;
 
@@ -52,7 +52,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Derived Credential Url.
      * The Derived Credential Provider self-service URI.
      */
-    @SerializedName("derivedCredentialUrl")
+    @SerializedName(value = "derivedCredentialUrl", alternate = {"DerivedCredentialUrl"})
     @Expose
     public String derivedCredentialUrl;
 
@@ -60,7 +60,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Device Compliance Checkin Threshold Days.
      * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
      */
-    @SerializedName("deviceComplianceCheckinThresholdDays")
+    @SerializedName(value = "deviceComplianceCheckinThresholdDays", alternate = {"DeviceComplianceCheckinThresholdDays"})
     @Expose
     public Integer deviceComplianceCheckinThresholdDays;
 
@@ -68,7 +68,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Device Inactivity Before Retirement In Day.
      * When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
      */
-    @SerializedName("deviceInactivityBeforeRetirementInDay")
+    @SerializedName(value = "deviceInactivityBeforeRetirementInDay", alternate = {"DeviceInactivityBeforeRetirementInDay"})
     @Expose
     public Integer deviceInactivityBeforeRetirementInDay;
 
@@ -76,7 +76,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Enable Log Collection.
      * Determines whether the log collection feature should be available for use.
      */
-    @SerializedName("enableLogCollection")
+    @SerializedName(value = "enableLogCollection", alternate = {"EnableLogCollection"})
     @Expose
     public Boolean enableLogCollection;
 
@@ -84,7 +84,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Enhanced Jail Break.
      * Is feature enabled or not for enhanced jailbreak detection.
      */
-    @SerializedName("enhancedJailBreak")
+    @SerializedName(value = "enhancedJailBreak", alternate = {"EnhancedJailBreak"})
     @Expose
     public Boolean enhancedJailBreak;
 
@@ -92,7 +92,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Ignore Devices For Unsupported Settings Enabled.
      * The property to determine whether to ignore unsupported compliance settings on certian models of devices.
      */
-    @SerializedName("ignoreDevicesForUnsupportedSettingsEnabled")
+    @SerializedName(value = "ignoreDevicesForUnsupportedSettingsEnabled", alternate = {"IgnoreDevicesForUnsupportedSettingsEnabled"})
     @Expose
     public Boolean ignoreDevicesForUnsupportedSettingsEnabled;
 
@@ -100,7 +100,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Is Scheduled Action Enabled.
      * Is feature enabled or not for scheduled action for rule.
      */
-    @SerializedName("isScheduledActionEnabled")
+    @SerializedName(value = "isScheduledActionEnabled", alternate = {"IsScheduledActionEnabled"})
     @Expose
     public Boolean isScheduledActionEnabled;
 
@@ -108,7 +108,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Secure By Default.
      * Device should be noncompliant when there is no compliance policy targeted when this is true
      */
-    @SerializedName("secureByDefault")
+    @SerializedName(value = "secureByDefault", alternate = {"SecureByDefault"})
     @Expose
     public Boolean secureByDefault;
 

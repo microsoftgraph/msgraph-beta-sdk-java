@@ -26,7 +26,7 @@ public class GroupPolicyObjectFile extends Entity implements IJsonBackedObject {
      * The Content.
      * The Group Policy Object file content.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public String content;
 
@@ -34,7 +34,7 @@ public class GroupPolicyObjectFile extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The date and time at which the GroupPolicy was first uploaded.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -42,7 +42,7 @@ public class GroupPolicyObjectFile extends Entity implements IJsonBackedObject {
      * The Group Policy Object Id.
      * The Group Policy Object GUID from GPO Xml content
      */
-    @SerializedName("groupPolicyObjectId")
+    @SerializedName(value = "groupPolicyObjectId", alternate = {"GroupPolicyObjectId"})
     @Expose
     public java.util.UUID groupPolicyObjectId;
 
@@ -50,7 +50,7 @@ public class GroupPolicyObjectFile extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time at which the GroupPolicyObjectFile was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -58,7 +58,7 @@ public class GroupPolicyObjectFile extends Entity implements IJsonBackedObject {
      * The Ou Distinguished Name.
      * The distinguished name of the OU.
      */
-    @SerializedName("ouDistinguishedName")
+    @SerializedName(value = "ouDistinguishedName", alternate = {"OuDistinguishedName"})
     @Expose
     public String ouDistinguishedName;
 

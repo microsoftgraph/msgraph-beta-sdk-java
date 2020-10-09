@@ -27,7 +27,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
      * The Values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<SettingTemplateValue> values;
 

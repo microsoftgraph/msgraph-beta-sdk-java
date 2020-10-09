@@ -27,7 +27,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * The User Domains.
      * 
      */
-    @SerializedName("userDomains")
+    @SerializedName(value = "userDomains", alternate = {"UserDomains"})
     @Expose
     public java.util.List<EducationIdentityDomain> userDomains;
 

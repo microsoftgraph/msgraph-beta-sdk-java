@@ -35,7 +35,7 @@ public class IpReferenceData implements IJsonBackedObject {
      * The Asn.
      * 
      */
-    @SerializedName("asn")
+    @SerializedName(value = "asn", alternate = {"Asn"})
     @Expose
     public Integer asn;
 
@@ -43,7 +43,7 @@ public class IpReferenceData implements IJsonBackedObject {
      * The City.
      * 
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -51,7 +51,7 @@ public class IpReferenceData implements IJsonBackedObject {
      * The Country Or Region Code.
      * 
      */
-    @SerializedName("countryOrRegionCode")
+    @SerializedName(value = "countryOrRegionCode", alternate = {"CountryOrRegionCode"})
     @Expose
     public String countryOrRegionCode;
 
@@ -59,7 +59,7 @@ public class IpReferenceData implements IJsonBackedObject {
      * The Organization.
      * 
      */
-    @SerializedName("organization")
+    @SerializedName(value = "organization", alternate = {"Organization"})
     @Expose
     public String organization;
 
@@ -67,7 +67,7 @@ public class IpReferenceData implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -75,7 +75,7 @@ public class IpReferenceData implements IJsonBackedObject {
      * The Vendor.
      * 
      */
-    @SerializedName("vendor")
+    @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
     public String vendor;
 

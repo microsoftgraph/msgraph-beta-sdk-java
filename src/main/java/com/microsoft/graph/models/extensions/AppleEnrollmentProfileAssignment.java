@@ -27,7 +27,7 @@ public class AppleEnrollmentProfileAssignment extends Entity implements IJsonBac
      * The Target.
      * The assignment target for the Apple user initiated deployment profile.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

@@ -27,7 +27,7 @@ public class Request extends Entity implements IJsonBackedObject {
      * The Approval.
      * 
      */
-    @SerializedName("approval")
+    @SerializedName(value = "approval", alternate = {"Approval"})
     @Expose
     public Approval approval;
 

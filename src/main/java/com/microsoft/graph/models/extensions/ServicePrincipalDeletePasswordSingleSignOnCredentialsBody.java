@@ -22,7 +22,7 @@ public class ServicePrincipalDeletePasswordSingleSignOnCredentialsBody {
      * The id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

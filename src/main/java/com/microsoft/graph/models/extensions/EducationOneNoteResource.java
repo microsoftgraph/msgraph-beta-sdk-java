@@ -26,7 +26,7 @@ public class EducationOneNoteResource extends EducationResource implements IJson
      * The Page Url.
      * 
      */
-    @SerializedName("pageUrl")
+    @SerializedName(value = "pageUrl", alternate = {"PageUrl"})
     @Expose
     public String pageUrl;
 
@@ -34,7 +34,7 @@ public class EducationOneNoteResource extends EducationResource implements IJson
      * The Section Name.
      * 
      */
-    @SerializedName("sectionName")
+    @SerializedName(value = "sectionName", alternate = {"SectionName"})
     @Expose
     public String sectionName;
 

@@ -37,7 +37,7 @@ public class Property implements IJsonBackedObject {
      * The Aliases.
      * 
      */
-    @SerializedName("aliases")
+    @SerializedName(value = "aliases", alternate = {"Aliases"})
     @Expose
     public java.util.List<String> aliases;
 
@@ -45,7 +45,7 @@ public class Property implements IJsonBackedObject {
      * The Is Content.
      * 
      */
-    @SerializedName("isContent")
+    @SerializedName(value = "isContent", alternate = {"IsContent"})
     @Expose
     public Boolean isContent;
 
@@ -53,7 +53,7 @@ public class Property implements IJsonBackedObject {
      * The Is Queryable.
      * 
      */
-    @SerializedName("isQueryable")
+    @SerializedName(value = "isQueryable", alternate = {"IsQueryable"})
     @Expose
     public Boolean isQueryable;
 
@@ -61,7 +61,7 @@ public class Property implements IJsonBackedObject {
      * The Is Refinable.
      * 
      */
-    @SerializedName("isRefinable")
+    @SerializedName(value = "isRefinable", alternate = {"IsRefinable"})
     @Expose
     public Boolean isRefinable;
 
@@ -69,7 +69,7 @@ public class Property implements IJsonBackedObject {
      * The Is Retrievable.
      * 
      */
-    @SerializedName("isRetrievable")
+    @SerializedName(value = "isRetrievable", alternate = {"IsRetrievable"})
     @Expose
     public Boolean isRetrievable;
 
@@ -77,7 +77,7 @@ public class Property implements IJsonBackedObject {
      * The Is Searchable.
      * 
      */
-    @SerializedName("isSearchable")
+    @SerializedName(value = "isSearchable", alternate = {"IsSearchable"})
     @Expose
     public Boolean isSearchable;
 
@@ -85,7 +85,7 @@ public class Property implements IJsonBackedObject {
      * The Labels.
      * 
      */
-    @SerializedName("labels")
+    @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
     public java.util.List<Label> labels;
 
@@ -93,7 +93,7 @@ public class Property implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -101,7 +101,7 @@ public class Property implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public PropertyType type;
 

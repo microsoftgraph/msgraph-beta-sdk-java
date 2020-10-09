@@ -35,7 +35,7 @@ public class VpnProxyServer implements IJsonBackedObject {
      * The Address.
      * Address.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -43,7 +43,7 @@ public class VpnProxyServer implements IJsonBackedObject {
      * The Automatic Configuration Script Url.
      * Proxy's automatic configuration script url.
      */
-    @SerializedName("automaticConfigurationScriptUrl")
+    @SerializedName(value = "automaticConfigurationScriptUrl", alternate = {"AutomaticConfigurationScriptUrl"})
     @Expose
     public String automaticConfigurationScriptUrl;
 
@@ -51,7 +51,7 @@ public class VpnProxyServer implements IJsonBackedObject {
      * The Port.
      * Port. Valid values 0 to 65535
      */
-    @SerializedName("port")
+    @SerializedName(value = "port", alternate = {"Port"})
     @Expose
     public Integer port;
 

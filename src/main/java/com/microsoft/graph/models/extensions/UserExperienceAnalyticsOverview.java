@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements IJsonBack
      * The Insights.
      * The user experience analytics insights.
      */
-    @SerializedName("insights")
+    @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
     public java.util.List<UserExperienceAnalyticsInsight> insights;
 

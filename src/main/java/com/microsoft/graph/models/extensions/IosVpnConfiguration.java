@@ -29,7 +29,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Cloud Name.
      * Zscaler only. Zscaler cloud which the user is assigned to.
      */
-    @SerializedName("cloudName")
+    @SerializedName(value = "cloudName", alternate = {"CloudName"})
     @Expose
     public String cloudName;
 
@@ -37,7 +37,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Exclude List.
      * Zscaler only. List of network addresses which are not sent through the Zscaler cloud.
      */
-    @SerializedName("excludeList")
+    @SerializedName(value = "excludeList", alternate = {"ExcludeList"})
     @Expose
     public java.util.List<String> excludeList;
 
@@ -45,7 +45,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Microsoft Tunnel Site Id.
      * Microsoft Tunnel site ID.
      */
-    @SerializedName("microsoftTunnelSiteId")
+    @SerializedName(value = "microsoftTunnelSiteId", alternate = {"MicrosoftTunnelSiteId"})
     @Expose
     public String microsoftTunnelSiteId;
 
@@ -53,7 +53,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Strict Enforcement.
      * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
      */
-    @SerializedName("strictEnforcement")
+    @SerializedName(value = "strictEnforcement", alternate = {"StrictEnforcement"})
     @Expose
     public Boolean strictEnforcement;
 
@@ -61,7 +61,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Targeted Mobile Apps.
      * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("targetedMobileApps")
+    @SerializedName(value = "targetedMobileApps", alternate = {"TargetedMobileApps"})
     @Expose
     public java.util.List<AppListItem> targetedMobileApps;
 
@@ -69,7 +69,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The User Domain.
      * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
      */
-    @SerializedName("userDomain")
+    @SerializedName(value = "userDomain", alternate = {"UserDomain"})
     @Expose
     public String userDomain;
 
@@ -77,7 +77,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Derived Credential Settings.
      * Tenant level settings for the Derived Credentials to be used for authentication.
      */
-    @SerializedName("derivedCredentialSettings")
+    @SerializedName(value = "derivedCredentialSettings", alternate = {"DerivedCredentialSettings"})
     @Expose
     public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
@@ -85,7 +85,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public IosCertificateProfileBase identityCertificate;
 

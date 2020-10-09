@@ -26,7 +26,7 @@ public class FileClassificationRequest extends Entity implements IJsonBackedObje
      * The Sensitive Type Ids.
      * 
      */
-    @SerializedName("sensitiveTypeIds")
+    @SerializedName(value = "sensitiveTypeIds", alternate = {"SensitiveTypeIds"})
     @Expose
     public java.util.List<String> sensitiveTypeIds;
 

@@ -28,7 +28,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Connect Automatically.
      * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
      */
-    @SerializedName("connectAutomatically")
+    @SerializedName(value = "connectAutomatically", alternate = {"ConnectAutomatically"})
     @Expose
     public Boolean connectAutomatically;
 
@@ -36,7 +36,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Connect When Network Name Is Hidden.
      * Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
      */
-    @SerializedName("connectWhenNetworkNameIsHidden")
+    @SerializedName(value = "connectWhenNetworkNameIsHidden", alternate = {"ConnectWhenNetworkNameIsHidden"})
     @Expose
     public Boolean connectWhenNetworkNameIsHidden;
 
@@ -44,7 +44,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Network Name.
      * Network Name
      */
-    @SerializedName("networkName")
+    @SerializedName(value = "networkName", alternate = {"NetworkName"})
     @Expose
     public String networkName;
 
@@ -52,7 +52,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Pre Shared Key.
      * This is the pre-shared key for WPA Personal Wi-Fi network.
      */
-    @SerializedName("preSharedKey")
+    @SerializedName(value = "preSharedKey", alternate = {"PreSharedKey"})
     @Expose
     public String preSharedKey;
 
@@ -60,7 +60,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Proxy Automatic Configuration Url.
      * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
      */
-    @SerializedName("proxyAutomaticConfigurationUrl")
+    @SerializedName(value = "proxyAutomaticConfigurationUrl", alternate = {"ProxyAutomaticConfigurationUrl"})
     @Expose
     public String proxyAutomaticConfigurationUrl;
 
@@ -68,7 +68,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Proxy Manual Address.
      * IP Address or DNS hostname of the proxy server when manual configuration is selected.
      */
-    @SerializedName("proxyManualAddress")
+    @SerializedName(value = "proxyManualAddress", alternate = {"ProxyManualAddress"})
     @Expose
     public String proxyManualAddress;
 
@@ -76,7 +76,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Proxy Manual Port.
      * Port of the proxy server when manual configuration is selected.
      */
-    @SerializedName("proxyManualPort")
+    @SerializedName(value = "proxyManualPort", alternate = {"ProxyManualPort"})
     @Expose
     public Integer proxyManualPort;
 
@@ -84,7 +84,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Proxy Settings.
      * Proxy Type for this Wi-Fi connection
      */
-    @SerializedName("proxySettings")
+    @SerializedName(value = "proxySettings", alternate = {"ProxySettings"})
     @Expose
     public WiFiProxySetting proxySettings;
 
@@ -92,7 +92,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Ssid.
      * This is the name of the Wi-Fi network that is broadcast to all devices.
      */
-    @SerializedName("ssid")
+    @SerializedName(value = "ssid", alternate = {"Ssid"})
     @Expose
     public String ssid;
 
@@ -100,7 +100,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
      * The Wi Fi Security Type.
      * Indicates whether Wi-Fi endpoint uses an EAP based security type.
      */
-    @SerializedName("wiFiSecurityType")
+    @SerializedName(value = "wiFiSecurityType", alternate = {"WiFiSecurityType"})
     @Expose
     public WiFiSecurityType wiFiSecurityType;
 

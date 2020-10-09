@@ -37,7 +37,7 @@ public class Financials implements IJsonBackedObject {
      * The Companies.
      * 
      */
-    @SerializedName("companies")
+    @SerializedName(value = "companies", alternate = {"Companies"})
     @Expose
     public CompanyCollectionPage companies;
 

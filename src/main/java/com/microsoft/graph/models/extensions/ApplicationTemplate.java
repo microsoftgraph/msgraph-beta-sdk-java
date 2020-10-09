@@ -26,7 +26,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Categories.
      * 
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public java.util.List<String> categories;
 
@@ -34,7 +34,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -42,7 +42,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -50,7 +50,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Home Page Url.
      * 
      */
-    @SerializedName("homePageUrl")
+    @SerializedName(value = "homePageUrl", alternate = {"HomePageUrl"})
     @Expose
     public String homePageUrl;
 
@@ -58,7 +58,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Logo Url.
      * 
      */
-    @SerializedName("logoUrl")
+    @SerializedName(value = "logoUrl", alternate = {"LogoUrl"})
     @Expose
     public String logoUrl;
 
@@ -66,7 +66,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Publisher.
      * 
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -74,7 +74,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Supported Provisioning Types.
      * 
      */
-    @SerializedName("supportedProvisioningTypes")
+    @SerializedName(value = "supportedProvisioningTypes", alternate = {"SupportedProvisioningTypes"})
     @Expose
     public java.util.List<String> supportedProvisioningTypes;
 
@@ -82,7 +82,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
      * The Supported Single Sign On Modes.
      * 
      */
-    @SerializedName("supportedSingleSignOnModes")
+    @SerializedName(value = "supportedSingleSignOnModes", alternate = {"SupportedSingleSignOnModes"})
     @Expose
     public java.util.List<String> supportedSingleSignOnModes;
 

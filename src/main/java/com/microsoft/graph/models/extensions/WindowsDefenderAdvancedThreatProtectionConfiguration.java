@@ -26,7 +26,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Advanced Threat Protection Auto Populate Onboarding Blob.
      * Auto populate onboarding blob programmatically from Advanced Threat protection service
      */
-    @SerializedName("advancedThreatProtectionAutoPopulateOnboardingBlob")
+    @SerializedName(value = "advancedThreatProtectionAutoPopulateOnboardingBlob", alternate = {"AdvancedThreatProtectionAutoPopulateOnboardingBlob"})
     @Expose
     public Boolean advancedThreatProtectionAutoPopulateOnboardingBlob;
 
@@ -34,7 +34,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Advanced Threat Protection Offboarding Blob.
      * Windows Defender AdvancedThreatProtection Offboarding Blob.
      */
-    @SerializedName("advancedThreatProtectionOffboardingBlob")
+    @SerializedName(value = "advancedThreatProtectionOffboardingBlob", alternate = {"AdvancedThreatProtectionOffboardingBlob"})
     @Expose
     public String advancedThreatProtectionOffboardingBlob;
 
@@ -42,7 +42,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Advanced Threat Protection Offboarding Filename.
      * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
      */
-    @SerializedName("advancedThreatProtectionOffboardingFilename")
+    @SerializedName(value = "advancedThreatProtectionOffboardingFilename", alternate = {"AdvancedThreatProtectionOffboardingFilename"})
     @Expose
     public String advancedThreatProtectionOffboardingFilename;
 
@@ -50,7 +50,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Advanced Threat Protection Onboarding Blob.
      * Windows Defender AdvancedThreatProtection Onboarding Blob.
      */
-    @SerializedName("advancedThreatProtectionOnboardingBlob")
+    @SerializedName(value = "advancedThreatProtectionOnboardingBlob", alternate = {"AdvancedThreatProtectionOnboardingBlob"})
     @Expose
     public String advancedThreatProtectionOnboardingBlob;
 
@@ -58,7 +58,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Advanced Threat Protection Onboarding Filename.
      * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
      */
-    @SerializedName("advancedThreatProtectionOnboardingFilename")
+    @SerializedName(value = "advancedThreatProtectionOnboardingFilename", alternate = {"AdvancedThreatProtectionOnboardingFilename"})
     @Expose
     public String advancedThreatProtectionOnboardingFilename;
 
@@ -66,7 +66,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Allow Sample Sharing.
      * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
      */
-    @SerializedName("allowSampleSharing")
+    @SerializedName(value = "allowSampleSharing", alternate = {"AllowSampleSharing"})
     @Expose
     public Boolean allowSampleSharing;
 
@@ -74,7 +74,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Enable Expedited Telemetry Reporting.
      * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
      */
-    @SerializedName("enableExpeditedTelemetryReporting")
+    @SerializedName(value = "enableExpeditedTelemetryReporting", alternate = {"EnableExpeditedTelemetryReporting"})
     @Expose
     public Boolean enableExpeditedTelemetryReporting;
 

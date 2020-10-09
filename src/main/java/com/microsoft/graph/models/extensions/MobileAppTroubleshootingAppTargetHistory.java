@@ -27,7 +27,7 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
      * The Error Code.
      * Error code for the failure, empty if no failure.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -35,7 +35,7 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
      * The Run State.
      * Status of the item.
      */
-    @SerializedName("runState")
+    @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose
     public RunState runState;
 
@@ -43,7 +43,7 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
      * The Security Group Id.
      * AAD security group id to which it was targeted.
      */
-    @SerializedName("securityGroupId")
+    @SerializedName(value = "securityGroupId", alternate = {"SecurityGroupId"})
     @Expose
     public String securityGroupId;
 

@@ -27,7 +27,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Allow Printing.
      * Indicates whether or not to allow the app from printing during the test.
      */
-    @SerializedName("allowPrinting")
+    @SerializedName(value = "allowPrinting", alternate = {"AllowPrinting"})
     @Expose
     public Boolean allowPrinting;
 
@@ -35,7 +35,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Allow Screen Capture.
      * Indicates whether or not to allow screen capture capability during a test.
      */
-    @SerializedName("allowScreenCapture")
+    @SerializedName(value = "allowScreenCapture", alternate = {"AllowScreenCapture"})
     @Expose
     public Boolean allowScreenCapture;
 
@@ -43,7 +43,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Allow Text Suggestion.
      * Indicates whether or not to allow text suggestions during the test.
      */
-    @SerializedName("allowTextSuggestion")
+    @SerializedName(value = "allowTextSuggestion", alternate = {"AllowTextSuggestion"})
     @Expose
     public Boolean allowTextSuggestion;
 
@@ -51,7 +51,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Assessment App User Model Id.
      * Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
      */
-    @SerializedName("assessmentAppUserModelId")
+    @SerializedName(value = "assessmentAppUserModelId", alternate = {"AssessmentAppUserModelId"})
     @Expose
     public String assessmentAppUserModelId;
 
@@ -59,7 +59,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Configuration Account.
      * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      */
-    @SerializedName("configurationAccount")
+    @SerializedName(value = "configurationAccount", alternate = {"ConfigurationAccount"})
     @Expose
     public String configurationAccount;
 
@@ -67,7 +67,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Configuration Account Type.
      * The account type used to by ConfigurationAccount.
      */
-    @SerializedName("configurationAccountType")
+    @SerializedName(value = "configurationAccountType", alternate = {"ConfigurationAccountType"})
     @Expose
     public SecureAssessmentAccountType configurationAccountType;
 
@@ -75,7 +75,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Launch Uri.
      * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      */
-    @SerializedName("launchUri")
+    @SerializedName(value = "launchUri", alternate = {"LaunchUri"})
     @Expose
     public String launchUri;
 
@@ -83,7 +83,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The Local Guest Account Name.
      * Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
      */
-    @SerializedName("localGuestAccountName")
+    @SerializedName(value = "localGuestAccountName", alternate = {"LocalGuestAccountName"})
     @Expose
     public String localGuestAccountName;
 

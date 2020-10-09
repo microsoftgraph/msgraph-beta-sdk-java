@@ -26,7 +26,7 @@ public class DeviceManagementIntegerSettingInstance extends DeviceManagementSett
      * The Value.
      * The integer value
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Integer value;
 

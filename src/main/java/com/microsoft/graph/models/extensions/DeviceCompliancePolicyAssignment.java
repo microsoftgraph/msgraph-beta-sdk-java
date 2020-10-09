@@ -28,7 +28,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
      * The Source.
      * The assignment source for the device compliance policy, direct or parcel/policySet.
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public DeviceAndAppManagementAssignmentSource source;
 
@@ -36,7 +36,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
      * The Source Id.
      * The identifier of the source of the assignment.
      */
-    @SerializedName("sourceId")
+    @SerializedName(value = "sourceId", alternate = {"SourceId"})
     @Expose
     public String sourceId;
 
@@ -44,7 +44,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
      * The Target.
      * Target for the compliance policy assignment.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

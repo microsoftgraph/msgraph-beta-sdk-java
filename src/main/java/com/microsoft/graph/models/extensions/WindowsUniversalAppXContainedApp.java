@@ -26,7 +26,7 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
      * The App User Model Id.
      * The app user model ID of the contained app of a WindowsUniversalAppX app.
      */
-    @SerializedName("appUserModelId")
+    @SerializedName(value = "appUserModelId", alternate = {"AppUserModelId"})
     @Expose
     public String appUserModelId;
 

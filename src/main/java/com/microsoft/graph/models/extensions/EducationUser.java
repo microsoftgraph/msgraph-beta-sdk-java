@@ -47,7 +47,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Related Contacts.
      * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
      */
-    @SerializedName("relatedContacts")
+    @SerializedName(value = "relatedContacts", alternate = {"RelatedContacts"})
     @Expose
     public java.util.List<RelatedContact> relatedContacts;
 
@@ -55,7 +55,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Account Enabled.
      * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
      */
-    @SerializedName("accountEnabled")
+    @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
     public Boolean accountEnabled;
 
@@ -63,7 +63,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Assigned Licenses.
      * The licenses that are assigned to the user. Not nullable.
      */
-    @SerializedName("assignedLicenses")
+    @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
     public java.util.List<AssignedLicense> assignedLicenses;
 
@@ -71,7 +71,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Assigned Plans.
      * The plans that are assigned to the user. Read-only. Not nullable.
      */
-    @SerializedName("assignedPlans")
+    @SerializedName(value = "assignedPlans", alternate = {"AssignedPlans"})
     @Expose
     public java.util.List<AssignedPlan> assignedPlans;
 
@@ -79,7 +79,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Business Phones.
      * The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
      */
-    @SerializedName("businessPhones")
+    @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose
     public java.util.List<String> businessPhones;
 
@@ -87,7 +87,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Created By.
      * Entity who created the user.
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -95,7 +95,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Department.
      * The name for the department in which the user works. Supports $filter.
      */
-    @SerializedName("department")
+    @SerializedName(value = "department", alternate = {"Department"})
     @Expose
     public String department;
 
@@ -103,7 +103,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -111,7 +111,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The External Source.
      * Where this user was created from. The possible values are: sis, manual.
      */
-    @SerializedName("externalSource")
+    @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
     public EducationExternalSource externalSource;
 
@@ -119,7 +119,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The External Source Detail.
      * 
      */
-    @SerializedName("externalSourceDetail")
+    @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
     @Expose
     public String externalSourceDetail;
 
@@ -127,7 +127,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Given Name.
      * The given name (first name) of the user. Supports $filter.
      */
-    @SerializedName("givenName")
+    @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
     public String givenName;
 
@@ -135,7 +135,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Mail.
      * The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
      */
-    @SerializedName("mail")
+    @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
     public String mail;
 
@@ -143,7 +143,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Mailing Address.
      * Mail address of user.
      */
-    @SerializedName("mailingAddress")
+    @SerializedName(value = "mailingAddress", alternate = {"MailingAddress"})
     @Expose
     public PhysicalAddress mailingAddress;
 
@@ -151,7 +151,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Mail Nickname.
      * The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -159,7 +159,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Middle Name.
      * The middle name of user.
      */
-    @SerializedName("middleName")
+    @SerializedName(value = "middleName", alternate = {"MiddleName"})
     @Expose
     public String middleName;
 
@@ -167,7 +167,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Mobile Phone.
      * The primary cellular telephone number for the user.
      */
-    @SerializedName("mobilePhone")
+    @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
     public String mobilePhone;
 
@@ -175,7 +175,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Office Location.
      * 
      */
-    @SerializedName("officeLocation")
+    @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
     public String officeLocation;
 
@@ -183,7 +183,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The On Premises Info.
      * 
      */
-    @SerializedName("onPremisesInfo")
+    @SerializedName(value = "onPremisesInfo", alternate = {"OnPremisesInfo"})
     @Expose
     public EducationOnPremisesInfo onPremisesInfo;
 
@@ -191,7 +191,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Password Policies.
      * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two can be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.
      */
-    @SerializedName("passwordPolicies")
+    @SerializedName(value = "passwordPolicies", alternate = {"PasswordPolicies"})
     @Expose
     public String passwordPolicies;
 
@@ -199,7 +199,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Password Profile.
      * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      */
-    @SerializedName("passwordProfile")
+    @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
     public PasswordProfile passwordProfile;
 
@@ -207,7 +207,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Preferred Language.
      * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
      */
-    @SerializedName("preferredLanguage")
+    @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
     public String preferredLanguage;
 
@@ -215,7 +215,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Primary Role.
      * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
      */
-    @SerializedName("primaryRole")
+    @SerializedName(value = "primaryRole", alternate = {"PrimaryRole"})
     @Expose
     public EducationUserRole primaryRole;
 
@@ -223,7 +223,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Provisioned Plans.
      * The plans that are provisioned for the user. Read-only. Not nullable.
      */
-    @SerializedName("provisionedPlans")
+    @SerializedName(value = "provisionedPlans", alternate = {"ProvisionedPlans"})
     @Expose
     public java.util.List<ProvisionedPlan> provisionedPlans;
 
@@ -231,7 +231,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Refresh Tokens Valid From Date Time.
      * 
      */
-    @SerializedName("refreshTokensValidFromDateTime")
+    @SerializedName(value = "refreshTokensValidFromDateTime", alternate = {"RefreshTokensValidFromDateTime"})
     @Expose
     public java.util.Calendar refreshTokensValidFromDateTime;
 
@@ -239,7 +239,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Residence Address.
      * Address where user lives.
      */
-    @SerializedName("residenceAddress")
+    @SerializedName(value = "residenceAddress", alternate = {"ResidenceAddress"})
     @Expose
     public PhysicalAddress residenceAddress;
 
@@ -247,7 +247,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Show In Address List.
      * 
      */
-    @SerializedName("showInAddressList")
+    @SerializedName(value = "showInAddressList", alternate = {"ShowInAddressList"})
     @Expose
     public Boolean showInAddressList;
 
@@ -255,7 +255,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Student.
      * If the primary role is student, this block will contain student specific data.
      */
-    @SerializedName("student")
+    @SerializedName(value = "student", alternate = {"Student"})
     @Expose
     public EducationStudent student;
 
@@ -263,7 +263,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Surname.
      * The user's surname (family name or last name). Supports $filter.
      */
-    @SerializedName("surname")
+    @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
     public String surname;
 
@@ -271,7 +271,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Teacher.
      * If the primary role is teacher, this block will contain teacher specific data.
      */
-    @SerializedName("teacher")
+    @SerializedName(value = "teacher", alternate = {"Teacher"})
     @Expose
     public EducationTeacher teacher;
 
@@ -279,7 +279,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Usage Location.
      * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
      */
-    @SerializedName("usageLocation")
+    @SerializedName(value = "usageLocation", alternate = {"UsageLocation"})
     @Expose
     public String usageLocation;
 
@@ -287,7 +287,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -295,7 +295,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The User Type.
      * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
      */
-    @SerializedName("userType")
+    @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
     public String userType;
 
@@ -303,7 +303,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Assignments.
      * List of assignments for the user. Nullable.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public EducationAssignmentCollectionPage assignments;
 
@@ -311,7 +311,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Rubrics.
      * 
      */
-    @SerializedName("rubrics")
+    @SerializedName(value = "rubrics", alternate = {"Rubrics"})
     @Expose
     public EducationRubricCollectionPage rubrics;
 
@@ -337,7 +337,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The User.
      * The directory user corresponding to this user.
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public User user;
 

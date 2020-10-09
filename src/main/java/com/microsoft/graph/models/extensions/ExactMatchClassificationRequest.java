@@ -36,7 +36,7 @@ public class ExactMatchClassificationRequest implements IJsonBackedObject {
      * The Content Classifications.
      * 
      */
-    @SerializedName("contentClassifications")
+    @SerializedName(value = "contentClassifications", alternate = {"ContentClassifications"})
     @Expose
     public java.util.List<ContentClassification> contentClassifications;
 
@@ -44,7 +44,7 @@ public class ExactMatchClassificationRequest implements IJsonBackedObject {
      * The Sensitive Type Ids.
      * 
      */
-    @SerializedName("sensitiveTypeIds")
+    @SerializedName(value = "sensitiveTypeIds", alternate = {"SensitiveTypeIds"})
     @Expose
     public java.util.List<String> sensitiveTypeIds;
 
@@ -52,7 +52,7 @@ public class ExactMatchClassificationRequest implements IJsonBackedObject {
      * The Text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public String text;
 
@@ -60,7 +60,7 @@ public class ExactMatchClassificationRequest implements IJsonBackedObject {
      * The Timeout In Ms.
      * 
      */
-    @SerializedName("timeoutInMs")
+    @SerializedName(value = "timeoutInMs", alternate = {"TimeoutInMs"})
     @Expose
     public Integer timeoutInMs;
 

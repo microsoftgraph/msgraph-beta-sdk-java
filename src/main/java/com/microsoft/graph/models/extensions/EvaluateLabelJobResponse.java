@@ -27,7 +27,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements IJsonBa
      * The Result.
      * 
      */
-    @SerializedName("result")
+    @SerializedName(value = "result", alternate = {"Result"})
     @Expose
     public EvaluateLabelJobResultGroup result;
 

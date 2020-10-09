@@ -35,7 +35,7 @@ public class DlpNotification implements IJsonBackedObject {
      * The Author.
      * 
      */
-    @SerializedName("author")
+    @SerializedName(value = "author", alternate = {"Author"})
     @Expose
     public String author;
 

@@ -24,7 +24,7 @@ public class InformationProtectionLabelEvaluateRemovalBody {
      * The content Info.
      * 
      */
-    @SerializedName("contentInfo")
+    @SerializedName(value = "contentInfo", alternate = {"ContentInfo"})
     @Expose
     public ContentInfo contentInfo;
 
@@ -32,7 +32,7 @@ public class InformationProtectionLabelEvaluateRemovalBody {
      * The downgrade Justification.
      * 
      */
-    @SerializedName("downgradeJustification")
+    @SerializedName(value = "downgradeJustification", alternate = {"DowngradeJustification"})
     @Expose
     public DowngradeJustification downgradeJustification;
 

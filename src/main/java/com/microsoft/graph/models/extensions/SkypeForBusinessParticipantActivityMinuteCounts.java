@@ -26,7 +26,7 @@ public class SkypeForBusinessParticipantActivityMinuteCounts extends Entity impl
      * The Audiovideo.
      * 
      */
-    @SerializedName("audiovideo")
+    @SerializedName(value = "audiovideo", alternate = {"Audiovideo"})
     @Expose
     public Long audiovideo;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessParticipantActivityMinuteCounts extends Entity impl
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessParticipantActivityMinuteCounts extends Entity impl
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessParticipantActivityMinuteCounts extends Entity impl
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 

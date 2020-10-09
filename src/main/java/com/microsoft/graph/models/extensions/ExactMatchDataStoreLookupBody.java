@@ -22,7 +22,7 @@ public class ExactMatchDataStoreLookupBody {
      * The key.
      * 
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public String key;
 
@@ -30,7 +30,7 @@ public class ExactMatchDataStoreLookupBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<String> values;
 
@@ -38,7 +38,7 @@ public class ExactMatchDataStoreLookupBody {
      * The result Column Names.
      * 
      */
-    @SerializedName("resultColumnNames")
+    @SerializedName(value = "resultColumnNames", alternate = {"ResultColumnNames"})
     @Expose
     public java.util.List<String> resultColumnNames;
 

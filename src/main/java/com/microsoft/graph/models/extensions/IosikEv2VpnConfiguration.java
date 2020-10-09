@@ -32,7 +32,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Allow Default Child Security Association Parameters.
      * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
      */
-    @SerializedName("allowDefaultChildSecurityAssociationParameters")
+    @SerializedName(value = "allowDefaultChildSecurityAssociationParameters", alternate = {"AllowDefaultChildSecurityAssociationParameters"})
     @Expose
     public Boolean allowDefaultChildSecurityAssociationParameters;
 
@@ -40,7 +40,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Allow Default Security Association Parameters.
      * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
      */
-    @SerializedName("allowDefaultSecurityAssociationParameters")
+    @SerializedName(value = "allowDefaultSecurityAssociationParameters", alternate = {"AllowDefaultSecurityAssociationParameters"})
     @Expose
     public Boolean allowDefaultSecurityAssociationParameters;
 
@@ -48,7 +48,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Always On Configuration.
      * AlwaysOn Configuration
      */
-    @SerializedName("alwaysOnConfiguration")
+    @SerializedName(value = "alwaysOnConfiguration", alternate = {"AlwaysOnConfiguration"})
     @Expose
     public AppleVpnAlwaysOnConfiguration alwaysOnConfiguration;
 
@@ -56,7 +56,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Child Security Association Parameters.
      * Child Security Association Parameters
      */
-    @SerializedName("childSecurityAssociationParameters")
+    @SerializedName(value = "childSecurityAssociationParameters", alternate = {"ChildSecurityAssociationParameters"})
     @Expose
     public IosVpnSecurityAssociationParameters childSecurityAssociationParameters;
 
@@ -64,7 +64,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Client Authentication Type.
      * Type of Client Authentication the VPN client will use.
      */
-    @SerializedName("clientAuthenticationType")
+    @SerializedName(value = "clientAuthenticationType", alternate = {"ClientAuthenticationType"})
     @Expose
     public VpnClientAuthenticationType clientAuthenticationType;
 
@@ -72,7 +72,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Dead Peer Detection Rate.
      * Determine how often to check if a peer connection is still active. 
      */
-    @SerializedName("deadPeerDetectionRate")
+    @SerializedName(value = "deadPeerDetectionRate", alternate = {"DeadPeerDetectionRate"})
     @Expose
     public VpnDeadPeerDetectionRate deadPeerDetectionRate;
 
@@ -80,7 +80,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Disable Mobility And Multihoming.
      * Disable MOBIKE
      */
-    @SerializedName("disableMobilityAndMultihoming")
+    @SerializedName(value = "disableMobilityAndMultihoming", alternate = {"DisableMobilityAndMultihoming"})
     @Expose
     public Boolean disableMobilityAndMultihoming;
 
@@ -88,7 +88,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Disable Redirect.
      * Disable Redirect
      */
-    @SerializedName("disableRedirect")
+    @SerializedName(value = "disableRedirect", alternate = {"DisableRedirect"})
     @Expose
     public Boolean disableRedirect;
 
@@ -96,7 +96,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Enable Always On Configuration.
      * Determines if Always on VPN is enabled
      */
-    @SerializedName("enableAlwaysOnConfiguration")
+    @SerializedName(value = "enableAlwaysOnConfiguration", alternate = {"EnableAlwaysOnConfiguration"})
     @Expose
     public Boolean enableAlwaysOnConfiguration;
 
@@ -104,7 +104,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Enable Certificate Revocation Check.
      * Enables a best-effort revocation check; server response timeouts will not cause it to fail
      */
-    @SerializedName("enableCertificateRevocationCheck")
+    @SerializedName(value = "enableCertificateRevocationCheck", alternate = {"EnableCertificateRevocationCheck"})
     @Expose
     public Boolean enableCertificateRevocationCheck;
 
@@ -112,7 +112,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Enable EAP.
      * Enables EAP only authentication
      */
-    @SerializedName("enableEAP")
+    @SerializedName(value = "enableEAP", alternate = {"EnableEAP"})
     @Expose
     public Boolean enableEAP;
 
@@ -120,7 +120,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Enable Perfect Forward Secrecy.
      * Enable Perfect Forward Secrecy (PFS).
      */
-    @SerializedName("enablePerfectForwardSecrecy")
+    @SerializedName(value = "enablePerfectForwardSecrecy", alternate = {"EnablePerfectForwardSecrecy"})
     @Expose
     public Boolean enablePerfectForwardSecrecy;
 
@@ -128,7 +128,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Enable Use Internal Subnet Attributes.
      * Enable Use Internal Subnet Attributes.
      */
-    @SerializedName("enableUseInternalSubnetAttributes")
+    @SerializedName(value = "enableUseInternalSubnetAttributes", alternate = {"EnableUseInternalSubnetAttributes"})
     @Expose
     public Boolean enableUseInternalSubnetAttributes;
 
@@ -136,7 +136,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Local Identifier.
      * Method of identifying the client that is trying to connect via VPN. 
      */
-    @SerializedName("localIdentifier")
+    @SerializedName(value = "localIdentifier", alternate = {"LocalIdentifier"})
     @Expose
     public VpnLocalIdentifier localIdentifier;
 
@@ -144,7 +144,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Mtu Size In Bytes.
      * Maximum transmission unit. Valid values 1 to 65536
      */
-    @SerializedName("mtuSizeInBytes")
+    @SerializedName(value = "mtuSizeInBytes", alternate = {"MtuSizeInBytes"})
     @Expose
     public Integer mtuSizeInBytes;
 
@@ -152,7 +152,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Remote Identifier.
      * Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
      */
-    @SerializedName("remoteIdentifier")
+    @SerializedName(value = "remoteIdentifier", alternate = {"RemoteIdentifier"})
     @Expose
     public String remoteIdentifier;
 
@@ -160,7 +160,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Security Association Parameters.
      * Security Association Parameters
      */
-    @SerializedName("securityAssociationParameters")
+    @SerializedName(value = "securityAssociationParameters", alternate = {"SecurityAssociationParameters"})
     @Expose
     public IosVpnSecurityAssociationParameters securityAssociationParameters;
 
@@ -168,7 +168,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Server Certificate Common Name.
      * Common name of the IKEv2 Server Certificate used in Server Authentication
      */
-    @SerializedName("serverCertificateCommonName")
+    @SerializedName(value = "serverCertificateCommonName", alternate = {"ServerCertificateCommonName"})
     @Expose
     public String serverCertificateCommonName;
 
@@ -176,7 +176,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Server Certificate Issuer Common Name.
      * Issuer Common name of the IKEv2 Server Certificate issuer used in Authentication
      */
-    @SerializedName("serverCertificateIssuerCommonName")
+    @SerializedName(value = "serverCertificateIssuerCommonName", alternate = {"ServerCertificateIssuerCommonName"})
     @Expose
     public String serverCertificateIssuerCommonName;
 
@@ -184,7 +184,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Server Certificate Type.
      * The type of certificate the VPN server will present to the VPN client for authentication.
      */
-    @SerializedName("serverCertificateType")
+    @SerializedName(value = "serverCertificateType", alternate = {"ServerCertificateType"})
     @Expose
     public VpnServerCertificateType serverCertificateType;
 
@@ -192,7 +192,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Shared Secret.
      * Used when Shared Secret Authentication is selected
      */
-    @SerializedName("sharedSecret")
+    @SerializedName(value = "sharedSecret", alternate = {"SharedSecret"})
     @Expose
     public String sharedSecret;
 
@@ -200,7 +200,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Tls Maximum Version.
      * The maximum TLS version to be used with EAP-TLS authentication
      */
-    @SerializedName("tlsMaximumVersion")
+    @SerializedName(value = "tlsMaximumVersion", alternate = {"TlsMaximumVersion"})
     @Expose
     public String tlsMaximumVersion;
 
@@ -208,7 +208,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
      * The Tls Minimum Version.
      * The minimum TLS version to be used with EAP-TLS authentication
      */
-    @SerializedName("tlsMinimumVersion")
+    @SerializedName(value = "tlsMinimumVersion", alternate = {"TlsMinimumVersion"})
     @Expose
     public String tlsMinimumVersion;
 

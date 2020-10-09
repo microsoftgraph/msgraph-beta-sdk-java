@@ -26,7 +26,7 @@ public class SecurityBaselineCategoryStateSummary extends SecurityBaselineStateS
      * The Display Name.
      * The category name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

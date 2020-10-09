@@ -27,7 +27,7 @@ public class DeviceManagementIntentAssignment extends Entity implements IJsonBac
      * The Target.
      * The assignment target
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

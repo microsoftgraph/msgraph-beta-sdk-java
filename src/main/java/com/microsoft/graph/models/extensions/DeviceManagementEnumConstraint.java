@@ -27,7 +27,7 @@ public class DeviceManagementEnumConstraint extends DeviceManagementConstraint i
      * The Values.
      * List of valid values for this string
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<DeviceManagementEnumValue> values;
 

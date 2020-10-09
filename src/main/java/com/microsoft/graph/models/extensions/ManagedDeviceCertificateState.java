@@ -34,7 +34,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Enhanced Key Usage.
      * Extended key usage
      */
-    @SerializedName("certificateEnhancedKeyUsage")
+    @SerializedName(value = "certificateEnhancedKeyUsage", alternate = {"CertificateEnhancedKeyUsage"})
     @Expose
     public String certificateEnhancedKeyUsage;
 
@@ -42,7 +42,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Error Code.
      * Error code
      */
-    @SerializedName("certificateErrorCode")
+    @SerializedName(value = "certificateErrorCode", alternate = {"CertificateErrorCode"})
     @Expose
     public Integer certificateErrorCode;
 
@@ -50,7 +50,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Expiration Date Time.
      * Certificate expiry date
      */
-    @SerializedName("certificateExpirationDateTime")
+    @SerializedName(value = "certificateExpirationDateTime", alternate = {"CertificateExpirationDateTime"})
     @Expose
     public java.util.Calendar certificateExpirationDateTime;
 
@@ -58,7 +58,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Issuance Date Time.
      * Issuance date
      */
-    @SerializedName("certificateIssuanceDateTime")
+    @SerializedName(value = "certificateIssuanceDateTime", alternate = {"CertificateIssuanceDateTime"})
     @Expose
     public java.util.Calendar certificateIssuanceDateTime;
 
@@ -66,7 +66,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Issuance State.
      * Issuance State
      */
-    @SerializedName("certificateIssuanceState")
+    @SerializedName(value = "certificateIssuanceState", alternate = {"CertificateIssuanceState"})
     @Expose
     public CertificateIssuanceStates certificateIssuanceState;
 
@@ -74,7 +74,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Issuer.
      * Issuer
      */
-    @SerializedName("certificateIssuer")
+    @SerializedName(value = "certificateIssuer", alternate = {"CertificateIssuer"})
     @Expose
     public String certificateIssuer;
 
@@ -82,7 +82,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Key Length.
      * Key length
      */
-    @SerializedName("certificateKeyLength")
+    @SerializedName(value = "certificateKeyLength", alternate = {"CertificateKeyLength"})
     @Expose
     public Integer certificateKeyLength;
 
@@ -90,7 +90,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Key Storage Provider.
      * Key Storage Provider
      */
-    @SerializedName("certificateKeyStorageProvider")
+    @SerializedName(value = "certificateKeyStorageProvider", alternate = {"CertificateKeyStorageProvider"})
     @Expose
     public KeyStorageProviderOption certificateKeyStorageProvider;
 
@@ -98,7 +98,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Key Usage.
      * Key usage
      */
-    @SerializedName("certificateKeyUsage")
+    @SerializedName(value = "certificateKeyUsage", alternate = {"CertificateKeyUsage"})
     @Expose
     public EnumSet<KeyUsages> certificateKeyUsage;
 
@@ -106,7 +106,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Last Issuance State Changed Date Time.
      * Last certificate issuance state change
      */
-    @SerializedName("certificateLastIssuanceStateChangedDateTime")
+    @SerializedName(value = "certificateLastIssuanceStateChangedDateTime", alternate = {"CertificateLastIssuanceStateChangedDateTime"})
     @Expose
     public java.util.Calendar certificateLastIssuanceStateChangedDateTime;
 
@@ -114,7 +114,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Profile Display Name.
      * Certificate profile display name
      */
-    @SerializedName("certificateProfileDisplayName")
+    @SerializedName(value = "certificateProfileDisplayName", alternate = {"CertificateProfileDisplayName"})
     @Expose
     public String certificateProfileDisplayName;
 
@@ -122,7 +122,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Revoke Status.
      * Revoke status
      */
-    @SerializedName("certificateRevokeStatus")
+    @SerializedName(value = "certificateRevokeStatus", alternate = {"CertificateRevokeStatus"})
     @Expose
     public CertificateRevocationStatus certificateRevokeStatus;
 
@@ -130,7 +130,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Serial Number.
      * Serial number
      */
-    @SerializedName("certificateSerialNumber")
+    @SerializedName(value = "certificateSerialNumber", alternate = {"CertificateSerialNumber"})
     @Expose
     public String certificateSerialNumber;
 
@@ -138,7 +138,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Subject Alternative Name Format.
      * Subject alternative name format
      */
-    @SerializedName("certificateSubjectAlternativeNameFormat")
+    @SerializedName(value = "certificateSubjectAlternativeNameFormat", alternate = {"CertificateSubjectAlternativeNameFormat"})
     @Expose
     public EnumSet<SubjectAlternativeNameType> certificateSubjectAlternativeNameFormat;
 
@@ -146,7 +146,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Subject Alternative Name Format String.
      * Subject alternative name format string for custom formats
      */
-    @SerializedName("certificateSubjectAlternativeNameFormatString")
+    @SerializedName(value = "certificateSubjectAlternativeNameFormatString", alternate = {"CertificateSubjectAlternativeNameFormatString"})
     @Expose
     public String certificateSubjectAlternativeNameFormatString;
 
@@ -154,7 +154,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Subject Name Format.
      * Subject name format
      */
-    @SerializedName("certificateSubjectNameFormat")
+    @SerializedName(value = "certificateSubjectNameFormat", alternate = {"CertificateSubjectNameFormat"})
     @Expose
     public SubjectNameFormat certificateSubjectNameFormat;
 
@@ -162,7 +162,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Subject Name Format String.
      * Subject name format string for custom subject name formats
      */
-    @SerializedName("certificateSubjectNameFormatString")
+    @SerializedName(value = "certificateSubjectNameFormatString", alternate = {"CertificateSubjectNameFormatString"})
     @Expose
     public String certificateSubjectNameFormatString;
 
@@ -170,7 +170,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Thumbprint.
      * Thumbprint
      */
-    @SerializedName("certificateThumbprint")
+    @SerializedName(value = "certificateThumbprint", alternate = {"CertificateThumbprint"})
     @Expose
     public String certificateThumbprint;
 
@@ -178,7 +178,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Validity Period.
      * Validity period
      */
-    @SerializedName("certificateValidityPeriod")
+    @SerializedName(value = "certificateValidityPeriod", alternate = {"CertificateValidityPeriod"})
     @Expose
     public Integer certificateValidityPeriod;
 
@@ -186,7 +186,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Certificate Validity Period Units.
      * Validity period units
      */
-    @SerializedName("certificateValidityPeriodUnits")
+    @SerializedName(value = "certificateValidityPeriodUnits", alternate = {"CertificateValidityPeriodUnits"})
     @Expose
     public CertificateValidityPeriodScale certificateValidityPeriodUnits;
 
@@ -194,7 +194,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Device Display Name.
      * Device display name
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -202,7 +202,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Device Platform.
      * Device platform
      */
-    @SerializedName("devicePlatform")
+    @SerializedName(value = "devicePlatform", alternate = {"DevicePlatform"})
     @Expose
     public DevicePlatformType devicePlatform;
 
@@ -210,7 +210,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The Last Certificate State Change Date Time.
      * Last certificate issuance state change
      */
-    @SerializedName("lastCertificateStateChangeDateTime")
+    @SerializedName(value = "lastCertificateStateChangeDateTime", alternate = {"LastCertificateStateChangeDateTime"})
     @Expose
     public java.util.Calendar lastCertificateStateChangeDateTime;
 
@@ -218,7 +218,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
      * The User Display Name.
      * User display name
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 

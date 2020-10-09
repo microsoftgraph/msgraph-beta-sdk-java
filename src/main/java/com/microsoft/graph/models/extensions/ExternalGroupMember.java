@@ -28,7 +28,7 @@ public class ExternalGroupMember extends Entity implements IJsonBackedObject {
      * The Identity Source.
      * 
      */
-    @SerializedName("identitySource")
+    @SerializedName(value = "identitySource", alternate = {"IdentitySource"})
     @Expose
     public IdentitySourceType identitySource;
 
@@ -36,7 +36,7 @@ public class ExternalGroupMember extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public ExternalGroupMemberType type;
 

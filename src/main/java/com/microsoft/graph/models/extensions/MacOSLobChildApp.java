@@ -35,7 +35,7 @@ public class MacOSLobChildApp implements IJsonBackedObject {
      * The Build Number.
      * The build number of MacOS Line of Business (LoB) app.
      */
-    @SerializedName("buildNumber")
+    @SerializedName(value = "buildNumber", alternate = {"BuildNumber"})
     @Expose
     public String buildNumber;
 
@@ -43,7 +43,7 @@ public class MacOSLobChildApp implements IJsonBackedObject {
      * The Bundle Id.
      * The Identity Name.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -51,7 +51,7 @@ public class MacOSLobChildApp implements IJsonBackedObject {
      * The Version Number.
      * The version number of MacOS Line of Business (LoB) app.
      */
-    @SerializedName("versionNumber")
+    @SerializedName(value = "versionNumber", alternate = {"VersionNumber"})
     @Expose
     public String versionNumber;
 

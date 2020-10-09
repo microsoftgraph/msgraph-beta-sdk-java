@@ -30,7 +30,7 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
      * The Contained Apps.
      * The collection of contained apps in a MobileLobApp acting as a package.
      */
-    @SerializedName("containedApps")
+    @SerializedName(value = "containedApps", alternate = {"ContainedApps"})
     @Expose
     public MobileContainedAppCollectionPage containedApps;
 
@@ -38,7 +38,7 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
      * The Files.
      * The list of files for this app content version.
      */
-    @SerializedName("files")
+    @SerializedName(value = "files", alternate = {"Files"})
     @Expose
     public MobileAppContentFileCollectionPage files;
 

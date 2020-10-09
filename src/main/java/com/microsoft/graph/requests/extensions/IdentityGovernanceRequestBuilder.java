@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppConsentApprovalRouteRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppConsentApprovalRouteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
@@ -66,6 +68,15 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      */
     public IAccessReviewSetRequestBuilder accessReviews() {
         return new AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AppConsentApprovalRoute
+     *
+     * @return the IAppConsentApprovalRouteRequestBuilder instance
+     */
+    public IAppConsentApprovalRouteRequestBuilder appConsent() {
+        return new AppConsentApprovalRouteRequestBuilder(getRequestUrlWithAdditionalSegment("appConsent"), getClient(), null);
     }
 
     /**

@@ -26,7 +26,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Apple Id Disabled.
      * Indicates if Apple id setup pane is disabled
      */
-    @SerializedName("appleIdDisabled")
+    @SerializedName(value = "appleIdDisabled", alternate = {"AppleIdDisabled"})
     @Expose
     public Boolean appleIdDisabled;
 
@@ -34,7 +34,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Apple Pay Disabled.
      * Indicates if Apple pay setup pane is disabled
      */
-    @SerializedName("applePayDisabled")
+    @SerializedName(value = "applePayDisabled", alternate = {"ApplePayDisabled"})
     @Expose
     public Boolean applePayDisabled;
 
@@ -42,7 +42,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Configuration Web Url.
      * URL for setup assistant login
      */
-    @SerializedName("configurationWebUrl")
+    @SerializedName(value = "configurationWebUrl", alternate = {"ConfigurationWebUrl"})
     @Expose
     public Boolean configurationWebUrl;
 
@@ -50,7 +50,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Device Name Template.
      * Sets a literal or name pattern.
      */
-    @SerializedName("deviceNameTemplate")
+    @SerializedName(value = "deviceNameTemplate", alternate = {"DeviceNameTemplate"})
     @Expose
     public String deviceNameTemplate;
 
@@ -58,7 +58,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Diagnostics Disabled.
      * Indicates if diagnostics setup pane is disabled
      */
-    @SerializedName("diagnosticsDisabled")
+    @SerializedName(value = "diagnosticsDisabled", alternate = {"DiagnosticsDisabled"})
     @Expose
     public Boolean diagnosticsDisabled;
 
@@ -66,7 +66,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Display Tone Setup Disabled.
      * Indicates if displaytone setup screen is disabled
      */
-    @SerializedName("displayToneSetupDisabled")
+    @SerializedName(value = "displayToneSetupDisabled", alternate = {"DisplayToneSetupDisabled"})
     @Expose
     public Boolean displayToneSetupDisabled;
 
@@ -74,7 +74,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Is Default.
      * Indicates if this is the default profile
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -82,7 +82,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Is Mandatory.
      * Indicates if the profile is mandatory
      */
-    @SerializedName("isMandatory")
+    @SerializedName(value = "isMandatory", alternate = {"IsMandatory"})
     @Expose
     public Boolean isMandatory;
 
@@ -90,7 +90,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Location Disabled.
      * Indicates if Location service setup pane is disabled
      */
-    @SerializedName("locationDisabled")
+    @SerializedName(value = "locationDisabled", alternate = {"LocationDisabled"})
     @Expose
     public Boolean locationDisabled;
 
@@ -98,7 +98,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Pass Code Disabled.
      * Indicates if Passcode setup pane is disabled
      */
-    @SerializedName("passCodeDisabled")
+    @SerializedName(value = "passCodeDisabled", alternate = {"PassCodeDisabled"})
     @Expose
     public Boolean passCodeDisabled;
 
@@ -106,7 +106,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Privacy Pane Disabled.
      * Indicates if privacy screen is disabled
      */
-    @SerializedName("privacyPaneDisabled")
+    @SerializedName(value = "privacyPaneDisabled", alternate = {"PrivacyPaneDisabled"})
     @Expose
     public Boolean privacyPaneDisabled;
 
@@ -114,7 +114,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Profile Removal Disabled.
      * Indicates if the profile removal option is disabled
      */
-    @SerializedName("profileRemovalDisabled")
+    @SerializedName(value = "profileRemovalDisabled", alternate = {"ProfileRemovalDisabled"})
     @Expose
     public Boolean profileRemovalDisabled;
 
@@ -122,7 +122,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Restore Blocked.
      * Indicates if Restore setup pane is blocked
      */
-    @SerializedName("restoreBlocked")
+    @SerializedName(value = "restoreBlocked", alternate = {"RestoreBlocked"})
     @Expose
     public Boolean restoreBlocked;
 
@@ -130,7 +130,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Screen Time Screen Disabled.
      * Indicates if screen timeout setup is disabled
      */
-    @SerializedName("screenTimeScreenDisabled")
+    @SerializedName(value = "screenTimeScreenDisabled", alternate = {"ScreenTimeScreenDisabled"})
     @Expose
     public Boolean screenTimeScreenDisabled;
 
@@ -138,7 +138,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Siri Disabled.
      * Indicates if siri setup pane is disabled
      */
-    @SerializedName("siriDisabled")
+    @SerializedName(value = "siriDisabled", alternate = {"SiriDisabled"})
     @Expose
     public Boolean siriDisabled;
 
@@ -146,7 +146,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Supervised Mode Enabled.
      * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      */
-    @SerializedName("supervisedModeEnabled")
+    @SerializedName(value = "supervisedModeEnabled", alternate = {"SupervisedModeEnabled"})
     @Expose
     public Boolean supervisedModeEnabled;
 
@@ -154,7 +154,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Support Department.
      * Support department information
      */
-    @SerializedName("supportDepartment")
+    @SerializedName(value = "supportDepartment", alternate = {"SupportDepartment"})
     @Expose
     public String supportDepartment;
 
@@ -162,7 +162,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Support Phone Number.
      * Support phone number
      */
-    @SerializedName("supportPhoneNumber")
+    @SerializedName(value = "supportPhoneNumber", alternate = {"SupportPhoneNumber"})
     @Expose
     public String supportPhoneNumber;
 
@@ -170,7 +170,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Terms And Conditions Disabled.
      * Indicates if 'Terms and Conditions' setup pane is disabled
      */
-    @SerializedName("termsAndConditionsDisabled")
+    @SerializedName(value = "termsAndConditionsDisabled", alternate = {"TermsAndConditionsDisabled"})
     @Expose
     public Boolean termsAndConditionsDisabled;
 
@@ -178,7 +178,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Touch Id Disabled.
      * Indicates if touch id setup pane is disabled
      */
-    @SerializedName("touchIdDisabled")
+    @SerializedName(value = "touchIdDisabled", alternate = {"TouchIdDisabled"})
     @Expose
     public Boolean touchIdDisabled;
 
@@ -186,7 +186,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
      * The Zoom Disabled.
      * Indicates if zoom setup pane is disabled
      */
-    @SerializedName("zoomDisabled")
+    @SerializedName(value = "zoomDisabled", alternate = {"ZoomDisabled"})
     @Expose
     public Boolean zoomDisabled;
 

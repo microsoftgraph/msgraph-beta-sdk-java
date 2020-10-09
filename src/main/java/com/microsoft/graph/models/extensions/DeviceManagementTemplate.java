@@ -35,7 +35,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Description.
      * The template's description
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Display Name.
      * The template's display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Intent Count.
      * Number of Intents created from this template.
      */
-    @SerializedName("intentCount")
+    @SerializedName(value = "intentCount", alternate = {"IntentCount"})
     @Expose
     public Integer intentCount;
 
@@ -59,7 +59,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Is Deprecated.
      * The template is deprecated or not. Intents cannot be created from a deprecated template.
      */
-    @SerializedName("isDeprecated")
+    @SerializedName(value = "isDeprecated", alternate = {"IsDeprecated"})
     @Expose
     public Boolean isDeprecated;
 
@@ -67,7 +67,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Platform Type.
      * The template's platform.
      */
-    @SerializedName("platformType")
+    @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
     public PolicyPlatformType platformType;
 
@@ -75,7 +75,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Published Date Time.
      * When the template was published
      */
-    @SerializedName("publishedDateTime")
+    @SerializedName(value = "publishedDateTime", alternate = {"PublishedDateTime"})
     @Expose
     public java.util.Calendar publishedDateTime;
 
@@ -83,7 +83,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Template Subtype.
      * The template's subtype.
      */
-    @SerializedName("templateSubtype")
+    @SerializedName(value = "templateSubtype", alternate = {"TemplateSubtype"})
     @Expose
     public DeviceManagementTemplateSubtype templateSubtype;
 
@@ -91,7 +91,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Template Type.
      * The template's type.
      */
-    @SerializedName("templateType")
+    @SerializedName(value = "templateType", alternate = {"TemplateType"})
     @Expose
     public DeviceManagementTemplateType templateType;
 
@@ -99,7 +99,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Version Info.
      * The template's version information
      */
-    @SerializedName("versionInfo")
+    @SerializedName(value = "versionInfo", alternate = {"VersionInfo"})
     @Expose
     public String versionInfo;
 
@@ -107,7 +107,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Categories.
      * Collection of setting categories within the template
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public DeviceManagementTemplateSettingCategoryCollectionPage categories;
 
@@ -115,7 +115,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Migratable To.
      * Collection of templates this template can migrate to
      */
-    @SerializedName("migratableTo")
+    @SerializedName(value = "migratableTo", alternate = {"MigratableTo"})
     @Expose
     public DeviceManagementTemplateCollectionPage migratableTo;
 
@@ -123,7 +123,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Settings.
      * Collection of all settings this template has
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public DeviceManagementSettingInstanceCollectionPage settings;
 

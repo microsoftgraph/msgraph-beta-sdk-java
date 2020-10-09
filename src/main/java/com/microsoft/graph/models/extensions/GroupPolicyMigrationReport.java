@@ -31,7 +31,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Created Date Time.
      * The date and time at which the GroupPolicyMigrationReport was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -39,7 +39,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Display Name.
      * The name of Group Policy Object from the GPO Xml Content
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -47,7 +47,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Group Policy Created Date Time.
      * The date and time at which the GroupPolicyMigrationReport was created.
      */
-    @SerializedName("groupPolicyCreatedDateTime")
+    @SerializedName(value = "groupPolicyCreatedDateTime", alternate = {"GroupPolicyCreatedDateTime"})
     @Expose
     public java.util.Calendar groupPolicyCreatedDateTime;
 
@@ -55,7 +55,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Group Policy Last Modified Date Time.
      * The date and time at which the GroupPolicyMigrationReport was last modified.
      */
-    @SerializedName("groupPolicyLastModifiedDateTime")
+    @SerializedName(value = "groupPolicyLastModifiedDateTime", alternate = {"GroupPolicyLastModifiedDateTime"})
     @Expose
     public java.util.Calendar groupPolicyLastModifiedDateTime;
 
@@ -63,7 +63,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Group Policy Object Id.
      * The Group Policy Object GUID from GPO Xml content
      */
-    @SerializedName("groupPolicyObjectId")
+    @SerializedName(value = "groupPolicyObjectId", alternate = {"GroupPolicyObjectId"})
     @Expose
     public java.util.UUID groupPolicyObjectId;
 
@@ -71,7 +71,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Last Modified Date Time.
      * The date and time at which the GroupPolicyMigrationReport was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -79,7 +79,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Migration Readiness.
      * The Intune coverage for the associated Group Policy Object file.
      */
-    @SerializedName("migrationReadiness")
+    @SerializedName(value = "migrationReadiness", alternate = {"MigrationReadiness"})
     @Expose
     public GroupPolicyMigrationReadiness migrationReadiness;
 
@@ -87,7 +87,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Ou Distinguished Name.
      * The distinguished name of the OU.
      */
-    @SerializedName("ouDistinguishedName")
+    @SerializedName(value = "ouDistinguishedName", alternate = {"OuDistinguishedName"})
     @Expose
     public String ouDistinguishedName;
 
@@ -95,7 +95,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Supported Settings Count.
      * The number of Group Policy Settings supported by Intune.
      */
-    @SerializedName("supportedSettingsCount")
+    @SerializedName(value = "supportedSettingsCount", alternate = {"SupportedSettingsCount"})
     @Expose
     public Integer supportedSettingsCount;
 
@@ -103,7 +103,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Supported Settings Percent.
      * The Percentage of Group Policy Settings supported by Intune.
      */
-    @SerializedName("supportedSettingsPercent")
+    @SerializedName(value = "supportedSettingsPercent", alternate = {"SupportedSettingsPercent"})
     @Expose
     public Integer supportedSettingsPercent;
 
@@ -111,7 +111,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Targeted In Active Directory.
      * The Targeted in AD property from GPO Xml Content
      */
-    @SerializedName("targetedInActiveDirectory")
+    @SerializedName(value = "targetedInActiveDirectory", alternate = {"TargetedInActiveDirectory"})
     @Expose
     public Boolean targetedInActiveDirectory;
 
@@ -119,7 +119,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Total Settings Count.
      * The total number of Group Policy Settings from GPO file.
      */
-    @SerializedName("totalSettingsCount")
+    @SerializedName(value = "totalSettingsCount", alternate = {"TotalSettingsCount"})
     @Expose
     public Integer totalSettingsCount;
 
@@ -127,7 +127,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Group Policy Setting Mappings.
      * A list of group policy settings to MDM/Intune mappings.
      */
-    @SerializedName("groupPolicySettingMappings")
+    @SerializedName(value = "groupPolicySettingMappings", alternate = {"GroupPolicySettingMappings"})
     @Expose
     public GroupPolicySettingMappingCollectionPage groupPolicySettingMappings;
 
@@ -135,7 +135,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Unsupported Group Policy Extensions.
      * A list of unsupported group policy extensions inside the Group Policy Object.
      */
-    @SerializedName("unsupportedGroupPolicyExtensions")
+    @SerializedName(value = "unsupportedGroupPolicyExtensions", alternate = {"UnsupportedGroupPolicyExtensions"})
     @Expose
     public UnsupportedGroupPolicyExtensionCollectionPage unsupportedGroupPolicyExtensions;
 

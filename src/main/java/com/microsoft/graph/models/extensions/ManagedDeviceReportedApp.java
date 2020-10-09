@@ -35,7 +35,7 @@ public class ManagedDeviceReportedApp implements IJsonBackedObject {
      * The App Id.
      * The application or bundle identifier of the application
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 

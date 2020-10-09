@@ -38,7 +38,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Allow Late Submissions.
      * 
      */
-    @SerializedName("allowLateSubmissions")
+    @SerializedName(value = "allowLateSubmissions", alternate = {"AllowLateSubmissions"})
     @Expose
     public Boolean allowLateSubmissions;
 
@@ -46,7 +46,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Allow Students To Add Resources To Submission.
      * 
      */
-    @SerializedName("allowStudentsToAddResourcesToSubmission")
+    @SerializedName(value = "allowStudentsToAddResourcesToSubmission", alternate = {"AllowStudentsToAddResourcesToSubmission"})
     @Expose
     public Boolean allowStudentsToAddResourcesToSubmission;
 
@@ -54,7 +54,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Assign Date Time.
      * 
      */
-    @SerializedName("assignDateTime")
+    @SerializedName(value = "assignDateTime", alternate = {"AssignDateTime"})
     @Expose
     public java.util.Calendar assignDateTime;
 
@@ -62,7 +62,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Assigned Date Time.
      * 
      */
-    @SerializedName("assignedDateTime")
+    @SerializedName(value = "assignedDateTime", alternate = {"AssignedDateTime"})
     @Expose
     public java.util.Calendar assignedDateTime;
 
@@ -70,7 +70,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Assign To.
      * 
      */
-    @SerializedName("assignTo")
+    @SerializedName(value = "assignTo", alternate = {"AssignTo"})
     @Expose
     public EducationAssignmentRecipient assignTo;
 
@@ -78,7 +78,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Class Id.
      * 
      */
-    @SerializedName("classId")
+    @SerializedName(value = "classId", alternate = {"ClassId"})
     @Expose
     public String classId;
 
@@ -86,7 +86,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Close Date Time.
      * 
      */
-    @SerializedName("closeDateTime")
+    @SerializedName(value = "closeDateTime", alternate = {"CloseDateTime"})
     @Expose
     public java.util.Calendar closeDateTime;
 
@@ -94,7 +94,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -102,7 +102,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -110,7 +110,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -118,7 +118,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Due Date Time.
      * 
      */
-    @SerializedName("dueDateTime")
+    @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
     public java.util.Calendar dueDateTime;
 
@@ -126,7 +126,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Grading.
      * 
      */
-    @SerializedName("grading")
+    @SerializedName(value = "grading", alternate = {"Grading"})
     @Expose
     public EducationAssignmentGradeType grading;
 
@@ -134,7 +134,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Instructions.
      * 
      */
-    @SerializedName("instructions")
+    @SerializedName(value = "instructions", alternate = {"Instructions"})
     @Expose
     public EducationItemBody instructions;
 
@@ -142,7 +142,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public IdentitySet lastModifiedBy;
 
@@ -150,7 +150,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -158,7 +158,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public EducationAssignmentStatus status;
 
@@ -166,7 +166,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Categories.
      * 
      */
-    @SerializedName("categories")
+    @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
     public EducationCategoryCollectionPage categories;
 
@@ -174,7 +174,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Resources.
      * 
      */
-    @SerializedName("resources")
+    @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
     public EducationAssignmentResourceCollectionPage resources;
 
@@ -182,7 +182,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Rubric.
      * 
      */
-    @SerializedName("rubric")
+    @SerializedName(value = "rubric", alternate = {"Rubric"})
     @Expose
     public EducationRubric rubric;
 
@@ -190,7 +190,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Submissions.
      * 
      */
-    @SerializedName("submissions")
+    @SerializedName(value = "submissions", alternate = {"Submissions"})
     @Expose
     public EducationSubmissionCollectionPage submissions;
 

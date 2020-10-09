@@ -36,7 +36,7 @@ public class PrintJobStatus implements IJsonBackedObject {
      * The Acquired By Printer.
      * 
      */
-    @SerializedName("acquiredByPrinter")
+    @SerializedName(value = "acquiredByPrinter", alternate = {"AcquiredByPrinter"})
     @Expose
     public Boolean acquiredByPrinter;
 
@@ -44,7 +44,7 @@ public class PrintJobStatus implements IJsonBackedObject {
      * The Processing State.
      * 
      */
-    @SerializedName("processingState")
+    @SerializedName(value = "processingState", alternate = {"ProcessingState"})
     @Expose
     public PrintJobProcessingState processingState;
 
@@ -52,7 +52,7 @@ public class PrintJobStatus implements IJsonBackedObject {
      * The Processing State Description.
      * 
      */
-    @SerializedName("processingStateDescription")
+    @SerializedName(value = "processingStateDescription", alternate = {"ProcessingStateDescription"})
     @Expose
     public String processingStateDescription;
 

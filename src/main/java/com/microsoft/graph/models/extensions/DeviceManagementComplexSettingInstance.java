@@ -27,7 +27,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
      * The Value.
      * The values that make up the complex setting
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public DeviceManagementSettingInstanceCollectionPage value;
 

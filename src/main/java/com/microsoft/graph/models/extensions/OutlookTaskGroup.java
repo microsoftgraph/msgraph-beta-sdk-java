@@ -28,7 +28,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
      * The Change Key.
      * 
      */
-    @SerializedName("changeKey")
+    @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
     public String changeKey;
 
@@ -36,7 +36,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
      * The Group Key.
      * 
      */
-    @SerializedName("groupKey")
+    @SerializedName(value = "groupKey", alternate = {"GroupKey"})
     @Expose
     public java.util.UUID groupKey;
 
@@ -44,7 +44,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
      * The Is Default Group.
      * 
      */
-    @SerializedName("isDefaultGroup")
+    @SerializedName(value = "isDefaultGroup", alternate = {"IsDefaultGroup"})
     @Expose
     public Boolean isDefaultGroup;
 
@@ -52,7 +52,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -60,7 +60,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
      * The Task Folders.
      * 
      */
-    @SerializedName("taskFolders")
+    @SerializedName(value = "taskFolders", alternate = {"TaskFolders"})
     @Expose
     public OutlookTaskFolderCollectionPage taskFolders;
 

@@ -35,7 +35,7 @@ public class EncryptionReportPolicyDetails implements IJsonBackedObject {
      * The Policy Id.
      * Policy Id for Encryption Report
      */
-    @SerializedName("policyId")
+    @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
     public String policyId;
 
@@ -43,7 +43,7 @@ public class EncryptionReportPolicyDetails implements IJsonBackedObject {
      * The Policy Name.
      * Policy Name for Encryption Report
      */
-    @SerializedName("policyName")
+    @SerializedName(value = "policyName", alternate = {"PolicyName"})
     @Expose
     public String policyName;
 

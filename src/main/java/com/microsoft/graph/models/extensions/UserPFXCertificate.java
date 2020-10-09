@@ -28,7 +28,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Date/time when this PFX certificate was imported.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -36,7 +36,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Encrypted Pfx Blob.
      * Encrypted PFX blob.
      */
-    @SerializedName("encryptedPfxBlob")
+    @SerializedName(value = "encryptedPfxBlob", alternate = {"EncryptedPfxBlob"})
     @Expose
     public byte[] encryptedPfxBlob;
 
@@ -44,7 +44,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Encrypted Pfx Password.
      * Encrypted PFX password.
      */
-    @SerializedName("encryptedPfxPassword")
+    @SerializedName(value = "encryptedPfxPassword", alternate = {"EncryptedPfxPassword"})
     @Expose
     public String encryptedPfxPassword;
 
@@ -52,7 +52,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * Certificate's validity expiration date/time.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -60,7 +60,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Intended Purpose.
      * Certificate's intended purpose from the point-of-view of deployment.
      */
-    @SerializedName("intendedPurpose")
+    @SerializedName(value = "intendedPurpose", alternate = {"IntendedPurpose"})
     @Expose
     public UserPfxIntendedPurpose intendedPurpose;
 
@@ -68,7 +68,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Key Name.
      * Name of the key (within the provider) used to encrypt the blob.
      */
-    @SerializedName("keyName")
+    @SerializedName(value = "keyName", alternate = {"KeyName"})
     @Expose
     public String keyName;
 
@@ -76,7 +76,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Date/time when this PFX certificate was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -84,7 +84,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Padding Scheme.
      * Padding scheme used by the provider during encryption/decryption.
      */
-    @SerializedName("paddingScheme")
+    @SerializedName(value = "paddingScheme", alternate = {"PaddingScheme"})
     @Expose
     public UserPfxPaddingScheme paddingScheme;
 
@@ -92,7 +92,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Provider Name.
      * Crypto provider used to encrypt this blob.
      */
-    @SerializedName("providerName")
+    @SerializedName(value = "providerName", alternate = {"ProviderName"})
     @Expose
     public String providerName;
 
@@ -100,7 +100,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * Certificate's validity start date/time.
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -108,7 +108,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The Thumbprint.
      * SHA-1 thumbprint of the PFX certificate.
      */
-    @SerializedName("thumbprint")
+    @SerializedName(value = "thumbprint", alternate = {"Thumbprint"})
     @Expose
     public String thumbprint;
 
@@ -116,7 +116,7 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * User Principal Name of the PFX certificate.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

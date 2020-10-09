@@ -36,7 +36,7 @@ public class SecurityBaselineContributingPolicy implements IJsonBackedObject {
      * The Display Name.
      * Name of the policy
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class SecurityBaselineContributingPolicy implements IJsonBackedObject {
      * The Source Id.
      * Unique identifier of the policy
      */
-    @SerializedName("sourceId")
+    @SerializedName(value = "sourceId", alternate = {"SourceId"})
     @Expose
     public String sourceId;
 
@@ -52,7 +52,7 @@ public class SecurityBaselineContributingPolicy implements IJsonBackedObject {
      * The Source Type.
      * Authoring source of the policy
      */
-    @SerializedName("sourceType")
+    @SerializedName(value = "sourceType", alternate = {"SourceType"})
     @Expose
     public SecurityBaselinePolicySourceType sourceType;
 

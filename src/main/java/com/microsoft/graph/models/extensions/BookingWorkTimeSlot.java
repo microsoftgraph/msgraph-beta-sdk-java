@@ -35,7 +35,7 @@ public class BookingWorkTimeSlot implements IJsonBackedObject {
      * The End.
      * 
      */
-    @SerializedName("end")
+    @SerializedName(value = "end", alternate = {"End"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay end;
 
@@ -43,7 +43,7 @@ public class BookingWorkTimeSlot implements IJsonBackedObject {
      * The Start.
      * 
      */
-    @SerializedName("start")
+    @SerializedName(value = "start", alternate = {"Start"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay start;
 

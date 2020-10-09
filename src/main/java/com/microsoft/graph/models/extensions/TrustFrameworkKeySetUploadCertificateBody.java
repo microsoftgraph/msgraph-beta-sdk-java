@@ -22,7 +22,7 @@ public class TrustFrameworkKeySetUploadCertificateBody {
      * The key.
      * 
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public String key;
 

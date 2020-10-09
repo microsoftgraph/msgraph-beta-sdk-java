@@ -23,7 +23,7 @@ public class DeviceShellScriptAssignBody {
      * The device Management Script Group Assignments.
      * 
      */
-    @SerializedName("deviceManagementScriptGroupAssignments")
+    @SerializedName(value = "deviceManagementScriptGroupAssignments", alternate = {"DeviceManagementScriptGroupAssignments"})
     @Expose
     public java.util.List<DeviceManagementScriptGroupAssignment> deviceManagementScriptGroupAssignments;
 
@@ -31,7 +31,7 @@ public class DeviceShellScriptAssignBody {
      * The device Management Script Assignments.
      * 
      */
-    @SerializedName("deviceManagementScriptAssignments")
+    @SerializedName(value = "deviceManagementScriptAssignments", alternate = {"DeviceManagementScriptAssignments"})
     @Expose
     public java.util.List<DeviceManagementScriptAssignment> deviceManagementScriptAssignments;
 

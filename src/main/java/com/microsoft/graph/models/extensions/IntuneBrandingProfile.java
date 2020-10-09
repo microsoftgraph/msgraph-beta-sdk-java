@@ -32,7 +32,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Company Portal Blocked Actions.
      * Collection of blocked actions on the company portal as per platform and device ownership types.
      */
-    @SerializedName("companyPortalBlockedActions")
+    @SerializedName(value = "companyPortalBlockedActions", alternate = {"CompanyPortalBlockedActions"})
     @Expose
     public java.util.List<CompanyPortalBlockedAction> companyPortalBlockedActions;
 
@@ -40,7 +40,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Contact ITEmail Address.
      * E-mail address of the person/organization responsible for IT support
      */
-    @SerializedName("contactITEmailAddress")
+    @SerializedName(value = "contactITEmailAddress", alternate = {"ContactITEmailAddress"})
     @Expose
     public String contactITEmailAddress;
 
@@ -48,7 +48,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Contact ITName.
      * Name of the person/organization responsible for IT support
      */
-    @SerializedName("contactITName")
+    @SerializedName(value = "contactITName", alternate = {"ContactITName"})
     @Expose
     public String contactITName;
 
@@ -56,7 +56,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Contact ITNotes.
      * Text comments regarding the person/organization responsible for IT support
      */
-    @SerializedName("contactITNotes")
+    @SerializedName(value = "contactITNotes", alternate = {"ContactITNotes"})
     @Expose
     public String contactITNotes;
 
@@ -64,7 +64,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Contact ITPhone Number.
      * Phone number of the person/organization responsible for IT support
      */
-    @SerializedName("contactITPhoneNumber")
+    @SerializedName(value = "contactITPhoneNumber", alternate = {"ContactITPhoneNumber"})
     @Expose
     public String contactITPhoneNumber;
 
@@ -72,7 +72,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Time when the BrandingProfile was created
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -80,7 +80,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Custom Can See Privacy Message.
      * Text comments regarding what the admin has access to on the device
      */
-    @SerializedName("customCanSeePrivacyMessage")
+    @SerializedName(value = "customCanSeePrivacyMessage", alternate = {"CustomCanSeePrivacyMessage"})
     @Expose
     public String customCanSeePrivacyMessage;
 
@@ -88,7 +88,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Custom Cant See Privacy Message.
      * Text comments regarding what the admin doesn't have access to on the device
      */
-    @SerializedName("customCantSeePrivacyMessage")
+    @SerializedName(value = "customCantSeePrivacyMessage", alternate = {"CustomCantSeePrivacyMessage"})
     @Expose
     public String customCantSeePrivacyMessage;
 
@@ -96,7 +96,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Custom Privacy Message.
      * Text comments regarding what the admin doesn't have access to on the device
      */
-    @SerializedName("customPrivacyMessage")
+    @SerializedName(value = "customPrivacyMessage", alternate = {"CustomPrivacyMessage"})
     @Expose
     public String customPrivacyMessage;
 
@@ -104,7 +104,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Disable Client Telemetry.
      * Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
      */
-    @SerializedName("disableClientTelemetry")
+    @SerializedName(value = "disableClientTelemetry", alternate = {"DisableClientTelemetry"})
     @Expose
     public Boolean disableClientTelemetry;
 
@@ -112,7 +112,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Company/organization name that is displayed to end users
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -120,7 +120,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Enrollment Availability.
      * Customized device enrollment flow displayed to the end user 
      */
-    @SerializedName("enrollmentAvailability")
+    @SerializedName(value = "enrollmentAvailability", alternate = {"EnrollmentAvailability"})
     @Expose
     public EnrollmentAvailabilityOptions enrollmentAvailability;
 
@@ -128,7 +128,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Is Default Profile.
      * Boolean that represents whether the profile is used as default or not
      */
-    @SerializedName("isDefaultProfile")
+    @SerializedName(value = "isDefaultProfile", alternate = {"IsDefaultProfile"})
     @Expose
     public Boolean isDefaultProfile;
 
@@ -136,7 +136,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Is Factory Reset Disabled.
      * Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
      */
-    @SerializedName("isFactoryResetDisabled")
+    @SerializedName(value = "isFactoryResetDisabled", alternate = {"IsFactoryResetDisabled"})
     @Expose
     public Boolean isFactoryResetDisabled;
 
@@ -144,7 +144,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Is Remove Device Disabled.
      * Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
      */
-    @SerializedName("isRemoveDeviceDisabled")
+    @SerializedName(value = "isRemoveDeviceDisabled", alternate = {"IsRemoveDeviceDisabled"})
     @Expose
     public Boolean isRemoveDeviceDisabled;
 
@@ -152,7 +152,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Landing Page Customized Image.
      * Customized image displayed in Company Portal apps landing page
      */
-    @SerializedName("landingPageCustomizedImage")
+    @SerializedName(value = "landingPageCustomizedImage", alternate = {"LandingPageCustomizedImage"})
     @Expose
     public MimeContent landingPageCustomizedImage;
 
@@ -160,7 +160,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Time when the BrandingProfile was last modified
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -168,7 +168,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Light Background Logo.
      * Logo image displayed in Company Portal apps which have a light background behind the logo
      */
-    @SerializedName("lightBackgroundLogo")
+    @SerializedName(value = "lightBackgroundLogo", alternate = {"LightBackgroundLogo"})
     @Expose
     public MimeContent lightBackgroundLogo;
 
@@ -176,7 +176,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Online Support Site Name.
      * Display name of the company/organization???s IT helpdesk site
      */
-    @SerializedName("onlineSupportSiteName")
+    @SerializedName(value = "onlineSupportSiteName", alternate = {"OnlineSupportSiteName"})
     @Expose
     public String onlineSupportSiteName;
 
@@ -184,7 +184,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Online Support Site Url.
      * URL to the company/organization???s IT helpdesk site
      */
-    @SerializedName("onlineSupportSiteUrl")
+    @SerializedName(value = "onlineSupportSiteUrl", alternate = {"OnlineSupportSiteUrl"})
     @Expose
     public String onlineSupportSiteUrl;
 
@@ -192,7 +192,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Privacy Url.
      * URL to the company/organization???s privacy policy
      */
-    @SerializedName("privacyUrl")
+    @SerializedName(value = "privacyUrl", alternate = {"PrivacyUrl"})
     @Expose
     public String privacyUrl;
 
@@ -200,7 +200,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Profile Description.
      * Description of the profile
      */
-    @SerializedName("profileDescription")
+    @SerializedName(value = "profileDescription", alternate = {"ProfileDescription"})
     @Expose
     public String profileDescription;
 
@@ -208,7 +208,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Profile Name.
      * Name of the profile
      */
-    @SerializedName("profileName")
+    @SerializedName(value = "profileName", alternate = {"ProfileName"})
     @Expose
     public String profileName;
 
@@ -216,7 +216,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of scope tags assigned to the branding profile
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -224,7 +224,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Send Device Ownership Change Push Notification.
      * Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
      */
-    @SerializedName("sendDeviceOwnershipChangePushNotification")
+    @SerializedName(value = "sendDeviceOwnershipChangePushNotification", alternate = {"SendDeviceOwnershipChangePushNotification"})
     @Expose
     public Boolean sendDeviceOwnershipChangePushNotification;
 
@@ -232,7 +232,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Show Azure ADEnterprise Apps.
      * Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
      */
-    @SerializedName("showAzureADEnterpriseApps")
+    @SerializedName(value = "showAzureADEnterpriseApps", alternate = {"ShowAzureADEnterpriseApps"})
     @Expose
     public Boolean showAzureADEnterpriseApps;
 
@@ -240,7 +240,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Show Display Name Next To Logo.
      * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
      */
-    @SerializedName("showDisplayNameNextToLogo")
+    @SerializedName(value = "showDisplayNameNextToLogo", alternate = {"ShowDisplayNameNextToLogo"})
     @Expose
     public Boolean showDisplayNameNextToLogo;
 
@@ -248,7 +248,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Show Logo.
      * Boolean that represents whether the administrator-supplied logo images are shown or not
      */
-    @SerializedName("showLogo")
+    @SerializedName(value = "showLogo", alternate = {"ShowLogo"})
     @Expose
     public Boolean showLogo;
 
@@ -256,7 +256,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Show Office Web Apps.
      * Boolean that indicates if Office WebApps will be shown in Company Portal
      */
-    @SerializedName("showOfficeWebApps")
+    @SerializedName(value = "showOfficeWebApps", alternate = {"ShowOfficeWebApps"})
     @Expose
     public Boolean showOfficeWebApps;
 
@@ -264,7 +264,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Theme Color.
      * Primary theme color used in the Company Portal applications and web portal
      */
-    @SerializedName("themeColor")
+    @SerializedName(value = "themeColor", alternate = {"ThemeColor"})
     @Expose
     public RgbColor themeColor;
 
@@ -272,7 +272,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Theme Color Logo.
      * Logo image displayed in Company Portal apps which have a theme color background behind the logo
      */
-    @SerializedName("themeColorLogo")
+    @SerializedName(value = "themeColorLogo", alternate = {"ThemeColorLogo"})
     @Expose
     public MimeContent themeColorLogo;
 
@@ -280,7 +280,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for the branding profile
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public IntuneBrandingProfileAssignmentCollectionPage assignments;
 

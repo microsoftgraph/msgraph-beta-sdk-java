@@ -26,7 +26,7 @@ public class LookupResultRow extends Entity implements IJsonBackedObject {
      * The Row.
      * 
      */
-    @SerializedName("row")
+    @SerializedName(value = "row", alternate = {"Row"})
     @Expose
     public String row;
 

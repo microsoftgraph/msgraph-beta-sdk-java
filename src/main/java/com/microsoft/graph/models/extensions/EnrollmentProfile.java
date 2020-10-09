@@ -26,7 +26,7 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
      * The Configuration Endpoint Url.
      * Configuration endpoint url to use for Enrollment
      */
-    @SerializedName("configurationEndpointUrl")
+    @SerializedName(value = "configurationEndpointUrl", alternate = {"ConfigurationEndpointUrl"})
     @Expose
     public String configurationEndpointUrl;
 
@@ -34,7 +34,7 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the profile
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -42,7 +42,7 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Name of the profile
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -50,7 +50,7 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
      * The Enable Authentication Via Company Portal.
      * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
      */
-    @SerializedName("enableAuthenticationViaCompanyPortal")
+    @SerializedName(value = "enableAuthenticationViaCompanyPortal", alternate = {"EnableAuthenticationViaCompanyPortal"})
     @Expose
     public Boolean enableAuthenticationViaCompanyPortal;
 
@@ -58,7 +58,7 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
      * The Require Company Portal On Setup Assistant Enrolled Devices.
      * Indicates that Company Portal is required on setup assistant enrolled devices
      */
-    @SerializedName("requireCompanyPortalOnSetupAssistantEnrolledDevices")
+    @SerializedName(value = "requireCompanyPortalOnSetupAssistantEnrolledDevices", alternate = {"RequireCompanyPortalOnSetupAssistantEnrolledDevices"})
     @Expose
     public Boolean requireCompanyPortalOnSetupAssistantEnrolledDevices;
 
@@ -66,7 +66,7 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
      * The Requires User Authentication.
      * Indicates if the profile requires user authentication
      */
-    @SerializedName("requiresUserAuthentication")
+    @SerializedName(value = "requiresUserAuthentication", alternate = {"RequiresUserAuthentication"})
     @Expose
     public Boolean requiresUserAuthentication;
 

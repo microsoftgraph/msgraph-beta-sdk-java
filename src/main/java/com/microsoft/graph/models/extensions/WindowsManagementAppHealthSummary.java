@@ -26,7 +26,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements IJsonBa
      * The Healthy Device Count.
      * Healthy device count.
      */
-    @SerializedName("healthyDeviceCount")
+    @SerializedName(value = "healthyDeviceCount", alternate = {"HealthyDeviceCount"})
     @Expose
     public Integer healthyDeviceCount;
 
@@ -34,7 +34,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements IJsonBa
      * The Unhealthy Device Count.
      * Unhealthy device count.
      */
-    @SerializedName("unhealthyDeviceCount")
+    @SerializedName(value = "unhealthyDeviceCount", alternate = {"UnhealthyDeviceCount"})
     @Expose
     public Integer unhealthyDeviceCount;
 
@@ -42,7 +42,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements IJsonBa
      * The Unknown Device Count.
      * Unknown device count.
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 

@@ -38,7 +38,7 @@ public class ProvisioningStep implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -46,7 +46,7 @@ public class ProvisioningStep implements IJsonBackedObject {
      * The Details.
      * 
      */
-    @SerializedName("details")
+    @SerializedName(value = "details", alternate = {"Details"})
     @Expose
     public DetailsInfo details;
 
@@ -54,7 +54,7 @@ public class ProvisioningStep implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -62,7 +62,7 @@ public class ProvisioningStep implements IJsonBackedObject {
      * The Provisioning Step Type.
      * 
      */
-    @SerializedName("provisioningStepType")
+    @SerializedName(value = "provisioningStepType", alternate = {"ProvisioningStepType"})
     @Expose
     public ProvisioningStepType provisioningStepType;
 
@@ -70,7 +70,7 @@ public class ProvisioningStep implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ProvisioningResult status;
 

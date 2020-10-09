@@ -31,7 +31,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Accounts Block Adding Non Microsoft Account Email.
      * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      */
-    @SerializedName("accountsBlockAddingNonMicrosoftAccountEmail")
+    @SerializedName(value = "accountsBlockAddingNonMicrosoftAccountEmail", alternate = {"AccountsBlockAddingNonMicrosoftAccountEmail"})
     @Expose
     public Boolean accountsBlockAddingNonMicrosoftAccountEmail;
 
@@ -39,7 +39,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Apply Only To Windows81.
      * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      */
-    @SerializedName("applyOnlyToWindows81")
+    @SerializedName(value = "applyOnlyToWindows81", alternate = {"ApplyOnlyToWindows81"})
     @Expose
     public Boolean applyOnlyToWindows81;
 
@@ -47,7 +47,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Autofill.
      * Indicates whether or not to block auto fill.
      */
-    @SerializedName("browserBlockAutofill")
+    @SerializedName(value = "browserBlockAutofill", alternate = {"BrowserBlockAutofill"})
     @Expose
     public Boolean browserBlockAutofill;
 
@@ -55,7 +55,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Automatic Detection Of Intranet Sites.
      * Indicates whether or not to block automatic detection of Intranet sites.
      */
-    @SerializedName("browserBlockAutomaticDetectionOfIntranetSites")
+    @SerializedName(value = "browserBlockAutomaticDetectionOfIntranetSites", alternate = {"BrowserBlockAutomaticDetectionOfIntranetSites"})
     @Expose
     public Boolean browserBlockAutomaticDetectionOfIntranetSites;
 
@@ -63,7 +63,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Enterprise Mode Access.
      * Indicates whether or not to block enterprise mode access.
      */
-    @SerializedName("browserBlockEnterpriseModeAccess")
+    @SerializedName(value = "browserBlockEnterpriseModeAccess", alternate = {"BrowserBlockEnterpriseModeAccess"})
     @Expose
     public Boolean browserBlockEnterpriseModeAccess;
 
@@ -71,7 +71,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Java Script.
      * Indicates whether or not to Block the user from using JavaScript.
      */
-    @SerializedName("browserBlockJavaScript")
+    @SerializedName(value = "browserBlockJavaScript", alternate = {"BrowserBlockJavaScript"})
     @Expose
     public Boolean browserBlockJavaScript;
 
@@ -79,7 +79,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Plugins.
      * Indicates whether or not to block plug-ins.
      */
-    @SerializedName("browserBlockPlugins")
+    @SerializedName(value = "browserBlockPlugins", alternate = {"BrowserBlockPlugins"})
     @Expose
     public Boolean browserBlockPlugins;
 
@@ -87,7 +87,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Popups.
      * Indicates whether or not to block popups.
      */
-    @SerializedName("browserBlockPopups")
+    @SerializedName(value = "browserBlockPopups", alternate = {"BrowserBlockPopups"})
     @Expose
     public Boolean browserBlockPopups;
 
@@ -95,7 +95,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Sending Do Not Track Header.
      * Indicates whether or not to Block the user from sending the do not track header.
      */
-    @SerializedName("browserBlockSendingDoNotTrackHeader")
+    @SerializedName(value = "browserBlockSendingDoNotTrackHeader", alternate = {"BrowserBlockSendingDoNotTrackHeader"})
     @Expose
     public Boolean browserBlockSendingDoNotTrackHeader;
 
@@ -103,7 +103,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Block Single Word Entry On Intranet Sites.
      * Indicates whether or not to block a single word entry on Intranet sites.
      */
-    @SerializedName("browserBlockSingleWordEntryOnIntranetSites")
+    @SerializedName(value = "browserBlockSingleWordEntryOnIntranetSites", alternate = {"BrowserBlockSingleWordEntryOnIntranetSites"})
     @Expose
     public Boolean browserBlockSingleWordEntryOnIntranetSites;
 
@@ -111,7 +111,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Enterprise Mode Site List Location.
      * The enterprise mode site list location. Could be a local file, local network or http location.
      */
-    @SerializedName("browserEnterpriseModeSiteListLocation")
+    @SerializedName(value = "browserEnterpriseModeSiteListLocation", alternate = {"BrowserEnterpriseModeSiteListLocation"})
     @Expose
     public String browserEnterpriseModeSiteListLocation;
 
@@ -119,7 +119,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Internet Security Level.
      * The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
      */
-    @SerializedName("browserInternetSecurityLevel")
+    @SerializedName(value = "browserInternetSecurityLevel", alternate = {"BrowserInternetSecurityLevel"})
     @Expose
     public InternetSiteSecurityLevel browserInternetSecurityLevel;
 
@@ -127,7 +127,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Intranet Security Level.
      * The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
      */
-    @SerializedName("browserIntranetSecurityLevel")
+    @SerializedName(value = "browserIntranetSecurityLevel", alternate = {"BrowserIntranetSecurityLevel"})
     @Expose
     public SiteSecurityLevel browserIntranetSecurityLevel;
 
@@ -135,7 +135,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Logging Report Location.
      * The logging report location.
      */
-    @SerializedName("browserLoggingReportLocation")
+    @SerializedName(value = "browserLoggingReportLocation", alternate = {"BrowserLoggingReportLocation"})
     @Expose
     public String browserLoggingReportLocation;
 
@@ -143,7 +143,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Require Firewall.
      * Indicates whether or not to require a firewall.
      */
-    @SerializedName("browserRequireFirewall")
+    @SerializedName(value = "browserRequireFirewall", alternate = {"BrowserRequireFirewall"})
     @Expose
     public Boolean browserRequireFirewall;
 
@@ -151,7 +151,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Require Fraud Warning.
      * Indicates whether or not to require fraud warning.
      */
-    @SerializedName("browserRequireFraudWarning")
+    @SerializedName(value = "browserRequireFraudWarning", alternate = {"BrowserRequireFraudWarning"})
     @Expose
     public Boolean browserRequireFraudWarning;
 
@@ -159,7 +159,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Require High Security For Restricted Sites.
      * Indicates whether or not to require high security for restricted sites.
      */
-    @SerializedName("browserRequireHighSecurityForRestrictedSites")
+    @SerializedName(value = "browserRequireHighSecurityForRestrictedSites", alternate = {"BrowserRequireHighSecurityForRestrictedSites"})
     @Expose
     public Boolean browserRequireHighSecurityForRestrictedSites;
 
@@ -167,7 +167,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Require Smart Screen.
      * Indicates whether or not to require the user to use the smart screen filter.
      */
-    @SerializedName("browserRequireSmartScreen")
+    @SerializedName(value = "browserRequireSmartScreen", alternate = {"BrowserRequireSmartScreen"})
     @Expose
     public Boolean browserRequireSmartScreen;
 
@@ -175,7 +175,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Browser Trusted Sites Security Level.
      * The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
      */
-    @SerializedName("browserTrustedSitesSecurityLevel")
+    @SerializedName(value = "browserTrustedSitesSecurityLevel", alternate = {"BrowserTrustedSitesSecurityLevel"})
     @Expose
     public SiteSecurityLevel browserTrustedSitesSecurityLevel;
 
@@ -183,7 +183,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Cellular Block Data Roaming.
      * Indicates whether or not to block data roaming.
      */
-    @SerializedName("cellularBlockDataRoaming")
+    @SerializedName(value = "cellularBlockDataRoaming", alternate = {"CellularBlockDataRoaming"})
     @Expose
     public Boolean cellularBlockDataRoaming;
 
@@ -191,7 +191,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Diagnostics Block Data Submission.
      * Indicates whether or not to block diagnostic data submission.
      */
-    @SerializedName("diagnosticsBlockDataSubmission")
+    @SerializedName(value = "diagnosticsBlockDataSubmission", alternate = {"DiagnosticsBlockDataSubmission"})
     @Expose
     public Boolean diagnosticsBlockDataSubmission;
 
@@ -199,7 +199,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Minimum Auto Install Classification.
      * The minimum update classification to install automatically.
      */
-    @SerializedName("minimumAutoInstallClassification")
+    @SerializedName(value = "minimumAutoInstallClassification", alternate = {"MinimumAutoInstallClassification"})
     @Expose
     public UpdateClassification minimumAutoInstallClassification;
 
@@ -207,7 +207,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Block Picture Password And Pin.
      * Indicates whether or not to Block the user from using a pictures password and pin.
      */
-    @SerializedName("passwordBlockPicturePasswordAndPin")
+    @SerializedName(value = "passwordBlockPicturePasswordAndPin", alternate = {"PasswordBlockPicturePasswordAndPin"})
     @Expose
     public Boolean passwordBlockPicturePasswordAndPin;
 
@@ -215,7 +215,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Expiration Days.
      * Password expiration in days.
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -223,7 +223,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -231,7 +231,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Minimum Length.
      * The minimum password length.
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -239,7 +239,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Minutes Of Inactivity Before Screen Timeout.
      * The minutes of inactivity before the screen times out.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
@@ -247,7 +247,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Previous Password Block Count.
      * The number of previous passwords to prevent re-use of. Valid values 0 to 24
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -255,7 +255,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -263,7 +263,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Password Sign In Failure Count Before Factory Reset.
      * The number of sign in failures before factory reset.
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName(value = "passwordSignInFailureCountBeforeFactoryReset", alternate = {"PasswordSignInFailureCountBeforeFactoryReset"})
     @Expose
     public Integer passwordSignInFailureCountBeforeFactoryReset;
 
@@ -271,7 +271,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Storage Require Device Encryption.
      * Indicates whether or not to require encryption on a mobile device.
      */
-    @SerializedName("storageRequireDeviceEncryption")
+    @SerializedName(value = "storageRequireDeviceEncryption", alternate = {"StorageRequireDeviceEncryption"})
     @Expose
     public Boolean storageRequireDeviceEncryption;
 
@@ -279,7 +279,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Updates Minimum Auto Install Classification.
      * The minimum update classification to install automatically.
      */
-    @SerializedName("updatesMinimumAutoInstallClassification")
+    @SerializedName(value = "updatesMinimumAutoInstallClassification", alternate = {"UpdatesMinimumAutoInstallClassification"})
     @Expose
     public UpdateClassification updatesMinimumAutoInstallClassification;
 
@@ -287,7 +287,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Updates Require Automatic Updates.
      * Indicates whether or not to require automatic updates.
      */
-    @SerializedName("updatesRequireAutomaticUpdates")
+    @SerializedName(value = "updatesRequireAutomaticUpdates", alternate = {"UpdatesRequireAutomaticUpdates"})
     @Expose
     public Boolean updatesRequireAutomaticUpdates;
 
@@ -295,7 +295,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The User Account Control Settings.
      * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
      */
-    @SerializedName("userAccountControlSettings")
+    @SerializedName(value = "userAccountControlSettings", alternate = {"UserAccountControlSettings"})
     @Expose
     public WindowsUserAccountControlSettings userAccountControlSettings;
 
@@ -303,7 +303,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The Work Folders Url.
      * The work folders url.
      */
-    @SerializedName("workFoldersUrl")
+    @SerializedName(value = "workFoldersUrl", alternate = {"WorkFoldersUrl"})
     @Expose
     public String workFoldersUrl;
 

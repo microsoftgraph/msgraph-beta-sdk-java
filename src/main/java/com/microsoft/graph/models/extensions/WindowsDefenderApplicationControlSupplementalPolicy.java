@@ -31,7 +31,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Content.
      * The WindowsDefenderApplicationControl supplemental policy content in byte array format.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public byte[] content;
 
@@ -39,7 +39,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Content File Name.
      * The WindowsDefenderApplicationControl supplemental policy content's file name.
      */
-    @SerializedName("contentFileName")
+    @SerializedName(value = "contentFileName", alternate = {"ContentFileName"})
     @Expose
     public String contentFileName;
 
@@ -47,7 +47,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Creation Date Time.
      * The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
      */
-    @SerializedName("creationDateTime")
+    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
     public java.util.Calendar creationDateTime;
 
@@ -55,7 +55,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Description.
      * The description of WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -63,7 +63,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Display Name.
      * The display name of WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -71,7 +71,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Last Modified Date Time.
      * The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -79,7 +79,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Role Scope Tag Ids.
      * List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -87,7 +87,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Version.
      * The WindowsDefenderApplicationControl supplemental policy's version.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 
@@ -95,7 +95,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Assignments.
      * The associated group assignments for this WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage assignments;
 
@@ -103,7 +103,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Deploy Summary.
      * WindowsDefenderApplicationControl supplemental policy deployment summary.
      */
-    @SerializedName("deploySummary")
+    @SerializedName(value = "deploySummary", alternate = {"DeploySummary"})
     @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary deploySummary;
 
@@ -111,7 +111,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Device Statuses.
      * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage deviceStatuses;
 

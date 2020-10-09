@@ -35,7 +35,7 @@ public class AccountAlias implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -43,7 +43,7 @@ public class AccountAlias implements IJsonBackedObject {
      * The Id Type.
      * 
      */
-    @SerializedName("idType")
+    @SerializedName(value = "idType", alternate = {"IdType"})
     @Expose
     public String idType;
 

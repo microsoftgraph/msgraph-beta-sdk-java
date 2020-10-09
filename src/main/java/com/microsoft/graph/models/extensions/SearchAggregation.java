@@ -36,7 +36,7 @@ public class SearchAggregation implements IJsonBackedObject {
      * The Buckets.
      * 
      */
-    @SerializedName("buckets")
+    @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
     public java.util.List<SearchBucket> buckets;
 
@@ -44,7 +44,7 @@ public class SearchAggregation implements IJsonBackedObject {
      * The Field.
      * 
      */
-    @SerializedName("field")
+    @SerializedName(value = "field", alternate = {"Field"})
     @Expose
     public String field;
 

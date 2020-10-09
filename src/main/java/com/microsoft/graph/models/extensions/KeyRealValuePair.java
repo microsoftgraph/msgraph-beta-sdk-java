@@ -26,7 +26,7 @@ public class KeyRealValuePair extends KeyTypedValuePair implements IJsonBackedOb
      * The Value.
      * The real (floating-point) value of the key-value pair.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public Double value;
 

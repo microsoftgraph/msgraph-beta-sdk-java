@@ -37,7 +37,7 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
      * The App Type.
      * The app type
      */
-    @SerializedName("appType")
+    @SerializedName(value = "appType", alternate = {"AppType"})
     @Expose
     public WindowsKioskAppType appType;
 
@@ -45,7 +45,7 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
      * The Auto Launch.
      * Allow the app to be auto-launched in multi-app kiosk mode
      */
-    @SerializedName("autoLaunch")
+    @SerializedName(value = "autoLaunch", alternate = {"AutoLaunch"})
     @Expose
     public Boolean autoLaunch;
 
@@ -53,7 +53,7 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
      * The Name.
      * Represents the friendly name of an app
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -61,7 +61,7 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
      * The Start Layout Tile Size.
      * The app tile size for the start layout
      */
-    @SerializedName("startLayoutTileSize")
+    @SerializedName(value = "startLayoutTileSize", alternate = {"StartLayoutTileSize"})
     @Expose
     public WindowsAppStartLayoutTileSize startLayoutTileSize;
 

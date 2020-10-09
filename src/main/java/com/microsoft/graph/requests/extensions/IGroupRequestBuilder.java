@@ -86,6 +86,30 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder memberOfAsUser();
+
+    IUserWithReferenceRequestBuilder memberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder memberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder memberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder memberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder memberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
     IDirectoryObjectWithReferenceRequestBuilder members(final String id);
@@ -118,9 +142,57 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder membersWithLicenseErrors(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder membersWithLicenseErrorsAsUser();
+
+    IUserWithReferenceRequestBuilder membersWithLicenseErrorsAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder membersWithLicenseErrorsAsGroup();
+
+    IGroupWithReferenceRequestBuilder membersWithLicenseErrorsAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder membersWithLicenseErrorsAsApplication();
+
+    IApplicationWithReferenceRequestBuilder membersWithLicenseErrorsAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder membersWithLicenseErrorsAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder membersWithLicenseErrorsAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder membersWithLicenseErrorsAsDevice();
+
+    IDeviceWithReferenceRequestBuilder membersWithLicenseErrorsAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder membersWithLicenseErrorsAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder membersWithLicenseErrorsAsOrgContact(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
 
     IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder ownersAsUser();
+
+    IUserWithReferenceRequestBuilder ownersAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder ownersAsGroup();
+
+    IGroupWithReferenceRequestBuilder ownersAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder ownersAsApplication();
+
+    IApplicationWithReferenceRequestBuilder ownersAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder ownersAsDevice();
+
+    IDeviceWithReferenceRequestBuilder ownersAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder ownersAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder ownersAsOrgContact(final String id);
 
     IResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants();
 
@@ -134,9 +206,57 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser();
+
+    IUserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMembers();
 
     IDirectoryObjectWithReferenceRequestBuilder transitiveMembers(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder transitiveMembersAsUser();
+
+    IUserWithReferenceRequestBuilder transitiveMembersAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder transitiveMembersAsGroup();
+
+    IGroupWithReferenceRequestBuilder transitiveMembersAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder transitiveMembersAsApplication();
+
+    IApplicationWithReferenceRequestBuilder transitiveMembersAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMembersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder transitiveMembersAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder transitiveMembersAsDevice();
+
+    IDeviceWithReferenceRequestBuilder transitiveMembersAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder transitiveMembersAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder transitiveMembersAsOrgContact(final String id);
 
     IDirectoryObjectCollectionRequestBuilder acceptedSenders();
 

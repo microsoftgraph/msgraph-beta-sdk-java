@@ -28,7 +28,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Creation time of the PolicySetItem.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -36,7 +36,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Display Name.
      * DisplayName of the PolicySetItem.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Error Code.
      * Error code if any occured.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public ErrorCode errorCode;
 
@@ -52,7 +52,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Guided Deployment Tags.
      * Tags of the guided deployment
      */
-    @SerializedName("guidedDeploymentTags")
+    @SerializedName(value = "guidedDeploymentTags", alternate = {"GuidedDeploymentTags"})
     @Expose
     public java.util.List<String> guidedDeploymentTags;
 
@@ -60,7 +60,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Item Type.
      * policySetType of the PolicySetItem.
      */
-    @SerializedName("itemType")
+    @SerializedName(value = "itemType", alternate = {"ItemType"})
     @Expose
     public String itemType;
 
@@ -68,7 +68,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Last modified time of the PolicySetItem.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -76,7 +76,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Payload Id.
      * PayloadId of the PolicySetItem.
      */
-    @SerializedName("payloadId")
+    @SerializedName(value = "payloadId", alternate = {"PayloadId"})
     @Expose
     public String payloadId;
 
@@ -84,7 +84,7 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
      * The Status.
      * Status of the PolicySetItem.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public PolicySetStatus status;
 

@@ -26,7 +26,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Calls.
      * 
      */
-    @SerializedName("calls")
+    @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
     public Long calls;
 
@@ -34,7 +34,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Meetings.
      * 
      */
-    @SerializedName("meetings")
+    @SerializedName(value = "meetings", alternate = {"Meetings"})
     @Expose
     public Long meetings;
 
@@ -42,7 +42,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Private Chat Messages.
      * 
      */
-    @SerializedName("privateChatMessages")
+    @SerializedName(value = "privateChatMessages", alternate = {"PrivateChatMessages"})
     @Expose
     public Long privateChatMessages;
 
@@ -50,7 +50,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -58,7 +58,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -66,7 +66,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -74,7 +74,7 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
      * The Team Chat Messages.
      * 
      */
-    @SerializedName("teamChatMessages")
+    @SerializedName(value = "teamChatMessages", alternate = {"TeamChatMessages"})
     @Expose
     public Long teamChatMessages;
 

@@ -27,7 +27,7 @@ public class IntuneBrandingProfileAssignment extends Entity implements IJsonBack
      * The Target.
      * Assignment target that the branding profile is assigned to.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

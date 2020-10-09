@@ -26,7 +26,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * The Limit.
      * Limit of the EnrollmentRestrictionsConfigurationPolicySetItem.
      */
-    @SerializedName("limit")
+    @SerializedName(value = "limit", alternate = {"Limit"})
     @Expose
     public Integer limit;
 
@@ -34,7 +34,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * The Priority.
      * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 

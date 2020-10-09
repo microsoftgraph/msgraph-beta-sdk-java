@@ -36,7 +36,7 @@ public class Filter implements IJsonBackedObject {
      * The Category Filter Groups.
      * 
      */
-    @SerializedName("categoryFilterGroups")
+    @SerializedName(value = "categoryFilterGroups", alternate = {"CategoryFilterGroups"})
     @Expose
     public java.util.List<FilterGroup> categoryFilterGroups;
 
@@ -44,7 +44,7 @@ public class Filter implements IJsonBackedObject {
      * The Groups.
      * 
      */
-    @SerializedName("groups")
+    @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
     public java.util.List<FilterGroup> groups;
 
@@ -52,7 +52,7 @@ public class Filter implements IJsonBackedObject {
      * The Input Filter Groups.
      * 
      */
-    @SerializedName("inputFilterGroups")
+    @SerializedName(value = "inputFilterGroups", alternate = {"InputFilterGroups"})
     @Expose
     public java.util.List<FilterGroup> inputFilterGroups;
 

@@ -52,7 +52,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Password Single Sign On Settings.
      * 
      */
-    @SerializedName("passwordSingleSignOnSettings")
+    @SerializedName(value = "passwordSingleSignOnSettings", alternate = {"PasswordSingleSignOnSettings"})
     @Expose
     public PasswordSingleSignOnSettings passwordSingleSignOnSettings;
 
@@ -60,7 +60,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Account Enabled.
      * true if the service principal account is enabled; otherwise, false.
      */
-    @SerializedName("accountEnabled")
+    @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
     public Boolean accountEnabled;
 
@@ -68,7 +68,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Add Ins.
      * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
      */
-    @SerializedName("addIns")
+    @SerializedName(value = "addIns", alternate = {"AddIns"})
     @Expose
     public java.util.List<AddIn> addIns;
 
@@ -76,7 +76,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Alternative Names.
      * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
      */
-    @SerializedName("alternativeNames")
+    @SerializedName(value = "alternativeNames", alternate = {"AlternativeNames"})
     @Expose
     public java.util.List<String> alternativeNames;
 
@@ -84,7 +84,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Description.
      * 
      */
-    @SerializedName("appDescription")
+    @SerializedName(value = "appDescription", alternate = {"AppDescription"})
     @Expose
     public String appDescription;
 
@@ -92,7 +92,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Display Name.
      * The display name exposed by the associated application.
      */
-    @SerializedName("appDisplayName")
+    @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
     public String appDisplayName;
 
@@ -100,7 +100,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Id.
      * The unique identifier for the associated application (its appId property).
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -108,7 +108,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Application Template Id.
      * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only.
      */
-    @SerializedName("applicationTemplateId")
+    @SerializedName(value = "applicationTemplateId", alternate = {"ApplicationTemplateId"})
     @Expose
     public String applicationTemplateId;
 
@@ -116,7 +116,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Owner Organization Id.
      * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.
      */
-    @SerializedName("appOwnerOrganizationId")
+    @SerializedName(value = "appOwnerOrganizationId", alternate = {"AppOwnerOrganizationId"})
     @Expose
     public java.util.UUID appOwnerOrganizationId;
 
@@ -124,7 +124,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Role Assignment Required.
      * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable.
      */
-    @SerializedName("appRoleAssignmentRequired")
+    @SerializedName(value = "appRoleAssignmentRequired", alternate = {"AppRoleAssignmentRequired"})
     @Expose
     public Boolean appRoleAssignmentRequired;
 
@@ -132,7 +132,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Roles.
      * The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
      */
-    @SerializedName("appRoles")
+    @SerializedName(value = "appRoles", alternate = {"AppRoles"})
     @Expose
     public java.util.List<AppRole> appRoles;
 
@@ -140,7 +140,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -148,7 +148,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Display Name.
      * The display name for the service principal.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -156,7 +156,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Error Url.
      * 
      */
-    @SerializedName("errorUrl")
+    @SerializedName(value = "errorUrl", alternate = {"ErrorUrl"})
     @Expose
     public String errorUrl;
 
@@ -164,7 +164,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Homepage.
      * Home page or landing page of the application.
      */
-    @SerializedName("homepage")
+    @SerializedName(value = "homepage", alternate = {"Homepage"})
     @Expose
     public String homepage;
 
@@ -172,7 +172,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Info.
      * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
      */
-    @SerializedName("info")
+    @SerializedName(value = "info", alternate = {"Info"})
     @Expose
     public InformationalUrl info;
 
@@ -180,7 +180,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Key Credentials.
      * The collection of key credentials associated with the service principal. Not nullable.
      */
-    @SerializedName("keyCredentials")
+    @SerializedName(value = "keyCredentials", alternate = {"KeyCredentials"})
     @Expose
     public java.util.List<KeyCredential> keyCredentials;
 
@@ -188,7 +188,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Login Url.
      * Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
      */
-    @SerializedName("loginUrl")
+    @SerializedName(value = "loginUrl", alternate = {"LoginUrl"})
     @Expose
     public String loginUrl;
 
@@ -196,7 +196,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Logout Url.
      * Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.
      */
-    @SerializedName("logoutUrl")
+    @SerializedName(value = "logoutUrl", alternate = {"LogoutUrl"})
     @Expose
     public String logoutUrl;
 
@@ -204,7 +204,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public String notes;
 
@@ -212,7 +212,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Notification Email Addresses.
      * Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
      */
-    @SerializedName("notificationEmailAddresses")
+    @SerializedName(value = "notificationEmailAddresses", alternate = {"NotificationEmailAddresses"})
     @Expose
     public java.util.List<String> notificationEmailAddresses;
 
@@ -220,7 +220,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Password Credentials.
      * The collection of password credentials associated with the service principal. Not nullable.
      */
-    @SerializedName("passwordCredentials")
+    @SerializedName(value = "passwordCredentials", alternate = {"PasswordCredentials"})
     @Expose
     public java.util.List<PasswordCredential> passwordCredentials;
 
@@ -228,7 +228,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Preferred Single Sign On Mode.
      * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
      */
-    @SerializedName("preferredSingleSignOnMode")
+    @SerializedName(value = "preferredSingleSignOnMode", alternate = {"PreferredSingleSignOnMode"})
     @Expose
     public String preferredSingleSignOnMode;
 
@@ -236,7 +236,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Preferred Token Signing Key End Date Time.
      * 
      */
-    @SerializedName("preferredTokenSigningKeyEndDateTime")
+    @SerializedName(value = "preferredTokenSigningKeyEndDateTime", alternate = {"PreferredTokenSigningKeyEndDateTime"})
     @Expose
     public java.util.Calendar preferredTokenSigningKeyEndDateTime;
 
@@ -244,7 +244,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Preferred Token Signing Key Thumbprint.
      * 
      */
-    @SerializedName("preferredTokenSigningKeyThumbprint")
+    @SerializedName(value = "preferredTokenSigningKeyThumbprint", alternate = {"PreferredTokenSigningKeyThumbprint"})
     @Expose
     public String preferredTokenSigningKeyThumbprint;
 
@@ -252,7 +252,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Published Permission Scopes.
      * 
      */
-    @SerializedName("publishedPermissionScopes")
+    @SerializedName(value = "publishedPermissionScopes", alternate = {"PublishedPermissionScopes"})
     @Expose
     public java.util.List<PermissionScope> publishedPermissionScopes;
 
@@ -260,7 +260,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Publisher Name.
      * 
      */
-    @SerializedName("publisherName")
+    @SerializedName(value = "publisherName", alternate = {"PublisherName"})
     @Expose
     public String publisherName;
 
@@ -268,7 +268,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Reply Urls.
      * The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
      */
-    @SerializedName("replyUrls")
+    @SerializedName(value = "replyUrls", alternate = {"ReplyUrls"})
     @Expose
     public java.util.List<String> replyUrls;
 
@@ -276,7 +276,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Saml Metadata Url.
      * 
      */
-    @SerializedName("samlMetadataUrl")
+    @SerializedName(value = "samlMetadataUrl", alternate = {"SamlMetadataUrl"})
     @Expose
     public String samlMetadataUrl;
 
@@ -284,7 +284,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Saml Single Sign On Settings.
      * The collection for settings related to saml single sign-on.
      */
-    @SerializedName("samlSingleSignOnSettings")
+    @SerializedName(value = "samlSingleSignOnSettings", alternate = {"SamlSingleSignOnSettings"})
     @Expose
     public SamlSingleSignOnSettings samlSingleSignOnSettings;
 
@@ -292,7 +292,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Service Principal Names.
      * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.
      */
-    @SerializedName("servicePrincipalNames")
+    @SerializedName(value = "servicePrincipalNames", alternate = {"ServicePrincipalNames"})
     @Expose
     public java.util.List<String> servicePrincipalNames;
 
@@ -300,7 +300,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Service Principal Type.
      * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity.
      */
-    @SerializedName("servicePrincipalType")
+    @SerializedName(value = "servicePrincipalType", alternate = {"ServicePrincipalType"})
     @Expose
     public String servicePrincipalType;
 
@@ -308,7 +308,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Sign In Audience.
      * 
      */
-    @SerializedName("signInAudience")
+    @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
     public String signInAudience;
 
@@ -316,7 +316,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Tags.
      * Custom strings that can be used to categorize and identify the service principal. Not nullable.
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -324,7 +324,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Token Encryption Key Id.
      * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      */
-    @SerializedName("tokenEncryptionKeyId")
+    @SerializedName(value = "tokenEncryptionKeyId", alternate = {"TokenEncryptionKeyId"})
     @Expose
     public java.util.UUID tokenEncryptionKeyId;
 
@@ -332,7 +332,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Role Assigned To.
      * Principals (users, groups, and service principals) that are assigned to this service principal. Read-only.
      */
-    @SerializedName("appRoleAssignedTo")
+    @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignedTo;
 
@@ -340,7 +340,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Role Assignments.
      * Applications that this service principal is assigned to. Read-only. Nullable.
      */
-    @SerializedName("appRoleAssignments")
+    @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
@@ -360,7 +360,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Endpoints.
      * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      */
-    @SerializedName("endpoints")
+    @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose
     public EndpointCollectionPage endpoints;
 
@@ -374,7 +374,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The License Details.
      * 
      */
-    @SerializedName("licenseDetails")
+    @SerializedName(value = "licenseDetails", alternate = {"LicenseDetails"})
     @Expose
     public LicenseDetailsCollectionPage licenseDetails;
 
@@ -424,7 +424,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Synchronization.
      * 
      */
-    @SerializedName("synchronization")
+    @SerializedName(value = "synchronization", alternate = {"Synchronization"})
     @Expose
     public Synchronization synchronization;
 

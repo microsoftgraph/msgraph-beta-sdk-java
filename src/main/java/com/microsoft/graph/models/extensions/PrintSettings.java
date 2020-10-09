@@ -35,7 +35,7 @@ public class PrintSettings implements IJsonBackedObject {
      * The Document Conversion Enabled.
      * 
      */
-    @SerializedName("documentConversionEnabled")
+    @SerializedName(value = "documentConversionEnabled", alternate = {"DocumentConversionEnabled"})
     @Expose
     public Boolean documentConversionEnabled;
 

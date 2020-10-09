@@ -27,7 +27,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -35,7 +35,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
      * The Notify Reviewers.
      * 
      */
-    @SerializedName("notifyReviewers")
+    @SerializedName(value = "notifyReviewers", alternate = {"NotifyReviewers"})
     @Expose
     public Boolean notifyReviewers;
 
@@ -43,7 +43,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
      * The Reminders Enabled.
      * 
      */
-    @SerializedName("remindersEnabled")
+    @SerializedName(value = "remindersEnabled", alternate = {"RemindersEnabled"})
     @Expose
     public Boolean remindersEnabled;
 
@@ -51,7 +51,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
      * The Request Duration In Days.
      * 
      */
-    @SerializedName("requestDurationInDays")
+    @SerializedName(value = "requestDurationInDays", alternate = {"RequestDurationInDays"})
     @Expose
     public Integer requestDurationInDays;
 
@@ -59,7 +59,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
      * The Reviewers.
      * 
      */
-    @SerializedName("reviewers")
+    @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
     public java.util.List<AccessReviewScope> reviewers;
 
@@ -67,7 +67,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
      * The Version.
      * 
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 

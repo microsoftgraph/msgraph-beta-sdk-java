@@ -33,7 +33,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The timestamp of when the device health script was created. This property is read-only.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -41,7 +41,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the device health script
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -49,7 +49,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Detection Script Content.
      * The entire content of the detection powershell script
      */
-    @SerializedName("detectionScriptContent")
+    @SerializedName(value = "detectionScriptContent", alternate = {"DetectionScriptContent"})
     @Expose
     public byte[] detectionScriptContent;
 
@@ -57,7 +57,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Detection Script Parameters.
      * List of ComplexType DetectionScriptParameters objects.
      */
-    @SerializedName("detectionScriptParameters")
+    @SerializedName(value = "detectionScriptParameters", alternate = {"DetectionScriptParameters"})
     @Expose
     public java.util.List<DeviceHealthScriptParameter> detectionScriptParameters;
 
@@ -65,7 +65,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Name of the device health script
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -73,7 +73,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Enforce Signature Check.
      * Indicate whether the script signature needs be checked
      */
-    @SerializedName("enforceSignatureCheck")
+    @SerializedName(value = "enforceSignatureCheck", alternate = {"EnforceSignatureCheck"})
     @Expose
     public Boolean enforceSignatureCheck;
 
@@ -81,7 +81,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Highest Available Version.
      * Highest available version for a Microsoft Proprietary script
      */
-    @SerializedName("highestAvailableVersion")
+    @SerializedName(value = "highestAvailableVersion", alternate = {"HighestAvailableVersion"})
     @Expose
     public String highestAvailableVersion;
 
@@ -89,7 +89,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Is Global Script.
      * Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
      */
-    @SerializedName("isGlobalScript")
+    @SerializedName(value = "isGlobalScript", alternate = {"IsGlobalScript"})
     @Expose
     public Boolean isGlobalScript;
 
@@ -97,7 +97,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The timestamp of when the device health script was modified. This property is read-only.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -105,7 +105,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Publisher.
      * Name of the device health script publisher
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -113,7 +113,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Remediation Script Content.
      * The entire content of the remediation powershell script
      */
-    @SerializedName("remediationScriptContent")
+    @SerializedName(value = "remediationScriptContent", alternate = {"RemediationScriptContent"})
     @Expose
     public byte[] remediationScriptContent;
 
@@ -121,7 +121,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Remediation Script Parameters.
      * List of ComplexType RemediationScriptParameters objects.
      */
-    @SerializedName("remediationScriptParameters")
+    @SerializedName(value = "remediationScriptParameters", alternate = {"RemediationScriptParameters"})
     @Expose
     public java.util.List<DeviceHealthScriptParameter> remediationScriptParameters;
 
@@ -129,7 +129,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tag IDs for the device health script
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -137,7 +137,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Run As32Bit.
      * Indicate whether PowerShell script(s) should run as 32-bit
      */
-    @SerializedName("runAs32Bit")
+    @SerializedName(value = "runAs32Bit", alternate = {"RunAs32Bit"})
     @Expose
     public Boolean runAs32Bit;
 
@@ -145,7 +145,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Run As Account.
      * Indicates the type of execution context
      */
-    @SerializedName("runAsAccount")
+    @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose
     public RunAsAccountType runAsAccount;
 
@@ -153,7 +153,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the device health script
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 
@@ -161,7 +161,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for the device health script
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceHealthScriptAssignmentCollectionPage assignments;
 
@@ -169,7 +169,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Device Run States.
      * List of run states for the device health script across all devices
      */
-    @SerializedName("deviceRunStates")
+    @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
     public DeviceHealthScriptDeviceStateCollectionPage deviceRunStates;
 
@@ -177,7 +177,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Run Summary.
      * High level run summary for device health script.
      */
-    @SerializedName("runSummary")
+    @SerializedName(value = "runSummary", alternate = {"RunSummary"})
     @Expose
     public DeviceHealthScriptRunSummary runSummary;
 

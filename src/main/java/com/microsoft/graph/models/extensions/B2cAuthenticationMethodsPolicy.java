@@ -26,7 +26,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
      * The Is Email Password Authentication Enabled.
      * 
      */
-    @SerializedName("isEmailPasswordAuthenticationEnabled")
+    @SerializedName(value = "isEmailPasswordAuthenticationEnabled", alternate = {"IsEmailPasswordAuthenticationEnabled"})
     @Expose
     public Boolean isEmailPasswordAuthenticationEnabled;
 
@@ -34,7 +34,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
      * The Is Phone One Time Password Authentication Enabled.
      * 
      */
-    @SerializedName("isPhoneOneTimePasswordAuthenticationEnabled")
+    @SerializedName(value = "isPhoneOneTimePasswordAuthenticationEnabled", alternate = {"IsPhoneOneTimePasswordAuthenticationEnabled"})
     @Expose
     public Boolean isPhoneOneTimePasswordAuthenticationEnabled;
 
@@ -42,7 +42,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
      * The Is User Name Authentication Enabled.
      * 
      */
-    @SerializedName("isUserNameAuthenticationEnabled")
+    @SerializedName(value = "isUserNameAuthenticationEnabled", alternate = {"IsUserNameAuthenticationEnabled"})
     @Expose
     public Boolean isUserNameAuthenticationEnabled;
 

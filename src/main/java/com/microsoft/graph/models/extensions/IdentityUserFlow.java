@@ -27,7 +27,7 @@ public class IdentityUserFlow extends Entity implements IJsonBackedObject {
      * The User Flow Type.
      * 
      */
-    @SerializedName("userFlowType")
+    @SerializedName(value = "userFlowType", alternate = {"UserFlowType"})
     @Expose
     public UserFlowType userFlowType;
 
@@ -35,7 +35,7 @@ public class IdentityUserFlow extends Entity implements IJsonBackedObject {
      * The User Flow Type Version.
      * 
      */
-    @SerializedName("userFlowTypeVersion")
+    @SerializedName(value = "userFlowTypeVersion", alternate = {"UserFlowTypeVersion"})
     @Expose
     public float userFlowTypeVersion;
 

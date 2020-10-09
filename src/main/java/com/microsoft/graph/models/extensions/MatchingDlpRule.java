@@ -37,7 +37,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Actions.
      * 
      */
-    @SerializedName("actions")
+    @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
     public java.util.List<DlpActionInfo> actions;
 
@@ -45,7 +45,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Is Most Restrictive.
      * 
      */
-    @SerializedName("isMostRestrictive")
+    @SerializedName(value = "isMostRestrictive", alternate = {"IsMostRestrictive"})
     @Expose
     public Boolean isMostRestrictive;
 
@@ -53,7 +53,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Policy Id.
      * 
      */
-    @SerializedName("policyId")
+    @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
     public String policyId;
 
@@ -61,7 +61,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Policy Name.
      * 
      */
-    @SerializedName("policyName")
+    @SerializedName(value = "policyName", alternate = {"PolicyName"})
     @Expose
     public String policyName;
 
@@ -69,7 +69,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -77,7 +77,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Rule Id.
      * 
      */
-    @SerializedName("ruleId")
+    @SerializedName(value = "ruleId", alternate = {"RuleId"})
     @Expose
     public String ruleId;
 
@@ -85,7 +85,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Rule Mode.
      * 
      */
-    @SerializedName("ruleMode")
+    @SerializedName(value = "ruleMode", alternate = {"RuleMode"})
     @Expose
     public RuleMode ruleMode;
 
@@ -93,7 +93,7 @@ public class MatchingDlpRule implements IJsonBackedObject {
      * The Rule Name.
      * 
      */
-    @SerializedName("ruleName")
+    @SerializedName(value = "ruleName", alternate = {"RuleName"})
     @Expose
     public String ruleName;
 

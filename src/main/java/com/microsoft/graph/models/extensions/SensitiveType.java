@@ -29,7 +29,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Classification Method.
      * 
      */
-    @SerializedName("classificationMethod")
+    @SerializedName(value = "classificationMethod", alternate = {"ClassificationMethod"})
     @Expose
     public ClassificationMethod classificationMethod;
 
@@ -37,7 +37,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -45,7 +45,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -53,7 +53,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Publisher Name.
      * 
      */
-    @SerializedName("publisherName")
+    @SerializedName(value = "publisherName", alternate = {"PublisherName"})
     @Expose
     public String publisherName;
 
@@ -61,7 +61,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Rule Package Id.
      * 
      */
-    @SerializedName("rulePackageId")
+    @SerializedName(value = "rulePackageId", alternate = {"RulePackageId"})
     @Expose
     public String rulePackageId;
 
@@ -69,7 +69,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Rule Package Type.
      * 
      */
-    @SerializedName("rulePackageType")
+    @SerializedName(value = "rulePackageType", alternate = {"RulePackageType"})
     @Expose
     public String rulePackageType;
 
@@ -77,7 +77,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public EnumSet<SensitiveTypeScope> scope;
 
@@ -85,7 +85,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The Sensitive Type Source.
      * 
      */
-    @SerializedName("sensitiveTypeSource")
+    @SerializedName(value = "sensitiveTypeSource", alternate = {"SensitiveTypeSource"})
     @Expose
     public SensitiveTypeSource sensitiveTypeSource;
 
@@ -93,7 +93,7 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 

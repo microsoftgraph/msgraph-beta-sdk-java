@@ -26,7 +26,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      * The Maximum Cache Size In Gigabytes.
      * The value 0 (zero) means "unlimited" cache. Delivery Optimization will clear the cache when the device is running low on disk space. Valid values 0 to 4294967295
      */
-    @SerializedName("maximumCacheSizeInGigabytes")
+    @SerializedName(value = "maximumCacheSizeInGigabytes", alternate = {"MaximumCacheSizeInGigabytes"})
     @Expose
     public Long maximumCacheSizeInGigabytes;
 

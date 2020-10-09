@@ -35,7 +35,7 @@ public class PlannerFavoritePlanReference implements IJsonBackedObject {
      * The Order Hint.
      * 
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 
@@ -43,7 +43,7 @@ public class PlannerFavoritePlanReference implements IJsonBackedObject {
      * The Plan Title.
      * 
      */
-    @SerializedName("planTitle")
+    @SerializedName(value = "planTitle", alternate = {"PlanTitle"})
     @Expose
     public String planTitle;
 

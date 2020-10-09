@@ -26,7 +26,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The App Sharing.
      * 
      */
-    @SerializedName("appSharing")
+    @SerializedName(value = "appSharing", alternate = {"AppSharing"})
     @Expose
     public Long appSharing;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The Audio.
      * 
      */
-    @SerializedName("audio")
+    @SerializedName(value = "audio", alternate = {"Audio"})
     @Expose
     public Long audio;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The File Transfer.
      * 
      */
-    @SerializedName("fileTransfer")
+    @SerializedName(value = "fileTransfer", alternate = {"FileTransfer"})
     @Expose
     public Long fileTransfer;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The Im.
      * 
      */
-    @SerializedName("im")
+    @SerializedName(value = "im", alternate = {"Im"})
     @Expose
     public Long im;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The Report Date.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportDate;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -74,7 +74,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -82,7 +82,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity impleme
      * The Video.
      * 
      */
-    @SerializedName("video")
+    @SerializedName(value = "video", alternate = {"Video"})
     @Expose
     public Long video;
 

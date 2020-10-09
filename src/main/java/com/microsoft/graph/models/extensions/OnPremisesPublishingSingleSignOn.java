@@ -37,7 +37,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
      * The Kerberos Sign On Settings.
      * 
      */
-    @SerializedName("KerberosSignOnSettings")
+    @SerializedName(value = "kerberosSignOnSettings", alternate = {"KerberosSignOnSettings"})
     @Expose
     public KerberosSignOnSettings kerberosSignOnSettings;
 
@@ -45,7 +45,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
      * The Single Sign On Mode.
      * 
      */
-    @SerializedName("SingleSignOnMode")
+    @SerializedName(value = "singleSignOnMode", alternate = {"SingleSignOnMode"})
     @Expose
     public SingleSignOnMode singleSignOnMode;
 

@@ -28,7 +28,7 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -36,7 +36,7 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -44,7 +44,7 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
      * The Resource Id.
      * 
      */
-    @SerializedName("resourceId")
+    @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
     public String resourceId;
 
@@ -52,7 +52,7 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
      * The Template Id.
      * 
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 
@@ -60,7 +60,7 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
      * The Resource.
      * 
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public GovernanceResource resource;
 
@@ -68,7 +68,7 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
      * The Role Setting.
      * 
      */
-    @SerializedName("roleSetting")
+    @SerializedName(value = "roleSetting", alternate = {"RoleSetting"})
     @Expose
     public GovernanceRoleSetting roleSetting;
 

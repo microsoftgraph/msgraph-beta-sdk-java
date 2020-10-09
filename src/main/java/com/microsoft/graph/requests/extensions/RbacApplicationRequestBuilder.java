@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplication;
+import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionRequestBuilder;
@@ -60,6 +64,13 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
     }
 
 
+    public IUnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces() {
+        return new UnifiedRbacResourceNamespaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces"), getClient(), null);
+    }
+
+    public IUnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(final String id) {
+        return new UnifiedRbacResourceNamespaceRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces") + "/" + id, getClient(), null);
+    }
     public IUnifiedRoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new UnifiedRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }

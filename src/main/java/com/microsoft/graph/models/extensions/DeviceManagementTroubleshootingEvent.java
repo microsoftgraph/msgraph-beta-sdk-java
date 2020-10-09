@@ -28,7 +28,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Additional Information.
      * A set of string key and string value pairs which provides additional information on the Troubleshooting event
      */
-    @SerializedName("additionalInformation")
+    @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
     public java.util.List<KeyValuePair> additionalInformation;
 
@@ -36,7 +36,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Correlation Id.
      * Id used for tracing the failure in the service.
      */
-    @SerializedName("correlationId")
+    @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
     public String correlationId;
 
@@ -44,7 +44,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Event Date Time.
      * Time when the event occurred .
      */
-    @SerializedName("eventDateTime")
+    @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
     public java.util.Calendar eventDateTime;
 
@@ -52,7 +52,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Event Name.
      * Event Name corresponding to the Troubleshooting Event. It is an Optional field
      */
-    @SerializedName("eventName")
+    @SerializedName(value = "eventName", alternate = {"EventName"})
     @Expose
     public String eventName;
 
@@ -60,7 +60,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Troubleshooting Error Details.
      * Object containing detailed information about the error and its remediation.
      */
-    @SerializedName("troubleshootingErrorDetails")
+    @SerializedName(value = "troubleshootingErrorDetails", alternate = {"TroubleshootingErrorDetails"})
     @Expose
     public DeviceManagementTroubleshootingErrorDetails troubleshootingErrorDetails;
 

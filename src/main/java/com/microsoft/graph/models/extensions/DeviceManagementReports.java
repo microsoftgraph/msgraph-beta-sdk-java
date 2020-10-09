@@ -32,7 +32,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
      * The Cached Report Configurations.
      * Entity representing the configuration of a cached report
      */
-    @SerializedName("cachedReportConfigurations")
+    @SerializedName(value = "cachedReportConfigurations", alternate = {"CachedReportConfigurations"})
     @Expose
     public DeviceManagementCachedReportConfigurationCollectionPage cachedReportConfigurations;
 
@@ -40,7 +40,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
      * The Export Jobs.
      * Entity representing a job to export a report
      */
-    @SerializedName("exportJobs")
+    @SerializedName(value = "exportJobs", alternate = {"ExportJobs"})
     @Expose
     public DeviceManagementExportJobCollectionPage exportJobs;
 
@@ -48,7 +48,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
      * The Report Schedules.
      * Entity representing a schedule for which reports are delivered
      */
-    @SerializedName("reportSchedules")
+    @SerializedName(value = "reportSchedules", alternate = {"ReportSchedules"})
     @Expose
     public DeviceManagementReportScheduleCollectionPage reportSchedules;
 

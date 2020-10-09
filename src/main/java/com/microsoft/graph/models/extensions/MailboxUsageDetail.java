@@ -26,7 +26,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Created Date.
      * 
      */
-    @SerializedName("createdDate")
+    @SerializedName(value = "createdDate", alternate = {"CreatedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly createdDate;
 
@@ -34,7 +34,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Deleted Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
@@ -42,7 +42,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Deleted Item Count.
      * 
      */
-    @SerializedName("deletedItemCount")
+    @SerializedName(value = "deletedItemCount", alternate = {"DeletedItemCount"})
     @Expose
     public Long deletedItemCount;
 
@@ -50,7 +50,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Deleted Item Size In Bytes.
      * 
      */
-    @SerializedName("deletedItemSizeInBytes")
+    @SerializedName(value = "deletedItemSizeInBytes", alternate = {"DeletedItemSizeInBytes"})
     @Expose
     public Long deletedItemSizeInBytes;
 
@@ -58,7 +58,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -66,7 +66,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -74,7 +74,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Issue Warning Quota In Bytes.
      * 
      */
-    @SerializedName("issueWarningQuotaInBytes")
+    @SerializedName(value = "issueWarningQuotaInBytes", alternate = {"IssueWarningQuotaInBytes"})
     @Expose
     public Long issueWarningQuotaInBytes;
 
@@ -82,7 +82,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Item Count.
      * 
      */
-    @SerializedName("itemCount")
+    @SerializedName(value = "itemCount", alternate = {"ItemCount"})
     @Expose
     public Long itemCount;
 
@@ -90,7 +90,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -98,7 +98,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Prohibit Send Quota In Bytes.
      * 
      */
-    @SerializedName("prohibitSendQuotaInBytes")
+    @SerializedName(value = "prohibitSendQuotaInBytes", alternate = {"ProhibitSendQuotaInBytes"})
     @Expose
     public Long prohibitSendQuotaInBytes;
 
@@ -106,7 +106,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Prohibit Send Receive Quota In Bytes.
      * 
      */
-    @SerializedName("prohibitSendReceiveQuotaInBytes")
+    @SerializedName(value = "prohibitSendReceiveQuotaInBytes", alternate = {"ProhibitSendReceiveQuotaInBytes"})
     @Expose
     public Long prohibitSendReceiveQuotaInBytes;
 
@@ -114,7 +114,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -122,7 +122,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -130,7 +130,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The Storage Used In Bytes.
      * 
      */
-    @SerializedName("storageUsedInBytes")
+    @SerializedName(value = "storageUsedInBytes", alternate = {"StorageUsedInBytes"})
     @Expose
     public Long storageUsedInBytes;
 
@@ -138,7 +138,7 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

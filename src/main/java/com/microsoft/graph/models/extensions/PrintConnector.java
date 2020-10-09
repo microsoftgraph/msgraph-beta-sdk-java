@@ -28,7 +28,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The App Version.
      * 
      */
-    @SerializedName("appVersion")
+    @SerializedName(value = "appVersion", alternate = {"AppVersion"})
     @Expose
     public String appVersion;
 
@@ -36,7 +36,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The Device Health.
      * 
      */
-    @SerializedName("deviceHealth")
+    @SerializedName(value = "deviceHealth", alternate = {"DeviceHealth"})
     @Expose
     public DeviceHealth deviceHealth;
 
@@ -44,7 +44,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The Fully Qualified Domain Name.
      * 
      */
-    @SerializedName("fullyQualifiedDomainName")
+    @SerializedName(value = "fullyQualifiedDomainName", alternate = {"FullyQualifiedDomainName"})
     @Expose
     public String fullyQualifiedDomainName;
 
@@ -52,7 +52,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The Location.
      * 
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public PrinterLocation location;
 
@@ -60,7 +60,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -68,7 +68,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The Operating System.
      * 
      */
-    @SerializedName("operatingSystem")
+    @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
     public String operatingSystem;
 
@@ -76,7 +76,7 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
      * The Registered Date Time.
      * 
      */
-    @SerializedName("registeredDateTime")
+    @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose
     public java.util.Calendar registeredDateTime;
 

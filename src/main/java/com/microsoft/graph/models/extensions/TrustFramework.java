@@ -39,7 +39,7 @@ public class TrustFramework implements IJsonBackedObject {
      * The Key Sets.
      * 
      */
-    @SerializedName("keySets")
+    @SerializedName(value = "keySets", alternate = {"KeySets"})
     @Expose
     public TrustFrameworkKeySetCollectionPage keySets;
 
@@ -47,7 +47,7 @@ public class TrustFramework implements IJsonBackedObject {
      * The Policies.
      * 
      */
-    @SerializedName("policies")
+    @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose
     public TrustFrameworkPolicyCollectionPage policies;
 

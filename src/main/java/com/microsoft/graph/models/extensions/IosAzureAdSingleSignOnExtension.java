@@ -27,7 +27,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * The Bundle Id Access Control List.
      * An optional list of additional bundle IDs allowed to use the AAD extension for single sign-on.
      */
-    @SerializedName("bundleIdAccessControlList")
+    @SerializedName(value = "bundleIdAccessControlList", alternate = {"BundleIdAccessControlList"})
     @Expose
     public java.util.List<String> bundleIdAccessControlList;
 
@@ -35,7 +35,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * The Configurations.
      * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("configurations")
+    @SerializedName(value = "configurations", alternate = {"Configurations"})
     @Expose
     public java.util.List<KeyTypedValuePair> configurations;
 
@@ -43,7 +43,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * The Enable Shared Device Mode.
      * Enables or disables shared device mode.
      */
-    @SerializedName("enableSharedDeviceMode")
+    @SerializedName(value = "enableSharedDeviceMode", alternate = {"EnableSharedDeviceMode"})
     @Expose
     public Boolean enableSharedDeviceMode;
 

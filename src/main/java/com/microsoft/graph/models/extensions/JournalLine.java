@@ -27,7 +27,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Account Id.
      * 
      */
-    @SerializedName("accountId")
+    @SerializedName(value = "accountId", alternate = {"AccountId"})
     @Expose
     public java.util.UUID accountId;
 
@@ -35,7 +35,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Account Number.
      * 
      */
-    @SerializedName("accountNumber")
+    @SerializedName(value = "accountNumber", alternate = {"AccountNumber"})
     @Expose
     public String accountNumber;
 
@@ -43,7 +43,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Amount.
      * 
      */
-    @SerializedName("amount")
+    @SerializedName(value = "amount", alternate = {"Amount"})
     @Expose
     public java.math.BigDecimal amount;
 
@@ -51,7 +51,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 
@@ -59,7 +59,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -67,7 +67,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Document Number.
      * 
      */
-    @SerializedName("documentNumber")
+    @SerializedName(value = "documentNumber", alternate = {"DocumentNumber"})
     @Expose
     public String documentNumber;
 
@@ -75,7 +75,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The External Document Number.
      * 
      */
-    @SerializedName("externalDocumentNumber")
+    @SerializedName(value = "externalDocumentNumber", alternate = {"ExternalDocumentNumber"})
     @Expose
     public String externalDocumentNumber;
 
@@ -83,7 +83,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Journal Display Name.
      * 
      */
-    @SerializedName("journalDisplayName")
+    @SerializedName(value = "journalDisplayName", alternate = {"JournalDisplayName"})
     @Expose
     public String journalDisplayName;
 
@@ -91,7 +91,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -99,7 +99,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Line Number.
      * 
      */
-    @SerializedName("lineNumber")
+    @SerializedName(value = "lineNumber", alternate = {"LineNumber"})
     @Expose
     public Integer lineNumber;
 
@@ -107,7 +107,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Posting Date.
      * 
      */
-    @SerializedName("postingDate")
+    @SerializedName(value = "postingDate", alternate = {"PostingDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly postingDate;
 
@@ -115,7 +115,7 @@ public class JournalLine extends Entity implements IJsonBackedObject {
      * The Account.
      * 
      */
-    @SerializedName("account")
+    @SerializedName(value = "account", alternate = {"Account"})
     @Expose
     public Account account;
 

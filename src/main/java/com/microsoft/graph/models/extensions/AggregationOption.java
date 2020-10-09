@@ -36,7 +36,7 @@ public class AggregationOption implements IJsonBackedObject {
      * The Bucket Definition.
      * 
      */
-    @SerializedName("bucketDefinition")
+    @SerializedName(value = "bucketDefinition", alternate = {"BucketDefinition"})
     @Expose
     public BucketAggregationDefinition bucketDefinition;
 
@@ -44,7 +44,7 @@ public class AggregationOption implements IJsonBackedObject {
      * The Field.
      * 
      */
-    @SerializedName("field")
+    @SerializedName(value = "field", alternate = {"Field"})
     @Expose
     public String field;
 
@@ -52,7 +52,7 @@ public class AggregationOption implements IJsonBackedObject {
      * The Size.
      * 
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Integer size;
 

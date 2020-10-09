@@ -35,7 +35,7 @@ public class ResponsibleSensitiveType implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class ResponsibleSensitiveType implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -51,7 +51,7 @@ public class ResponsibleSensitiveType implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -59,7 +59,7 @@ public class ResponsibleSensitiveType implements IJsonBackedObject {
      * The Publisher Name.
      * 
      */
-    @SerializedName("publisherName")
+    @SerializedName(value = "publisherName", alternate = {"PublisherName"})
     @Expose
     public String publisherName;
 
@@ -67,7 +67,7 @@ public class ResponsibleSensitiveType implements IJsonBackedObject {
      * The Rule Package Id.
      * 
      */
-    @SerializedName("rulePackageId")
+    @SerializedName(value = "rulePackageId", alternate = {"RulePackageId"})
     @Expose
     public String rulePackageId;
 
@@ -75,7 +75,7 @@ public class ResponsibleSensitiveType implements IJsonBackedObject {
      * The Rule Package Type.
      * 
      */
-    @SerializedName("rulePackageType")
+    @SerializedName(value = "rulePackageType", alternate = {"RulePackageType"})
     @Expose
     public String rulePackageType;
 

@@ -26,7 +26,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
      * The Setting Name.
      * Setting name for the rule with error.
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 

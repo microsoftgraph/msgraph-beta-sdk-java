@@ -15,6 +15,7 @@ import com.microsoft.graph.models.extensions.AuthorizationPolicy;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
+import com.microsoft.graph.models.extensions.PrivateLinkResource;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.models.extensions.AdminConsentRequestPolicy;
@@ -26,6 +27,7 @@ import com.microsoft.graph.requests.extensions.AuthorizationPolicyCollectionPage
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.PrivateLinkResourceCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
@@ -57,7 +59,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Authentication Flows Policy.
      * 
      */
-    @SerializedName("authenticationFlowsPolicy")
+    @SerializedName(value = "authenticationFlowsPolicy", alternate = {"AuthenticationFlowsPolicy"})
     @Expose
     public AuthenticationFlowsPolicy authenticationFlowsPolicy;
 
@@ -65,7 +67,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The B2c Authentication Methods Policy.
      * 
      */
-    @SerializedName("b2cAuthenticationMethodsPolicy")
+    @SerializedName(value = "b2cAuthenticationMethodsPolicy", alternate = {"B2cAuthenticationMethodsPolicy"})
     @Expose
     public B2cAuthenticationMethodsPolicy b2cAuthenticationMethodsPolicy;
 
@@ -73,7 +75,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Device Registration Policy.
      * 
      */
-    @SerializedName("deviceRegistrationPolicy")
+    @SerializedName(value = "deviceRegistrationPolicy", alternate = {"DeviceRegistrationPolicy"})
     @Expose
     public DeviceRegistrationPolicy deviceRegistrationPolicy;
 
@@ -81,7 +83,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Activity Based Timeout Policies.
      * 
      */
-    @SerializedName("activityBasedTimeoutPolicies")
+    @SerializedName(value = "activityBasedTimeoutPolicies", alternate = {"ActivityBasedTimeoutPolicies"})
     @Expose
     public ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
 
@@ -89,7 +91,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Authorization Policy.
      * 
      */
-    @SerializedName("authorizationPolicy")
+    @SerializedName(value = "authorizationPolicy", alternate = {"AuthorizationPolicy"})
     @Expose
     public AuthorizationPolicyCollectionPage authorizationPolicy;
 
@@ -97,7 +99,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Claims Mapping Policies.
      * 
      */
-    @SerializedName("claimsMappingPolicies")
+    @SerializedName(value = "claimsMappingPolicies", alternate = {"ClaimsMappingPolicies"})
     @Expose
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
@@ -105,7 +107,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Home Realm Discovery Policies.
      * 
      */
-    @SerializedName("homeRealmDiscoveryPolicies")
+    @SerializedName(value = "homeRealmDiscoveryPolicies", alternate = {"HomeRealmDiscoveryPolicies"})
     @Expose
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
@@ -113,15 +115,23 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Permission Grant Policies.
      * 
      */
-    @SerializedName("permissionGrantPolicies")
+    @SerializedName(value = "permissionGrantPolicies", alternate = {"PermissionGrantPolicies"})
     @Expose
     public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
+
+    /**
+     * The Private Link Resource Policies.
+     * 
+     */
+    @SerializedName(value = "privateLinkResourcePolicies", alternate = {"PrivateLinkResourcePolicies"})
+    @Expose
+    public PrivateLinkResourceCollectionPage privateLinkResourcePolicies;
 
     /**
      * The Token Issuance Policies.
      * 
      */
-    @SerializedName("tokenIssuancePolicies")
+    @SerializedName(value = "tokenIssuancePolicies", alternate = {"TokenIssuancePolicies"})
     @Expose
     public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
@@ -129,7 +139,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Token Lifetime Policies.
      * 
      */
-    @SerializedName("tokenLifetimePolicies")
+    @SerializedName(value = "tokenLifetimePolicies", alternate = {"TokenLifetimePolicies"})
     @Expose
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
@@ -137,7 +147,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Admin Consent Request Policy.
      * 
      */
-    @SerializedName("adminConsentRequestPolicy")
+    @SerializedName(value = "adminConsentRequestPolicy", alternate = {"AdminConsentRequestPolicy"})
     @Expose
     public AdminConsentRequestPolicy adminConsentRequestPolicy;
 
@@ -145,7 +155,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Directory Role Access Review Policy.
      * 
      */
-    @SerializedName("directoryRoleAccessReviewPolicy")
+    @SerializedName(value = "directoryRoleAccessReviewPolicy", alternate = {"DirectoryRoleAccessReviewPolicy"})
     @Expose
     public DirectoryRoleAccessReviewPolicy directoryRoleAccessReviewPolicy;
 
@@ -153,7 +163,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Conditional Access Policies.
      * 
      */
-    @SerializedName("conditionalAccessPolicies")
+    @SerializedName(value = "conditionalAccessPolicies", alternate = {"ConditionalAccessPolicies"})
     @Expose
     public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
 
@@ -161,7 +171,7 @@ public class PolicyRoot implements IJsonBackedObject {
      * The Identity Security Defaults Enforcement Policy.
      * 
      */
-    @SerializedName("identitySecurityDefaultsEnforcementPolicy")
+    @SerializedName(value = "identitySecurityDefaultsEnforcementPolicy", alternate = {"IdentitySecurityDefaultsEnforcementPolicy"})
     @Expose
     public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
 
@@ -223,6 +233,10 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("permissionGrantPolicies")) {
             permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies").toString(), PermissionGrantPolicyCollectionPage.class);
+        }
+
+        if (json.has("privateLinkResourcePolicies")) {
+            privateLinkResourcePolicies = serializer.deserializeObject(json.get("privateLinkResourcePolicies").toString(), PrivateLinkResourceCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {

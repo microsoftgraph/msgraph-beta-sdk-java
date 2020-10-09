@@ -27,7 +27,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      * The Identity Name.
      * The Identity Name.
      */
-    @SerializedName("identityName")
+    @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
     public String identityName;
 
@@ -35,7 +35,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      * The Identity Version.
      * The identity version.
      */
-    @SerializedName("identityVersion")
+    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
     public String identityVersion;
 
@@ -43,7 +43,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -51,7 +51,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      * The Package Id.
      * The package identifier.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 
@@ -59,7 +59,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      * The Version Code.
      * The version code of managed Android Line of Business (LoB) app.
      */
-    @SerializedName("versionCode")
+    @SerializedName(value = "versionCode", alternate = {"VersionCode"})
     @Expose
     public String versionCode;
 
@@ -67,7 +67,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      * The Version Name.
      * The version name of managed Android Line of Business (LoB) app.
      */
-    @SerializedName("versionName")
+    @SerializedName(value = "versionName", alternate = {"VersionName"})
     @Expose
     public String versionName;
 

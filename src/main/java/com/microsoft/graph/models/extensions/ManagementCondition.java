@@ -29,7 +29,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The Applicable Platforms.
      * The applicable platforms for this management condition.
      */
-    @SerializedName("applicablePlatforms")
+    @SerializedName(value = "applicablePlatforms", alternate = {"ApplicablePlatforms"})
     @Expose
     public java.util.List<DevicePlatformType> applicablePlatforms;
 
@@ -37,7 +37,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The time the management condition was created. Generated service side.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -45,7 +45,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The Description.
      * The admin defined description of the management condition.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -53,7 +53,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The admin defined name of the management condition.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The ETag.
      * ETag of the management condition. Updated service side.
      */
-    @SerializedName("eTag")
+    @SerializedName(value = "eTag", alternate = {"ETag"})
     @Expose
     public String eTag;
 
@@ -69,7 +69,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The Modified Date Time.
      * The time the management condition was last modified. Updated service side.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -77,7 +77,7 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
      * The Unique Name.
      * Unique name for the management condition. Used in management condition expressions.
      */
-    @SerializedName("uniqueName")
+    @SerializedName(value = "uniqueName", alternate = {"UniqueName"})
     @Expose
     public String uniqueName;
 

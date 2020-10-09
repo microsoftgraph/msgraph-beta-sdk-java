@@ -37,7 +37,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Editable.
      * 
      */
-    @SerializedName("editable")
+    @SerializedName(value = "editable", alternate = {"Editable"})
     @Expose
     public Boolean editable;
 
@@ -45,7 +45,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -53,7 +53,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Metadata.
      * 
      */
-    @SerializedName("metadata")
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
     public java.util.List<StringKeyStringValuePair> metadata;
 
@@ -61,7 +61,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -69,7 +69,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Object Mappings.
      * 
      */
-    @SerializedName("objectMappings")
+    @SerializedName(value = "objectMappings", alternate = {"ObjectMappings"})
     @Expose
     public java.util.List<ObjectMapping> objectMappings;
 
@@ -77,7 +77,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -85,7 +85,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Source Directory Name.
      * 
      */
-    @SerializedName("sourceDirectoryName")
+    @SerializedName(value = "sourceDirectoryName", alternate = {"SourceDirectoryName"})
     @Expose
     public String sourceDirectoryName;
 
@@ -93,7 +93,7 @@ public class SynchronizationRule implements IJsonBackedObject {
      * The Target Directory Name.
      * 
      */
-    @SerializedName("targetDirectoryName")
+    @SerializedName(value = "targetDirectoryName", alternate = {"TargetDirectoryName"})
     @Expose
     public String targetDirectoryName;
 

@@ -26,7 +26,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyPresentation impl
      * The Default Value.
      * Localized default string displayed in the text box. The default value is empty.
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public String defaultValue;
 
@@ -34,7 +34,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyPresentation impl
      * The Max Length.
      * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
      */
-    @SerializedName("maxLength")
+    @SerializedName(value = "maxLength", alternate = {"MaxLength"})
     @Expose
     public Long maxLength;
 
@@ -42,7 +42,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyPresentation impl
      * The Required.
      * Requirement to enter a value in the text box. Default value is false.
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 

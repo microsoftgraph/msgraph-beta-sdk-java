@@ -26,7 +26,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * The Maximum Background Bandwidth Percentage.
      * The default value 0 (zero) means that Delivery Optimization dynamically adjusts to use the available bandwidth for background downloads. Valid values 0 to 100
      */
-    @SerializedName("maximumBackgroundBandwidthPercentage")
+    @SerializedName(value = "maximumBackgroundBandwidthPercentage", alternate = {"MaximumBackgroundBandwidthPercentage"})
     @Expose
     public Integer maximumBackgroundBandwidthPercentage;
 
@@ -34,7 +34,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * The Maximum Foreground Bandwidth Percentage.
      * The default value 0 (zero) means that Delivery Optimization dynamically adjusts to use the available bandwidth for foreground downloads. Valid values 0 to 100
      */
-    @SerializedName("maximumForegroundBandwidthPercentage")
+    @SerializedName(value = "maximumForegroundBandwidthPercentage", alternate = {"MaximumForegroundBandwidthPercentage"})
     @Expose
     public Integer maximumForegroundBandwidthPercentage;
 

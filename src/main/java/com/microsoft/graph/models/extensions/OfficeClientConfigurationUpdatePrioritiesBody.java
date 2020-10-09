@@ -22,7 +22,7 @@ public class OfficeClientConfigurationUpdatePrioritiesBody {
      * The office Configuration Policy Ids.
      * 
      */
-    @SerializedName("officeConfigurationPolicyIds")
+    @SerializedName(value = "officeConfigurationPolicyIds", alternate = {"OfficeConfigurationPolicyIds"})
     @Expose
     public java.util.List<String> officeConfigurationPolicyIds;
 
@@ -30,7 +30,7 @@ public class OfficeClientConfigurationUpdatePrioritiesBody {
      * The office Configuration Priorities.
      * 
      */
-    @SerializedName("officeConfigurationPriorities")
+    @SerializedName(value = "officeConfigurationPriorities", alternate = {"OfficeConfigurationPriorities"})
     @Expose
     public java.util.List<Integer> officeConfigurationPriorities;
 

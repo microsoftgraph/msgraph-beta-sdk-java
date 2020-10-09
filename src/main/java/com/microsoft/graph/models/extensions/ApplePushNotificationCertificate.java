@@ -26,7 +26,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Apple Identifier.
      * Apple Id of the account used to create the MDM push certificate.
      */
-    @SerializedName("appleIdentifier")
+    @SerializedName(value = "appleIdentifier", alternate = {"AppleIdentifier"})
     @Expose
     public String appleIdentifier;
 
@@ -34,7 +34,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Certificate.
      * Not yet documented
      */
-    @SerializedName("certificate")
+    @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose
     public String certificate;
 
@@ -42,7 +42,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Certificate Serial Number.
      * Certificate serial number. This property is read-only.
      */
-    @SerializedName("certificateSerialNumber")
+    @SerializedName(value = "certificateSerialNumber", alternate = {"CertificateSerialNumber"})
     @Expose
     public String certificateSerialNumber;
 
@@ -50,7 +50,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Certificate Upload Failure Reason.
      * The reason the certificate upload failed.
      */
-    @SerializedName("certificateUploadFailureReason")
+    @SerializedName(value = "certificateUploadFailureReason", alternate = {"CertificateUploadFailureReason"})
     @Expose
     public String certificateUploadFailureReason;
 
@@ -58,7 +58,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Certificate Upload Status.
      * The certificate upload status.
      */
-    @SerializedName("certificateUploadStatus")
+    @SerializedName(value = "certificateUploadStatus", alternate = {"CertificateUploadStatus"})
     @Expose
     public String certificateUploadStatus;
 
@@ -66,7 +66,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Expiration Date Time.
      * The expiration date and time for Apple push notification certificate.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -74,7 +74,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Last Modified Date Time.
      * Last modified date and time for Apple push notification certificate.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -82,7 +82,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
      * The Topic Identifier.
      * Topic Id.
      */
-    @SerializedName("topicIdentifier")
+    @SerializedName(value = "topicIdentifier", alternate = {"TopicIdentifier"})
     @Expose
     public String topicIdentifier;
 

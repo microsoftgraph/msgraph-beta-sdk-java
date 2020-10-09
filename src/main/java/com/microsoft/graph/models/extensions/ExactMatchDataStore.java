@@ -29,7 +29,7 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
      * The Columns.
      * 
      */
-    @SerializedName("columns")
+    @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
     public java.util.List<ExactDataMatchStoreColumn> columns;
 
@@ -37,7 +37,7 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
      * The Data Last Updated Date Time.
      * 
      */
-    @SerializedName("dataLastUpdatedDateTime")
+    @SerializedName(value = "dataLastUpdatedDateTime", alternate = {"DataLastUpdatedDateTime"})
     @Expose
     public java.util.Calendar dataLastUpdatedDateTime;
 
@@ -45,7 +45,7 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -53,7 +53,7 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -61,7 +61,7 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
      * The Sessions.
      * 
      */
-    @SerializedName("sessions")
+    @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose
     public ExactMatchSessionCollectionPage sessions;
 

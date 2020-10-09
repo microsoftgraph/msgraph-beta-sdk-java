@@ -29,7 +29,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Device Exchange Access State Summary.
      * Distribution of Exchange Access State in Intune
      */
-    @SerializedName("deviceExchangeAccessStateSummary")
+    @SerializedName(value = "deviceExchangeAccessStateSummary", alternate = {"DeviceExchangeAccessStateSummary"})
     @Expose
     public DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
 
@@ -37,7 +37,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Device Operating System Summary.
      * Device operating system summary.
      */
-    @SerializedName("deviceOperatingSystemSummary")
+    @SerializedName(value = "deviceOperatingSystemSummary", alternate = {"DeviceOperatingSystemSummary"})
     @Expose
     public DeviceOperatingSystemSummary deviceOperatingSystemSummary;
 
@@ -45,7 +45,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Dual Enrolled Device Count.
      * The number of devices enrolled in both MDM and EAS
      */
-    @SerializedName("dualEnrolledDeviceCount")
+    @SerializedName(value = "dualEnrolledDeviceCount", alternate = {"DualEnrolledDeviceCount"})
     @Expose
     public Integer dualEnrolledDeviceCount;
 
@@ -53,7 +53,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Enrolled Device Count.
      * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      */
-    @SerializedName("enrolledDeviceCount")
+    @SerializedName(value = "enrolledDeviceCount", alternate = {"EnrolledDeviceCount"})
     @Expose
     public Integer enrolledDeviceCount;
 
@@ -61,7 +61,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Last modified date time of device overview
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -69,7 +69,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Managed Device Models And Manufacturers.
      * Models and Manufactures meatadata for managed devices in the account
      */
-    @SerializedName("managedDeviceModelsAndManufacturers")
+    @SerializedName(value = "managedDeviceModelsAndManufacturers", alternate = {"ManagedDeviceModelsAndManufacturers"})
     @Expose
     public ManagedDeviceModelsAndManufacturers managedDeviceModelsAndManufacturers;
 
@@ -77,7 +77,7 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
      * The Mdm Enrolled Count.
      * The number of devices enrolled in MDM
      */
-    @SerializedName("mdmEnrolledCount")
+    @SerializedName(value = "mdmEnrolledCount", alternate = {"MdmEnrolledCount"})
     @Expose
     public Integer mdmEnrolledCount;
 

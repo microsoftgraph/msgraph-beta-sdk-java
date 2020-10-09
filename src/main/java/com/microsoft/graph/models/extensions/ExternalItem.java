@@ -29,7 +29,7 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
      * The Acl.
      * 
      */
-    @SerializedName("acl")
+    @SerializedName(value = "acl", alternate = {"Acl"})
     @Expose
     public java.util.List<Acl> acl;
 
@@ -37,7 +37,7 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
      * The Content.
      * 
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public ExternalItemContent content;
 
@@ -45,7 +45,7 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
      * The Properties.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public Properties properties;
 

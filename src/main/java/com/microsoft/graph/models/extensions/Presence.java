@@ -26,7 +26,7 @@ public class Presence extends Entity implements IJsonBackedObject {
      * The Activity.
      * 
      */
-    @SerializedName("activity")
+    @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
     public String activity;
 
@@ -34,7 +34,7 @@ public class Presence extends Entity implements IJsonBackedObject {
      * The Availability.
      * 
      */
-    @SerializedName("availability")
+    @SerializedName(value = "availability", alternate = {"Availability"})
     @Expose
     public String availability;
 

@@ -26,7 +26,7 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
      * The Sync Calendar.
      * Toggles syncing the calendar. If set to false the calendar is turned off on the device.
      */
-    @SerializedName("syncCalendar")
+    @SerializedName(value = "syncCalendar", alternate = {"SyncCalendar"})
     @Expose
     public Boolean syncCalendar;
 
@@ -34,7 +34,7 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
      * The Sync Contacts.
      * Toggles syncing contacts. If set to false contacts are turned off on the device.
      */
-    @SerializedName("syncContacts")
+    @SerializedName(value = "syncContacts", alternate = {"SyncContacts"})
     @Expose
     public Boolean syncContacts;
 
@@ -42,7 +42,7 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
      * The Sync Tasks.
      * Toggles syncing tasks. If set to false tasks are turned off on the device.
      */
-    @SerializedName("syncTasks")
+    @SerializedName(value = "syncTasks", alternate = {"SyncTasks"})
     @Expose
     public Boolean syncTasks;
 

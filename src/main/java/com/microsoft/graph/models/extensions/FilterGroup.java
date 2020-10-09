@@ -36,7 +36,7 @@ public class FilterGroup implements IJsonBackedObject {
      * The Clauses.
      * 
      */
-    @SerializedName("clauses")
+    @SerializedName(value = "clauses", alternate = {"Clauses"})
     @Expose
     public java.util.List<FilterClause> clauses;
 
@@ -44,7 +44,7 @@ public class FilterGroup implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

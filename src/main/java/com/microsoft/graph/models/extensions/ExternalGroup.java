@@ -28,7 +28,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -36,7 +36,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
      * The Members.
      * 
      */
-    @SerializedName("members")
+    @SerializedName(value = "members", alternate = {"Members"})
     @Expose
     public ExternalGroupMemberCollectionPage members;
 

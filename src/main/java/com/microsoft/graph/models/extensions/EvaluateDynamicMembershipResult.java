@@ -36,7 +36,7 @@ public class EvaluateDynamicMembershipResult implements IJsonBackedObject {
      * The Membership Rule.
      * 
      */
-    @SerializedName("membershipRule")
+    @SerializedName(value = "membershipRule", alternate = {"MembershipRule"})
     @Expose
     public String membershipRule;
 
@@ -44,7 +44,7 @@ public class EvaluateDynamicMembershipResult implements IJsonBackedObject {
      * The Membership Rule Evaluation Details.
      * 
      */
-    @SerializedName("membershipRuleEvaluationDetails")
+    @SerializedName(value = "membershipRuleEvaluationDetails", alternate = {"MembershipRuleEvaluationDetails"})
     @Expose
     public ExpressionEvaluationDetails membershipRuleEvaluationDetails;
 
@@ -52,7 +52,7 @@ public class EvaluateDynamicMembershipResult implements IJsonBackedObject {
      * The Membership Rule Evaluation Result.
      * 
      */
-    @SerializedName("membershipRuleEvaluationResult")
+    @SerializedName(value = "membershipRuleEvaluationResult", alternate = {"MembershipRuleEvaluationResult"})
     @Expose
     public Boolean membershipRuleEvaluationResult;
 

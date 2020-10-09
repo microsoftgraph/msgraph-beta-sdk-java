@@ -35,7 +35,7 @@ public class TargetPolicyEndpoints implements IJsonBackedObject {
      * The Platform Types.
      * 
      */
-    @SerializedName("platformTypes")
+    @SerializedName(value = "platformTypes", alternate = {"PlatformTypes"})
     @Expose
     public java.util.List<String> platformTypes;
 

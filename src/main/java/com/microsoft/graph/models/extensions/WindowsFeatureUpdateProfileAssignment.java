@@ -27,7 +27,7 @@ public class WindowsFeatureUpdateProfileAssignment extends Entity implements IJs
      * The Target.
      * The assignment target that the feature update profile is assigned to.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

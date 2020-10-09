@@ -35,7 +35,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Permanent Fail.
      * 
      */
-    @SerializedName("permanentFail")
+    @SerializedName(value = "permanentFail", alternate = {"PermanentFail"})
     @Expose
     public Long permanentFail;
 
@@ -43,7 +43,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Permanent Success.
      * 
      */
-    @SerializedName("permanentSuccess")
+    @SerializedName(value = "permanentSuccess", alternate = {"PermanentSuccess"})
     @Expose
     public Long permanentSuccess;
 
@@ -51,7 +51,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Remove Fail.
      * 
      */
-    @SerializedName("removeFail")
+    @SerializedName(value = "removeFail", alternate = {"RemoveFail"})
     @Expose
     public Long removeFail;
 
@@ -59,7 +59,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Remove Success.
      * 
      */
-    @SerializedName("removeSuccess")
+    @SerializedName(value = "removeSuccess", alternate = {"RemoveSuccess"})
     @Expose
     public Long removeSuccess;
 
@@ -67,7 +67,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Role Id.
      * 
      */
-    @SerializedName("roleId")
+    @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
     public String roleId;
 
@@ -75,7 +75,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Role Name.
      * 
      */
-    @SerializedName("roleName")
+    @SerializedName(value = "roleName", alternate = {"RoleName"})
     @Expose
     public String roleName;
 
@@ -83,7 +83,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Temporary Fail.
      * 
      */
-    @SerializedName("temporaryFail")
+    @SerializedName(value = "temporaryFail", alternate = {"TemporaryFail"})
     @Expose
     public Long temporaryFail;
 
@@ -91,7 +91,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Temporary Success.
      * 
      */
-    @SerializedName("temporarySuccess")
+    @SerializedName(value = "temporarySuccess", alternate = {"TemporarySuccess"})
     @Expose
     public Long temporarySuccess;
 
@@ -99,7 +99,7 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
      * The Unknown Fail.
      * 
      */
-    @SerializedName("unknownFail")
+    @SerializedName(value = "unknownFail", alternate = {"UnknownFail"})
     @Expose
     public Long unknownFail;
 

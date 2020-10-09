@@ -39,7 +39,7 @@ public class Store implements IJsonBackedObject {
      * The Default Language Tag.
      * 
      */
-    @SerializedName("defaultLanguageTag")
+    @SerializedName(value = "defaultLanguageTag", alternate = {"DefaultLanguageTag"})
     @Expose
     public String defaultLanguageTag;
 
@@ -47,7 +47,7 @@ public class Store implements IJsonBackedObject {
      * The Language Tags.
      * 
      */
-    @SerializedName("languageTags")
+    @SerializedName(value = "languageTags", alternate = {"LanguageTags"})
     @Expose
     public java.util.List<String> languageTags;
 
@@ -55,7 +55,7 @@ public class Store implements IJsonBackedObject {
      * The Groups.
      * 
      */
-    @SerializedName("groups")
+    @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
     public GroupCollectionPage groups;
 
@@ -63,7 +63,7 @@ public class Store implements IJsonBackedObject {
      * The Sets.
      * 
      */
-    @SerializedName("sets")
+    @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose
     public SetCollectionPage sets;
 

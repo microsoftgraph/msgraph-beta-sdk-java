@@ -35,7 +35,7 @@ public class RegistrationEnforcement implements IJsonBackedObject {
      * The Is Allowed To Skip Registration.
      * 
      */
-    @SerializedName("isAllowedToSkipRegistration")
+    @SerializedName(value = "isAllowedToSkipRegistration", alternate = {"IsAllowedToSkipRegistration"})
     @Expose
     public Boolean isAllowedToSkipRegistration;
 
@@ -43,7 +43,7 @@ public class RegistrationEnforcement implements IJsonBackedObject {
      * The Registration Skip Duration In Days.
      * 
      */
-    @SerializedName("registrationSkipDurationInDays")
+    @SerializedName(value = "registrationSkipDurationInDays", alternate = {"RegistrationSkipDurationInDays"})
     @Expose
     public Integer registrationSkipDurationInDays;
 

@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * The Manufacturer Regression.
      * The metric values for the user experience analytics Manufacturer regression.
      */
-    @SerializedName("manufacturerRegression")
+    @SerializedName(value = "manufacturerRegression", alternate = {"ManufacturerRegression"})
     @Expose
     public UserExperienceAnalyticsMetricCollectionPage manufacturerRegression;
 
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * The Model Regression.
      * The metric values for the user experience analytics model regression.
      */
-    @SerializedName("modelRegression")
+    @SerializedName(value = "modelRegression", alternate = {"ModelRegression"})
     @Expose
     public UserExperienceAnalyticsMetricCollectionPage modelRegression;
 
@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * The Operating System Regression.
      * The metric values for the user experience analytics operating system regression.
      */
-    @SerializedName("operatingSystemRegression")
+    @SerializedName(value = "operatingSystemRegression", alternate = {"OperatingSystemRegression"})
     @Expose
     public UserExperienceAnalyticsMetricCollectionPage operatingSystemRegression;
 

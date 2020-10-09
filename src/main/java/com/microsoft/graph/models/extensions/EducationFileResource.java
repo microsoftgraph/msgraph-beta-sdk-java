@@ -26,7 +26,7 @@ public class EducationFileResource extends EducationResource implements IJsonBac
      * The File Url.
      * 
      */
-    @SerializedName("fileUrl")
+    @SerializedName(value = "fileUrl", alternate = {"FileUrl"})
     @Expose
     public String fileUrl;
 

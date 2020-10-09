@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OrgContact;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
@@ -25,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class GroupCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IGroupCollectionReferenceRequestBuilder {
 
     /**
-     * The request builder for this collection of Group
+     * The request builder for this collection of OrgContact
      *
      * @param requestUrl     the request URL
      * @param client         the service client

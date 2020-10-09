@@ -29,7 +29,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * The Application Id.
      * Intune application identifier.
      */
-    @SerializedName("applicationId")
+    @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
     public String applicationId;
 
@@ -37,7 +37,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * The History.
      * Intune Mobile Application Troubleshooting History Item
      */
-    @SerializedName("history")
+    @SerializedName(value = "history", alternate = {"History"})
     @Expose
     public java.util.List<MobileAppTroubleshootingHistoryItem> history;
 
@@ -45,7 +45,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * The Managed Device Identifier.
      * Device identifier created or collected by Intune.
      */
-    @SerializedName("managedDeviceIdentifier")
+    @SerializedName(value = "managedDeviceIdentifier", alternate = {"ManagedDeviceIdentifier"})
     @Expose
     public String managedDeviceIdentifier;
 
@@ -53,7 +53,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * The User Id.
      * Identifier for the user that tried to enroll the device.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -61,7 +61,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * The App Log Collection Requests.
      * The collection property of AppLogUploadRequest.
      */
-    @SerializedName("appLogCollectionRequests")
+    @SerializedName(value = "appLogCollectionRequests", alternate = {"AppLogCollectionRequests"})
     @Expose
     public AppLogCollectionRequestCollectionPage appLogCollectionRequests;
 

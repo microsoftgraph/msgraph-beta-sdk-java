@@ -22,7 +22,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -30,7 +30,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The select.
      * 
      */
-    @SerializedName("select")
+    @SerializedName(value = "select", alternate = {"Select"})
     @Expose
     public java.util.List<String> select;
 
@@ -38,7 +38,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The search.
      * 
      */
-    @SerializedName("search")
+    @SerializedName(value = "search", alternate = {"Search"})
     @Expose
     public String search;
 
@@ -46,7 +46,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The group By.
      * 
      */
-    @SerializedName("groupBy")
+    @SerializedName(value = "groupBy", alternate = {"GroupBy"})
     @Expose
     public java.util.List<String> groupBy;
 
@@ -54,7 +54,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The order By.
      * 
      */
-    @SerializedName("orderBy")
+    @SerializedName(value = "orderBy", alternate = {"OrderBy"})
     @Expose
     public java.util.List<String> orderBy;
 
@@ -62,7 +62,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The skip.
      * 
      */
-    @SerializedName("skip")
+    @SerializedName(value = "skip", alternate = {"Skip"})
     @Expose
     public Integer skip;
 
@@ -70,7 +70,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The top.
      * 
      */
-    @SerializedName("top")
+    @SerializedName(value = "top", alternate = {"Top"})
     @Expose
     public Integer top;
 
@@ -78,7 +78,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The session Id.
      * 
      */
-    @SerializedName("sessionId")
+    @SerializedName(value = "sessionId", alternate = {"SessionId"})
     @Expose
     public String sessionId;
 
@@ -86,7 +86,7 @@ public class DeviceManagementReportsGetDeviceInstallStatusReportBody {
      * The filter.
      * 
      */
-    @SerializedName("filter")
+    @SerializedName(value = "filter", alternate = {"Filter"})
     @Expose
     public String filter;
 

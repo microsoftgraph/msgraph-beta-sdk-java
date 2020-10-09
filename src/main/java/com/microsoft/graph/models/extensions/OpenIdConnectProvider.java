@@ -29,7 +29,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
      * The Claims Mapping.
      * 
      */
-    @SerializedName("claimsMapping")
+    @SerializedName(value = "claimsMapping", alternate = {"ClaimsMapping"})
     @Expose
     public ClaimsMapping claimsMapping;
 
@@ -37,7 +37,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
      * The Domain Hint.
      * 
      */
-    @SerializedName("domainHint")
+    @SerializedName(value = "domainHint", alternate = {"DomainHint"})
     @Expose
     public String domainHint;
 
@@ -45,7 +45,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
      * The Metadata Url.
      * 
      */
-    @SerializedName("metadataUrl")
+    @SerializedName(value = "metadataUrl", alternate = {"MetadataUrl"})
     @Expose
     public String metadataUrl;
 
@@ -53,7 +53,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
      * The Response Mode.
      * 
      */
-    @SerializedName("responseMode")
+    @SerializedName(value = "responseMode", alternate = {"ResponseMode"})
     @Expose
     public OpenIdConnectResponseMode responseMode;
 
@@ -61,7 +61,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
      * The Response Type.
      * 
      */
-    @SerializedName("responseType")
+    @SerializedName(value = "responseType", alternate = {"ResponseType"})
     @Expose
     public EnumSet<OpenIdConnectResponseTypes> responseType;
 
@@ -69,7 +69,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
      * The Scope.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public String scope;
 

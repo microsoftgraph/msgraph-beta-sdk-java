@@ -29,7 +29,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -37,7 +37,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
      * The Publishing Type.
      * 
      */
-    @SerializedName("publishingType")
+    @SerializedName(value = "publishingType", alternate = {"PublishingType"})
     @Expose
     public OnPremisesPublishingType publishingType;
 
@@ -45,7 +45,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
      * The Resource Name.
      * 
      */
-    @SerializedName("resourceName")
+    @SerializedName(value = "resourceName", alternate = {"ResourceName"})
     @Expose
     public String resourceName;
 
@@ -53,7 +53,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
      * The Agent Groups.
      * 
      */
-    @SerializedName("agentGroups")
+    @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose
     public OnPremisesAgentGroupCollectionPage agentGroups;
 

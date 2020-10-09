@@ -30,7 +30,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -38,7 +38,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -46,7 +46,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -54,7 +54,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -62,7 +62,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Identity Sources.
      * 
      */
-    @SerializedName("identitySources")
+    @SerializedName(value = "identitySources", alternate = {"IdentitySources"})
     @Expose
     public java.util.List<IdentitySource> identitySources;
 
@@ -70,7 +70,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Modified By.
      * 
      */
-    @SerializedName("modifiedBy")
+    @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
     public String modifiedBy;
 
@@ -78,7 +78,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Modified Date Time.
      * 
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -86,7 +86,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ConnectedOrganizationState state;
 
@@ -94,7 +94,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The External Sponsors.
      * 
      */
-    @SerializedName("externalSponsors")
+    @SerializedName(value = "externalSponsors", alternate = {"ExternalSponsors"})
     @Expose
     public DirectoryObjectCollectionPage externalSponsors;
 
@@ -102,7 +102,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Internal Sponsors.
      * 
      */
-    @SerializedName("internalSponsors")
+    @SerializedName(value = "internalSponsors", alternate = {"InternalSponsors"})
     @Expose
     public DirectoryObjectCollectionPage internalSponsors;
 

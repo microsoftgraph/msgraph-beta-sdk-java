@@ -35,7 +35,7 @@ public class DeviceCompliancePolicyScript implements IJsonBackedObject {
      * The Device Compliance Script Id.
      * Device compliance script Id.
      */
-    @SerializedName("deviceComplianceScriptId")
+    @SerializedName(value = "deviceComplianceScriptId", alternate = {"DeviceComplianceScriptId"})
     @Expose
     public String deviceComplianceScriptId;
 
@@ -43,7 +43,7 @@ public class DeviceCompliancePolicyScript implements IJsonBackedObject {
      * The Rules Content.
      * Json of the rules.
      */
-    @SerializedName("rulesContent")
+    @SerializedName(value = "rulesContent", alternate = {"RulesContent"})
     @Expose
     public byte[] rulesContent;
 

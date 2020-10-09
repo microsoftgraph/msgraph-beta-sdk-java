@@ -28,7 +28,7 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public ErrorDetail error;
 
@@ -36,7 +36,7 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ConnectionOperationStatus status;
 

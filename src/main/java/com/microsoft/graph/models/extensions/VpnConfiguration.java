@@ -28,7 +28,7 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
      * The Authentication Method.
      * Authentication method.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public VpnAuthenticationMethod authenticationMethod;
 
@@ -36,7 +36,7 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
      * The Connection Name.
      * Connection name displayed to the user.
      */
-    @SerializedName("connectionName")
+    @SerializedName(value = "connectionName", alternate = {"ConnectionName"})
     @Expose
     public String connectionName;
 
@@ -44,7 +44,7 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
      * The Realm.
      * Realm when connection type is set to Pulse Secure.
      */
-    @SerializedName("realm")
+    @SerializedName(value = "realm", alternate = {"Realm"})
     @Expose
     public String realm;
 
@@ -52,7 +52,7 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
      * The Role.
      * Role when connection type is set to Pulse Secure.
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public String role;
 
@@ -60,7 +60,7 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
      * The Servers.
      * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("servers")
+    @SerializedName(value = "servers", alternate = {"Servers"})
     @Expose
     public java.util.List<VpnServer> servers;
 

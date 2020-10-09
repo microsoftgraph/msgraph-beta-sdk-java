@@ -26,7 +26,7 @@ public class UserConfiguration extends Entity implements IJsonBackedObject {
      * The Binary Data.
      * 
      */
-    @SerializedName("binaryData")
+    @SerializedName(value = "binaryData", alternate = {"BinaryData"})
     @Expose
     public byte[] binaryData;
 

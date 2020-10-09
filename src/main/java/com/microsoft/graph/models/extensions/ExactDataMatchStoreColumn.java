@@ -35,7 +35,7 @@ public class ExactDataMatchStoreColumn implements IJsonBackedObject {
      * The Ignored Delimiters.
      * 
      */
-    @SerializedName("ignoredDelimiters")
+    @SerializedName(value = "ignoredDelimiters", alternate = {"IgnoredDelimiters"})
     @Expose
     public java.util.List<String> ignoredDelimiters;
 
@@ -43,7 +43,7 @@ public class ExactDataMatchStoreColumn implements IJsonBackedObject {
      * The Is Case Insensitive.
      * 
      */
-    @SerializedName("isCaseInsensitive")
+    @SerializedName(value = "isCaseInsensitive", alternate = {"IsCaseInsensitive"})
     @Expose
     public Boolean isCaseInsensitive;
 
@@ -51,7 +51,7 @@ public class ExactDataMatchStoreColumn implements IJsonBackedObject {
      * The Is Searchable.
      * 
      */
-    @SerializedName("isSearchable")
+    @SerializedName(value = "isSearchable", alternate = {"IsSearchable"})
     @Expose
     public Boolean isSearchable;
 
@@ -59,7 +59,7 @@ public class ExactDataMatchStoreColumn implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

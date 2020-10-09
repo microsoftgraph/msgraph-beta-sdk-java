@@ -22,7 +22,7 @@ public class DeviceManagementIntentMigrateToTemplateBody {
      * The new Template Id.
      * 
      */
-    @SerializedName("newTemplateId")
+    @SerializedName(value = "newTemplateId", alternate = {"NewTemplateId"})
     @Expose
     public String newTemplateId;
 
@@ -30,7 +30,7 @@ public class DeviceManagementIntentMigrateToTemplateBody {
      * The preserve Custom Values.
      * 
      */
-    @SerializedName("preserveCustomValues")
+    @SerializedName(value = "preserveCustomValues", alternate = {"PreserveCustomValues"})
     @Expose
     public Boolean preserveCustomValues;
 

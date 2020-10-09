@@ -35,7 +35,7 @@ public class PreAuthorizedApplication implements IJsonBackedObject {
      * The App Id.
      * The unique identifier for the application.
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -43,7 +43,7 @@ public class PreAuthorizedApplication implements IJsonBackedObject {
      * The Permission Ids.
      * 
      */
-    @SerializedName("permissionIds")
+    @SerializedName(value = "permissionIds", alternate = {"PermissionIds"})
     @Expose
     public java.util.List<String> permissionIds;
 

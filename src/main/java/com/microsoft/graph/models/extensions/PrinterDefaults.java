@@ -45,7 +45,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Color Mode.
      * 
      */
-    @SerializedName("colorMode")
+    @SerializedName(value = "colorMode", alternate = {"ColorMode"})
     @Expose
     public PrintColorMode colorMode;
 
@@ -53,7 +53,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Content Type.
      * 
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public String contentType;
 
@@ -61,7 +61,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Copies Per Job.
      * 
      */
-    @SerializedName("copiesPerJob")
+    @SerializedName(value = "copiesPerJob", alternate = {"CopiesPerJob"})
     @Expose
     public Integer copiesPerJob;
 
@@ -69,7 +69,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Document Mime Type.
      * 
      */
-    @SerializedName("documentMimeType")
+    @SerializedName(value = "documentMimeType", alternate = {"DocumentMimeType"})
     @Expose
     public String documentMimeType;
 
@@ -77,7 +77,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Dpi.
      * 
      */
-    @SerializedName("dpi")
+    @SerializedName(value = "dpi", alternate = {"Dpi"})
     @Expose
     public Integer dpi;
 
@@ -85,7 +85,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Duplex Configuration.
      * 
      */
-    @SerializedName("duplexConfiguration")
+    @SerializedName(value = "duplexConfiguration", alternate = {"DuplexConfiguration"})
     @Expose
     public PrintDuplexConfiguration duplexConfiguration;
 
@@ -93,7 +93,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Duplex Mode.
      * 
      */
-    @SerializedName("duplexMode")
+    @SerializedName(value = "duplexMode", alternate = {"DuplexMode"})
     @Expose
     public PrintDuplexMode duplexMode;
 
@@ -101,7 +101,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Finishings.
      * 
      */
-    @SerializedName("finishings")
+    @SerializedName(value = "finishings", alternate = {"Finishings"})
     @Expose
     public java.util.List<PrintFinishing> finishings;
 
@@ -109,7 +109,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Fit Pdf To Page.
      * 
      */
-    @SerializedName("fitPdfToPage")
+    @SerializedName(value = "fitPdfToPage", alternate = {"FitPdfToPage"})
     @Expose
     public Boolean fitPdfToPage;
 
@@ -117,7 +117,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Media Color.
      * 
      */
-    @SerializedName("mediaColor")
+    @SerializedName(value = "mediaColor", alternate = {"MediaColor"})
     @Expose
     public String mediaColor;
 
@@ -125,7 +125,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Media Size.
      * 
      */
-    @SerializedName("mediaSize")
+    @SerializedName(value = "mediaSize", alternate = {"MediaSize"})
     @Expose
     public String mediaSize;
 
@@ -133,7 +133,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Media Type.
      * 
      */
-    @SerializedName("mediaType")
+    @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
     public String mediaType;
 
@@ -141,7 +141,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Multipage Layout.
      * 
      */
-    @SerializedName("multipageLayout")
+    @SerializedName(value = "multipageLayout", alternate = {"MultipageLayout"})
     @Expose
     public PrintMultipageLayout multipageLayout;
 
@@ -149,7 +149,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Orientation.
      * 
      */
-    @SerializedName("orientation")
+    @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
     public PrintOrientation orientation;
 
@@ -157,7 +157,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Output Bin.
      * 
      */
-    @SerializedName("outputBin")
+    @SerializedName(value = "outputBin", alternate = {"OutputBin"})
     @Expose
     public String outputBin;
 
@@ -165,7 +165,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Pages Per Sheet.
      * 
      */
-    @SerializedName("pagesPerSheet")
+    @SerializedName(value = "pagesPerSheet", alternate = {"PagesPerSheet"})
     @Expose
     public Integer pagesPerSheet;
 
@@ -173,7 +173,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Pdf Fit To Page.
      * 
      */
-    @SerializedName("pdfFitToPage")
+    @SerializedName(value = "pdfFitToPage", alternate = {"PdfFitToPage"})
     @Expose
     public Boolean pdfFitToPage;
 
@@ -181,7 +181,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Presentation Direction.
      * 
      */
-    @SerializedName("presentationDirection")
+    @SerializedName(value = "presentationDirection", alternate = {"PresentationDirection"})
     @Expose
     public PrintPresentationDirection presentationDirection;
 
@@ -189,7 +189,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Print Color Configuration.
      * 
      */
-    @SerializedName("printColorConfiguration")
+    @SerializedName(value = "printColorConfiguration", alternate = {"PrintColorConfiguration"})
     @Expose
     public PrintColorConfiguration printColorConfiguration;
 
@@ -197,7 +197,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Print Quality.
      * 
      */
-    @SerializedName("printQuality")
+    @SerializedName(value = "printQuality", alternate = {"PrintQuality"})
     @Expose
     public PrintQuality printQuality;
 
@@ -205,7 +205,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Quality.
      * 
      */
-    @SerializedName("quality")
+    @SerializedName(value = "quality", alternate = {"Quality"})
     @Expose
     public PrintQuality quality;
 
@@ -213,7 +213,7 @@ public class PrinterDefaults implements IJsonBackedObject {
      * The Scaling.
      * 
      */
-    @SerializedName("scaling")
+    @SerializedName(value = "scaling", alternate = {"Scaling"})
     @Expose
     public PrintScaling scaling;
 

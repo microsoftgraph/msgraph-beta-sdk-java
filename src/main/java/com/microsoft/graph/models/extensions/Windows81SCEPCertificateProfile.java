@@ -33,7 +33,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Certificate Store.
      * Target store certificate
      */
-    @SerializedName("certificateStore")
+    @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
     public CertificateStore certificateStore;
 
@@ -41,7 +41,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Hash Algorithm.
      * SCEP Hash Algorithm.
      */
-    @SerializedName("hashAlgorithm")
+    @SerializedName(value = "hashAlgorithm", alternate = {"HashAlgorithm"})
     @Expose
     public EnumSet<HashAlgorithms> hashAlgorithm;
 
@@ -49,7 +49,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Key Size.
      * SCEP Key Size.
      */
-    @SerializedName("keySize")
+    @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
     public KeySize keySize;
 
@@ -57,7 +57,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Key Usage.
      * SCEP Key Usage.
      */
-    @SerializedName("keyUsage")
+    @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose
     public EnumSet<KeyUsages> keyUsage;
 
@@ -65,7 +65,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Scep Server Urls.
      * SCEP Server Url(s).
      */
-    @SerializedName("scepServerUrls")
+    @SerializedName(value = "scepServerUrls", alternate = {"ScepServerUrls"})
     @Expose
     public java.util.List<String> scepServerUrls;
 
@@ -73,7 +73,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
-    @SerializedName("subjectAlternativeNameFormatString")
+    @SerializedName(value = "subjectAlternativeNameFormatString", alternate = {"SubjectAlternativeNameFormatString"})
     @Expose
     public String subjectAlternativeNameFormatString;
 
@@ -81,7 +81,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Subject Name Format String.
      * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
-    @SerializedName("subjectNameFormatString")
+    @SerializedName(value = "subjectNameFormatString", alternate = {"SubjectNameFormatString"})
     @Expose
     public String subjectNameFormatString;
 
@@ -89,7 +89,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
@@ -97,7 +97,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * The Root Certificate.
      * Trusted Root Certificate
      */
-    @SerializedName("rootCertificate")
+    @SerializedName(value = "rootCertificate", alternate = {"RootCertificate"})
     @Expose
     public Windows81TrustedRootCertificate rootCertificate;
 

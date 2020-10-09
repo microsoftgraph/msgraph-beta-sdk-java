@@ -35,7 +35,7 @@ public class YomiPersonName implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class YomiPersonName implements IJsonBackedObject {
      * The First.
      * 
      */
-    @SerializedName("first")
+    @SerializedName(value = "first", alternate = {"First"})
     @Expose
     public String first;
 
@@ -51,7 +51,7 @@ public class YomiPersonName implements IJsonBackedObject {
      * The Last.
      * 
      */
-    @SerializedName("last")
+    @SerializedName(value = "last", alternate = {"Last"})
     @Expose
     public String last;
 
@@ -59,7 +59,7 @@ public class YomiPersonName implements IJsonBackedObject {
      * The Maiden.
      * 
      */
-    @SerializedName("maiden")
+    @SerializedName(value = "maiden", alternate = {"Maiden"})
     @Expose
     public String maiden;
 
@@ -67,7 +67,7 @@ public class YomiPersonName implements IJsonBackedObject {
      * The Middle.
      * 
      */
-    @SerializedName("middle")
+    @SerializedName(value = "middle", alternate = {"Middle"})
     @Expose
     public String middle;
 

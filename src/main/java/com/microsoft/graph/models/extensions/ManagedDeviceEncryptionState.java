@@ -33,7 +33,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Advanced Bit Locker States.
      * Advanced BitLocker State
      */
-    @SerializedName("advancedBitLockerStates")
+    @SerializedName(value = "advancedBitLockerStates", alternate = {"AdvancedBitLockerStates"})
     @Expose
     public EnumSet<AdvancedBitLockerState> advancedBitLockerStates;
 
@@ -41,7 +41,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Device Name.
      * Device name
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -49,7 +49,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Device Type.
      * Platform of the device.
      */
-    @SerializedName("deviceType")
+    @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
     public DeviceTypes deviceType;
 
@@ -57,7 +57,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Encryption Policy Setting State.
      * Encryption policy setting state
      */
-    @SerializedName("encryptionPolicySettingState")
+    @SerializedName(value = "encryptionPolicySettingState", alternate = {"EncryptionPolicySettingState"})
     @Expose
     public ComplianceStatus encryptionPolicySettingState;
 
@@ -65,7 +65,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Encryption Readiness State.
      * Encryption readiness state
      */
-    @SerializedName("encryptionReadinessState")
+    @SerializedName(value = "encryptionReadinessState", alternate = {"EncryptionReadinessState"})
     @Expose
     public EncryptionReadinessState encryptionReadinessState;
 
@@ -73,7 +73,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Encryption State.
      * Device encryption state
      */
-    @SerializedName("encryptionState")
+    @SerializedName(value = "encryptionState", alternate = {"EncryptionState"})
     @Expose
     public EncryptionState encryptionState;
 
@@ -81,7 +81,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The File Vault States.
      * FileVault State
      */
-    @SerializedName("fileVaultStates")
+    @SerializedName(value = "fileVaultStates", alternate = {"FileVaultStates"})
     @Expose
     public EnumSet<FileVaultState> fileVaultStates;
 
@@ -89,7 +89,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Os Version.
      * Operating system version of the device
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -97,7 +97,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Policy Details.
      * Policy Details
      */
-    @SerializedName("policyDetails")
+    @SerializedName(value = "policyDetails", alternate = {"PolicyDetails"})
     @Expose
     public java.util.List<EncryptionReportPolicyDetails> policyDetails;
 
@@ -105,7 +105,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The Tpm Specification Version.
      * Device TPM Version
      */
-    @SerializedName("tpmSpecificationVersion")
+    @SerializedName(value = "tpmSpecificationVersion", alternate = {"TpmSpecificationVersion"})
     @Expose
     public String tpmSpecificationVersion;
 
@@ -113,7 +113,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
      * The User Principal Name.
      * User name
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

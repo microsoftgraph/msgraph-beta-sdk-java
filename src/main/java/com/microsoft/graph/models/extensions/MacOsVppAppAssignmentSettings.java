@@ -26,7 +26,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      * The Use Device Licensing.
      * Whether or not to use device licensing.
      */
-    @SerializedName("useDeviceLicensing")
+    @SerializedName(value = "useDeviceLicensing", alternate = {"UseDeviceLicensing"})
     @Expose
     public Boolean useDeviceLicensing;
 

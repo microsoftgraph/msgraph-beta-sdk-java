@@ -26,7 +26,7 @@ public class DeviceSetupConfiguration extends Entity implements IJsonBackedObjec
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -34,7 +34,7 @@ public class DeviceSetupConfiguration extends Entity implements IJsonBackedObjec
      * The Description.
      * Admin provided description of the Device Configuration.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -42,7 +42,7 @@ public class DeviceSetupConfiguration extends Entity implements IJsonBackedObjec
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -50,7 +50,7 @@ public class DeviceSetupConfiguration extends Entity implements IJsonBackedObjec
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -58,7 +58,7 @@ public class DeviceSetupConfiguration extends Entity implements IJsonBackedObjec
      * The Version.
      * Version of the device configuration.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 

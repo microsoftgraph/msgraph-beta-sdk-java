@@ -28,7 +28,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Appearance Screen Disabled.
      * Indicates if Apperance screen is disabled
      */
-    @SerializedName("appearanceScreenDisabled")
+    @SerializedName(value = "appearanceScreenDisabled", alternate = {"AppearanceScreenDisabled"})
     @Expose
     public Boolean appearanceScreenDisabled;
 
@@ -36,7 +36,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Await Device Configured Confirmation.
      * Indicates if the device will need to wait for configured confirmation
      */
-    @SerializedName("awaitDeviceConfiguredConfirmation")
+    @SerializedName(value = "awaitDeviceConfiguredConfirmation", alternate = {"AwaitDeviceConfiguredConfirmation"})
     @Expose
     public Boolean awaitDeviceConfiguredConfirmation;
 
@@ -44,7 +44,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Company Portal Vpp Token Id.
      * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
      */
-    @SerializedName("companyPortalVppTokenId")
+    @SerializedName(value = "companyPortalVppTokenId", alternate = {"CompanyPortalVppTokenId"})
     @Expose
     public String companyPortalVppTokenId;
 
@@ -52,7 +52,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Device To Device Migration Disabled.
      * Indicates if Device To Device Migration is disabled
      */
-    @SerializedName("deviceToDeviceMigrationDisabled")
+    @SerializedName(value = "deviceToDeviceMigrationDisabled", alternate = {"DeviceToDeviceMigrationDisabled"})
     @Expose
     public Boolean deviceToDeviceMigrationDisabled;
 
@@ -60,7 +60,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Enable Shared IPad.
      * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
      */
-    @SerializedName("enableSharedIPad")
+    @SerializedName(value = "enableSharedIPad", alternate = {"EnableSharedIPad"})
     @Expose
     public Boolean enableSharedIPad;
 
@@ -68,7 +68,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Enable Single App Enrollment Mode.
      * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
      */
-    @SerializedName("enableSingleAppEnrollmentMode")
+    @SerializedName(value = "enableSingleAppEnrollmentMode", alternate = {"EnableSingleAppEnrollmentMode"})
     @Expose
     public Boolean enableSingleAppEnrollmentMode;
 
@@ -76,7 +76,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Express Language Screen Disabled.
      * Indicates if Express Language screen is disabled
      */
-    @SerializedName("expressLanguageScreenDisabled")
+    @SerializedName(value = "expressLanguageScreenDisabled", alternate = {"ExpressLanguageScreenDisabled"})
     @Expose
     public Boolean expressLanguageScreenDisabled;
 
@@ -84,7 +84,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Home Button Screen Disabled.
      * Indicates if home button sensitivity screen is disabled
      */
-    @SerializedName("homeButtonScreenDisabled")
+    @SerializedName(value = "homeButtonScreenDisabled", alternate = {"HomeButtonScreenDisabled"})
     @Expose
     public Boolean homeButtonScreenDisabled;
 
@@ -92,7 +92,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The IMessage And Face Time Screen Disabled.
      * Indicates if iMessage and FaceTime screen is disabled
      */
-    @SerializedName("iMessageAndFaceTimeScreenDisabled")
+    @SerializedName(value = "iMessageAndFaceTimeScreenDisabled", alternate = {"IMessageAndFaceTimeScreenDisabled"})
     @Expose
     public Boolean iMessageAndFaceTimeScreenDisabled;
 
@@ -100,7 +100,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The ITunes Pairing Mode.
      * Indicates the iTunes pairing mode
      */
-    @SerializedName("iTunesPairingMode")
+    @SerializedName(value = "iTunesPairingMode", alternate = {"ITunesPairingMode"})
     @Expose
     public ITunesPairingMode iTunesPairingMode;
 
@@ -108,7 +108,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Management Certificates.
      * Management certificates for Apple Configurator
      */
-    @SerializedName("managementCertificates")
+    @SerializedName(value = "managementCertificates", alternate = {"ManagementCertificates"})
     @Expose
     public java.util.List<ManagementCertificateWithThumbprint> managementCertificates;
 
@@ -116,7 +116,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The On Boarding Screen Disabled.
      * Indicates if onboarding setup screen is disabled
      */
-    @SerializedName("onBoardingScreenDisabled")
+    @SerializedName(value = "onBoardingScreenDisabled", alternate = {"OnBoardingScreenDisabled"})
     @Expose
     public Boolean onBoardingScreenDisabled;
 
@@ -124,7 +124,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Preferred Language Screen Disabled.
      * Indicates if Preferred language screen is disabled
      */
-    @SerializedName("preferredLanguageScreenDisabled")
+    @SerializedName(value = "preferredLanguageScreenDisabled", alternate = {"PreferredLanguageScreenDisabled"})
     @Expose
     public Boolean preferredLanguageScreenDisabled;
 
@@ -132,7 +132,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Restore From Android Disabled.
      * Indicates if Restore from Android is disabled
      */
-    @SerializedName("restoreFromAndroidDisabled")
+    @SerializedName(value = "restoreFromAndroidDisabled", alternate = {"RestoreFromAndroidDisabled"})
     @Expose
     public Boolean restoreFromAndroidDisabled;
 
@@ -140,7 +140,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Shared IPad Maximum User Count.
      * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
      */
-    @SerializedName("sharedIPadMaximumUserCount")
+    @SerializedName(value = "sharedIPadMaximumUserCount", alternate = {"SharedIPadMaximumUserCount"})
     @Expose
     public Integer sharedIPadMaximumUserCount;
 
@@ -148,7 +148,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Sim Setup Screen Disabled.
      * Indicates if the SIMSetup screen is disabled
      */
-    @SerializedName("simSetupScreenDisabled")
+    @SerializedName(value = "simSetupScreenDisabled", alternate = {"SimSetupScreenDisabled"})
     @Expose
     public Boolean simSetupScreenDisabled;
 
@@ -156,7 +156,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Software Update Screen Disabled.
      * Indicates if the mandatory sofware update screen is disabled
      */
-    @SerializedName("softwareUpdateScreenDisabled")
+    @SerializedName(value = "softwareUpdateScreenDisabled", alternate = {"SoftwareUpdateScreenDisabled"})
     @Expose
     public Boolean softwareUpdateScreenDisabled;
 
@@ -164,7 +164,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Watch Migration Screen Disabled.
      * Indicates if the watch migration screen is disabled
      */
-    @SerializedName("watchMigrationScreenDisabled")
+    @SerializedName(value = "watchMigrationScreenDisabled", alternate = {"WatchMigrationScreenDisabled"})
     @Expose
     public Boolean watchMigrationScreenDisabled;
 
@@ -172,7 +172,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * The Welcome Screen Disabled.
      * Indicates if Weclome screen is disabled
      */
-    @SerializedName("welcomeScreenDisabled")
+    @SerializedName(value = "welcomeScreenDisabled", alternate = {"WelcomeScreenDisabled"})
     @Expose
     public Boolean welcomeScreenDisabled;
 

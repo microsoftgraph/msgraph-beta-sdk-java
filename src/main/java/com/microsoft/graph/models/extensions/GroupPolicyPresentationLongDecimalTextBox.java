@@ -26,7 +26,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
      * The Default Value.
      * An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public Long defaultValue;
 
@@ -34,7 +34,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
      * The Max Value.
      * An unsigned long that specifies the maximum allowed value. The default value is 9999.
      */
-    @SerializedName("maxValue")
+    @SerializedName(value = "maxValue", alternate = {"MaxValue"})
     @Expose
     public Long maxValue;
 
@@ -42,7 +42,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
      * The Min Value.
      * An unsigned long that specifies the minimum allowed value. The default value is 0.
      */
-    @SerializedName("minValue")
+    @SerializedName(value = "minValue", alternate = {"MinValue"})
     @Expose
     public Long minValue;
 
@@ -50,7 +50,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
      * The Required.
      * Requirement to enter a value in the parameter box. The default value is false.
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 
@@ -58,7 +58,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
      * The Spin.
      * If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
      */
-    @SerializedName("spin")
+    @SerializedName(value = "spin", alternate = {"Spin"})
     @Expose
     public Boolean spin;
 
@@ -66,7 +66,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
      * The Spin Step.
      * An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
      */
-    @SerializedName("spinStep")
+    @SerializedName(value = "spinStep", alternate = {"SpinStep"})
     @Expose
     public Long spinStep;
 

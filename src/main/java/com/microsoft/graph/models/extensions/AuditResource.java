@@ -36,7 +36,7 @@ public class AuditResource implements IJsonBackedObject {
      * The Display Name.
      * Display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class AuditResource implements IJsonBackedObject {
      * The Modified Properties.
      * List of modified properties.
      */
-    @SerializedName("modifiedProperties")
+    @SerializedName(value = "modifiedProperties", alternate = {"ModifiedProperties"})
     @Expose
     public java.util.List<AuditProperty> modifiedProperties;
 
@@ -52,7 +52,7 @@ public class AuditResource implements IJsonBackedObject {
      * The Resource Id.
      * Audit resource's Id.
      */
-    @SerializedName("resourceId")
+    @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
     public String resourceId;
 
@@ -60,7 +60,7 @@ public class AuditResource implements IJsonBackedObject {
      * The Type.
      * Audit resource's type.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

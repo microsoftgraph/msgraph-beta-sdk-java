@@ -23,7 +23,7 @@ public class ConversationMemberAddBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<ConversationMember> values;
 

@@ -37,7 +37,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Block Data Recovery Agent.
      * Indicates whether to block certificate-based data recovery agent.
      */
-    @SerializedName("blockDataRecoveryAgent")
+    @SerializedName(value = "blockDataRecoveryAgent", alternate = {"BlockDataRecoveryAgent"})
     @Expose
     public Boolean blockDataRecoveryAgent;
 
@@ -45,7 +45,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Enable Bit Locker After Recovery Information To Store.
      * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
      */
-    @SerializedName("enableBitLockerAfterRecoveryInformationToStore")
+    @SerializedName(value = "enableBitLockerAfterRecoveryInformationToStore", alternate = {"EnableBitLockerAfterRecoveryInformationToStore"})
     @Expose
     public Boolean enableBitLockerAfterRecoveryInformationToStore;
 
@@ -53,7 +53,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Enable Recovery Information Save To Store.
      * Indicates whether or not to allow BitLocker recovery information to store in AD DS.
      */
-    @SerializedName("enableRecoveryInformationSaveToStore")
+    @SerializedName(value = "enableRecoveryInformationSaveToStore", alternate = {"EnableRecoveryInformationSaveToStore"})
     @Expose
     public Boolean enableRecoveryInformationSaveToStore;
 
@@ -61,7 +61,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Hide Recovery Options.
      * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
      */
-    @SerializedName("hideRecoveryOptions")
+    @SerializedName(value = "hideRecoveryOptions", alternate = {"HideRecoveryOptions"})
     @Expose
     public Boolean hideRecoveryOptions;
 
@@ -69,7 +69,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Recovery Information To Store.
      * Configure what pieces of BitLocker recovery information are stored to AD DS.
      */
-    @SerializedName("recoveryInformationToStore")
+    @SerializedName(value = "recoveryInformationToStore", alternate = {"RecoveryInformationToStore"})
     @Expose
     public BitLockerRecoveryInformationType recoveryInformationToStore;
 
@@ -77,7 +77,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Recovery Key Usage.
      * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
      */
-    @SerializedName("recoveryKeyUsage")
+    @SerializedName(value = "recoveryKeyUsage", alternate = {"RecoveryKeyUsage"})
     @Expose
     public ConfigurationUsage recoveryKeyUsage;
 
@@ -85,7 +85,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
      * The Recovery Password Usage.
      * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
      */
-    @SerializedName("recoveryPasswordUsage")
+    @SerializedName(value = "recoveryPasswordUsage", alternate = {"RecoveryPasswordUsage"})
     @Expose
     public ConfigurationUsage recoveryPasswordUsage;
 

@@ -27,7 +27,7 @@ public class PolicySetAssignment extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Last modified time of the PolicySetAssignment.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -35,7 +35,7 @@ public class PolicySetAssignment extends Entity implements IJsonBackedObject {
      * The Target.
      * The target group of PolicySetAssignment
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

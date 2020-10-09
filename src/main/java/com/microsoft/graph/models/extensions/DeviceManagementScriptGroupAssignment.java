@@ -26,7 +26,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements IJs
      * The Target Group Id.
      * The Id of the Azure Active Directory group we are targeting the script to.
      */
-    @SerializedName("targetGroupId")
+    @SerializedName(value = "targetGroupId", alternate = {"TargetGroupId"})
     @Expose
     public String targetGroupId;
 

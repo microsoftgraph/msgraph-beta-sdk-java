@@ -23,7 +23,7 @@ public class DeviceConfigurationAssignBody {
      * The device Configuration Group Assignments.
      * 
      */
-    @SerializedName("deviceConfigurationGroupAssignments")
+    @SerializedName(value = "deviceConfigurationGroupAssignments", alternate = {"DeviceConfigurationGroupAssignments"})
     @Expose
     public java.util.List<DeviceConfigurationGroupAssignment> deviceConfigurationGroupAssignments;
 
@@ -31,7 +31,7 @@ public class DeviceConfigurationAssignBody {
      * The assignments.
      * 
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public java.util.List<DeviceConfigurationAssignment> assignments;
 

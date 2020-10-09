@@ -33,7 +33,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Authentication Method.
      * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
 
@@ -41,7 +41,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Eap Fast Configuration.
      * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
      */
-    @SerializedName("eapFastConfiguration")
+    @SerializedName(value = "eapFastConfiguration", alternate = {"EapFastConfiguration"})
     @Expose
     public EapFastConfiguration eapFastConfiguration;
 
@@ -49,7 +49,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Eap Type.
      * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
      */
-    @SerializedName("eapType")
+    @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
     public EapType eapType;
 
@@ -57,7 +57,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Enable Outer Identity Privacy.
      * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
      */
-    @SerializedName("enableOuterIdentityPrivacy")
+    @SerializedName(value = "enableOuterIdentityPrivacy", alternate = {"EnableOuterIdentityPrivacy"})
     @Expose
     public String enableOuterIdentityPrivacy;
 
@@ -65,7 +65,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Network Interface.
      * Network interface.
      */
-    @SerializedName("networkInterface")
+    @SerializedName(value = "networkInterface", alternate = {"NetworkInterface"})
     @Expose
     public WiredNetworkInterface networkInterface;
 
@@ -73,7 +73,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Network Name.
      * Network Name
      */
-    @SerializedName("networkName")
+    @SerializedName(value = "networkName", alternate = {"NetworkName"})
     @Expose
     public String networkName;
 
@@ -81,7 +81,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Non Eap Authentication Method For Eap Ttls.
      * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
      */
-    @SerializedName("nonEapAuthenticationMethodForEapTtls")
+    @SerializedName(value = "nonEapAuthenticationMethodForEapTtls", alternate = {"NonEapAuthenticationMethodForEapTtls"})
     @Expose
     public NonEapAuthenticationMethodForEapTtlsType nonEapAuthenticationMethodForEapTtls;
 
@@ -89,7 +89,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Trusted Server Certificate Names.
      * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
      */
-    @SerializedName("trustedServerCertificateNames")
+    @SerializedName(value = "trustedServerCertificateNames", alternate = {"TrustedServerCertificateNames"})
     @Expose
     public java.util.List<String> trustedServerCertificateNames;
 
@@ -97,7 +97,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Identity Certificate For Client Authentication.
      * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
      */
-    @SerializedName("identityCertificateForClientAuthentication")
+    @SerializedName(value = "identityCertificateForClientAuthentication", alternate = {"IdentityCertificateForClientAuthentication"})
     @Expose
     public MacOSCertificateProfileBase identityCertificateForClientAuthentication;
 
@@ -105,7 +105,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The Root Certificate For Server Validation.
      * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
      */
-    @SerializedName("rootCertificateForServerValidation")
+    @SerializedName(value = "rootCertificateForServerValidation", alternate = {"RootCertificateForServerValidation"})
     @Expose
     public MacOSTrustedRootCertificate rootCertificateForServerValidation;
 

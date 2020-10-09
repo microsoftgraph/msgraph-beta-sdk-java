@@ -26,7 +26,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyPresentation imp
      * The Default Value.
      * Localized default string displayed in the combo box. The default value is empty.
      */
-    @SerializedName("defaultValue")
+    @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
     public String defaultValue;
 
@@ -34,7 +34,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyPresentation imp
      * The Max Length.
      * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
      */
-    @SerializedName("maxLength")
+    @SerializedName(value = "maxLength", alternate = {"MaxLength"})
     @Expose
     public Long maxLength;
 
@@ -42,7 +42,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyPresentation imp
      * The Required.
      * Specifies whether a value must be specified for the parameter. The default value is false.
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 
@@ -50,7 +50,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyPresentation imp
      * The Suggestions.
      * Localized strings listed in the drop-down list of the combo box. The default value is empty.
      */
-    @SerializedName("suggestions")
+    @SerializedName(value = "suggestions", alternate = {"Suggestions"})
     @Expose
     public java.util.List<String> suggestions;
 

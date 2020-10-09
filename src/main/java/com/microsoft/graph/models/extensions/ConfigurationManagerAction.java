@@ -36,7 +36,7 @@ public class ConfigurationManagerAction implements IJsonBackedObject {
      * The Action.
      * The action type to trigger on Configuration Manager client
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public ConfigurationManagerActionType action;
 

@@ -39,7 +39,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
      * The Risk Detections.
      * 
      */
-    @SerializedName("riskDetections")
+    @SerializedName(value = "riskDetections", alternate = {"RiskDetections"})
     @Expose
     public RiskDetectionCollectionPage riskDetections;
 
@@ -47,7 +47,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
      * The Risky Users.
      * 
      */
-    @SerializedName("riskyUsers")
+    @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
     @Expose
     public RiskyUserCollectionPage riskyUsers;
 

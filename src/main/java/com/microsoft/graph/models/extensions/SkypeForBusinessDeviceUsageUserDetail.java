@@ -26,7 +26,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Used Android Phone.
      * 
      */
-    @SerializedName("usedAndroidPhone")
+    @SerializedName(value = "usedAndroidPhone", alternate = {"UsedAndroidPhone"})
     @Expose
     public Boolean usedAndroidPhone;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Usedi Pad.
      * 
      */
-    @SerializedName("usediPad")
+    @SerializedName(value = "usediPad", alternate = {"UsediPad"})
     @Expose
     public Boolean usediPad;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Usedi Phone.
      * 
      */
-    @SerializedName("usediPhone")
+    @SerializedName(value = "usediPhone", alternate = {"UsediPhone"})
     @Expose
     public Boolean usediPhone;
 
@@ -74,7 +74,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Used Windows.
      * 
      */
-    @SerializedName("usedWindows")
+    @SerializedName(value = "usedWindows", alternate = {"UsedWindows"})
     @Expose
     public Boolean usedWindows;
 
@@ -82,7 +82,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The Used Windows Phone.
      * 
      */
-    @SerializedName("usedWindowsPhone")
+    @SerializedName(value = "usedWindowsPhone", alternate = {"UsedWindowsPhone"})
     @Expose
     public Boolean usedWindowsPhone;
 
@@ -90,7 +90,7 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

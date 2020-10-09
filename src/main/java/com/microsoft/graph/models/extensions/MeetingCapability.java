@@ -36,7 +36,7 @@ public class MeetingCapability implements IJsonBackedObject {
      * The Allow Anonymous Users To Dial Out.
      * 
      */
-    @SerializedName("allowAnonymousUsersToDialOut")
+    @SerializedName(value = "allowAnonymousUsersToDialOut", alternate = {"AllowAnonymousUsersToDialOut"})
     @Expose
     public Boolean allowAnonymousUsersToDialOut;
 
@@ -44,7 +44,7 @@ public class MeetingCapability implements IJsonBackedObject {
      * The Allow Anonymous Users To Start Meeting.
      * 
      */
-    @SerializedName("allowAnonymousUsersToStartMeeting")
+    @SerializedName(value = "allowAnonymousUsersToStartMeeting", alternate = {"AllowAnonymousUsersToStartMeeting"})
     @Expose
     public Boolean allowAnonymousUsersToStartMeeting;
 
@@ -52,7 +52,7 @@ public class MeetingCapability implements IJsonBackedObject {
      * The Auto Admitted Users.
      * 
      */
-    @SerializedName("autoAdmittedUsers")
+    @SerializedName(value = "autoAdmittedUsers", alternate = {"AutoAdmittedUsers"})
     @Expose
     public AutoAdmittedUsersType autoAdmittedUsers;
 

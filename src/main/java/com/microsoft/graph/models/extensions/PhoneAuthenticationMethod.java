@@ -28,7 +28,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
      * The Phone Number.
      * 
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -36,7 +36,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
      * The Phone Type.
      * 
      */
-    @SerializedName("phoneType")
+    @SerializedName(value = "phoneType", alternate = {"PhoneType"})
     @Expose
     public AuthenticationPhoneType phoneType;
 
@@ -44,7 +44,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
      * The Sms Sign In State.
      * 
      */
-    @SerializedName("smsSignInState")
+    @SerializedName(value = "smsSignInState", alternate = {"SmsSignInState"})
     @Expose
     public AuthenticationMethodSignInState smsSignInState;
 

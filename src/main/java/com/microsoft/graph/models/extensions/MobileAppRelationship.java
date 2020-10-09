@@ -27,7 +27,7 @@ public class MobileAppRelationship extends Entity implements IJsonBackedObject {
      * The Target Display Name.
      * The target mobile app's display name.
      */
-    @SerializedName("targetDisplayName")
+    @SerializedName(value = "targetDisplayName", alternate = {"TargetDisplayName"})
     @Expose
     public String targetDisplayName;
 
@@ -35,7 +35,7 @@ public class MobileAppRelationship extends Entity implements IJsonBackedObject {
      * The Target Id.
      * The target mobile app's app id.
      */
-    @SerializedName("targetId")
+    @SerializedName(value = "targetId", alternate = {"TargetId"})
     @Expose
     public String targetId;
 
@@ -43,7 +43,7 @@ public class MobileAppRelationship extends Entity implements IJsonBackedObject {
      * The Target Type.
      * The type of relationship indicating whether the target is a parent or child.
      */
-    @SerializedName("targetType")
+    @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose
     public MobileAppRelationshipType targetType;
 

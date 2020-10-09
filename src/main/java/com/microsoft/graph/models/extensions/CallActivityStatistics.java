@@ -26,7 +26,7 @@ public class CallActivityStatistics extends ActivityStatistics implements IJsonB
      * The After Hours.
      * 
      */
-    @SerializedName("afterHours")
+    @SerializedName(value = "afterHours", alternate = {"AfterHours"})
     @Expose
     public javax.xml.datatype.Duration afterHours;
 

@@ -35,7 +35,7 @@ public class VisualProperties implements IJsonBackedObject {
      * The Body.
      * 
      */
-    @SerializedName("body")
+    @SerializedName(value = "body", alternate = {"Body"})
     @Expose
     public String body;
 
@@ -43,7 +43,7 @@ public class VisualProperties implements IJsonBackedObject {
      * The Title.
      * 
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 

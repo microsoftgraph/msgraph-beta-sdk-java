@@ -35,7 +35,7 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
      * The Exclude Device States.
      * 
      */
-    @SerializedName("excludeDeviceStates")
+    @SerializedName(value = "excludeDeviceStates", alternate = {"ExcludeDeviceStates"})
     @Expose
     public java.util.List<String> excludeDeviceStates;
 
@@ -43,7 +43,7 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
      * The Include Device States.
      * 
      */
-    @SerializedName("includeDeviceStates")
+    @SerializedName(value = "includeDeviceStates", alternate = {"IncludeDeviceStates"})
     @Expose
     public java.util.List<String> includeDeviceStates;
 

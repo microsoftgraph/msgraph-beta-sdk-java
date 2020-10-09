@@ -35,7 +35,7 @@ public class DeviceManagementTroubleshootingErrorResource implements IJsonBacked
      * The Link.
      * The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}}
      */
-    @SerializedName("link")
+    @SerializedName(value = "link", alternate = {"Link"})
     @Expose
     public String link;
 
@@ -43,7 +43,7 @@ public class DeviceManagementTroubleshootingErrorResource implements IJsonBacked
      * The Text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public String text;
 

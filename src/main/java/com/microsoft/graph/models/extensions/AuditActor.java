@@ -36,7 +36,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Application Display Name.
      * Name of the Application.
      */
-    @SerializedName("applicationDisplayName")
+    @SerializedName(value = "applicationDisplayName", alternate = {"ApplicationDisplayName"})
     @Expose
     public String applicationDisplayName;
 
@@ -44,7 +44,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Application Id.
      * AAD Application Id.
      */
-    @SerializedName("applicationId")
+    @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
     public String applicationId;
 
@@ -52,7 +52,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Ip Address.
      * IPAddress.
      */
-    @SerializedName("ipAddress")
+    @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
     public String ipAddress;
 
@@ -60,7 +60,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Remote Tenant Id.
      * Remote Tenant Id
      */
-    @SerializedName("remoteTenantId")
+    @SerializedName(value = "remoteTenantId", alternate = {"RemoteTenantId"})
     @Expose
     public String remoteTenantId;
 
@@ -68,7 +68,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Remote User Id.
      * Remote User Id
      */
-    @SerializedName("remoteUserId")
+    @SerializedName(value = "remoteUserId", alternate = {"RemoteUserId"})
     @Expose
     public String remoteUserId;
 
@@ -76,7 +76,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Service Principal Name.
      * Service Principal Name (SPN).
      */
-    @SerializedName("servicePrincipalName")
+    @SerializedName(value = "servicePrincipalName", alternate = {"ServicePrincipalName"})
     @Expose
     public String servicePrincipalName;
 
@@ -84,7 +84,7 @@ public class AuditActor implements IJsonBackedObject {
      * The Type.
      * Actor Type.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -92,7 +92,7 @@ public class AuditActor implements IJsonBackedObject {
      * The User Id.
      * User Id.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -100,7 +100,7 @@ public class AuditActor implements IJsonBackedObject {
      * The User Permissions.
      * List of user permissions when the audit was performed.
      */
-    @SerializedName("userPermissions")
+    @SerializedName(value = "userPermissions", alternate = {"UserPermissions"})
     @Expose
     public java.util.List<String> userPermissions;
 
@@ -108,7 +108,7 @@ public class AuditActor implements IJsonBackedObject {
      * The User Principal Name.
      * User Principal Name (UPN).
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -116,7 +116,7 @@ public class AuditActor implements IJsonBackedObject {
      * The User Role Scope Tags.
      * List of user scope tags when the audit was performed.
      */
-    @SerializedName("userRoleScopeTags")
+    @SerializedName(value = "userRoleScopeTags", alternate = {"UserRoleScopeTags"})
     @Expose
     public java.util.List<RoleScopeTagInfo> userRoleScopeTags;
 

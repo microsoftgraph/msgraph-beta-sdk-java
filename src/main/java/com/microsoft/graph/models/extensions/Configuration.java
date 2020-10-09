@@ -35,7 +35,7 @@ public class Configuration implements IJsonBackedObject {
      * The Authorized Apps.
      * 
      */
-    @SerializedName("authorizedApps")
+    @SerializedName(value = "authorizedApps", alternate = {"AuthorizedApps"})
     @Expose
     public java.util.List<String> authorizedApps;
 

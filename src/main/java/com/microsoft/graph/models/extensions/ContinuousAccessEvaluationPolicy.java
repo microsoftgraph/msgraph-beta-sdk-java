@@ -26,7 +26,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
      * The Groups.
      * 
      */
-    @SerializedName("groups")
+    @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
     public java.util.List<String> groups;
 
@@ -50,7 +50,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -58,7 +58,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
      * The Users.
      * 
      */
-    @SerializedName("users")
+    @SerializedName(value = "users", alternate = {"Users"})
     @Expose
     public java.util.List<String> users;
 

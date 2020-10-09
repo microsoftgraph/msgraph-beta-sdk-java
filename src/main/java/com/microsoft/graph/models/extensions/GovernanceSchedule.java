@@ -35,7 +35,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
      * The Duration.
      * 
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public javax.xml.datatype.Duration duration;
 
@@ -43,7 +43,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -51,7 +51,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -59,7 +59,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

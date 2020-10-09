@@ -31,7 +31,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -39,7 +39,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Is Owner.
      * 
      */
-    @SerializedName("isOwner")
+    @SerializedName(value = "isOwner", alternate = {"IsOwner"})
     @Expose
     public Boolean isOwner;
 
@@ -47,7 +47,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Is Shared.
      * 
      */
-    @SerializedName("isShared")
+    @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
     public Boolean isShared;
 
@@ -55,7 +55,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Wellknown List Name.
      * 
      */
-    @SerializedName("wellknownListName")
+    @SerializedName(value = "wellknownListName", alternate = {"WellknownListName"})
     @Expose
     public WellknownListName wellknownListName;
 
@@ -63,7 +63,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Extensions.
      * 
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -71,7 +71,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Tasks.
      * 
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public TodoTaskCollectionPage tasks;
 

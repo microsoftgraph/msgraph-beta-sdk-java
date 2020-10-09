@@ -37,7 +37,7 @@ public class GovernancePolicy implements IJsonBackedObject {
      * The Decision Maker Criteria.
      * 
      */
-    @SerializedName("decisionMakerCriteria")
+    @SerializedName(value = "decisionMakerCriteria", alternate = {"DecisionMakerCriteria"})
     @Expose
     public java.util.List<GovernanceCriteria> decisionMakerCriteria;
 
@@ -45,7 +45,7 @@ public class GovernancePolicy implements IJsonBackedObject {
      * The Notification Policy.
      * 
      */
-    @SerializedName("notificationPolicy")
+    @SerializedName(value = "notificationPolicy", alternate = {"NotificationPolicy"})
     @Expose
     public GovernanceNotificationPolicy notificationPolicy;
 

@@ -27,7 +27,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * The Allow Access To Downloads Folder.
      * This setting allows access to Downloads folder in file explorer.
      */
-    @SerializedName("allowAccessToDownloadsFolder")
+    @SerializedName(value = "allowAccessToDownloadsFolder", alternate = {"AllowAccessToDownloadsFolder"})
     @Expose
     public Boolean allowAccessToDownloadsFolder;
 
@@ -35,7 +35,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * The Apps.
      * These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public java.util.List<WindowsKioskAppBase> apps;
 
@@ -43,7 +43,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * The Disallow Desktop Apps.
      * This setting indicates that desktop apps are allowed. Default to true.
      */
-    @SerializedName("disallowDesktopApps")
+    @SerializedName(value = "disallowDesktopApps", alternate = {"DisallowDesktopApps"})
     @Expose
     public Boolean disallowDesktopApps;
 
@@ -51,7 +51,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * The Show Task Bar.
      * This setting allows the admin to specify whether the Task Bar is shown or not.
      */
-    @SerializedName("showTaskBar")
+    @SerializedName(value = "showTaskBar", alternate = {"ShowTaskBar"})
     @Expose
     public Boolean showTaskBar;
 
@@ -59,7 +59,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * The Start Menu Layout Xml.
      * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      */
-    @SerializedName("startMenuLayoutXml")
+    @SerializedName(value = "startMenuLayoutXml", alternate = {"StartMenuLayoutXml"})
     @Expose
     public byte[] startMenuLayoutXml;
 

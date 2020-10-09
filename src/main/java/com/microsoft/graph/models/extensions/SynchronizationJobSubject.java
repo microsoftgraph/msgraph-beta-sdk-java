@@ -35,7 +35,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
      * The Object Id.
      * 
      */
-    @SerializedName("objectId")
+    @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
     public String objectId;
 
@@ -43,7 +43,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
      * The Object Type Name.
      * 
      */
-    @SerializedName("objectTypeName")
+    @SerializedName(value = "objectTypeName", alternate = {"ObjectTypeName"})
     @Expose
     public String objectTypeName;
 

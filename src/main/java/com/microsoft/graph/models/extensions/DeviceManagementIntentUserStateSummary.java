@@ -26,7 +26,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements IJ
      * The Conflict Count.
      * Number of users in conflict
      */
-    @SerializedName("conflictCount")
+    @SerializedName(value = "conflictCount", alternate = {"ConflictCount"})
     @Expose
     public Integer conflictCount;
 
@@ -34,7 +34,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements IJ
      * The Error Count.
      * Number of error users
      */
-    @SerializedName("errorCount")
+    @SerializedName(value = "errorCount", alternate = {"ErrorCount"})
     @Expose
     public Integer errorCount;
 
@@ -42,7 +42,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements IJ
      * The Failed Count.
      * Number of failed users
      */
-    @SerializedName("failedCount")
+    @SerializedName(value = "failedCount", alternate = {"FailedCount"})
     @Expose
     public Integer failedCount;
 
@@ -50,7 +50,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements IJ
      * The Not Applicable Count.
      * Number of not applicable users
      */
-    @SerializedName("notApplicableCount")
+    @SerializedName(value = "notApplicableCount", alternate = {"NotApplicableCount"})
     @Expose
     public Integer notApplicableCount;
 
@@ -58,7 +58,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements IJ
      * The Success Count.
      * Number of succeeded users
      */
-    @SerializedName("successCount")
+    @SerializedName(value = "successCount", alternate = {"SuccessCount"})
     @Expose
     public Integer successCount;
 

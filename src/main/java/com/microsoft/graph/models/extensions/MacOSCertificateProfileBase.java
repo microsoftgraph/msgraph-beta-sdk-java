@@ -29,7 +29,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * The Certificate Validity Period Scale.
      * Scale for the Certificate Validity Period.
      */
-    @SerializedName("certificateValidityPeriodScale")
+    @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
     public CertificateValidityPeriodScale certificateValidityPeriodScale;
 
@@ -37,7 +37,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * The Certificate Validity Period Value.
      * Value for the Certificate Validity Period.
      */
-    @SerializedName("certificateValidityPeriodValue")
+    @SerializedName(value = "certificateValidityPeriodValue", alternate = {"CertificateValidityPeriodValue"})
     @Expose
     public Integer certificateValidityPeriodValue;
 
@@ -45,7 +45,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * The Renewal Threshold Percentage.
      * Certificate renewal threshold percentage.
      */
-    @SerializedName("renewalThresholdPercentage")
+    @SerializedName(value = "renewalThresholdPercentage", alternate = {"RenewalThresholdPercentage"})
     @Expose
     public Integer renewalThresholdPercentage;
 
@@ -53,7 +53,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * The Subject Alternative Name Type.
      * Certificate Subject Alternative Name Type.
      */
-    @SerializedName("subjectAlternativeNameType")
+    @SerializedName(value = "subjectAlternativeNameType", alternate = {"SubjectAlternativeNameType"})
     @Expose
     public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
 
@@ -61,7 +61,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * The Subject Name Format.
      * Certificate Subject Name Format.
      */
-    @SerializedName("subjectNameFormat")
+    @SerializedName(value = "subjectNameFormat", alternate = {"SubjectNameFormat"})
     @Expose
     public AppleSubjectNameFormat subjectNameFormat;
 

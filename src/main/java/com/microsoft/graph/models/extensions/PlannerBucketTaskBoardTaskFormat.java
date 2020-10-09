@@ -26,7 +26,7 @@ public class PlannerBucketTaskBoardTaskFormat extends PlannerDelta implements IJ
      * The Order Hint.
      * Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 

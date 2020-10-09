@@ -31,7 +31,7 @@ public class ItemActivityOLD extends Entity implements IJsonBackedObject {
      * The Action.
      * 
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public ItemActionSet action;
 
@@ -39,7 +39,7 @@ public class ItemActivityOLD extends Entity implements IJsonBackedObject {
      * The Actor.
      * 
      */
-    @SerializedName("actor")
+    @SerializedName(value = "actor", alternate = {"Actor"})
     @Expose
     public IdentitySet actor;
 
@@ -47,7 +47,7 @@ public class ItemActivityOLD extends Entity implements IJsonBackedObject {
      * The Times.
      * 
      */
-    @SerializedName("times")
+    @SerializedName(value = "times", alternate = {"Times"})
     @Expose
     public ItemActivityTimeSet times;
 
@@ -55,7 +55,7 @@ public class ItemActivityOLD extends Entity implements IJsonBackedObject {
      * The Drive Item.
      * 
      */
-    @SerializedName("driveItem")
+    @SerializedName(value = "driveItem", alternate = {"DriveItem"})
     @Expose
     public DriveItem driveItem;
 
@@ -63,7 +63,7 @@ public class ItemActivityOLD extends Entity implements IJsonBackedObject {
      * The List Item.
      * 
      */
-    @SerializedName("listItem")
+    @SerializedName(value = "listItem", alternate = {"ListItem"})
     @Expose
     public ListItem listItem;
 

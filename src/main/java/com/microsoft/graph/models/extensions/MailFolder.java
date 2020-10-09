@@ -38,7 +38,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Child Folder Count.
      * The number of immediate child mailFolders in the current mailFolder.
      */
-    @SerializedName("childFolderCount")
+    @SerializedName(value = "childFolderCount", alternate = {"ChildFolderCount"})
     @Expose
     public Integer childFolderCount;
 
@@ -46,7 +46,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The mailFolder's display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -54,7 +54,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Parent Folder Id.
      * The unique identifier for the mailFolder's parent mailFolder.
      */
-    @SerializedName("parentFolderId")
+    @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
     public String parentFolderId;
 
@@ -62,7 +62,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Total Item Count.
      * The number of items in the mailFolder.
      */
-    @SerializedName("totalItemCount")
+    @SerializedName(value = "totalItemCount", alternate = {"TotalItemCount"})
     @Expose
     public Integer totalItemCount;
 
@@ -70,7 +70,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Unread Item Count.
      * The number of items in the mailFolder marked as unread.
      */
-    @SerializedName("unreadItemCount")
+    @SerializedName(value = "unreadItemCount", alternate = {"UnreadItemCount"})
     @Expose
     public Integer unreadItemCount;
 
@@ -78,7 +78,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Well Known Name.
      * 
      */
-    @SerializedName("wellKnownName")
+    @SerializedName(value = "wellKnownName", alternate = {"WellKnownName"})
     @Expose
     public String wellKnownName;
 
@@ -86,7 +86,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Child Folders.
      * The collection of child folders in the mailFolder.
      */
-    @SerializedName("childFolders")
+    @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
     public MailFolderCollectionPage childFolders;
 
@@ -94,7 +94,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Message Rules.
      * The collection of rules that apply to the user's Inbox folder.
      */
-    @SerializedName("messageRules")
+    @SerializedName(value = "messageRules", alternate = {"MessageRules"})
     @Expose
     public MessageRuleCollectionPage messageRules;
 
@@ -102,7 +102,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Messages.
      * The collection of messages in the mailFolder.
      */
-    @SerializedName("messages")
+    @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
     public MessageCollectionPage messages;
 
@@ -110,7 +110,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -118,7 +118,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
@@ -126,7 +126,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The User Configurations.
      * 
      */
-    @SerializedName("userConfigurations")
+    @SerializedName(value = "userConfigurations", alternate = {"UserConfigurations"})
     @Expose
     public UserConfigurationCollectionPage userConfigurations;
 

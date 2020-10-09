@@ -36,7 +36,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The City.
      * The city.
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -44,7 +44,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The Country Or Region.
      * The country or region. It's a free-format string value, for example, 'United States'.
      */
-    @SerializedName("countryOrRegion")
+    @SerializedName(value = "countryOrRegion", alternate = {"CountryOrRegion"})
     @Expose
     public String countryOrRegion;
 
@@ -52,7 +52,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The Postal Code.
      * The postal code.
      */
-    @SerializedName("postalCode")
+    @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
     public String postalCode;
 
@@ -60,7 +60,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The Post Office Box.
      * 
      */
-    @SerializedName("postOfficeBox")
+    @SerializedName(value = "postOfficeBox", alternate = {"PostOfficeBox"})
     @Expose
     public String postOfficeBox;
 
@@ -68,7 +68,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The State.
      * The state.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -76,7 +76,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The Street.
      * The street.
      */
-    @SerializedName("street")
+    @SerializedName(value = "street", alternate = {"Street"})
     @Expose
     public String street;
 
@@ -84,7 +84,7 @@ public class PhysicalAddress implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public PhysicalAddressType type;
 

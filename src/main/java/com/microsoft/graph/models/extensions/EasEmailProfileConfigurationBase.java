@@ -29,7 +29,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * The Custom Domain Name.
      * Custom domain name value used while generating an email profile before installing on the device.
      */
-    @SerializedName("customDomainName")
+    @SerializedName(value = "customDomainName", alternate = {"CustomDomainName"})
     @Expose
     public String customDomainName;
 
@@ -37,7 +37,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * The User Domain Name Source.
      * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("userDomainNameSource")
+    @SerializedName(value = "userDomainNameSource", alternate = {"UserDomainNameSource"})
     @Expose
     public DomainNameSource userDomainNameSource;
 
@@ -45,7 +45,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * The Username AADSource.
      * Name of the AAD field, that will be used to retrieve UserName for email profile.
      */
-    @SerializedName("usernameAADSource")
+    @SerializedName(value = "usernameAADSource", alternate = {"UsernameAADSource"})
     @Expose
     public UsernameSource usernameAADSource;
 
@@ -53,7 +53,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * The Username Source.
      * Username attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("usernameSource")
+    @SerializedName(value = "usernameSource", alternate = {"UsernameSource"})
     @Expose
     public UserEmailSource usernameSource;
 

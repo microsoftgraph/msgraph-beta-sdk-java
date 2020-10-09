@@ -7,7 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UserIdentity;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.Request;
 
 
@@ -27,15 +27,15 @@ public class UserConsentRequest extends Request implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
-    public UserIdentity createdBy;
+    public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -43,9 +43,17 @@ public class UserConsentRequest extends Request implements IJsonBackedObject {
      * The Reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName(value = "status", alternate = {"Status"})
+    @Expose
+    public String status;
 
 
     /**

@@ -35,7 +35,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
      * The Expiry Date.
      * 
      */
-    @SerializedName("expiryDate")
+    @SerializedName(value = "expiryDate", alternate = {"ExpiryDate"})
     @Expose
     public java.util.Calendar expiryDate;
 
@@ -43,7 +43,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
      * The Issue Date.
      * 
      */
-    @SerializedName("issueDate")
+    @SerializedName(value = "issueDate", alternate = {"IssueDate"})
     @Expose
     public java.util.Calendar issueDate;
 
@@ -51,7 +51,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
      * The Issuer Name.
      * 
      */
-    @SerializedName("issuerName")
+    @SerializedName(value = "issuerName", alternate = {"IssuerName"})
     @Expose
     public String issuerName;
 
@@ -59,7 +59,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
      * The Subject Name.
      * 
      */
-    @SerializedName("subjectName")
+    @SerializedName(value = "subjectName", alternate = {"SubjectName"})
     @Expose
     public String subjectName;
 
@@ -67,7 +67,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
      * The Thumbprint.
      * 
      */
-    @SerializedName("thumbprint")
+    @SerializedName(value = "thumbprint", alternate = {"Thumbprint"})
     @Expose
     public String thumbprint;
 

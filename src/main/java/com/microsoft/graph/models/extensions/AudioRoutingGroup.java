@@ -27,7 +27,7 @@ public class AudioRoutingGroup extends Entity implements IJsonBackedObject {
      * The Receivers.
      * 
      */
-    @SerializedName("receivers")
+    @SerializedName(value = "receivers", alternate = {"Receivers"})
     @Expose
     public java.util.List<String> receivers;
 
@@ -35,7 +35,7 @@ public class AudioRoutingGroup extends Entity implements IJsonBackedObject {
      * The Routing Mode.
      * 
      */
-    @SerializedName("routingMode")
+    @SerializedName(value = "routingMode", alternate = {"RoutingMode"})
     @Expose
     public RoutingMode routingMode;
 
@@ -43,7 +43,7 @@ public class AudioRoutingGroup extends Entity implements IJsonBackedObject {
      * The Sources.
      * 
      */
-    @SerializedName("sources")
+    @SerializedName(value = "sources", alternate = {"Sources"})
     @Expose
     public java.util.List<String> sources;
 

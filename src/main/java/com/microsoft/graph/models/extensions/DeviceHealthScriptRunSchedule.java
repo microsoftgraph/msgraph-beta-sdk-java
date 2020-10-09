@@ -35,7 +35,7 @@ public class DeviceHealthScriptRunSchedule implements IJsonBackedObject {
      * The Interval.
      * The x value of every x hours for hourly schedule, every x days for Daily Schedule, every x weeks for weekly schedule, every x months for Monthly Schedule. Valid values 1 to 23
      */
-    @SerializedName("interval")
+    @SerializedName(value = "interval", alternate = {"Interval"})
     @Expose
     public Integer interval;
 

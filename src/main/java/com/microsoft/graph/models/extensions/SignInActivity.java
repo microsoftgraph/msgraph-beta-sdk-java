@@ -35,7 +35,7 @@ public class SignInActivity implements IJsonBackedObject {
      * The Last Sign In Date Time.
      * 
      */
-    @SerializedName("lastSignInDateTime")
+    @SerializedName(value = "lastSignInDateTime", alternate = {"LastSignInDateTime"})
     @Expose
     public java.util.Calendar lastSignInDateTime;
 
@@ -43,7 +43,7 @@ public class SignInActivity implements IJsonBackedObject {
      * The Last Sign In Request Id.
      * 
      */
-    @SerializedName("lastSignInRequestId")
+    @SerializedName(value = "lastSignInRequestId", alternate = {"LastSignInRequestId"})
     @Expose
     public String lastSignInRequestId;
 

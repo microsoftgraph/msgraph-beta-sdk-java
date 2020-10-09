@@ -22,7 +22,7 @@ public class PrivilegedRoleAssignmentMakePermanentBody {
      * The reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 
@@ -30,7 +30,7 @@ public class PrivilegedRoleAssignmentMakePermanentBody {
      * The ticket Number.
      * 
      */
-    @SerializedName("ticketNumber")
+    @SerializedName(value = "ticketNumber", alternate = {"TicketNumber"})
     @Expose
     public String ticketNumber;
 
@@ -38,7 +38,7 @@ public class PrivilegedRoleAssignmentMakePermanentBody {
      * The ticket System.
      * 
      */
-    @SerializedName("ticketSystem")
+    @SerializedName(value = "ticketSystem", alternate = {"TicketSystem"})
     @Expose
     public String ticketSystem;
 

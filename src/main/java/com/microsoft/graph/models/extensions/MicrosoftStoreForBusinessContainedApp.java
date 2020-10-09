@@ -26,7 +26,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * The App User Model Id.
      * The app user model ID of the contained app of a MicrosoftStoreForBusinessApp.
      */
-    @SerializedName("appUserModelId")
+    @SerializedName(value = "appUserModelId", alternate = {"AppUserModelId"})
     @Expose
     public String appUserModelId;
 

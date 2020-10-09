@@ -22,7 +22,7 @@ public class SynchronizationAcquireAccessTokenBody {
      * The credentials.
      * 
      */
-    @SerializedName("credentials")
+    @SerializedName(value = "credentials", alternate = {"Credentials"})
     @Expose
     public java.util.List<SynchronizationSecretKeyStringValuePair> credentials;
 

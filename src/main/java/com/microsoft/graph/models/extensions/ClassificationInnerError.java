@@ -35,7 +35,7 @@ public class ClassificationInnerError implements IJsonBackedObject {
      * The Activity Id.
      * 
      */
-    @SerializedName("activityId")
+    @SerializedName(value = "activityId", alternate = {"ActivityId"})
     @Expose
     public String activityId;
 
@@ -43,7 +43,7 @@ public class ClassificationInnerError implements IJsonBackedObject {
      * The Client Request Id.
      * 
      */
-    @SerializedName("clientRequestId")
+    @SerializedName(value = "clientRequestId", alternate = {"ClientRequestId"})
     @Expose
     public String clientRequestId;
 
@@ -51,7 +51,7 @@ public class ClassificationInnerError implements IJsonBackedObject {
      * The Code.
      * 
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -59,7 +59,7 @@ public class ClassificationInnerError implements IJsonBackedObject {
      * The Error Date Time.
      * 
      */
-    @SerializedName("errorDateTime")
+    @SerializedName(value = "errorDateTime", alternate = {"ErrorDateTime"})
     @Expose
     public java.util.Calendar errorDateTime;
 

@@ -22,7 +22,7 @@ public class DeviceManagementSendCustomNotificationToCompanyPortalBody {
      * The notification Title.
      * 
      */
-    @SerializedName("notificationTitle")
+    @SerializedName(value = "notificationTitle", alternate = {"NotificationTitle"})
     @Expose
     public String notificationTitle;
 
@@ -30,7 +30,7 @@ public class DeviceManagementSendCustomNotificationToCompanyPortalBody {
      * The notification Body.
      * 
      */
-    @SerializedName("notificationBody")
+    @SerializedName(value = "notificationBody", alternate = {"NotificationBody"})
     @Expose
     public String notificationBody;
 
@@ -38,7 +38,7 @@ public class DeviceManagementSendCustomNotificationToCompanyPortalBody {
      * The groups To Notify.
      * 
      */
-    @SerializedName("groupsToNotify")
+    @SerializedName(value = "groupsToNotify", alternate = {"GroupsToNotify"})
     @Expose
     public java.util.List<String> groupsToNotify;
 

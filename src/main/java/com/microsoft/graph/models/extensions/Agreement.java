@@ -32,7 +32,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -40,7 +40,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Is Per Device Acceptance Required.
      * 
      */
-    @SerializedName("isPerDeviceAcceptanceRequired")
+    @SerializedName(value = "isPerDeviceAcceptanceRequired", alternate = {"IsPerDeviceAcceptanceRequired"})
     @Expose
     public Boolean isPerDeviceAcceptanceRequired;
 
@@ -48,7 +48,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Is Viewing Before Acceptance Required.
      * 
      */
-    @SerializedName("isViewingBeforeAcceptanceRequired")
+    @SerializedName(value = "isViewingBeforeAcceptanceRequired", alternate = {"IsViewingBeforeAcceptanceRequired"})
     @Expose
     public Boolean isViewingBeforeAcceptanceRequired;
 
@@ -56,7 +56,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Terms Expiration.
      * 
      */
-    @SerializedName("termsExpiration")
+    @SerializedName(value = "termsExpiration", alternate = {"TermsExpiration"})
     @Expose
     public TermsExpiration termsExpiration;
 
@@ -64,7 +64,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The User Reaccept Required Frequency.
      * 
      */
-    @SerializedName("userReacceptRequiredFrequency")
+    @SerializedName(value = "userReacceptRequiredFrequency", alternate = {"UserReacceptRequiredFrequency"})
     @Expose
     public javax.xml.datatype.Duration userReacceptRequiredFrequency;
 
@@ -72,7 +72,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Acceptances.
      * 
      */
-    @SerializedName("acceptances")
+    @SerializedName(value = "acceptances", alternate = {"Acceptances"})
     @Expose
     public AgreementAcceptanceCollectionPage acceptances;
 
@@ -80,7 +80,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The File.
      * 
      */
-    @SerializedName("file")
+    @SerializedName(value = "file", alternate = {"File"})
     @Expose
     public AgreementFile file;
 
@@ -88,7 +88,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Files.
      * 
      */
-    @SerializedName("files")
+    @SerializedName(value = "files", alternate = {"Files"})
     @Expose
     public AgreementFileLocalizationCollectionPage files;
 

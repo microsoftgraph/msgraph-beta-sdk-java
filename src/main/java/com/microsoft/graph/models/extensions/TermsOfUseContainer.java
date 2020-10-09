@@ -30,7 +30,7 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
      * The Agreement Acceptances.
      * 
      */
-    @SerializedName("agreementAcceptances")
+    @SerializedName(value = "agreementAcceptances", alternate = {"AgreementAcceptances"})
     @Expose
     public AgreementAcceptanceCollectionPage agreementAcceptances;
 
@@ -38,7 +38,7 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
      * The Agreements.
      * 
      */
-    @SerializedName("agreements")
+    @SerializedName(value = "agreements", alternate = {"Agreements"})
     @Expose
     public AgreementCollectionPage agreements;
 

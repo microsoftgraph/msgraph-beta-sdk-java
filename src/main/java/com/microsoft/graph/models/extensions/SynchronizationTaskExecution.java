@@ -37,7 +37,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Activity Identifier.
      * 
      */
-    @SerializedName("activityIdentifier")
+    @SerializedName(value = "activityIdentifier", alternate = {"ActivityIdentifier"})
     @Expose
     public String activityIdentifier;
 
@@ -45,7 +45,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Entitled.
      * 
      */
-    @SerializedName("countEntitled")
+    @SerializedName(value = "countEntitled", alternate = {"CountEntitled"})
     @Expose
     public Long countEntitled;
 
@@ -53,7 +53,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Entitled For Provisioning.
      * 
      */
-    @SerializedName("countEntitledForProvisioning")
+    @SerializedName(value = "countEntitledForProvisioning", alternate = {"CountEntitledForProvisioning"})
     @Expose
     public Long countEntitledForProvisioning;
 
@@ -61,7 +61,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Escrowed.
      * 
      */
-    @SerializedName("countEscrowed")
+    @SerializedName(value = "countEscrowed", alternate = {"CountEscrowed"})
     @Expose
     public Long countEscrowed;
 
@@ -69,7 +69,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Escrowed Raw.
      * 
      */
-    @SerializedName("countEscrowedRaw")
+    @SerializedName(value = "countEscrowedRaw", alternate = {"CountEscrowedRaw"})
     @Expose
     public Long countEscrowedRaw;
 
@@ -77,7 +77,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Exported.
      * 
      */
-    @SerializedName("countExported")
+    @SerializedName(value = "countExported", alternate = {"CountExported"})
     @Expose
     public Long countExported;
 
@@ -85,7 +85,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Exports.
      * 
      */
-    @SerializedName("countExports")
+    @SerializedName(value = "countExports", alternate = {"CountExports"})
     @Expose
     public Long countExports;
 
@@ -93,7 +93,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Imported.
      * 
      */
-    @SerializedName("countImported")
+    @SerializedName(value = "countImported", alternate = {"CountImported"})
     @Expose
     public Long countImported;
 
@@ -101,7 +101,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Imported Deltas.
      * 
      */
-    @SerializedName("countImportedDeltas")
+    @SerializedName(value = "countImportedDeltas", alternate = {"CountImportedDeltas"})
     @Expose
     public Long countImportedDeltas;
 
@@ -109,7 +109,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Count Imported Reference Deltas.
      * 
      */
-    @SerializedName("countImportedReferenceDeltas")
+    @SerializedName(value = "countImportedReferenceDeltas", alternate = {"CountImportedReferenceDeltas"})
     @Expose
     public Long countImportedReferenceDeltas;
 
@@ -117,7 +117,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public SynchronizationError error;
 
@@ -125,7 +125,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public SynchronizationTaskExecutionResult state;
 
@@ -133,7 +133,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Time Began.
      * 
      */
-    @SerializedName("timeBegan")
+    @SerializedName(value = "timeBegan", alternate = {"TimeBegan"})
     @Expose
     public java.util.Calendar timeBegan;
 
@@ -141,7 +141,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
      * The Time Ended.
      * 
      */
-    @SerializedName("timeEnded")
+    @SerializedName(value = "timeEnded", alternate = {"TimeEnded"})
     @Expose
     public java.util.Calendar timeEnded;
 

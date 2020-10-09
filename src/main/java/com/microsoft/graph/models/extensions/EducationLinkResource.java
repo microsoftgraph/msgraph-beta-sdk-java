@@ -26,7 +26,7 @@ public class EducationLinkResource extends EducationResource implements IJsonBac
      * The Link.
      * 
      */
-    @SerializedName("link")
+    @SerializedName(value = "link", alternate = {"Link"})
     @Expose
     public String link;
 

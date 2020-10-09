@@ -26,7 +26,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements IJsonBac
      * The Error Device Count.
      * Error device count.
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -34,7 +34,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements IJsonBac
      * The Error User Count.
      * Error user count.
      */
-    @SerializedName("errorUserCount")
+    @SerializedName(value = "errorUserCount", alternate = {"ErrorUserCount"})
     @Expose
     public Integer errorUserCount;
 
@@ -42,7 +42,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements IJsonBac
      * The Success Device Count.
      * Success device count.
      */
-    @SerializedName("successDeviceCount")
+    @SerializedName(value = "successDeviceCount", alternate = {"SuccessDeviceCount"})
     @Expose
     public Integer successDeviceCount;
 
@@ -50,7 +50,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements IJsonBac
      * The Success User Count.
      * Success user count.
      */
-    @SerializedName("successUserCount")
+    @SerializedName(value = "successUserCount", alternate = {"SuccessUserCount"})
     @Expose
     public Integer successUserCount;
 

@@ -35,7 +35,7 @@ public class NetworkInterface implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class NetworkInterface implements IJsonBackedObject {
      * The Ip V4Address.
      * 
      */
-    @SerializedName("ipV4Address")
+    @SerializedName(value = "ipV4Address", alternate = {"IpV4Address"})
     @Expose
     public String ipV4Address;
 
@@ -51,7 +51,7 @@ public class NetworkInterface implements IJsonBackedObject {
      * The Ip V6Address.
      * 
      */
-    @SerializedName("ipV6Address")
+    @SerializedName(value = "ipV6Address", alternate = {"IpV6Address"})
     @Expose
     public String ipV6Address;
 
@@ -59,7 +59,7 @@ public class NetworkInterface implements IJsonBackedObject {
      * The Local Ip V6Address.
      * 
      */
-    @SerializedName("localIpV6Address")
+    @SerializedName(value = "localIpV6Address", alternate = {"LocalIpV6Address"})
     @Expose
     public String localIpV6Address;
 
@@ -67,7 +67,7 @@ public class NetworkInterface implements IJsonBackedObject {
      * The Mac Address.
      * 
      */
-    @SerializedName("macAddress")
+    @SerializedName(value = "macAddress", alternate = {"MacAddress"})
     @Expose
     public String macAddress;
 

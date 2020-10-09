@@ -26,7 +26,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation
      * The Max Length.
      * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
      */
-    @SerializedName("maxLength")
+    @SerializedName(value = "maxLength", alternate = {"MaxLength"})
     @Expose
     public Long maxLength;
 
@@ -34,7 +34,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation
      * The Max Strings.
      * An unsigned integer that specifies the maximum number of strings. Default value is 0.
      */
-    @SerializedName("maxStrings")
+    @SerializedName(value = "maxStrings", alternate = {"MaxStrings"})
     @Expose
     public Long maxStrings;
 
@@ -42,7 +42,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation
      * The Required.
      * Requirement to enter a value in the text box. Default value is false.
      */
-    @SerializedName("required")
+    @SerializedName(value = "required", alternate = {"Required"})
     @Expose
     public Boolean required;
 

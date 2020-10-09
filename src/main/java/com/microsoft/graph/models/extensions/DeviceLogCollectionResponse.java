@@ -26,7 +26,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Error Code.
      * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Long errorCode;
 
@@ -34,7 +34,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Expiration Date Time UTC.
      * The DateTime of the expiration of the logs
      */
-    @SerializedName("expirationDateTimeUTC")
+    @SerializedName(value = "expirationDateTimeUTC", alternate = {"ExpirationDateTimeUTC"})
     @Expose
     public java.util.Calendar expirationDateTimeUTC;
 
@@ -42,7 +42,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Initiated By User Principal Name.
      * The UPN for who initiated the request
      */
-    @SerializedName("initiatedByUserPrincipalName")
+    @SerializedName(value = "initiatedByUserPrincipalName", alternate = {"InitiatedByUserPrincipalName"})
     @Expose
     public String initiatedByUserPrincipalName;
 
@@ -50,7 +50,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Managed Device Id.
      * The device Id
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public java.util.UUID managedDeviceId;
 
@@ -58,7 +58,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Received Date Time UTC.
      * The DateTime the request was received
      */
-    @SerializedName("receivedDateTimeUTC")
+    @SerializedName(value = "receivedDateTimeUTC", alternate = {"ReceivedDateTimeUTC"})
     @Expose
     public java.util.Calendar receivedDateTimeUTC;
 
@@ -66,7 +66,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Requested Date Time UTC.
      * The DateTime of the request
      */
-    @SerializedName("requestedDateTimeUTC")
+    @SerializedName(value = "requestedDateTimeUTC", alternate = {"RequestedDateTimeUTC"})
     @Expose
     public java.util.Calendar requestedDateTimeUTC;
 
@@ -74,7 +74,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Size.
      * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Double size;
 
@@ -82,7 +82,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
      * The Status.
      * The status of the log collection request
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 

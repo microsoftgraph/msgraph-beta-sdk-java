@@ -7,7 +7,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.SensitiveContentLocation;
 
 
 import com.google.gson.JsonObject;
@@ -36,7 +35,7 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
      * The Confidence.
      * 
      */
-    @SerializedName("confidence")
+    @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
     public Integer confidence;
 
@@ -44,7 +43,7 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -52,23 +51,15 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public java.util.UUID id;
-
-    /**
-     * The Matches.
-     * 
-     */
-    @SerializedName("matches")
-    @Expose
-    public java.util.List<SensitiveContentLocation> matches;
 
     /**
      * The Recommended Confidence.
      * 
      */
-    @SerializedName("recommendedConfidence")
+    @SerializedName(value = "recommendedConfidence", alternate = {"RecommendedConfidence"})
     @Expose
     public Integer recommendedConfidence;
 
@@ -76,7 +67,7 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
      * The Unique Count.
      * 
      */
-    @SerializedName("uniqueCount")
+    @SerializedName(value = "uniqueCount", alternate = {"UniqueCount"})
     @Expose
     public Integer uniqueCount;
 

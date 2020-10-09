@@ -26,7 +26,7 @@ public class VariableManagementConditionExpression extends ManagementConditionEx
      * The Management Condition Id.
      * The management condition id that is used to evaluate the expression.
      */
-    @SerializedName("managementConditionId")
+    @SerializedName(value = "managementConditionId", alternate = {"ManagementConditionId"})
     @Expose
     public String managementConditionId;
 

@@ -22,7 +22,7 @@ public class WindowsAutopilotDeviceIdentityAssignUserToDeviceBody {
      * The user Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -30,7 +30,7 @@ public class WindowsAutopilotDeviceIdentityAssignUserToDeviceBody {
      * The addressable User Name.
      * 
      */
-    @SerializedName("addressableUserName")
+    @SerializedName(value = "addressableUserName", alternate = {"AddressableUserName"})
     @Expose
     public String addressableUserName;
 

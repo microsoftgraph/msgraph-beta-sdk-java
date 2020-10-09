@@ -27,7 +27,7 @@ public class CustomAction extends InformationProtectionAction implements IJsonBa
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -35,7 +35,7 @@ public class CustomAction extends InformationProtectionAction implements IJsonBa
      * The Properties.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public java.util.List<KeyValuePair> properties;
 

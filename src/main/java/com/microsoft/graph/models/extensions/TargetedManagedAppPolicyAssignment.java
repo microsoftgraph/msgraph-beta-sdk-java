@@ -28,7 +28,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements IJsonB
      * The Source.
      * Type of resource used for deployment to a group, direct or parcel/policySet
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public DeviceAndAppManagementAssignmentSource source;
 
@@ -36,7 +36,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements IJsonB
      * The Source Id.
      * Identifier for resource used for deployment to a group
      */
-    @SerializedName("sourceId")
+    @SerializedName(value = "sourceId", alternate = {"SourceId"})
     @Expose
     public String sourceId;
 
@@ -44,7 +44,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements IJsonB
      * The Target.
      * Identifier for deployment of a group or app
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

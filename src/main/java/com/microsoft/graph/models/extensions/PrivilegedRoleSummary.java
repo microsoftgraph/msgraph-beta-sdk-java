@@ -27,7 +27,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
      * The Elevated Count.
      * 
      */
-    @SerializedName("elevatedCount")
+    @SerializedName(value = "elevatedCount", alternate = {"ElevatedCount"})
     @Expose
     public Integer elevatedCount;
 
@@ -35,7 +35,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
      * The Managed Count.
      * 
      */
-    @SerializedName("managedCount")
+    @SerializedName(value = "managedCount", alternate = {"ManagedCount"})
     @Expose
     public Integer managedCount;
 
@@ -43,7 +43,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
      * The Mfa Enabled.
      * 
      */
-    @SerializedName("mfaEnabled")
+    @SerializedName(value = "mfaEnabled", alternate = {"MfaEnabled"})
     @Expose
     public Boolean mfaEnabled;
 
@@ -51,7 +51,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public RoleSummaryStatus status;
 
@@ -59,7 +59,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
      * The Users Count.
      * 
      */
-    @SerializedName("usersCount")
+    @SerializedName(value = "usersCount", alternate = {"UsersCount"})
     @Expose
     public Integer usersCount;
 

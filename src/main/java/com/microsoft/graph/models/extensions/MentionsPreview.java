@@ -35,7 +35,7 @@ public class MentionsPreview implements IJsonBackedObject {
      * The Is Mentioned.
      * 
      */
-    @SerializedName("isMentioned")
+    @SerializedName(value = "isMentioned", alternate = {"IsMentioned"})
     @Expose
     public Boolean isMentioned;
 

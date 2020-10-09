@@ -96,7 +96,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Business Profile Id.
      * 
      */
-    @SerializedName("businessProfileId")
+    @SerializedName(value = "businessProfileId", alternate = {"BusinessProfileId"})
     @Expose
     public String businessProfileId;
 
@@ -104,7 +104,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -112,7 +112,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -120,7 +120,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The System Version.
      * 
      */
-    @SerializedName("systemVersion")
+    @SerializedName(value = "systemVersion", alternate = {"SystemVersion"})
     @Expose
     public String systemVersion;
 
@@ -128,7 +128,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Accounts.
      * 
      */
-    @SerializedName("accounts")
+    @SerializedName(value = "accounts", alternate = {"Accounts"})
     @Expose
     public AccountCollectionPage accounts;
 
@@ -136,7 +136,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Aged Accounts Payable.
      * 
      */
-    @SerializedName("agedAccountsPayable")
+    @SerializedName(value = "agedAccountsPayable", alternate = {"AgedAccountsPayable"})
     @Expose
     public AgedAccountsPayableCollectionPage agedAccountsPayable;
 
@@ -144,7 +144,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Aged Accounts Receivable.
      * 
      */
-    @SerializedName("agedAccountsReceivable")
+    @SerializedName(value = "agedAccountsReceivable", alternate = {"AgedAccountsReceivable"})
     @Expose
     public AgedAccountsReceivableCollectionPage agedAccountsReceivable;
 
@@ -152,7 +152,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Company Information.
      * 
      */
-    @SerializedName("companyInformation")
+    @SerializedName(value = "companyInformation", alternate = {"CompanyInformation"})
     @Expose
     public CompanyInformationCollectionPage companyInformation;
 
@@ -160,7 +160,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Countries Regions.
      * 
      */
-    @SerializedName("countriesRegions")
+    @SerializedName(value = "countriesRegions", alternate = {"CountriesRegions"})
     @Expose
     public CountryRegionCollectionPage countriesRegions;
 
@@ -168,7 +168,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Currencies.
      * 
      */
-    @SerializedName("currencies")
+    @SerializedName(value = "currencies", alternate = {"Currencies"})
     @Expose
     public CurrencyCollectionPage currencies;
 
@@ -176,7 +176,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Customer Payment Journals.
      * 
      */
-    @SerializedName("customerPaymentJournals")
+    @SerializedName(value = "customerPaymentJournals", alternate = {"CustomerPaymentJournals"})
     @Expose
     public CustomerPaymentJournalCollectionPage customerPaymentJournals;
 
@@ -184,7 +184,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Customer Payments.
      * 
      */
-    @SerializedName("customerPayments")
+    @SerializedName(value = "customerPayments", alternate = {"CustomerPayments"})
     @Expose
     public CustomerPaymentCollectionPage customerPayments;
 
@@ -192,7 +192,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Customers.
      * 
      */
-    @SerializedName("customers")
+    @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose
     public CustomerCollectionPage customers;
 
@@ -200,7 +200,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Dimensions.
      * 
      */
-    @SerializedName("dimensions")
+    @SerializedName(value = "dimensions", alternate = {"Dimensions"})
     @Expose
     public DimensionCollectionPage dimensions;
 
@@ -208,7 +208,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Dimension Values.
      * 
      */
-    @SerializedName("dimensionValues")
+    @SerializedName(value = "dimensionValues", alternate = {"DimensionValues"})
     @Expose
     public DimensionValueCollectionPage dimensionValues;
 
@@ -216,7 +216,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Employees.
      * 
      */
-    @SerializedName("employees")
+    @SerializedName(value = "employees", alternate = {"Employees"})
     @Expose
     public EmployeeCollectionPage employees;
 
@@ -224,7 +224,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The General Ledger Entries.
      * 
      */
-    @SerializedName("generalLedgerEntries")
+    @SerializedName(value = "generalLedgerEntries", alternate = {"GeneralLedgerEntries"})
     @Expose
     public GeneralLedgerEntryCollectionPage generalLedgerEntries;
 
@@ -232,7 +232,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Item Categories.
      * 
      */
-    @SerializedName("itemCategories")
+    @SerializedName(value = "itemCategories", alternate = {"ItemCategories"})
     @Expose
     public ItemCategoryCollectionPage itemCategories;
 
@@ -240,7 +240,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Items.
      * 
      */
-    @SerializedName("items")
+    @SerializedName(value = "items", alternate = {"Items"})
     @Expose
     public ItemCollectionPage items;
 
@@ -248,7 +248,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Journal Lines.
      * 
      */
-    @SerializedName("journalLines")
+    @SerializedName(value = "journalLines", alternate = {"JournalLines"})
     @Expose
     public JournalLineCollectionPage journalLines;
 
@@ -256,7 +256,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Journals.
      * 
      */
-    @SerializedName("journals")
+    @SerializedName(value = "journals", alternate = {"Journals"})
     @Expose
     public JournalCollectionPage journals;
 
@@ -264,7 +264,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Payment Methods.
      * 
      */
-    @SerializedName("paymentMethods")
+    @SerializedName(value = "paymentMethods", alternate = {"PaymentMethods"})
     @Expose
     public PaymentMethodCollectionPage paymentMethods;
 
@@ -272,7 +272,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Payment Terms.
      * 
      */
-    @SerializedName("paymentTerms")
+    @SerializedName(value = "paymentTerms", alternate = {"PaymentTerms"})
     @Expose
     public PaymentTermCollectionPage paymentTerms;
 
@@ -280,7 +280,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Picture.
      * 
      */
-    @SerializedName("picture")
+    @SerializedName(value = "picture", alternate = {"Picture"})
     @Expose
     public PictureCollectionPage picture;
 
@@ -288,7 +288,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Purchase Invoice Lines.
      * 
      */
-    @SerializedName("purchaseInvoiceLines")
+    @SerializedName(value = "purchaseInvoiceLines", alternate = {"PurchaseInvoiceLines"})
     @Expose
     public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
 
@@ -296,7 +296,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Purchase Invoices.
      * 
      */
-    @SerializedName("purchaseInvoices")
+    @SerializedName(value = "purchaseInvoices", alternate = {"PurchaseInvoices"})
     @Expose
     public PurchaseInvoiceCollectionPage purchaseInvoices;
 
@@ -304,7 +304,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Credit Memo Lines.
      * 
      */
-    @SerializedName("salesCreditMemoLines")
+    @SerializedName(value = "salesCreditMemoLines", alternate = {"SalesCreditMemoLines"})
     @Expose
     public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 
@@ -312,7 +312,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Credit Memos.
      * 
      */
-    @SerializedName("salesCreditMemos")
+    @SerializedName(value = "salesCreditMemos", alternate = {"SalesCreditMemos"})
     @Expose
     public SalesCreditMemoCollectionPage salesCreditMemos;
 
@@ -320,7 +320,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Invoice Lines.
      * 
      */
-    @SerializedName("salesInvoiceLines")
+    @SerializedName(value = "salesInvoiceLines", alternate = {"SalesInvoiceLines"})
     @Expose
     public SalesInvoiceLineCollectionPage salesInvoiceLines;
 
@@ -328,7 +328,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Invoices.
      * 
      */
-    @SerializedName("salesInvoices")
+    @SerializedName(value = "salesInvoices", alternate = {"SalesInvoices"})
     @Expose
     public SalesInvoiceCollectionPage salesInvoices;
 
@@ -336,7 +336,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Order Lines.
      * 
      */
-    @SerializedName("salesOrderLines")
+    @SerializedName(value = "salesOrderLines", alternate = {"SalesOrderLines"})
     @Expose
     public SalesOrderLineCollectionPage salesOrderLines;
 
@@ -344,7 +344,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Orders.
      * 
      */
-    @SerializedName("salesOrders")
+    @SerializedName(value = "salesOrders", alternate = {"SalesOrders"})
     @Expose
     public SalesOrderCollectionPage salesOrders;
 
@@ -352,7 +352,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Quote Lines.
      * 
      */
-    @SerializedName("salesQuoteLines")
+    @SerializedName(value = "salesQuoteLines", alternate = {"SalesQuoteLines"})
     @Expose
     public SalesQuoteLineCollectionPage salesQuoteLines;
 
@@ -360,7 +360,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Sales Quotes.
      * 
      */
-    @SerializedName("salesQuotes")
+    @SerializedName(value = "salesQuotes", alternate = {"SalesQuotes"})
     @Expose
     public SalesQuoteCollectionPage salesQuotes;
 
@@ -368,7 +368,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Shipment Methods.
      * 
      */
-    @SerializedName("shipmentMethods")
+    @SerializedName(value = "shipmentMethods", alternate = {"ShipmentMethods"})
     @Expose
     public ShipmentMethodCollectionPage shipmentMethods;
 
@@ -376,7 +376,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Tax Areas.
      * 
      */
-    @SerializedName("taxAreas")
+    @SerializedName(value = "taxAreas", alternate = {"TaxAreas"})
     @Expose
     public TaxAreaCollectionPage taxAreas;
 
@@ -384,7 +384,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Tax Groups.
      * 
      */
-    @SerializedName("taxGroups")
+    @SerializedName(value = "taxGroups", alternate = {"TaxGroups"})
     @Expose
     public TaxGroupCollectionPage taxGroups;
 
@@ -392,7 +392,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Units Of Measure.
      * 
      */
-    @SerializedName("unitsOfMeasure")
+    @SerializedName(value = "unitsOfMeasure", alternate = {"UnitsOfMeasure"})
     @Expose
     public UnitOfMeasureCollectionPage unitsOfMeasure;
 
@@ -400,7 +400,7 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Vendors.
      * 
      */
-    @SerializedName("vendors")
+    @SerializedName(value = "vendors", alternate = {"Vendors"})
     @Expose
     public VendorCollectionPage vendors;
 

@@ -28,7 +28,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
      * The Package Id.
      * Android For Work app configuration package id.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 
@@ -36,7 +36,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
      * The Payload Json.
      * Android For Work app configuration JSON payload.
      */
-    @SerializedName("payloadJson")
+    @SerializedName(value = "payloadJson", alternate = {"PayloadJson"})
     @Expose
     public String payloadJson;
 
@@ -44,7 +44,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
      * The Permission Actions.
      * List of Android app permissions and corresponding permission actions.
      */
-    @SerializedName("permissionActions")
+    @SerializedName(value = "permissionActions", alternate = {"PermissionActions"})
     @Expose
     public java.util.List<AndroidPermissionAction> permissionActions;
 
@@ -52,7 +52,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
      * The Profile Applicability.
      * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)).
      */
-    @SerializedName("profileApplicability")
+    @SerializedName(value = "profileApplicability", alternate = {"ProfileApplicability"})
     @Expose
     public AndroidProfileApplicability profileApplicability;
 

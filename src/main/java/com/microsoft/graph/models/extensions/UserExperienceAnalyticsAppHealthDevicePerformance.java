@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The App Crash Count.
      * The number of app crashes for the device. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appCrashCount")
+    @SerializedName(value = "appCrashCount", alternate = {"AppCrashCount"})
     @Expose
     public Integer appCrashCount;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The App Hang Count.
      * The number of app hangs for the device. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("appHangCount")
+    @SerializedName(value = "appHangCount", alternate = {"AppHangCount"})
     @Expose
     public Integer appHangCount;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Crashed App Count.
      * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("crashedAppCount")
+    @SerializedName(value = "crashedAppCount", alternate = {"CrashedAppCount"})
     @Expose
     public Integer crashedAppCount;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Device App Health Score.
      * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
-    @SerializedName("deviceAppHealthScore")
+    @SerializedName(value = "deviceAppHealthScore", alternate = {"DeviceAppHealthScore"})
     @Expose
     public Double deviceAppHealthScore;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Device App Health Status.
      * The overall app health status of the device.
      */
-    @SerializedName("deviceAppHealthStatus")
+    @SerializedName(value = "deviceAppHealthStatus", alternate = {"DeviceAppHealthStatus"})
     @Expose
     public String deviceAppHealthStatus;
 
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Device Display Name.
      * The name of the device.
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Device Id.
      * The id of the device.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Device Manufacturer.
      * The manufacturer name of the device.
      */
-    @SerializedName("deviceManufacturer")
+    @SerializedName(value = "deviceManufacturer", alternate = {"DeviceManufacturer"})
     @Expose
     public String deviceManufacturer;
 
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Device Model.
      * The model name of the device.
      */
-    @SerializedName("deviceModel")
+    @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
     public String deviceModel;
 
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * The Mean Time To Failure In Minutes.
      * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
      */
-    @SerializedName("meanTimeToFailureInMinutes")
+    @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
     public Integer meanTimeToFailureInMinutes;
 

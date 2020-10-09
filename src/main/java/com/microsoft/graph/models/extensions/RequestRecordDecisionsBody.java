@@ -22,7 +22,7 @@ public class RequestRecordDecisionsBody {
      * The review Result.
      * 
      */
-    @SerializedName("reviewResult")
+    @SerializedName(value = "reviewResult", alternate = {"ReviewResult"})
     @Expose
     public String reviewResult;
 
@@ -30,7 +30,7 @@ public class RequestRecordDecisionsBody {
      * The justification.
      * 
      */
-    @SerializedName("justification")
+    @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
     public String justification;
 

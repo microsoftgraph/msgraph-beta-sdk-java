@@ -35,7 +35,7 @@ public class PrintCertificateSigningRequest implements IJsonBackedObject {
      * The Content.
      * 
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public String content;
 
@@ -43,7 +43,7 @@ public class PrintCertificateSigningRequest implements IJsonBackedObject {
      * The Transport Key.
      * 
      */
-    @SerializedName("transportKey")
+    @SerializedName(value = "transportKey", alternate = {"TransportKey"})
     @Expose
     public String transportKey;
 

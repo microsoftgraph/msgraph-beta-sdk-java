@@ -27,7 +27,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements I
      * The Target.
      * The type of groups targeted by the embedded SIM activation code pool.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

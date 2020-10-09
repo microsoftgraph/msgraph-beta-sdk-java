@@ -35,7 +35,7 @@ public class EducationOnPremisesInfo implements IJsonBackedObject {
      * The Immutable Id.
      * 
      */
-    @SerializedName("immutableId")
+    @SerializedName(value = "immutableId", alternate = {"ImmutableId"})
     @Expose
     public String immutableId;
 

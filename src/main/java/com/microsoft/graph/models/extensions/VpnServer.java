@@ -35,7 +35,7 @@ public class VpnServer implements IJsonBackedObject {
      * The Address.
      * Address (IP address, FQDN or URL)
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -43,7 +43,7 @@ public class VpnServer implements IJsonBackedObject {
      * The Description.
      * Description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -51,7 +51,7 @@ public class VpnServer implements IJsonBackedObject {
      * The Is Default Server.
      * Default server.
      */
-    @SerializedName("isDefaultServer")
+    @SerializedName(value = "isDefaultServer", alternate = {"IsDefaultServer"})
     @Expose
     public Boolean isDefaultServer;
 

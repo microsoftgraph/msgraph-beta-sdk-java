@@ -29,7 +29,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Api Version.
      * API version for the call back URL. Start with 1.
      */
-    @SerializedName("apiVersion")
+    @SerializedName(value = "apiVersion", alternate = {"ApiVersion"})
     @Expose
     public Integer apiVersion;
 
@@ -37,7 +37,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Display Name.
      * Name of the workforce integration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Eligibility Filtering Enabled Entities.
      * 
      */
-    @SerializedName("eligibilityFilteringEnabledEntities")
+    @SerializedName(value = "eligibilityFilteringEnabledEntities", alternate = {"EligibilityFilteringEnabledEntities"})
     @Expose
     public EnumSet<EligibilityFilteringEnabledEntities> eligibilityFilteringEnabledEntities;
 
@@ -53,7 +53,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Encryption.
      * The workforce integration encryption resource.
      */
-    @SerializedName("encryption")
+    @SerializedName(value = "encryption", alternate = {"Encryption"})
     @Expose
     public WorkforceIntegrationEncryption encryption;
 
@@ -61,7 +61,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Is Active.
      * Indicates whether this workforce integration is currently active and available.
      */
-    @SerializedName("isActive")
+    @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
     public Boolean isActive;
 
@@ -69,7 +69,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Supported Entities.
      * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
      */
-    @SerializedName("supportedEntities")
+    @SerializedName(value = "supportedEntities", alternate = {"SupportedEntities"})
     @Expose
     public EnumSet<WorkforceIntegrationSupportedEntities> supportedEntities;
 
@@ -77,7 +77,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Supports.
      * 
      */
-    @SerializedName("supports")
+    @SerializedName(value = "supports", alternate = {"Supports"})
     @Expose
     public EnumSet<WorkforceIntegrationSupportedEntities> supports;
 
@@ -85,7 +85,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      * The Url.
      * Workforce Integration URL for callbacks from the Shifts service.
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

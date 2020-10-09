@@ -38,7 +38,7 @@ public class LabelingOptions implements IJsonBackedObject {
      * The Assignment Method.
      * 
      */
-    @SerializedName("assignmentMethod")
+    @SerializedName(value = "assignmentMethod", alternate = {"AssignmentMethod"})
     @Expose
     public AssignmentMethod assignmentMethod;
 
@@ -46,7 +46,7 @@ public class LabelingOptions implements IJsonBackedObject {
      * The Downgrade Justification.
      * 
      */
-    @SerializedName("downgradeJustification")
+    @SerializedName(value = "downgradeJustification", alternate = {"DowngradeJustification"})
     @Expose
     public DowngradeJustification downgradeJustification;
 
@@ -54,7 +54,7 @@ public class LabelingOptions implements IJsonBackedObject {
      * The Extended Properties.
      * 
      */
-    @SerializedName("extendedProperties")
+    @SerializedName(value = "extendedProperties", alternate = {"ExtendedProperties"})
     @Expose
     public java.util.List<KeyValuePair> extendedProperties;
 
@@ -62,7 +62,7 @@ public class LabelingOptions implements IJsonBackedObject {
      * The Label Id.
      * 
      */
-    @SerializedName("labelId")
+    @SerializedName(value = "labelId", alternate = {"LabelId"})
     @Expose
     public java.util.UUID labelId;
 

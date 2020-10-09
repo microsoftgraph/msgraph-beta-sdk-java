@@ -36,7 +36,7 @@ public class GroupPrintUsageSummary implements IJsonBackedObject {
      * The Completed Job Count.
      * 
      */
-    @SerializedName("completedJobCount")
+    @SerializedName(value = "completedJobCount", alternate = {"CompletedJobCount"})
     @Expose
     public Integer completedJobCount;
 
@@ -44,7 +44,7 @@ public class GroupPrintUsageSummary implements IJsonBackedObject {
      * The Group.
      * 
      */
-    @SerializedName("group")
+    @SerializedName(value = "group", alternate = {"Group"})
     @Expose
     public Identity group;
 
@@ -52,7 +52,7 @@ public class GroupPrintUsageSummary implements IJsonBackedObject {
      * The Group Display Name.
      * 
      */
-    @SerializedName("groupDisplayName")
+    @SerializedName(value = "groupDisplayName", alternate = {"GroupDisplayName"})
     @Expose
     public String groupDisplayName;
 
@@ -60,7 +60,7 @@ public class GroupPrintUsageSummary implements IJsonBackedObject {
      * The Group Mail.
      * 
      */
-    @SerializedName("groupMail")
+    @SerializedName(value = "groupMail", alternate = {"GroupMail"})
     @Expose
     public String groupMail;
 
@@ -68,7 +68,7 @@ public class GroupPrintUsageSummary implements IJsonBackedObject {
      * The Incomplete Job Count.
      * 
      */
-    @SerializedName("incompleteJobCount")
+    @SerializedName(value = "incompleteJobCount", alternate = {"IncompleteJobCount"})
     @Expose
     public Integer incompleteJobCount;
 

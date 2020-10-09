@@ -35,7 +35,7 @@ public class SensitiveContentEvidence implements IJsonBackedObject {
      * The Length.
      * 
      */
-    @SerializedName("length")
+    @SerializedName(value = "length", alternate = {"Length"})
     @Expose
     public Integer length;
 
@@ -43,7 +43,7 @@ public class SensitiveContentEvidence implements IJsonBackedObject {
      * The Match.
      * 
      */
-    @SerializedName("match")
+    @SerializedName(value = "match", alternate = {"Match"})
     @Expose
     public String match;
 
@@ -51,7 +51,7 @@ public class SensitiveContentEvidence implements IJsonBackedObject {
      * The Offset.
      * 
      */
-    @SerializedName("offset")
+    @SerializedName(value = "offset", alternate = {"Offset"})
     @Expose
     public Integer offset;
 

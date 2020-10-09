@@ -26,7 +26,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Calculate Discount On Credit Memos.
      * 
      */
-    @SerializedName("calculateDiscountOnCreditMemos")
+    @SerializedName(value = "calculateDiscountOnCreditMemos", alternate = {"CalculateDiscountOnCreditMemos"})
     @Expose
     public Boolean calculateDiscountOnCreditMemos;
 
@@ -34,7 +34,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Code.
      * 
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -42,7 +42,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Discount Date Calculation.
      * 
      */
-    @SerializedName("discountDateCalculation")
+    @SerializedName(value = "discountDateCalculation", alternate = {"DiscountDateCalculation"})
     @Expose
     public String discountDateCalculation;
 
@@ -50,7 +50,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Discount Percent.
      * 
      */
-    @SerializedName("discountPercent")
+    @SerializedName(value = "discountPercent", alternate = {"DiscountPercent"})
     @Expose
     public java.math.BigDecimal discountPercent;
 
@@ -58,7 +58,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -66,7 +66,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Due Date Calculation.
      * 
      */
-    @SerializedName("dueDateCalculation")
+    @SerializedName(value = "dueDateCalculation", alternate = {"DueDateCalculation"})
     @Expose
     public String dueDateCalculation;
 
@@ -74,7 +74,7 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 

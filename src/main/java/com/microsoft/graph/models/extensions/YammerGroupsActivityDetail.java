@@ -26,7 +26,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Group Display Name.
      * 
      */
-    @SerializedName("groupDisplayName")
+    @SerializedName(value = "groupDisplayName", alternate = {"GroupDisplayName"})
     @Expose
     public String groupDisplayName;
 
@@ -34,7 +34,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Group Type.
      * 
      */
-    @SerializedName("groupType")
+    @SerializedName(value = "groupType", alternate = {"GroupType"})
     @Expose
     public String groupType;
 
@@ -42,7 +42,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Is Deleted.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
     public Boolean isDeleted;
 
@@ -50,7 +50,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -58,7 +58,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Liked Count.
      * 
      */
-    @SerializedName("likedCount")
+    @SerializedName(value = "likedCount", alternate = {"LikedCount"})
     @Expose
     public Long likedCount;
 
@@ -66,7 +66,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Member Count.
      * 
      */
-    @SerializedName("memberCount")
+    @SerializedName(value = "memberCount", alternate = {"MemberCount"})
     @Expose
     public Long memberCount;
 
@@ -74,7 +74,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Network Display Name.
      * 
      */
-    @SerializedName("networkDisplayName")
+    @SerializedName(value = "networkDisplayName", alternate = {"NetworkDisplayName"})
     @Expose
     public String networkDisplayName;
 
@@ -82,7 +82,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Office365Connected.
      * 
      */
-    @SerializedName("office365Connected")
+    @SerializedName(value = "office365Connected", alternate = {"Office365Connected"})
     @Expose
     public Boolean office365Connected;
 
@@ -90,7 +90,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Owner Principal Name.
      * 
      */
-    @SerializedName("ownerPrincipalName")
+    @SerializedName(value = "ownerPrincipalName", alternate = {"OwnerPrincipalName"})
     @Expose
     public String ownerPrincipalName;
 
@@ -98,7 +98,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Posted Count.
      * 
      */
-    @SerializedName("postedCount")
+    @SerializedName(value = "postedCount", alternate = {"PostedCount"})
     @Expose
     public Long postedCount;
 
@@ -106,7 +106,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Read Count.
      * 
      */
-    @SerializedName("readCount")
+    @SerializedName(value = "readCount", alternate = {"ReadCount"})
     @Expose
     public Long readCount;
 
@@ -114,7 +114,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -122,7 +122,7 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 

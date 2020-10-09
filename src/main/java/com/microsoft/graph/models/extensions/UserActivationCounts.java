@@ -35,7 +35,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Activated On Shared Computer.
      * 
      */
-    @SerializedName("activatedOnSharedComputer")
+    @SerializedName(value = "activatedOnSharedComputer", alternate = {"ActivatedOnSharedComputer"})
     @Expose
     public Boolean activatedOnSharedComputer;
 
@@ -43,7 +43,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Android.
      * 
      */
-    @SerializedName("android")
+    @SerializedName(value = "android", alternate = {"Android"})
     @Expose
     public Long android;
 
@@ -51,7 +51,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Ios.
      * 
      */
-    @SerializedName("ios")
+    @SerializedName(value = "ios", alternate = {"Ios"})
     @Expose
     public Long ios;
 
@@ -59,7 +59,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Last Activated Date.
      * 
      */
-    @SerializedName("lastActivatedDate")
+    @SerializedName(value = "lastActivatedDate", alternate = {"LastActivatedDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivatedDate;
 
@@ -67,7 +67,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Mac.
      * 
      */
-    @SerializedName("mac")
+    @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
     public Long mac;
 
@@ -75,7 +75,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Product Type.
      * 
      */
-    @SerializedName("productType")
+    @SerializedName(value = "productType", alternate = {"ProductType"})
     @Expose
     public String productType;
 
@@ -83,7 +83,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Windows.
      * 
      */
-    @SerializedName("windows")
+    @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
     public Long windows;
 
@@ -91,7 +91,7 @@ public class UserActivationCounts implements IJsonBackedObject {
      * The Windows10Mobile.
      * 
      */
-    @SerializedName("windows10Mobile")
+    @SerializedName(value = "windows10Mobile", alternate = {"Windows10Mobile"})
     @Expose
     public Long windows10Mobile;
 

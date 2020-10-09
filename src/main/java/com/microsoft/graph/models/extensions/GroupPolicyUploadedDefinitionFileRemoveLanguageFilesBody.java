@@ -22,7 +22,7 @@ public class GroupPolicyUploadedDefinitionFileRemoveLanguageFilesBody {
      * The group Policy Uploaded Language Files.
      * 
      */
-    @SerializedName("groupPolicyUploadedLanguageFiles")
+    @SerializedName(value = "groupPolicyUploadedLanguageFiles", alternate = {"GroupPolicyUploadedLanguageFiles"})
     @Expose
     public java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
 

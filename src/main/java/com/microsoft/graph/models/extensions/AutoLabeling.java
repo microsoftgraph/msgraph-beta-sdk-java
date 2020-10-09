@@ -35,7 +35,7 @@ public class AutoLabeling implements IJsonBackedObject {
      * The Message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -43,7 +43,7 @@ public class AutoLabeling implements IJsonBackedObject {
      * The Sensitive Type Ids.
      * 
      */
-    @SerializedName("sensitiveTypeIds")
+    @SerializedName(value = "sensitiveTypeIds", alternate = {"SensitiveTypeIds"})
     @Expose
     public java.util.List<String> sensitiveTypeIds;
 

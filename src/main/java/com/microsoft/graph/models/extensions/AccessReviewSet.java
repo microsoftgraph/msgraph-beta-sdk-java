@@ -28,7 +28,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
      * The Definitions.
      * 
      */
-    @SerializedName("definitions")
+    @SerializedName(value = "definitions", alternate = {"Definitions"})
     @Expose
     public AccessReviewScheduleDefinitionCollectionPage definitions;
 

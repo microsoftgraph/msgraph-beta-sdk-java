@@ -27,7 +27,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * The Windows Network Isolation Policy.
      * Windows Network Isolation Policy
      */
-    @SerializedName("windowsNetworkIsolationPolicy")
+    @SerializedName(value = "windowsNetworkIsolationPolicy", alternate = {"WindowsNetworkIsolationPolicy"})
     @Expose
     public WindowsNetworkIsolationPolicy windowsNetworkIsolationPolicy;
 

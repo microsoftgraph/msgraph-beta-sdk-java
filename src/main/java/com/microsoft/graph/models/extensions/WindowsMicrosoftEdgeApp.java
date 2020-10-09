@@ -27,7 +27,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements IJsonBackedObj
      * The Channel.
      * The channel to install on target devices.
      */
-    @SerializedName("channel")
+    @SerializedName(value = "channel", alternate = {"Channel"})
     @Expose
     public MicrosoftEdgeChannel channel;
 
@@ -35,7 +35,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements IJsonBackedObj
      * The Display Language Locale.
      * The language locale to use when the Edge app displays text to the user.
      */
-    @SerializedName("displayLanguageLocale")
+    @SerializedName(value = "displayLanguageLocale", alternate = {"DisplayLanguageLocale"})
     @Expose
     public String displayLanguageLocale;
 

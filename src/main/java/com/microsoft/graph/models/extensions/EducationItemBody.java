@@ -36,7 +36,7 @@ public class EducationItemBody implements IJsonBackedObject {
      * The Content.
      * 
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public String content;
 
@@ -44,7 +44,7 @@ public class EducationItemBody implements IJsonBackedObject {
      * The Content Type.
      * 
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public BodyType contentType;
 

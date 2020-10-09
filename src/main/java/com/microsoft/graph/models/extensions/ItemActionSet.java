@@ -45,7 +45,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Comment.
      * A comment was added to the item.
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public CommentAction comment;
 
@@ -53,7 +53,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Create.
      * An item was created.
      */
-    @SerializedName("create")
+    @SerializedName(value = "create", alternate = {"Create"})
     @Expose
     public CreateAction create;
 
@@ -61,7 +61,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Delete.
      * An item was deleted.
      */
-    @SerializedName("delete")
+    @SerializedName(value = "delete", alternate = {"Delete"})
     @Expose
     public DeleteAction delete;
 
@@ -69,7 +69,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Edit.
      * An item was edited.
      */
-    @SerializedName("edit")
+    @SerializedName(value = "edit", alternate = {"Edit"})
     @Expose
     public EditAction edit;
 
@@ -77,7 +77,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Mention.
      * A user was mentioned in the item.
      */
-    @SerializedName("mention")
+    @SerializedName(value = "mention", alternate = {"Mention"})
     @Expose
     public MentionAction mention;
 
@@ -85,7 +85,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Move.
      * An item was moved.
      */
-    @SerializedName("move")
+    @SerializedName(value = "move", alternate = {"Move"})
     @Expose
     public MoveAction move;
 
@@ -93,7 +93,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Rename.
      * An item was renamed.
      */
-    @SerializedName("rename")
+    @SerializedName(value = "rename", alternate = {"Rename"})
     @Expose
     public RenameAction rename;
 
@@ -101,7 +101,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Restore.
      * An item was restored.
      */
-    @SerializedName("restore")
+    @SerializedName(value = "restore", alternate = {"Restore"})
     @Expose
     public RestoreAction restore;
 
@@ -109,7 +109,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Share.
      * An item was shared.
      */
-    @SerializedName("share")
+    @SerializedName(value = "share", alternate = {"Share"})
     @Expose
     public ShareAction share;
 
@@ -117,7 +117,7 @@ public class ItemActionSet implements IJsonBackedObject {
      * The Version.
      * An item was versioned.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public VersionAction version;
 

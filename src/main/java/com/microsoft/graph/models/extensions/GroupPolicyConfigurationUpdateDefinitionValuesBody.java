@@ -22,7 +22,7 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesBody {
      * The added.
      * 
      */
-    @SerializedName("added")
+    @SerializedName(value = "added", alternate = {"Added"})
     @Expose
     public java.util.List<GroupPolicyDefinitionValue> added;
 
@@ -30,7 +30,7 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesBody {
      * The updated.
      * 
      */
-    @SerializedName("updated")
+    @SerializedName(value = "updated", alternate = {"Updated"})
     @Expose
     public java.util.List<GroupPolicyDefinitionValue> updated;
 
@@ -38,7 +38,7 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesBody {
      * The deleted Ids.
      * 
      */
-    @SerializedName("deletedIds")
+    @SerializedName(value = "deletedIds", alternate = {"DeletedIds"})
     @Expose
     public java.util.List<String> deletedIds;
 

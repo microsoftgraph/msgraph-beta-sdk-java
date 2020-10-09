@@ -38,7 +38,7 @@ public class EvaluateLabelJobResult implements IJsonBackedObject {
      * The Responsible Policy.
      * 
      */
-    @SerializedName("responsiblePolicy")
+    @SerializedName(value = "responsiblePolicy", alternate = {"ResponsiblePolicy"})
     @Expose
     public ResponsiblePolicy responsiblePolicy;
 
@@ -46,7 +46,7 @@ public class EvaluateLabelJobResult implements IJsonBackedObject {
      * The Responsible Sensitive Types.
      * 
      */
-    @SerializedName("responsibleSensitiveTypes")
+    @SerializedName(value = "responsibleSensitiveTypes", alternate = {"ResponsibleSensitiveTypes"})
     @Expose
     public java.util.List<ResponsibleSensitiveType> responsibleSensitiveTypes;
 
@@ -54,7 +54,7 @@ public class EvaluateLabelJobResult implements IJsonBackedObject {
      * The Sensitivity Label.
      * 
      */
-    @SerializedName("sensitivityLabel")
+    @SerializedName(value = "sensitivityLabel", alternate = {"SensitivityLabel"})
     @Expose
     public MatchingLabel sensitivityLabel;
 

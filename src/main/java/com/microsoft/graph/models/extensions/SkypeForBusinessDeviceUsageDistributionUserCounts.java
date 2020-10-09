@@ -26,7 +26,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The Android Phone.
      * 
      */
-    @SerializedName("androidPhone")
+    @SerializedName(value = "androidPhone", alternate = {"AndroidPhone"})
     @Expose
     public Integer androidPhone;
 
@@ -34,7 +34,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The IPad.
      * 
      */
-    @SerializedName("iPad")
+    @SerializedName(value = "iPad", alternate = {"IPad"})
     @Expose
     public Integer iPad;
 
@@ -42,7 +42,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The IPhone.
      * 
      */
-    @SerializedName("iPhone")
+    @SerializedName(value = "iPhone", alternate = {"IPhone"})
     @Expose
     public Integer iPhone;
 
@@ -50,7 +50,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -58,7 +58,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -66,7 +66,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The Windows.
      * 
      */
-    @SerializedName("windows")
+    @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
     public Integer windows;
 
@@ -74,7 +74,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity im
      * The Windows Phone.
      * 
      */
-    @SerializedName("windowsPhone")
+    @SerializedName(value = "windowsPhone", alternate = {"WindowsPhone"})
     @Expose
     public Integer windowsPhone;
 

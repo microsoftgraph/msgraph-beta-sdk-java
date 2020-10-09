@@ -29,7 +29,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -37,7 +37,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Is Built In.
      * 
      */
-    @SerializedName("isBuiltIn")
+    @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
     public Boolean isBuiltIn;
 
@@ -53,7 +53,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Is Enabled.
      * 
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -61,7 +61,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Resource Scopes.
      * 
      */
-    @SerializedName("resourceScopes")
+    @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
     public java.util.List<String> resourceScopes;
 
@@ -69,7 +69,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Role Permissions.
      * 
      */
-    @SerializedName("rolePermissions")
+    @SerializedName(value = "rolePermissions", alternate = {"RolePermissions"})
     @Expose
     public java.util.List<UnifiedRolePermission> rolePermissions;
 
@@ -77,7 +77,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Template Id.
      * 
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 
@@ -85,7 +85,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Version.
      * 
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 
@@ -93,7 +93,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Inherits Permissions From.
      * 
      */
-    @SerializedName("inheritsPermissionsFrom")
+    @SerializedName(value = "inheritsPermissionsFrom", alternate = {"InheritsPermissionsFrom"})
     @Expose
     public UnifiedRoleDefinitionCollectionPage inheritsPermissionsFrom;
 

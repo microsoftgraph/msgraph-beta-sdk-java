@@ -33,7 +33,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Action.
      * 
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public String action;
 
@@ -41,7 +41,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Activity Date Time.
      * 
      */
-    @SerializedName("activityDateTime")
+    @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
     public java.util.Calendar activityDateTime;
 
@@ -49,7 +49,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Change Id.
      * 
      */
-    @SerializedName("changeId")
+    @SerializedName(value = "changeId", alternate = {"ChangeId"})
     @Expose
     public String changeId;
 
@@ -57,7 +57,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Cycle Id.
      * 
      */
-    @SerializedName("cycleId")
+    @SerializedName(value = "cycleId", alternate = {"CycleId"})
     @Expose
     public String cycleId;
 
@@ -65,7 +65,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Duration In Milliseconds.
      * 
      */
-    @SerializedName("durationInMilliseconds")
+    @SerializedName(value = "durationInMilliseconds", alternate = {"DurationInMilliseconds"})
     @Expose
     public Integer durationInMilliseconds;
 
@@ -73,7 +73,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Initiated By.
      * 
      */
-    @SerializedName("initiatedBy")
+    @SerializedName(value = "initiatedBy", alternate = {"InitiatedBy"})
     @Expose
     public Initiator initiatedBy;
 
@@ -81,7 +81,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Job Id.
      * 
      */
-    @SerializedName("jobId")
+    @SerializedName(value = "jobId", alternate = {"JobId"})
     @Expose
     public String jobId;
 
@@ -89,7 +89,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Modified Properties.
      * 
      */
-    @SerializedName("modifiedProperties")
+    @SerializedName(value = "modifiedProperties", alternate = {"ModifiedProperties"})
     @Expose
     public java.util.List<ModifiedProperty> modifiedProperties;
 
@@ -97,7 +97,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Provisioning Steps.
      * 
      */
-    @SerializedName("provisioningSteps")
+    @SerializedName(value = "provisioningSteps", alternate = {"ProvisioningSteps"})
     @Expose
     public java.util.List<ProvisioningStep> provisioningSteps;
 
@@ -105,7 +105,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Service Principal.
      * 
      */
-    @SerializedName("servicePrincipal")
+    @SerializedName(value = "servicePrincipal", alternate = {"ServicePrincipal"})
     @Expose
     public ProvisioningServicePrincipal servicePrincipal;
 
@@ -113,7 +113,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Source Identity.
      * 
      */
-    @SerializedName("sourceIdentity")
+    @SerializedName(value = "sourceIdentity", alternate = {"SourceIdentity"})
     @Expose
     public ProvisionedIdentity sourceIdentity;
 
@@ -121,7 +121,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Source System.
      * 
      */
-    @SerializedName("sourceSystem")
+    @SerializedName(value = "sourceSystem", alternate = {"SourceSystem"})
     @Expose
     public ProvisioningSystemDetails sourceSystem;
 
@@ -129,7 +129,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Status Info.
      * 
      */
-    @SerializedName("statusInfo")
+    @SerializedName(value = "statusInfo", alternate = {"StatusInfo"})
     @Expose
     public StatusBase statusInfo;
 
@@ -137,7 +137,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Target Identity.
      * 
      */
-    @SerializedName("targetIdentity")
+    @SerializedName(value = "targetIdentity", alternate = {"TargetIdentity"})
     @Expose
     public ProvisionedIdentity targetIdentity;
 
@@ -145,7 +145,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Target System.
      * 
      */
-    @SerializedName("targetSystem")
+    @SerializedName(value = "targetSystem", alternate = {"TargetSystem"})
     @Expose
     public ProvisioningSystemDetails targetSystem;
 
@@ -153,7 +153,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
      * The Tenant Id.
      * 
      */
-    @SerializedName("tenantId")
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
     public String tenantId;
 

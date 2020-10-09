@@ -36,7 +36,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The Company.
      * 
      */
-    @SerializedName("company")
+    @SerializedName(value = "company", alternate = {"Company"})
     @Expose
     public CompanyDetail company;
 
@@ -44,7 +44,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -52,7 +52,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The End Month Year.
      * 
      */
-    @SerializedName("endMonthYear")
+    @SerializedName(value = "endMonthYear", alternate = {"EndMonthYear"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly endMonthYear;
 
@@ -60,7 +60,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The Job Title.
      * 
      */
-    @SerializedName("jobTitle")
+    @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
     public String jobTitle;
 
@@ -68,7 +68,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The Role.
      * 
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public String role;
 
@@ -76,7 +76,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The Start Month Year.
      * 
      */
-    @SerializedName("startMonthYear")
+    @SerializedName(value = "startMonthYear", alternate = {"StartMonthYear"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly startMonthYear;
 
@@ -84,7 +84,7 @@ public class PositionDetail implements IJsonBackedObject {
      * The Summary.
      * 
      */
-    @SerializedName("summary")
+    @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose
     public String summary;
 

@@ -27,7 +27,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      * The Matching Options.
      * 
      */
-    @SerializedName("matchingOptions")
+    @SerializedName(value = "matchingOptions", alternate = {"MatchingOptions"})
     @Expose
     public java.util.List<EducationIdentityMatchingOptions> matchingOptions;
 

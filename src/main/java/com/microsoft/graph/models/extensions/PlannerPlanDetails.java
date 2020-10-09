@@ -29,7 +29,7 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
      * The Category Descriptions.
      * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
      */
-    @SerializedName("categoryDescriptions")
+    @SerializedName(value = "categoryDescriptions", alternate = {"CategoryDescriptions"})
     @Expose
     public PlannerCategoryDescriptions categoryDescriptions;
 
@@ -37,7 +37,7 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
      * The Context Details.
      * 
      */
-    @SerializedName("contextDetails")
+    @SerializedName(value = "contextDetails", alternate = {"ContextDetails"})
     @Expose
     public PlannerPlanContextDetailsCollection contextDetails;
 
@@ -45,7 +45,7 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
      * The Shared With.
      * Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
      */
-    @SerializedName("sharedWith")
+    @SerializedName(value = "sharedWith", alternate = {"SharedWith"})
     @Expose
     public PlannerUserIds sharedWith;
 

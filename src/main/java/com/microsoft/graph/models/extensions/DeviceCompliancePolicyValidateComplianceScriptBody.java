@@ -23,7 +23,7 @@ public class DeviceCompliancePolicyValidateComplianceScriptBody {
      * The device Compliance Policy Script.
      * 
      */
-    @SerializedName("deviceCompliancePolicyScript")
+    @SerializedName(value = "deviceCompliancePolicyScript", alternate = {"DeviceCompliancePolicyScript"})
     @Expose
     public DeviceCompliancePolicyScript deviceCompliancePolicyScript;
 

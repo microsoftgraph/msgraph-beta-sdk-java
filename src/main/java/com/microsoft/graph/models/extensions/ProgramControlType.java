@@ -26,7 +26,7 @@ public class ProgramControlType extends Entity implements IJsonBackedObject {
      * The Control Type Group Id.
      * 
      */
-    @SerializedName("controlTypeGroupId")
+    @SerializedName(value = "controlTypeGroupId", alternate = {"ControlTypeGroupId"})
     @Expose
     public String controlTypeGroupId;
 
@@ -34,7 +34,7 @@ public class ProgramControlType extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

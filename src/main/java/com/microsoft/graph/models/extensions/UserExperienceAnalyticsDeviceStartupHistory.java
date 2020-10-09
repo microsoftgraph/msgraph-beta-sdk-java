@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Core Boot Time In Ms.
      * The user experience analytics device core boot time in milliseconds.
      */
-    @SerializedName("coreBootTimeInMs")
+    @SerializedName(value = "coreBootTimeInMs", alternate = {"CoreBootTimeInMs"})
     @Expose
     public Integer coreBootTimeInMs;
 
@@ -35,7 +35,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Core Login Time In Ms.
      * The user experience analytics device core login time in milliseconds.
      */
-    @SerializedName("coreLoginTimeInMs")
+    @SerializedName(value = "coreLoginTimeInMs", alternate = {"CoreLoginTimeInMs"})
     @Expose
     public Integer coreLoginTimeInMs;
 
@@ -43,7 +43,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Device Id.
      * The user experience analytics device id.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Feature Update Boot Time In Ms.
      * The user experience analytics device feature update time in milliseconds.
      */
-    @SerializedName("featureUpdateBootTimeInMs")
+    @SerializedName(value = "featureUpdateBootTimeInMs", alternate = {"FeatureUpdateBootTimeInMs"})
     @Expose
     public Integer featureUpdateBootTimeInMs;
 
@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Group Policy Boot Time In Ms.
      * The User experience analytics Device group policy boot time in milliseconds.
      */
-    @SerializedName("groupPolicyBootTimeInMs")
+    @SerializedName(value = "groupPolicyBootTimeInMs", alternate = {"GroupPolicyBootTimeInMs"})
     @Expose
     public Integer groupPolicyBootTimeInMs;
 
@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Group Policy Login Time In Ms.
      * The User experience analytics Device group policy login time in milliseconds.
      */
-    @SerializedName("groupPolicyLoginTimeInMs")
+    @SerializedName(value = "groupPolicyLoginTimeInMs", alternate = {"GroupPolicyLoginTimeInMs"})
     @Expose
     public Integer groupPolicyLoginTimeInMs;
 
@@ -75,7 +75,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Is Feature Update.
      * The user experience analytics device boot record is a feature update.
      */
-    @SerializedName("isFeatureUpdate")
+    @SerializedName(value = "isFeatureUpdate", alternate = {"IsFeatureUpdate"})
     @Expose
     public Boolean isFeatureUpdate;
 
@@ -83,7 +83,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Is First Login.
      * The user experience analytics device first login.
      */
-    @SerializedName("isFirstLogin")
+    @SerializedName(value = "isFirstLogin", alternate = {"IsFirstLogin"})
     @Expose
     public Boolean isFirstLogin;
 
@@ -91,7 +91,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Operating System Version.
      * The user experience analytics device boot record's operating system version.
      */
-    @SerializedName("operatingSystemVersion")
+    @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
     public String operatingSystemVersion;
 
@@ -99,7 +99,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Responsive Desktop Time In Ms.
      * The user experience analytics responsive desktop time in milliseconds.
      */
-    @SerializedName("responsiveDesktopTimeInMs")
+    @SerializedName(value = "responsiveDesktopTimeInMs", alternate = {"ResponsiveDesktopTimeInMs"})
     @Expose
     public Integer responsiveDesktopTimeInMs;
 
@@ -107,7 +107,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Restart Category.
      * OS restart category
      */
-    @SerializedName("restartCategory")
+    @SerializedName(value = "restartCategory", alternate = {"RestartCategory"})
     @Expose
     public UserExperienceAnalyticsOperatingSystemRestartCategory restartCategory;
 
@@ -115,7 +115,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Restart Fault Bucket.
      * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
      */
-    @SerializedName("restartFaultBucket")
+    @SerializedName(value = "restartFaultBucket", alternate = {"RestartFaultBucket"})
     @Expose
     public String restartFaultBucket;
 
@@ -123,7 +123,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Restart Stop Code.
      * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
      */
-    @SerializedName("restartStopCode")
+    @SerializedName(value = "restartStopCode", alternate = {"RestartStopCode"})
     @Expose
     public String restartStopCode;
 
@@ -131,7 +131,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Start Time.
      * The user experience analytics device boot start time.
      */
-    @SerializedName("startTime")
+    @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
     public java.util.Calendar startTime;
 
@@ -139,7 +139,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Total Boot Time In Ms.
      * The user experience analytics device total boot time in milliseconds.
      */
-    @SerializedName("totalBootTimeInMs")
+    @SerializedName(value = "totalBootTimeInMs", alternate = {"TotalBootTimeInMs"})
     @Expose
     public Integer totalBootTimeInMs;
 
@@ -147,7 +147,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The Total Login Time In Ms.
      * The user experience analytics device total login time in milliseconds.
      */
-    @SerializedName("totalLoginTimeInMs")
+    @SerializedName(value = "totalLoginTimeInMs", alternate = {"TotalLoginTimeInMs"})
     @Expose
     public Integer totalLoginTimeInMs;
 

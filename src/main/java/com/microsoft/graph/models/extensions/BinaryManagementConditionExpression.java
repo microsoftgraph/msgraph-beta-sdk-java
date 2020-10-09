@@ -27,7 +27,7 @@ public class BinaryManagementConditionExpression extends ManagementConditionExpr
      * The First Operand.
      * The first operand of the binary operation.
      */
-    @SerializedName("firstOperand")
+    @SerializedName(value = "firstOperand", alternate = {"FirstOperand"})
     @Expose
     public ManagementConditionExpressionModel firstOperand;
 
@@ -35,7 +35,7 @@ public class BinaryManagementConditionExpression extends ManagementConditionExpr
      * The Operator.
      * The operator used in the evaluation of the binary operation.
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public BinaryManagementConditionExpressionOperatorType operator;
 
@@ -43,7 +43,7 @@ public class BinaryManagementConditionExpression extends ManagementConditionExpr
      * The Second Operand.
      * The second operand of the binary operation.
      */
-    @SerializedName("secondOperand")
+    @SerializedName(value = "secondOperand", alternate = {"SecondOperand"})
     @Expose
     public ManagementConditionExpressionModel secondOperand;
 

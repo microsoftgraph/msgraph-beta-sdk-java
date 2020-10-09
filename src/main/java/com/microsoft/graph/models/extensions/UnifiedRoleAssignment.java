@@ -29,7 +29,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The App Scope Id.
      * 
      */
-    @SerializedName("appScopeId")
+    @SerializedName(value = "appScopeId", alternate = {"AppScopeId"})
     @Expose
     public String appScopeId;
 
@@ -37,7 +37,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Condition.
      * 
      */
-    @SerializedName("condition")
+    @SerializedName(value = "condition", alternate = {"Condition"})
     @Expose
     public String condition;
 
@@ -45,7 +45,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Directory Scope Id.
      * 
      */
-    @SerializedName("directoryScopeId")
+    @SerializedName(value = "directoryScopeId", alternate = {"DirectoryScopeId"})
     @Expose
     public String directoryScopeId;
 
@@ -53,7 +53,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Principal Id.
      * 
      */
-    @SerializedName("principalId")
+    @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
     public String principalId;
 
@@ -61,7 +61,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Resource Scope.
      * 
      */
-    @SerializedName("resourceScope")
+    @SerializedName(value = "resourceScope", alternate = {"ResourceScope"})
     @Expose
     public String resourceScope;
 
@@ -69,7 +69,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Role Definition Id.
      * 
      */
-    @SerializedName("roleDefinitionId")
+    @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
     public String roleDefinitionId;
 
@@ -77,7 +77,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The App Scope.
      * 
      */
-    @SerializedName("appScope")
+    @SerializedName(value = "appScope", alternate = {"AppScope"})
     @Expose
     public AppScope appScope;
 
@@ -85,7 +85,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Directory Scope.
      * 
      */
-    @SerializedName("directoryScope")
+    @SerializedName(value = "directoryScope", alternate = {"DirectoryScope"})
     @Expose
     public DirectoryObject directoryScope;
 
@@ -93,7 +93,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Principal.
      * 
      */
-    @SerializedName("principal")
+    @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
     public DirectoryObject principal;
 
@@ -101,7 +101,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
      * The Role Definition.
      * 
      */
-    @SerializedName("roleDefinition")
+    @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
     public UnifiedRoleDefinition roleDefinition;
 

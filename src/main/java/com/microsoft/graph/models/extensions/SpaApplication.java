@@ -35,7 +35,7 @@ public class SpaApplication implements IJsonBackedObject {
      * The Redirect Uris.
      * 
      */
-    @SerializedName("redirectUris")
+    @SerializedName(value = "redirectUris", alternate = {"RedirectUris"})
     @Expose
     public java.util.List<String> redirectUris;
 

@@ -31,7 +31,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Action Reason.
      * 
      */
-    @SerializedName("actionReason")
+    @SerializedName(value = "actionReason", alternate = {"ActionReason"})
     @Expose
     public String actionReason;
 
@@ -39,7 +39,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The App Id.
      * 
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -47,7 +47,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Azure Tenant Id.
      * 
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -55,7 +55,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 
@@ -63,7 +63,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Completed Date Time.
      * 
      */
-    @SerializedName("completedDateTime")
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
     public java.util.Calendar completedDateTime;
 
@@ -71,7 +71,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -79,7 +79,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Error Info.
      * 
      */
-    @SerializedName("errorInfo")
+    @SerializedName(value = "errorInfo", alternate = {"ErrorInfo"})
     @Expose
     public ResultInfo errorInfo;
 
@@ -87,7 +87,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Last Action Date Time.
      * 
      */
-    @SerializedName("lastActionDateTime")
+    @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
     public java.util.Calendar lastActionDateTime;
 
@@ -95,7 +95,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -103,7 +103,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Parameters.
      * 
      */
-    @SerializedName("parameters")
+    @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
     public java.util.List<KeyValuePair> parameters;
 
@@ -111,7 +111,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The States.
      * 
      */
-    @SerializedName("states")
+    @SerializedName(value = "states", alternate = {"States"})
     @Expose
     public java.util.List<SecurityActionState> states;
 
@@ -119,7 +119,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public OperationStatus status;
 
@@ -127,7 +127,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The User.
      * 
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public String user;
 
@@ -135,7 +135,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

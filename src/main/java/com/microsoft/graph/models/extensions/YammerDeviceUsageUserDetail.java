@@ -26,7 +26,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Last Activity Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
@@ -42,7 +42,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Report Period.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
     public String reportPeriod;
 
@@ -50,7 +50,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Report Refresh Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
@@ -58,7 +58,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The State Change Date.
      * 
      */
-    @SerializedName("stateChangeDate")
+    @SerializedName(value = "stateChangeDate", alternate = {"StateChangeDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly stateChangeDate;
 
@@ -66,7 +66,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Used Android Phone.
      * 
      */
-    @SerializedName("usedAndroidPhone")
+    @SerializedName(value = "usedAndroidPhone", alternate = {"UsedAndroidPhone"})
     @Expose
     public Boolean usedAndroidPhone;
 
@@ -74,7 +74,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Usedi Pad.
      * 
      */
-    @SerializedName("usediPad")
+    @SerializedName(value = "usediPad", alternate = {"UsediPad"})
     @Expose
     public Boolean usediPad;
 
@@ -82,7 +82,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Usedi Phone.
      * 
      */
-    @SerializedName("usediPhone")
+    @SerializedName(value = "usediPhone", alternate = {"UsediPhone"})
     @Expose
     public Boolean usediPhone;
 
@@ -90,7 +90,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Used Others.
      * 
      */
-    @SerializedName("usedOthers")
+    @SerializedName(value = "usedOthers", alternate = {"UsedOthers"})
     @Expose
     public Boolean usedOthers;
 
@@ -98,7 +98,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Used Web.
      * 
      */
-    @SerializedName("usedWeb")
+    @SerializedName(value = "usedWeb", alternate = {"UsedWeb"})
     @Expose
     public Boolean usedWeb;
 
@@ -106,7 +106,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The Used Windows Phone.
      * 
      */
-    @SerializedName("usedWindowsPhone")
+    @SerializedName(value = "usedWindowsPhone", alternate = {"UsedWindowsPhone"})
     @Expose
     public Boolean usedWindowsPhone;
 
@@ -114,7 +114,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The User Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -122,7 +122,7 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
      * The User State.
      * 
      */
-    @SerializedName("userState")
+    @SerializedName(value = "userState", alternate = {"UserState"})
     @Expose
     public String userState;
 

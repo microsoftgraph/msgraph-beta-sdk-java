@@ -27,7 +27,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
      * The Service.
      * 
      */
-    @SerializedName("service")
+    @SerializedName(value = "service", alternate = {"Service"})
     @Expose
     public ServiceInformation service;
 
@@ -43,7 +43,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
      * The Status Message.
      * 
      */
-    @SerializedName("statusMessage")
+    @SerializedName(value = "statusMessage", alternate = {"StatusMessage"})
     @Expose
     public String statusMessage;
 
@@ -51,7 +51,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
      * The User Id.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -59,7 +59,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
      * The Web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

@@ -27,7 +27,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements IJsonBackedObject
      * The Activity.
      * The activity related to user risk level change.
      */
-    @SerializedName("activity")
+    @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
     public RiskUserActivity activity;
 
@@ -35,7 +35,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements IJsonBackedObject
      * The Initiated By.
      * The id of actor that does the operation.
      */
-    @SerializedName("initiatedBy")
+    @SerializedName(value = "initiatedBy", alternate = {"InitiatedBy"})
     @Expose
     public String initiatedBy;
 
@@ -43,7 +43,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements IJsonBackedObject
      * The User Id.
      * The id of the user.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

@@ -26,7 +26,7 @@ public class ItemInsightsSettings extends Entity implements IJsonBackedObject {
      * The Disabled For Group.
      * 
      */
-    @SerializedName("disabledForGroup")
+    @SerializedName(value = "disabledForGroup", alternate = {"DisabledForGroup"})
     @Expose
     public String disabledForGroup;
 
@@ -34,7 +34,7 @@ public class ItemInsightsSettings extends Entity implements IJsonBackedObject {
      * The Is Enabled In Organization.
      * 
      */
-    @SerializedName("isEnabledInOrganization")
+    @SerializedName(value = "isEnabledInOrganization", alternate = {"IsEnabledInOrganization"})
     @Expose
     public Boolean isEnabledInOrganization;
 

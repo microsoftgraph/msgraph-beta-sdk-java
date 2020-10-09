@@ -32,7 +32,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Acceptance Statement.
      * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
      */
-    @SerializedName("acceptanceStatement")
+    @SerializedName(value = "acceptanceStatement", alternate = {"AcceptanceStatement"})
     @Expose
     public String acceptanceStatement;
 
@@ -40,7 +40,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Body Text.
      * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
      */
-    @SerializedName("bodyText")
+    @SerializedName(value = "bodyText", alternate = {"BodyText"})
     @Expose
     public String bodyText;
 
@@ -48,7 +48,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -56,7 +56,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Description.
      * Administrator-supplied description of the T&amp;C policy.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -64,7 +64,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Administrator-supplied name for the T&amp;C policy.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -72,7 +72,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -80,7 +80,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -88,7 +88,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
     public java.util.List<String> roleScopeTagIds;
 
@@ -96,7 +96,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Title.
      * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -104,7 +104,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Version.
      * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -112,7 +112,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Acceptance Statuses.
      * The list of acceptance statuses for this T&amp;C policy.
      */
-    @SerializedName("acceptanceStatuses")
+    @SerializedName(value = "acceptanceStatuses", alternate = {"AcceptanceStatuses"})
     @Expose
     public TermsAndConditionsAcceptanceStatusCollectionPage acceptanceStatuses;
 
@@ -120,7 +120,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for this T&amp;C policy.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public TermsAndConditionsAssignmentCollectionPage assignments;
 
@@ -128,7 +128,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Group Assignments.
      * The list of group assignments for this T&amp;C policy.
      */
-    @SerializedName("groupAssignments")
+    @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
     public TermsAndConditionsGroupAssignmentCollectionPage groupAssignments;
 

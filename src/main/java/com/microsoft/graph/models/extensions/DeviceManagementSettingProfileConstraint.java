@@ -26,7 +26,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * The Source.
      * The source of the entity
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public String source;
 
@@ -34,7 +34,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * The Types.
      * A collection of types this entity carries
      */
-    @SerializedName("types")
+    @SerializedName(value = "types", alternate = {"Types"})
     @Expose
     public java.util.List<String> types;
 

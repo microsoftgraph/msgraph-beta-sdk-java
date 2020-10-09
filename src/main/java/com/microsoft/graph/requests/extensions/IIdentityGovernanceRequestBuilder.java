@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppConsentApprovalRouteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import java.util.Arrays;
@@ -43,6 +44,13 @@ public interface IIdentityGovernanceRequestBuilder extends IRequestBuilder {
      * @return the IAccessReviewSetRequestBuilder instance
      */
     IAccessReviewSetRequestBuilder accessReviews();
+
+    /**
+     * Gets the request builder for AppConsentApprovalRoute
+     *
+     * @return the IAppConsentApprovalRouteRequestBuilder instance
+     */
+    IAppConsentApprovalRouteRequestBuilder appConsent();
 
     /**
      * Gets the request builder for TermsOfUseContainer

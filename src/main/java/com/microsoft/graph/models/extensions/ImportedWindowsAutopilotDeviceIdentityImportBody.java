@@ -22,7 +22,7 @@ public class ImportedWindowsAutopilotDeviceIdentityImportBody {
      * The imported Windows Autopilot Device Identities.
      * 
      */
-    @SerializedName("importedWindowsAutopilotDeviceIdentities")
+    @SerializedName(value = "importedWindowsAutopilotDeviceIdentities", alternate = {"ImportedWindowsAutopilotDeviceIdentities"})
     @Expose
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities;
 

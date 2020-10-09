@@ -27,7 +27,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements IJso
      * The Identity Certificate.
      * Identity certificate for client authentication when authentication method is certificate.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName(value = "identityCertificate", alternate = {"IdentityCertificate"})
     @Expose
     public MacOSCertificateProfileBase identityCertificate;
 

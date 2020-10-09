@@ -35,7 +35,7 @@ public class LocalizedName implements IJsonBackedObject {
      * The Language Tag.
      * 
      */
-    @SerializedName("languageTag")
+    @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
     public String languageTag;
 
@@ -43,7 +43,7 @@ public class LocalizedName implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

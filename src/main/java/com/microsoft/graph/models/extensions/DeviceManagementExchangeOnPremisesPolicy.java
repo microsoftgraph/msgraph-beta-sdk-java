@@ -30,7 +30,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * The Access Rules.
      * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
      */
-    @SerializedName("accessRules")
+    @SerializedName(value = "accessRules", alternate = {"AccessRules"})
     @Expose
     public java.util.List<DeviceManagementExchangeAccessRule> accessRules;
 
@@ -38,7 +38,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * The Default Access Level.
      * Default access state in Exchange. This rule applies globally to the entire Exchange organization
      */
-    @SerializedName("defaultAccessLevel")
+    @SerializedName(value = "defaultAccessLevel", alternate = {"DefaultAccessLevel"})
     @Expose
     public DeviceManagementExchangeAccessLevel defaultAccessLevel;
 
@@ -46,7 +46,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * The Known Device Classes.
      * The list of device classes known to Exchange
      */
-    @SerializedName("knownDeviceClasses")
+    @SerializedName(value = "knownDeviceClasses", alternate = {"KnownDeviceClasses"})
     @Expose
     public java.util.List<DeviceManagementExchangeDeviceClass> knownDeviceClasses;
 
@@ -54,7 +54,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * The Notification Content.
      * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
      */
-    @SerializedName("notificationContent")
+    @SerializedName(value = "notificationContent", alternate = {"NotificationContent"})
     @Expose
     public byte[] notificationContent;
 
@@ -62,7 +62,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * The Conditional Access Settings.
      * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      */
-    @SerializedName("conditionalAccessSettings")
+    @SerializedName(value = "conditionalAccessSettings", alternate = {"ConditionalAccessSettings"})
     @Expose
     public OnPremisesConditionalAccessSettings conditionalAccessSettings;
 

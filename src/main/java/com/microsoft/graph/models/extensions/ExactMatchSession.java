@@ -27,7 +27,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Checksum.
      * 
      */
-    @SerializedName("checksum")
+    @SerializedName(value = "checksum", alternate = {"Checksum"})
     @Expose
     public String checksum;
 
@@ -35,7 +35,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Datastore Id.
      * 
      */
-    @SerializedName("datastoreId")
+    @SerializedName(value = "datastoreId", alternate = {"DatastoreId"})
     @Expose
     public String datastoreId;
 
@@ -43,7 +43,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Data Upload URI.
      * 
      */
-    @SerializedName("dataUploadURI")
+    @SerializedName(value = "dataUploadURI", alternate = {"DataUploadURI"})
     @Expose
     public String dataUploadURI;
 
@@ -51,7 +51,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Fields.
      * 
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public java.util.List<String> fields;
 
@@ -59,7 +59,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The File Name.
      * 
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -67,7 +67,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Processing Completion Date Time.
      * 
      */
-    @SerializedName("processingCompletionDateTime")
+    @SerializedName(value = "processingCompletionDateTime", alternate = {"ProcessingCompletionDateTime"})
     @Expose
     public java.util.Calendar processingCompletionDateTime;
 
@@ -75,7 +75,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Remaining Block Count.
      * 
      */
-    @SerializedName("remainingBlockCount")
+    @SerializedName(value = "remainingBlockCount", alternate = {"RemainingBlockCount"})
     @Expose
     public Integer remainingBlockCount;
 
@@ -83,7 +83,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Remaining Job Count.
      * 
      */
-    @SerializedName("remainingJobCount")
+    @SerializedName(value = "remainingJobCount", alternate = {"RemainingJobCount"})
     @Expose
     public Integer remainingJobCount;
 
@@ -91,7 +91,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Rows Per Block.
      * 
      */
-    @SerializedName("rowsPerBlock")
+    @SerializedName(value = "rowsPerBlock", alternate = {"RowsPerBlock"})
     @Expose
     public Integer rowsPerBlock;
 
@@ -99,7 +99,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Salt.
      * 
      */
-    @SerializedName("salt")
+    @SerializedName(value = "salt", alternate = {"Salt"})
     @Expose
     public String salt;
 
@@ -107,7 +107,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -115,7 +115,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Total Block Count.
      * 
      */
-    @SerializedName("totalBlockCount")
+    @SerializedName(value = "totalBlockCount", alternate = {"TotalBlockCount"})
     @Expose
     public Integer totalBlockCount;
 
@@ -123,7 +123,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Total Job Count.
      * 
      */
-    @SerializedName("totalJobCount")
+    @SerializedName(value = "totalJobCount", alternate = {"TotalJobCount"})
     @Expose
     public Integer totalJobCount;
 
@@ -131,7 +131,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Upload Agent Id.
      * 
      */
-    @SerializedName("uploadAgentId")
+    @SerializedName(value = "uploadAgentId", alternate = {"UploadAgentId"})
     @Expose
     public String uploadAgentId;
 
@@ -139,7 +139,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Upload Completion Date Time.
      * 
      */
-    @SerializedName("uploadCompletionDateTime")
+    @SerializedName(value = "uploadCompletionDateTime", alternate = {"UploadCompletionDateTime"})
     @Expose
     public java.util.Calendar uploadCompletionDateTime;
 
@@ -147,7 +147,7 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
      * The Upload Agent.
      * 
      */
-    @SerializedName("uploadAgent")
+    @SerializedName(value = "uploadAgent", alternate = {"UploadAgent"})
     @Expose
     public ExactMatchUploadAgent uploadAgent;
 

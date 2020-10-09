@@ -26,7 +26,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * The Maximum Value.
      * The maximum permitted value
      */
-    @SerializedName("maximumValue")
+    @SerializedName(value = "maximumValue", alternate = {"MaximumValue"})
     @Expose
     public Integer maximumValue;
 
@@ -34,7 +34,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * The Minimum Value.
      * The minimum permitted value
      */
-    @SerializedName("minimumValue")
+    @SerializedName(value = "minimumValue", alternate = {"MinimumValue"})
     @Expose
     public Integer minimumValue;
 

@@ -27,7 +27,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignment exten
      * The Target.
      * The target group assignment defined by the admin.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

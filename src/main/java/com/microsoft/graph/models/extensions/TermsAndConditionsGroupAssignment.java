@@ -27,7 +27,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements IJsonBa
      * The Target Group Id.
      * Unique identifier of a group that the T&amp;C policy is assigned to.
      */
-    @SerializedName("targetGroupId")
+    @SerializedName(value = "targetGroupId", alternate = {"TargetGroupId"})
     @Expose
     public String targetGroupId;
 
@@ -35,7 +35,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements IJsonBa
      * The Terms And Conditions.
      * Navigation link to the terms and conditions that are assigned.
      */
-    @SerializedName("termsAndConditions")
+    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
     @Expose
     public TermsAndConditions termsAndConditions;
 

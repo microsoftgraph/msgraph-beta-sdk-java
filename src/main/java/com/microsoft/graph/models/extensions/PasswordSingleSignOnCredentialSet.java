@@ -36,7 +36,7 @@ public class PasswordSingleSignOnCredentialSet implements IJsonBackedObject {
      * The Credentials.
      * 
      */
-    @SerializedName("credentials")
+    @SerializedName(value = "credentials", alternate = {"Credentials"})
     @Expose
     public java.util.List<Credential> credentials;
 
@@ -44,7 +44,7 @@ public class PasswordSingleSignOnCredentialSet implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

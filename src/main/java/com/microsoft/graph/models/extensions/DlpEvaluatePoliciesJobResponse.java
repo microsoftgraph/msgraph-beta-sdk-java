@@ -27,7 +27,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements I
      * The Result.
      * 
      */
-    @SerializedName("result")
+    @SerializedName(value = "result", alternate = {"Result"})
     @Expose
     public DlpPoliciesJobResult result;
 

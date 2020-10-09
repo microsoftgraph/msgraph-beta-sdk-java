@@ -36,7 +36,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Admin Show Host Info.
      * Whether to show admin host information on the login window.
      */
-    @SerializedName("adminShowHostInfo")
+    @SerializedName(value = "adminShowHostInfo", alternate = {"AdminShowHostInfo"})
     @Expose
     public Boolean adminShowHostInfo;
 
@@ -44,7 +44,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Associated Domains.
      * Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("associatedDomains")
+    @SerializedName(value = "associatedDomains", alternate = {"AssociatedDomains"})
     @Expose
     public java.util.List<KeyValuePair> associatedDomains;
 
@@ -52,7 +52,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Authorized Users List Hidden.
      * Whether to show the name and password dialog or a list of users on the login window.
      */
-    @SerializedName("authorizedUsersListHidden")
+    @SerializedName(value = "authorizedUsersListHidden", alternate = {"AuthorizedUsersListHidden"})
     @Expose
     public Boolean authorizedUsersListHidden;
 
@@ -60,7 +60,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Authorized Users List Hide Admin Users.
      * Whether to hide admin users in the authorized users list on the login window.
      */
-    @SerializedName("authorizedUsersListHideAdminUsers")
+    @SerializedName(value = "authorizedUsersListHideAdminUsers", alternate = {"AuthorizedUsersListHideAdminUsers"})
     @Expose
     public Boolean authorizedUsersListHideAdminUsers;
 
@@ -68,7 +68,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Authorized Users List Hide Local Users.
      * Whether to show only network and system users in the authorized users list on the login window.
      */
-    @SerializedName("authorizedUsersListHideLocalUsers")
+    @SerializedName(value = "authorizedUsersListHideLocalUsers", alternate = {"AuthorizedUsersListHideLocalUsers"})
     @Expose
     public Boolean authorizedUsersListHideLocalUsers;
 
@@ -76,7 +76,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Authorized Users List Hide Mobile Accounts.
      * Whether to hide mobile users in the authorized users list on the login window.
      */
-    @SerializedName("authorizedUsersListHideMobileAccounts")
+    @SerializedName(value = "authorizedUsersListHideMobileAccounts", alternate = {"AuthorizedUsersListHideMobileAccounts"})
     @Expose
     public Boolean authorizedUsersListHideMobileAccounts;
 
@@ -84,7 +84,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Authorized Users List Include Network Users.
      * Whether to show network users in the authorized users list on the login window.
      */
-    @SerializedName("authorizedUsersListIncludeNetworkUsers")
+    @SerializedName(value = "authorizedUsersListIncludeNetworkUsers", alternate = {"AuthorizedUsersListIncludeNetworkUsers"})
     @Expose
     public Boolean authorizedUsersListIncludeNetworkUsers;
 
@@ -92,7 +92,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Authorized Users List Show Other Managed Users.
      * Whether to show other users in the authorized users list on the login window.
      */
-    @SerializedName("authorizedUsersListShowOtherManagedUsers")
+    @SerializedName(value = "authorizedUsersListShowOtherManagedUsers", alternate = {"AuthorizedUsersListShowOtherManagedUsers"})
     @Expose
     public Boolean authorizedUsersListShowOtherManagedUsers;
 
@@ -100,7 +100,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Auto Launch Items.
      * List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("autoLaunchItems")
+    @SerializedName(value = "autoLaunchItems", alternate = {"AutoLaunchItems"})
     @Expose
     public java.util.List<MacOSLaunchItem> autoLaunchItems;
 
@@ -108,7 +108,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Console Access Disabled.
      * Whether the Other user will disregard use of the `&amp;gt;console&amp;gt; special user name.
      */
-    @SerializedName("consoleAccessDisabled")
+    @SerializedName(value = "consoleAccessDisabled", alternate = {"ConsoleAccessDisabled"})
     @Expose
     public Boolean consoleAccessDisabled;
 
@@ -116,7 +116,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Block Deletion.
      * Prevents content caches from purging content to free up disk space for other apps.
      */
-    @SerializedName("contentCachingBlockDeletion")
+    @SerializedName(value = "contentCachingBlockDeletion", alternate = {"ContentCachingBlockDeletion"})
     @Expose
     public Boolean contentCachingBlockDeletion;
 
@@ -124,7 +124,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Client Listen Ranges.
      * A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("contentCachingClientListenRanges")
+    @SerializedName(value = "contentCachingClientListenRanges", alternate = {"ContentCachingClientListenRanges"})
     @Expose
     public java.util.List<IpRange> contentCachingClientListenRanges;
 
@@ -132,7 +132,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Client Policy.
      * Determines the method in which content caching servers will listen for clients.
      */
-    @SerializedName("contentCachingClientPolicy")
+    @SerializedName(value = "contentCachingClientPolicy", alternate = {"ContentCachingClientPolicy"})
     @Expose
     public MacOSContentCachingClientPolicy contentCachingClientPolicy;
 
@@ -140,7 +140,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Data Path.
      * The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
      */
-    @SerializedName("contentCachingDataPath")
+    @SerializedName(value = "contentCachingDataPath", alternate = {"ContentCachingDataPath"})
     @Expose
     public String contentCachingDataPath;
 
@@ -148,7 +148,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Disable Connection Sharing.
      * Disables internet connection sharing.
      */
-    @SerializedName("contentCachingDisableConnectionSharing")
+    @SerializedName(value = "contentCachingDisableConnectionSharing", alternate = {"ContentCachingDisableConnectionSharing"})
     @Expose
     public Boolean contentCachingDisableConnectionSharing;
 
@@ -156,7 +156,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Enabled.
      * Enables content caching and prevents it from being disabled by the user.
      */
-    @SerializedName("contentCachingEnabled")
+    @SerializedName(value = "contentCachingEnabled", alternate = {"ContentCachingEnabled"})
     @Expose
     public Boolean contentCachingEnabled;
 
@@ -164,7 +164,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Force Connection Sharing.
      * Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
      */
-    @SerializedName("contentCachingForceConnectionSharing")
+    @SerializedName(value = "contentCachingForceConnectionSharing", alternate = {"ContentCachingForceConnectionSharing"})
     @Expose
     public Boolean contentCachingForceConnectionSharing;
 
@@ -172,7 +172,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Keep Awake.
      * Prevent the device from sleeping if content caching is enabled.
      */
-    @SerializedName("contentCachingKeepAwake")
+    @SerializedName(value = "contentCachingKeepAwake", alternate = {"ContentCachingKeepAwake"})
     @Expose
     public Boolean contentCachingKeepAwake;
 
@@ -180,7 +180,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Log Client Identities.
      * Enables logging of IP addresses and ports of clients that request cached content.
      */
-    @SerializedName("contentCachingLogClientIdentities")
+    @SerializedName(value = "contentCachingLogClientIdentities", alternate = {"ContentCachingLogClientIdentities"})
     @Expose
     public Boolean contentCachingLogClientIdentities;
 
@@ -188,7 +188,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Max Size Bytes.
      * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space. 
      */
-    @SerializedName("contentCachingMaxSizeBytes")
+    @SerializedName(value = "contentCachingMaxSizeBytes", alternate = {"ContentCachingMaxSizeBytes"})
     @Expose
     public Integer contentCachingMaxSizeBytes;
 
@@ -196,7 +196,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Parents.
      * A list of IP addresses representing parent content caches.
      */
-    @SerializedName("contentCachingParents")
+    @SerializedName(value = "contentCachingParents", alternate = {"ContentCachingParents"})
     @Expose
     public java.util.List<String> contentCachingParents;
 
@@ -204,7 +204,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Parent Selection Policy.
      * Determines the method in which content caching servers will select parents if multiple are present.
      */
-    @SerializedName("contentCachingParentSelectionPolicy")
+    @SerializedName(value = "contentCachingParentSelectionPolicy", alternate = {"ContentCachingParentSelectionPolicy"})
     @Expose
     public MacOSContentCachingParentSelectionPolicy contentCachingParentSelectionPolicy;
 
@@ -212,7 +212,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Peer Filter Ranges.
      * A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("contentCachingPeerFilterRanges")
+    @SerializedName(value = "contentCachingPeerFilterRanges", alternate = {"ContentCachingPeerFilterRanges"})
     @Expose
     public java.util.List<IpRange> contentCachingPeerFilterRanges;
 
@@ -220,7 +220,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Peer Listen Ranges.
      * A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("contentCachingPeerListenRanges")
+    @SerializedName(value = "contentCachingPeerListenRanges", alternate = {"ContentCachingPeerListenRanges"})
     @Expose
     public java.util.List<IpRange> contentCachingPeerListenRanges;
 
@@ -228,7 +228,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Peer Policy.
      * Determines the method in which content caches peer with other caches.
      */
-    @SerializedName("contentCachingPeerPolicy")
+    @SerializedName(value = "contentCachingPeerPolicy", alternate = {"ContentCachingPeerPolicy"})
     @Expose
     public MacOSContentCachingPeerPolicy contentCachingPeerPolicy;
 
@@ -236,7 +236,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Port.
      * Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
      */
-    @SerializedName("contentCachingPort")
+    @SerializedName(value = "contentCachingPort", alternate = {"ContentCachingPort"})
     @Expose
     public Integer contentCachingPort;
 
@@ -244,7 +244,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Public Ranges.
      * A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("contentCachingPublicRanges")
+    @SerializedName(value = "contentCachingPublicRanges", alternate = {"ContentCachingPublicRanges"})
     @Expose
     public java.util.List<IpRange> contentCachingPublicRanges;
 
@@ -252,7 +252,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Show Alerts.
      * Display content caching alerts as system notifications.
      */
-    @SerializedName("contentCachingShowAlerts")
+    @SerializedName(value = "contentCachingShowAlerts", alternate = {"ContentCachingShowAlerts"})
     @Expose
     public Boolean contentCachingShowAlerts;
 
@@ -260,7 +260,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Content Caching Type.
      * Determines what type of content is allowed to be cached by Apple's content caching service.
      */
-    @SerializedName("contentCachingType")
+    @SerializedName(value = "contentCachingType", alternate = {"ContentCachingType"})
     @Expose
     public MacOSContentCachingType contentCachingType;
 
@@ -268,7 +268,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Login Window Text.
      * Custom text to be displayed on the login window.
      */
-    @SerializedName("loginWindowText")
+    @SerializedName(value = "loginWindowText", alternate = {"LoginWindowText"})
     @Expose
     public String loginWindowText;
 
@@ -276,7 +276,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Log Out Disabled While Logged In.
      * Whether the Log Out menu item on the login window will be disabled while the user is logged in.
      */
-    @SerializedName("logOutDisabledWhileLoggedIn")
+    @SerializedName(value = "logOutDisabledWhileLoggedIn", alternate = {"LogOutDisabledWhileLoggedIn"})
     @Expose
     public Boolean logOutDisabledWhileLoggedIn;
 
@@ -284,7 +284,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Mac OSSingle Sign On Extension.
      * Gets or sets a single sign-on extension profile.
      */
-    @SerializedName("macOSSingleSignOnExtension")
+    @SerializedName(value = "macOSSingleSignOnExtension", alternate = {"MacOSSingleSignOnExtension"})
     @Expose
     public MacOSSingleSignOnExtension macOSSingleSignOnExtension;
 
@@ -292,7 +292,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Power Off Disabled While Logged In.
      * Whether the Power Off menu item on the login window will be disabled while the user is logged in.
      */
-    @SerializedName("powerOffDisabledWhileLoggedIn")
+    @SerializedName(value = "powerOffDisabledWhileLoggedIn", alternate = {"PowerOffDisabledWhileLoggedIn"})
     @Expose
     public Boolean powerOffDisabledWhileLoggedIn;
 
@@ -300,7 +300,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Restart Disabled.
      * Whether to hide the Restart button item on the login window.
      */
-    @SerializedName("restartDisabled")
+    @SerializedName(value = "restartDisabled", alternate = {"RestartDisabled"})
     @Expose
     public Boolean restartDisabled;
 
@@ -308,7 +308,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Restart Disabled While Logged In.
      * Whether the Restart menu item on the login window will be disabled while the user is logged in.
      */
-    @SerializedName("restartDisabledWhileLoggedIn")
+    @SerializedName(value = "restartDisabledWhileLoggedIn", alternate = {"RestartDisabledWhileLoggedIn"})
     @Expose
     public Boolean restartDisabledWhileLoggedIn;
 
@@ -316,7 +316,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Screen Lock Disable Immediate.
      * Whether to disable the immediate screen lock functions.
      */
-    @SerializedName("screenLockDisableImmediate")
+    @SerializedName(value = "screenLockDisableImmediate", alternate = {"ScreenLockDisableImmediate"})
     @Expose
     public Boolean screenLockDisableImmediate;
 
@@ -324,7 +324,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Shut Down Disabled.
      * Whether to hide the Shut Down button item on the login window.
      */
-    @SerializedName("shutDownDisabled")
+    @SerializedName(value = "shutDownDisabled", alternate = {"ShutDownDisabled"})
     @Expose
     public Boolean shutDownDisabled;
 
@@ -332,7 +332,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Shut Down Disabled While Logged In.
      * Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
      */
-    @SerializedName("shutDownDisabledWhileLoggedIn")
+    @SerializedName(value = "shutDownDisabledWhileLoggedIn", alternate = {"ShutDownDisabledWhileLoggedIn"})
     @Expose
     public Boolean shutDownDisabledWhileLoggedIn;
 
@@ -340,7 +340,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Single Sign On Extension.
      * Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
      */
-    @SerializedName("singleSignOnExtension")
+    @SerializedName(value = "singleSignOnExtension", alternate = {"SingleSignOnExtension"})
     @Expose
     public SingleSignOnExtension singleSignOnExtension;
 
@@ -348,7 +348,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Sleep Disabled.
      * Whether to hide the Sleep menu item on the login window.
      */
-    @SerializedName("sleepDisabled")
+    @SerializedName(value = "sleepDisabled", alternate = {"SleepDisabled"})
     @Expose
     public Boolean sleepDisabled;
 
@@ -356,7 +356,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * The Single Sign On Extension Pkinit Certificate.
      * PKINIT Certificate for the authentication with single sign-on extensions.
      */
-    @SerializedName("singleSignOnExtensionPkinitCertificate")
+    @SerializedName(value = "singleSignOnExtensionPkinitCertificate", alternate = {"SingleSignOnExtensionPkinitCertificate"})
     @Expose
     public MacOSCertificateProfileBase singleSignOnExtensionPkinitCertificate;
 

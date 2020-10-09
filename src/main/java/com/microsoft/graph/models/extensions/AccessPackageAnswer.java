@@ -36,7 +36,7 @@ public class AccessPackageAnswer implements IJsonBackedObject {
      * The Answered Question.
      * 
      */
-    @SerializedName("answeredQuestion")
+    @SerializedName(value = "answeredQuestion", alternate = {"AnsweredQuestion"})
     @Expose
     public AccessPackageQuestion answeredQuestion;
 
@@ -44,7 +44,7 @@ public class AccessPackageAnswer implements IJsonBackedObject {
      * The Display Value.
      * 
      */
-    @SerializedName("displayValue")
+    @SerializedName(value = "displayValue", alternate = {"DisplayValue"})
     @Expose
     public String displayValue;
 

@@ -27,7 +27,7 @@ public class EducationPointsOutcome extends EducationOutcome implements IJsonBac
      * The Points.
      * 
      */
-    @SerializedName("points")
+    @SerializedName(value = "points", alternate = {"Points"})
     @Expose
     public EducationAssignmentPointsGrade points;
 
@@ -35,7 +35,7 @@ public class EducationPointsOutcome extends EducationOutcome implements IJsonBac
      * The Published Points.
      * 
      */
-    @SerializedName("publishedPoints")
+    @SerializedName(value = "publishedPoints", alternate = {"PublishedPoints"})
     @Expose
     public EducationAssignmentPointsGrade publishedPoints;
 

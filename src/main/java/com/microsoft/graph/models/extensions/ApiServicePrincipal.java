@@ -36,7 +36,7 @@ public class ApiServicePrincipal implements IJsonBackedObject {
      * The Resource Specific Application Permissions.
      * 
      */
-    @SerializedName("resourceSpecificApplicationPermissions")
+    @SerializedName(value = "resourceSpecificApplicationPermissions", alternate = {"ResourceSpecificApplicationPermissions"})
     @Expose
     public java.util.List<ResourceSpecificPermission> resourceSpecificApplicationPermissions;
 

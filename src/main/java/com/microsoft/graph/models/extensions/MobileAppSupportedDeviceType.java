@@ -36,7 +36,7 @@ public class MobileAppSupportedDeviceType implements IJsonBackedObject {
      * The Maximum Operating System Version.
      * Maximum OS version
      */
-    @SerializedName("maximumOperatingSystemVersion")
+    @SerializedName(value = "maximumOperatingSystemVersion", alternate = {"MaximumOperatingSystemVersion"})
     @Expose
     public String maximumOperatingSystemVersion;
 
@@ -44,7 +44,7 @@ public class MobileAppSupportedDeviceType implements IJsonBackedObject {
      * The Minimum Operating System Version.
      * Minimum OS version
      */
-    @SerializedName("minimumOperatingSystemVersion")
+    @SerializedName(value = "minimumOperatingSystemVersion", alternate = {"MinimumOperatingSystemVersion"})
     @Expose
     public String minimumOperatingSystemVersion;
 
@@ -52,7 +52,7 @@ public class MobileAppSupportedDeviceType implements IJsonBackedObject {
      * The Type.
      * Device type
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public DeviceType type;
 

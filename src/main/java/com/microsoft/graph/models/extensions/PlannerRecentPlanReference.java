@@ -35,7 +35,7 @@ public class PlannerRecentPlanReference implements IJsonBackedObject {
      * The Last Accessed Date Time.
      * 
      */
-    @SerializedName("lastAccessedDateTime")
+    @SerializedName(value = "lastAccessedDateTime", alternate = {"LastAccessedDateTime"})
     @Expose
     public java.util.Calendar lastAccessedDateTime;
 
@@ -43,7 +43,7 @@ public class PlannerRecentPlanReference implements IJsonBackedObject {
      * The Plan Title.
      * 
      */
-    @SerializedName("planTitle")
+    @SerializedName(value = "planTitle", alternate = {"PlanTitle"})
     @Expose
     public String planTitle;
 

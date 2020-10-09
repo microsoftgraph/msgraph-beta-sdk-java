@@ -26,7 +26,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * The Allowed Urls.
      * Additional URLs allowed for access
      */
-    @SerializedName("allowedUrls")
+    @SerializedName(value = "allowedUrls", alternate = {"AllowedUrls"})
     @Expose
     public java.util.List<String> allowedUrls;
 
@@ -34,7 +34,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * The Blocked Urls.
      * Additional URLs blocked for access
      */
-    @SerializedName("blockedUrls")
+    @SerializedName(value = "blockedUrls", alternate = {"BlockedUrls"})
     @Expose
     public java.util.List<String> blockedUrls;
 

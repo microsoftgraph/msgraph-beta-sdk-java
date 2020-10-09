@@ -28,7 +28,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -36,7 +36,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -44,7 +44,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
      * The Modified By.
      * 
      */
-    @SerializedName("modifiedBy")
+    @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
     public String modifiedBy;
 
@@ -52,7 +52,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
      * The Modified Date Time.
      * 
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -60,7 +60,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
      * The Access Package Resource Role.
      * 
      */
-    @SerializedName("accessPackageResourceRole")
+    @SerializedName(value = "accessPackageResourceRole", alternate = {"AccessPackageResourceRole"})
     @Expose
     public AccessPackageResourceRole accessPackageResourceRole;
 
@@ -68,7 +68,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
      * The Access Package Resource Scope.
      * 
      */
-    @SerializedName("accessPackageResourceScope")
+    @SerializedName(value = "accessPackageResourceScope", alternate = {"AccessPackageResourceScope"})
     @Expose
     public AccessPackageResourceScope accessPackageResourceScope;
 

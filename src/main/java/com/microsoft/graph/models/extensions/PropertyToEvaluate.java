@@ -35,7 +35,7 @@ public class PropertyToEvaluate implements IJsonBackedObject {
      * The Property Name.
      * 
      */
-    @SerializedName("propertyName")
+    @SerializedName(value = "propertyName", alternate = {"PropertyName"})
     @Expose
     public String propertyName;
 
@@ -43,7 +43,7 @@ public class PropertyToEvaluate implements IJsonBackedObject {
      * The Property Value.
      * 
      */
-    @SerializedName("propertyValue")
+    @SerializedName(value = "propertyValue", alternate = {"PropertyValue"})
     @Expose
     public String propertyValue;
 

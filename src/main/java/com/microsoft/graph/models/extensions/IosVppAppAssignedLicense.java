@@ -26,7 +26,7 @@ public class IosVppAppAssignedLicense extends Entity implements IJsonBackedObjec
      * The User Email Address.
      * The user email address.
      */
-    @SerializedName("userEmailAddress")
+    @SerializedName(value = "userEmailAddress", alternate = {"UserEmailAddress"})
     @Expose
     public String userEmailAddress;
 
@@ -34,7 +34,7 @@ public class IosVppAppAssignedLicense extends Entity implements IJsonBackedObjec
      * The User Id.
      * The user ID.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -42,7 +42,7 @@ public class IosVppAppAssignedLicense extends Entity implements IJsonBackedObjec
      * The User Name.
      * The user name.
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -50,7 +50,7 @@ public class IosVppAppAssignedLicense extends Entity implements IJsonBackedObjec
      * The User Principal Name.
      * The user principal name.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

@@ -22,7 +22,7 @@ public class GroupPolicyUploadedDefinitionFileUploadNewVersionBody {
      * The content.
      * 
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public byte[] content;
 
@@ -30,7 +30,7 @@ public class GroupPolicyUploadedDefinitionFileUploadNewVersionBody {
      * The group Policy Uploaded Language Files.
      * 
      */
-    @SerializedName("groupPolicyUploadedLanguageFiles")
+    @SerializedName(value = "groupPolicyUploadedLanguageFiles", alternate = {"GroupPolicyUploadedLanguageFiles"})
     @Expose
     public java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
 

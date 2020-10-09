@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * The Managed Device Id.
      * The user experience analytics device id.
      */
-    @SerializedName("managedDeviceId")
+    @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
     public String managedDeviceId;
 
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * The Process Name.
      * User experience analytics device startup process name.
      */
-    @SerializedName("processName")
+    @SerializedName(value = "processName", alternate = {"ProcessName"})
     @Expose
     public String processName;
 
@@ -42,7 +42,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * The Product Name.
      * The user experience analytics device startup process product name.
      */
-    @SerializedName("productName")
+    @SerializedName(value = "productName", alternate = {"ProductName"})
     @Expose
     public String productName;
 
@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * The Publisher.
      * The User experience analytics device startup process publisher.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * The Startup Impact In Ms.
      * User experience analytics device startup process impact in milliseconds.
      */
-    @SerializedName("startupImpactInMs")
+    @SerializedName(value = "startupImpactInMs", alternate = {"StartupImpactInMs"})
     @Expose
     public Integer startupImpactInMs;
 

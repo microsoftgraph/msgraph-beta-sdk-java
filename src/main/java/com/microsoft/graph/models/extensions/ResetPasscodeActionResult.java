@@ -26,7 +26,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements IJs
      * The Error Code.
      * RotateBitLockerKeys action error code. Valid values 0 to 2147483647
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 
@@ -34,7 +34,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements IJs
      * The Passcode.
      * Newly generated passcode for the device
      */
-    @SerializedName("passcode")
+    @SerializedName(value = "passcode", alternate = {"Passcode"})
     @Expose
     public String passcode;
 

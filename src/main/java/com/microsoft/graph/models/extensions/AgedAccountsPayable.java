@@ -26,7 +26,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Aged As Of Date.
      * 
      */
-    @SerializedName("agedAsOfDate")
+    @SerializedName(value = "agedAsOfDate", alternate = {"AgedAsOfDate"})
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly agedAsOfDate;
 
@@ -34,7 +34,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Balance Due.
      * 
      */
-    @SerializedName("balanceDue")
+    @SerializedName(value = "balanceDue", alternate = {"BalanceDue"})
     @Expose
     public java.math.BigDecimal balanceDue;
 
@@ -42,7 +42,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Currency Code.
      * 
      */
-    @SerializedName("currencyCode")
+    @SerializedName(value = "currencyCode", alternate = {"CurrencyCode"})
     @Expose
     public String currencyCode;
 
@@ -50,7 +50,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Current Amount.
      * 
      */
-    @SerializedName("currentAmount")
+    @SerializedName(value = "currentAmount", alternate = {"CurrentAmount"})
     @Expose
     public java.math.BigDecimal currentAmount;
 
@@ -58,7 +58,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -66,7 +66,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Period1Amount.
      * 
      */
-    @SerializedName("period1Amount")
+    @SerializedName(value = "period1Amount", alternate = {"Period1Amount"})
     @Expose
     public java.math.BigDecimal period1Amount;
 
@@ -74,7 +74,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Period2Amount.
      * 
      */
-    @SerializedName("period2Amount")
+    @SerializedName(value = "period2Amount", alternate = {"Period2Amount"})
     @Expose
     public java.math.BigDecimal period2Amount;
 
@@ -82,7 +82,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Period3Amount.
      * 
      */
-    @SerializedName("period3Amount")
+    @SerializedName(value = "period3Amount", alternate = {"Period3Amount"})
     @Expose
     public java.math.BigDecimal period3Amount;
 
@@ -90,7 +90,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Period Length Filter.
      * 
      */
-    @SerializedName("periodLengthFilter")
+    @SerializedName(value = "periodLengthFilter", alternate = {"PeriodLengthFilter"})
     @Expose
     public String periodLengthFilter;
 
@@ -98,7 +98,7 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
      * The Vendor Number.
      * 
      */
-    @SerializedName("vendorNumber")
+    @SerializedName(value = "vendorNumber", alternate = {"VendorNumber"})
     @Expose
     public String vendorNumber;
 

@@ -37,7 +37,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Device Id.
      * The corresponding device id.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -45,7 +45,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Error Code.
      * The error code for install or uninstall failures of target app.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 
@@ -53,7 +53,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Install State.
      * The install state of the app of target app.
      */
-    @SerializedName("installState")
+    @SerializedName(value = "installState", alternate = {"InstallState"})
     @Expose
     public ResultantAppState installState;
 
@@ -61,7 +61,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Install State Detail.
      * The install state detail of the app.
      */
-    @SerializedName("installStateDetail")
+    @SerializedName(value = "installStateDetail", alternate = {"InstallStateDetail"})
     @Expose
     public ResultantAppStateDetail installStateDetail;
 
@@ -69,7 +69,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Source Ids.
      * The collection of source mobile app's ids.
      */
-    @SerializedName("sourceIds")
+    @SerializedName(value = "sourceIds", alternate = {"SourceIds"})
     @Expose
     public java.util.List<String> sourceIds;
 
@@ -77,7 +77,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Target Display Name.
      * The related target app's display name.
      */
-    @SerializedName("targetDisplayName")
+    @SerializedName(value = "targetDisplayName", alternate = {"TargetDisplayName"})
     @Expose
     public String targetDisplayName;
 
@@ -85,7 +85,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Target Id.
      * The related target app's id.
      */
-    @SerializedName("targetId")
+    @SerializedName(value = "targetId", alternate = {"TargetId"})
     @Expose
     public String targetId;
 
@@ -93,7 +93,7 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
      * The Target Last Sync Date Time.
      * The last sync time of the target app.
      */
-    @SerializedName("targetLastSyncDateTime")
+    @SerializedName(value = "targetLastSyncDateTime", alternate = {"TargetLastSyncDateTime"})
     @Expose
     public java.util.Calendar targetLastSyncDateTime;
 

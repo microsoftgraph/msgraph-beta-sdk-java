@@ -22,7 +22,7 @@ public class DeviceAppManagementTaskUpdateStatusBody {
      * The status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public DeviceAppManagementTaskStatus status;
 
@@ -30,7 +30,7 @@ public class DeviceAppManagementTaskUpdateStatusBody {
      * The note.
      * 
      */
-    @SerializedName("note")
+    @SerializedName(value = "note", alternate = {"Note"})
     @Expose
     public String note;
 

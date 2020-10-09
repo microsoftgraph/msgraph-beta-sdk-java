@@ -22,7 +22,7 @@ public class EventMessageRequestTentativelyAcceptBody {
      * The proposed New Time.
      * 
      */
-    @SerializedName("proposedNewTime")
+    @SerializedName(value = "proposedNewTime", alternate = {"ProposedNewTime"})
     @Expose
     public TimeSlot proposedNewTime;
 
@@ -30,7 +30,7 @@ public class EventMessageRequestTentativelyAcceptBody {
      * The send Response.
      * 
      */
-    @SerializedName("sendResponse")
+    @SerializedName(value = "sendResponse", alternate = {"SendResponse"})
     @Expose
     public Boolean sendResponse;
 
@@ -38,7 +38,7 @@ public class EventMessageRequestTentativelyAcceptBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

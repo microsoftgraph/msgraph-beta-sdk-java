@@ -28,7 +28,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Apple Id Disabled.
      * Indicates if Apple id setup pane is disabled
      */
-    @SerializedName("appleIdDisabled")
+    @SerializedName(value = "appleIdDisabled", alternate = {"AppleIdDisabled"})
     @Expose
     public Boolean appleIdDisabled;
 
@@ -36,7 +36,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Apple Pay Disabled.
      * Indicates if Apple pay setup pane is disabled
      */
-    @SerializedName("applePayDisabled")
+    @SerializedName(value = "applePayDisabled", alternate = {"ApplePayDisabled"})
     @Expose
     public Boolean applePayDisabled;
 
@@ -44,7 +44,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Await Device Configured Confirmation.
      * Indicates if the device will need to wait for configured confirmation
      */
-    @SerializedName("awaitDeviceConfiguredConfirmation")
+    @SerializedName(value = "awaitDeviceConfiguredConfirmation", alternate = {"AwaitDeviceConfiguredConfirmation"})
     @Expose
     public Boolean awaitDeviceConfiguredConfirmation;
 
@@ -52,7 +52,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Diagnostics Disabled.
      * Indicates if diagnostics setup pane is disabled
      */
-    @SerializedName("diagnosticsDisabled")
+    @SerializedName(value = "diagnosticsDisabled", alternate = {"DiagnosticsDisabled"})
     @Expose
     public Boolean diagnosticsDisabled;
 
@@ -60,7 +60,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Enable Shared IPad.
      * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
      */
-    @SerializedName("enableSharedIPad")
+    @SerializedName(value = "enableSharedIPad", alternate = {"EnableSharedIPad"})
     @Expose
     public Boolean enableSharedIPad;
 
@@ -68,7 +68,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Is Default.
      * Indicates if this is the default profile
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -76,7 +76,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Is Mandatory.
      * Indicates if the profile is mandatory
      */
-    @SerializedName("isMandatory")
+    @SerializedName(value = "isMandatory", alternate = {"IsMandatory"})
     @Expose
     public Boolean isMandatory;
 
@@ -84,7 +84,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The ITunes Pairing Mode.
      * Indicates the iTunes pairing mode
      */
-    @SerializedName("iTunesPairingMode")
+    @SerializedName(value = "iTunesPairingMode", alternate = {"ITunesPairingMode"})
     @Expose
     public ITunesPairingMode iTunesPairingMode;
 
@@ -92,7 +92,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Location Disabled.
      * Indicates if Location service setup pane is disabled
      */
-    @SerializedName("locationDisabled")
+    @SerializedName(value = "locationDisabled", alternate = {"LocationDisabled"})
     @Expose
     public Boolean locationDisabled;
 
@@ -100,7 +100,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Mac OSFile Vault Disabled.
      * Indicates if Mac OS file vault is disabled
      */
-    @SerializedName("macOSFileVaultDisabled")
+    @SerializedName(value = "macOSFileVaultDisabled", alternate = {"MacOSFileVaultDisabled"})
     @Expose
     public Boolean macOSFileVaultDisabled;
 
@@ -108,7 +108,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Mac OSRegistration Disabled.
      * Indicates if Mac OS registration is disabled
      */
-    @SerializedName("macOSRegistrationDisabled")
+    @SerializedName(value = "macOSRegistrationDisabled", alternate = {"MacOSRegistrationDisabled"})
     @Expose
     public Boolean macOSRegistrationDisabled;
 
@@ -116,7 +116,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Management Certificates.
      * Management certificates for Apple Configurator
      */
-    @SerializedName("managementCertificates")
+    @SerializedName(value = "managementCertificates", alternate = {"ManagementCertificates"})
     @Expose
     public java.util.List<ManagementCertificateWithThumbprint> managementCertificates;
 
@@ -124,7 +124,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Pass Code Disabled.
      * Indicates if Passcode setup pane is disabled
      */
-    @SerializedName("passCodeDisabled")
+    @SerializedName(value = "passCodeDisabled", alternate = {"PassCodeDisabled"})
     @Expose
     public Boolean passCodeDisabled;
 
@@ -132,7 +132,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Profile Removal Disabled.
      * Indicates if the profile removal option is disabled
      */
-    @SerializedName("profileRemovalDisabled")
+    @SerializedName(value = "profileRemovalDisabled", alternate = {"ProfileRemovalDisabled"})
     @Expose
     public Boolean profileRemovalDisabled;
 
@@ -140,7 +140,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Restore Blocked.
      * Indicates if Restore setup pane is blocked
      */
-    @SerializedName("restoreBlocked")
+    @SerializedName(value = "restoreBlocked", alternate = {"RestoreBlocked"})
     @Expose
     public Boolean restoreBlocked;
 
@@ -148,7 +148,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Restore From Android Disabled.
      * Indicates if Restore from Android is disabled
      */
-    @SerializedName("restoreFromAndroidDisabled")
+    @SerializedName(value = "restoreFromAndroidDisabled", alternate = {"RestoreFromAndroidDisabled"})
     @Expose
     public Boolean restoreFromAndroidDisabled;
 
@@ -156,7 +156,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Shared IPad Maximum User Count.
      * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
      */
-    @SerializedName("sharedIPadMaximumUserCount")
+    @SerializedName(value = "sharedIPadMaximumUserCount", alternate = {"SharedIPadMaximumUserCount"})
     @Expose
     public Integer sharedIPadMaximumUserCount;
 
@@ -164,7 +164,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Siri Disabled.
      * Indicates if siri setup pane is disabled
      */
-    @SerializedName("siriDisabled")
+    @SerializedName(value = "siriDisabled", alternate = {"SiriDisabled"})
     @Expose
     public Boolean siriDisabled;
 
@@ -172,7 +172,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Supervised Mode Enabled.
      * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      */
-    @SerializedName("supervisedModeEnabled")
+    @SerializedName(value = "supervisedModeEnabled", alternate = {"SupervisedModeEnabled"})
     @Expose
     public Boolean supervisedModeEnabled;
 
@@ -180,7 +180,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Support Department.
      * Support department information
      */
-    @SerializedName("supportDepartment")
+    @SerializedName(value = "supportDepartment", alternate = {"SupportDepartment"})
     @Expose
     public String supportDepartment;
 
@@ -188,7 +188,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Support Phone Number.
      * Support phone number
      */
-    @SerializedName("supportPhoneNumber")
+    @SerializedName(value = "supportPhoneNumber", alternate = {"SupportPhoneNumber"})
     @Expose
     public String supportPhoneNumber;
 
@@ -196,7 +196,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Terms And Conditions Disabled.
      * Indicates if 'Terms and Conditions' setup pane is disabled
      */
-    @SerializedName("termsAndConditionsDisabled")
+    @SerializedName(value = "termsAndConditionsDisabled", alternate = {"TermsAndConditionsDisabled"})
     @Expose
     public Boolean termsAndConditionsDisabled;
 
@@ -204,7 +204,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Touch Id Disabled.
      * Indicates if touch id setup pane is disabled
      */
-    @SerializedName("touchIdDisabled")
+    @SerializedName(value = "touchIdDisabled", alternate = {"TouchIdDisabled"})
     @Expose
     public Boolean touchIdDisabled;
 
@@ -212,7 +212,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
      * The Zoom Disabled.
      * Indicates if zoom setup pane is disabled
      */
-    @SerializedName("zoomDisabled")
+    @SerializedName(value = "zoomDisabled", alternate = {"ZoomDisabled"})
     @Expose
     public Boolean zoomDisabled;
 

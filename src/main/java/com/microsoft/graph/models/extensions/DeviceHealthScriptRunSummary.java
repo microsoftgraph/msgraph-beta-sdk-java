@@ -26,7 +26,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Detection Script Error Device Count.
      * Number of devices on which the detection script execution encountered an error and did not complete
      */
-    @SerializedName("detectionScriptErrorDeviceCount")
+    @SerializedName(value = "detectionScriptErrorDeviceCount", alternate = {"DetectionScriptErrorDeviceCount"})
     @Expose
     public Integer detectionScriptErrorDeviceCount;
 
@@ -34,7 +34,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Detection Script Pending Device Count.
      * Number of devices which have not yet run the latest version of the device health script
      */
-    @SerializedName("detectionScriptPendingDeviceCount")
+    @SerializedName(value = "detectionScriptPendingDeviceCount", alternate = {"DetectionScriptPendingDeviceCount"})
     @Expose
     public Integer detectionScriptPendingDeviceCount;
 
@@ -42,7 +42,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Issue Detected Device Count.
      * Number of devices for which the detection script found an issue
      */
-    @SerializedName("issueDetectedDeviceCount")
+    @SerializedName(value = "issueDetectedDeviceCount", alternate = {"IssueDetectedDeviceCount"})
     @Expose
     public Integer issueDetectedDeviceCount;
 
@@ -50,7 +50,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Issue Remediated Cumulative Device Count.
      * Number of devices that were remediated over the last 30 days
      */
-    @SerializedName("issueRemediatedCumulativeDeviceCount")
+    @SerializedName(value = "issueRemediatedCumulativeDeviceCount", alternate = {"IssueRemediatedCumulativeDeviceCount"})
     @Expose
     public Integer issueRemediatedCumulativeDeviceCount;
 
@@ -58,7 +58,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Issue Remediated Device Count.
      * Number of devices for which the remediation script was able to resolve the detected issue
      */
-    @SerializedName("issueRemediatedDeviceCount")
+    @SerializedName(value = "issueRemediatedDeviceCount", alternate = {"IssueRemediatedDeviceCount"})
     @Expose
     public Integer issueRemediatedDeviceCount;
 
@@ -66,7 +66,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Issue Reoccurred Device Count.
      * Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
      */
-    @SerializedName("issueReoccurredDeviceCount")
+    @SerializedName(value = "issueReoccurredDeviceCount", alternate = {"IssueReoccurredDeviceCount"})
     @Expose
     public Integer issueReoccurredDeviceCount;
 
@@ -74,7 +74,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Last Script Run Date Time.
      * Last run time for the script across all devices
      */
-    @SerializedName("lastScriptRunDateTime")
+    @SerializedName(value = "lastScriptRunDateTime", alternate = {"LastScriptRunDateTime"})
     @Expose
     public java.util.Calendar lastScriptRunDateTime;
 
@@ -82,7 +82,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The No Issue Detected Device Count.
      * Number of devices for which the detection script did not find an issue and the device is healthy
      */
-    @SerializedName("noIssueDetectedDeviceCount")
+    @SerializedName(value = "noIssueDetectedDeviceCount", alternate = {"NoIssueDetectedDeviceCount"})
     @Expose
     public Integer noIssueDetectedDeviceCount;
 
@@ -90,7 +90,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Remediation Script Error Device Count.
      * Number of devices for which the remediation script execution encountered an error and did not complete
      */
-    @SerializedName("remediationScriptErrorDeviceCount")
+    @SerializedName(value = "remediationScriptErrorDeviceCount", alternate = {"RemediationScriptErrorDeviceCount"})
     @Expose
     public Integer remediationScriptErrorDeviceCount;
 
@@ -98,7 +98,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
      * The Remediation Skipped Device Count.
      * Number of devices for which remediation was skipped
      */
-    @SerializedName("remediationSkippedDeviceCount")
+    @SerializedName(value = "remediationSkippedDeviceCount", alternate = {"RemediationSkippedDeviceCount"})
     @Expose
     public Integer remediationSkippedDeviceCount;
 

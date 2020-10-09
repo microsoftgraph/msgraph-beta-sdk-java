@@ -29,7 +29,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Active Hours End.
      * Active Hours End (active hours mean the time window when updates install should not happen)
      */
-    @SerializedName("activeHoursEnd")
+    @SerializedName(value = "activeHoursEnd", alternate = {"ActiveHoursEnd"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
 
@@ -37,7 +37,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Active Hours Start.
      * Active Hours Start (active hours mean the time window when updates install should not happen)
      */
-    @SerializedName("activeHoursStart")
+    @SerializedName(value = "activeHoursStart", alternate = {"ActiveHoursStart"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
 
@@ -45,7 +45,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Custom Update Time Windows.
      * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
      */
-    @SerializedName("customUpdateTimeWindows")
+    @SerializedName(value = "customUpdateTimeWindows", alternate = {"CustomUpdateTimeWindows"})
     @Expose
     public java.util.List<CustomUpdateTimeWindow> customUpdateTimeWindows;
 
@@ -53,7 +53,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Desired Os Version.
      * If left unspecified, devices will update to the latest version of the OS.
      */
-    @SerializedName("desiredOsVersion")
+    @SerializedName(value = "desiredOsVersion", alternate = {"DesiredOsVersion"})
     @Expose
     public String desiredOsVersion;
 
@@ -61,7 +61,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Enforced Software Update Delay In Days.
      * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
      */
-    @SerializedName("enforcedSoftwareUpdateDelayInDays")
+    @SerializedName(value = "enforcedSoftwareUpdateDelayInDays", alternate = {"EnforcedSoftwareUpdateDelayInDays"})
     @Expose
     public Integer enforcedSoftwareUpdateDelayInDays;
 
@@ -69,7 +69,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Is Enabled.
      * Is setting enabled in UI
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -77,7 +77,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Scheduled Install Days.
      * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      */
-    @SerializedName("scheduledInstallDays")
+    @SerializedName(value = "scheduledInstallDays", alternate = {"ScheduledInstallDays"})
     @Expose
     public java.util.List<DayOfWeek> scheduledInstallDays;
 
@@ -85,7 +85,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Update Schedule Type.
      * Update schedule type
      */
-    @SerializedName("updateScheduleType")
+    @SerializedName(value = "updateScheduleType", alternate = {"UpdateScheduleType"})
     @Expose
     public IosSoftwareUpdateScheduleType updateScheduleType;
 
@@ -93,7 +93,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Utc Time Offset In Minutes.
      * UTC Time Offset indicated in minutes
      */
-    @SerializedName("utcTimeOffsetInMinutes")
+    @SerializedName(value = "utcTimeOffsetInMinutes", alternate = {"UtcTimeOffsetInMinutes"})
     @Expose
     public Integer utcTimeOffsetInMinutes;
 

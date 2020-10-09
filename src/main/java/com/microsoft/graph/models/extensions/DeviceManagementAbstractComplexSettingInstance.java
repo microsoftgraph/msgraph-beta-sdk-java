@@ -27,7 +27,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      * The Implementation Id.
      * The definition ID for the chosen implementation of this complex setting
      */
-    @SerializedName("implementationId")
+    @SerializedName(value = "implementationId", alternate = {"ImplementationId"})
     @Expose
     public String implementationId;
 
@@ -35,7 +35,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      * The Value.
      * The values that make up the complex setting
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public DeviceManagementSettingInstanceCollectionPage value;
 

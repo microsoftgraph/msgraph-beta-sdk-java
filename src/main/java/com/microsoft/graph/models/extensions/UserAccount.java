@@ -36,7 +36,7 @@ public class UserAccount implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class UserAccount implements IJsonBackedObject {
      * The Last Seen Date Time.
      * 
      */
-    @SerializedName("lastSeenDateTime")
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
     public java.util.Calendar lastSeenDateTime;
 
@@ -52,7 +52,7 @@ public class UserAccount implements IJsonBackedObject {
      * The Risk Score.
      * 
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -60,7 +60,7 @@ public class UserAccount implements IJsonBackedObject {
      * The Service.
      * 
      */
-    @SerializedName("service")
+    @SerializedName(value = "service", alternate = {"Service"})
     @Expose
     public String service;
 
@@ -68,7 +68,7 @@ public class UserAccount implements IJsonBackedObject {
      * The Signin Name.
      * 
      */
-    @SerializedName("signinName")
+    @SerializedName(value = "signinName", alternate = {"SigninName"})
     @Expose
     public String signinName;
 
@@ -76,7 +76,7 @@ public class UserAccount implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public AccountStatus status;
 

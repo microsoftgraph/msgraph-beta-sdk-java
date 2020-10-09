@@ -32,7 +32,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Hash Algorithm.
      * SCEP Hash Algorithm.
      */
-    @SerializedName("hashAlgorithm")
+    @SerializedName(value = "hashAlgorithm", alternate = {"HashAlgorithm"})
     @Expose
     public EnumSet<HashAlgorithms> hashAlgorithm;
 
@@ -40,7 +40,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Key Size.
      * SCEP Key Size.
      */
-    @SerializedName("keySize")
+    @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
     public KeySize keySize;
 
@@ -48,7 +48,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Key Usage.
      * SCEP Key Usage.
      */
-    @SerializedName("keyUsage")
+    @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose
     public EnumSet<KeyUsages> keyUsage;
 
@@ -56,7 +56,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Scep Server Urls.
      * SCEP Server Url(s).
      */
-    @SerializedName("scepServerUrls")
+    @SerializedName(value = "scepServerUrls", alternate = {"ScepServerUrls"})
     @Expose
     public java.util.List<String> scepServerUrls;
 
@@ -64,7 +64,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
-    @SerializedName("subjectAlternativeNameFormatString")
+    @SerializedName(value = "subjectAlternativeNameFormatString", alternate = {"SubjectAlternativeNameFormatString"})
     @Expose
     public String subjectAlternativeNameFormatString;
 
@@ -72,7 +72,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Subject Name Format String.
      * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
-    @SerializedName("subjectNameFormatString")
+    @SerializedName(value = "subjectNameFormatString", alternate = {"SubjectNameFormatString"})
     @Expose
     public String subjectNameFormatString;
 
@@ -80,7 +80,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
-    @SerializedName("managedDeviceCertificateStates")
+    @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
@@ -88,7 +88,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The Root Certificate.
      * Trusted Root Certificate.
      */
-    @SerializedName("rootCertificate")
+    @SerializedName(value = "rootCertificate", alternate = {"RootCertificate"})
     @Expose
     public WindowsPhone81TrustedRootCertificate rootCertificate;
 

@@ -35,7 +35,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Business Flow Template Id.
      * 
      */
-    @SerializedName("businessFlowTemplateId")
+    @SerializedName(value = "businessFlowTemplateId", alternate = {"BusinessFlowTemplateId"})
     @Expose
     public String businessFlowTemplateId;
 
@@ -43,7 +43,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public UserIdentity createdBy;
 
@@ -51,7 +51,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -59,7 +59,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -67,7 +67,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -75,7 +75,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Reviewed Entity.
      * 
      */
-    @SerializedName("reviewedEntity")
+    @SerializedName(value = "reviewedEntity", alternate = {"ReviewedEntity"})
     @Expose
     public Identity reviewedEntity;
 
@@ -83,7 +83,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Reviewer Type.
      * 
      */
-    @SerializedName("reviewerType")
+    @SerializedName(value = "reviewerType", alternate = {"ReviewerType"})
     @Expose
     public String reviewerType;
 
@@ -91,7 +91,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public AccessReviewSettings settings;
 
@@ -99,7 +99,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -107,7 +107,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -115,7 +115,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Decisions.
      * 
      */
-    @SerializedName("decisions")
+    @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
     public AccessReviewDecisionCollectionPage decisions;
 
@@ -123,7 +123,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Instances.
      * 
      */
-    @SerializedName("instances")
+    @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
     public AccessReviewCollectionPage instances;
 
@@ -131,7 +131,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The My Decisions.
      * 
      */
-    @SerializedName("myDecisions")
+    @SerializedName(value = "myDecisions", alternate = {"MyDecisions"})
     @Expose
     public AccessReviewDecisionCollectionPage myDecisions;
 
@@ -139,7 +139,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Reviewers.
      * 
      */
-    @SerializedName("reviewers")
+    @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
     public AccessReviewReviewerCollectionPage reviewers;
 

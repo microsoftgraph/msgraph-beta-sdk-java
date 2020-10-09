@@ -35,7 +35,7 @@ public class MatchLocation implements IJsonBackedObject {
      * The Length.
      * 
      */
-    @SerializedName("length")
+    @SerializedName(value = "length", alternate = {"Length"})
     @Expose
     public Integer length;
 
@@ -43,7 +43,7 @@ public class MatchLocation implements IJsonBackedObject {
      * The Offset.
      * 
      */
-    @SerializedName("offset")
+    @SerializedName(value = "offset", alternate = {"Offset"})
     @Expose
     public Integer offset;
 

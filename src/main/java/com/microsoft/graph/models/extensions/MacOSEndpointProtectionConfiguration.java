@@ -30,7 +30,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Automatic Sample Submission.
      * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionAutomaticSampleSubmission")
+    @SerializedName(value = "advancedThreatProtectionAutomaticSampleSubmission", alternate = {"AdvancedThreatProtectionAutomaticSampleSubmission"})
     @Expose
     public Enablement advancedThreatProtectionAutomaticSampleSubmission;
 
@@ -38,7 +38,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Cloud Delivered.
      * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionCloudDelivered")
+    @SerializedName(value = "advancedThreatProtectionCloudDelivered", alternate = {"AdvancedThreatProtectionCloudDelivered"})
     @Expose
     public Enablement advancedThreatProtectionCloudDelivered;
 
@@ -46,7 +46,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Diagnostic Data Collection.
      * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionDiagnosticDataCollection")
+    @SerializedName(value = "advancedThreatProtectionDiagnosticDataCollection", alternate = {"AdvancedThreatProtectionDiagnosticDataCollection"})
     @Expose
     public Enablement advancedThreatProtectionDiagnosticDataCollection;
 
@@ -54,7 +54,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Excluded Extensions.
      * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionExcludedExtensions")
+    @SerializedName(value = "advancedThreatProtectionExcludedExtensions", alternate = {"AdvancedThreatProtectionExcludedExtensions"})
     @Expose
     public java.util.List<String> advancedThreatProtectionExcludedExtensions;
 
@@ -62,7 +62,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Excluded Files.
      * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionExcludedFiles")
+    @SerializedName(value = "advancedThreatProtectionExcludedFiles", alternate = {"AdvancedThreatProtectionExcludedFiles"})
     @Expose
     public java.util.List<String> advancedThreatProtectionExcludedFiles;
 
@@ -70,7 +70,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Excluded Folders.
      * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionExcludedFolders")
+    @SerializedName(value = "advancedThreatProtectionExcludedFolders", alternate = {"AdvancedThreatProtectionExcludedFolders"})
     @Expose
     public java.util.List<String> advancedThreatProtectionExcludedFolders;
 
@@ -78,7 +78,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Excluded Processes.
      * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionExcludedProcesses")
+    @SerializedName(value = "advancedThreatProtectionExcludedProcesses", alternate = {"AdvancedThreatProtectionExcludedProcesses"})
     @Expose
     public java.util.List<String> advancedThreatProtectionExcludedProcesses;
 
@@ -86,7 +86,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Advanced Threat Protection Real Time.
      * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("advancedThreatProtectionRealTime")
+    @SerializedName(value = "advancedThreatProtectionRealTime", alternate = {"AdvancedThreatProtectionRealTime"})
     @Expose
     public Enablement advancedThreatProtectionRealTime;
 
@@ -94,7 +94,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Allow Deferral Until Sign Out.
      * Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
      */
-    @SerializedName("fileVaultAllowDeferralUntilSignOut")
+    @SerializedName(value = "fileVaultAllowDeferralUntilSignOut", alternate = {"FileVaultAllowDeferralUntilSignOut"})
     @Expose
     public Boolean fileVaultAllowDeferralUntilSignOut;
 
@@ -102,7 +102,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Disable Prompt At Sign Out.
      * Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
      */
-    @SerializedName("fileVaultDisablePromptAtSignOut")
+    @SerializedName(value = "fileVaultDisablePromptAtSignOut", alternate = {"FileVaultDisablePromptAtSignOut"})
     @Expose
     public Boolean fileVaultDisablePromptAtSignOut;
 
@@ -110,7 +110,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Enabled.
      * Whether FileVault should be enabled or not.
      */
-    @SerializedName("fileVaultEnabled")
+    @SerializedName(value = "fileVaultEnabled", alternate = {"FileVaultEnabled"})
     @Expose
     public Boolean fileVaultEnabled;
 
@@ -118,7 +118,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Hide Personal Recovery Key.
      * Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
      */
-    @SerializedName("fileVaultHidePersonalRecoveryKey")
+    @SerializedName(value = "fileVaultHidePersonalRecoveryKey", alternate = {"FileVaultHidePersonalRecoveryKey"})
     @Expose
     public Boolean fileVaultHidePersonalRecoveryKey;
 
@@ -126,7 +126,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Institutional Recovery Key Certificate.
      * Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
      */
-    @SerializedName("fileVaultInstitutionalRecoveryKeyCertificate")
+    @SerializedName(value = "fileVaultInstitutionalRecoveryKeyCertificate", alternate = {"FileVaultInstitutionalRecoveryKeyCertificate"})
     @Expose
     public byte[] fileVaultInstitutionalRecoveryKeyCertificate;
 
@@ -134,7 +134,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Institutional Recovery Key Certificate File Name.
      * File name of the institutional recovery key certificate to display in UI. (*.der).
      */
-    @SerializedName("fileVaultInstitutionalRecoveryKeyCertificateFileName")
+    @SerializedName(value = "fileVaultInstitutionalRecoveryKeyCertificateFileName", alternate = {"FileVaultInstitutionalRecoveryKeyCertificateFileName"})
     @Expose
     public String fileVaultInstitutionalRecoveryKeyCertificateFileName;
 
@@ -142,7 +142,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Number Of Times User Can Ignore.
      * Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
      */
-    @SerializedName("fileVaultNumberOfTimesUserCanIgnore")
+    @SerializedName(value = "fileVaultNumberOfTimesUserCanIgnore", alternate = {"FileVaultNumberOfTimesUserCanIgnore"})
     @Expose
     public Integer fileVaultNumberOfTimesUserCanIgnore;
 
@@ -150,7 +150,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Personal Recovery Key Help Message.
      * Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
      */
-    @SerializedName("fileVaultPersonalRecoveryKeyHelpMessage")
+    @SerializedName(value = "fileVaultPersonalRecoveryKeyHelpMessage", alternate = {"FileVaultPersonalRecoveryKeyHelpMessage"})
     @Expose
     public String fileVaultPersonalRecoveryKeyHelpMessage;
 
@@ -158,7 +158,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Personal Recovery Key Rotation In Months.
      * Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
      */
-    @SerializedName("fileVaultPersonalRecoveryKeyRotationInMonths")
+    @SerializedName(value = "fileVaultPersonalRecoveryKeyRotationInMonths", alternate = {"FileVaultPersonalRecoveryKeyRotationInMonths"})
     @Expose
     public Integer fileVaultPersonalRecoveryKeyRotationInMonths;
 
@@ -166,7 +166,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The File Vault Selected Recovery Key Types.
      * Required if FileVault is enabled, determines the type(s) of recovery key to use. 
      */
-    @SerializedName("fileVaultSelectedRecoveryKeyTypes")
+    @SerializedName(value = "fileVaultSelectedRecoveryKeyTypes", alternate = {"FileVaultSelectedRecoveryKeyTypes"})
     @Expose
     public EnumSet<MacOSFileVaultRecoveryKeyTypes> fileVaultSelectedRecoveryKeyTypes;
 
@@ -174,7 +174,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Firewall Applications.
      * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("firewallApplications")
+    @SerializedName(value = "firewallApplications", alternate = {"FirewallApplications"})
     @Expose
     public java.util.List<MacOSFirewallApplication> firewallApplications;
 
@@ -182,7 +182,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Firewall Block All Incoming.
      * Corresponds to the ???Block all incoming connections??? option.
      */
-    @SerializedName("firewallBlockAllIncoming")
+    @SerializedName(value = "firewallBlockAllIncoming", alternate = {"FirewallBlockAllIncoming"})
     @Expose
     public Boolean firewallBlockAllIncoming;
 
@@ -190,7 +190,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Firewall Enabled.
      * Whether the firewall should be enabled or not.
      */
-    @SerializedName("firewallEnabled")
+    @SerializedName(value = "firewallEnabled", alternate = {"FirewallEnabled"})
     @Expose
     public Boolean firewallEnabled;
 
@@ -198,7 +198,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Firewall Enable Stealth Mode.
      * Corresponds to ???Enable stealth mode.???
      */
-    @SerializedName("firewallEnableStealthMode")
+    @SerializedName(value = "firewallEnableStealthMode", alternate = {"FirewallEnableStealthMode"})
     @Expose
     public Boolean firewallEnableStealthMode;
 
@@ -206,7 +206,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Gatekeeper Allowed App Source.
      * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
      */
-    @SerializedName("gatekeeperAllowedAppSource")
+    @SerializedName(value = "gatekeeperAllowedAppSource", alternate = {"GatekeeperAllowedAppSource"})
     @Expose
     public MacOSGatekeeperAppSources gatekeeperAllowedAppSource;
 
@@ -214,7 +214,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * The Gatekeeper Block Override.
      * If set to true, the user override for Gatekeeper will be disabled.
      */
-    @SerializedName("gatekeeperBlockOverride")
+    @SerializedName(value = "gatekeeperBlockOverride", alternate = {"GatekeeperBlockOverride"})
     @Expose
     public Boolean gatekeeperBlockOverride;
 
