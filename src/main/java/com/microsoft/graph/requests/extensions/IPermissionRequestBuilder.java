@@ -36,5 +36,6 @@ public interface IPermissionRequestBuilder extends IRequestBuilder {
 
 
     IPermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients);
+    IPermissionRevokeGrantsRequestBuilder revokeGrants(final java.util.List<DriveRecipient> grantees);
 
 }

@@ -9,6 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.PrintDocument;
+import com.microsoft.graph.models.extensions.PrintDocumentUploadProperties;
+import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
 

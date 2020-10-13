@@ -19,10 +19,6 @@ public enum PrintJobProcessingState
     */
     PENDING,
     /**
-    * pending Held
-    */
-    PENDING_HELD,
-    /**
     * processing
     */
     PROCESSING,

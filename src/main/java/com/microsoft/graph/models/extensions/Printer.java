@@ -16,6 +16,7 @@ import com.microsoft.graph.models.extensions.PrinterBase;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.PrinterShareCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionPage;
 
 
@@ -86,6 +87,12 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     public PrinterShare share;
 
     /**
+     * The Shares.
+     * 
+     */
+    public PrinterShareCollectionPage shares;
+
+    /**
      * The Task Triggers.
      * 
      */
@@ -143,6 +150,10 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
         if (json.has("connectors")) {
             connectors = serializer.deserializeObject(json.get("connectors").toString(), PrintConnectorCollectionPage.class);
+        }
+
+        if (json.has("shares")) {
+            shares = serializer.deserializeObject(json.get("shares").toString(), PrinterShareCollectionPage.class);
         }
 
         if (json.has("taskTriggers")) {

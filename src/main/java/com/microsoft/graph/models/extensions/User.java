@@ -1120,16 +1120,12 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Chats.
      * 
      */
-    @SerializedName(value = "chats", alternate = {"Chats"})
-    @Expose
     public ChatCollectionPage chats;
 
     /**
      * The Joined Teams.
      * 
      */
-    @SerializedName(value = "joinedTeams", alternate = {"JoinedTeams"})
-    @Expose
     public TeamCollectionPage joinedTeams;
 
     /**

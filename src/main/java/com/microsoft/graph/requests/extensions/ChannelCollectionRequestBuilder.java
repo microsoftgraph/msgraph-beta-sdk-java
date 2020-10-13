@@ -17,6 +17,7 @@ import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequest;
 import com.microsoft.graph.requests.extensions.IChannelAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -66,5 +67,9 @@ public class ChannelCollectionRequestBuilder extends BaseRequestBuilder implemen
 
     public IChannelAllMessagesCollectionRequestBuilder allMessages() {
         return new ChannelAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.allMessages"), getClient(), null);
+    }
+
+    public IChannelGetAllMessagesCollectionRequestBuilder getAllMessages() {
+        return new ChannelGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
     }
 }

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -28,7 +29,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
-    public String createdBy;
+    public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
@@ -52,7 +53,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
-    public String lastModifiedBy;
+    public IdentitySet lastModifiedBy;
 
     /**
      * The Last Modified Date Time.

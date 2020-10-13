@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.CaseStatus;
 import com.microsoft.graph.models.extensions.ReviewSet;
 import com.microsoft.graph.models.extensions.Entity;
@@ -31,7 +32,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "closedBy", alternate = {"ClosedBy"})
     @Expose
-    public String closedBy;
+    public IdentitySet closedBy;
 
     /**
      * The Closed Date Time.
@@ -79,7 +80,7 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
-    public String lastModifiedBy;
+    public IdentitySet lastModifiedBy;
 
     /**
      * The Last Modified Date Time.

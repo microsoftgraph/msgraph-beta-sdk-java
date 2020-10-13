@@ -45,6 +45,14 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
     public PrinterDefaults defaults;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+    public String displayName;
+
+    /**
      * The Is Accepting Jobs.
      * 
      */

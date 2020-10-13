@@ -57,4 +57,8 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
     public IPermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
         return new PermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.grant"), getClient(), null, roles, recipients);
     }
+
+    public IPermissionRevokeGrantsRequestBuilder revokeGrants(final java.util.List<DriveRecipient> grantees) {
+        return new PermissionRevokeGrantsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeGrants"), getClient(), null, grantees);
+    }
 }

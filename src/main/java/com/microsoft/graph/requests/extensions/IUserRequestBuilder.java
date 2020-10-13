@@ -491,13 +491,13 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      */
     IAuthenticationRequestBuilder authentication();
 
-    IChatCollectionRequestBuilder chats();
+    IChatCollectionWithReferencesRequestBuilder chats();
 
-    IChatRequestBuilder chats(final String id);
+    IChatWithReferenceRequestBuilder chats(final String id);
 
-    ITeamCollectionRequestBuilder joinedTeams();
+    ITeamCollectionWithReferencesRequestBuilder joinedTeams();
 
-    ITeamRequestBuilder joinedTeams(final String id);
+    ITeamWithReferenceRequestBuilder joinedTeams(final String id);
 
     /**
      * Gets the request builder for UserTeamwork

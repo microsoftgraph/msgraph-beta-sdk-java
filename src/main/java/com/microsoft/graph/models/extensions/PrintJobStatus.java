@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.PrintJobStateDetail;
 import com.microsoft.graph.models.generated.PrintJobProcessingState;
 
 
@@ -41,6 +42,30 @@ public class PrintJobStatus implements IJsonBackedObject {
     public Boolean acquiredByPrinter;
 
     /**
+     * The Description.
+     * 
+     */
+    @SerializedName(value = "description", alternate = {"Description"})
+    @Expose
+    public String description;
+
+    /**
+     * The Details.
+     * 
+     */
+    @SerializedName(value = "details", alternate = {"Details"})
+    @Expose
+    public java.util.List<PrintJobStateDetail> details;
+
+    /**
+     * The Is Acquired By Printer.
+     * 
+     */
+    @SerializedName(value = "isAcquiredByPrinter", alternate = {"IsAcquiredByPrinter"})
+    @Expose
+    public Boolean isAcquiredByPrinter;
+
+    /**
      * The Processing State.
      * 
      */
@@ -55,6 +80,14 @@ public class PrintJobStatus implements IJsonBackedObject {
     @SerializedName(value = "processingStateDescription", alternate = {"ProcessingStateDescription"})
     @Expose
     public String processingStateDescription;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName(value = "state", alternate = {"State"})
+    @Expose
+    public PrintJobProcessingState state;
 
 
     /**

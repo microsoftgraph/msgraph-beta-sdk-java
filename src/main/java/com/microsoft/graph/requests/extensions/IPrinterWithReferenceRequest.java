@@ -16,9 +16,10 @@ import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionReque
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

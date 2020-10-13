@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.PrinterProcessingStateDetail;
 import com.microsoft.graph.models.generated.PrinterProcessingState;
 import com.microsoft.graph.models.generated.PrinterProcessingStateReason;
 
@@ -34,6 +35,22 @@ public class PrinterStatus implements IJsonBackedObject {
     }
 
     /**
+     * The Description.
+     * 
+     */
+    @SerializedName(value = "description", alternate = {"Description"})
+    @Expose
+    public String description;
+
+    /**
+     * The Details.
+     * 
+     */
+    @SerializedName(value = "details", alternate = {"Details"})
+    @Expose
+    public java.util.List<PrinterProcessingStateDetail> details;
+
+    /**
      * The Processing State.
      * 
      */
@@ -56,6 +73,14 @@ public class PrinterStatus implements IJsonBackedObject {
     @SerializedName(value = "processingStateReasons", alternate = {"ProcessingStateReasons"})
     @Expose
     public java.util.List<PrinterProcessingStateReason> processingStateReasons;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName(value = "state", alternate = {"State"})
+    @Expose
+    public PrinterProcessingState state;
 
 
     /**
