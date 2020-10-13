@@ -103,6 +103,14 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     public Boolean hasAttachments;
 
     /**
+     * The Hide Attendees.
+     * 
+     */
+    @SerializedName(value = "hideAttendees", alternate = {"HideAttendees"})
+    @Expose
+    public Boolean hideAttendees;
+
+    /**
      * The Importance.
      * The importance of the event. The possible values are: low, normal, high.
      */

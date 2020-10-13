@@ -41,6 +41,14 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
     public DeviceHealth deviceHealth;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+    public String displayName;
+
+    /**
      * The Fully Qualified Domain Name.
      * 
      */

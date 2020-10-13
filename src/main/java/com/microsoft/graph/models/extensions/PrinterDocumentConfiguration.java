@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.generated.PrintColorMode;
 import com.microsoft.graph.models.generated.PrintDuplexMode;
 import com.microsoft.graph.models.generated.PrinterFeedDirection;
+import com.microsoft.graph.models.generated.PrinterFeedOrientation;
 import com.microsoft.graph.models.generated.PrintFinishing;
 import com.microsoft.graph.models.extensions.PrintMargin;
 import com.microsoft.graph.models.generated.PrintMultipageLayout;
@@ -88,6 +89,14 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     @SerializedName(value = "feedDirection", alternate = {"FeedDirection"})
     @Expose
     public PrinterFeedDirection feedDirection;
+
+    /**
+     * The Feed Orientation.
+     * 
+     */
+    @SerializedName(value = "feedOrientation", alternate = {"FeedOrientation"})
+    @Expose
+    public PrinterFeedOrientation feedOrientation;
 
     /**
      * The Finishings.

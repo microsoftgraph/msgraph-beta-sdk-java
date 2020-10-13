@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintDocument;
+import com.microsoft.graph.models.extensions.PrintDocumentUploadProperties;
+import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -52,6 +54,10 @@ public class PrintDocumentRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
+
+    public IPrintDocumentCreateUploadSessionRequestBuilder createUploadSession(final PrintDocumentUploadProperties properties) {
+        return new PrintDocumentCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, properties);
+    }
 
     public IPrintDocumentUploadDataRequestBuilder uploadData() {
         return new PrintDocumentUploadDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadData"), getClient(), null);

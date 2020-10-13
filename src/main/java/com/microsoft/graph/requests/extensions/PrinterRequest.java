@@ -22,12 +22,14 @@ import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestB
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

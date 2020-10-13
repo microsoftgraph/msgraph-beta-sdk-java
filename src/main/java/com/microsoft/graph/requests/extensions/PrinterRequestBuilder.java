@@ -22,12 +22,14 @@ import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestB
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -109,6 +111,13 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
     public IPrinterShareWithReferenceRequestBuilder share() {
         return new PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("share"), getClient(), null);
     }
+    public IPrinterShareCollectionWithReferencesRequestBuilder shares() {
+        return new PrinterShareCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shares"), getClient(), null);
+    }
+
+    public IPrinterShareWithReferenceRequestBuilder shares(final String id) {
+        return new PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("shares") + "/" + id, getClient(), null);
+    }
     public IPrintTaskTriggerCollectionRequestBuilder taskTriggers() {
         return new PrintTaskTriggerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers"), getClient(), null);
     }
@@ -119,6 +128,10 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
 
     public IPrinterResetDefaultsRequestBuilder resetDefaults() {
         return new PrinterResetDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDefaults"), getClient(), null);
+    }
+
+    public IPrinterRestoreFactoryDefaultsRequestBuilder restoreFactoryDefaults() {
+        return new PrinterRestoreFactoryDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreFactoryDefaults"), getClient(), null);
     }
 
     public IPrinterGetCapabilitiesRequestBuilder getCapabilities() {

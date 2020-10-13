@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.PrintJobConfiguration;
 import com.microsoft.graph.models.extensions.UserIdentity;
 import com.microsoft.graph.models.extensions.PrintJobStatus;
 import com.microsoft.graph.models.extensions.PrintDocument;
@@ -29,6 +30,14 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Configuration.
+     * 
+     */
+    @SerializedName(value = "configuration", alternate = {"Configuration"})
+    @Expose
+    public PrintJobConfiguration configuration;
+
+    /**
      * The Created By.
      * 
      */
@@ -43,6 +52,30 @@ public class PrintJob extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Is Fetchable.
+     * 
+     */
+    @SerializedName(value = "isFetchable", alternate = {"IsFetchable"})
+    @Expose
+    public Boolean isFetchable;
+
+    /**
+     * The Redirected From.
+     * 
+     */
+    @SerializedName(value = "redirectedFrom", alternate = {"RedirectedFrom"})
+    @Expose
+    public String redirectedFrom;
+
+    /**
+     * The Redirected To.
+     * 
+     */
+    @SerializedName(value = "redirectedTo", alternate = {"RedirectedTo"})
+    @Expose
+    public String redirectedTo;
 
     /**
      * The Status.

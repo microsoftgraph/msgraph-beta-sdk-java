@@ -11,6 +11,7 @@ import com.microsoft.graph.models.generated.PrintColorMode;
 import com.microsoft.graph.models.extensions.IntegerRange;
 import com.microsoft.graph.models.generated.PrintDuplexMode;
 import com.microsoft.graph.models.generated.PrinterFeedDirection;
+import com.microsoft.graph.models.generated.PrinterFeedOrientation;
 import com.microsoft.graph.models.generated.PrintFinishing;
 import com.microsoft.graph.models.generated.PrintMultipageLayout;
 import com.microsoft.graph.models.generated.PrintOrientation;
@@ -107,6 +108,14 @@ public class PrinterCapabilities implements IJsonBackedObject {
     @SerializedName(value = "feedDirections", alternate = {"FeedDirections"})
     @Expose
     public java.util.List<PrinterFeedDirection> feedDirections;
+
+    /**
+     * The Feed Orientations.
+     * 
+     */
+    @SerializedName(value = "feedOrientations", alternate = {"FeedOrientations"})
+    @Expose
+    public java.util.List<PrinterFeedOrientation> feedOrientations;
 
     /**
      * The Finishings.
