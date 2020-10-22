@@ -33,7 +33,7 @@ public class EmployeeOrgData implements IJsonBackedObject {
 
     /**
      * The Cost Center.
-     * 
+     * The cost center associated with the user. Returned only on $select. Supports $filter.
      */
     @SerializedName(value = "costCenter", alternate = {"CostCenter"})
     @Expose
@@ -41,7 +41,7 @@ public class EmployeeOrgData implements IJsonBackedObject {
 
     /**
      * The Division.
-     * 
+     * The name of the division in which the user works. Returned only on $select. Supports $filter.
      */
     @SerializedName(value = "division", alternate = {"Division"})
     @Expose
