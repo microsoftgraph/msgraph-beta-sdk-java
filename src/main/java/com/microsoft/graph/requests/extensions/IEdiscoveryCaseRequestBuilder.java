@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EdiscoveryCase;
+import com.microsoft.graph.requests.extensions.ICustodianCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustodianRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
 import java.util.Arrays;
@@ -35,6 +37,10 @@ public interface IEdiscoveryCaseRequestBuilder extends IRequestBuilder {
      */
     IEdiscoveryCaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    ICustodianCollectionRequestBuilder custodians();
+
+    ICustodianRequestBuilder custodians(final String id);
 
     IReviewSetCollectionRequestBuilder reviewSets();
 

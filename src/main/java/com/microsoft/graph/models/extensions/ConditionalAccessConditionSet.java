@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ConditionalAccessApplications;
+import com.microsoft.graph.models.extensions.ConditionalAccessClientApplications;
 import com.microsoft.graph.models.generated.ConditionalAccessClientApp;
 import com.microsoft.graph.models.extensions.ConditionalAccessDevices;
 import com.microsoft.graph.models.extensions.ConditionalAccessDeviceStates;
@@ -46,6 +47,14 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
     @SerializedName(value = "applications", alternate = {"Applications"})
     @Expose
     public ConditionalAccessApplications applications;
+
+    /**
+     * The Client Applications.
+     * 
+     */
+    @SerializedName(value = "clientApplications", alternate = {"ClientApplications"})
+    @Expose
+    public ConditionalAccessClientApplications clientApplications;
 
     /**
      * The Client App Types.

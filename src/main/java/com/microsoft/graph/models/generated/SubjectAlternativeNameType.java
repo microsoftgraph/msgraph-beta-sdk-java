@@ -31,6 +31,10 @@ public enum SubjectAlternativeNameType
     */
     DOMAIN_NAME_SERVICE,
     /**
+    * universal Resource Identifier
+    */
+    UNIVERSAL_RESOURCE_IDENTIFIER,
+    /**
     * For SubjectAlternativeNameType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -65,6 +65,14 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
     public Boolean ignoreVersionDetection;
 
     /**
+     * The Install As Managed.
+     * A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
+     */
+    @SerializedName(value = "installAsManaged", alternate = {"InstallAsManaged"})
+    @Expose
+    public Boolean installAsManaged;
+
+    /**
      * The Md5Hash.
      * The MD5 hash codes
      */

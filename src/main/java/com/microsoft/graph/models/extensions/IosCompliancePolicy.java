@@ -26,6 +26,14 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
 
 
     /**
+     * The Advanced Threat Protection Required Security Level.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+     */
+    @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
+    @Expose
+    public DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
+
+    /**
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection .
      */

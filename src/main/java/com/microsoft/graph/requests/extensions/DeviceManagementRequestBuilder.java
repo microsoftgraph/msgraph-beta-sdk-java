@@ -74,6 +74,10 @@ import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusCollectionR
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateAccountSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateAccountSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceEncryptionStateCollectionRequestBuilder;
@@ -146,6 +150,10 @@ import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptCollection
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCustomAttributeShellScriptCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCustomAttributeShellScriptRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCustomAttributeShellScriptCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCustomAttributeShellScriptRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptCollectionRequestBuilder;
@@ -234,6 +242,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentia
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementResourceAccessProfileBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementResourceAccessProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementResourceAccessProfileBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementResourceAccessProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleUserInitiatedEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleUserInitiatedEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppleUserInitiatedEnrollmentProfileCollectionRequestBuilder;
@@ -597,6 +609,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
     public IIosUpdateDeviceStatusRequestBuilder iosUpdateStatuses(final String id) {
         return new IosUpdateDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("iosUpdateStatuses") + "/" + id, getClient(), null);
     }
+    public IMacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder macOSSoftwareUpdateAccountSummaries() {
+        return new MacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("macOSSoftwareUpdateAccountSummaries"), getClient(), null);
+    }
+
+    public IMacOSSoftwareUpdateAccountSummaryRequestBuilder macOSSoftwareUpdateAccountSummaries(final String id) {
+        return new MacOSSoftwareUpdateAccountSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("macOSSoftwareUpdateAccountSummaries") + "/" + id, getClient(), null);
+    }
     public IManagedDeviceEncryptionStateCollectionRequestBuilder managedDeviceEncryptionStates() {
         return new ManagedDeviceEncryptionStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceEncryptionStates"), getClient(), null);
     }
@@ -758,6 +777,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
 
     public IDeviceComplianceScriptRequestBuilder deviceComplianceScripts(final String id) {
         return new DeviceComplianceScriptRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceScripts") + "/" + id, getClient(), null);
+    }
+    public IDeviceCustomAttributeShellScriptCollectionRequestBuilder deviceCustomAttributeShellScripts() {
+        return new DeviceCustomAttributeShellScriptCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCustomAttributeShellScripts"), getClient(), null);
+    }
+
+    public IDeviceCustomAttributeShellScriptRequestBuilder deviceCustomAttributeShellScripts(final String id) {
+        return new DeviceCustomAttributeShellScriptRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCustomAttributeShellScripts") + "/" + id, getClient(), null);
     }
     public IDeviceHealthScriptCollectionRequestBuilder deviceHealthScripts() {
         return new DeviceHealthScriptCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceHealthScripts"), getClient(), null);
@@ -955,6 +981,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
 
     public IDeviceManagementDerivedCredentialSettingsRequestBuilder derivedCredentials(final String id) {
         return new DeviceManagementDerivedCredentialSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentials") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementResourceAccessProfileBaseCollectionRequestBuilder resourceAccessProfiles() {
+        return new DeviceManagementResourceAccessProfileBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceAccessProfiles"), getClient(), null);
+    }
+
+    public IDeviceManagementResourceAccessProfileBaseRequestBuilder resourceAccessProfiles(final String id) {
+        return new DeviceManagementResourceAccessProfileBaseRequestBuilder(getRequestUrlWithAdditionalSegment("resourceAccessProfiles") + "/" + id, getClient(), null);
     }
     public IAppleUserInitiatedEnrollmentProfileCollectionRequestBuilder appleUserInitiatedEnrollmentProfiles() {
         return new AppleUserInitiatedEnrollmentProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appleUserInitiatedEnrollmentProfiles"), getClient(), null);

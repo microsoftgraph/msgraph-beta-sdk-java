@@ -66,6 +66,22 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
     public String documentationUrl;
 
     /**
+     * The Header Subtitle.
+     * subtitle of the setting header for more details about the category/section
+     */
+    @SerializedName(value = "headerSubtitle", alternate = {"HeaderSubtitle"})
+    @Expose
+    public String headerSubtitle;
+
+    /**
+     * The Header Title.
+     * title of the setting header represents a category/section of a setting/settings
+     */
+    @SerializedName(value = "headerTitle", alternate = {"HeaderTitle"})
+    @Expose
+    public String headerTitle;
+
+    /**
      * The Is Top Level.
      * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
      */

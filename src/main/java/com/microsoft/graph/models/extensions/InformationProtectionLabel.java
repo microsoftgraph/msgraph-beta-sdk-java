@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ParentLabelDetails;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -53,6 +54,14 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
+
+    /**
+     * The Parent.
+     * 
+     */
+    @SerializedName(value = "parent", alternate = {"Parent"})
+    @Expose
+    public ParentLabelDetails parent;
 
     /**
      * The Sensitivity.

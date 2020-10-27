@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AndroidVpnConnectionType;
+import com.microsoft.graph.models.extensions.KeyValue;
+import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.VpnProxyServer;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
@@ -50,6 +52,22 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public AndroidVpnConnectionType connectionType;
+
+    /**
+     * The Custom Data.
+     * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
+     */
+    @SerializedName(value = "customData", alternate = {"CustomData"})
+    @Expose
+    public java.util.List<KeyValue> customData;
+
+    /**
+     * The Custom Key Value Data.
+     * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
+     */
+    @SerializedName(value = "customKeyValueData", alternate = {"CustomKeyValueData"})
+    @Expose
+    public java.util.List<KeyValuePair> customKeyValueData;
 
     /**
      * The Microsoft Tunnel Site Id.

@@ -23,6 +23,14 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
 
 
     /**
+     * The Accessibility Screen Disabled.
+     * Indicates if Accessibility screen is disabled
+     */
+    @SerializedName(value = "accessibilityScreenDisabled", alternate = {"AccessibilityScreenDisabled"})
+    @Expose
+    public Boolean accessibilityScreenDisabled;
+
+    /**
      * The Choose Your Lock Screen Disabled.
      * Indicates if iCloud Documents and Desktop screen is disabled
      */
@@ -55,12 +63,28 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public Boolean iCloudStorageDisabled;
 
     /**
+     * The Pass Code Disabled.
+     * Indicates if Passcode setup pane is disabled
+     */
+    @SerializedName(value = "passCodeDisabled", alternate = {"PassCodeDisabled"})
+    @Expose
+    public Boolean passCodeDisabled;
+
+    /**
      * The Registration Disabled.
      * Indicates if registration is disabled
      */
     @SerializedName(value = "registrationDisabled", alternate = {"RegistrationDisabled"})
     @Expose
     public Boolean registrationDisabled;
+
+    /**
+     * The Zoom Disabled.
+     * Indicates if zoom setup pane is disabled
+     */
+    @SerializedName(value = "zoomDisabled", alternate = {"ZoomDisabled"})
+    @Expose
+    public Boolean zoomDisabled;
 
 
     /**

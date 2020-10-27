@@ -25,6 +25,10 @@ import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EdiscoveryCase;
+import com.microsoft.graph.requests.extensions.ICustodianCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustodianRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustodianCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustodianRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetCollectionRequestBuilder;
@@ -56,6 +60,13 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+    public ICustodianCollectionRequestBuilder custodians() {
+        return new CustodianCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("custodians"), getClient(), null);
+    }
+
+    public ICustodianRequestBuilder custodians(final String id) {
+        return new CustodianRequestBuilder(getRequestUrlWithAdditionalSegment("custodians") + "/" + id, getClient(), null);
+    }
     public IReviewSetCollectionRequestBuilder reviewSets() {
         return new ReviewSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets"), getClient(), null);
     }

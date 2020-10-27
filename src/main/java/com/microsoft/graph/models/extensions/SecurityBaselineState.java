@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.SecurityBaselineComplianceState;
 import com.microsoft.graph.models.extensions.SecurityBaselineSettingState;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateCollectionPage;
@@ -39,6 +40,14 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
     @SerializedName(value = "securityBaselineTemplateId", alternate = {"SecurityBaselineTemplateId"})
     @Expose
     public String securityBaselineTemplateId;
+
+    /**
+     * The State.
+     * Security baseline compliance state
+     */
+    @SerializedName(value = "state", alternate = {"State"})
+    @Expose
+    public SecurityBaselineComplianceState state;
 
     /**
      * The User Principal Name.

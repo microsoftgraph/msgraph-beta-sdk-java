@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ParentLabelDetails;
 
 
 import com.google.gson.JsonObject;
@@ -18,74 +19,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Label Details.
  */
-public class LabelDetails implements IJsonBackedObject {
+public class LabelDetails extends ParentLabelDetails implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
-
-    /**
-     * The Color.
-     * 
-     */
-    @SerializedName(value = "color", alternate = {"Color"})
-    @Expose
-    public String color;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName(value = "description", alternate = {"Description"})
-    @Expose
-    public String description;
-
-    /**
-     * The Id.
-     * 
-     */
-    @SerializedName(value = "id", alternate = {"Id"})
-    @Expose
-    public String id;
-
-    /**
-     * The Is Active.
-     * 
-     */
-    @SerializedName(value = "isActive", alternate = {"IsActive"})
-    @Expose
-    public Boolean isActive;
-
-    /**
-     * The Name.
-     * 
-     */
-    @SerializedName(value = "name", alternate = {"Name"})
-    @Expose
-    public String name;
-
-    /**
-     * The Sensitivity.
-     * 
-     */
-    @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
-    @Expose
-    public Integer sensitivity;
-
-    /**
-     * The Tooltip.
-     * 
-     */
-    @SerializedName(value = "tooltip", alternate = {"Tooltip"})
-    @Expose
-    public String tooltip;
 
 
     /**

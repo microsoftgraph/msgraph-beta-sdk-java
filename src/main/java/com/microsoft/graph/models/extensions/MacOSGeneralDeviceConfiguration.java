@@ -316,6 +316,14 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Integer passwordExpirationDays;
 
     /**
+     * The Password Maximum Attempt Count.
+     * The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
+     */
+    @SerializedName(value = "passwordMaximumAttemptCount", alternate = {"PasswordMaximumAttemptCount"})
+    @Expose
+    public Integer passwordMaximumAttemptCount;
+
+    /**
      * The Password Minimum Character Set Count.
      * Number of character sets a password must contain. Valid values 0 to 4
      */
@@ -346,6 +354,14 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
+
+    /**
+     * The Password Minutes Until Failed Login Reset.
+     * The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
+     */
+    @SerializedName(value = "passwordMinutesUntilFailedLoginReset", alternate = {"PasswordMinutesUntilFailedLoginReset"})
+    @Expose
+    public Integer passwordMinutesUntilFailedLoginReset;
 
     /**
      * The Password Previous Password Block Count.

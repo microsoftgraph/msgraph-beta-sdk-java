@@ -88,6 +88,14 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public ManagedAppRemediationAction appActionIfAndroidSafetyNetDeviceAttestationFailed;
 
     /**
+     * The App Action If Device Lock Not Set.
+     * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only)
+     */
+    @SerializedName(value = "appActionIfDeviceLockNotSet", alternate = {"AppActionIfDeviceLockNotSet"})
+    @Expose
+    public ManagedAppRemediationAction appActionIfDeviceLockNotSet;
+
+    /**
      * The App Action If Ios Device Model Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
      */
@@ -110,6 +118,14 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @SerializedName(value = "biometricAuthenticationBlocked", alternate = {"BiometricAuthenticationBlocked"})
     @Expose
     public Boolean biometricAuthenticationBlocked;
+
+    /**
+     * The Block After Company Portal Update Deferral In Days.
+     * Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
+     */
+    @SerializedName(value = "blockAfterCompanyPortalUpdateDeferralInDays", alternate = {"BlockAfterCompanyPortalUpdateDeferralInDays"})
+    @Expose
+    public Integer blockAfterCompanyPortalUpdateDeferralInDays;
 
     /**
      * The Custom Browser Display Name.
@@ -174,6 +190,14 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
+
+    /**
+     * The Device Lock Required.
+     * Defines if any kind of lock must be required on device. (android only)
+     */
+    @SerializedName(value = "deviceLockRequired", alternate = {"DeviceLockRequired"})
+    @Expose
+    public Boolean deviceLockRequired;
 
     /**
      * The Disable App Encryption If Device Encryption Is Enabled.
@@ -342,6 +366,22 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @SerializedName(value = "thirdPartyKeyboardsBlocked", alternate = {"ThirdPartyKeyboardsBlocked"})
     @Expose
     public Boolean thirdPartyKeyboardsBlocked;
+
+    /**
+     * The Warn After Company Portal Update Deferral In Days.
+     * Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
+     */
+    @SerializedName(value = "warnAfterCompanyPortalUpdateDeferralInDays", alternate = {"WarnAfterCompanyPortalUpdateDeferralInDays"})
+    @Expose
+    public Integer warnAfterCompanyPortalUpdateDeferralInDays;
+
+    /**
+     * The Wipe After Company Portal Update Deferral In Days.
+     * Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
+     */
+    @SerializedName(value = "wipeAfterCompanyPortalUpdateDeferralInDays", alternate = {"WipeAfterCompanyPortalUpdateDeferralInDays"})
+    @Expose
+    public Integer wipeAfterCompanyPortalUpdateDeferralInDays;
 
     /**
      * The Apps.

@@ -95,14 +95,6 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     public Boolean locationDisabled;
 
     /**
-     * The Pass Code Disabled.
-     * Indicates if Passcode setup pane is disabled
-     */
-    @SerializedName(value = "passCodeDisabled", alternate = {"PassCodeDisabled"})
-    @Expose
-    public Boolean passCodeDisabled;
-
-    /**
      * The Privacy Pane Disabled.
      * Indicates if privacy screen is disabled
      */
@@ -181,14 +173,6 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     @SerializedName(value = "touchIdDisabled", alternate = {"TouchIdDisabled"})
     @Expose
     public Boolean touchIdDisabled;
-
-    /**
-     * The Zoom Disabled.
-     * Indicates if zoom setup pane is disabled
-     */
-    @SerializedName(value = "zoomDisabled", alternate = {"ZoomDisabled"})
-    @Expose
-    public Boolean zoomDisabled;
 
 
     /**

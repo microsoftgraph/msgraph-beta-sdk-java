@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.MacOSAssociatedDomainsItem;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.MacOSLaunchItem;
 import com.microsoft.graph.models.extensions.IpRange;
@@ -41,8 +42,16 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     public Boolean adminShowHostInfo;
 
     /**
+     * The App Associated Domains.
+     * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "appAssociatedDomains", alternate = {"AppAssociatedDomains"})
+    @Expose
+    public java.util.List<MacOSAssociatedDomainsItem> appAssociatedDomains;
+
+    /**
      * The Associated Domains.
-     * Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "associatedDomains", alternate = {"AssociatedDomains"})
     @Expose

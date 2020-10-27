@@ -10,7 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AllowedAudiences;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.InferenceData;
-import com.microsoft.graph.models.extensions.PersonDataSource;
+import com.microsoft.graph.models.extensions.PersonDataSources;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -80,7 +80,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
-    public PersonDataSource source;
+    public PersonDataSources source;
 
 
     /**

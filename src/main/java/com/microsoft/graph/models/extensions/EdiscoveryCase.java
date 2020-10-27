@@ -9,8 +9,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.CaseStatus;
+import com.microsoft.graph.models.extensions.Custodian;
 import com.microsoft.graph.models.extensions.ReviewSet;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.CustodianCollectionPage;
 import com.microsoft.graph.requests.extensions.ReviewSetCollectionPage;
 
 
@@ -99,6 +101,14 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
     public CaseStatus status;
 
     /**
+     * The Custodians.
+     * 
+     */
+    @SerializedName(value = "custodians", alternate = {"Custodians"})
+    @Expose
+    public CustodianCollectionPage custodians;
+
+    /**
      * The Review Sets.
      * 
      */
@@ -145,6 +155,10 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("custodians")) {
+            custodians = serializer.deserializeObject(json.get("custodians").toString(), CustodianCollectionPage.class);
+        }
 
         if (json.has("reviewSets")) {
             reviewSets = serializer.deserializeObject(json.get("reviewSets").toString(), ReviewSetCollectionPage.class);

@@ -116,6 +116,14 @@ public class HardwareInformation implements IJsonBackedObject {
     public String imei;
 
     /**
+     * The Ip Address V4.
+     * IPAddressV4
+     */
+    @SerializedName(value = "ipAddressV4", alternate = {"IpAddressV4"})
+    @Expose
+    public String ipAddressV4;
+
+    /**
      * The Is Encrypted.
      * Encryption status of the device
      */
@@ -218,6 +226,14 @@ public class HardwareInformation implements IJsonBackedObject {
     @SerializedName(value = "sharedDeviceCachedUsers", alternate = {"SharedDeviceCachedUsers"})
     @Expose
     public java.util.List<SharedAppleDeviceUser> sharedDeviceCachedUsers;
+
+    /**
+     * The Subnet Address.
+     * SubnetAddress
+     */
+    @SerializedName(value = "subnetAddress", alternate = {"SubnetAddress"})
+    @Expose
+    public String subnetAddress;
 
     /**
      * The Subscriber Carrier.

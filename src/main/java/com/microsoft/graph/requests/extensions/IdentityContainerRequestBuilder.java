@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionReq
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
@@ -90,6 +94,13 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
 
     public IB2xIdentityUserFlowRequestBuilder b2xUserFlows(final String id) {
         return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
+    }
+    public IIdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes() {
+        return new IdentityUserFlowAttributeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes"), getClient(), null);
+    }
+
+    public IIdentityUserFlowAttributeRequestBuilder userFlowAttributes(final String id) {
+        return new IdentityUserFlowAttributeRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes") + "/" + id, getClient(), null);
     }
     public IIdentityUserFlowCollectionRequestBuilder userFlows() {
         return new IdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows"), getClient(), null);
