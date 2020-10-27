@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.MlClassificationMatchTolerance;
 import com.microsoft.graph.models.generated.SensitiveTypeScope;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -30,6 +31,14 @@ public class TextClassificationRequest extends Entity implements IJsonBackedObje
     @SerializedName(value = "fileExtension", alternate = {"FileExtension"})
     @Expose
     public String fileExtension;
+
+    /**
+     * The Match Tolerances To Include.
+     * 
+     */
+    @SerializedName(value = "matchTolerancesToInclude", alternate = {"MatchTolerancesToInclude"})
+    @Expose
+    public EnumSet<MlClassificationMatchTolerance> matchTolerancesToInclude;
 
     /**
      * The Scopes To Run.

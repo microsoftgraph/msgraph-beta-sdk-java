@@ -44,6 +44,8 @@ import com.microsoft.graph.requests.extensions.IManagedAllDeviceCertificateState
 import com.microsoft.graph.requests.extensions.IManagedAllDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateAccountSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.INdesConnectorCollectionRequestBuilder;
@@ -80,6 +82,8 @@ import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCustomAttributeShellScriptCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCustomAttributeShellScriptRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptCollectionRequestBuilder;
@@ -124,6 +128,8 @@ import com.microsoft.graph.requests.extensions.IWindowsMalwareInformationCollect
 import com.microsoft.graph.requests.extensions.IWindowsMalwareInformationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementResourceAccessProfileBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementResourceAccessProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleUserInitiatedEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleUserInitiatedEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDepOnboardingSettingCollectionRequestBuilder;
@@ -332,6 +338,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IIosUpdateDeviceStatusRequestBuilder iosUpdateStatuses(final String id);
 
+    IMacOSSoftwareUpdateAccountSummaryCollectionRequestBuilder macOSSoftwareUpdateAccountSummaries();
+
+    IMacOSSoftwareUpdateAccountSummaryRequestBuilder macOSSoftwareUpdateAccountSummaries(final String id);
+
     IManagedDeviceEncryptionStateCollectionRequestBuilder managedDeviceEncryptionStates();
 
     IManagedDeviceEncryptionStateRequestBuilder managedDeviceEncryptionStates(final String id);
@@ -431,6 +441,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IDeviceComplianceScriptCollectionRequestBuilder deviceComplianceScripts();
 
     IDeviceComplianceScriptRequestBuilder deviceComplianceScripts(final String id);
+
+    IDeviceCustomAttributeShellScriptCollectionRequestBuilder deviceCustomAttributeShellScripts();
+
+    IDeviceCustomAttributeShellScriptRequestBuilder deviceCustomAttributeShellScripts(final String id);
 
     IDeviceHealthScriptCollectionRequestBuilder deviceHealthScripts();
 
@@ -551,6 +565,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IDeviceManagementDerivedCredentialSettingsCollectionRequestBuilder derivedCredentials();
 
     IDeviceManagementDerivedCredentialSettingsRequestBuilder derivedCredentials(final String id);
+
+    IDeviceManagementResourceAccessProfileBaseCollectionRequestBuilder resourceAccessProfiles();
+
+    IDeviceManagementResourceAccessProfileBaseRequestBuilder resourceAccessProfiles(final String id);
 
     IAppleUserInitiatedEnrollmentProfileCollectionRequestBuilder appleUserInitiatedEnrollmentProfiles();
 

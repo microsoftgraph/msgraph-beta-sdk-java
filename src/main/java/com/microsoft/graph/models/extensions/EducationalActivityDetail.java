@@ -45,7 +45,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
-    public String activities;
+    public java.util.List<String> activities;
 
     /**
      * The Awards.
@@ -53,7 +53,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      */
     @SerializedName(value = "awards", alternate = {"Awards"})
     @Expose
-    public String awards;
+    public java.util.List<String> awards;
 
     /**
      * The Description.
@@ -77,7 +77,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
      */
     @SerializedName(value = "fieldsOfStudy", alternate = {"FieldsOfStudy"})
     @Expose
-    public String fieldsOfStudy;
+    public java.util.List<String> fieldsOfStudy;
 
     /**
      * The Grade.

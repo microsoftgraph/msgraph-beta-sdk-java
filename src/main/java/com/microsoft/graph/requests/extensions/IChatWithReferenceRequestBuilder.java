@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequ
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -10,10 +10,12 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.models.extensions.TeamsTab;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -76,6 +78,14 @@ public class Chat extends Entity implements IJsonBackedObject {
     @Expose
     public ChatMessageCollectionPage messages;
 
+    /**
+     * The Tabs.
+     * 
+     */
+    @SerializedName(value = "tabs", alternate = {"Tabs"})
+    @Expose
+    public TeamsTabCollectionPage tabs;
+
 
     /**
      * The raw representation of this class
@@ -126,6 +136,10 @@ public class Chat extends Entity implements IJsonBackedObject {
 
         if (json.has("messages")) {
             messages = serializer.deserializeObject(json.get("messages").toString(), ChatMessageCollectionPage.class);
+        }
+
+        if (json.has("tabs")) {
+            tabs = serializer.deserializeObject(json.get("tabs").toString(), TeamsTabCollectionPage.class);
         }
     }
 }

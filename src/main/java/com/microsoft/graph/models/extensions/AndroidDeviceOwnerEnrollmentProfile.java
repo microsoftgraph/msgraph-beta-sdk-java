@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerEnrollmentMode;
+import com.microsoft.graph.models.generated.AndroidDeviceOwnerEnrollmentTokenType;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -71,6 +72,14 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     @SerializedName(value = "enrollmentMode", alternate = {"EnrollmentMode"})
     @Expose
     public AndroidDeviceOwnerEnrollmentMode enrollmentMode;
+
+    /**
+     * The Enrollment Token Type.
+     * The enrollment token type for an enrollment profile.
+     */
+    @SerializedName(value = "enrollmentTokenType", alternate = {"EnrollmentTokenType"})
+    @Expose
+    public AndroidDeviceOwnerEnrollmentTokenType enrollmentTokenType;
 
     /**
      * The Last Modified Date Time.

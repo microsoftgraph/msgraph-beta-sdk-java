@@ -37,6 +37,7 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.ManagedAllDeviceCertificateState;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStateSummary;
 import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
+import com.microsoft.graph.models.extensions.MacOSSoftwareUpdateAccountSummary;
 import com.microsoft.graph.models.extensions.ManagedDeviceEncryptionState;
 import com.microsoft.graph.models.extensions.NdesConnector;
 import com.microsoft.graph.models.extensions.SoftwareUpdateStatusSummary;
@@ -58,6 +59,7 @@ import com.microsoft.graph.models.extensions.ComanagementEligibleDevice;
 import com.microsoft.graph.models.extensions.DataSharingConsent;
 import com.microsoft.graph.models.extensions.DetectedApp;
 import com.microsoft.graph.models.extensions.DeviceComplianceScript;
+import com.microsoft.graph.models.extensions.DeviceCustomAttributeShellScript;
 import com.microsoft.graph.models.extensions.DeviceHealthScript;
 import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.models.extensions.DeviceShellScript;
@@ -83,6 +85,7 @@ import com.microsoft.graph.models.extensions.UserExperienceAnalyticsRegressionSu
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsScoreHistory;
 import com.microsoft.graph.models.extensions.WindowsMalwareInformation;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
+import com.microsoft.graph.models.extensions.DeviceManagementResourceAccessProfileBase;
 import com.microsoft.graph.models.extensions.AppleUserInitiatedEnrollmentProfile;
 import com.microsoft.graph.models.extensions.DepOnboardingSetting;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
@@ -134,6 +137,7 @@ import com.microsoft.graph.requests.extensions.RestrictedAppsViolationCollection
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAllDeviceCertificateStateCollectionPage;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateAccountSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceEncryptionStateCollectionPage;
 import com.microsoft.graph.requests.extensions.NdesConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
@@ -152,6 +156,7 @@ import com.microsoft.graph.requests.extensions.ComanagementEligibleDeviceCollect
 import com.microsoft.graph.requests.extensions.DataSharingConsentCollectionPage;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCustomAttributeShellScriptCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceShellScriptCollectionPage;
@@ -174,6 +179,7 @@ import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHist
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsMalwareInformationCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementResourceAccessProfileBaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AppleUserInitiatedEnrollmentProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.DepOnboardingSettingCollectionPage;
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityCollectionPage;
@@ -518,6 +524,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
     /**
+     * The Mac OSSoftware Update Account Summaries.
+     * The MacOS software update account summaries for this account.
+     */
+    @SerializedName(value = "macOSSoftwareUpdateAccountSummaries", alternate = {"MacOSSoftwareUpdateAccountSummaries"})
+    @Expose
+    public MacOSSoftwareUpdateAccountSummaryCollectionPage macOSSoftwareUpdateAccountSummaries;
+
+    /**
      * The Managed Device Encryption States.
      * Encryption report for devices in this account
      */
@@ -692,6 +706,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceComplianceScripts", alternate = {"DeviceComplianceScripts"})
     @Expose
     public DeviceComplianceScriptCollectionPage deviceComplianceScripts;
+
+    /**
+     * The Device Custom Attribute Shell Scripts.
+     * The list of device custom attribute shell scripts associated with the tenant.
+     */
+    @SerializedName(value = "deviceCustomAttributeShellScripts", alternate = {"DeviceCustomAttributeShellScripts"})
+    @Expose
+    public DeviceCustomAttributeShellScriptCollectionPage deviceCustomAttributeShellScripts;
 
     /**
      * The Device Health Scripts.
@@ -908,6 +930,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "derivedCredentials", alternate = {"DerivedCredentials"})
     @Expose
     public DeviceManagementDerivedCredentialSettingsCollectionPage derivedCredentials;
+
+    /**
+     * The Resource Access Profiles.
+     * Collection of resource access settings associated with account.
+     */
+    @SerializedName(value = "resourceAccessProfiles", alternate = {"ResourceAccessProfiles"})
+    @Expose
+    public DeviceManagementResourceAccessProfileBaseCollectionPage resourceAccessProfiles;
 
     /**
      * The Apple User Initiated Enrollment Profiles.
@@ -1289,6 +1319,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses").toString(), IosUpdateDeviceStatusCollectionPage.class);
         }
 
+        if (json.has("macOSSoftwareUpdateAccountSummaries")) {
+            macOSSoftwareUpdateAccountSummaries = serializer.deserializeObject(json.get("macOSSoftwareUpdateAccountSummaries").toString(), MacOSSoftwareUpdateAccountSummaryCollectionPage.class);
+        }
+
         if (json.has("managedDeviceEncryptionStates")) {
             managedDeviceEncryptionStates = serializer.deserializeObject(json.get("managedDeviceEncryptionStates").toString(), ManagedDeviceEncryptionStateCollectionPage.class);
         }
@@ -1359,6 +1393,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("deviceComplianceScripts")) {
             deviceComplianceScripts = serializer.deserializeObject(json.get("deviceComplianceScripts").toString(), DeviceComplianceScriptCollectionPage.class);
+        }
+
+        if (json.has("deviceCustomAttributeShellScripts")) {
+            deviceCustomAttributeShellScripts = serializer.deserializeObject(json.get("deviceCustomAttributeShellScripts").toString(), DeviceCustomAttributeShellScriptCollectionPage.class);
         }
 
         if (json.has("deviceHealthScripts")) {
@@ -1451,6 +1489,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("derivedCredentials")) {
             derivedCredentials = serializer.deserializeObject(json.get("derivedCredentials").toString(), DeviceManagementDerivedCredentialSettingsCollectionPage.class);
+        }
+
+        if (json.has("resourceAccessProfiles")) {
+            resourceAccessProfiles = serializer.deserializeObject(json.get("resourceAccessProfiles").toString(), DeviceManagementResourceAccessProfileBaseCollectionPage.class);
         }
 
         if (json.has("appleUserInitiatedEnrollmentProfiles")) {

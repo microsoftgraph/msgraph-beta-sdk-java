@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequ
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -56,6 +58,10 @@ public interface IChatRequestBuilder extends IRequestBuilder {
     IChatMessageCollectionRequestBuilder messages();
 
     IChatMessageRequestBuilder messages(final String id);
+
+    ITeamsTabCollectionRequestBuilder tabs();
+
+    ITeamsTabRequestBuilder tabs(final String id);
     IChatSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient);
 
 }

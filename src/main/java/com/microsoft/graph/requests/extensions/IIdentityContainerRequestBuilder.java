@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionReq
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
@@ -56,6 +58,10 @@ public interface IIdentityContainerRequestBuilder extends IRequestBuilder {
     IB2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows();
 
     IB2xIdentityUserFlowRequestBuilder b2xUserFlows(final String id);
+
+    IIdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes();
+
+    IIdentityUserFlowAttributeRequestBuilder userFlowAttributes(final String id);
 
     IIdentityUserFlowCollectionRequestBuilder userFlows();
 

@@ -25,6 +25,10 @@ import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -89,6 +93,13 @@ public class ChatRequestBuilder extends BaseRequestBuilder implements IChatReque
 
     public IChatMessageRequestBuilder messages(final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    }
+    public ITeamsTabCollectionRequestBuilder tabs() {
+        return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
+    }
+
+    public ITeamsTabRequestBuilder tabs(final String id) {
+        return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }
 
     public IChatSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient) {

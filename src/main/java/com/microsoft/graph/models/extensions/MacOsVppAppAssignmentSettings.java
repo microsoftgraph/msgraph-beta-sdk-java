@@ -23,6 +23,14 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
 
 
     /**
+     * The Uninstall On Device Removal.
+     * Whether or not to uninstall the app when device is removed from Intune.
+     */
+    @SerializedName(value = "uninstallOnDeviceRemoval", alternate = {"UninstallOnDeviceRemoval"})
+    @Expose
+    public Boolean uninstallOnDeviceRemoval;
+
+    /**
      * The Use Device Licensing.
      * Whether or not to use device licensing.
      */

@@ -121,12 +121,28 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean onBoardingScreenDisabled;
 
     /**
+     * The Pass Code Disabled.
+     * Indicates if Passcode setup pane is disabled
+     */
+    @SerializedName(value = "passCodeDisabled", alternate = {"PassCodeDisabled"})
+    @Expose
+    public Boolean passCodeDisabled;
+
+    /**
      * The Preferred Language Screen Disabled.
      * Indicates if Preferred language screen is disabled
      */
     @SerializedName(value = "preferredLanguageScreenDisabled", alternate = {"PreferredLanguageScreenDisabled"})
     @Expose
     public Boolean preferredLanguageScreenDisabled;
+
+    /**
+     * The Restore Completed Screen Disabled.
+     * Indicates if Weclome screen is disabled
+     */
+    @SerializedName(value = "restoreCompletedScreenDisabled", alternate = {"RestoreCompletedScreenDisabled"})
+    @Expose
+    public Boolean restoreCompletedScreenDisabled;
 
     /**
      * The Restore From Android Disabled.
@@ -161,6 +177,14 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean softwareUpdateScreenDisabled;
 
     /**
+     * The Update Complete Screen Disabled.
+     * Indicates if Weclome screen is disabled
+     */
+    @SerializedName(value = "updateCompleteScreenDisabled", alternate = {"UpdateCompleteScreenDisabled"})
+    @Expose
+    public Boolean updateCompleteScreenDisabled;
+
+    /**
      * The Watch Migration Screen Disabled.
      * Indicates if the watch migration screen is disabled
      */
@@ -175,6 +199,14 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     @SerializedName(value = "welcomeScreenDisabled", alternate = {"WelcomeScreenDisabled"})
     @Expose
     public Boolean welcomeScreenDisabled;
+
+    /**
+     * The Zoom Disabled.
+     * Indicates if zoom setup pane is disabled
+     */
+    @SerializedName(value = "zoomDisabled", alternate = {"ZoomDisabled"})
+    @Expose
+    public Boolean zoomDisabled;
 
 
     /**
