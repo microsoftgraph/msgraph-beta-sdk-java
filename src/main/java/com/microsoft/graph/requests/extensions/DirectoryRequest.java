@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionRequestBuilder;

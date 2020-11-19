@@ -46,7 +46,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
 
     public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + newManagedDevice.id);
         new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDevice, body, callback);
@@ -54,7 +54,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
 
     public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
                 .buildRequest(getBaseRequest().getHeaders())
                 .post(newManagedDevice, body);

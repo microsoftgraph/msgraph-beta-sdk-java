@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionRequestBuilder;
@@ -98,6 +102,13 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
 
     public IApplicationRequestBuilder deletedItemsAsApplication(final String id) {
         return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    }
+    public ISharedEmailDomainCollectionRequestBuilder sharedEmailDomains() {
+        return new SharedEmailDomainCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomains"), getClient(), null);
+    }
+
+    public ISharedEmailDomainRequestBuilder sharedEmailDomains(final String id) {
+        return new SharedEmailDomainRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomains") + "/" + id, getClient(), null);
     }
     public IFeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies() {
         return new FeatureRolloutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies"), getClient(), null);

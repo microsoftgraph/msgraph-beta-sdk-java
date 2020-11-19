@@ -10,10 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
@@ -49,14 +45,6 @@ public interface IPrinterRequestBuilder extends IRequestBuilder {
     IPrintJobCollectionRequestBuilder jobs();
 
     IPrintJobRequestBuilder jobs(final String id);
-
-    IPrintIdentityCollectionRequestBuilder allowedGroups();
-
-    IPrintIdentityRequestBuilder allowedGroups(final String id);
-
-    IPrintUserIdentityCollectionRequestBuilder allowedUsers();
-
-    IPrintUserIdentityRequestBuilder allowedUsers(final String id);
 
     IPrintConnectorCollectionWithReferencesRequestBuilder connectors();
 

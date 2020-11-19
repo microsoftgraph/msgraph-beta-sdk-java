@@ -297,6 +297,8 @@ import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ComplianceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
@@ -325,8 +327,6 @@ import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBui
 import com.microsoft.graph.requests.extensions.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityGovernanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequestBuilder;
@@ -1763,6 +1763,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the DeviceManagement
+     */
+    public IDeviceManagementRequestBuilder deviceManagement() {
+        return new DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Compliance
      */
     public IComplianceRequestBuilder compliance() {
@@ -1907,15 +1916,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the DeviceManagement
-     */
-    public IDeviceManagementRequestBuilder deviceManagement() {
-        return new DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the DeviceAppManagement
      */
     public IDeviceAppManagementRequestBuilder deviceAppManagement() {
@@ -1972,8 +1972,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Security
      */
-    public ISecurityRequestBuilder Security() {
-        return new SecurityRequestBuilder(getServiceRoot() + "/Security", this, null);
+    public ISecurityRequestBuilder security() {
+        return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
     /**

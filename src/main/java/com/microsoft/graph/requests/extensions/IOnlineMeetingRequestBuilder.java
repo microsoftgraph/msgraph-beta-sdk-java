@@ -36,4 +36,10 @@ public interface IOnlineMeetingRequestBuilder extends IRequestBuilder {
     IOnlineMeetingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IOnlineMeetingAlternativeRecordingStreamRequestBuilder alternativeRecording();
+
+    IOnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport();
+
+    IOnlineMeetingRecordingStreamRequestBuilder recording();
+
 }

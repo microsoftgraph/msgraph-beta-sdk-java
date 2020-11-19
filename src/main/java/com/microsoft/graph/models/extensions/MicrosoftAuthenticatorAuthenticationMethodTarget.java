@@ -7,7 +7,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AuthenticatorAppContextType;
+import com.microsoft.graph.models.generated.MicrosoftAuthenticatorAuthenticationMode;
+import com.microsoft.graph.models.generated.AuthenticatorAppFeatureSettings;
 import com.microsoft.graph.models.extensions.AuthenticationMethodTarget;
 
 
@@ -24,20 +25,20 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
 
     /**
-     * The Is Number Matching Required.
+     * The Authentication Mode.
      * 
      */
-    @SerializedName(value = "isNumberMatchingRequired", alternate = {"IsNumberMatchingRequired"})
+    @SerializedName(value = "authenticationMode", alternate = {"AuthenticationMode"})
     @Expose
-    public Boolean isNumberMatchingRequired;
+    public MicrosoftAuthenticatorAuthenticationMode authenticationMode;
 
     /**
-     * The Shown Context.
+     * The Feature Settings.
      * 
      */
-    @SerializedName(value = "shownContext", alternate = {"ShownContext"})
+    @SerializedName(value = "featureSettings", alternate = {"FeatureSettings"})
     @Expose
-    public EnumSet<AuthenticatorAppContextType> shownContext;
+    public EnumSet<AuthenticatorAppFeatureSettings> featureSettings;
 
 
     /**

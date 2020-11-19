@@ -23,6 +23,14 @@ public enum DefenderProtectionType
     */
     AUDIT_MODE,
     /**
+    * warn
+    */
+    WARN,
+    /**
+    * not Configured
+    */
+    NOT_CONFIGURED,
+    /**
     * For DefenderProtectionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

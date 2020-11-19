@@ -11,6 +11,8 @@ import com.microsoft.graph.models.generated.AndroidDeviceOwnerAppAutoUpdatePolic
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerDefaultAppPermissionPolicyType;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerEnrollmentProfileType;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerGlobalProxy;
+import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskCustomizationStatusBar;
+import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskCustomizationSystemNavigation;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeFolderIcon;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeIconSize;
@@ -173,6 +175,46 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @SerializedName(value = "googleAccountsBlocked", alternate = {"GoogleAccountsBlocked"})
     @Expose
     public Boolean googleAccountsBlocked;
+
+    /**
+     * The Kiosk Customization Device Settings Blocked.
+     * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskCustomizationDeviceSettingsBlocked", alternate = {"KioskCustomizationDeviceSettingsBlocked"})
+    @Expose
+    public Boolean kioskCustomizationDeviceSettingsBlocked;
+
+    /**
+     * The Kiosk Customization Power Button Actions Blocked.
+     * Whether the power menu is shown when a user long presses the Power button of a device in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskCustomizationPowerButtonActionsBlocked", alternate = {"KioskCustomizationPowerButtonActionsBlocked"})
+    @Expose
+    public Boolean kioskCustomizationPowerButtonActionsBlocked;
+
+    /**
+     * The Kiosk Customization Status Bar.
+     * Indicates whether system info and notifications are disabled in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskCustomizationStatusBar", alternate = {"KioskCustomizationStatusBar"})
+    @Expose
+    public AndroidDeviceOwnerKioskCustomizationStatusBar kioskCustomizationStatusBar;
+
+    /**
+     * The Kiosk Customization System Error Warnings.
+     * Indicates whether system error dialogs for crashed or unresponsive apps are shown in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskCustomizationSystemErrorWarnings", alternate = {"KioskCustomizationSystemErrorWarnings"})
+    @Expose
+    public Boolean kioskCustomizationSystemErrorWarnings;
+
+    /**
+     * The Kiosk Customization System Navigation.
+     * Indicates which navigation features are enabled in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskCustomizationSystemNavigation", alternate = {"KioskCustomizationSystemNavigation"})
+    @Expose
+    public AndroidDeviceOwnerKioskCustomizationSystemNavigation kioskCustomizationSystemNavigation;
 
     /**
      * The Kiosk Mode Apps.

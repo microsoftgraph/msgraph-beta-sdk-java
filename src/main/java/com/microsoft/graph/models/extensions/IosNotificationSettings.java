@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.IosNotificationAlertType;
+import com.microsoft.graph.models.generated.IosNotificationPreviewVisibility;
 
 
 import com.google.gson.JsonObject;
@@ -71,6 +72,14 @@ public class IosNotificationSettings implements IJsonBackedObject {
     @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
+
+    /**
+     * The Preview Visibility.
+     * Overrides the notification preview policy set by the user on an iOS device.
+     */
+    @SerializedName(value = "previewVisibility", alternate = {"PreviewVisibility"})
+    @Expose
+    public IosNotificationPreviewVisibility previewVisibility;
 
     /**
      * The Publisher.

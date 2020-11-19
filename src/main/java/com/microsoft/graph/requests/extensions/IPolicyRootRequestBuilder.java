@@ -18,8 +18,8 @@ import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollecti
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
@@ -99,9 +99,9 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
 
     IPermissionGrantPolicyRequestBuilder permissionGrantPolicies(final String id);
 
-    IPrivateLinkResourceCollectionRequestBuilder privateLinkResourcePolicies();
+    IPrivateLinkResourcePolicyCollectionRequestBuilder privateLinkResourcePolicies();
 
-    IPrivateLinkResourceRequestBuilder privateLinkResourcePolicies(final String id);
+    IPrivateLinkResourcePolicyRequestBuilder privateLinkResourcePolicies(final String id);
 
     ITokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies();
 

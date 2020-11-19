@@ -7,7 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AgreementFileVersion;
 import com.microsoft.graph.models.extensions.AgreementFileProperties;
+import com.microsoft.graph.requests.extensions.AgreementFileVersionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -21,6 +23,14 @@ import com.google.gson.annotations.Expose;
  */
 public class AgreementFileLocalization extends AgreementFileProperties implements IJsonBackedObject {
 
+
+    /**
+     * The Versions.
+     * 
+     */
+    @SerializedName(value = "versions", alternate = {"Versions"})
+    @Expose
+    public AgreementFileVersionCollectionPage versions;
 
 
     /**
@@ -61,5 +71,9 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("versions")) {
+            versions = serializer.deserializeObject(json.get("versions").toString(), AgreementFileVersionCollectionPage.class);
+        }
     }
 }

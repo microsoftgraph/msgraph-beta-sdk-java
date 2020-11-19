@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AccessLevel;
 import com.microsoft.graph.models.generated.OnlineMeetingPresenters;
 import com.microsoft.graph.models.extensions.AudioConferencing;
+import com.microsoft.graph.models.extensions.BroadcastMeetingSettings;
 import com.microsoft.graph.models.generated.MeetingCapabilities;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.ItemBody;
@@ -40,7 +41,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * 
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -53,6 +54,14 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "audioConferencing", alternate = {"AudioConferencing"})
     @Expose
     public AudioConferencing audioConferencing;
+
+    /**
+     * The Broadcast Settings.
+     * 
+     */
+    @SerializedName(value = "broadcastSettings", alternate = {"BroadcastSettings"})
+    @Expose
+    public BroadcastMeetingSettings broadcastSettings;
 
     /**
      * The Canceled Date Time.
@@ -136,7 +145,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Entry Exit Announced.
-     * 
+     * Whether or not to announce when callers join or leave.
      */
     @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
     @Expose
@@ -160,7 +169,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * 
+     * Specifies which participants can bypass the meeting   lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose

@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AccessReviewReviewerScope;
 import com.microsoft.graph.models.extensions.UserIdentity;
 import com.microsoft.graph.models.extensions.AccessReviewScope;
-import com.microsoft.graph.models.extensions.AccessReviewReviewerScope;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleSettings;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.models.extensions.Entity;
@@ -27,6 +27,14 @@ import com.google.gson.annotations.Expose;
  */
 public class AccessReviewScheduleDefinition extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Backup Reviewers.
+     * 
+     */
+    @SerializedName(value = "backupReviewers", alternate = {"BackupReviewers"})
+    @Expose
+    public java.util.List<AccessReviewReviewerScope> backupReviewers;
 
     /**
      * The Created By.

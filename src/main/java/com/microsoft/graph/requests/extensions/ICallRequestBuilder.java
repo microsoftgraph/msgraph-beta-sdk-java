@@ -68,7 +68,7 @@ public interface ICallRequestBuilder extends IRequestBuilder {
 
     IParticipantRequestBuilder participants(final String id);
     ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final CallDisposition targetDisposition, final Integer timeout, final Boolean maskCallee, final Boolean maskCaller, final String callbackUri);
-    ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities);
+    ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities, final Integer participantCapacity);
     ICallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext);
     ICallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role);
     ICallKeepAliveRequestBuilder keepAlive();

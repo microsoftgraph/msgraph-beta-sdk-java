@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.PrintJobStatus;
+import com.microsoft.graph.models.extensions.PrintJobConfiguration;
 import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintDocumentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintDocumentCollectionRequestBuilder;
@@ -84,12 +85,16 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder implements IPrint
         return new PrintJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
     }
 
+    public IPrintJobAbortRequestBuilder abort(final String reason) {
+        return new PrintJobAbortRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.abort"), getClient(), null, reason);
+    }
+
     public IPrintJobCancelPrintJobRequestBuilder cancelPrintJob() {
         return new PrintJobCancelPrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelPrintJob"), getClient(), null);
     }
 
-    public IPrintJobRedirectRequestBuilder redirect(final String destinationPrinterId) {
-        return new PrintJobRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, destinationPrinterId);
+    public IPrintJobRedirectRequestBuilder redirect(final String destinationPrinterId, final PrintJobConfiguration configuration) {
+        return new PrintJobRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, destinationPrinterId, configuration);
     }
 
     public IPrintJobStartPrintJobRequestBuilder startPrintJob() {

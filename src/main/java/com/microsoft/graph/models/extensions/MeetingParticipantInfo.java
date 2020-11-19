@@ -43,7 +43,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Role.
-     * 
+     * Specifies the participant's role in the meeting.  Possible values are listed in the following table.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

@@ -8,14 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.ComanagedDevicesSummary;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevicesSummary;
 import com.microsoft.graph.models.extensions.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignedRoleDetails;
-import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
-import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkAppConfigurationSchemaCollectionRequestBuilder;
@@ -24,6 +22,8 @@ import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileC
 import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAppConfigurationSchemaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementAssignmentFilterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementAssignmentFilterRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsCollectionRequestBuilder;
@@ -50,6 +50,12 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateColl
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.INdesConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INdesConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryCollectionRequestBuilder;
@@ -168,6 +174,8 @@ import com.microsoft.graph.requests.extensions.INotificationMessageTemplateColle
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDomainJoinConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDomainJoinConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConfigManagerCollectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConfigManagerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
@@ -196,6 +204,7 @@ import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetw
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IVirtualEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingStateSummaryRequestBuilder;
@@ -236,13 +245,16 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IDeviceManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IAuditEventCollectionRequestBuilder auditEvents();
-
-    IAuditEventRequestBuilder auditEvents(final String id);
-
     IAndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder androidDeviceOwnerEnrollmentProfiles();
 
     IAndroidDeviceOwnerEnrollmentProfileRequestBuilder androidDeviceOwnerEnrollmentProfiles(final String id);
+
+    /**
+     * Gets the request builder for VirtualEndpoint
+     *
+     * @return the IVirtualEndpointRequestBuilder instance
+     */
+    IVirtualEndpointRequestBuilder virtualEndpoint();
 
     IAndroidForWorkAppConfigurationSchemaCollectionRequestBuilder androidForWorkAppConfigurationSchemas();
 
@@ -269,6 +281,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IAndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder androidManagedStoreAppConfigurationSchemas();
 
     IAndroidManagedStoreAppConfigurationSchemaRequestBuilder androidManagedStoreAppConfigurationSchemas(final String id);
+
+    IAuditEventCollectionRequestBuilder auditEvents();
+
+    IAuditEventRequestBuilder auditEvents(final String id);
 
     IDeviceAndAppManagementAssignmentFilterCollectionRequestBuilder assignmentFilters();
 
@@ -356,6 +372,18 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
      * @return the ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder instance
      */
     ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder softwareUpdateStatusSummary();
+
+    IDeviceManagementConfigurationCategoryCollectionRequestBuilder configurationCategories();
+
+    IDeviceManagementConfigurationCategoryRequestBuilder configurationCategories(final String id);
+
+    IDeviceManagementConfigurationPolicyCollectionRequestBuilder configurationPolicies();
+
+    IDeviceManagementConfigurationPolicyRequestBuilder configurationPolicies(final String id);
+
+    IDeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder configurationSettings();
+
+    IDeviceManagementConfigurationSettingDefinitionRequestBuilder configurationSettings(final String id);
 
     IComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners();
 
@@ -653,6 +681,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IDeviceManagementDomainJoinConnectorRequestBuilder domainJoinConnectors(final String id);
 
+    IConfigManagerCollectionCollectionRequestBuilder configManagerCollections();
+
+    IConfigManagerCollectionRequestBuilder configManagerCollections(final String id);
+
     IResourceOperationCollectionRequestBuilder resourceOperations();
 
     IResourceOperationRequestBuilder resourceOperations(final String id);
@@ -719,15 +751,15 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IDeviceManagementEnableLegacyPcManagementRequestBuilder enableLegacyPcManagement();
     IDeviceManagementEnableUnlicensedAdminstratorsRequestBuilder enableUnlicensedAdminstrators();
     IDeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(final String notificationTitle, final String notificationBody, final java.util.List<String> groupsToNotify);
+
+    IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions();
+
+    IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions(final String scope);
     IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder verifyWindowsEnrollmentAutoDiscovery(final String domainName);
     IDeviceManagementGetComanagedDevicesSummaryRequestBuilder getComanagedDevicesSummary();
     IDeviceManagementGetComanagementEligibleDevicesSummaryRequestBuilder getComanagementEligibleDevicesSummary();
     IDeviceManagementGetSuggestedEnrollmentLimitRequestBuilder getSuggestedEnrollmentLimit(final String enrollmentType);
     IDeviceManagementGetAssignedRoleDetailsRequestBuilder getAssignedRoleDetails();
-
-    IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions();
-
-    IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions(final String scope);
 
     IDeviceManagementGetRoleScopeTagsByIdsCollectionRequestBuilder getRoleScopeTagsByIds(final java.util.List<String> ids);
 

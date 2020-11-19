@@ -39,6 +39,18 @@ public enum DeviceManagementTemplateSubtype
     */
     ANTIVIRUS,
     /**
+    * firewall Shared App List
+    */
+    FIREWALL_SHARED_APP_LIST,
+    /**
+    * firewall Shared Ip List
+    */
+    FIREWALL_SHARED_IP_LIST,
+    /**
+    * firewall Shared Portlist
+    */
+    FIREWALL_SHARED_PORTLIST,
+    /**
     * For DeviceManagementTemplateSubtype values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -55,6 +55,10 @@ public enum DeviceManagementTemplateType
     */
     CLOUD_PC,
     /**
+    * firewall Shared Settings
+    */
+    FIREWALL_SHARED_SETTINGS,
+    /**
     * For DeviceManagementTemplateType values that were not expected from the service
     */
     UNEXPECTED_VALUE

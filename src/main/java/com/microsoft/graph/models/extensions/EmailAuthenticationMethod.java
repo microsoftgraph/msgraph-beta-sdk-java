@@ -22,6 +22,14 @@ import com.google.gson.annotations.Expose;
 public class EmailAuthenticationMethod extends AuthenticationMethod implements IJsonBackedObject {
 
 
+    /**
+     * The Email Address.
+     * 
+     */
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
+    @Expose
+    public String emailAddress;
+
 
     /**
      * The raw representation of this class

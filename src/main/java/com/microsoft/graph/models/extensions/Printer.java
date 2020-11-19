@@ -7,14 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PrintIdentity;
-import com.microsoft.graph.models.extensions.PrintUserIdentity;
 import com.microsoft.graph.models.extensions.PrintConnector;
 import com.microsoft.graph.models.extensions.PrinterShare;
 import com.microsoft.graph.models.extensions.PrintTaskTrigger;
 import com.microsoft.graph.models.extensions.PrinterBase;
-import com.microsoft.graph.requests.extensions.PrintIdentityCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionPage;
@@ -41,6 +37,14 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     public Boolean acceptingJobs;
 
     /**
+     * The Has Physical Device.
+     * 
+     */
+    @SerializedName(value = "hasPhysicalDevice", alternate = {"HasPhysicalDevice"})
+    @Expose
+    public Boolean hasPhysicalDevice;
+
+    /**
      * The Is Shared.
      * 
      */
@@ -55,22 +59,6 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose
     public java.util.Calendar registeredDateTime;
-
-    /**
-     * The Allowed Groups.
-     * 
-     */
-    @SerializedName(value = "allowedGroups", alternate = {"AllowedGroups"})
-    @Expose
-    public PrintIdentityCollectionPage allowedGroups;
-
-    /**
-     * The Allowed Users.
-     * 
-     */
-    @SerializedName(value = "allowedUsers", alternate = {"AllowedUsers"})
-    @Expose
-    public PrintUserIdentityCollectionPage allowedUsers;
 
     /**
      * The Connectors.
@@ -139,14 +127,6 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
-
-        if (json.has("allowedGroups")) {
-            allowedGroups = serializer.deserializeObject(json.get("allowedGroups").toString(), PrintIdentityCollectionPage.class);
-        }
-
-        if (json.has("allowedUsers")) {
-            allowedUsers = serializer.deserializeObject(json.get("allowedUsers").toString(), PrintUserIdentityCollectionPage.class);
-        }
 
         if (json.has("connectors")) {
             connectors = serializer.deserializeObject(json.get("connectors").toString(), PrintConnectorCollectionPage.class);

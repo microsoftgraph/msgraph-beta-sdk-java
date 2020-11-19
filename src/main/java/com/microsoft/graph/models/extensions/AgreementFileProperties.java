@@ -24,6 +24,14 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
 
     /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The File Data.
      * 
      */
@@ -46,6 +54,14 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
+
+    /**
+     * The Is Major Version.
+     * 
+     */
+    @SerializedName(value = "isMajorVersion", alternate = {"IsMajorVersion"})
+    @Expose
+    public Boolean isMajorVersion;
 
     /**
      * The Language.

@@ -23,6 +23,14 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
 
 
     /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The Creation Date Time.
      * 
      */

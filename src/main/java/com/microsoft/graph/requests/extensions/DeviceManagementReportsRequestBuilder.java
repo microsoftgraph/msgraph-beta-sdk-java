@@ -102,6 +102,26 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
         return new DeviceManagementReportsGetUserInstallStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserInstallStatusReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
 
+    public IDeviceManagementReportsGetConfigurationPoliciesReportForDeviceRequestBuilder getConfigurationPoliciesReportForDevice(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationPoliciesReportForDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPoliciesReportForDevice"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationPolicyDevicesReportRequestBuilder getConfigurationPolicyDevicesReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationPolicyDevicesReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPolicyDevicesReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationPolicyDeviceSummaryReportRequestBuilder getConfigurationPolicyDeviceSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationPolicyDeviceSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPolicyDeviceSummaryReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationSettingDetailsReportRequestBuilder getConfigurationSettingDetailsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationSettingDetailsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationSettingDetailsReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationSettingsReportRequestBuilder getConfigurationSettingsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationSettingsReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
     public IDeviceManagementReportsGetActiveMalwareReportRequestBuilder getActiveMalwareReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
         return new DeviceManagementReportsGetActiveMalwareReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActiveMalwareReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
@@ -116,6 +136,18 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
 
     public IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder getUnhealthyDefenderAgentsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
         return new DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUnhealthyDefenderAgentsReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetUnhealthyFirewallReportRequestBuilder getUnhealthyFirewallReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetUnhealthyFirewallReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUnhealthyFirewallReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetUnhealthyFirewallSummaryReportRequestBuilder getUnhealthyFirewallSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetUnhealthyFirewallSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUnhealthyFirewallSummaryReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetCertificatesReportRequestBuilder getCertificatesReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetCertificatesReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCertificatesReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
 
     public IDeviceManagementReportsGetCachedReportRequestBuilder getCachedReport(final String id, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top) {

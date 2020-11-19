@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequest
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainInvitationRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainInvitationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

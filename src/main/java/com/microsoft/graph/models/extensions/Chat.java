@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ChatType;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
@@ -29,6 +30,14 @@ import com.google.gson.annotations.Expose;
  */
 public class Chat extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Chat Type.
+     * 
+     */
+    @SerializedName(value = "chatType", alternate = {"ChatType"})
+    @Expose
+    public ChatType chatType;
 
     /**
      * The Created Date Time.

@@ -5,6 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintJobRedirectRequest;
 import com.microsoft.graph.requests.extensions.PrintJobRedirectRequest;
+import com.microsoft.graph.models.extensions.PrintJobConfiguration;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
@@ -25,10 +26,12 @@ public class PrintJobRedirectRequestBuilder extends BaseActionRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param destinationPrinterId the destinationPrinterId
+     * @param configuration the configuration
      */
-    public PrintJobRedirectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String destinationPrinterId) {
+    public PrintJobRedirectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String destinationPrinterId, final PrintJobConfiguration configuration) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("destinationPrinterId", destinationPrinterId);
+        bodyParams.put("configuration", configuration);
     }
 
     /**
@@ -56,6 +59,10 @@ public class PrintJobRedirectRequestBuilder extends BaseActionRequestBuilder imp
 
         if (hasParameter("destinationPrinterId")) {
             request.body.destinationPrinterId = getParameter("destinationPrinterId");
+        }
+
+        if (hasParameter("configuration")) {
+            request.body.configuration = getParameter("configuration");
         }
 
         return request;

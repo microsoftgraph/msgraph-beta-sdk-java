@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
+import com.microsoft.graph.requests.extensions.IAgreementFileVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -52,4 +56,11 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder 
     }
 
 
+    public IAgreementFileVersionCollectionRequestBuilder versions() {
+        return new AgreementFileVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
+    }
+
+    public IAgreementFileVersionRequestBuilder versions(final String id) {
+        return new AgreementFileVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    }
 }

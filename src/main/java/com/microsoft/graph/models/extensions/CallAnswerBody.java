@@ -43,6 +43,14 @@ public class CallAnswerBody {
     @Expose
     public java.util.List<Modality> acceptedModalities;
 
+    /**
+     * The participant Capacity.
+     * 
+     */
+    @SerializedName(value = "participantCapacity", alternate = {"ParticipantCapacity"})
+    @Expose
+    public Integer participantCapacity;
+
 
     /**
      * The raw representation of this class

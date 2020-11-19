@@ -8,16 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.ComanagedDevicesSummary;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevicesSummary;
 import com.microsoft.graph.models.extensions.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignedRoleDetails;
-import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
-import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.AuditEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder;
@@ -34,6 +30,10 @@ import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAppConfigurat
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAppConfigurationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedStoreAppConfigurationSchemaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuditEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementAssignmentFilterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementAssignmentFilterRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementAssignmentFilterCollectionRequestBuilder;
@@ -86,6 +86,18 @@ import com.microsoft.graph.requests.extensions.INdesConnectorCollectionRequestBu
 import com.microsoft.graph.requests.extensions.INdesConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.NdesConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NdesConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequestBuilder;
@@ -322,6 +334,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementDomainJoinConnec
 import com.microsoft.graph.requests.extensions.IDeviceManagementDomainJoinConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConfigManagerCollectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConfigManagerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConfigManagerCollectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConfigManagerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequestBuilder;
@@ -378,6 +394,8 @@ import com.microsoft.graph.requests.extensions.IUserPFXCertificateCollectionRequ
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserPFXCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserPFXCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IVirtualEndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.VirtualEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsRequestBuilder;
@@ -450,19 +468,21 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
     }
 
 
-    public IAuditEventCollectionRequestBuilder auditEvents() {
-        return new AuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
-    }
-
-    public IAuditEventRequestBuilder auditEvents(final String id) {
-        return new AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
-    }
     public IAndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder androidDeviceOwnerEnrollmentProfiles() {
         return new AndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidDeviceOwnerEnrollmentProfiles"), getClient(), null);
     }
 
     public IAndroidDeviceOwnerEnrollmentProfileRequestBuilder androidDeviceOwnerEnrollmentProfiles(final String id) {
         return new AndroidDeviceOwnerEnrollmentProfileRequestBuilder(getRequestUrlWithAdditionalSegment("androidDeviceOwnerEnrollmentProfiles") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for VirtualEndpoint
+     *
+     * @return the IVirtualEndpointRequestBuilder instance
+     */
+    public IVirtualEndpointRequestBuilder virtualEndpoint() {
+        return new VirtualEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEndpoint"), getClient(), null);
     }
     public IAndroidForWorkAppConfigurationSchemaCollectionRequestBuilder androidForWorkAppConfigurationSchemas() {
         return new AndroidForWorkAppConfigurationSchemaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidForWorkAppConfigurationSchemas"), getClient(), null);
@@ -502,6 +522,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
 
     public IAndroidManagedStoreAppConfigurationSchemaRequestBuilder androidManagedStoreAppConfigurationSchemas(final String id) {
         return new AndroidManagedStoreAppConfigurationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("androidManagedStoreAppConfigurationSchemas") + "/" + id, getClient(), null);
+    }
+    public IAuditEventCollectionRequestBuilder auditEvents() {
+        return new AuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
+    }
+
+    public IAuditEventRequestBuilder auditEvents(final String id) {
+        return new AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
     }
     public IDeviceAndAppManagementAssignmentFilterCollectionRequestBuilder assignmentFilters() {
         return new DeviceAndAppManagementAssignmentFilterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilters"), getClient(), null);
@@ -638,6 +665,27 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
      */
     public ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder softwareUpdateStatusSummary() {
         return new SoftwareUpdateStatusSummaryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("softwareUpdateStatusSummary"), getClient(), null);
+    }
+    public IDeviceManagementConfigurationCategoryCollectionRequestBuilder configurationCategories() {
+        return new DeviceManagementConfigurationCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configurationCategories"), getClient(), null);
+    }
+
+    public IDeviceManagementConfigurationCategoryRequestBuilder configurationCategories(final String id) {
+        return new DeviceManagementConfigurationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("configurationCategories") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementConfigurationPolicyCollectionRequestBuilder configurationPolicies() {
+        return new DeviceManagementConfigurationPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configurationPolicies"), getClient(), null);
+    }
+
+    public IDeviceManagementConfigurationPolicyRequestBuilder configurationPolicies(final String id) {
+        return new DeviceManagementConfigurationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("configurationPolicies") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder configurationSettings() {
+        return new DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configurationSettings"), getClient(), null);
+    }
+
+    public IDeviceManagementConfigurationSettingDefinitionRequestBuilder configurationSettings(final String id) {
+        return new DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("configurationSettings") + "/" + id, getClient(), null);
     }
     public IComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners() {
         return new ComplianceManagementPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("complianceManagementPartners"), getClient(), null);
@@ -1131,6 +1179,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
     public IDeviceManagementDomainJoinConnectorRequestBuilder domainJoinConnectors(final String id) {
         return new DeviceManagementDomainJoinConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("domainJoinConnectors") + "/" + id, getClient(), null);
     }
+    public IConfigManagerCollectionCollectionRequestBuilder configManagerCollections() {
+        return new ConfigManagerCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections"), getClient(), null);
+    }
+
+    public IConfigManagerCollectionRequestBuilder configManagerCollections(final String id) {
+        return new ConfigManagerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections") + "/" + id, getClient(), null);
+    }
     public IResourceOperationCollectionRequestBuilder resourceOperations() {
         return new ResourceOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceOperations"), getClient(), null);
     }
@@ -1255,6 +1310,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
         return new DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, notificationTitle, notificationBody, groupsToNotify);
     }
 
+    public IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions() {
+        return new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null);
+    }
+
+    public IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions(final String scope) {
+        return new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null, scope);
+    }
+
     public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder verifyWindowsEnrollmentAutoDiscovery(final String domainName) {
         return new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verifyWindowsEnrollmentAutoDiscovery"), getClient(), null, domainName);
     }
@@ -1273,14 +1336,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
 
     public IDeviceManagementGetAssignedRoleDetailsRequestBuilder getAssignedRoleDetails() {
         return new DeviceManagementGetAssignedRoleDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAssignedRoleDetails"), getClient(), null);
-    }
-
-    public IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions() {
-        return new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null);
-    }
-
-    public IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions(final String scope) {
-        return new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null, scope);
     }
 
     public IDeviceManagementGetRoleScopeTagsByIdsCollectionRequestBuilder getRoleScopeTagsByIds(final java.util.List<String> ids) {

@@ -111,6 +111,14 @@ public class Subscription extends Entity implements IJsonBackedObject {
     public String lifecycleNotificationUrl;
 
     /**
+     * The Notification Query Options.
+     * 
+     */
+    @SerializedName(value = "notificationQueryOptions", alternate = {"NotificationQueryOptions"})
+    @Expose
+    public String notificationQueryOptions;
+
+    /**
      * The Notification Url.
      * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
      */

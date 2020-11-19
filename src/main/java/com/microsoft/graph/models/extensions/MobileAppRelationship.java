@@ -32,12 +32,28 @@ public class MobileAppRelationship extends Entity implements IJsonBackedObject {
     public String targetDisplayName;
 
     /**
+     * The Target Display Version.
+     * The target mobile app's display version.
+     */
+    @SerializedName(value = "targetDisplayVersion", alternate = {"TargetDisplayVersion"})
+    @Expose
+    public String targetDisplayVersion;
+
+    /**
      * The Target Id.
      * The target mobile app's app id.
      */
     @SerializedName(value = "targetId", alternate = {"TargetId"})
     @Expose
     public String targetId;
+
+    /**
+     * The Target Publisher.
+     * The target mobile app's publisher.
+     */
+    @SerializedName(value = "targetPublisher", alternate = {"TargetPublisher"})
+    @Expose
+    public String targetPublisher;
 
     /**
      * The Target Type.

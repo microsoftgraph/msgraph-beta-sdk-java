@@ -28,10 +28,10 @@ import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionR
 import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrivateLinkResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrivateLinkResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -162,12 +162,12 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
     public IPermissionGrantPolicyRequestBuilder permissionGrantPolicies(final String id) {
         return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
     }
-    public IPrivateLinkResourceCollectionRequestBuilder privateLinkResourcePolicies() {
-        return new PrivateLinkResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies"), getClient(), null);
+    public IPrivateLinkResourcePolicyCollectionRequestBuilder privateLinkResourcePolicies() {
+        return new PrivateLinkResourcePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies"), getClient(), null);
     }
 
-    public IPrivateLinkResourceRequestBuilder privateLinkResourcePolicies(final String id) {
-        return new PrivateLinkResourceRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies") + "/" + id, getClient(), null);
+    public IPrivateLinkResourcePolicyRequestBuilder privateLinkResourcePolicies(final String id) {
+        return new PrivateLinkResourcePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies") + "/" + id, getClient(), null);
     }
     public ITokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);

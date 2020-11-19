@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
+import com.microsoft.graph.requests.extensions.IAgreementFileVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,5 +35,9 @@ public interface IAgreementFileLocalizationRequestBuilder extends IRequestBuilde
      */
     IAgreementFileLocalizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IAgreementFileVersionCollectionRequestBuilder versions();
+
+    IAgreementFileVersionRequestBuilder versions(final String id);
 
 }

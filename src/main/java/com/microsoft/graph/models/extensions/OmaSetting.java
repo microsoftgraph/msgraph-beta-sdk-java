@@ -48,6 +48,14 @@ public class OmaSetting implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Is Encrypted.
+     * Indicates whether the value field is encrypted.
+     */
+    @SerializedName(value = "isEncrypted", alternate = {"IsEncrypted"})
+    @Expose
+    public Boolean isEncrypted;
+
+    /**
      * The Oma Uri.
      * OMA.
      */
