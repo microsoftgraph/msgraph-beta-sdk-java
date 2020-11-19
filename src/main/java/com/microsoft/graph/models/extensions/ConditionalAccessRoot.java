@@ -7,9 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AuthenticationContextClassReference;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.AuthenticationContextClassReferenceCollectionPage;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionPage;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 
@@ -25,6 +27,14 @@ import com.google.gson.annotations.Expose;
  */
 public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Authentication Context Class References.
+     * 
+     */
+    @SerializedName(value = "authenticationContextClassReferences", alternate = {"AuthenticationContextClassReferences"})
+    @Expose
+    public AuthenticationContextClassReferenceCollectionPage authenticationContextClassReferences;
 
     /**
      * The Named Locations.
@@ -81,6 +91,10 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("authenticationContextClassReferences")) {
+            authenticationContextClassReferences = serializer.deserializeObject(json.get("authenticationContextClassReferences").toString(), AuthenticationContextClassReferenceCollectionPage.class);
+        }
 
         if (json.has("namedLocations")) {
             namedLocations = serializer.deserializeObject(json.get("namedLocations").toString(), NamedLocationCollectionPage.class);

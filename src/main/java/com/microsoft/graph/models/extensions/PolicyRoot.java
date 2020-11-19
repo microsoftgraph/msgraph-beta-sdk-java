@@ -15,7 +15,7 @@ import com.microsoft.graph.models.extensions.AuthorizationPolicy;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
-import com.microsoft.graph.models.extensions.PrivateLinkResource;
+import com.microsoft.graph.models.extensions.PrivateLinkResourcePolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.models.extensions.AdminConsentRequestPolicy;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.AuthorizationPolicyCollectionPage
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.PrivateLinkResourceCollectionPage;
+import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
@@ -125,7 +125,7 @@ public class PolicyRoot implements IJsonBackedObject {
      */
     @SerializedName(value = "privateLinkResourcePolicies", alternate = {"PrivateLinkResourcePolicies"})
     @Expose
-    public PrivateLinkResourceCollectionPage privateLinkResourcePolicies;
+    public PrivateLinkResourcePolicyCollectionPage privateLinkResourcePolicies;
 
     /**
      * The Token Issuance Policies.
@@ -236,7 +236,7 @@ public class PolicyRoot implements IJsonBackedObject {
         }
 
         if (json.has("privateLinkResourcePolicies")) {
-            privateLinkResourcePolicies = serializer.deserializeObject(json.get("privateLinkResourcePolicies").toString(), PrivateLinkResourceCollectionPage.class);
+            privateLinkResourcePolicies = serializer.deserializeObject(json.get("privateLinkResourcePolicies").toString(), PrivateLinkResourcePolicyCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {

@@ -495,9 +495,9 @@ public interface IUserRequestBuilder extends IRequestBuilder {
 
     IChatRequestBuilder chats(final String id);
 
-    ITeamCollectionRequestBuilder joinedTeams();
+    ITeamCollectionWithReferencesRequestBuilder joinedTeams();
 
-    ITeamRequestBuilder joinedTeams(final String id);
+    ITeamWithReferenceRequestBuilder joinedTeams(final String id);
 
     /**
      * Gets the request builder for UserTeamwork

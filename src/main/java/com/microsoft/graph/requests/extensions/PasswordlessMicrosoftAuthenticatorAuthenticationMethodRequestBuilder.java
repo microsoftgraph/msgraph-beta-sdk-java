@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -52,4 +54,13 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
     }
 
 
+
+    /**
+     * Gets the request builder for Device
+     *
+     * @return the IDeviceRequestBuilder instance
+     */
+    public IDeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
+    }
 }

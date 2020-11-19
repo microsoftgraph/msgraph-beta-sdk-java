@@ -54,4 +54,16 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
+
+    public IOnlineMeetingAlternativeRecordingStreamRequestBuilder alternativeRecording() {
+        return new OnlineMeetingAlternativeRecordingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("alternativeRecording"), getClient(), null);
+    }
+
+    public IOnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport() {
+        return new OnlineMeetingAttendeeReportStreamRequestBuilder(getRequestUrlWithAdditionalSegment("attendeeReport"), getClient(), null);
+    }
+
+    public IOnlineMeetingRecordingStreamRequestBuilder recording() {
+        return new OnlineMeetingRecordingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("recording"), getClient(), null);
+    }
 }

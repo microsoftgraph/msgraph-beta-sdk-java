@@ -18,8 +18,9 @@ import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionReques
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -47,11 +48,11 @@ public interface IInformationProtectionRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for InformationProtectionPolicy
+     * Gets the request builder for Bitlocker
      *
-     * @return the IInformationProtectionPolicyRequestBuilder instance
+     * @return the IBitlockerRequestBuilder instance
      */
-    IInformationProtectionPolicyRequestBuilder policy();
+    IBitlockerRequestBuilder bitlocker();
 
     IDataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies();
 
@@ -67,6 +68,13 @@ public interface IInformationProtectionRequestBuilder extends IRequestBuilder {
      * @return the ISensitivityPolicySettingsRequestBuilder instance
      */
     ISensitivityPolicySettingsRequestBuilder sensitivityPolicySettings();
+
+    /**
+     * Gets the request builder for InformationProtectionPolicy
+     *
+     * @return the IInformationProtectionPolicyRequestBuilder instance
+     */
+    IInformationProtectionPolicyRequestBuilder policy();
 
     IThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests();
 

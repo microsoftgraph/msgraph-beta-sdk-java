@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.BitlockerRecoveryKey;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyCollectionPage;
 
 
@@ -20,18 +21,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Bitlocker.
  */
-public class Bitlocker implements IJsonBackedObject {
+public class Bitlocker extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Recovery Keys.

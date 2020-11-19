@@ -152,6 +152,7 @@ import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkRequestBuilder;
@@ -166,7 +167,6 @@ import com.microsoft.graph.termstore.requests.extensions.IStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISearchEntityRequestBuilder;
@@ -1278,6 +1278,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the DeviceManagement
+     */
+    IDeviceManagementRequestBuilder deviceManagement();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Compliance
      */
     IComplianceRequestBuilder compliance();
@@ -1390,13 +1397,6 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the DeviceManagement
-     */
-    IDeviceManagementRequestBuilder deviceManagement();
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the DeviceAppManagement
      */
     IDeviceAppManagementRequestBuilder deviceAppManagement();
@@ -1441,7 +1441,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Security
      */
-    ISecurityRequestBuilder Security();
+    ISecurityRequestBuilder security();
 
     /**
      * Gets the GraphServiceRequestBuilder

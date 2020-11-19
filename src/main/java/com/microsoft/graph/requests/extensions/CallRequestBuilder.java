@@ -106,8 +106,8 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
         return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, targets, targetDisposition, timeout, maskCallee, maskCaller, callbackUri);
     }
 
-    public ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities) {
-        return new CallAnswerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.answer"), getClient(), null, callbackUri, mediaConfig, acceptedModalities);
+    public ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities, final Integer participantCapacity) {
+        return new CallAnswerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.answer"), getClient(), null, callbackUri, mediaConfig, acceptedModalities, participantCapacity);
     }
 
     public ICallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext) {

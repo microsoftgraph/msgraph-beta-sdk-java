@@ -40,6 +40,14 @@ public class DeviceEnrollmentPlatformRestriction implements IJsonBackedObject {
     public java.util.List<String> blockedManufacturers;
 
     /**
+     * The Blocked Skus.
+     * Collection of blocked Skus.
+     */
+    @SerializedName(value = "blockedSkus", alternate = {"BlockedSkus"})
+    @Expose
+    public java.util.List<String> blockedSkus;
+
+    /**
      * The Os Maximum Version.
      * Max OS version supported
      */

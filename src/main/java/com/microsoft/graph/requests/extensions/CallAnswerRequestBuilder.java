@@ -28,12 +28,14 @@ public class CallAnswerRequestBuilder extends BaseActionRequestBuilder implement
      * @param callbackUri the callbackUri
      * @param mediaConfig the mediaConfig
      * @param acceptedModalities the acceptedModalities
+     * @param participantCapacity the participantCapacity
      */
-    public CallAnswerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities) {
+    public CallAnswerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities, final Integer participantCapacity) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("callbackUri", callbackUri);
         bodyParams.put("mediaConfig", mediaConfig);
         bodyParams.put("acceptedModalities", acceptedModalities);
+        bodyParams.put("participantCapacity", participantCapacity);
     }
 
     /**
@@ -69,6 +71,10 @@ public class CallAnswerRequestBuilder extends BaseActionRequestBuilder implement
 
         if (hasParameter("acceptedModalities")) {
             request.body.acceptedModalities = getParameter("acceptedModalities");
+        }
+
+        if (hasParameter("participantCapacity")) {
+            request.body.participantCapacity = getParameter("participantCapacity");
         }
 
         return request;

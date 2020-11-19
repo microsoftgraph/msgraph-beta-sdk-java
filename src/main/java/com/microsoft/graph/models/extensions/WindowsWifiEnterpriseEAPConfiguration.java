@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.WifiAuthenticationType;
 import com.microsoft.graph.models.generated.EapType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
 import com.microsoft.graph.models.generated.NetworkSingleSignOnType;
@@ -38,12 +39,52 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     public WiFiAuthenticationMethod authenticationMethod;
 
     /**
+     * The Authentication Period In Seconds.
+     * Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
+     */
+    @SerializedName(value = "authenticationPeriodInSeconds", alternate = {"AuthenticationPeriodInSeconds"})
+    @Expose
+    public Integer authenticationPeriodInSeconds;
+
+    /**
+     * The Authentication Retry Delay Period In Seconds.
+     * Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
+     */
+    @SerializedName(value = "authenticationRetryDelayPeriodInSeconds", alternate = {"AuthenticationRetryDelayPeriodInSeconds"})
+    @Expose
+    public Integer authenticationRetryDelayPeriodInSeconds;
+
+    /**
+     * The Authentication Type.
+     * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you???re using certificate authentication, make sure the certificate type matches the authentication type.
+     */
+    @SerializedName(value = "authenticationType", alternate = {"AuthenticationType"})
+    @Expose
+    public WifiAuthenticationType authenticationType;
+
+    /**
+     * The Cache Credentials.
+     * Specify whether to cache user credentials on the device so that users don???t need to keep entering them each time they connect.
+     */
+    @SerializedName(value = "cacheCredentials", alternate = {"CacheCredentials"})
+    @Expose
+    public Boolean cacheCredentials;
+
+    /**
      * The Disable User Prompt For Server Validation.
      * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
      */
     @SerializedName(value = "disableUserPromptForServerValidation", alternate = {"DisableUserPromptForServerValidation"})
     @Expose
     public Boolean disableUserPromptForServerValidation;
+
+    /**
+     * The Eapol Start Period In Seconds.
+     * Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
+     */
+    @SerializedName(value = "eapolStartPeriodInSeconds", alternate = {"EapolStartPeriodInSeconds"})
+    @Expose
+    public Integer eapolStartPeriodInSeconds;
 
     /**
      * The Eap Type.
@@ -78,12 +119,28 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     public NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEAPTTLS;
 
     /**
+     * The Maximum Authentication Failures.
+     * Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
+     */
+    @SerializedName(value = "maximumAuthenticationFailures", alternate = {"MaximumAuthenticationFailures"})
+    @Expose
+    public Integer maximumAuthenticationFailures;
+
+    /**
      * The Maximum Authentication Timeout In Seconds.
      * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
      */
     @SerializedName(value = "maximumAuthenticationTimeoutInSeconds", alternate = {"MaximumAuthenticationTimeoutInSeconds"})
     @Expose
     public Integer maximumAuthenticationTimeoutInSeconds;
+
+    /**
+     * The Maximum EAPOLStart Messages.
+     * Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
+     */
+    @SerializedName(value = "maximumEAPOLStartMessages", alternate = {"MaximumEAPOLStartMessages"})
+    @Expose
+    public Integer maximumEAPOLStartMessages;
 
     /**
      * The Maximum Number Of Pairwise Master Keys In Cache.
@@ -156,6 +213,14 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     @SerializedName(value = "trustedServerCertificateNames", alternate = {"TrustedServerCertificateNames"})
     @Expose
     public java.util.List<String> trustedServerCertificateNames;
+
+    /**
+     * The User Based Virtual Lan.
+     * Specifiy whether to change the virtual LAN used by the device based on the user???s credentials. Cannot be used when NetworkSingleSignOnType is set to ???Disabled.
+     */
+    @SerializedName(value = "userBasedVirtualLan", alternate = {"UserBasedVirtualLan"})
+    @Expose
+    public Boolean userBasedVirtualLan;
 
     /**
      * The Identity Certificate For Client Authentication.

@@ -20,14 +20,6 @@ import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRe
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionRequestBuilder;
@@ -44,14 +36,6 @@ import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollect
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,20 +101,6 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder implements 
     public IAuthenticationMethodRequestBuilder methods(final String id) {
         return new AuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("methods") + "/" + id, getClient(), null);
     }
-    public IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder microsoftAuthenticatorMethods() {
-        return new MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods"), getClient(), null);
-    }
-
-    public IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(final String id) {
-        return new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods") + "/" + id, getClient(), null);
-    }
-    public ISoftwareOathAuthenticationMethodCollectionRequestBuilder oathMethods() {
-        return new SoftwareOathAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("oathMethods"), getClient(), null);
-    }
-
-    public ISoftwareOathAuthenticationMethodRequestBuilder oathMethods(final String id) {
-        return new SoftwareOathAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("oathMethods") + "/" + id, getClient(), null);
-    }
     public ILongRunningOperationCollectionRequestBuilder operations() {
         return new LongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
@@ -158,19 +128,5 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder implements 
 
     public IPhoneAuthenticationMethodRequestBuilder phoneMethods(final String id) {
         return new PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
-    }
-    public ISecurityQuestionAuthenticationMethodCollectionRequestBuilder securityQuestionMethods() {
-        return new SecurityQuestionAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityQuestionMethods"), getClient(), null);
-    }
-
-    public ISecurityQuestionAuthenticationMethodRequestBuilder securityQuestionMethods(final String id) {
-        return new SecurityQuestionAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("securityQuestionMethods") + "/" + id, getClient(), null);
-    }
-    public ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods() {
-        return new TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods"), getClient(), null);
-    }
-
-    public ITemporaryAccessPassAuthenticationMethodRequestBuilder temporaryAccessPassMethods(final String id) {
-        return new TemporaryAccessPassAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods") + "/" + id, getClient(), null);
     }
 }

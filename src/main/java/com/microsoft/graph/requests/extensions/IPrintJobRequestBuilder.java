@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.PrintJobStatus;
+import com.microsoft.graph.models.extensions.PrintJobConfiguration;
 import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintDocumentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
@@ -48,8 +49,9 @@ public interface IPrintJobRequestBuilder extends IRequestBuilder {
     IPrintTaskRequestBuilder tasks(final String id);
     IPrintJobCancelRequestBuilder cancel();
     IPrintJobStartRequestBuilder start();
+    IPrintJobAbortRequestBuilder abort(final String reason);
     IPrintJobCancelPrintJobRequestBuilder cancelPrintJob();
-    IPrintJobRedirectRequestBuilder redirect(final String destinationPrinterId);
+    IPrintJobRedirectRequestBuilder redirect(final String destinationPrinterId, final PrintJobConfiguration configuration);
     IPrintJobStartPrintJobRequestBuilder startPrintJob();
 
 }

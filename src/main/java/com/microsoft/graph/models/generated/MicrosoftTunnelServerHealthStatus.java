@@ -35,6 +35,10 @@ public enum MicrosoftTunnelServerHealthStatus
     */
     UPGRADE_IN_PROGRESS,
     /**
+    * upgrade Failed
+    */
+    UPGRADE_FAILED,
+    /**
     * For MicrosoftTunnelServerHealthStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

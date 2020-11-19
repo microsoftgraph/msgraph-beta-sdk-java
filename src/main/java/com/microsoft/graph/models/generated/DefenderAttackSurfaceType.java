@@ -23,6 +23,14 @@ public enum DefenderAttackSurfaceType
     */
     AUDIT_MODE,
     /**
+    * warn
+    */
+    WARN,
+    /**
+    * disable
+    */
+    DISABLE,
+    /**
     * For DefenderAttackSurfaceType values that were not expected from the service
     */
     UNEXPECTED_VALUE

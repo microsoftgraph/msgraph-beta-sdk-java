@@ -24,10 +24,12 @@ import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectio
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
+import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -74,12 +76,12 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
 
 
     /**
-     * Gets the request builder for InformationProtectionPolicy
+     * Gets the request builder for Bitlocker
      *
-     * @return the IInformationProtectionPolicyRequestBuilder instance
+     * @return the IBitlockerRequestBuilder instance
      */
-    public IInformationProtectionPolicyRequestBuilder policy() {
-        return new InformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
+    public IBitlockerRequestBuilder bitlocker() {
+        return new BitlockerRequestBuilder(getRequestUrlWithAdditionalSegment("bitlocker"), getClient(), null);
     }
     public IDataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies() {
         return new DataLossPreventionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies"), getClient(), null);
@@ -103,6 +105,15 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
      */
     public ISensitivityPolicySettingsRequestBuilder sensitivityPolicySettings() {
         return new SensitivityPolicySettingsRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityPolicySettings"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for InformationProtectionPolicy
+     *
+     * @return the IInformationProtectionPolicyRequestBuilder instance
+     */
+    public IInformationProtectionPolicyRequestBuilder policy() {
+        return new InformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
     public IThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);

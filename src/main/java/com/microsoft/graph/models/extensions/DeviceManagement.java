@@ -16,13 +16,14 @@ import com.microsoft.graph.models.generated.DeviceManagementSubscriptions;
 import com.microsoft.graph.models.generated.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.extensions.WindowsMalwareOverview;
-import com.microsoft.graph.models.extensions.AuditEvent;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerEnrollmentProfile;
+import com.microsoft.graph.models.extensions.VirtualEndpoint;
 import com.microsoft.graph.models.extensions.AndroidForWorkAppConfigurationSchema;
 import com.microsoft.graph.models.extensions.AndroidForWorkEnrollmentProfile;
 import com.microsoft.graph.models.extensions.AndroidForWorkSettings;
 import com.microsoft.graph.models.extensions.AndroidManagedStoreAccountEnterpriseSettings;
 import com.microsoft.graph.models.extensions.AndroidManagedStoreAppConfigurationSchema;
+import com.microsoft.graph.models.extensions.AuditEvent;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentFilter;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import com.microsoft.graph.models.extensions.AdvancedThreatProtectionOnboardingStateSummary;
@@ -41,6 +42,9 @@ import com.microsoft.graph.models.extensions.MacOSSoftwareUpdateAccountSummary;
 import com.microsoft.graph.models.extensions.ManagedDeviceEncryptionState;
 import com.microsoft.graph.models.extensions.NdesConnector;
 import com.microsoft.graph.models.extensions.SoftwareUpdateStatusSummary;
+import com.microsoft.graph.models.extensions.DeviceManagementConfigurationCategory;
+import com.microsoft.graph.models.extensions.DeviceManagementConfigurationPolicy;
+import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingDefinition;
 import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
 import com.microsoft.graph.models.extensions.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.extensions.DeviceCategory;
@@ -106,6 +110,7 @@ import com.microsoft.graph.models.extensions.MicrosoftTunnelConfiguration;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelSite;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementDomainJoinConnector;
+import com.microsoft.graph.models.extensions.ConfigManagerCollection;
 import com.microsoft.graph.models.extensions.ResourceOperation;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.extensions.RoleDefinition;
@@ -122,11 +127,11 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLear
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
 import com.microsoft.graph.models.extensions.UserPFXCertificate;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AuditEventCollectionPage;
 import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerEnrollmentProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.AndroidForWorkAppConfigurationSchemaCollectionPage;
 import com.microsoft.graph.requests.extensions.AndroidForWorkEnrollmentProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.AndroidManagedStoreAppConfigurationSchemaCollectionPage;
+import com.microsoft.graph.requests.extensions.AuditEventCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementAssignmentFilterCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionPage;
 import com.microsoft.graph.requests.extensions.CartToClassAssociationCollectionPage;
@@ -140,6 +145,9 @@ import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionPa
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateAccountSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceEncryptionStateCollectionPage;
 import com.microsoft.graph.requests.extensions.NdesConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationCategoryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionPage;
@@ -199,6 +207,7 @@ import com.microsoft.graph.requests.extensions.MicrosoftTunnelConfigurationColle
 import com.microsoft.graph.requests.extensions.MicrosoftTunnelSiteCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.ConfigManagerCollectionCollectionPage;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionPage;
@@ -356,20 +365,20 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
-     * The Audit Events.
-     * The Audit Events
-     */
-    @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
-    @Expose
-    public AuditEventCollectionPage auditEvents;
-
-    /**
      * The Android Device Owner Enrollment Profiles.
      * Android device owner enrollment profile entities.
      */
     @SerializedName(value = "androidDeviceOwnerEnrollmentProfiles", alternate = {"AndroidDeviceOwnerEnrollmentProfiles"})
     @Expose
     public AndroidDeviceOwnerEnrollmentProfileCollectionPage androidDeviceOwnerEnrollmentProfiles;
+
+    /**
+     * The Virtual Endpoint.
+     * 
+     */
+    @SerializedName(value = "virtualEndpoint", alternate = {"VirtualEndpoint"})
+    @Expose
+    public VirtualEndpoint virtualEndpoint;
 
     /**
      * The Android For Work App Configuration Schemas.
@@ -410,6 +419,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "androidManagedStoreAppConfigurationSchemas", alternate = {"AndroidManagedStoreAppConfigurationSchemas"})
     @Expose
     public AndroidManagedStoreAppConfigurationSchemaCollectionPage androidManagedStoreAppConfigurationSchemas;
+
+    /**
+     * The Audit Events.
+     * The Audit Events
+     */
+    @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
+    @Expose
+    public AuditEventCollectionPage auditEvents;
 
     /**
      * The Assignment Filters.
@@ -554,6 +571,30 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "softwareUpdateStatusSummary", alternate = {"SoftwareUpdateStatusSummary"})
     @Expose
     public SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
+
+    /**
+     * The Configuration Categories.
+     * List of all Configuration Categories
+     */
+    @SerializedName(value = "configurationCategories", alternate = {"ConfigurationCategories"})
+    @Expose
+    public DeviceManagementConfigurationCategoryCollectionPage configurationCategories;
+
+    /**
+     * The Configuration Policies.
+     * List of all Configuration policies
+     */
+    @SerializedName(value = "configurationPolicies", alternate = {"ConfigurationPolicies"})
+    @Expose
+    public DeviceManagementConfigurationPolicyCollectionPage configurationPolicies;
+
+    /**
+     * The Configuration Settings.
+     * List of all ConfigurationSettings
+     */
+    @SerializedName(value = "configurationSettings", alternate = {"ConfigurationSettings"})
+    @Expose
+    public DeviceManagementConfigurationSettingDefinitionCollectionPage configurationSettings;
 
     /**
      * The Compliance Management Partners.
@@ -1100,6 +1141,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public DeviceManagementDomainJoinConnectorCollectionPage domainJoinConnectors;
 
     /**
+     * The Config Manager Collections.
+     * A list of ConfigManagerCollection
+     */
+    @SerializedName(value = "configManagerCollections", alternate = {"ConfigManagerCollections"})
+    @Expose
+    public ConfigManagerCollectionCollectionPage configManagerCollections;
+
+    /**
      * The Resource Operations.
      * The Resource Operations.
      */
@@ -1259,10 +1308,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("auditEvents")) {
-            auditEvents = serializer.deserializeObject(json.get("auditEvents").toString(), AuditEventCollectionPage.class);
-        }
-
         if (json.has("androidDeviceOwnerEnrollmentProfiles")) {
             androidDeviceOwnerEnrollmentProfiles = serializer.deserializeObject(json.get("androidDeviceOwnerEnrollmentProfiles").toString(), AndroidDeviceOwnerEnrollmentProfileCollectionPage.class);
         }
@@ -1277,6 +1322,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("androidManagedStoreAppConfigurationSchemas")) {
             androidManagedStoreAppConfigurationSchemas = serializer.deserializeObject(json.get("androidManagedStoreAppConfigurationSchemas").toString(), AndroidManagedStoreAppConfigurationSchemaCollectionPage.class);
+        }
+
+        if (json.has("auditEvents")) {
+            auditEvents = serializer.deserializeObject(json.get("auditEvents").toString(), AuditEventCollectionPage.class);
         }
 
         if (json.has("assignmentFilters")) {
@@ -1329,6 +1378,18 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("ndesConnectors")) {
             ndesConnectors = serializer.deserializeObject(json.get("ndesConnectors").toString(), NdesConnectorCollectionPage.class);
+        }
+
+        if (json.has("configurationCategories")) {
+            configurationCategories = serializer.deserializeObject(json.get("configurationCategories").toString(), DeviceManagementConfigurationCategoryCollectionPage.class);
+        }
+
+        if (json.has("configurationPolicies")) {
+            configurationPolicies = serializer.deserializeObject(json.get("configurationPolicies").toString(), DeviceManagementConfigurationPolicyCollectionPage.class);
+        }
+
+        if (json.has("configurationSettings")) {
+            configurationSettings = serializer.deserializeObject(json.get("configurationSettings").toString(), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
 
         if (json.has("complianceManagementPartners")) {
@@ -1569,6 +1630,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("domainJoinConnectors")) {
             domainJoinConnectors = serializer.deserializeObject(json.get("domainJoinConnectors").toString(), DeviceManagementDomainJoinConnectorCollectionPage.class);
+        }
+
+        if (json.has("configManagerCollections")) {
+            configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections").toString(), ConfigManagerCollectionCollectionPage.class);
         }
 
         if (json.has("resourceOperations")) {

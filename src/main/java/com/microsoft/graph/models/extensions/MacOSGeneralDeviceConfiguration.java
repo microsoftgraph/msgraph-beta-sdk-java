@@ -420,14 +420,6 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Integer softwareUpdatesEnforcedDelayInDays;
 
     /**
-     * The Software Updates Force Delayed.
-     * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
-     */
-    @SerializedName(value = "softwareUpdatesForceDelayed", alternate = {"SoftwareUpdatesForceDelayed"})
-    @Expose
-    public Boolean softwareUpdatesForceDelayed;
-
-    /**
      * The Spotlight Block Internet Results.
      * Indicates whether or not to block Spotlight from returning any results from an Internet search.
      */

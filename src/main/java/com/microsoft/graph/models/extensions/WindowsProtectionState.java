@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WindowsDeviceHealthState;
+import com.microsoft.graph.models.generated.WindowsDefenderProductStatus;
 import com.microsoft.graph.models.extensions.WindowsDeviceMalwareState;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateCollectionPage;
@@ -66,6 +67,14 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     public Boolean fullScanRequired;
 
     /**
+     * The Is Virtual Machine.
+     * Indicates whether the device is a virtual machine.
+     */
+    @SerializedName(value = "isVirtualMachine", alternate = {"IsVirtualMachine"})
+    @Expose
+    public Boolean isVirtualMachine;
+
+    /**
      * The Last Full Scan Date Time.
      * Last quick scan datetime
      */
@@ -122,6 +131,14 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     public Boolean networkInspectionSystemEnabled;
 
     /**
+     * The Product Status.
+     * Product Status of Windows Defender Antivirus
+     */
+    @SerializedName(value = "productStatus", alternate = {"ProductStatus"})
+    @Expose
+    public EnumSet<WindowsDefenderProductStatus> productStatus;
+
+    /**
      * The Quick Scan Overdue.
      * Quick scan overdue or not?
      */
@@ -160,6 +177,14 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     @SerializedName(value = "signatureVersion", alternate = {"SignatureVersion"})
     @Expose
     public String signatureVersion;
+
+    /**
+     * The Tamper Protection Enabled.
+     * Indicates whether the Windows Defender tamper protection feature is enabled.
+     */
+    @SerializedName(value = "tamperProtectionEnabled", alternate = {"TamperProtectionEnabled"})
+    @Expose
+    public Boolean tamperProtectionEnabled;
 
     /**
      * The Detected Malware State.

@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
+import com.microsoft.graph.requests.extensions.IAuthenticationContextClassReferenceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationContextClassReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
@@ -37,6 +39,10 @@ public interface IConditionalAccessRootRequestBuilder extends IRequestBuilder {
      */
     IConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IAuthenticationContextClassReferenceCollectionRequestBuilder authenticationContextClassReferences();
+
+    IAuthenticationContextClassReferenceRequestBuilder authenticationContextClassReferences(final String id);
 
     INamedLocationCollectionRequestBuilder namedLocations();
 

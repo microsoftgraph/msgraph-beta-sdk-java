@@ -816,12 +816,12 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     public IChatRequestBuilder chats(final String id) {
         return new ChatRequestBuilder(getRequestUrlWithAdditionalSegment("chats") + "/" + id, getClient(), null);
     }
-    public ITeamCollectionRequestBuilder joinedTeams() {
-        return new TeamCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);
+    public ITeamCollectionWithReferencesRequestBuilder joinedTeams() {
+        return new TeamCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);
     }
 
-    public ITeamRequestBuilder joinedTeams(final String id) {
-        return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
+    public ITeamWithReferenceRequestBuilder joinedTeams(final String id) {
+        return new TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
     }
 
     /**

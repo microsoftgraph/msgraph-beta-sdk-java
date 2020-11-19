@@ -10,9 +10,11 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DomainState;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
+import com.microsoft.graph.models.extensions.SharedEmailDomainInvitation;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainInvitationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -130,6 +132,14 @@ public class Domain extends Entity implements IJsonBackedObject {
     public DomainDnsRecordCollectionPage serviceConfigurationRecords;
 
     /**
+     * The Shared Email Domain Invitations.
+     * 
+     */
+    @SerializedName(value = "sharedEmailDomainInvitations", alternate = {"SharedEmailDomainInvitations"})
+    @Expose
+    public SharedEmailDomainInvitationCollectionPage sharedEmailDomainInvitations;
+
+    /**
      * The Verification Dns Records.
      * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD.Read-only, Nullable
      */
@@ -183,6 +193,10 @@ public class Domain extends Entity implements IJsonBackedObject {
 
         if (json.has("serviceConfigurationRecords")) {
             serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), DomainDnsRecordCollectionPage.class);
+        }
+
+        if (json.has("sharedEmailDomainInvitations")) {
+            sharedEmailDomainInvitations = serializer.deserializeObject(json.get("sharedEmailDomainInvitations").toString(), SharedEmailDomainInvitationCollectionPage.class);
         }
 
         if (json.has("verificationDnsRecords")) {

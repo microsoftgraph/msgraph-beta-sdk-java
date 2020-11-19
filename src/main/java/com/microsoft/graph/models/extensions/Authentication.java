@@ -10,26 +10,18 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EmailAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Fido2AuthenticationMethod;
 import com.microsoft.graph.models.extensions.AuthenticationMethod;
-import com.microsoft.graph.models.extensions.MicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.models.extensions.SoftwareOathAuthenticationMethod;
 import com.microsoft.graph.models.extensions.LongRunningOperation;
 import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.extensions.PasswordAuthenticationMethod;
 import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
-import com.microsoft.graph.models.extensions.SecurityQuestionAuthenticationMethod;
-import com.microsoft.graph.models.extensions.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -69,22 +61,6 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public AuthenticationMethodCollectionPage methods;
 
     /**
-     * The Microsoft Authenticator Methods.
-     * 
-     */
-    @SerializedName(value = "microsoftAuthenticatorMethods", alternate = {"MicrosoftAuthenticatorMethods"})
-    @Expose
-    public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
-
-    /**
-     * The Oath Methods.
-     * 
-     */
-    @SerializedName(value = "oathMethods", alternate = {"OathMethods"})
-    @Expose
-    public SoftwareOathAuthenticationMethodCollectionPage oathMethods;
-
-    /**
      * The Operations.
      * 
      */
@@ -115,22 +91,6 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "phoneMethods", alternate = {"PhoneMethods"})
     @Expose
     public PhoneAuthenticationMethodCollectionPage phoneMethods;
-
-    /**
-     * The Security Question Methods.
-     * 
-     */
-    @SerializedName(value = "securityQuestionMethods", alternate = {"SecurityQuestionMethods"})
-    @Expose
-    public SecurityQuestionAuthenticationMethodCollectionPage securityQuestionMethods;
-
-    /**
-     * The Temporary Access Pass Methods.
-     * 
-     */
-    @SerializedName(value = "temporaryAccessPassMethods", alternate = {"TemporaryAccessPassMethods"})
-    @Expose
-    public TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
 
 
     /**
@@ -184,14 +144,6 @@ public class Authentication extends Entity implements IJsonBackedObject {
             methods = serializer.deserializeObject(json.get("methods").toString(), AuthenticationMethodCollectionPage.class);
         }
 
-        if (json.has("microsoftAuthenticatorMethods")) {
-            microsoftAuthenticatorMethods = serializer.deserializeObject(json.get("microsoftAuthenticatorMethods").toString(), MicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
-        }
-
-        if (json.has("oathMethods")) {
-            oathMethods = serializer.deserializeObject(json.get("oathMethods").toString(), SoftwareOathAuthenticationMethodCollectionPage.class);
-        }
-
         if (json.has("operations")) {
             operations = serializer.deserializeObject(json.get("operations").toString(), LongRunningOperationCollectionPage.class);
         }
@@ -206,14 +158,6 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("phoneMethods")) {
             phoneMethods = serializer.deserializeObject(json.get("phoneMethods").toString(), PhoneAuthenticationMethodCollectionPage.class);
-        }
-
-        if (json.has("securityQuestionMethods")) {
-            securityQuestionMethods = serializer.deserializeObject(json.get("securityQuestionMethods").toString(), SecurityQuestionAuthenticationMethodCollectionPage.class);
-        }
-
-        if (json.has("temporaryAccessPassMethods")) {
-            temporaryAccessPassMethods = serializer.deserializeObject(json.get("temporaryAccessPassMethods").toString(), TemporaryAccessPassAuthenticationMethodCollectionPage.class);
         }
     }
 }

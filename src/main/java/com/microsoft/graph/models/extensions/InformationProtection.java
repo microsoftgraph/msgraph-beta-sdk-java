@@ -7,10 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.Bitlocker;
 import com.microsoft.graph.models.extensions.DataLossPreventionPolicy;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.SensitivityPolicySettings;
+import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionPage;
@@ -31,12 +32,12 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Policy.
+     * The Bitlocker.
      * 
      */
-    @SerializedName(value = "policy", alternate = {"Policy"})
+    @SerializedName(value = "bitlocker", alternate = {"Bitlocker"})
     @Expose
-    public InformationProtectionPolicy policy;
+    public Bitlocker bitlocker;
 
     /**
      * The Data Loss Prevention Policies.
@@ -61,6 +62,14 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sensitivityPolicySettings", alternate = {"SensitivityPolicySettings"})
     @Expose
     public SensitivityPolicySettings sensitivityPolicySettings;
+
+    /**
+     * The Policy.
+     * 
+     */
+    @SerializedName(value = "policy", alternate = {"Policy"})
+    @Expose
+    public InformationProtectionPolicy policy;
 
     /**
      * The Threat Assessment Requests.

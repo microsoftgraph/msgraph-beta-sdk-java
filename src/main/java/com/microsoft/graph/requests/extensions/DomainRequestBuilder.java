@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequest
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainInvitationRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainInvitationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -73,6 +77,13 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
 
     public IDomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
+    }
+    public ISharedEmailDomainInvitationCollectionRequestBuilder sharedEmailDomainInvitations() {
+        return new SharedEmailDomainInvitationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomainInvitations"), getClient(), null);
+    }
+
+    public ISharedEmailDomainInvitationRequestBuilder sharedEmailDomainInvitations(final String id) {
+        return new SharedEmailDomainInvitationRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomainInvitations") + "/" + id, getClient(), null);
     }
     public IDomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);

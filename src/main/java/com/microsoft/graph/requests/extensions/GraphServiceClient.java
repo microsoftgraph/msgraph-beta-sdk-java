@@ -297,6 +297,8 @@ import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ComplianceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
@@ -325,8 +327,6 @@ import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBui
 import com.microsoft.graph.requests.extensions.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityGovernanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequestBuilder;

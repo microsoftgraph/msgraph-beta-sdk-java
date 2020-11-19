@@ -24,10 +24,12 @@ import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectio
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
+import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

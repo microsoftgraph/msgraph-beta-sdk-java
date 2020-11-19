@@ -47,6 +47,14 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
     public java.util.List<Win32LobAppDetection> detectionRules;
 
     /**
+     * The Display Version.
+     * The version displayed in the UX for this app.
+     */
+    @SerializedName(value = "displayVersion", alternate = {"DisplayVersion"})
+    @Expose
+    public String displayVersion;
+
+    /**
      * The Install Command Line.
      * The command line to install this app
      */

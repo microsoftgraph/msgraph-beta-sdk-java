@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainInvitationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -45,6 +47,10 @@ public interface IDomainRequestBuilder extends IRequestBuilder {
     IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords();
 
     IDomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id);
+
+    ISharedEmailDomainInvitationCollectionRequestBuilder sharedEmailDomainInvitations();
+
+    ISharedEmailDomainInvitationRequestBuilder sharedEmailDomainInvitations(final String id);
 
     IDomainDnsRecordCollectionRequestBuilder verificationDnsRecords();
 

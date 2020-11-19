@@ -10,14 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
@@ -80,20 +72,6 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
 
     public IPrintJobRequestBuilder jobs(final String id) {
         return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
-    }
-    public IPrintIdentityCollectionRequestBuilder allowedGroups() {
-        return new PrintIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups"), getClient(), null);
-    }
-
-    public IPrintIdentityRequestBuilder allowedGroups(final String id) {
-        return new PrintIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
-    }
-    public IPrintUserIdentityCollectionRequestBuilder allowedUsers() {
-        return new PrintUserIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers"), getClient(), null);
-    }
-
-    public IPrintUserIdentityRequestBuilder allowedUsers(final String id) {
-        return new PrintUserIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers") + "/" + id, getClient(), null);
     }
     public IPrintConnectorCollectionWithReferencesRequestBuilder connectors() {
         return new PrintConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);

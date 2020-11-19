@@ -9,10 +9,12 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.SharedEmailDomain;
 import com.microsoft.graph.models.extensions.FeatureRolloutPolicy;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.SharedEmailDomainCollectionPage;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionPage;
 
 
@@ -43,6 +45,14 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
     public DirectoryObjectCollectionPage deletedItems;
+
+    /**
+     * The Shared Email Domains.
+     * 
+     */
+    @SerializedName(value = "sharedEmailDomains", alternate = {"SharedEmailDomains"})
+    @Expose
+    public SharedEmailDomainCollectionPage sharedEmailDomains;
 
     /**
      * The Feature Rollout Policies.
@@ -98,6 +108,10 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("deletedItems")) {
             deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("sharedEmailDomains")) {
+            sharedEmailDomains = serializer.deserializeObject(json.get("sharedEmailDomains").toString(), SharedEmailDomainCollectionPage.class);
         }
 
         if (json.has("featureRolloutPolicies")) {

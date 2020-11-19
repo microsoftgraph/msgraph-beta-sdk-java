@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
+import com.microsoft.graph.models.extensions.PrintJobConfiguration;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -25,6 +26,14 @@ public class PrintJobRedirectBody {
     @SerializedName(value = "destinationPrinterId", alternate = {"DestinationPrinterId"})
     @Expose
     public String destinationPrinterId;
+
+    /**
+     * The configuration.
+     * 
+     */
+    @SerializedName(value = "configuration", alternate = {"Configuration"})
+    @Expose
+    public PrintJobConfiguration configuration;
 
 
     /**

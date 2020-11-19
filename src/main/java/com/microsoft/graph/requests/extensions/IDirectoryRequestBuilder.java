@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequ
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequestBuilder;
 import java.util.Arrays;
@@ -59,6 +61,10 @@ public interface IDirectoryRequestBuilder extends IRequestBuilder {
     IApplicationCollectionRequestBuilder deletedItemsAsApplication();
 
     IApplicationRequestBuilder deletedItemsAsApplication(final String id);
+
+    ISharedEmailDomainCollectionRequestBuilder sharedEmailDomains();
+
+    ISharedEmailDomainRequestBuilder sharedEmailDomains(final String id);
 
     IFeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies();
 
