@@ -103,7 +103,7 @@ steps:
   inputs:
     targetType: filePath
     filePath: '$(Build.SourcesDirectory)/msgraph-metadata/scripts/runTypewriter.ps1'
-    arguments: '-verbosity Info -language Java -metadata $(cleanMetadata) -output $(outputPath) -generationMode Files'
+    arguments: '-verbosity Info -language Java -metadata $(cleanMetadata) -output $(outputPath) -generationMode Files -endpointVersion beta'
     workingDirectory: '$(Build.SourcesDirectory)' # Set the root for a multi-repo pipeline. /s
   enabled: true
 
