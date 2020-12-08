@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.LicenseProcessingState;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
 import com.microsoft.graph.models.generated.GroupAccessType;
+import com.microsoft.graph.models.extensions.MembershipRuleProcessingStatus;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Endpoint;
@@ -423,6 +424,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "unseenMessagesCount", alternate = {"UnseenMessagesCount"})
     @Expose
     public Integer unseenMessagesCount;
+
+    /**
+     * The Membership Rule Processing Status.
+     * 
+     */
+    @SerializedName(value = "membershipRuleProcessingStatus", alternate = {"MembershipRuleProcessingStatus"})
+    @Expose
+    public MembershipRuleProcessingStatus membershipRuleProcessingStatus;
 
     /**
      * The Is Archived.

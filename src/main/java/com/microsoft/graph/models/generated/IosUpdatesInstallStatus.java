@@ -11,22 +11,6 @@ package com.microsoft.graph.models.generated;
 public enum IosUpdatesInstallStatus
 {
     /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * available
-    */
-    AVAILABLE,
-    /**
-    * idle
-    */
-    IDLE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
     * update Scan Failed
     */
     UPDATE_SCAN_FAILED,
@@ -98,6 +82,22 @@ public enum IosUpdatesInstallStatus
     * mdm Client Crashed
     */
     MDM_CLIENT_CRASHED,
+    /**
+    * success
+    */
+    SUCCESS,
+    /**
+    * available
+    */
+    AVAILABLE,
+    /**
+    * idle
+    */
+    IDLE,
+    /**
+    * unknown
+    */
+    UNKNOWN,
     /**
     * For IosUpdatesInstallStatus values that were not expected from the service
     */

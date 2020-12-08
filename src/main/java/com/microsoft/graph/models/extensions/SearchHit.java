@@ -33,6 +33,38 @@ public class SearchHit implements IJsonBackedObject {
     }
 
     /**
+     * The Content Source.
+     * The name of the content source which the externalItem is part of .
+     */
+    @SerializedName(value = "contentSource", alternate = {"ContentSource"})
+    @Expose
+    public String contentSource;
+
+    /**
+     * The Hit Id.
+     * The internal identifier for the item.
+     */
+    @SerializedName(value = "hitId", alternate = {"HitId"})
+    @Expose
+    public String hitId;
+
+    /**
+     * The Rank.
+     * The rank or the order of the result.
+     */
+    @SerializedName(value = "rank", alternate = {"Rank"})
+    @Expose
+    public Integer rank;
+
+    /**
+     * The Summary.
+     * A summary of the result, if a summary is available.
+     */
+    @SerializedName(value = "summary", alternate = {"Summary"})
+    @Expose
+    public String summary;
+
+    /**
      * The _id.
      * 
      */
@@ -57,36 +89,12 @@ public class SearchHit implements IJsonBackedObject {
     public String _summary;
 
     /**
-     * The Content Source.
+     * The Resource.
      * 
      */
-    @SerializedName(value = "contentSource", alternate = {"ContentSource"})
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
-    public String contentSource;
-
-    /**
-     * The Hit Id.
-     * 
-     */
-    @SerializedName(value = "hitId", alternate = {"HitId"})
-    @Expose
-    public String hitId;
-
-    /**
-     * The Rank.
-     * 
-     */
-    @SerializedName(value = "rank", alternate = {"Rank"})
-    @Expose
-    public Integer rank;
-
-    /**
-     * The Summary.
-     * 
-     */
-    @SerializedName(value = "summary", alternate = {"Summary"})
-    @Expose
-    public String summary;
+    public Entity resource;
 
     /**
      * The _source.
@@ -95,14 +103,6 @@ public class SearchHit implements IJsonBackedObject {
     @SerializedName(value = "_source", alternate = {"_source"})
     @Expose
     public Entity _source;
-
-    /**
-     * The Resource.
-     * 
-     */
-    @SerializedName(value = "resource", alternate = {"Resource"})
-    @Expose
-    public Entity resource;
 
 
     /**

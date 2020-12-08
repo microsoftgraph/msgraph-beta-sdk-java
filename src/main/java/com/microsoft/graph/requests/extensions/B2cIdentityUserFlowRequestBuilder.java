@@ -12,6 +12,10 @@ import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionReques
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -62,5 +66,12 @@ public class B2cIdentityUserFlowRequestBuilder extends BaseRequestBuilder implem
 
     public IIdentityProviderWithReferenceRequestBuilder identityProviders(final String id) {
         return new IdentityProviderWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
+    }
+    public IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder userAttributeAssignments() {
+        return new IdentityUserFlowAttributeAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments"), getClient(), null);
+    }
+
+    public IIdentityUserFlowAttributeAssignmentRequestBuilder userAttributeAssignments(final String id) {
+        return new IdentityUserFlowAttributeAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments") + "/" + id, getClient(), null);
     }
 }

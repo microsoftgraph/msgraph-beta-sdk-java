@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,5 +41,9 @@ public interface IB2cIdentityUserFlowRequestBuilder extends IRequestBuilder {
     IIdentityProviderCollectionWithReferencesRequestBuilder identityProviders();
 
     IIdentityProviderWithReferenceRequestBuilder identityProviders(final String id);
+
+    IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder userAttributeAssignments();
+
+    IIdentityUserFlowAttributeAssignmentRequestBuilder userAttributeAssignments(final String id);
 
 }

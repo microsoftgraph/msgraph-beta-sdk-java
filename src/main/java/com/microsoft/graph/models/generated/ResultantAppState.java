@@ -11,13 +11,13 @@ package com.microsoft.graph.models.generated;
 public enum ResultantAppState
 {
     /**
-    * installed
-    */
-    INSTALLED,
-    /**
     * not Applicable
     */
     NOT_APPLICABLE,
+    /**
+    * installed
+    */
+    INSTALLED,
     /**
     * failed
     */

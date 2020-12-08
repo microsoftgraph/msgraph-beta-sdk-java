@@ -37,7 +37,7 @@ public class IpReferenceData implements IJsonBackedObject {
      */
     @SerializedName(value = "asn", alternate = {"Asn"})
     @Expose
-    public Integer asn;
+    public Long asn;
 
     /**
      * The City.

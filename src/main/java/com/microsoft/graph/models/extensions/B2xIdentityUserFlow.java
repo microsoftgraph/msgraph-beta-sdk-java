@@ -8,8 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentityProvider;
+import com.microsoft.graph.models.extensions.IdentityUserFlowAttributeAssignment;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionPage;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -29,6 +31,14 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
      * 
      */
     public IdentityProviderCollectionPage identityProviders;
+
+    /**
+     * The User Attribute Assignments.
+     * 
+     */
+    @SerializedName(value = "userAttributeAssignments", alternate = {"UserAttributeAssignments"})
+    @Expose
+    public IdentityUserFlowAttributeAssignmentCollectionPage userAttributeAssignments;
 
 
     /**
@@ -72,6 +82,10 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
         if (json.has("identityProviders")) {
             identityProviders = serializer.deserializeObject(json.get("identityProviders").toString(), IdentityProviderCollectionPage.class);
+        }
+
+        if (json.has("userAttributeAssignments")) {
+            userAttributeAssignments = serializer.deserializeObject(json.get("userAttributeAssignments").toString(), IdentityUserFlowAttributeAssignmentCollectionPage.class);
         }
     }
 }

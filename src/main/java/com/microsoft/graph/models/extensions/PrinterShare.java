@@ -7,12 +7,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PrintIdentity;
-import com.microsoft.graph.models.extensions.PrintUserIdentity;
+import com.microsoft.graph.models.extensions.Group;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrinterBase;
-import com.microsoft.graph.requests.extensions.PrintIdentityCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
+import com.microsoft.graph.requests.extensions.GroupCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -47,17 +47,13 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Allowed Groups.
      * 
      */
-    @SerializedName(value = "allowedGroups", alternate = {"AllowedGroups"})
-    @Expose
-    public PrintIdentityCollectionPage allowedGroups;
+    public GroupCollectionPage allowedGroups;
 
     /**
      * The Allowed Users.
      * 
      */
-    @SerializedName(value = "allowedUsers", alternate = {"AllowedUsers"})
-    @Expose
-    public PrintUserIdentityCollectionPage allowedUsers;
+    public UserCollectionPage allowedUsers;
 
     /**
      * The Printer.
@@ -108,11 +104,11 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
 
         if (json.has("allowedGroups")) {
-            allowedGroups = serializer.deserializeObject(json.get("allowedGroups").toString(), PrintIdentityCollectionPage.class);
+            allowedGroups = serializer.deserializeObject(json.get("allowedGroups").toString(), GroupCollectionPage.class);
         }
 
         if (json.has("allowedUsers")) {
-            allowedUsers = serializer.deserializeObject(json.get("allowedUsers").toString(), PrintUserIdentityCollectionPage.class);
+            allowedUsers = serializer.deserializeObject(json.get("allowedUsers").toString(), UserCollectionPage.class);
         }
     }
 }

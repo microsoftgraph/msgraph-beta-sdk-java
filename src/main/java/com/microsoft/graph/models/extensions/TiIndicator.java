@@ -320,7 +320,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "networkDestinationAsn", alternate = {"NetworkDestinationAsn"})
     @Expose
-    public Integer networkDestinationAsn;
+    public Long networkDestinationAsn;
 
     /**
      * The Network Destination Cidr Block.
@@ -392,7 +392,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "networkSourceAsn", alternate = {"NetworkSourceAsn"})
     @Expose
-    public Integer networkSourceAsn;
+    public Long networkSourceAsn;
 
     /**
      * The Network Source Cidr Block.

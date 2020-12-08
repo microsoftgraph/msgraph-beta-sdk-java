@@ -26,7 +26,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Sign Up Email Based Subscriptions.
-     * 
+     * Indicates whether users can sign up for email based subscriptions.
      */
     @SerializedName(value = "allowedToSignUpEmailBasedSubscriptions", alternate = {"AllowedToSignUpEmailBasedSubscriptions"})
     @Expose
@@ -34,7 +34,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Use SSPR.
-     * 
+     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
      */
     @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose
@@ -42,7 +42,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow Email Verified Users To Join Organization.
-     * 
+     * Indicates whether a user can join the tenant by email validation.
      */
     @SerializedName(value = "allowEmailVerifiedUsersToJoinOrganization", alternate = {"AllowEmailVerifiedUsersToJoinOrganization"})
     @Expose
@@ -50,7 +50,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow Invites From.
-     * 
+     * Indicates who can invite external users to the organization. Possible values are:none - Prevent everyone, including admins, from inviting external users. Default setting for US Government.adminsAndGuestInviters - Allow members of Global Administrators, User Administrators, and Guest Inviter roles to invite external users.adminsGuestInvitersAndAllMembers - Allow the above admin roles and all other User role members to invite external users.everyone - Allow everyone in the organization, including guest users, to invite external users. Default setting for all cloud environments except US Government.
      */
     @SerializedName(value = "allowInvitesFrom", alternate = {"AllowInvitesFrom"})
     @Expose
@@ -58,7 +58,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Block Msol Power Shell.
-     * 
+     * To disable the use of MSOL PowerShell set this property to true. Setting to true will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
      */
     @SerializedName(value = "blockMsolPowerShell", alternate = {"BlockMsolPowerShell"})
     @Expose
@@ -66,7 +66,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Default User Role Permissions.
-     * 
+     * Specifies certain customizable permissions for default user role.
      */
     @SerializedName(value = "defaultUserRolePermissions", alternate = {"DefaultUserRolePermissions"})
     @Expose
