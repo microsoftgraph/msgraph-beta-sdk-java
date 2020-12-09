@@ -33,7 +33,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Create Apps.
-     * 
+     * Indicates whether the default user role can create applications.
      */
     @SerializedName(value = "allowedToCreateApps", alternate = {"AllowedToCreateApps"})
     @Expose
@@ -41,7 +41,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Create Security Groups.
-     * 
+     * Indicates whether the default user role can create security groups.
      */
     @SerializedName(value = "allowedToCreateSecurityGroups", alternate = {"AllowedToCreateSecurityGroups"})
     @Expose
@@ -49,7 +49,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Read Other Users.
-     * 
+     * Indicates whether the default user role can read other users.
      */
     @SerializedName(value = "allowedToReadOtherUsers", alternate = {"AllowedToReadOtherUsers"})
     @Expose

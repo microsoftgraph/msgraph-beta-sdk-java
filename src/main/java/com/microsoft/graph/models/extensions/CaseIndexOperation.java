@@ -7,9 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.CaseAction;
-import com.microsoft.graph.models.generated.CaseOperationStatus;
-import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.models.extensions.CaseOperation;
 
 
 import com.google.gson.JsonObject;
@@ -21,56 +19,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Case Index Operation.
  */
-public class CaseIndexOperation extends Entity implements IJsonBackedObject {
+public class CaseIndexOperation extends CaseOperation implements IJsonBackedObject {
 
-
-    /**
-     * The Action.
-     * 
-     */
-    @SerializedName(value = "action", alternate = {"Action"})
-    @Expose
-    public CaseAction action;
-
-    /**
-     * The Completed Date Time.
-     * 
-     */
-    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
-    @Expose
-    public java.util.Calendar completedDateTime;
-
-    /**
-     * The Created Date Time.
-     * 
-     */
-    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName(value = "displayName", alternate = {"DisplayName"})
-    @Expose
-    public String displayName;
-
-    /**
-     * The Percent Progress.
-     * 
-     */
-    @SerializedName(value = "percentProgress", alternate = {"PercentProgress"})
-    @Expose
-    public Integer percentProgress;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName(value = "status", alternate = {"Status"})
-    @Expose
-    public CaseOperationStatus status;
 
 
     /**

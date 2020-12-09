@@ -348,7 +348,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Legal Age Group Classification.
-     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
+     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.
      */
     @SerializedName(value = "legalAgeGroupClassification", alternate = {"LegalAgeGroupClassification"})
     @Expose

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterShare;
-import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -43,13 +43,13 @@ public interface IPrinterShareRequestBuilder extends IRequestBuilder {
 
     IPrintJobRequestBuilder jobs(final String id);
 
-    IPrintIdentityCollectionRequestBuilder allowedGroups();
+    IGroupCollectionWithReferencesRequestBuilder allowedGroups();
 
-    IPrintIdentityRequestBuilder allowedGroups(final String id);
+    IGroupWithReferenceRequestBuilder allowedGroups(final String id);
 
-    IPrintUserIdentityCollectionRequestBuilder allowedUsers();
+    IUserCollectionWithReferencesRequestBuilder allowedUsers();
 
-    IPrintUserIdentityRequestBuilder allowedUsers(final String id);
+    IUserWithReferenceRequestBuilder allowedUsers(final String id);
 
     /**
      * Gets the request builder for Printer

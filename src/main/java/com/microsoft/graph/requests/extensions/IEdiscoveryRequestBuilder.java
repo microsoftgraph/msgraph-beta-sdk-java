@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Ediscovery;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,8 +36,8 @@ public interface IEdiscoveryRequestBuilder extends IRequestBuilder {
     IEdiscoveryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IEdiscoveryCaseCollectionRequestBuilder cases();
+    ICaseCollectionRequestBuilder cases();
 
-    IEdiscoveryCaseRequestBuilder cases(final String id);
+    ICaseRequestBuilder cases(final String id);
 
 }

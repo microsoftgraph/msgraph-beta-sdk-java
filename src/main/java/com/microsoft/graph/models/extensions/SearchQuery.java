@@ -33,20 +33,20 @@ public class SearchQuery implements IJsonBackedObject {
     }
 
     /**
+     * The Query String.
+     * The search query containing the search terms. Required.
+     */
+    @SerializedName(value = "queryString", alternate = {"QueryString"})
+    @Expose
+    public String queryString;
+
+    /**
      * The Query_string.
      * 
      */
     @SerializedName(value = "query_string", alternate = {"Query_string"})
     @Expose
     public SearchQueryString query_string;
-
-    /**
-     * The Query String.
-     * 
-     */
-    @SerializedName(value = "queryString", alternate = {"QueryString"})
-    @Expose
-    public String queryString;
 
 
     /**

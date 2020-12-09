@@ -7,9 +7,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EdiscoveryCase;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionPage;
+import com.microsoft.graph.requests.extensions.CaseCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +29,7 @@ public class Ediscovery extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "cases", alternate = {"Cases"})
     @Expose
-    public EdiscoveryCaseCollectionPage cases;
+    public CaseCollectionPage cases;
 
 
     /**
@@ -73,7 +72,7 @@ public class Ediscovery extends Entity implements IJsonBackedObject {
 
 
         if (json.has("cases")) {
-            cases = serializer.deserializeObject(json.get("cases").toString(), EdiscoveryCaseCollectionPage.class);
+            cases = serializer.deserializeObject(json.get("cases").toString(), CaseCollectionPage.class);
         }
     }
 }

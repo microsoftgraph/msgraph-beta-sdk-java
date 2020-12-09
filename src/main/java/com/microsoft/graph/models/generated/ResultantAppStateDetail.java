@@ -11,45 +11,13 @@ package com.microsoft.graph.models.generated;
 public enum ResultantAppStateDetail
 {
     /**
-    * no Additional Details
-    */
-    NO_ADDITIONAL_DETAILS,
-    /**
-    * dependency Failed To Install
-    */
-    DEPENDENCY_FAILED_TO_INSTALL,
-    /**
-    * dependency With Requirements Not Met
-    */
-    DEPENDENCY_WITH_REQUIREMENTS_NOT_MET,
-    /**
-    * dependency Pending Reboot
-    */
-    DEPENDENCY_PENDING_REBOOT,
-    /**
-    * dependency With Auto Install Disabled
-    */
-    DEPENDENCY_WITH_AUTO_INSTALL_DISABLED,
-    /**
-    * ios App Store Update Failed To Install
-    */
-    IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL,
-    /**
     * processor Architecture Not Applicable
     */
     PROCESSOR_ARCHITECTURE_NOT_APPLICABLE,
     /**
-    * vpp App Has Update Available
-    */
-    VPP_APP_HAS_UPDATE_AVAILABLE,
-    /**
     * minimum Disk Space Not Met
     */
     MINIMUM_DISK_SPACE_NOT_MET,
-    /**
-    * user Rejected Update
-    */
-    USER_REJECTED_UPDATE,
     /**
     * minimum Os Version Not Met
     */
@@ -82,6 +50,38 @@ public enum ResultantAppStateDetail
     * power Shell Script Requirement Not Met
     */
     POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET,
+    /**
+    * no Additional Details
+    */
+    NO_ADDITIONAL_DETAILS,
+    /**
+    * dependency Failed To Install
+    */
+    DEPENDENCY_FAILED_TO_INSTALL,
+    /**
+    * dependency With Requirements Not Met
+    */
+    DEPENDENCY_WITH_REQUIREMENTS_NOT_MET,
+    /**
+    * dependency Pending Reboot
+    */
+    DEPENDENCY_PENDING_REBOOT,
+    /**
+    * dependency With Auto Install Disabled
+    */
+    DEPENDENCY_WITH_AUTO_INSTALL_DISABLED,
+    /**
+    * ios App Store Update Failed To Install
+    */
+    IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL,
+    /**
+    * vpp App Has Update Available
+    */
+    VPP_APP_HAS_UPDATE_AVAILABLE,
+    /**
+    * user Rejected Update
+    */
+    USER_REJECTED_UPDATE,
     /**
     * see Install Error Code
     */

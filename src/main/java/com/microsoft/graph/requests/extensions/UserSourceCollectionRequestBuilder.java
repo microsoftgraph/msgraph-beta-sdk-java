@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Custodian;
+import com.microsoft.graph.models.extensions.Legalhold;
 import com.microsoft.graph.models.extensions.UserSource;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class UserSourceCollectionRequestBuilder extends BaseRequestBuilder implements IUserSourceCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of Custodian
+     * The request builder for this collection of Legalhold
      *
      * @param requestUrl     the request URL
      * @param client         the service client

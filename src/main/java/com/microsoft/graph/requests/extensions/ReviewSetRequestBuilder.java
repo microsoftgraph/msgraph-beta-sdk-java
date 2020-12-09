@@ -8,6 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ReviewSet;
+import com.microsoft.graph.models.generated.ExportOptions;
+import com.microsoft.graph.models.generated.ExportFileStructure;
+import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionRequestBuilder;
@@ -62,5 +65,9 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder implements IRevi
 
     public IReviewSetQueryRequestBuilder queries(final String id) {
         return new ReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
+    }
+
+    public IReviewSetExportRequestBuilder export(final String outputName, final String description, final String azureBlobContainer, final String azureBlobToken, final EnumSet<ExportOptions> exportOptions, final ExportFileStructure exportStructure) {
+        return new ReviewSetExportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.export"), getClient(), null, outputName, description, azureBlobContainer, azureBlobToken, exportOptions, exportStructure);
     }
 }

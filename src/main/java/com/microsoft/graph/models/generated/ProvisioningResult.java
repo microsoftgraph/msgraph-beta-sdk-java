@@ -27,6 +27,10 @@ public enum ProvisioningResult
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * warning
+    */
+    WARNING,
+    /**
     * For ProvisioningResult values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Ediscovery;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EdiscoveryCaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.CaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -56,11 +56,11 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdi
     }
 
 
-    public IEdiscoveryCaseCollectionRequestBuilder cases() {
-        return new EdiscoveryCaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
+    public ICaseCollectionRequestBuilder cases() {
+        return new CaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
     }
 
-    public IEdiscoveryCaseRequestBuilder cases(final String id) {
-        return new EdiscoveryCaseRequestBuilder(getRequestUrlWithAdditionalSegment("cases") + "/" + id, getClient(), null);
+    public ICaseRequestBuilder cases(final String id) {
+        return new CaseRequestBuilder(getRequestUrlWithAdditionalSegment("cases") + "/" + id, getClient(), null);
     }
 }
