@@ -30,6 +30,9 @@ import java.lang.reflect.Type;
 import java.util.EnumSet;
 import java.util.Iterator;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Serializes and deserializes EnumSets
  * The Graph service expects a single enum value as a comma-delimited string
@@ -41,8 +44,9 @@ public class EnumSetSerializer {
     private final Gson gson;
     /**
      * Not available for instantiation
+     * @param logger logger to use during serialization
      */
-    public EnumSetSerializer(final ILogger logger) {
+    public EnumSetSerializer(@Nonnull final ILogger logger) {
          gson = new GsonBuilder().registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger)).create();
     }
 
@@ -53,7 +57,8 @@ public class EnumSetSerializer {
      * @param jsonStrToDeserialize the string to deserialize
      * @return                     EnumSet of values
      */
-    public EnumSet<?> deserialize(Type type, String jsonStrToDeserialize) {
+    @Nullable
+    public EnumSet<?> deserialize(@Nonnull final Type type, @Nonnull final String jsonStrToDeserialize) {
             final String arrayString = "[" + jsonStrToDeserialize + "]";
             return jsonStrToDeserialize == null ? null : (EnumSet<?>) gson.fromJson(arrayString, type);
     }
@@ -64,7 +69,8 @@ public class EnumSetSerializer {
      * @param src the source EnumSet
      * @return    a comma-delimited string of enum values
      */
-    public JsonPrimitive serialize(EnumSet<?> src) {
+    @Nullable
+    public JsonPrimitive serialize(@Nonnull final EnumSet<?> src) {
         final StringBuilder serializedStringBuilder = new StringBuilder();
 
         final Iterator<?> i = src.iterator();

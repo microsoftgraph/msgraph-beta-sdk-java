@@ -34,22 +34,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.common.annotations.VisibleForTesting;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.Constants;
-import com.microsoft.graph.core.DefaultConnectionConfig;
-import com.microsoft.graph.core.IClientConfig;
-import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
 import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.logger.ILogger;
@@ -60,7 +59,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
-import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
@@ -78,14 +76,9 @@ public class CoreHttpProvider implements IHttpProvider {
 	private final ISerializer serializer;
 
 	/**
-	 * The authentication provider
-	 */
-	private final IAuthenticationProvider authenticationProvider;
-
-	/**
 	 * The executors
 	 */
-	private final IExecutors executors;
+	protected final IExecutors executors;
 
 	/**
 	 * The logger
@@ -93,43 +86,36 @@ public class CoreHttpProvider implements IHttpProvider {
 	private final ILogger logger;
 
 	/**
-	 * The connection config
-	 */
-	private IConnectionConfig connectionConfig;
-
-	/**
 	 * The OkHttpClient that handles all requests
 	 */
 	private OkHttpClient corehttpClient;
 
 	/**
-	 * Creates the DefaultHttpProvider
+	 * Creates the CoreHttpProvider
 	 *
 	 * @param serializer             the serializer
-	 * @param authenticationProvider the authentication provider
 	 * @param executors              the executors
 	 * @param logger                 the logger for diagnostic information
+	 * @param httpClient             the client to send http requests with
 	 */
-	public CoreHttpProvider(final ISerializer serializer,
-			final IAuthenticationProvider authenticationProvider,
-			final IExecutors executors,
-			final ILogger logger) {
-		this.serializer = serializer;
-		this.authenticationProvider = authenticationProvider;
-		this.executors = executors;
-		this.logger = logger;
-	}
-
-	/**
-	 * Creates the DefaultHttpProvider
-	 *
-	 * @param clientConfig           the client configuration to use for the provider
-	 * @param httpClient             the http client to execute the requests with
-	 */
-	public CoreHttpProvider(final IClientConfig clientConfig,
-			final OkHttpClient httpClient) {
-		this(clientConfig.getSerializer(), clientConfig.getAuthenticationProvider(), clientConfig.getExecutors(), clientConfig.getLogger());
-		this.corehttpClient = httpClient;
+	public CoreHttpProvider(@Nonnull final ISerializer serializer,
+			@Nonnull final IExecutors executors,
+			@Nonnull final ILogger logger,
+			@Nullable final OkHttpClient httpClient) {
+		if (httpClient == null) {
+			throw new NullPointerException("httpClient");
+		} else if(serializer == null) {
+			throw new NullPointerException("serializer");
+		} else if(executors == null) {
+			throw new NullPointerException("executors");
+		} else if(logger == null) {
+			throw new NullPointerException("logger");
+		} else {
+			this.serializer = serializer;
+			this.executors = executors;
+			this.logger = logger;
+			this.corehttpClient = httpClient;
+		}
 	}
 
 	/**
@@ -138,6 +124,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return the serializer for this provider
 	 */
 	@Override
+	@Nullable
 	public ISerializer getSerializer() {
 		return serializer;
 	}
@@ -153,10 +140,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param <Body>       the type of the object to send to the service in the body of the request
 	 */
 	@Override
-	public <Result, Body> void send(final IHttpRequest request,
-			final ICallback<? super Result> callback,
-			final Class<Result> resultClass,
-			final Body serializable) {
+	@Nullable
+	public <Result, Body> void send(@Nonnull final IHttpRequest request,
+			@Nonnull final ICallback<? super Result> callback,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable) {
 		final IProgressCallback<? super Result> progressCallback;
 		if (callback instanceof IProgressCallback) {
 			progressCallback = (IProgressCallback<? super Result>) callback;
@@ -193,9 +181,10 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
 	@Override
-	public <Result, Body> Result send(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable)
+	@Nullable
+	public <Result, Body> Result send(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable)
 					throws ClientException {
 		return send(request, resultClass, serializable, null);
 	}
@@ -213,10 +202,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException this exception occurs if the request was unable to complete for any reason
 	 */
-	public <Result, Body, DeserializeType> Result send(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable,
-			final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
+	@Nullable
+	public <Result, Body, DeserializeType> Result send(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
 		return sendRequestInternal(request, resultClass, serializable, null, handler);
 	}
 	/**
@@ -231,36 +221,34 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
-	public <Result, Body> Request getHttpRequest(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable,
-			final IProgressCallback<? super Result> progress) throws ClientException {
+	@Nullable
+	public <Result, Body> Request getHttpRequest(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nullable final IProgressCallback<? super Result> progress) throws ClientException {
 		final int defaultBufferSize = 4096;
 
 		final URL requestUrl = request.getRequestUrl();
 		logger.logDebug("Starting to send request, URL " + requestUrl.toString());
 
-		if(this.connectionConfig == null) {
-			this.connectionConfig = new DefaultConnectionConfig();
-		}
-		
 		// Request level middleware options
-		RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
-				request.getShouldRedirect() != null? request.getShouldRedirect() : this.connectionConfig.getShouldRedirect());
-		RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
-				request.getMaxRetries() > 0? request.getMaxRetries() : this.connectionConfig.getMaxRetries(),
-				request.getDelay() > 0? request.getDelay() : this.connectionConfig.getDelay());
+		final RedirectOptions redirectOptions = request.getMaxRedirects() <= 0 ? null : new RedirectOptions(request.getMaxRedirects(), request.getShouldRedirect());
+		final RetryOptions retryOptions = request.getShouldRetry() == null ? null : new RetryOptions(request.getShouldRetry(), request.getMaxRetries(), request.getDelay());
 
-		Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
+		final Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
 		Request.Builder corehttpRequestBuilder = coreHttpRequest
-				.newBuilder()
-				.tag(RedirectOptions.class, redirectOptions)
-				.tag(RetryOptions.class, retryOptions);
-		
+				.newBuilder();
+		if(redirectOptions != null) {
+			corehttpRequestBuilder = corehttpRequestBuilder.tag(RedirectOptions.class, redirectOptions);
+		}
+		if(retryOptions != null) {
+			corehttpRequestBuilder = corehttpRequestBuilder.tag(RetryOptions.class, retryOptions);
+		}
+
 		String contenttype = null;
 
 		logger.logDebug("Request Method " + request.getHttpMethod().toString());
-		List<HeaderOption> requestHeaders = request.getHeaders();
+		final List<HeaderOption> requestHeaders = request.getHeaders();
 
 		for(HeaderOption headerOption : requestHeaders) {
 			if(headerOption.getName().equalsIgnoreCase(Constants.CONTENT_TYPE_HEADER_NAME)) {
@@ -322,21 +310,21 @@ public class CoreHttpProvider implements IHttpProvider {
 				}
 				@Override
 				public void writeTo(BufferedSink sink) throws IOException {
-					OutputStream out = sink.outputStream();
 					int writtenSoFar = 0;
-					BufferedOutputStream bos = new BufferedOutputStream(out);
-					int toWrite;
-					do {
-						toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
-						bos.write(bytesToWrite, writtenSoFar, toWrite);
-						writtenSoFar = writtenSoFar + toWrite;
-						if (progress != null) {
-							executors.performOnForeground(writtenSoFar, bytesToWrite.length,
-									progress);
+					try (final OutputStream out = sink.outputStream()) {
+						try (final BufferedOutputStream bos = new BufferedOutputStream(out)){
+							int toWrite;
+							do {
+								toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
+								bos.write(bytesToWrite, writtenSoFar, toWrite);
+								writtenSoFar = writtenSoFar + toWrite;
+								if (progress != null) {
+									executors.performOnForeground(writtenSoFar, bytesToWrite.length,
+											progress);
+								}
+							} while (toWrite > 0);
 						}
-					} while (toWrite > 0);
-					bos.close();
-					out.close();
+					}
 				}
 
 				@Override
@@ -363,51 +351,30 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
-	@SuppressWarnings("unchecked")
-	private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable,
-			final IProgressCallback<? super Result> progress,
-			final IStatefulResponseHandler<Result, DeserializeType> handler)
+	@SuppressWarnings({"unchecked", "LambdaLast"})
+	@Nullable
+	protected <Result, Body, DeserializeType> Result sendRequestInternal(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nullable final IProgressCallback<? super Result> progress,
+			@Nullable final IStatefulResponseHandler<Result, DeserializeType> handler)
 					throws ClientException {
 
 		try {
-			if(this.connectionConfig == null) {
-				this.connectionConfig = new DefaultConnectionConfig();
-			}
-			if(this.corehttpClient == null) {
-				final ICoreAuthenticationProvider authProvider = new ICoreAuthenticationProvider() {
-					@Override
-					public Request authenticateRequest(Request request) {
-						return request;
-					}
-				};
-				this.corehttpClient = HttpClients
-									.createDefault(authProvider)
-									.newBuilder()
-									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
-									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
-									.followRedirects(false) //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/516
-									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
-									.build();
-			}
-			if (authenticationProvider != null) { //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/517
-				authenticationProvider.authenticateRequest(request);
-			}
-			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
-			Response response = corehttpClient.newCall(coreHttpRequest).execute();
+			final Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
+			final Response response = corehttpClient.newCall(coreHttpRequest).execute();
 			InputStream in = null;
 			boolean isBinaryStreamInput = false;
 			try {
 
 				// Call being executed
-				
+
 
 				if (handler != null) {
 					handler.configConnection(response);
 				}
 
-				logger.logDebug(String.format("Response code %d, %s",
+				logger.logDebug(String.format(Locale.ROOT, "Response code %d, %s",
 						response.code(),
 						response.message()));
 
@@ -425,7 +392,7 @@ public class CoreHttpProvider implements IHttpProvider {
 
 				if (response.code() == HttpResponseCode.HTTP_NOBODY
 						|| response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-					logger.logDebug("Handling response with no body");                  
+					logger.logDebug("Handling response with no body");
 					return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
 				}
 
@@ -442,7 +409,7 @@ public class CoreHttpProvider implements IHttpProvider {
 					return (Result) null;
 
 				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				if (contentType != null && resultClass != InputStream.class && 
+				if (contentType != null && resultClass != InputStream.class &&
 							contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
 					return handleJsonResponse(in, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
@@ -450,6 +417,9 @@ public class CoreHttpProvider implements IHttpProvider {
 					logger.logDebug("Response binary");
 					isBinaryStreamInput = true;
 					return (Result) handleBinaryStream(in);
+				} else if (contentType != null && resultClass != InputStream.class &&
+                            contentType.contains(Constants.TEXT_CONTENT_TYPE)) {
+                    return handleRawResponse(in, resultClass);
 				} else {
 					return (Result) null;
 				}
@@ -500,7 +470,7 @@ public class CoreHttpProvider implements IHttpProvider {
 			final Body serializable,
 			final Response response)
 					throws IOException {
-		throw GraphServiceException.createFromConnection(request, serializable, serializer,
+		throw GraphServiceException.createFromResponse(request, serializable, serializer,
 				response, logger);
 	}
 
@@ -530,16 +500,41 @@ public class CoreHttpProvider implements IHttpProvider {
 
 		final String rawJson = streamToString(in);
 		return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
+    }
+
+    /**
+	 * Handles the cause where the response is a Text object
+	 *
+	 * @param in              the input stream from the response
+	 * @param clazz           the class of the response object
+	 * @param <Result>        the type of the response object
+	 * @return                the Text object
+	 */
+    private <Result> Result handleRawResponse(final InputStream in, final Class<Result> clazz) {
+		if (clazz == null) {
+			return null;
+		}
+
+        final String rawText = streamToString(in);
+        if(clazz == Long.class) {
+            try {
+                return (Result) Long.valueOf(rawText);
+            } catch (NumberFormatException ex) {
+                return null;
+            }
+        } else {
+            return null;
+        }
 	}
 
 	/**
 	 * Handles the case where the response body is empty
-	 * 
+	 *
 	 * @param responseHeaders the response headers
 	 * @param clazz           the type of the response object
 	 * @return                the JSON object
 	 */
-	private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
+	private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz)
 			throws UnsupportedEncodingException{
 		//Create an empty object to attach the response headers to
 		InputStream in = new ByteArrayInputStream("{}".getBytes(Constants.JSON_ENCODING));
@@ -552,17 +547,17 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param input the response body stream
 	 * @return      the string result
 	 */
-	public static String streamToString(final InputStream input) {
+	@Nullable
+	public static String streamToString(@Nonnull final InputStream input) {
 		final String httpStreamEncoding = "UTF-8";
 		final String endOfFile = "\\A";
-		String scannerString = "";
 		try (final Scanner scanner = new Scanner(input, httpStreamEncoding)) {
 			scanner.useDelimiter(endOfFile);
 			if (scanner.hasNext()) {
-				scannerString = scanner.next();
+				return scanner.next();
 			}
+			return "";
 		}
-		return scannerString;
 	}
 
 	/**
@@ -582,40 +577,24 @@ public class CoreHttpProvider implements IHttpProvider {
 		return false;
 	}
 
+	/**
+	 * Gets the logger in use
+	 *
+	 * @return the logger
+	 */
 	@VisibleForTesting
+	@Nullable
 	public ILogger getLogger() {
 		return logger;
 	}
 
+	/**
+	 * Gets the executors in use
+	 * @return the executors
+	 */
 	@VisibleForTesting
+	@Nullable
 	public IExecutors getExecutors() {
 		return executors;
-	}
-
-	@VisibleForTesting
-	public IAuthenticationProvider getAuthenticationProvider() {
-		return authenticationProvider;
-	}
-
-
-	/**
-	 * Get connection config for read and connect timeout in requests
-	 *
-	 * @return Connection configuration to be used for timeout values
-	 */
-	public IConnectionConfig getConnectionConfig() {
-		if(this.connectionConfig == null) {
-			this.connectionConfig = new DefaultConnectionConfig();
-		}
-		return connectionConfig;
-	}
-
-	/**
-	 * Set connection config for read and connect timeout in requests
-	 *
-	 * @param connectionConfig Connection configuration to be used for timeout values
-	 */
-	public void setConnectionConfig(IConnectionConfig connectionConfig) {
-		this.connectionConfig = connectionConfig;
 	}
 }

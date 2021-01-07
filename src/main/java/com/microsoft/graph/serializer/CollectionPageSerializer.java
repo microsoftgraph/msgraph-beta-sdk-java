@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -35,6 +38,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.google.common.reflect.TypeToken;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.logger.ILogger;
 
@@ -45,8 +49,8 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 
+/** Specialized serializer to handle collection pages */
 public class CollectionPageSerializer {
 
 	private static DefaultSerializer serializer;
@@ -74,7 +78,8 @@ public class CollectionPageSerializer {
 	 * @param <T2> the collection request builder interface type
      * @return       JsonElement of CollectionPage
      */
-	public static <T1, T2 extends IRequestBuilder> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
+	@Nullable
+	public static <T1, T2 extends BaseRequestBuilder<T1>> JsonElement serialize(@Nonnull final BaseCollectionPage<T1, T2> src, @Nonnull final ILogger logger) {
 		if(src == null) {
 			return null;
 		}
@@ -104,15 +109,16 @@ public class CollectionPageSerializer {
      * @return    the deserialized CollectionPage
      */
 	@SuppressWarnings("unchecked")
-	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
-		if (json == null || !json.isJsonArray()) {
+	@Nullable
+	public static <T1, T2 extends BaseRequestBuilder<T1>> BaseCollectionPage<T1, T2> deserialize(@Nonnull final JsonElement json, @Nonnull final Type typeOfT, @Nonnull final ILogger logger) throws JsonParseException {
+		if (json == null || !json.isJsonArray() || !typeOfT.getClass().equals(Class.class)) {
 			return null;
 		}
 		serializer = new DefaultSerializer(logger);
 		final JsonArray sourceArray = json.getAsJsonArray();
 		final ArrayList<T1> list = new ArrayList<T1>(sourceArray.size());
 		/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionPage */
-		final String collectionPageClassCanonicalName = typeOfT.getTypeName();
+		final String collectionPageClassCanonicalName = ((Class<?>)typeOfT).getName();
 		/** eg: com.microsoft.graph.models.extensions.Attachment */
 		final String baseEntityClassCanonicalName = collectionPageClassCanonicalName
 					.substring(0, collectionPageClassCanonicalName.length() - pageLength - collectionLength)
@@ -137,12 +143,12 @@ public class CollectionPageSerializer {
 			final Object response = responseClass.getConstructor().newInstance();
 			responseClass.getField("value").set(response, list);
 			final Class<?> collectionPageClass = Class.forName(collectionPageClassCanonicalName);
-			/** eg: com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder */
-			final String responseBuilderInterfaceCanonicalName = responseClassCanonicalName
+			/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder */
+			final String responseBuilderCanonicalName = responseClassCanonicalName
 						.substring(0, responseClassCanonicalName.length() - responseLength)
-						.replace(extensionsPath, extensionsPath + "I") + "RequestBuilder";
-			final Class<?> responseBuilderInterfaceClass = Class.forName(responseBuilderInterfaceCanonicalName);
-			return (BaseCollectionPage<T1, T2>)collectionPageClass.getConstructor(responseClass, responseBuilderInterfaceClass).newInstance(response, null);
+						.replace(extensionsPath, extensionsPath) + "RequestBuilder";
+			final Class<?> responseBuilderClass = Class.forName(responseBuilderCanonicalName);
+			return (BaseCollectionPage<T1, T2>)collectionPageClass.getConstructor(responseClass, responseBuilderClass).newInstance(response, null);
 		} catch(ClassNotFoundException ex) {
 			logger.logError("Could not find class during deserialization", ex);
 		} catch(NoSuchMethodException | InstantiationException | InvocationTargetException ex) {

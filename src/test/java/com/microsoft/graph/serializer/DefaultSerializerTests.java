@@ -2,10 +2,14 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.IOException;
 import java.util.EnumSet;
 
 import com.google.gson.JsonElement;
@@ -13,17 +17,14 @@ import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.callrecords.models.extensions.MediaStream;
-import com.microsoft.graph.functional.TestBase;
-import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.core.DateOnly;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.RecurrenceRange;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
+import com.microsoft.graph.models.extensions.UserGetMailTipsParameterSet;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
@@ -125,11 +126,19 @@ public class DefaultSerializerTests {
         assertEquals(expected, jsonOut);
     }
 
+    public static Map<String, List<String>> getResponseHeaders() {
+		Map<String, List<String>> headers = new HashMap<String, List<String>>();
+		ArrayList<String> headerValues = new ArrayList<String>();
+		headerValues.add("value1");
+		headers.put("header1", headerValues);
+
+		return headers;
+	}
+
 	@Test
 	public void testResponseHeaders() throws Exception {
-		MockConnection connection = new MockConnection(null);
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, connection.getResponseHeaders());
+		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, getResponseHeaders());
 
 		JsonElement responseHeaders = user.additionalDataManager().get("graphResponseHeaders");
 		assertNotNull(responseHeaders);
@@ -179,6 +188,17 @@ public class DefaultSerializerTests {
         assertTrue(result.nextExpectedRanges.size() > 0);
     }
     @Test
+    public void testDoubleDeserialization() {
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        final String source = " [{\"streamId\": \"12976\",\"startDateTime\": null,\"endDateTime\": null,\"streamDirection\": \"callerToCallee\",\"averageAudioDegradation\": null,\"averageJitter\": null,\"maxJitter\": null,\"averagePacketLossRate\": null,\"maxPacketLossRate\": null,\"averageRatioOfConcealedSamples\": null,\"maxRatioOfConcealedSamples\": null,\"averageRoundTripTime\": null,\"maxRoundTripTime\": null,\"packetUtilization\": 0,\"averageBandwidthEstimate\": null,\"wasMediaBypassed\": null,\"postForwardErrorCorrectionPacketLossRate\": null,\"averageVideoFrameLossPercentage\": null,\"averageReceivedFrameRate\": null,\"lowFrameRateRatio\": null,\"averageVideoPacketLossRate\": null,\"averageVideoFrameRate\": null,\"lowVideoProcessingCapabilityRatio\": null,\"averageAudioNetworkJitter\": null,\"maxAudioNetworkJitter\": null},{\"streamId\": \"3303\",\"startDateTime\": null,\"endDateTime\": null,\"streamDirection\": \"calleeToCaller\",\"averageAudioDegradation\": null,\"averageJitter\": \"PT0S\",\"maxJitter\": \"PT0S\",\"averagePacketLossRate\": 0,\"maxPacketLossRate\": 0,\"averageRatioOfConcealedSamples\": null,\"maxRatioOfConcealedSamples\": null,\"averageRoundTripTime\": \"PT0.02S\",\"maxRoundTripTime\": \"PT0.02S\",\"packetUtilization\": 1184,\"averageBandwidthEstimate\": null,\"wasMediaBypassed\": null,\"postForwardErrorCorrectionPacketLossRate\": 0,\"averageVideoFrameLossPercentage\": 0,\"averageReceivedFrameRate\": null,\"lowFrameRateRatio\": 0,\"averageVideoPacketLossRate\": null,\"averageVideoFrameRate\": 25.6,\"lowVideoProcessingCapabilityRatio\": null,\"averageAudioNetworkJitter\": null,\"maxAudioNetworkJitter\": null}]";
+        final MediaStream[] result = serializer.deserializeObject(source, MediaStream[].class);
+        assertNotNull(result);
+        assertNotNull(result[0]);
+        assertNotNull(result[1]);
+        assertNull(result[0].averagePacketLossRate);
+        assertEquals(0f, result[1].averagePacketLossRate, 0f);
+    }
+    @Test
     public void testDurationDeserialization() {
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         final String source = "{\"streamId\": \"2101\",\"startDateTime\": null,\"endDateTime\": null,\"streamDirection\": \"calleeToCaller\",\"averageAudioDegradation\": null,\"averageJitter\": \"PT0.004S\",\"maxJitter\": \"PT0.007S\",\"averagePacketLossRate\": 0,\"maxPacketLossRate\": 0,\"averageRatioOfConcealedSamples\": 0,\"maxRatioOfConcealedSamples\": null,\"averageRoundTripTime\": \"PT0.024S\",\"maxRoundTripTime\": \"PT0.05S\",\"packetUtilization\": 471,\"averageBandwidthEstimate\": 1174971,\"wasMediaBypassed\": null,\"postForwardErrorCorrectionPacketLossRate\": null,\"averageVideoFrameLossPercentage\": null,\"averageReceivedFrameRate\": null,\"lowFrameRateRatio\": null,\"averageVideoPacketLossRate\": null,\"averageVideoFrameRate\": null,\"lowVideoProcessingCapabilityRatio\": null,\"averageAudioNetworkJitter\": \"PT0.014S\",\"maxAudioNetworkJitter\": \"PT0.022S\"}";
@@ -191,14 +211,12 @@ public class DefaultSerializerTests {
         final ArrayList<String> users = new ArrayList<String>();
         users.add("michael@chambele.onmicrosoft.com");
         final EnumSet<MailTipsType> mailtips = EnumSet.of(MailTipsType.MAILBOX_FULL_STATUS, MailTipsType.MAX_MESSAGE_SIZE);
-        final UserGetMailTipsBody body = new UserGetMailTipsBody();
-        body.emailAddresses = users;
-        body.mailTipsOptions = mailtips;
+        final UserGetMailTipsParameterSet body = UserGetMailTipsParameterSet.newBuilder().withEmailAddresses(users).withMailTipsOptions(mailtips).build();
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         final String serialized = serializer.serializeObject(body);
         Assert.assertTrue("result contains camelCasedValues", serialized.contains("mailboxFullStatus"));
 
-        final UserGetMailTipsBody deserialized = serializer.deserializeObject(serialized, UserGetMailTipsBody.class);
+        final UserGetMailTipsParameterSet deserialized = serializer.deserializeObject(serialized, UserGetMailTipsParameterSet.class);
 
         Assert.assertEquals(2, deserialized.mailTipsOptions.size());
     }

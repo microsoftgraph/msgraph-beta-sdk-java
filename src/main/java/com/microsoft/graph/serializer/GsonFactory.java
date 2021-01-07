@@ -33,9 +33,9 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.logger.ILogger;
-import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.core.DateOnly;
 
-import com.microsoft.graph.models.extensions.TimeOfDay;
+import com.microsoft.graph.core.TimeOfDay;
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.Calendar;
@@ -50,7 +50,7 @@ import javax.xml.datatype.Duration;
  */
 final class GsonFactory {
 
-	private static String PARSING_MESSAGE = "Parsing issue on ";
+	protected static String PARSING_MESSAGE = "Parsing issue on ";
 
     /**
      * Default constructor
@@ -213,18 +213,18 @@ final class GsonFactory {
             }
         };
 
-        final JsonSerializer<BaseCollectionPage<?,?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?,?>>() {
+        final JsonSerializer<BaseCollectionPage<?, ?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?, ?>>() {
             @Override
-            public JsonElement serialize(final BaseCollectionPage<?,?> src,
+            public JsonElement serialize(final BaseCollectionPage<?, ?> src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
             	return CollectionPageSerializer.serialize(src, logger);
             }
         };
 
-        final JsonDeserializer<BaseCollectionPage<?,?>> collectionPageDeserializer = new JsonDeserializer<BaseCollectionPage<?,?>>() {
+        final JsonDeserializer<BaseCollectionPage<?, ?>> collectionPageDeserializer = new JsonDeserializer<BaseCollectionPage<?, ?>>() {
             @Override
-            public BaseCollectionPage<?,?> deserialize(final JsonElement json,
+            public BaseCollectionPage<?, ?> deserialize(final JsonElement json,
                                         final Type typeOfT,
                                         final JsonDeserializationContext context) throws JsonParseException {
                 return CollectionPageSerializer.deserialize(json, typeOfT, logger);

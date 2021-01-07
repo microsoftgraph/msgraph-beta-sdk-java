@@ -30,10 +30,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Arrays;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A request builder
  */
-public abstract class BaseRequestBuilder implements IRequestBuilder {
+public abstract class BaseRequestBuilder<T> implements IRequestBuilder {
 
     /**
      * The backing client for this request.
@@ -58,9 +61,9 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @param options    the options for this request
      */
     public BaseRequestBuilder(
-            final String requestUrl,
-            final IBaseClient client,
-            final List<? extends Option> options
+            @Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final List<? extends Option> options
     ) {
         this.requestUrl = requestUrl;
         this.client = client;
@@ -74,6 +77,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      *
      * @return the client
      */
+    @Nullable
     public IBaseClient getClient() {
         return client;
     }
@@ -83,6 +87,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      *
      * @return the request URL
      */
+    @Nullable
     public String getRequestUrl() {
         return requestUrl;
     }
@@ -93,7 +98,8 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the full list of options for this request
      */
-    public List<? extends Option> getOptions(final Option... requestOptions) {
+    @Nonnull
+    public List<? extends Option> getOptions(@Nonnull final Option... requestOptions) {
         return Collections.unmodifiableList(requestOptions != null && requestOptions.length > 0 ? 
                 Arrays.asList(requestOptions) 
                 : options);
@@ -105,11 +111,19 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @param  urlSegment the section to add
      * @return the base URL for this request
      */
-    public String getRequestUrlWithAdditionalSegment(final String urlSegment) {
+    @Nonnull
+    public String getRequestUrlWithAdditionalSegment(@Nonnull final String urlSegment) {
         return requestUrl + "/" + urlSegment;
     }
 
-    public String getRequestUrlWithAdditionalParameter(final String parameter) {
+    /**
+     * Gets the request URL with an odata parameter added to it
+     *
+     * @param  parameter the parameter to add
+     * @return the base URL for this request
+     */
+    @Nonnull
+    public String getRequestUrlWithAdditionalParameter(@Nonnull final String parameter) {
         return requestUrl + "('" + parameter + "')";
     }
 

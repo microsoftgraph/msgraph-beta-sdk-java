@@ -30,6 +30,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Collections;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.microsoft.graph.core.ClientException;
@@ -132,14 +135,14 @@ public class GraphServiceException extends ClientException {
      * @param error           the error response if available
      * @param verbose         the error response log level
      */
-    protected GraphServiceException(final String method,
-                                    final String url,
-                                    final List<String> requestHeaders,
-                                    final String requestBody,
+    protected GraphServiceException(@Nonnull final String method,
+                                    @Nonnull final String url,
+                                    @Nonnull final List<String> requestHeaders,
+                                    @Nullable final String requestBody,
                                     final int responseCode,
-                                    final String responseMessage,
-                                    final List<String> responseHeaders,
-                                    final GraphErrorResponse error,
+                                    @Nullable final String responseMessage,
+                                    @Nonnull final List<String> responseHeaders,
+                                    @Nullable final GraphErrorResponse error,
                                     final boolean verbose) {
         super(responseMessage, null);
         this.method = method;
@@ -166,11 +169,13 @@ public class GraphServiceException extends ClientException {
      *
      * @return The HTTP response message
      */
+    @Nullable
     public String getResponseMessage() {
     	return responseMessage;
     }
 
     @Override
+    @Nullable
     public String getMessage() {
         return getMessage(verbose);
     }
@@ -188,6 +193,7 @@ public class GraphServiceException extends ClientException {
      * Gets the response headers
      * @return the response headers
      */
+    @Nonnull
     public List<String> getResponseHeaders() {
         return responseHeaders;
     }
@@ -196,6 +202,7 @@ public class GraphServiceException extends ClientException {
      * Gets the error returned by the service
      * @return the error returned by the service
      */
+    @Nullable
     public GraphErrorResponse getError() {
         return error;
     }
@@ -204,6 +211,7 @@ public class GraphServiceException extends ClientException {
      * Gets the HTTP method of the request
      * @return the HTTP method of the request
      */
+    @Nonnull
     public String getMethod() {
         return method;
     }
@@ -212,6 +220,7 @@ public class GraphServiceException extends ClientException {
      * Gets the URL of the request
      * @return the URL of the request
      */
+    @Nonnull
     public String getUrl() {
         return url;
     }
@@ -220,6 +229,7 @@ public class GraphServiceException extends ClientException {
      * Gets the request headers
      * @return the request headers
      */
+    @Nonnull
     public List<String> getRequestHeaders() {
         return requestHeaders;
     }
@@ -230,6 +240,7 @@ public class GraphServiceException extends ClientException {
      * @param verbose if the message should be brief or more verbose
      * @return        the message.
      */
+    @Nullable
     public String getMessage(final boolean verbose) {
         final StringBuilder sb = new StringBuilder();
         if (error != null && error.error != null) {
@@ -297,112 +308,11 @@ public class GraphServiceException extends ClientException {
      *
      * @return the error message
      */
+    @Nullable
     public GraphError getServiceError() {
         return error.error;
     }
 
-    /**
-     * Creates a Graph service exception from a given failed HTTP request
-     *
-     * @param request      the request that resulted in this failure
-     * @param serializable the serialized object that was sent with this request
-     * @param serializer   the serializer to re-create the option in its over the wire state
-     * @param connection   the connection that was used to extract the response information from
-     * @param logger       the logger to log exception information to
-     * @param <T>          the type of the serializable object
-     * @return             the new GraphServiceException instance
-     * @throws IOException an exception occurs if there were any problems processing the connection
-     */
-    public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
-                                                                 final T serializable,
-                                                                 final ISerializer serializer,
-                                                                 final IConnection connection,
-                                                                 final ILogger logger)
-            throws IOException {
-        final String method = connection.getRequestMethod();
-        final String url = request.getRequestUrl().toString();
-        final List<String> requestHeaders = new LinkedList<>();
-        for (final HeaderOption option : request.getHeaders()) {
-            requestHeaders.add(option.getName() + " : " + option.getValue());
-        }
-        boolean isVerbose = logger.getLoggingLevel() == LoggerLevel.DEBUG;
-        final String requestBody;
-        if (serializable instanceof byte[]) {
-            final byte[] bytes = (byte[]) serializable;
-            StringBuilder sb = new StringBuilder();
-            sb.append("byte[").append(bytes.length).append("]");
-
-            sb.append(" {");
-            if (isVerbose) {
-            	sb.append(bytes);
-            } else {
-	            for (int i = 0; i < MAX_BYTE_COUNT_BEFORE_TRUNCATION && i < bytes.length; i++) {
-	                sb.append(bytes[i]).append(", ");
-	            }
-	            if (bytes.length > MAX_BYTE_COUNT_BEFORE_TRUNCATION) {
-	                sb.append(TRUNCATION_MARKER).append("}");
-	            }
-            }
-            requestBody = sb.toString();
-        } else if (serializable != null) {
-            requestBody = serializer.serializeObject(serializable);
-        } else {
-            requestBody = null;
-        }
-
-        final int responseCode = connection.getResponseCode();
-        final List<String> responseHeaders = new LinkedList<>();
-        final Map<String, String> headers = connection.getHeaders();
-        for (final String key : headers.keySet()) {
-            final String fieldPrefix;
-            if (key == null) {
-                fieldPrefix = "";
-            } else {
-                fieldPrefix = key + " : ";
-            }
-            responseHeaders.add(fieldPrefix + headers.get(key));
-        }
-
-        final String responseMessage = connection.getResponseMessage();
-        String rawOutput = "{}";
-        if(connection.getInputStream() != null) {
-        	rawOutput = CoreHttpProvider.streamToString(connection.getInputStream());
-        }
-        GraphErrorResponse error;
-        try {
-            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, connection.getResponseHeaders());
-        } catch (final Exception ex) {
-            error = new GraphErrorResponse();
-            error.error = new GraphError();
-            error.error.code = "Unable to parse error response message";
-            error.error.message = "Raw error: " + rawOutput;
-            error.error.innererror = new GraphInnerError();
-            error.error.innererror.code = ex.getMessage();
-        }
-
-        if (responseCode >= INTERNAL_SERVER_ERROR) {
-            return new GraphFatalServiceException(method,
-                    url,
-                    requestHeaders,
-                    requestBody,
-                    responseCode,
-                    responseMessage,
-                    responseHeaders,
-                    error,
-                    isVerbose);
-        }
-
-        return new GraphServiceException(method,
-                url,
-                requestHeaders,
-                requestBody,
-                responseCode,
-                responseMessage,
-                responseHeaders,
-                error,
-                isVerbose);
-    }
-    
     /**
      * Creates a Graph service exception from a given failed HTTP request
      *
@@ -415,11 +325,12 @@ public class GraphServiceException extends ClientException {
      * @return             the new GraphServiceException instance
      * @throws IOException an exception occurs if there were any problems processing the connection
      */
-    public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
-                                                                 final T serializable,
-                                                                 final ISerializer serializer,
-                                                                 final Response response,
-                                                                 final ILogger logger)
+    @Nonnull
+    public static <T> GraphServiceException createFromResponse(@Nonnull final IHttpRequest request,
+                                                                 @Nullable final T serializable,
+                                                                 @Nonnull final ISerializer serializer,
+                                                                 @Nullable final Response response,
+                                                                 @Nonnull final ILogger logger)
             throws IOException {
         final String method = response.request().method();
         final String url = request.getRequestUrl().toString();
@@ -470,7 +381,7 @@ public class GraphServiceException extends ClientException {
 
         InputStream is = response.body().byteStream();
         try {
-            rawOutput = DefaultHttpProvider.streamToString(is);
+            rawOutput = CoreHttpProvider.streamToString(is);
         } finally {
             closeQuietly(is);
         }

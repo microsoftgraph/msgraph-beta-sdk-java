@@ -25,9 +25,9 @@ package com.microsoft.graph.concurrency;
 
 import com.microsoft.graph.concurrency.ChunkedUploadResponseHandler;
 import com.microsoft.graph.concurrency.IProgressCallback;
-import com.microsoft.graph.requests.extensions.ChunkedUploadRequest;
-import com.microsoft.graph.requests.extensions.ChunkedUploadResult;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.concurrency.ChunkedUploadRequest;
+import com.microsoft.graph.concurrency.ChunkedUploadResult;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.options.Option;
 
@@ -35,6 +35,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.InvalidParameterException;
 import java.util.List;
+
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 /**
  * ChunkedUpload service provider
@@ -58,11 +61,6 @@ public class ChunkedUploadProvider<UploadType> {
      * Currently the value is 60 MiB.
      */
     private static final int MAXIMUM_CHUNK_SIZE = 60 * 1024 * 1024;
-
-    /**
-     * The default retry times for a simple chunk upload if failure happened
-     */
-    private static final int MAXIMUM_RETRY_TIMES = 3;
 
     /**
      * The client
@@ -103,11 +101,11 @@ public class ChunkedUploadProvider<UploadType> {
      * @param streamSize      the stream size
      * @param uploadTypeClass the upload type class
      */
-    public ChunkedUploadProvider(final UploadSession uploadSession,
-                                 final IGraphServiceClient client,
-                                 final InputStream inputStream,
+    public ChunkedUploadProvider(@Nonnull final UploadSession uploadSession,
+                                 @Nonnull final IGraphServiceClient client,
+                                 @Nonnull final InputStream inputStream,
                                  final long streamSize,
-                                 final Class<UploadType> uploadTypeClass) {
+                                 @Nonnull final Class<UploadType> uploadTypeClass) {
         if (uploadSession == null) {
             throw new InvalidParameterException("Upload session is null.");
         }
@@ -138,23 +136,18 @@ public class ChunkedUploadProvider<UploadType> {
      * @param options  the upload options
      * @param callback the progress callback invoked during uploading
      * @param configs  the optional configurations for the upload options. [0] should be the customized chunk
-     *                 size and [1] should be the maxRetry for upload retry.
+     *                 size
      * @throws IOException the IO exception that occurred during upload
      */
-    public void upload(final List<Option> options,
-                       final IProgressCallback<UploadType> callback,
-                       final int... configs)
+    @SuppressWarnings("LambdaLast")
+    public void upload(@Nullable final List<Option> options,
+                       @Nullable final IProgressCallback<UploadType> callback,
+                       @Nullable final int... configs)
             throws IOException {
         int chunkSize = DEFAULT_CHUNK_SIZE;
 
         if (configs.length > 0) {
             chunkSize = configs[0];
-        }
-
-        int maxRetry = MAXIMUM_RETRY_TIMES;
-
-        if (configs.length > 1) {
-            maxRetry = configs[1];
         }
 
         if (chunkSize % REQUIRED_CHUNK_SIZE_INCREMENT != 0) {
@@ -180,10 +173,10 @@ public class ChunkedUploadProvider<UploadType> {
                 buffRead += read;
             }
 
-            ChunkedUploadRequest request =
-                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, buffRead,
-                            maxRetry, this.readSoFar, this.streamSize);
-            ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
+            final ChunkedUploadRequest<UploadType> request =
+                    new ChunkedUploadRequest<UploadType>(this.uploadUrl, this.client, options, buffer, buffRead,
+                            this.readSoFar, this.streamSize);
+            final ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
 
             if (result.uploadCompleted()) {
                 callback.progress(this.streamSize, this.streamSize);
@@ -205,11 +198,12 @@ public class ChunkedUploadProvider<UploadType> {
      *
      * @param callback the progress callback invoked during uploading
      * @param configs  the optional configurations for the upload options. [0] should be the customized chunk
-     *                 size and [1] should be the maxRetry for upload retry.
+     *                 size
      * @throws IOException the IO exception that occurred during upload
      */
-    public void upload(final IProgressCallback<UploadType> callback,
-    		final int...configs)
+    @SuppressWarnings("LambdaLast")
+    public void upload(@Nullable final IProgressCallback<UploadType> callback,
+    		@Nullable final int...configs)
     				throws IOException {
     	upload(null,  callback, configs);
 
